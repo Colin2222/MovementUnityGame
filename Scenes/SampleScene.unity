@@ -266,6 +266,9 @@ MonoBehaviour:
   jumpForgivenessTime: 0.3
   coyoteTime: 0.3
   jumpTime: 0.8
+  runningJumpSpeed: 6
+  jumpBraceTime: 0.7
+  jumpLaunchTime: 0.08
 --- !u!114 &281777111
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,6 +16,8 @@ public class PlayerState
 	public bool isJumping = false;
 	public bool isExtraJumping = false;
 	public bool isJumpBracing = false;
+	public bool isStillJumping = false;
+	public bool isStillJumpLaunching = false;
 	public bool isFalling = false;
 	
 	public PlayerState(){
@@ -34,6 +36,9 @@ public class PlayerState
 		isRunJumping = false;
 		isJumping = false;
 		isExtraJumping = false;
+		isJumpBracing = false;
+		isStillJumping = false;
+		isStillJumpLaunching = false;
 		isFalling = false;
 	}
 }

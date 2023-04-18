@@ -37,9 +37,14 @@ public class PlayerMover : MonoBehaviour
 	float timeSinceGrounded;
 	public float coyoteTime;
 	bool jumped = false;
+	bool stillJumped = false;
 	float jumpTimeCounter;
     public float jumpTime;
 	public float runningJumpSpeed;
+	float jumpBraceCounter;
+	public float jumpBraceTime;
+	public float jumpLaunchTime;
+	float jumpLaunchTimer;
 	
 	private float horizontal = 0;
     private float vertical = 0;
@@ -72,10 +77,15 @@ public class PlayerMover : MonoBehaviour
 		animator.SetBool("isSlideTurning", state.isSlideTurning);
 		animator.SetBool("isWallSplatting", state.isWallSplatting);
 		animator.SetBool("isWallSplatStumbling", state.isWallSplatStumbling);
+		animator.SetBool("isRunJumping", state.isRunJumping);
+		animator.SetBool("isJumpBracing", state.isJumpBracing);
+		animator.SetBool("isStillJumping", state.isStillJumping);
+		animator.SetBool("isStillJumpLaunching", state.isStillJumpLaunching);
 		
 		HandleWallSplatSticking();
 		HandleWallSplatStumbling();
 		HandleJumping();
+		HandleJumpBracing();
 		
 		jumpJustPressed = false;
     }
@@ -107,17 +117,19 @@ public class PlayerMover : MonoBehaviour
 	void HandleJumping(){
         // basic jump off ground (including coyote time)
         if((jumpJustPressed || timeSincePressed < jumpForgivenessTime) &&
-        (player.physics.isGrounded /* || (timeSinceGrounded < coyoteTime && !player.physics.isWalled) */ && !state.isJumping)){
+        (player.physics.isGrounded /* || (timeSinceGrounded < coyoteTime) */ && !state.isJumping)){
 			// handle running jumps
 			if(!state.isSlideTurning && !state.isSlideStopping && Mathf.Abs(rigidbody.velocity.x) > runningJumpSpeed){ 
 				jumped = true;
 				state.SweepFalse();
 				state.isJumping = true;
+				state.isRunJumping = true;
 				jumpTimeCounter = jumpTime;
 				rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
 			} else if(!state.isSlideTurning && Mathf.Abs(rigidbody.velocity.x) <= runningJumpSpeed){
 				state.SweepFalse();
 				state.isJumpBracing = true;
+				jumpBraceCounter = 0.0f;
 			}
         }
 		/*
@@ -142,10 +154,17 @@ public class PlayerMover : MonoBehaviour
             rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
 			rigidbody.AddForce(new Vector2(0,jumpForce), ForceMode2D.Impulse);
 			jumped = false;
+		} else if(stillJumped){
+			rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
+			float jumpForceMultiplier = Mathf.Clamp(jumpBraceCounter, 0.0f, jumpBraceTime) / jumpBraceTime;
+			rigidbody.AddForce(new Vector2(0,jumpForce * jumpForceMultiplier), ForceMode2D.Impulse);
+			stillJumped = false;
         } else if(state.isFalling && player.physics.isGrounded){
 			state.isJumping = false;
 			state.isFalling = false;
 			state.isExtraJumping = false;
+			state.isRunJumping = false;
+			state.isStillJumping = false;
 			state.isRunning = true;
 		}
 		
@@ -157,12 +176,38 @@ public class PlayerMover : MonoBehaviour
 		if(state.isExtraJumping){
 			rigidbody.AddForce(new Vector2(0,jumpForce), ForceMode2D.Force);
 		}
+		
+		if(state.isJumpBracing){
+			rigidbody.AddForce(rigidbody.velocity * moveForce * -1.0f * slideForceMultiplier, ForceMode2D.Force);
+		}
+	}
+	
+	void HandleJumpBracing(){
+		if(state.isJumpBracing){
+			movementLocked = true;
+			jumpBraceCounter += Time.deltaTime;
+			
+			if(!jumpPressed){
+				state.isJumpBracing = false;
+				state.isStillJumpLaunching = true;
+				jumpLaunchTimer = jumpLaunchTime;
+			}
+		} else if(state.isStillJumpLaunching){
+			jumpLaunchTimer -= Time.deltaTime;
+			if(jumpLaunchTimer <= 0){
+				state.SweepFalse();
+				state.isJumping = true;
+				state.isStillJumping = true;
+				movementLocked = false;
+				stillJumped = true;
+			}
+		}
 	}
 	
 	void HandleMove()
     {
 		Vector2 force = new Vector2(horizontal, 0);
-		if(player.physics.isGrounded && !state.isJumping){
+		if(player.physics.isGrounded && !state.isJumping && !state.isJumpBracing && !state.isStillJumping){
 			if(state.isSlideStopping){
 				// apply resistive horizontal force
 				rigidbody.AddForce(rigidbody.velocity * moveForce * -1.0f * slideForceMultiplier, ForceMode2D.Force);
