@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 281777108}
+  - component: {fileID: 281777110}
+  - component: {fileID: 281777111}
   m_Layer: 0
   m_Name: Mover
   m_TagString: Untagged
@@ -31,6 +33,72 @@ Transform:
   m_Father: {fileID: 6829769311745543618}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &281777110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281777107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ec4d84d0fec134fa64ac45f7cc3686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6829769311745543619}
+  speed: 1
+  moveForce: 18
+  maxRunSpeed: 8
+  walkJoystickThreshold: 0.4
+  slideStopSpeedTarget: 0.5
+  slideForceMultiplier: 0.5
+  wallSplatStickTime: 0.5
+  wallSplatStumbleTime: 1.1
+  wallSplatStumbleSpeed: 0.55
+  wallSplatMinSpeed: 6.2
+  jumpForce: 18
+  jumpForgivenessTime: 0.3
+  coyoteTime: 0.3
+  jumpTime: 0.8
+  runningJumpSpeed: 6
+  jumpBraceTime: 0.7
+  jumpBraceStartingTime: 0.2
+  jumpLaunchTime: 0.08
+  minimumJumpBraceRatio: 0.4
+  stillLandLittleTime: 0.5
+  stillLandBigTime: 0
+  stillLandSmallMinSpeed: 9.7
+  maxStillJumpAngleFromYAxis: 0.7
+--- !u!114 &281777111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281777107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 936ca1bee20f0594b866e7dba17f2091, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerRegular
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &6829769310522087713
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +110,7 @@ GameObject:
   - component: {fileID: 6829769310522087714}
   - component: {fileID: 6829769310522087716}
   - component: {fileID: 6829769310522087715}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: BottomCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,11 +141,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 6829769310522087713}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ebaa9b2411a24b4dae978eb99787810, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.495}
+  m_Offset: {x: 0, y: -0.48755842}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -88,7 +156,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.175, y: 0.01}
+  m_Size: {x: 0.17, y: 0.024883151}
   m_EdgeRadius: 0
 --- !u!114 &6829769310522087715
 MonoBehaviour:
@@ -115,6 +183,7 @@ GameObject:
   - component: {fileID: 6829769311745543617}
   - component: {fileID: 6829769311745543619}
   - component: {fileID: 6829769311745543620}
+  - component: {fileID: 2098515062}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -177,8 +246,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1473831635
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -650848136, guid: e5d26aa2c17c8ff40ad6dae221f879a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -203,6 +272,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a69be50be7303447b1615b466751076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigidbody: {fileID: 6829769311745543620}
+  physics: {fileID: 6829769312316459285}
+  mover: {fileID: 281777110}
+  animator: {fileID: 2098515062}
 --- !u!50 &6829769311745543620
 Rigidbody2D:
   serializedVersion: 4
@@ -216,14 +289,34 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1.5
-  m_LinearDrag: 1
+  m_LinearDrag: 0.15
   m_AngularDrag: 0
   m_GravityScale: 2.5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ebaa9b2411a24b4dae978eb99787810, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &2098515062
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829769311745543616}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef8123dfc55db114b870f0d2ca39a838, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6829769312154430460
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +328,7 @@ GameObject:
   - component: {fileID: 6829769312154430461}
   - component: {fileID: 6829769312154430463}
   - component: {fileID: 6829769312154430462}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: FrontCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,11 +372,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 6829769312154430460}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ebaa9b2411a24b4dae978eb99787810, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.045, y: -0.1}
+  m_Offset: {x: 0, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -294,7 +387,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.6}
+  m_Size: {x: 0.18, y: 0.6}
   m_EdgeRadius: 0
 --- !u!1 &6829769312316459283
 GameObject:
@@ -352,7 +445,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6829769312316459283}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5ebaa9b2411a24b4dae978eb99787810, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

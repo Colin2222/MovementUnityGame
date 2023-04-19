@@ -99,6 +99,8 @@ public class PlayerMover : MonoBehaviour
 		HandleStillLanding();
 		
 		jumpJustPressed = false;
+		
+		Debug.Log(state.isStillLanding);
     }
 	
 	void FixedUpdate(){
@@ -139,13 +141,13 @@ public class PlayerMover : MonoBehaviour
 	
 	void HandleJumping(){
         // basic jump off ground (including coyote time)
-        if((jumpJustPressed || timeSincePressed < jumpForgivenessTime) &&
-        (player.physics.isGrounded /* || (timeSinceGrounded < coyoteTime) */ && !state.isJumping)){
+        if(jumpJustPressed && player.physics.isGrounded && !state.isJumping){
 			// handle running jumps
 			if(!state.isSlideTurning && !state.isSlideStopping && Mathf.Abs(rigidbody.velocity.x) > runningJumpSpeed){ 
 				jumped = true;
 				state.SweepFalse();
 				state.isJumping = true;
+				movementLocked = true;
 				state.isRunJumping = true;
 				jumpTimeCounter = jumpTime;
 				rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
@@ -155,21 +157,6 @@ public class PlayerMover : MonoBehaviour
 				jumpBraceCounter = jumpBraceStartingTime;
 			}
         }
-		/*
-		// check for extra jumping
-		if(state.isJumping){
-			if(jumpPressed){
-				if(jumpTimeCounter > 0){
-					state.isExtraJumping = true;
-					jumpTimeCounter -= Time.deltaTime;
-				} else{
-					state.isExtraJumping = false;
-				}
-			} else{
-				state.isExtraJumping = false;
-			}
-		}
-		*/
 	}
 	
 	void HandleJumpingPhysics(){
@@ -221,7 +208,7 @@ public class PlayerMover : MonoBehaviour
 			
 			rigidbody.AddForce(new Vector2(jumpForce * Mathf.Cos(aimAngle) * jumpForceMultiplier, jumpForce * Mathf.Sin(aimAngle) * jumpForceMultiplier), ForceMode2D.Impulse);
 			stillJumped = false;
-        } else if(state.isFalling && player.physics.isGrounded){
+        } else if(state.isJumping && player.physics.isGrounded && timeSinceGrounded > 0.0f){
 			if(state.isStillJumping && player.physics.bottomCollisionSpeed > stillLandSmallMinSpeed){
 				state.isStillLandingSmall = true;
 				state.isStillLanding = true;
@@ -229,20 +216,8 @@ public class PlayerMover : MonoBehaviour
 			} else{
 				state.isRunning = true;
 			}
-			state.isJumping = false;
-			state.isFalling = false;
-			state.isExtraJumping = false;
-			state.isRunJumping = false;
-			state.isStillJumping = false;
-		}
-		
-		if(state.isJumping && !player.physics.isGrounded){
-			state.isFalling = true;
-		}
-		
-		
-		if(state.isExtraJumping){
-			rigidbody.AddForce(new Vector2(0,jumpForce), ForceMode2D.Force);
+			Land();
+			movementLocked = false;
 		}
 		
 		if(state.isJumpBracing){
@@ -250,7 +225,7 @@ public class PlayerMover : MonoBehaviour
 		}
 		
 		if(state.isStillLanding){
-			rigidbody.AddForce(rigidbody.velocity * moveForce * -1.0f * slideForceMultiplier, ForceMode2D.Force);
+			rigidbody.AddForce(rigidbody.velocity * moveForce * -2.0f * slideForceMultiplier, ForceMode2D.Force);
 		}
 	}
 	
@@ -266,6 +241,7 @@ public class PlayerMover : MonoBehaviour
 					state.isJumpBracing = false;
 					state.isStillJumpLaunching = true;
 					state.isJumping = true;
+					movementLocked = true;
 					jumpLaunchTimer = jumpLaunchTime;
 					aimAngle = Mathf.Atan2(vertical, horizontal);
 				} else{
@@ -280,8 +256,8 @@ public class PlayerMover : MonoBehaviour
 			if(jumpLaunchTimer <= 0){
 				state.SweepFalse();
 				state.isJumping = true;
+				movementLocked = true;
 				state.isStillJumping = true;
-				movementLocked = false;
 				stillJumped = true;
 			}
 		}
@@ -364,7 +340,7 @@ public class PlayerMover : MonoBehaviour
 			}
 		}
 		
-		if(!movementLocked && !state.isJumping){
+		if(!movementLocked){
 			if(horizontal > 0)
 			{
 				 gameObject.transform.parent.transform.eulerAngles = new Vector2(0,0);
@@ -380,7 +356,7 @@ public class PlayerMover : MonoBehaviour
 	
 	void HandleWallSplatting(){
 		if(player.physics.isWalled){
-			if(Mathf.Abs(player.physics.frontCollisionSpeed) > wallSplatMinSpeed && player.physics.isGrounded){
+			if(Mathf.Abs(player.physics.frontCollisionSpeed) > wallSplatMinSpeed && player.physics.isGrounded && !state.isJumping){
 				state.isRunning = false;
 				state.isSlideStopping = false;
 				state.isSlideTurning = false;
@@ -433,14 +409,18 @@ public class PlayerMover : MonoBehaviour
 		}
 	}
 	
+	private void Land(){
+		state.isJumping = false;
+		state.isStillJumping = false;
+		state.isRunJumping = false;
+	}
+	
 	// controller button methods
     private void OnMove(InputValue value){
         Vector2 vector = value.Get<Vector2>();
 
         horizontal = vector.x;
         vertical = vector.y;
-		
-		Debug.Log(horizontal + "  :  " + vertical);
     }
 	
 	private void OnJump(){

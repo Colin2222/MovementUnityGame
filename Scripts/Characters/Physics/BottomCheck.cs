@@ -9,6 +9,7 @@ public class BottomCheck : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision){
         parentPhysics.isGrounded = true;
 		parentPhysics.bottomCollisionSpeed = collision.relativeVelocity.y;
+		Debug.Log("HIT GROUND");
     }
 
     void OnCollisionStay2D(Collision2D collision){

@@ -12,12 +12,15 @@ public class PlayerState
 	public bool isWallSplatting = false;
 	public bool isWallSplatStumbling = false;
 	public bool isWalking = false;
-	public bool isRunJumping = false;
-	public bool isJumping = false;
-	public bool isExtraJumping = false;
+	
 	public bool isJumpBracing = false;
-	public bool isStillJumping = false;
 	public bool isStillJumpLaunching = false;
+	
+	// general isJumping state, with all subsequent specific types of jumping
+	public bool isJumping = false;
+	public bool isRunJumping = false;
+	public bool isStillJumping = false;
+	
 	public bool isStillLandingSmall = false;
 	public bool isStillLandingBig = false;
 	public bool isStillLanding = false;
@@ -39,7 +42,6 @@ public class PlayerState
 		isWalking = false;
 		isRunJumping = false;
 		isJumping = false;
-		isExtraJumping = false;
 		isJumpBracing = false;
 		isStillJumping = false;
 		isStillJumpLaunching = false;
