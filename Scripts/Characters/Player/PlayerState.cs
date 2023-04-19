@@ -18,6 +18,9 @@ public class PlayerState
 	public bool isJumpBracing = false;
 	public bool isStillJumping = false;
 	public bool isStillJumpLaunching = false;
+	public bool isStillLandingSmall = false;
+	public bool isStillLandingBig = false;
+	public bool isStillLanding = false;
 	public bool isFalling = false;
 	
 	public PlayerState(){
@@ -39,6 +42,9 @@ public class PlayerState
 		isJumpBracing = false;
 		isStillJumping = false;
 		isStillJumpLaunching = false;
+		isStillLandingSmall = false;
+		isStillLandingBig = false;
+		isStillLanding = false;
 		isFalling = false;
 	}
 }

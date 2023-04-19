@@ -45,6 +45,10 @@ public class PlayerMover : MonoBehaviour
 	public float jumpBraceTime;
 	public float jumpLaunchTime;
 	float jumpLaunchTimer;
+	public float minimumJumpBraceRatio;
+	public float stillLandLittleTime;
+	public float stillLandBigTime;
+	float stillLandTimer;
 	
 	private float horizontal = 0;
     private float vertical = 0;
@@ -81,11 +85,14 @@ public class PlayerMover : MonoBehaviour
 		animator.SetBool("isJumpBracing", state.isJumpBracing);
 		animator.SetBool("isStillJumping", state.isStillJumping);
 		animator.SetBool("isStillJumpLaunching", state.isStillJumpLaunching);
+		animator.SetBool("isStillLandingBig", state.isStillLandingBig);
+		animator.SetBool("isStillLandingSmall", state.isStillLandingSmall);
 		
 		HandleWallSplatSticking();
 		HandleWallSplatStumbling();
 		HandleJumping();
 		HandleJumpBracing();
+		HandleStillLanding();
 		
 		jumpJustPressed = false;
     }
@@ -114,6 +121,19 @@ public class PlayerMover : MonoBehaviour
 		
 	}
 	
+	void HandleStillLanding(){
+		if(state.isStillLandingSmall || state.isStillLandingBig){
+			Debug.Log("LANDING");
+			stillLandTimer -= Time.deltaTime;
+			if(stillLandTimer <= 0){
+				state.isStillLanding = false;
+				state.isStillLandingBig = false;
+				state.isStillLandingSmall = false;
+				state.isStanding = true;
+			}
+		}
+	}
+	
 	void HandleJumping(){
         // basic jump off ground (including coyote time)
         if((jumpJustPressed || timeSincePressed < jumpForgivenessTime) &&
@@ -126,7 +146,7 @@ public class PlayerMover : MonoBehaviour
 				state.isRunJumping = true;
 				jumpTimeCounter = jumpTime;
 				rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
-			} else if(!state.isSlideTurning && Mathf.Abs(rigidbody.velocity.x) <= runningJumpSpeed){
+			} else if(Mathf.Abs(rigidbody.velocity.x) <= runningJumpSpeed){
 				state.SweepFalse();
 				state.isJumpBracing = true;
 				jumpBraceCounter = 0.0f;
@@ -160,12 +180,18 @@ public class PlayerMover : MonoBehaviour
 			rigidbody.AddForce(new Vector2(0,jumpForce * jumpForceMultiplier), ForceMode2D.Impulse);
 			stillJumped = false;
         } else if(state.isFalling && player.physics.isGrounded){
+			if(state.isStillJumping){
+				state.isStillLandingSmall = true;
+				state.isStillLanding = true;
+				stillLandTimer = stillLandLittleTime;
+			} else{
+				state.isRunning = true;
+			}
 			state.isJumping = false;
 			state.isFalling = false;
 			state.isExtraJumping = false;
 			state.isRunJumping = false;
 			state.isStillJumping = false;
-			state.isRunning = true;
 		}
 		
 		if(state.isJumping && !player.physics.isGrounded){
@@ -188,9 +214,19 @@ public class PlayerMover : MonoBehaviour
 			jumpBraceCounter += Time.deltaTime;
 			
 			if(!jumpPressed){
-				state.isJumpBracing = false;
-				state.isStillJumpLaunching = true;
-				jumpLaunchTimer = jumpLaunchTime;
+				// check if player held down the jump button long enough to meet minimum length to execute jump
+				float jumpForceMultiplier = Mathf.Clamp(jumpBraceCounter, 0.0f, jumpBraceTime) / jumpBraceTime;
+				if(jumpForceMultiplier > minimumJumpBraceRatio){
+					state.isJumpBracing = false;
+					state.isStillJumpLaunching = true;
+					state.isJumping = true;
+					jumpLaunchTimer = jumpLaunchTime;
+				} else{
+					state.isJumpBracing = false;
+					state.isStanding = true;
+				}
+				
+				
 			}
 		} else if(state.isStillJumpLaunching){
 			jumpLaunchTimer -= Time.deltaTime;
@@ -207,7 +243,7 @@ public class PlayerMover : MonoBehaviour
 	void HandleMove()
     {
 		Vector2 force = new Vector2(horizontal, 0);
-		if(player.physics.isGrounded && !state.isJumping && !state.isJumpBracing && !state.isStillJumping){
+		if(player.physics.isGrounded && !state.isJumping && !state.isJumpBracing && !state.isStillJumping && !state.isStillLanding){
 			if(state.isSlideStopping){
 				// apply resistive horizontal force
 				rigidbody.AddForce(rigidbody.velocity * moveForce * -1.0f * slideForceMultiplier, ForceMode2D.Force);

@@ -269,6 +269,7 @@ MonoBehaviour:
   runningJumpSpeed: 6
   jumpBraceTime: 0.7
   jumpLaunchTime: 0.08
+  minimumJumpBraceRatio: 0.35
 --- !u!114 &281777111
 MonoBehaviour:
   m_ObjectHideFlags: 0
