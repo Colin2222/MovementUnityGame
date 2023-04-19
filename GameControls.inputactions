@@ -9,7 +9,7 @@
                     "name": "Move",
                     "type": "PassThrough",
                     "id": "9f04edca-22c8-40ef-9a77-47cad8ebb484",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Stick",
                     "processors": "StickDeadzone",
                     "interactions": "",
                     "initialStateCheck": false

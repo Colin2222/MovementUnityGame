@@ -253,8 +253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2098515060}
   speed: 1
-  moveForce: 20
-  maxRunSpeed: 9
+  moveForce: 18
+  maxRunSpeed: 8
   walkJoystickThreshold: 0.3
   slideStopSpeedTarget: 0.5
   slideForceMultiplier: 0.5
@@ -262,14 +262,19 @@ MonoBehaviour:
   wallSplatStumbleTime: 1.1
   wallSplatStumbleSpeed: 0.55
   wallSplatMinSpeed: 6.2
-  jumpForce: 20
+  jumpForce: 15
   jumpForgivenessTime: 0.3
   coyoteTime: 0.3
   jumpTime: 0.8
   runningJumpSpeed: 6
   jumpBraceTime: 0.7
+  jumpBraceStartingTime: 0.2
   jumpLaunchTime: 0.08
-  minimumJumpBraceRatio: 0.35
+  minimumJumpBraceRatio: 0.4
+  stillLandLittleTime: 0.5
+  stillLandBigTime: 0
+  stillLandSmallMinSpeed: 8.5
+  maxStillJumpAngleFromYAxis: 0.8
 --- !u!114 &281777111
 MonoBehaviour:
   m_ObjectHideFlags: 0

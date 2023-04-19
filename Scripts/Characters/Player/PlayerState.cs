@@ -22,6 +22,7 @@ public class PlayerState
 	public bool isStillLandingBig = false;
 	public bool isStillLanding = false;
 	public bool isFalling = false;
+	public int direction = 1;
 	
 	public PlayerState(){
 		

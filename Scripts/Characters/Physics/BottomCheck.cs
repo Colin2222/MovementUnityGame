@@ -8,10 +8,12 @@ public class BottomCheck : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision){
         parentPhysics.isGrounded = true;
+		parentPhysics.bottomCollisionSpeed = collision.relativeVelocity.y;
     }
 
     void OnCollisionStay2D(Collision2D collision){
         parentPhysics.isGrounded = true;
+		parentPhysics.bottomCollisionSpeed = 0.0f;
     }
 
     void OnCollisionExit2D(Collision2D collision){

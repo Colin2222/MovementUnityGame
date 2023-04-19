@@ -43,12 +43,16 @@ public class PlayerMover : MonoBehaviour
 	public float runningJumpSpeed;
 	float jumpBraceCounter;
 	public float jumpBraceTime;
+	public float jumpBraceStartingTime;
 	public float jumpLaunchTime;
 	float jumpLaunchTimer;
 	public float minimumJumpBraceRatio;
 	public float stillLandLittleTime;
 	public float stillLandBigTime;
 	float stillLandTimer;
+	public float stillLandSmallMinSpeed;
+	public float maxStillJumpAngleFromYAxis;
+	float aimAngle;
 	
 	private float horizontal = 0;
     private float vertical = 0;
@@ -123,7 +127,6 @@ public class PlayerMover : MonoBehaviour
 	
 	void HandleStillLanding(){
 		if(state.isStillLandingSmall || state.isStillLandingBig){
-			Debug.Log("LANDING");
 			stillLandTimer -= Time.deltaTime;
 			if(stillLandTimer <= 0){
 				state.isStillLanding = false;
@@ -149,7 +152,7 @@ public class PlayerMover : MonoBehaviour
 			} else if(Mathf.Abs(rigidbody.velocity.x) <= runningJumpSpeed){
 				state.SweepFalse();
 				state.isJumpBracing = true;
-				jumpBraceCounter = 0.0f;
+				jumpBraceCounter = jumpBraceStartingTime;
 			}
         }
 		/*
@@ -177,10 +180,49 @@ public class PlayerMover : MonoBehaviour
 		} else if(stillJumped){
 			rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
 			float jumpForceMultiplier = Mathf.Clamp(jumpBraceCounter, 0.0f, jumpBraceTime) / jumpBraceTime;
-			rigidbody.AddForce(new Vector2(0,jumpForce * jumpForceMultiplier), ForceMode2D.Impulse);
+			
+			float originalAngle = aimAngle;
+			
+			if(aimAngle == 0.0f){
+				aimAngle = 1.5707f;
+			}
+			if(state.direction == 1){
+				if(aimAngle >= 0){
+					if(aimAngle < 1.5707f - maxStillJumpAngleFromYAxis){
+						aimAngle = 1.5707f - maxStillJumpAngleFromYAxis;
+					} else if (aimAngle > 1.5707f){
+						aimAngle = 1.5707f;
+					}
+				} else{
+					if(aimAngle > -.785f){
+						aimAngle = 1.5707f - maxStillJumpAngleFromYAxis;
+					} else{
+						aimAngle = 1.5707f;
+					}
+				}
+			} else if(state.direction == -1){
+				if(aimAngle >= 0){
+					if(aimAngle > 1.5707f + maxStillJumpAngleFromYAxis){
+						aimAngle = 1.5707f + maxStillJumpAngleFromYAxis;
+					} else if(aimAngle < 1.5707f){
+						aimAngle = 1.5707f;
+					}
+				} else{
+					if(aimAngle < -2.356f){
+						aimAngle = 1.5707f + maxStillJumpAngleFromYAxis;
+					} else{
+						aimAngle = 1.5707f;
+					}
+				}
+			}
+			
+			
+			//Debug.Log("horizontal: " + horizontal + " vertical: " + vertical + " initangle: " + originalAngle + " angle: " + aimAngle);
+			
+			rigidbody.AddForce(new Vector2(jumpForce * Mathf.Cos(aimAngle) * jumpForceMultiplier, jumpForce * Mathf.Sin(aimAngle) * jumpForceMultiplier), ForceMode2D.Impulse);
 			stillJumped = false;
         } else if(state.isFalling && player.physics.isGrounded){
-			if(state.isStillJumping){
+			if(state.isStillJumping && player.physics.bottomCollisionSpeed > stillLandSmallMinSpeed){
 				state.isStillLandingSmall = true;
 				state.isStillLanding = true;
 				stillLandTimer = stillLandLittleTime;
@@ -206,6 +248,10 @@ public class PlayerMover : MonoBehaviour
 		if(state.isJumpBracing){
 			rigidbody.AddForce(rigidbody.velocity * moveForce * -1.0f * slideForceMultiplier, ForceMode2D.Force);
 		}
+		
+		if(state.isStillLanding){
+			rigidbody.AddForce(rigidbody.velocity * moveForce * -1.0f * slideForceMultiplier, ForceMode2D.Force);
+		}
 	}
 	
 	void HandleJumpBracing(){
@@ -221,6 +267,7 @@ public class PlayerMover : MonoBehaviour
 					state.isStillJumpLaunching = true;
 					state.isJumping = true;
 					jumpLaunchTimer = jumpLaunchTime;
+					aimAngle = Mathf.Atan2(vertical, horizontal);
 				} else{
 					state.isJumpBracing = false;
 					state.isStanding = true;
@@ -321,10 +368,12 @@ public class PlayerMover : MonoBehaviour
 			if(horizontal > 0)
 			{
 				 gameObject.transform.parent.transform.eulerAngles = new Vector2(0,0);
+				 state.direction = 1;
 			}
 			if(horizontal < 0)
 			{
 				gameObject.transform.parent.transform.eulerAngles = new Vector2(0,180);
+				state.direction = -1;
 			}
 		}
     }
@@ -390,6 +439,8 @@ public class PlayerMover : MonoBehaviour
 
         horizontal = vector.x;
         vertical = vector.y;
+		
+		Debug.Log(horizontal + "  :  " + vertical);
     }
 	
 	private void OnJump(){
