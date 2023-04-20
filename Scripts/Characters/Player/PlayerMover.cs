@@ -99,8 +99,6 @@ public class PlayerMover : MonoBehaviour
 		HandleStillLanding();
 		
 		jumpJustPressed = false;
-		
-		Debug.Log(state.isStillLanding);
     }
 	
 	void FixedUpdate(){
