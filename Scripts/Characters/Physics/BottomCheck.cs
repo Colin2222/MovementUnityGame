@@ -11,13 +11,11 @@ public class BottomCheck : MonoBehaviour
 	
 	void Start(){
 		mask = LayerMask.GetMask("PhysicsEnvironment");
-		Debug.Log(mask.value);
 	}
 
     void OnCollisionEnter2D(Collision2D collision){
-		RaycastHit2D hit = Physics2D.Raycast(rigidbody.position, Vector2.down, distanceToGround + 0.1f, mask);
+		RaycastHit2D hit = Physics2D.Raycast(rigidbody.position, Vector2.down, distanceToGround, mask);
 		if(hit.collider != null){
-			Debug.Log(hit.transform.name);
 			parentPhysics.isGrounded = true;
 			parentPhysics.bottomCollisionSpeed = collision.relativeVelocity.y;
 		}

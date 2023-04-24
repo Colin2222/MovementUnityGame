@@ -739,13 +739,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: braceTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: braceCooldownTime
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6829769310522087715, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
       propertyPath: rigidbody
       value: 
       objectReference: {fileID: 1399201941}
     - target: {fileID: 6829769310522087715, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
       propertyPath: distanceToGround
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6829769310522087716, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
       propertyPath: m_Size.y
@@ -819,6 +827,10 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 0.24
       objectReference: {fileID: 0}
+    - target: {fileID: 6829769312154430463, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: rigidbody
+      value: 
+      objectReference: {fileID: 1399201941}
     - target: {fileID: 6829769312316459286, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
       propertyPath: m_Size.x
       value: 0.24

@@ -131,7 +131,6 @@ public class PlayerMover : MonoBehaviour
 	}
 	
 	void HandleBracing(){
-		Debug.Log(state.isBracing);
 		if(state.isBracing){
 			braceTimer -= Time.deltaTime;
 			if(braceTimer <= 0.0f || !bracePressed){
@@ -152,19 +151,21 @@ public class PlayerMover : MonoBehaviour
 	
 	void HandleStillLanding(){
 		if(state.isStillLandingSmall || state.isStillLandingBig){
+			movementLocked = true;
 			stillLandTimer -= Time.deltaTime;
 			if(stillLandTimer <= 0.0f){
 				state.isStillLanding = false;
 				state.isStillLandingBig = false;
 				state.isStillLandingSmall = false;
 				state.isStanding = true;
+				movementLocked = false;
 			}
 		}
 	}
 	
 	void HandleJumping(){
         // basic jump off ground (including coyote time)
-        if(jumpJustPressed && player.physics.isGrounded && !state.isJumping && (!state.isWallSplatting || !state.isWallSplatStumbling)){
+        if(jumpJustPressed && !movementLocked && player.physics.isGrounded && !state.isJumping && (!state.isWallSplatting || !state.isWallSplatStumbling)){
 			// handle running jumps
 			if(!state.isSlideTurning && !state.isSlideStopping && Mathf.Abs(rigidbody.velocity.x) > runningJumpSpeed){ 
 				jumped = true;
