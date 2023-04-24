@@ -29,6 +29,12 @@ public class PlayerMover : MonoBehaviour
 	float wallSplatStumbleTimer;
 	public float wallSplatMinSpeed;
 	
+	// bracing variables
+	public float braceTime;
+	public float braceCooldownTime;
+	float braceTimer = 0.0f;
+	float braceCooldownTimer = 0.0f;
+	
 	// jumping variables
 	public float jumpForce;
 	public float jumpForgivenessTime;
@@ -62,6 +68,8 @@ public class PlayerMover : MonoBehaviour
 	// button pressing
     private bool jumpPressed = false;
     private bool jumpJustPressed = false;
+	private bool bracePressed = false;
+	private bool braceJustPressed = false; 
 	
     // Start is called before the first frame update
     void Start() 
@@ -92,6 +100,7 @@ public class PlayerMover : MonoBehaviour
 		animator.SetBool("isStillLandingBig", state.isStillLandingBig);
 		animator.SetBool("isStillLandingSmall", state.isStillLandingSmall);
 		
+		HandleBracing();
 		HandleWallSplatSticking();
 		HandleWallSplatStumbling();
 		HandleJumping();
@@ -99,10 +108,10 @@ public class PlayerMover : MonoBehaviour
 		HandleStillLanding();
 		
 		jumpJustPressed = false;
+		braceJustPressed = false;
     }
 	
 	void FixedUpdate(){
-		HandleFalling();
 		HandleJumpingPhysics();
 		HandleMove();
 		HandleWallSplatting();
@@ -121,14 +130,30 @@ public class PlayerMover : MonoBehaviour
         }
 	}
 	
-	void HandleFalling(){
-		
+	void HandleBracing(){
+		Debug.Log(state.isBracing);
+		if(state.isBracing){
+			braceTimer -= Time.deltaTime;
+			if(braceTimer <= 0.0f || !bracePressed){
+				state.isBracing = false;
+				braceCooldownTimer = braceCooldownTime;
+			}
+		} else{
+			if(braceCooldownTimer > 0.0f){
+				braceCooldownTimer -= Time.deltaTime;
+			} else{
+				if(braceJustPressed){
+					state.isBracing = true;
+					braceTimer = braceTime;
+				}
+			}
+		}
 	}
 	
 	void HandleStillLanding(){
 		if(state.isStillLandingSmall || state.isStillLandingBig){
 			stillLandTimer -= Time.deltaTime;
-			if(stillLandTimer <= 0){
+			if(stillLandTimer <= 0.0f){
 				state.isStillLanding = false;
 				state.isStillLandingBig = false;
 				state.isStillLandingSmall = false;
@@ -139,7 +164,7 @@ public class PlayerMover : MonoBehaviour
 	
 	void HandleJumping(){
         // basic jump off ground (including coyote time)
-        if(jumpJustPressed && player.physics.isGrounded && !state.isJumping){
+        if(jumpJustPressed && player.physics.isGrounded && !state.isJumping && (!state.isWallSplatting || !state.isWallSplatStumbling)){
 			// handle running jumps
 			if(!state.isSlideTurning && !state.isSlideStopping && Mathf.Abs(rigidbody.velocity.x) > runningJumpSpeed){ 
 				jumped = true;
@@ -424,5 +449,10 @@ public class PlayerMover : MonoBehaviour
 	private void OnJump(){
         jumpPressed = !jumpPressed;
         jumpJustPressed = jumpPressed;
+    }
+	
+	private void OnBrace(){
+        bracePressed = !bracePressed;
+        braceJustPressed = bracePressed;
     }
 }

@@ -21,10 +21,18 @@ public class PlayerState
 	public bool isRunJumping = false;
 	public bool isStillJumping = false;
 	
+	// wall collision states
+	public bool isWallColliding = false;
+	public bool isWallBracing = false;
+	public bool isAirWallSplatting = false;
+	public bool isWallLaunching = false; 
+	
 	public bool isStillLandingSmall = false;
 	public bool isStillLandingBig = false;
 	public bool isStillLanding = false;
 	public bool isFalling = false;
+	
+	public bool isBracing = false;
 	public int direction = 1;
 	
 	public PlayerState(){
@@ -49,5 +57,10 @@ public class PlayerState
 		isStillLandingBig = false;
 		isStillLanding = false;
 		isFalling = false;
+		isBracing = false;
+		isWallColliding = false;
+		isWallBracing = false;
+		isAirWallSplatting = false;
+		isWallLaunching = false;
 	}
 }
