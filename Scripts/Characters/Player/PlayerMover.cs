@@ -29,6 +29,29 @@ public class PlayerMover : MonoBehaviour
 	float wallSplatStumbleTimer;
 	public float wallSplatMinSpeed;
 	
+	// wall collision variables
+	public float wallSlideUpwardsCoefficient;
+	public float wallSlideDownwardsCoefficient;
+	public float wallLaunchCoefficient;
+	public float wallBraceTime;
+	public float wallAirSplatMinSpeed;
+	float wallBraceTimer;
+	float wallCollisionEntranceSpeed;
+	public float wallLaunchTime;
+	float wallLaunchTimer;
+	public float wallPushTime;
+	float wallPushTimer;
+	Vector2 wallCollisionVelocity;
+	bool wallPushed = false;
+	bool wallLaunched = false; 
+	public float wallLaunchHorizontalRetention;
+	public float wallLaunchMinimumHorizontal;
+	public float wallPushHorizontalRetention;
+	public float wallLaunchBoost;
+	public float wallPushBoost;
+	public float wallLaunchMaxVerticalSpeed;
+	
+	
 	// bracing variables
 	public float braceTime;
 	public float braceCooldownTime;
@@ -99,8 +122,15 @@ public class PlayerMover : MonoBehaviour
 		animator.SetBool("isStillJumpLaunching", state.isStillJumpLaunching);
 		animator.SetBool("isStillLandingBig", state.isStillLandingBig);
 		animator.SetBool("isStillLandingSmall", state.isStillLandingSmall);
+		animator.SetBool("isWallBracing", state.isWallBracing);
+		animator.SetBool("isWallPushing", state.isWallPushing);
+		animator.SetBool("isWallLaunching", state.isWallLaunching);
+		animator.SetBool("isAirWallSplatting", state.isAirWallSplatting);
 		
 		HandleBracing();
+		HandleWallBracing();
+		HandleWallLaunching();
+		HandleWallPushing();
 		HandleWallSplatSticking();
 		HandleWallSplatStumbling();
 		HandleJumping();
@@ -115,6 +145,8 @@ public class PlayerMover : MonoBehaviour
 		HandleJumpingPhysics();
 		HandleMove();
 		HandleWallSplatting();
+		HandleWallColliding();
+		HandleWallCollidingPhysics();
 		CheckGroundedness();
 	}
 	
@@ -131,6 +163,7 @@ public class PlayerMover : MonoBehaviour
 	}
 	
 	void HandleBracing(){
+		//Debug.Log(state.isBracing);
 		if(state.isBracing){
 			braceTimer -= Time.deltaTime;
 			if(braceTimer <= 0.0f || !bracePressed){
@@ -233,7 +266,7 @@ public class PlayerMover : MonoBehaviour
 			rigidbody.AddForce(new Vector2(jumpForce * Mathf.Cos(aimAngle) * jumpForceMultiplier, jumpForce * Mathf.Sin(aimAngle) * jumpForceMultiplier), ForceMode2D.Impulse);
 			stillJumped = false;
         } else if(state.isJumping && player.physics.isGrounded && timeSinceGrounded > 0.0f){
-			if(state.isStillJumping && player.physics.bottomCollisionSpeed > stillLandSmallMinSpeed){
+			if(state.isStillJumping && player.physics.bottomCollisionSpeed.y > stillLandSmallMinSpeed){
 				state.isStillLandingSmall = true;
 				state.isStillLanding = true;
 				stillLandTimer = stillLandLittleTime;
@@ -380,7 +413,7 @@ public class PlayerMover : MonoBehaviour
 	
 	void HandleWallSplatting(){
 		if(player.physics.isWalled){
-			if(Mathf.Abs(player.physics.frontCollisionSpeed) > wallSplatMinSpeed && player.physics.isGrounded && !state.isJumping){
+			if(Mathf.Abs(player.physics.frontCollisionSpeed.x) > wallSplatMinSpeed && player.physics.isGrounded && !state.isJumping){
 				state.isRunning = false;
 				state.isSlideStopping = false;
 				state.isSlideTurning = false;
@@ -388,7 +421,7 @@ public class PlayerMover : MonoBehaviour
 				state.isWallSplatting = true;
 				movementLocked = true;
 				wallSplatStickTimer = wallSplatStickTime;
-				wallSplatSide = (int)Mathf.Sign(player.physics.frontCollisionSpeed) * -1;
+				wallSplatSide = (int)Mathf.Sign(player.physics.frontCollisionSpeed.x) * -1;
 				
 				// make sure player is facing the wall they are splatting into
 				if(wallSplatSide == 1){
@@ -397,6 +430,90 @@ public class PlayerMover : MonoBehaviour
 					gameObject.transform.parent.transform.eulerAngles = new Vector2(0,180);
 				}
 			}
+		}
+	}
+	
+	void HandleWallColliding(){
+		if(player.physics.isWalled){
+			if(Mathf.Abs(player.physics.frontCollisionSpeed.x) > 0.0f && !player.physics.isGrounded && !state.isWallColliding){
+				state.SweepFalse();
+				state.isWallColliding = true;
+				wallCollisionVelocity = new Vector2(player.physics.frontCollisionSpeed.x, player.physics.frontCollisionSpeed.y);
+				//Debug.Log(wallCollisionVelocity);
+				if(!state.isBracing && Mathf.Abs(rigidbody.velocity.x) > wallAirSplatMinSpeed){
+					state.isAirWallSplatting = true;
+					// TODO ADD BEHAVIOR FOR SPLATTING WALL IN THE AIR
+				} else{
+					state.isWallBracing = true;
+					state.isBracing = false;
+					wallBraceTimer = wallBraceTime;
+					
+				}
+			}
+		}
+	}
+	
+	void HandleWallBracing(){
+		if(state.isWallBracing){
+			wallBraceTimer -= Time.deltaTime;
+			if(wallBraceTimer <= 0){
+				state.isWallBracing = false; 
+				state.isWallPushing = true;
+				wallPushTimer = wallPushTime;
+			} else if(jumpJustPressed){
+				state.isWallBracing = false;
+				state.isWallLaunching = true;
+				wallLaunchTimer = wallLaunchTime;
+			}
+		}
+	}
+	
+	void HandleWallLaunching(){
+		if(state.isWallLaunching){
+			wallLaunchTimer -= Time.deltaTime;
+			if(wallLaunchTimer <= 0.0f){
+				state.isWallLaunching = false; 
+				state.isJumping = true; 
+				state.isRunJumping = true;
+				wallLaunched = true;
+			}
+		}
+	}
+	
+	void HandleWallPushing(){
+		if(state.isWallPushing){
+			wallPushTimer -= Time.deltaTime;
+			if(wallPushTimer <= 0.0f){
+				state.isWallPushing = false;
+				state.isJumping = true;
+				state.isStillJumping = true;
+				wallPushed = true;
+			}
+		}
+	}
+	
+	void HandleWallCollidingPhysics(){
+		if(state.isWallBracing){
+			if(rigidbody.velocity.y > 0){
+				rigidbody.AddForce(rigidbody.velocity * -1.0f * wallSlideUpwardsCoefficient, ForceMode2D.Force);
+			} else{
+				rigidbody.AddForce(rigidbody.velocity * -1.0f * wallSlideDownwardsCoefficient, ForceMode2D.Force);
+			}
+		} else if(state.isWallLaunching || state.isWallPushing){
+			rigidbody.AddForce(rigidbody.velocity * -1.0f * wallLaunchCoefficient, ForceMode2D.Force);
+		}
+		
+		if(wallPushed){
+			rigidbody.velocity = new Vector2(wallCollisionVelocity.x * wallPushHorizontalRetention, rigidbody.velocity.y + wallPushBoost);
+			wallPushed = false;
+			InverseVelocityRotationHelper();
+		} else if(wallLaunched){
+			Debug.Log("LAUNCHING");
+			Debug.Log(wallCollisionVelocity.y);
+			float jumpDir = Mathf.Sign(wallCollisionVelocity.x);
+			rigidbody.velocity = new Vector2((Mathf.Clamp(Mathf.Abs(wallCollisionVelocity.x) * wallLaunchHorizontalRetention, wallLaunchMinimumHorizontal, 10000.0f)) * jumpDir, Mathf.Clamp((wallCollisionVelocity.y * -1.0f) + wallLaunchBoost, -1000f, wallLaunchMaxVerticalSpeed));
+			wallLaunched = false;
+			InverseVelocityRotationHelper();
 		}
 	}
 	
@@ -430,6 +547,14 @@ public class PlayerMover : MonoBehaviour
 			gameObject.transform.parent.transform.eulerAngles = new Vector2(0,180);
 		} else{
 			gameObject.transform.parent.transform.eulerAngles = new Vector2(0,0);
+		}
+	}
+	
+	private void InverseVelocityRotationHelper(){
+		if(rigidbody.velocity.x > 0){
+			gameObject.transform.parent.transform.eulerAngles = new Vector2(0,0);
+		} else{
+			gameObject.transform.parent.transform.eulerAngles = new Vector2(0,180);
 		}
 	}
 	

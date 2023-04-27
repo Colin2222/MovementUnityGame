@@ -17,13 +17,13 @@ public class FrontCheck : MonoBehaviour
 		RaycastHit2D hit = Physics2D.Raycast(rigidbody.position, Vector2.right * Mathf.Sign(-collision.relativeVelocity.x), distanceToWall, mask);
 		if(hit.collider != null){
 			parentPhysics.isWalled = true;
-			parentPhysics.frontCollisionSpeed = collision.relativeVelocity.x;
+			parentPhysics.frontCollisionSpeed = new Vector2(collision.relativeVelocity.x, collision.relativeVelocity.y);
 		}
     }
 
     void OnCollisionStay2D(Collision2D collision){
         parentPhysics.isWalled = true;
-		parentPhysics.frontCollisionSpeed = 0.0f;
+		parentPhysics.frontCollisionSpeed = new Vector2(0.0f, 0.0f);
     }
 
     void OnCollisionExit2D(Collision2D collision){

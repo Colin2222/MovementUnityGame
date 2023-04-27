@@ -13,9 +13,9 @@ public class CharacterPhysicsChecker : MonoBehaviour
     [System.NonSerialized]
     public bool backTouch = false;
 	[System.NonSerialized]
-	public float frontCollisionSpeed;
+	public Vector2 frontCollisionSpeed;
 	[System.NonSerialized]
-	public float bottomCollisionSpeed;
+	public Vector2 bottomCollisionSpeed;
 
     void OnCollisionEnter2D(Collision2D collision){
         LayerMask layer = collision.gameObject.layer;

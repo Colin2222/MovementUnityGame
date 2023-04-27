@@ -744,8 +744,68 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: jumpForce
+      value: 16.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: wallPushTime
+      value: 0.208
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: wallBraceTime
+      value: 0.14285
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: wallPushBoost
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: wallLaunchTime
+      value: 0.208
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: wallLaunchBoost
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
       propertyPath: braceCooldownTime
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: wallAirSplatMinSpeed
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: wallSlideCoefficient
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: wallLaunchCoefficient
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: wallLaunchMaxVerticalSpeed
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: wallLaunchMinimumHorizontal
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: wallPushHorizontalRetention
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: wallSlideUpwardsCoefficient
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: wallLaunchHorizontalRetention
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: wallSlideDownwardsCoefficient
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6829769310522087715, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
       propertyPath: rigidbody
@@ -753,7 +813,7 @@ PrefabInstance:
       objectReference: {fileID: 1399201941}
     - target: {fileID: 6829769310522087715, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
       propertyPath: distanceToGround
-      value: 0.1
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 6829769310522087716, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
       propertyPath: m_Size.y
@@ -831,6 +891,10 @@ PrefabInstance:
       propertyPath: rigidbody
       value: 
       objectReference: {fileID: 1399201941}
+    - target: {fileID: 6829769312154430463, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: distanceToWall
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6829769312316459286, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
       propertyPath: m_Size.x
       value: 0.24

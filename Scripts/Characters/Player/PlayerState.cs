@@ -26,6 +26,7 @@ public class PlayerState
 	public bool isWallBracing = false;
 	public bool isAirWallSplatting = false;
 	public bool isWallLaunching = false; 
+	public bool isWallPushing = false;
 	
 	public bool isStillLandingSmall = false;
 	public bool isStillLandingBig = false;
@@ -62,5 +63,6 @@ public class PlayerState
 		isWallBracing = false;
 		isAirWallSplatting = false;
 		isWallLaunching = false;
+		isWallPushing = false; 
 	}
 }
