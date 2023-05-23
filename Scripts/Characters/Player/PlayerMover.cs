@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerMover : MonoBehaviour
 {
 	public PlayerHub player;
+	public CornerHandler cornerHandler;
 	Rigidbody2D rigidbody;
 	PlayerState state;
 	Animator animator;
@@ -83,6 +84,10 @@ public class PlayerMover : MonoBehaviour
 	public float maxStillJumpAngleFromYAxis;
 	float aimAngle;
 	
+	// corner grabbing variables
+	float gravityCache;
+	int cornerDir;
+	
 	private float horizontal = 0;
     private float vertical = 0;
 	
@@ -100,6 +105,10 @@ public class PlayerMover : MonoBehaviour
         rigidbody = player.rigidbody;
 		state = player.state;
 		animator = player.animator;
+		
+		//Time.timeScale = 0.1f;
+		//Time.timeScale = 0.3f;
+		//Time.timeScale = 0.5f;
     }
 
     // Update is called once per frame
@@ -126,6 +135,7 @@ public class PlayerMover : MonoBehaviour
 		animator.SetBool("isWallPushing", state.isWallPushing);
 		animator.SetBool("isWallLaunching", state.isWallLaunching);
 		animator.SetBool("isAirWallSplatting", state.isAirWallSplatting);
+		animator.SetBool("isCornerGrabbing", state.isCornerGrabbing);
 		
 		HandleBracing();
 		HandleWallBracing();
@@ -136,18 +146,21 @@ public class PlayerMover : MonoBehaviour
 		HandleJumping();
 		HandleJumpBracing();
 		HandleStillLanding();
+		HandleCornerGrabbing();
 		
 		jumpJustPressed = false;
 		braceJustPressed = false;
     }
 	
 	void FixedUpdate(){
-		HandleJumpingPhysics();
-		HandleMove();
-		HandleWallSplatting();
-		HandleWallColliding();
-		HandleWallCollidingPhysics();
-		CheckGroundedness();
+		if(!state.isCornerGrabbing){
+			HandleJumpingPhysics();
+			HandleMove();
+			HandleWallSplatting();
+			HandleWallColliding();
+			HandleWallCollidingPhysics();
+			CheckGroundedness();
+		}
 	}
 	
 	void CheckGroundedness(){
@@ -198,7 +211,7 @@ public class PlayerMover : MonoBehaviour
 	
 	void HandleJumping(){
         // basic jump off ground (including coyote time)
-        if(jumpJustPressed && !movementLocked && player.physics.isGrounded && !state.isJumping && (!state.isWallSplatting || !state.isWallSplatStumbling)){
+        if(jumpJustPressed && !movementLocked && player.physics.isGrounded && !state.isJumping){
 			// handle running jumps
 			if(!state.isSlideTurning && !state.isSlideStopping && Mathf.Abs(rigidbody.velocity.x) > runningJumpSpeed){ 
 				jumped = true;
@@ -320,8 +333,7 @@ public class PlayerMover : MonoBehaviour
 		}
 	}
 	
-	void HandleMove()
-    {
+	void HandleMove(){
 		Vector2 force = new Vector2(horizontal, 0);
 		if(player.physics.isGrounded && !state.isJumping && !state.isJumpBracing && !state.isStillJumping && !state.isStillLanding){
 			if(state.isSlideStopping){
@@ -336,6 +348,9 @@ public class PlayerMover : MonoBehaviour
 				} else if(Mathf.Sign(horizontal) != Mathf.Sign(rigidbody.velocity.x) && horizontal != 0.0f){
 					state.isSlideTurning = true;
 					state.isSlideStopping = false;
+				} else if(Mathf.Sign(horizontal) == Mathf.Sign(rigidbody.velocity.x) && horizontal != 0.0f){
+					state.isSlideStopping = false;
+					state.isRunning = true;
 				}
 			} else if(state.isSlideTurning){
 				// apply resistive force
@@ -461,9 +476,16 @@ public class PlayerMover : MonoBehaviour
 				state.isWallPushing = true;
 				wallPushTimer = wallPushTime;
 			} else if(jumpJustPressed){
+				wallLaunched = true; 
+				state.isWallLaunching = false; 
+				state.isJumping = true; 
+				state.isRunJumping = true;
+				state.isWallBracing = false;
+				/*
 				state.isWallBracing = false;
 				state.isWallLaunching = true;
 				wallLaunchTimer = wallLaunchTime;
+				*/
 			}
 		}
 	}
@@ -506,13 +528,13 @@ public class PlayerMover : MonoBehaviour
 		if(wallPushed){
 			rigidbody.velocity = new Vector2(wallCollisionVelocity.x * wallPushHorizontalRetention, rigidbody.velocity.y + wallPushBoost);
 			wallPushed = false;
+			state.isWallColliding = false;
 			InverseVelocityRotationHelper();
 		} else if(wallLaunched){
-			Debug.Log("LAUNCHING");
-			Debug.Log(wallCollisionVelocity.y);
 			float jumpDir = Mathf.Sign(wallCollisionVelocity.x);
 			rigidbody.velocity = new Vector2((Mathf.Clamp(Mathf.Abs(wallCollisionVelocity.x) * wallLaunchHorizontalRetention, wallLaunchMinimumHorizontal, 10000.0f)) * jumpDir, Mathf.Clamp((wallCollisionVelocity.y * -1.0f) + wallLaunchBoost, -1000f, wallLaunchMaxVerticalSpeed));
 			wallLaunched = false;
+			state.isWallColliding = false;
 			InverseVelocityRotationHelper();
 		}
 	}
@@ -541,8 +563,32 @@ public class PlayerMover : MonoBehaviour
 		}
 	}
 	
+	void HandleCornerGrabbing(){
+		if(state.isBracing && !state.isCornerGrabbing && cornerHandler.corner != null){
+			state.SweepFalse();
+			state.isCornerGrabbing = true;
+			gravityCache = rigidbody.gravityScale;
+			rigidbody.gravityScale = 0f;
+			rigidbody.velocity = new Vector2(0f,0f);
+			if(transform.position.x > cornerHandler.corner.transform.position.x){
+				cornerDir = 1;
+			} else{
+				cornerDir = -1;
+			}
+			
+			Debug.Log(cornerHandler.corner.position);
+			transform.parent.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerOffsetY, 0);
+		} else if(braceJustPressed && state.isCornerGrabbing){
+			state.isBracing = false;
+			state.isCornerGrabbing = false;
+			state.isJumping = true;
+			state.isStillJumping = true; 
+			rigidbody.gravityScale = gravityCache;
+		}
+	}
+	
 	// LITTLE HELPER METHODS
-	private void VelocityRotationHelper(){
+	public void VelocityRotationHelper(){
 		if(rigidbody.velocity.x > 0){
 			gameObject.transform.parent.transform.eulerAngles = new Vector2(0,180);
 		} else{
@@ -550,7 +596,7 @@ public class PlayerMover : MonoBehaviour
 		}
 	}
 	
-	private void InverseVelocityRotationHelper(){
+	public void InverseVelocityRotationHelper(){
 		if(rigidbody.velocity.x > 0){
 			gameObject.transform.parent.transform.eulerAngles = new Vector2(0,0);
 		} else{

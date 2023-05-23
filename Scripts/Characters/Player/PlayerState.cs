@@ -33,6 +33,9 @@ public class PlayerState
 	public bool isStillLanding = false;
 	public bool isFalling = false;
 	
+	// corner grabbing states
+	public bool isCornerGrabbing = false; 
+	
 	public bool isBracing = false;
 	public int direction = 1;
 	
@@ -64,5 +67,6 @@ public class PlayerState
 		isAirWallSplatting = false;
 		isWallLaunching = false;
 		isWallPushing = false; 
+		isCornerGrabbing = false;
 	}
 }
