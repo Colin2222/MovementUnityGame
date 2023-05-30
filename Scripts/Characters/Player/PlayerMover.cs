@@ -87,6 +87,9 @@ public class PlayerMover : MonoBehaviour
 	// corner grabbing variables
 	float gravityCache;
 	int cornerDir;
+	public float cornerClimbTime;
+	float cornerClimbTimer;
+	bool cornerClimbEnding = false;
 	
 	private float horizontal = 0;
     private float vertical = 0;
@@ -114,29 +117,6 @@ public class PlayerMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		// animation updating
-        animator.SetFloat("xSpeed", Mathf.Abs(rigidbody.velocity.x));
-        animator.SetFloat("ySpeed",rigidbody.velocity.y);
-		animator.SetBool("isStanding",state.isStanding);
-		animator.SetBool("isRunning",state.isRunning);
-		animator.SetBool("isFullRunning",state.isFullRunning);
-		animator.SetBool("isJumping",state.isJumping);
-		animator.SetBool("isSlideStopping",state.isSlideStopping);
-		animator.SetBool("isSlideTurning", state.isSlideTurning);
-		animator.SetBool("isWallSplatting", state.isWallSplatting);
-		animator.SetBool("isWallSplatStumbling", state.isWallSplatStumbling);
-		animator.SetBool("isRunJumping", state.isRunJumping);
-		animator.SetBool("isJumpBracing", state.isJumpBracing);
-		animator.SetBool("isStillJumping", state.isStillJumping);
-		animator.SetBool("isStillJumpLaunching", state.isStillJumpLaunching);
-		animator.SetBool("isStillLandingBig", state.isStillLandingBig);
-		animator.SetBool("isStillLandingSmall", state.isStillLandingSmall);
-		animator.SetBool("isWallBracing", state.isWallBracing);
-		animator.SetBool("isWallPushing", state.isWallPushing);
-		animator.SetBool("isWallLaunching", state.isWallLaunching);
-		animator.SetBool("isAirWallSplatting", state.isAirWallSplatting);
-		animator.SetBool("isCornerGrabbing", state.isCornerGrabbing);
-		
 		HandleBracing();
 		HandleWallBracing();
 		HandleWallLaunching();
@@ -150,16 +130,56 @@ public class PlayerMover : MonoBehaviour
 		
 		jumpJustPressed = false;
 		braceJustPressed = false;
+		
+		// animation updating
+		if(!cornerClimbEnding){
+			animator.SetFloat("xSpeed", Mathf.Abs(rigidbody.velocity.x));
+			animator.SetFloat("ySpeed",rigidbody.velocity.y);
+			animator.SetBool("isStanding",state.isStanding);
+			animator.SetBool("isRunning",state.isRunning);
+			animator.SetBool("isFullRunning",state.isFullRunning);
+			animator.SetBool("isJumping",state.isJumping);
+			animator.SetBool("isSlideStopping",state.isSlideStopping);
+			animator.SetBool("isSlideTurning", state.isSlideTurning);
+			animator.SetBool("isWallSplatting", state.isWallSplatting);
+			animator.SetBool("isWallSplatStumbling", state.isWallSplatStumbling);
+			animator.SetBool("isRunJumping", state.isRunJumping);
+			animator.SetBool("isJumpBracing", state.isJumpBracing);
+			animator.SetBool("isStillJumping", state.isStillJumping);
+			animator.SetBool("isStillJumpLaunching", state.isStillJumpLaunching);
+			animator.SetBool("isStillLandingBig", state.isStillLandingBig);
+			animator.SetBool("isStillLandingSmall", state.isStillLandingSmall);
+			animator.SetBool("isWallBracing", state.isWallBracing);
+			animator.SetBool("isWallPushing", state.isWallPushing);
+			animator.SetBool("isWallLaunching", state.isWallLaunching);
+			animator.SetBool("isAirWallSplatting", state.isAirWallSplatting);
+			animator.SetBool("isCornerGrabbing", state.isCornerGrabbing);
+			animator.SetBool("isCornerClimbing", state.isCornerClimbing);
+		}
     }
 	
 	void FixedUpdate(){
-		if(!state.isCornerGrabbing){
+		if(!state.isCornerGrabbing && !state.isCornerClimbing){
 			HandleJumpingPhysics();
 			HandleMove();
 			HandleWallSplatting();
 			HandleWallColliding();
 			HandleWallCollidingPhysics();
 			CheckGroundedness();
+		} else{
+			if(cornerClimbEnding){
+				cornerClimbEnding = false;
+				if(cornerHandler.corner == null){
+					transform.parent.position = new Vector3(cornerHandler.lastCorner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), cornerHandler.lastCorner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
+				} else{
+					transform.parent.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), cornerHandler.corner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
+				}
+				rigidbody.gravityScale = gravityCache;
+				movementLocked = false;
+				state.isCornerClimbing = false;
+				state.isStanding = true;
+				state.direction = cornerDir;
+			}
 		}
 	}
 	
@@ -514,7 +534,7 @@ public class PlayerMover : MonoBehaviour
 		}
 	}
 	
-	void HandleWallCollidingPhysics(){
+	void HandleWallCollidingPhysics(){		
 		if(state.isWallBracing){
 			if(rigidbody.velocity.y > 0){
 				rigidbody.AddForce(rigidbody.velocity * -1.0f * wallSlideUpwardsCoefficient, ForceMode2D.Force);
@@ -564,7 +584,7 @@ public class PlayerMover : MonoBehaviour
 	}
 	
 	void HandleCornerGrabbing(){
-		if(state.isBracing && !state.isCornerGrabbing && cornerHandler.corner != null){
+		if(state.isBracing && !state.isCornerGrabbing && !state.isCornerClimbing && cornerHandler.corner != null){
 			state.SweepFalse();
 			state.isCornerGrabbing = true;
 			gravityCache = rigidbody.gravityScale;
@@ -576,14 +596,27 @@ public class PlayerMover : MonoBehaviour
 				cornerDir = -1;
 			}
 			
-			Debug.Log(cornerHandler.corner.position);
 			transform.parent.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerOffsetY, 0);
 		} else if(braceJustPressed && state.isCornerGrabbing){
-			state.isBracing = false;
-			state.isCornerGrabbing = false;
-			state.isJumping = true;
-			state.isStillJumping = true; 
-			rigidbody.gravityScale = gravityCache;
+			if(vertical <= 0){
+				state.isBracing = false;
+				state.isCornerGrabbing = false;
+				state.isJumping = true;
+				state.isStillJumping = true; 
+				rigidbody.gravityScale = gravityCache;
+				movementLocked = false;
+			} else{
+				state.isBracing = false;
+				state.isCornerGrabbing = false;
+				state.isCornerClimbing = true;
+				transform.parent.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerClimbOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerClimbOffsetY, 0);
+				cornerClimbTimer = cornerClimbTime;
+			}
+		} else if(state.isCornerClimbing){
+			cornerClimbTimer -= Time.deltaTime;
+			if(cornerClimbTimer <= 0){
+				cornerClimbEnding = true;
+			}
 		}
 	}
 	
@@ -602,6 +635,10 @@ public class PlayerMover : MonoBehaviour
 		} else{
 			gameObject.transform.parent.transform.eulerAngles = new Vector2(0,180);
 		}
+	}
+	
+	private void FinishCornerClimb(){
+		
 	}
 	
 	private void Land(){

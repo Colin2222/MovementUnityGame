@@ -35,6 +35,7 @@ public class PlayerState
 	
 	// corner grabbing states
 	public bool isCornerGrabbing = false; 
+	public bool isCornerClimbing = false; 
 	
 	public bool isBracing = false;
 	public int direction = 1;
@@ -68,5 +69,6 @@ public class PlayerState
 		isWallLaunching = false;
 		isWallPushing = false; 
 		isCornerGrabbing = false;
+		isCornerClimbing = false;
 	}
 }
