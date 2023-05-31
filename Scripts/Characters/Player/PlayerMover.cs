@@ -117,24 +117,11 @@ public class PlayerMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		HandleBracing();
-		HandleWallBracing();
-		HandleWallLaunching();
-		HandleWallPushing();
-		HandleWallSplatSticking();
-		HandleWallSplatStumbling();
-		HandleJumping();
-		HandleJumpBracing();
-		HandleStillLanding();
-		HandleCornerGrabbing();
-		
-		jumpJustPressed = false;
-		braceJustPressed = false;
-		
 		// animation updating
 		if(!cornerClimbEnding){
 			animator.SetFloat("xSpeed", Mathf.Abs(rigidbody.velocity.x));
 			animator.SetFloat("ySpeed",rigidbody.velocity.y);
+			animator.SetFloat("timeSinceGrounded", timeSinceGrounded);
 			animator.SetBool("isStanding",state.isStanding);
 			animator.SetBool("isRunning",state.isRunning);
 			animator.SetBool("isFullRunning",state.isFullRunning);
@@ -156,6 +143,20 @@ public class PlayerMover : MonoBehaviour
 			animator.SetBool("isCornerGrabbing", state.isCornerGrabbing);
 			animator.SetBool("isCornerClimbing", state.isCornerClimbing);
 		}
+		
+		HandleBracing();
+		HandleWallBracing();
+		HandleWallLaunching();
+		HandleWallPushing();
+		HandleWallSplatSticking();
+		HandleWallSplatStumbling();
+		HandleJumping();
+		HandleJumpBracing();
+		HandleStillLanding();
+		HandleCornerGrabbing();
+		
+		jumpJustPressed = false;
+		braceJustPressed = false;
     }
 	
 	void FixedUpdate(){
@@ -331,6 +332,7 @@ public class PlayerMover : MonoBehaviour
 					state.isJumpBracing = false;
 					state.isStillJumpLaunching = true;
 					state.isJumping = true;
+					state.isStillJumping = true;
 					movementLocked = true;
 					jumpLaunchTimer = jumpLaunchTime;
 					aimAngle = Mathf.Atan2(vertical, horizontal);
