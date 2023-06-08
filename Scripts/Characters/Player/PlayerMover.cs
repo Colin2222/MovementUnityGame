@@ -7,11 +7,15 @@ public class PlayerMover : MonoBehaviour
 {
 	public PlayerHub player;
 	public CornerHandler cornerHandler;
+	public PlayerInventoryHandler inventoryHandler;
 	Rigidbody2D rigidbody;
 	PlayerState state;
 	Animator animator;
 	
+	// used to prevent movement in the middle of certain moves (eg prevent changing directions while in the air)
 	bool movementLocked = false;
+	// used to prevent movement when in a cutscene or in inventory menu
+	bool physControlLocked = false; 
 	
 	// ground movement variables
 	public float speed;
@@ -101,6 +105,8 @@ public class PlayerMover : MonoBehaviour
     private bool jumpJustPressed = false;
 	private bool bracePressed = false;
 	private bool braceJustPressed = false; 
+	private bool inventoryPressed = false;
+	private bool inventoryJustPressed = false;
 	
     // Start is called before the first frame update
     void Start() 
@@ -154,9 +160,11 @@ public class PlayerMover : MonoBehaviour
 		HandleJumpBracing();
 		HandleStillLanding();
 		HandleCornerGrabbing();
+		HandleInventory();
 		
 		jumpJustPressed = false;
 		braceJustPressed = false;
+		inventoryJustPressed = false;
     }
 	
 	void FixedUpdate(){
@@ -194,6 +202,12 @@ public class PlayerMover : MonoBehaviour
 		if(timeSincePressed < jumpForgivenessTime){
             timeSincePressed += Time.fixedDeltaTime;
         }
+	}
+	
+	void HandleInventory(){
+		if(inventoryJustPressed){
+			inventoryHandler.ToggleInventory();
+		}
 	}
 	
 	void HandleBracing(){
@@ -398,7 +412,7 @@ public class PlayerMover : MonoBehaviour
 				} else {
 					rigidbody.AddForce(rigidbody.velocity * moveForce * -1.0f, ForceMode2D.Force);
 				}
-			} else if(state.isRunning){
+			} else if(state.isRunning && !movementLocked){
 				// check if player stops running (but is not changing directions)
 				if(horizontal == 0.0f){
 					state.isSlideStopping = true;
@@ -639,10 +653,6 @@ public class PlayerMover : MonoBehaviour
 		}
 	}
 	
-	private void FinishCornerClimb(){
-		
-	}
-	
 	private void Land(){
 		state.isJumping = false;
 		state.isStillJumping = false;
@@ -666,4 +676,9 @@ public class PlayerMover : MonoBehaviour
         bracePressed = !bracePressed;
         braceJustPressed = bracePressed;
     }
+	
+	private void OnInventory(){
+		inventoryPressed = !inventoryPressed;
+		inventoryJustPressed = inventoryPressed;
+	}
 }

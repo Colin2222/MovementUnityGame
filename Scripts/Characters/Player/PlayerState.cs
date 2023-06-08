@@ -37,6 +37,9 @@ public class PlayerState
 	public bool isCornerGrabbing = false; 
 	public bool isCornerClimbing = false; 
 	
+	// inventory states
+	public bool isInInventory = false;
+	
 	public bool isBracing = false;
 	public int direction = 1;
 	
