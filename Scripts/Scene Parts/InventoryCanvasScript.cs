@@ -37,6 +37,8 @@ public class InventoryCanvasScript : MonoBehaviour
 		for(int i = 0; i < inventory.gemInventoryHeight; i++){
 			for(int j = 0; j < inventory.gemInventoryWidth; j++){
 				gemSlots[i, j] = Instantiate(slotPrefab, gems, false);
+				gemSlots[i, j].GetComponent<RectTransform>().sizeDelta = new Vector2(slotSize, slotSize);
+				gemSlots[i, j].transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(slotSize, slotSize);
 				gemSlots[i, j].transform.localPosition = new Vector3(j * slotSize, -i * slotSize, 0);
 				gemSlots[i, j].name = "Slot[" + i + "," + j + "]";
 			}

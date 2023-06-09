@@ -9,8 +9,17 @@ public class SceneManager : MonoBehaviour
 	[System.NonSerialized]
     public PlayerHub player;
 	
+	public ItemRegistry itemRegistry;
+	public string itemRegistryXml;
+	
     GameObject playerStateObjectTest;
     GameObject playerObjectTest;
+	
+	void Awake(){
+		// load in items from data xml
+		itemRegistry = ItemRegistry.Instance();
+		itemRegistry.LoadItems(itemRegistryXml);
+	}
 	
     // Start is called before the first frame update
     void Start()

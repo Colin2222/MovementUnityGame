@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Items>
+	<item id="test_item1" name="Test Thingy A" type="1" icon="test_item"></item>
+	<item id="test_item2" name="Test Thingy B" type="1" icon="test_item2"></item>
+</Items>

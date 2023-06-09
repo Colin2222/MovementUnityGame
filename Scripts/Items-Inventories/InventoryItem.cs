@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class InventoryItem
 {
-    public string id;
-	public string displayName;
+    public Item item;
 	public int quantity;
-	public int stackSize;
-	public int type;
-	public Sprite sprite;
 }
