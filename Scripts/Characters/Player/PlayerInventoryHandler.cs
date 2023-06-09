@@ -99,9 +99,6 @@ public class PlayerInventoryHandler : MonoBehaviour
 			for(int j = 0; j < currentInventory.width; j++){
 				if(currentInventory.contents[i, j] != null){
 					canvas.SetIcon(j, i, currentInventory.id, currentInventory.contents[i, j].item.icon);
-					if(currentInventory.contents[i, j].item.icon == null){
-						Debug.Log("POOP");
-					}
 				}
 			}
 		}

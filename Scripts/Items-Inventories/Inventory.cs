@@ -59,9 +59,10 @@ public class Inventory : MonoBehaviour
 		
 		while(quantity > 0){
 			(int invenX, int invenY, int num) searchData = FindOpenSlot(currentInven, insertion, startCoordinates);
+			Debug.Log(searchData);
 			if(searchData.invenX != -1){
-				currentInven.contents[searchData.invenX, searchData.invenY].item = insertion;
-				currentInven.contents[searchData.invenX, searchData.invenY].quantity += Mathf.Clamp(quantity, 0, searchData.num);
+				currentInven.contents[searchData.invenY, searchData.invenX].item = insertion;
+				currentInven.contents[searchData.invenY, searchData.invenX].quantity += Mathf.Clamp(quantity, 0, searchData.num);
 				quantity -= Mathf.Clamp(quantity, 0, searchData.num);
 			}
 			startCoordinates = (searchData.invenX + 1, searchData.invenY);
@@ -74,6 +75,7 @@ public class Inventory : MonoBehaviour
 		for(int j = startCoordinates.startX; j < currentInven.width; j++){
 			if(currentInven.contents[startCoordinates.startY, j] == null){
 				currentInven.contents[startCoordinates.startY, j] = new InventoryItem();
+				return (j, startCoordinates.startY, insertion.stackSize - currentInven.contents[startCoordinates.startY, j].quantity);
 			} else if(currentInven.contents[startCoordinates.startY, j].item.id == insertion.id){
 				return (j, startCoordinates.startY, insertion.stackSize - currentInven.contents[startCoordinates.startY, j].quantity);
 			}
@@ -82,7 +84,10 @@ public class Inventory : MonoBehaviour
 		// check subsequent rows entirely
 		for(int i = startCoordinates.startY; i < currentInven.height; i++){
 			for(int j = 0; j < currentInven.width; j++){
-				if(currentInven.contents[i, j].item == null || currentInven.contents[i, j].item.id == insertion.id){
+				if(currentInven.contents[i, j].item == null){
+					currentInven.contents[i, j] = new InventoryItem();
+					return (j, i, insertion.stackSize - currentInven.contents[i, j].quantity);
+				} else if(currentInven.contents[i, j].item.id == insertion.id){
 					return (j, i, insertion.stackSize - currentInven.contents[i, j].quantity);
 				}
 			}

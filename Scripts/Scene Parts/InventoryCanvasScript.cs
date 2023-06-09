@@ -55,7 +55,6 @@ public class InventoryCanvasScript : MonoBehaviour
 		currentSlots[selection.y, selection.x].GetComponent<Image>().color = defaultSlotColor;
 		currentSlots[y, x].GetComponent<Image>().color = selectedSlotColor;
 		selection = (y, x);
-		Debug.Log(selection);
 	}
 	
 	public void SetIcon(int x, int y, int id, Sprite icon){
