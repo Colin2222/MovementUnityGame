@@ -28,7 +28,8 @@ public class ItemRegistry
 			string insertionName = currentNode.Attributes["name"].Value;
 			int insertionType = int.Parse(currentNode.Attributes["type"].Value);
 			Sprite insertionIcon = Resources.Load<Sprite>("ItemSprites/" + currentNode.Attributes["icon"].Value);
-			Item insertion = new Item(insertionId, insertionName, insertionType, insertionIcon, new List<string>());
+			int insertionStackSize = int.Parse(currentNode.Attributes["stackSize"].Value);
+			Item insertion = new Item(insertionId, insertionName, insertionType, insertionIcon, insertionStackSize, new List<string>());
 			items.Add(insertion.id, insertion);
 			
 			currentNode = currentNode.NextSibling;

@@ -104,9 +104,19 @@ public class PlayerMover : MonoBehaviour
     private bool jumpPressed = false;
     private bool jumpJustPressed = false;
 	private bool bracePressed = false;
-	private bool braceJustPressed = false; 
+	private bool braceJustPressed = false;
 	private bool inventoryPressed = false;
 	private bool inventoryJustPressed = false;
+	private bool itemGrabPressed = false;
+	private bool itemGrabJustPressed = false;
+	private bool menuUpPressed = false;
+	private bool menuUpJustPressed = false;
+	private bool menuDownPressed = false;
+	private bool menuDownJustPressed = false;
+	private bool menuRightPressed = false;
+	private bool menuRightJustPressed = false;
+	private bool menuLeftPressed = false;
+	private bool menuLeftJustPressed = false;
 	
     // Start is called before the first frame update
     void Start() 
@@ -161,10 +171,16 @@ public class PlayerMover : MonoBehaviour
 		HandleStillLanding();
 		HandleCornerGrabbing();
 		HandleInventory();
+		HandleItemGrabbing();
 		
 		jumpJustPressed = false;
 		braceJustPressed = false;
 		inventoryJustPressed = false;
+		itemGrabJustPressed = false;
+		menuUpJustPressed = false;
+		menuDownJustPressed = false;
+		menuRightJustPressed = false;
+		menuLeftJustPressed = false;
     }
 	
 	void FixedUpdate(){
@@ -206,7 +222,20 @@ public class PlayerMover : MonoBehaviour
 	
 	void HandleInventory(){
 		if(inventoryJustPressed){
-			inventoryHandler.ToggleInventory();
+			state.isInInventory = inventoryHandler.ToggleInventory();
+			movementLocked = state.isInInventory;
+		}
+		
+		if(state.isInInventory){
+			if(menuUpJustPressed){
+				inventoryHandler.MoveUp();
+			} else if(menuDownJustPressed){
+				inventoryHandler.MoveDown();
+			} else if(menuRightJustPressed){
+				inventoryHandler.MoveRight();
+			} else if(menuLeftJustPressed){
+				inventoryHandler.MoveLeft();
+			}
 		}
 	}
 	
@@ -636,6 +665,12 @@ public class PlayerMover : MonoBehaviour
 		}
 	}
 	
+	void HandleItemGrabbing(){
+		if(itemGrabJustPressed){
+			inventoryHandler.Pickup();
+		}
+	}
+	
 	// LITTLE HELPER METHODS
 	public void VelocityRotationHelper(){
 		if(rigidbody.velocity.x > 0){
@@ -680,5 +715,30 @@ public class PlayerMover : MonoBehaviour
 	private void OnInventory(){
 		inventoryPressed = !inventoryPressed;
 		inventoryJustPressed = inventoryPressed;
+	}
+	
+	private void OnItemGrab(){
+		itemGrabPressed = !itemGrabPressed;
+		itemGrabJustPressed = itemGrabPressed;
+	}
+	
+	private void OnMenuUp(){
+		menuUpPressed = !menuUpPressed;
+		menuUpJustPressed = menuUpPressed;
+	}
+	
+	private void OnMenuDown(){
+		menuDownPressed = !menuDownPressed;
+		menuDownJustPressed = menuDownPressed;
+	}
+	
+	private void OnMenuRight(){
+		menuRightPressed = !menuRightPressed;
+		menuRightJustPressed = menuRightPressed;
+	}
+	
+	private void OnMenuLeft(){
+		menuLeftPressed = !menuLeftPressed;
+		menuLeftJustPressed = menuLeftPressed;
 	}
 }
