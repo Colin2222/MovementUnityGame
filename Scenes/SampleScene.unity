@@ -2749,6 +2749,10 @@ PrefabInstance:
       propertyPath: cassetteInventoryHeight
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 281777110, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: inventoryExitTime
+      value: 0.625
+      objectReference: {fileID: 0}
     - target: {fileID: 1568975044, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
       propertyPath: canvas
       value: 

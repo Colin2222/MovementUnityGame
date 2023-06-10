@@ -98,6 +98,10 @@ public class PlayerMover : MonoBehaviour
 	private float horizontal = 0;
     private float vertical = 0;
 	
+	// inventory variables
+	public float inventoryExitTime;
+	float inventoryExitTimer;
+	
 	
 	
 	// button pressing
@@ -164,20 +168,23 @@ public class PlayerMover : MonoBehaviour
 			animator.SetBool("isCornerGrabbing", state.isCornerGrabbing);
 			animator.SetBool("isCornerClimbing", state.isCornerClimbing);
 			animator.SetBool("isInInventory", state.isInInventory);
+			animator.SetBool("isInventoryExiting", state.isInventoryExiting);
 		}
 		
-		HandleBracing();
-		HandleWallBracing();
-		HandleWallLaunching();
-		HandleWallPushing();
-		HandleWallSplatSticking();
-		HandleWallSplatStumbling();
-		HandleJumping();
-		HandleJumpBracing();
-		HandleStillLanding();
-		HandleCornerGrabbing();
+		if(!physControlLocked){
+			HandleBracing();
+			HandleWallBracing();
+			HandleWallLaunching();
+			HandleWallPushing();
+			HandleWallSplatSticking();
+			HandleWallSplatStumbling();
+			HandleJumping();
+			HandleJumpBracing();
+			HandleStillLanding();
+			HandleCornerGrabbing();
+			HandleItemGrabbing();
+		}
 		HandleInventory();
-		HandleItemGrabbing();
 		
 		jumpJustPressed = false;
 		braceJustPressed = false;
@@ -193,12 +200,14 @@ public class PlayerMover : MonoBehaviour
 	
 	void FixedUpdate(){
 		if(!state.isCornerGrabbing && !state.isCornerClimbing){
-			HandleJumpingPhysics();
-			HandleMove();
-			HandleWallSplatting();
-			HandleWallColliding();
-			HandleWallCollidingPhysics();
-			CheckGroundedness();
+			if(!physControlLocked){
+				HandleJumpingPhysics();
+				HandleMove();
+				HandleWallSplatting();
+				HandleWallColliding();
+				HandleWallCollidingPhysics();
+				CheckGroundedness();
+			}
 		} else{
 			if(cornerClimbEnding){
 				cornerClimbEnding = false;
@@ -232,11 +241,12 @@ public class PlayerMover : MonoBehaviour
 		if(inventoryJustPressed){
 			state.SweepFalse();
 			state.isInInventory = inventoryHandler.ToggleInventory();
-			movementLocked = state.isInInventory;
 			
 			if(!state.isInInventory){
-				state.isStanding = true;
-				animator.Play("PlayerBagExiting");
+				state.isInventoryExiting = true;
+				inventoryExitTimer = inventoryExitTime;
+			} else{
+				physControlLocked = true;
 			}
 		}
 		
@@ -255,6 +265,15 @@ public class PlayerMover : MonoBehaviour
 				inventoryHandler.PageRight();
 			} else if(menuPageLeftJustPressed){
 				inventoryHandler.PageLeft();
+			}
+		}
+		
+		if(state.isInventoryExiting){
+			inventoryExitTimer -= Time.deltaTime;
+			if(inventoryExitTimer <= 0){
+				state.isInventoryExiting = false;
+				state.isStanding = true;
+				physControlLocked = false;
 			}
 		}
 	}
