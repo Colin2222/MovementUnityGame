@@ -163,6 +163,7 @@ public class PlayerMover : MonoBehaviour
 			animator.SetBool("isAirWallSplatting", state.isAirWallSplatting);
 			animator.SetBool("isCornerGrabbing", state.isCornerGrabbing);
 			animator.SetBool("isCornerClimbing", state.isCornerClimbing);
+			animator.SetBool("isInInventory", state.isInInventory);
 		}
 		
 		HandleBracing();
@@ -229,8 +230,14 @@ public class PlayerMover : MonoBehaviour
 	
 	void HandleInventory(){
 		if(inventoryJustPressed){
+			state.SweepFalse();
 			state.isInInventory = inventoryHandler.ToggleInventory();
 			movementLocked = state.isInInventory;
+			
+			if(!state.isInInventory){
+				state.isStanding = true;
+				animator.Play("PlayerBagExiting");
+			}
 		}
 		
 		if(state.isInInventory){
