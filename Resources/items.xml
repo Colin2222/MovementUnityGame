@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Items>
-	<item id="test_item1" name="Test Thingy A" type="1" stackSize="2" icon="test_item"></item>
-	<item id="test_item2" name="Test Thingy B" type="1" stackSize="2" icon="test_item2"></item>
+	<item id="test_item1" name="Test Gem A" type="1" stackSize="1" icon="test_item"></item>
+	<item id="test_item2" name="Test Gem B" type="1" stackSize="1" icon="test_item2"></item>
+	<item id="test_item3" name="Test Item A" type="0" stackSize="1" icon="test_item3"></item>
+	<item id="test_item4" name="Test Item B" type="0" stackSize="1" icon="test_item4"></item>
+	<item id="test_item5" name="Test Cassette A" type="2" stackSize="1" icon="test_item4"></item>
 </Items>

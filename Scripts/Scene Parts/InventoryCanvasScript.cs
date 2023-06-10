@@ -57,6 +57,44 @@ public class InventoryCanvasScript : MonoBehaviour
 		selection = (y, x);
 	}
 	
+	public void ChangePage(int prevId, int newId){
+		GameObject[,] oldSlots;
+		switch(prevId){
+			case 0:
+				oldSlots = itemSlots;
+				break;
+			case 1:
+				oldSlots = gemSlots;
+				break;
+			case 2:
+				oldSlots = cassetteSlots;
+				break;
+			default:
+				oldSlots = itemSlots;
+				break;
+		}
+		oldSlots[selection.y, selection.x].GetComponent<Image>().color = defaultSlotColor;
+		
+		GameObject[,] currentSlots;
+		switch(newId){
+			case 0:
+				currentSlots = itemSlots;
+				break;
+			case 1:
+				currentSlots = gemSlots;
+				break;
+			case 2:
+				currentSlots = cassetteSlots;
+				break;
+			default:
+				currentSlots = itemSlots;
+				break;
+		}
+		
+		currentSlots[0, 0].GetComponent<Image>().color = selectedSlotColor;
+		selection = (0, 0);
+	}
+	
 	public void SetIcon(int x, int y, int id, Sprite icon){
 		// THIS currentSlots code is repeated in ChangeSelection above, make a helper method to cut this down
 		GameObject[,] currentSlots;

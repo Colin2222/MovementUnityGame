@@ -88,6 +88,8 @@ public class PlayerInventoryHandler : MonoBehaviour
 		canvas.itemsObject.SetActive(false);
 		canvas.cassettesObject.SetActive(false);
 		
+		int oldId = currentInventory.id;
+		
 		switch(currentInventory.id){
 			case 0:
 				currentInventory = inventory.gemInventory;
@@ -106,7 +108,7 @@ public class PlayerInventoryHandler : MonoBehaviour
 		}
 		
 		currentSlotPos = (0, 0);
-		canvas.ChangeSelection(currentSlotPos.y, currentSlotPos.x, currentInventory.id);
+		canvas.ChangePage(oldId, currentInventory.id);
 		UpdateIcons();
 	}
 	
@@ -115,6 +117,8 @@ public class PlayerInventoryHandler : MonoBehaviour
 		canvas.itemsObject.SetActive(false);
 		canvas.cassettesObject.SetActive(false);
 		
+		int oldId = currentInventory.id;
+		
 		switch(currentInventory.id){
 			case 0:
 				currentInventory = inventory.cassetteInventory;
@@ -133,7 +137,7 @@ public class PlayerInventoryHandler : MonoBehaviour
 		}
 		
 		currentSlotPos = (0, 0);
-		canvas.ChangeSelection(currentSlotPos.y, currentSlotPos.x, currentInventory.id);
+		canvas.ChangePage(oldId, currentInventory.id);
 		UpdateIcons();
 	}
 	
