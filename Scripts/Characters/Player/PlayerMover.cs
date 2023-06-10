@@ -117,6 +117,11 @@ public class PlayerMover : MonoBehaviour
 	private bool menuRightJustPressed = false;
 	private bool menuLeftPressed = false;
 	private bool menuLeftJustPressed = false;
+	private bool menuPageRightPressed = false;
+	private bool menuPageRightJustPressed = false;
+	private bool menuPageLeftPressed = false;
+	private bool menuPageLeftJustPressed = false;
+
 	
     // Start is called before the first frame update
     void Start() 
@@ -181,6 +186,8 @@ public class PlayerMover : MonoBehaviour
 		menuDownJustPressed = false;
 		menuRightJustPressed = false;
 		menuLeftJustPressed = false;
+		menuPageRightJustPressed = false;
+		menuPageLeftJustPressed = false;
     }
 	
 	void FixedUpdate(){
@@ -235,6 +242,12 @@ public class PlayerMover : MonoBehaviour
 				inventoryHandler.MoveRight();
 			} else if(menuLeftJustPressed){
 				inventoryHandler.MoveLeft();
+			}
+			
+			if(menuPageRightJustPressed){
+				inventoryHandler.PageRight();
+			} else if(menuPageLeftJustPressed){
+				inventoryHandler.PageLeft();
 			}
 		}
 	}
@@ -740,5 +753,15 @@ public class PlayerMover : MonoBehaviour
 	private void OnMenuLeft(){
 		menuLeftPressed = !menuLeftPressed;
 		menuLeftJustPressed = menuLeftPressed;
+	}
+	
+	private void OnMenuPageRight(){
+		menuPageRightPressed = !menuPageRightPressed;
+		menuPageRightJustPressed = menuPageRightPressed;
+	}
+	
+	private void OnMenuPageLeft(){
+		menuPageLeftPressed = !menuPageLeftPressed;
+		menuPageLeftJustPressed = menuPageLeftPressed;
 	}
 }

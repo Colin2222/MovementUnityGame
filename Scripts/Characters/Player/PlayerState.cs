@@ -39,6 +39,7 @@ public class PlayerState
 	
 	// inventory states
 	public bool isInInventory = false;
+	public bool isHoldingItem = false;
 	
 	public bool isBracing = false;
 	public int direction = 1;
@@ -73,5 +74,6 @@ public class PlayerState
 		isWallPushing = false; 
 		isCornerGrabbing = false;
 		isCornerClimbing = false;
+		isInInventory = false;
 	}
 }

@@ -85,6 +85,24 @@
                     "processors": "",
                     "interactions": "Press(behavior=2)",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "MenuPageRight",
+                    "type": "Button",
+                    "id": "136b43b2-2149-415b-ac6b-292b8c43a7db",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MenuPageLeft",
+                    "type": "Button",
+                    "id": "e2e1e01d-f456-42d4-8191-d3b1f18f4c0b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -195,6 +213,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "MenuLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df3c8f1e-dea6-49b9-8278-cd04cb38474b",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenuPageRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9518ac53-c4d4-4f12-9850-8beb8f048ae9",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenuPageLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

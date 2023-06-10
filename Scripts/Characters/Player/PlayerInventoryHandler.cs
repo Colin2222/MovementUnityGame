@@ -45,6 +45,7 @@ public class PlayerInventoryHandler : MonoBehaviour
 			}
 			currentSlotPos = (0, 0);
 			canvas.ChangeSelection(currentSlotPos.y, currentSlotPos.x, currentInventory.id);
+			UpdateIcons();
 		} else{
 			canvas.gemsObject.SetActive(false);
 			canvas.itemsObject.SetActive(false);
@@ -80,6 +81,60 @@ public class PlayerInventoryHandler : MonoBehaviour
 			(currentSlotPos.x)--;
 			canvas.ChangeSelection(currentSlotPos.y, currentSlotPos.x, currentInventory.id);
 		}
+	}
+	
+	public void PageRight(){
+		canvas.gemsObject.SetActive(false);
+		canvas.itemsObject.SetActive(false);
+		canvas.cassettesObject.SetActive(false);
+		
+		switch(currentInventory.id){
+			case 0:
+				currentInventory = inventory.gemInventory;
+				canvas.gemsObject.SetActive(true);
+				break;
+			case 1:
+				currentInventory = inventory.cassetteInventory;
+				canvas.cassettesObject.SetActive(true);
+				break;
+			case 2:
+				currentInventory = inventory.itemInventory;
+				canvas.itemsObject.SetActive(true);
+				break;
+			default:
+				break;
+		}
+		
+		currentSlotPos = (0, 0);
+		canvas.ChangeSelection(currentSlotPos.y, currentSlotPos.x, currentInventory.id);
+		UpdateIcons();
+	}
+	
+	public void PageLeft(){
+		canvas.gemsObject.SetActive(false);
+		canvas.itemsObject.SetActive(false);
+		canvas.cassettesObject.SetActive(false);
+		
+		switch(currentInventory.id){
+			case 0:
+				currentInventory = inventory.cassetteInventory;
+				canvas.cassettesObject.SetActive(true);
+				break;
+			case 1:
+				currentInventory = inventory.itemInventory;
+				canvas.itemsObject.SetActive(true);
+				break;
+			case 2:
+				currentInventory = inventory.gemInventory;
+				canvas.gemsObject.SetActive(true);
+				break;
+			default:
+				break;
+		}
+		
+		currentSlotPos = (0, 0);
+		canvas.ChangeSelection(currentSlotPos.y, currentSlotPos.x, currentInventory.id);
+		UpdateIcons();
 	}
 	
 	public void Pickup(){

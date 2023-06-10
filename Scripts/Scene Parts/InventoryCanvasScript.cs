@@ -91,5 +91,29 @@ public class InventoryCanvasScript : MonoBehaviour
 				gemSlots[i, j].name = "Slot[" + i + "," + j + "]";
 			}
 		}
+		
+		itemSlots = new GameObject[inventory.itemInventoryHeight, inventory.itemInventoryWidth];
+		for(int i = 0; i < inventory.itemInventoryHeight; i++){
+			for(int j = 0; j < inventory.itemInventoryWidth; j++){
+				itemSlots[i, j] = Instantiate(slotPrefab, items, false);
+				itemSlots[i, j].GetComponent<RectTransform>().sizeDelta = new Vector2(slotSize, slotSize);
+				itemSlots[i, j].GetComponent<Image>().color = defaultSlotColor;
+				itemSlots[i, j].transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(slotSize, slotSize);
+				itemSlots[i, j].transform.localPosition = new Vector3(j * slotSize, -i * slotSize, 0);
+				itemSlots[i, j].name = "Slot[" + i + "," + j + "]";
+			}
+		}
+		
+		cassetteSlots = new GameObject[inventory.cassetteInventoryHeight, inventory.cassetteInventoryWidth];
+		for(int i = 0; i < inventory.cassetteInventoryHeight; i++){
+			for(int j = 0; j < inventory.cassetteInventoryWidth; j++){
+				cassetteSlots[i, j] = Instantiate(slotPrefab, cassettes, false);
+				cassetteSlots[i, j].GetComponent<RectTransform>().sizeDelta = new Vector2(slotSize, slotSize);
+				cassetteSlots[i, j].GetComponent<Image>().color = defaultSlotColor;
+				cassetteSlots[i, j].transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(slotSize, slotSize);
+				cassetteSlots[i, j].transform.localPosition = new Vector3(j * slotSize, -i * slotSize, 0);
+				cassetteSlots[i, j].name = "Slot[" + i + "," + j + "]";
+			}
+		}
 	}
 }
