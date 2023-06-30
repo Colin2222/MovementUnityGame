@@ -16,6 +16,8 @@ public class CharacterPhysicsChecker : MonoBehaviour
 	public Vector2 frontCollisionSpeed;
 	[System.NonSerialized]
 	public Vector2 bottomCollisionSpeed;
+	[System.NonSerialized]
+    public float wallSide = 1;
 
     void OnCollisionEnter2D(Collision2D collision){
         LayerMask layer = collision.gameObject.layer;

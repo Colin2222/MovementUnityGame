@@ -565,15 +565,10 @@ public class PlayerMover : MonoBehaviour
 			} else if(jumpJustPressed){
 				wallLaunched = true; 
 				animator.Play("PlayerWallLaunching");
-				state.isWallLaunching = false; 
+				state.isWallLaunching = true; 
 				state.isJumping = true; 
 				state.isRunJumping = true;
 				state.isWallBracing = false;
-				/*
-				state.isWallBracing = false;
-				state.isWallLaunching = true;
-				wallLaunchTimer = wallLaunchTime;
-				*/
 			}
 		}
 	}
@@ -585,7 +580,11 @@ public class PlayerMover : MonoBehaviour
 				state.isWallLaunching = false; 
 				state.isJumping = true; 
 				state.isRunJumping = true;
-				wallLaunched = true;
+				if(player.physics.wallSide == 1){
+					gameObject.transform.parent.transform.eulerAngles = new Vector2(0,180);
+				} else{
+					gameObject.transform.parent.transform.eulerAngles = new Vector2(0,0);
+				}
 			}
 		}
 	}
@@ -617,13 +616,11 @@ public class PlayerMover : MonoBehaviour
 			rigidbody.velocity = new Vector2(wallCollisionVelocity.x * wallPushHorizontalRetention, rigidbody.velocity.y + wallPushBoost);
 			wallPushed = false;
 			state.isWallColliding = false;
-			InverseVelocityRotationHelper();
 		} else if(wallLaunched){
 			float jumpDir = Mathf.Sign(wallCollisionVelocity.x);
 			rigidbody.velocity = new Vector2((Mathf.Clamp(Mathf.Abs(wallCollisionVelocity.x) * wallLaunchHorizontalRetention, wallLaunchMinimumHorizontal, 10000.0f)) * jumpDir, Mathf.Clamp((wallCollisionVelocity.y * -1.0f) + wallLaunchBoost, -1000f, wallLaunchMaxVerticalSpeed));
 			wallLaunched = false;
 			state.isWallColliding = false;
-			InverseVelocityRotationHelper();
 		}
 	}
 	
