@@ -141,36 +141,7 @@ public class PlayerMover : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-		// animation updating
-		if(!cornerClimbEnding){
-			animator.SetFloat("xSpeed", Mathf.Abs(rigidbody.velocity.x));
-			animator.SetFloat("ySpeed",rigidbody.velocity.y);
-			animator.SetFloat("timeSinceGrounded", timeSinceGrounded);
-			animator.SetBool("isStanding",state.isStanding);
-			animator.SetBool("isRunning",state.isRunning);
-			animator.SetBool("isFullRunning",state.isFullRunning);
-			animator.SetBool("isJumping",state.isJumping);
-			animator.SetBool("isSlideStopping",state.isSlideStopping);
-			animator.SetBool("isSlideTurning", state.isSlideTurning);
-			animator.SetBool("isWallSplatting", state.isWallSplatting);
-			animator.SetBool("isWallSplatStumbling", state.isWallSplatStumbling);
-			animator.SetBool("isRunJumping", state.isRunJumping);
-			animator.SetBool("isJumpBracing", state.isJumpBracing);
-			animator.SetBool("isStillJumping", state.isStillJumping);
-			animator.SetBool("isStillJumpLaunching", state.isStillJumpLaunching);
-			animator.SetBool("isStillLandingBig", state.isStillLandingBig);
-			animator.SetBool("isStillLandingSmall", state.isStillLandingSmall);
-			animator.SetBool("isWallBracing", state.isWallBracing);
-			animator.SetBool("isWallPushing", state.isWallPushing);
-			animator.SetBool("isWallLaunching", state.isWallLaunching);
-			animator.SetBool("isAirWallSplatting", state.isAirWallSplatting);
-			animator.SetBool("isCornerGrabbing", state.isCornerGrabbing);
-			animator.SetBool("isCornerClimbing", state.isCornerClimbing);
-			animator.SetBool("isInInventory", state.isInInventory);
-			animator.SetBool("isInventoryExiting", state.isInventoryExiting);
-		}
-		
+    {	
 		if(!physControlLocked){
 			HandleBracing();
 			HandleWallBracing();
@@ -183,6 +154,8 @@ public class PlayerMover : MonoBehaviour
 			HandleStillLanding();
 			HandleCornerGrabbing();
 			HandleItemGrabbing();
+			
+			HandleMoveInput();
 		}
 		HandleInventory();
 		
@@ -202,10 +175,14 @@ public class PlayerMover : MonoBehaviour
 		if(!state.isCornerGrabbing && !state.isCornerClimbing){
 			if(!physControlLocked){
 				HandleJumpingPhysics();
-				HandleMove();
-				HandleWallSplatting();
+				
+				
 				HandleWallColliding();
 				HandleWallCollidingPhysics();
+				
+				HandleMovePhysics();
+				HandleWallSplatting();
+				
 				CheckGroundedness();
 			}
 		} else{
@@ -220,6 +197,7 @@ public class PlayerMover : MonoBehaviour
 				movementLocked = false;
 				state.isCornerClimbing = false;
 				state.isStanding = true;
+				animator.Play("PlayerIdle");
 				state.direction = cornerDir;
 			}
 		}
@@ -245,8 +223,10 @@ public class PlayerMover : MonoBehaviour
 			if(!state.isInInventory){
 				state.isInventoryExiting = true;
 				inventoryExitTimer = inventoryExitTime;
+				animator.Play("PlayerBagExiting");
 			} else{
 				physControlLocked = true;
+				animator.Play("PlayerBagReaching");
 			}
 		}
 		
@@ -306,6 +286,7 @@ public class PlayerMover : MonoBehaviour
 				state.isStillLanding = false;
 				state.isStillLandingBig = false;
 				state.isStillLandingSmall = false;
+				animator.Play("PlayerIdle");
 				state.isStanding = true;
 				movementLocked = false;
 			}
@@ -317,6 +298,7 @@ public class PlayerMover : MonoBehaviour
         if(jumpJustPressed && !movementLocked && player.physics.isGrounded && !state.isJumping){
 			// handle running jumps
 			if(!state.isSlideTurning && !state.isSlideStopping && Mathf.Abs(rigidbody.velocity.x) > runningJumpSpeed){ 
+				animator.Play("PlayerJumpingRunning");
 				jumped = true;
 				state.SweepFalse();
 				state.isJumping = true;
@@ -327,6 +309,7 @@ public class PlayerMover : MonoBehaviour
 			} else if(Mathf.Abs(rigidbody.velocity.x) <= runningJumpSpeed){
 				state.SweepFalse();
 				state.isJumpBracing = true;
+				animator.Play("PlayerJumpBracing");
 				jumpBraceCounter = jumpBraceStartingTime;
 			}
         }
@@ -385,6 +368,7 @@ public class PlayerMover : MonoBehaviour
 			if(state.isStillJumping && player.physics.bottomCollisionSpeed.y > stillLandSmallMinSpeed){
 				state.isStillLandingSmall = true;
 				state.isStillLanding = true;
+				animator.Play("PlayerLandingStillSmall");
 				stillLandTimer = stillLandLittleTime;
 			} else{
 				state.isRunning = true;
@@ -411,6 +395,7 @@ public class PlayerMover : MonoBehaviour
 				// check if player held down the jump button long enough to meet minimum length to execute jump
 				float jumpForceMultiplier = Mathf.Clamp(jumpBraceCounter, 0.0f, jumpBraceTime) / jumpBraceTime;
 				if(jumpForceMultiplier > minimumJumpBraceRatio){
+					animator.Play("PlayerJumpingStill");
 					state.isJumpBracing = false;
 					state.isStillJumpLaunching = true;
 					state.isJumping = true;
@@ -421,6 +406,7 @@ public class PlayerMover : MonoBehaviour
 				} else{
 					state.isJumpBracing = false;
 					state.isStanding = true;
+					animator.Play("PlayerIdle");
 				}
 				
 				
@@ -437,33 +423,31 @@ public class PlayerMover : MonoBehaviour
 		}
 	}
 	
-	void HandleMove(){
+	void HandleMoveInput(){
 		Vector2 force = new Vector2(horizontal, 0);
 		if(player.physics.isGrounded && !state.isJumping && !state.isJumpBracing && !state.isStillJumping && !state.isStillLanding){
 			if(state.isSlideStopping){
-				// apply resistive horizontal force
-				rigidbody.AddForce(rigidbody.velocity * moveForce * -1.0f * slideForceMultiplier, ForceMode2D.Force);
-				
 				// stop slide stopping if low enough speed met to exit sliding
 				if(Mathf.Abs(rigidbody.velocity.x) < slideStopSpeedTarget){
 					state.isSlideStopping = false;
 					state.isStanding = true;
+					animator.Play("PlayerIdle");
 				// switch to slide turning if player moves in opposite direction of current slide stop
 				} else if(Mathf.Sign(horizontal) != Mathf.Sign(rigidbody.velocity.x) && horizontal != 0.0f){
+					animator.Play("PlayerSlideTurning");
 					state.isSlideTurning = true;
 					state.isSlideStopping = false;
 				} else if(Mathf.Sign(horizontal) == Mathf.Sign(rigidbody.velocity.x) && horizontal != 0.0f){
 					state.isSlideStopping = false;
 					state.isRunning = true;
+					animator.Play("PlayerRunning");
 				}
 			} else if(state.isSlideTurning){
-				// apply resistive force
-				rigidbody.AddForce(rigidbody.velocity * moveForce * -1.0f * slideForceMultiplier, ForceMode2D.Force);
-				
 				// stop slide turning if low enough speed met to exit sliding
 				if(Mathf.Abs(rigidbody.velocity.x) < slideStopSpeedTarget){
 					state.isSlideTurning = false;
 					state.isStanding = true;
+					animator.Play("PlayerIdle");
 				}
 				
 				// slide is opposite direction as typical, so do the extra flipping step here
@@ -473,26 +457,26 @@ public class PlayerMover : MonoBehaviour
 				if(Mathf.Abs(horizontal) > 0.0f){
 					state.isStanding = false;
 					state.isRunning = true;
+					animator.Play("PlayerRunning");
 					
 					// check if the joystick threshold to fully run ahs been crossed
 					state.isFullRunning = (Mathf.Abs(horizontal) > walkJoystickThreshold);
-				// apply resistive force to prevent some residual sliding after ending a slide stop/turn
-				} else {
-					rigidbody.AddForce(rigidbody.velocity * moveForce * -1.0f, ForceMode2D.Force);
 				}
 			} else if(state.isRunning && !movementLocked){
 				// check if player stops running (but is not changing directions)
 				if(horizontal == 0.0f){
+					animator.Play("PlayerSlideStopping");
 					state.isSlideStopping = true;
 					state.isRunning = false;
 				// check if player is suddenly changing directions
 				} else if(Mathf.Sign(horizontal) != Mathf.Sign(rigidbody.velocity.x) && Mathf.Abs(rigidbody.velocity.x) > slideStopSpeedTarget){
+					animator.Play("PlayerSlideTurning");
 					state.isSlideTurning = true;
 					state.isRunning = false;
 				// add running force to continue movement
 				} else{
+					animator.Play("PlayerRunning");
 					state.isRunning = true;
-					rigidbody.AddForce(force * moveForce, ForceMode2D.Force);
 					
 					// check if the joystick threshold to fully run ahs been crossed
 					state.isFullRunning = (Mathf.Abs(horizontal) > walkJoystickThreshold);
@@ -503,6 +487,7 @@ public class PlayerMover : MonoBehaviour
 				rigidbody.velocity = new Vector2(0.0f, 0.0f);
 			} else{
 				state.isStanding = true;
+				animator.Play("PlayerIdle");
 			}
 			
 			// sync isRunning and isFullRunning if needed
@@ -530,24 +515,20 @@ public class PlayerMover : MonoBehaviour
 		}
     }
 	
-	void HandleWallSplatting(){
-		if(player.physics.isWalled){
-			if(Mathf.Abs(player.physics.frontCollisionSpeed.x) > wallSplatMinSpeed && player.physics.isGrounded && !state.isJumping){
-				state.isRunning = false;
-				state.isSlideStopping = false;
-				state.isSlideTurning = false;
-				state.isStanding = false;
-				state.isWallSplatting = true;
-				movementLocked = true;
-				wallSplatStickTimer = wallSplatStickTime;
-				wallSplatSide = (int)Mathf.Sign(player.physics.frontCollisionSpeed.x) * -1;
-				
-				// make sure player is facing the wall they are splatting into
-				if(wallSplatSide == 1){
-					gameObject.transform.parent.transform.eulerAngles = new Vector2(0,0);
-				} else{
-					gameObject.transform.parent.transform.eulerAngles = new Vector2(0,180);
-				}
+	void HandleMovePhysics(){
+		Vector2 force = new Vector2(horizontal, 0);
+		if(player.physics.isGrounded && !state.isJumping && !state.isJumpBracing && !state.isStillJumping && !state.isStillLanding){
+			if(state.isSlideStopping){
+				// apply resistive horizontal force
+				rigidbody.AddForce(rigidbody.velocity * moveForce * -1.0f * slideForceMultiplier, ForceMode2D.Force);
+			} else if(state.isSlideTurning){
+				// apply resistive force
+				rigidbody.AddForce(rigidbody.velocity * moveForce * -1.0f * slideForceMultiplier, ForceMode2D.Force);
+			} else if(state.isStanding){
+				// apply resistive force to prevent some residual sliding after ending a slide stop/turn
+				rigidbody.AddForce(rigidbody.velocity * moveForce * -1.0f, ForceMode2D.Force);
+			} else if(state.isRunning){
+				rigidbody.AddForce(force * moveForce, ForceMode2D.Force);
 			}
 		}
 	}
@@ -564,6 +545,7 @@ public class PlayerMover : MonoBehaviour
 					// TODO ADD BEHAVIOR FOR SPLATTING WALL IN THE AIR
 				} else{
 					state.isWallBracing = true;
+					animator.Play("PlayerWallBracing");
 					state.isBracing = false;
 					wallBraceTimer = wallBraceTime;
 					
@@ -578,9 +560,11 @@ public class PlayerMover : MonoBehaviour
 			if(wallBraceTimer <= 0){
 				state.isWallBracing = false; 
 				state.isWallPushing = true;
+				animator.Play("PlayerWallPushing");
 				wallPushTimer = wallPushTime;
 			} else if(jumpJustPressed){
 				wallLaunched = true; 
+				animator.Play("PlayerWallLaunching");
 				state.isWallLaunching = false; 
 				state.isJumping = true; 
 				state.isRunJumping = true;
@@ -643,12 +627,36 @@ public class PlayerMover : MonoBehaviour
 		}
 	}
 	
+	void HandleWallSplatting(){
+		if(player.physics.isWalled){
+			if(Mathf.Abs(player.physics.frontCollisionSpeed.x) > wallSplatMinSpeed && player.physics.isGrounded && !state.isJumping){
+				state.isRunning = false;
+				state.isSlideStopping = false;
+				state.isSlideTurning = false;
+				state.isStanding = false;
+				state.isWallSplatting = true;
+				animator.Play("PlayerWallSplatting");
+				movementLocked = true;
+				wallSplatStickTimer = wallSplatStickTime;
+				wallSplatSide = (int)Mathf.Sign(player.physics.frontCollisionSpeed.x) * -1;
+				
+				// make sure player is facing the wall they are splatting into
+				if(wallSplatSide == 1){
+					gameObject.transform.parent.transform.eulerAngles = new Vector2(0,0);
+				} else{
+					gameObject.transform.parent.transform.eulerAngles = new Vector2(0,180);
+				}
+			}
+		}
+	}
+	
 	void HandleWallSplatSticking(){
 		if(state.isWallSplatting){
 			wallSplatStickTimer -= Time.deltaTime;
 			if(wallSplatStickTimer <= 0){
 				state.isWallSplatting = false;
 				state.isWallSplatStumbling = true;
+				animator.Play("PlayerWallSplatStumbling");
 				wallSplatStumbleTimer = wallSplatStumbleTime;
 				rigidbody.velocity = new Vector2(wallSplatStumbleSpeed * wallSplatSide * -1.0f, rigidbody.velocity.y);
 			}
@@ -661,6 +669,7 @@ public class PlayerMover : MonoBehaviour
 			if(wallSplatStumbleTimer <= 0){
 				state.isWallSplatStumbling = false;
 				state.isStanding = true;
+				animator.Play("PlayerIdle");
 				rigidbody.velocity = new Vector2(0.0f, rigidbody.velocity.y);
 				movementLocked = false;
 			}
@@ -671,6 +680,7 @@ public class PlayerMover : MonoBehaviour
 		if(state.isBracing && !state.isCornerGrabbing && !state.isCornerClimbing && cornerHandler.corner != null){
 			state.SweepFalse();
 			state.isCornerGrabbing = true;
+			animator.Play("PlayerCornerGrabbing");
 			gravityCache = rigidbody.gravityScale;
 			rigidbody.gravityScale = 0f;
 			rigidbody.velocity = new Vector2(0f,0f);
@@ -687,12 +697,14 @@ public class PlayerMover : MonoBehaviour
 				state.isCornerGrabbing = false;
 				state.isJumping = true;
 				state.isStillJumping = true; 
+				animator.Play("PlayerSoaringStill");
 				rigidbody.gravityScale = gravityCache;
 				movementLocked = false;
 			} else{
 				state.isBracing = false;
 				state.isCornerGrabbing = false;
 				state.isCornerClimbing = true;
+				animator.Play("PlayerCornerClimbing");
 				transform.parent.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerClimbOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerClimbOffsetY, 0);
 				cornerClimbTimer = cornerClimbTime;
 			}
