@@ -21344,7 +21344,7 @@ PrefabInstance:
       objectReference: {fileID: 1737852002}
     - target: {fileID: 2062545488, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
       propertyPath: cornerOffsetX
-      value: 0
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6829769311745543616, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
       propertyPath: m_Name
