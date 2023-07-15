@@ -92,6 +92,7 @@ public class PlayerMover : MonoBehaviour
 	float gravityCache;
 	int cornerDir;
 	public float cornerClimbTime;
+	public float cornerMantleTime;
 	float cornerClimbTimer;
 	bool cornerClimbEnding = false;
 	
@@ -134,7 +135,7 @@ public class PlayerMover : MonoBehaviour
 		state = player.state;
 		animator = player.animator;
 		
-		//Time.timeScale = 0.1f;
+		Time.timeScale = 0.1f;
 		//Time.timeScale = 0.3f;
 		//Time.timeScale = 0.5f;
     }
@@ -172,7 +173,7 @@ public class PlayerMover : MonoBehaviour
     }
 	
 	void FixedUpdate(){
-		if(!state.isCornerGrabbing && !state.isCornerClimbing){
+		if(!state.isCornerGrabbing && !state.isCornerClimbing && !state.isCornerMantling){
 			if(!physControlLocked){
 				HandleJumpingPhysics();
 				
@@ -188,14 +189,17 @@ public class PlayerMover : MonoBehaviour
 		} else{
 			if(cornerClimbEnding){
 				cornerClimbEnding = false;
-				if(cornerHandler.corner == null){
-					transform.parent.position = new Vector3(cornerHandler.lastCorner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), cornerHandler.lastCorner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
-				} else{
+				if(cornerHandler.corner != null){
 					transform.parent.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), cornerHandler.corner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
+				}else if(cornerHandler.mantleCorner != null){
+					transform.parent.position = new Vector3(cornerHandler.mantleCorner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), cornerHandler.mantleCorner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
+				} else{
+					transform.parent.position = new Vector3(cornerHandler.lastCorner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), cornerHandler.lastCorner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
 				}
 				rigidbody.gravityScale = gravityCache;
 				movementLocked = false;
 				state.isCornerClimbing = false;
+				state.isCornerMantling = false;
 				state.isStanding = true;
 				animator.Play("PlayerIdle");
 				state.direction = cornerDir;
@@ -674,20 +678,37 @@ public class PlayerMover : MonoBehaviour
 	}
 	
 	void HandleCornerGrabbing(){
-		if(state.isBracing && !state.isCornerGrabbing && !state.isCornerClimbing && cornerHandler.corner != null){
-			state.SweepFalse();
-			state.isCornerGrabbing = true;
-			animator.Play("PlayerCornerGrabbing");
-			gravityCache = rigidbody.gravityScale;
-			rigidbody.gravityScale = 0f;
-			rigidbody.velocity = new Vector2(0f,0f);
-			if(transform.position.x > cornerHandler.corner.transform.position.x){
-				cornerDir = 1;
-			} else{
-				cornerDir = -1;
+		if(state.isBracing && !state.isCornerGrabbing && !state.isCornerClimbing && !state.isCornerMantling){
+			if(cornerHandler.corner != null){
+				state.SweepFalse();
+				state.isCornerGrabbing = true;
+				animator.Play("PlayerCornerGrabbing");
+				gravityCache = rigidbody.gravityScale;
+				rigidbody.gravityScale = 0f;
+				rigidbody.velocity = new Vector2(0f,0f);
+				if(transform.position.x > cornerHandler.corner.transform.position.x){
+					cornerDir = 1;
+				} else{
+					cornerDir = -1;
+				}
+				
+				transform.parent.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerOffsetY, 0);
+			} else if(cornerHandler.mantleCorner != null){
+				state.SweepFalse();
+				state.isCornerMantling = true;
+				animator.Play("PlayerCornerMantling");
+				movementLocked = true;
+				gravityCache = rigidbody.gravityScale;
+				rigidbody.gravityScale = 0f;
+				rigidbody.velocity = new Vector2(0f,0f);
+				if(transform.position.x > cornerHandler.mantleCorner.transform.position.x){
+					cornerDir = 1;
+				} else{
+					cornerDir = -1;
+				}
+				transform.parent.position = new Vector3(cornerHandler.mantleCorner.position.x + (cornerHandler.mantleClimbOffsetX * cornerDir), cornerHandler.mantleCorner.position.y - cornerHandler.mantleClimbOffsetY, 0);
+				cornerClimbTimer = cornerMantleTime;
 			}
-			
-			transform.parent.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerOffsetY, 0);
 		} else if(braceJustPressed && state.isCornerGrabbing){
 			if(vertical <= 0){
 				state.isBracing = false;
@@ -705,7 +726,7 @@ public class PlayerMover : MonoBehaviour
 				transform.parent.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerClimbOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerClimbOffsetY, 0);
 				cornerClimbTimer = cornerClimbTime;
 			}
-		} else if(state.isCornerClimbing){
+		} else if(state.isCornerClimbing || state.isCornerMantling){
 			cornerClimbTimer -= Time.deltaTime;
 			if(cornerClimbTimer <= 0){
 				cornerClimbEnding = true;

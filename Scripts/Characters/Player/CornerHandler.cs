@@ -8,6 +8,8 @@ public class CornerHandler : MonoBehaviour
 	public Transform corner = null;
 	[System.NonSerialized]
 	public Transform lastCorner = null;
+	[System.NonSerialized]
+	public Transform mantleCorner = null;
 	
 	public float cornerOffsetX;
 	public float cornerOffsetY;
@@ -15,6 +17,8 @@ public class CornerHandler : MonoBehaviour
 	public float cornerClimbOffsetY;
 	public float cornerEndClimbOffsetX;
 	public float cornerEndClimbOffsetY;
+	public float mantleClimbOffsetX;
+	public float mantleClimbOffsetY;
 	
     void OnTriggerEnter2D(Collider2D col){
 		corner = col.gameObject.transform;

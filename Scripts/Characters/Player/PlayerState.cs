@@ -36,6 +36,7 @@ public class PlayerState
 	// corner grabbing states
 	public bool isCornerGrabbing = false; 
 	public bool isCornerClimbing = false; 
+	public bool isCornerMantling = false;
 	
 	// inventory states
 	public bool isInInventory = false;
@@ -75,6 +76,7 @@ public class PlayerState
 		isWallPushing = false; 
 		isCornerGrabbing = false;
 		isCornerClimbing = false;
+		isCornerMantling = false; 
 		isInInventory = false;
 		isInventoryExiting = false;
 	}
