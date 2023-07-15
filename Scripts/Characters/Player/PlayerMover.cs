@@ -95,6 +95,8 @@ public class PlayerMover : MonoBehaviour
 	public float cornerMantleTime;
 	float cornerClimbTimer;
 	bool cornerClimbEnding = false;
+	public float cornerClimbVertJoystickThreshold;
+	bool climbJoystickTooFar = false; 
 	
 	private float horizontal = 0;
     private float vertical = 0;
@@ -203,6 +205,7 @@ public class PlayerMover : MonoBehaviour
 				state.isStanding = true;
 				animator.Play("PlayerIdle");
 				state.direction = cornerDir;
+				climbJoystickTooFar = (Mathf.Abs(vertical) > cornerClimbVertJoystickThreshold);
 			}
 		}
 	}
@@ -709,22 +712,28 @@ public class PlayerMover : MonoBehaviour
 				transform.parent.position = new Vector3(cornerHandler.mantleCorner.position.x + (cornerHandler.mantleClimbOffsetX * cornerDir), cornerHandler.mantleCorner.position.y - cornerHandler.mantleClimbOffsetY, 0);
 				cornerClimbTimer = cornerMantleTime;
 			}
-		} else if(braceJustPressed && state.isCornerGrabbing){
-			if(vertical <= 0){
-				state.isBracing = false;
-				state.isCornerGrabbing = false;
-				state.isJumping = true;
-				state.isStillJumping = true; 
-				animator.Play("PlayerSoaringStill");
-				rigidbody.gravityScale = gravityCache;
-				movementLocked = false;
+		} else if(state.isCornerGrabbing){
+			if(vertical <= -(cornerClimbVertJoystickThreshold) || braceJustPressed){
+				if(!climbJoystickTooFar){
+					state.isBracing = false;
+					state.isCornerGrabbing = false;
+					state.isJumping = true;
+					state.isStillJumping = true; 
+					animator.Play("PlayerSoaringStill");
+					rigidbody.gravityScale = gravityCache;
+					movementLocked = false;
+				}
+			} else if(vertical >= cornerClimbVertJoystickThreshold){
+				if(!climbJoystickTooFar){
+					state.isBracing = false;
+					state.isCornerGrabbing = false;
+					state.isCornerClimbing = true;
+					animator.Play("PlayerCornerClimbing");
+					transform.parent.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerClimbOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerClimbOffsetY, 0);
+					cornerClimbTimer = cornerClimbTime;
+				}
 			} else{
-				state.isBracing = false;
-				state.isCornerGrabbing = false;
-				state.isCornerClimbing = true;
-				animator.Play("PlayerCornerClimbing");
-				transform.parent.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerClimbOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerClimbOffsetY, 0);
-				cornerClimbTimer = cornerClimbTime;
+				climbJoystickTooFar = false;
 			}
 		} else if(state.isCornerClimbing || state.isCornerMantling){
 			cornerClimbTimer -= Time.deltaTime;
