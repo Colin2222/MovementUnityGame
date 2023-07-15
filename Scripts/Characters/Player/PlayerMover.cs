@@ -135,7 +135,7 @@ public class PlayerMover : MonoBehaviour
 		state = player.state;
 		animator = player.animator;
 		
-		Time.timeScale = 0.1f;
+		//Time.timeScale = 0.1f;
 		//Time.timeScale = 0.3f;
 		//Time.timeScale = 0.5f;
     }
@@ -191,7 +191,7 @@ public class PlayerMover : MonoBehaviour
 				cornerClimbEnding = false;
 				if(cornerHandler.corner != null){
 					transform.parent.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), cornerHandler.corner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
-				}else if(cornerHandler.mantleCorner != null){
+				} else if(cornerHandler.mantleCorner != null){
 					transform.parent.position = new Vector3(cornerHandler.mantleCorner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), cornerHandler.mantleCorner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
 				} else{
 					transform.parent.position = new Vector3(cornerHandler.lastCorner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), cornerHandler.lastCorner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
@@ -429,7 +429,7 @@ public class PlayerMover : MonoBehaviour
 	
 	void HandleMoveInput(){
 		Vector2 force = new Vector2(horizontal, 0);
-		if(player.physics.isGrounded && !state.isJumping && !state.isJumpBracing && !state.isStillJumping && !state.isStillLanding){
+		if(player.physics.isGrounded && !state.isJumping && !state.isJumpBracing && !state.isStillJumping && !state.isStillLanding && !state.isCornerMantling){
 			if(state.isSlideStopping){
 				// stop slide stopping if low enough speed met to exit sliding
 				if(Mathf.Abs(rigidbody.velocity.x) < slideStopSpeedTarget){
