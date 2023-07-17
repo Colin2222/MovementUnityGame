@@ -215,6 +215,15 @@ public class PlayerMover : MonoBehaviour
 		if(player.physics.isGrounded){
             timeSinceGrounded = 0.0f;
         } else{
+			if(timeSinceGrounded == 0.0f){
+				if(state.isRunning || state.isSlideStopping || state.isSlideTurning){
+					state.SweepFalse();
+					state.isStillJumping = true;
+					state.isJumping = true;
+					animator.Play("PlayerSoaringStill");
+				}
+			}
+			
             timeSinceGrounded += Time.fixedDeltaTime;
 		}
 		if(timeSincePressed < jumpForgivenessTime){
