@@ -426,6 +426,11 @@ public class PlayerMover : MonoBehaviour
 				}
 				
 				
+			} else if(!player.physics.isGrounded){
+				state.SweepFalse();
+				state.isStillJumping = true;
+				state.isJumping = true;
+				animator.Play("PlayerSoaringStill");
 			}
 		} else if(state.isStillJumpLaunching){
 			jumpLaunchTimer -= Time.deltaTime;
@@ -585,6 +590,11 @@ public class PlayerMover : MonoBehaviour
 				state.isJumping = true; 
 				state.isRunJumping = true;
 				state.isWallBracing = false;
+			} else if(!player.physics.isWalled){
+				state.SweepFalse();
+				state.isStillJumping = true;
+				state.isJumping = true;
+				animator.Play("PlayerSoaringStill");
 			}
 		}
 	}
