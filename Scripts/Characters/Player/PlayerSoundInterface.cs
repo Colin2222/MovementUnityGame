@@ -35,4 +35,32 @@ public class PlayerSoundInterface : MonoBehaviour
 	public void PlayRunningJump(){
 		runningJump.Play();
 	}
+	
+	public void PlayWallJump(){
+		wallJump.Play();
+	}
+	
+	public void PlayStillJumpLand(){
+		stillJumpLand.Play();
+	}
+	
+	public void PlayRunningJumpLand(){
+		runningJumpLand.Play();
+	}
+	
+	public void PlayWallImpact(){
+		wallImpact.Play();
+	}
+	
+	public void PlayCornerGrab(){
+		cornerGrab.Play();
+	}
+	
+	public void PlayCornerClimb(){
+		cornerClimb.Play();
+	}
+	
+	public void PlayStillJump(){
+		stillJump.Play();
+	}
 }
