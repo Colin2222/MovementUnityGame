@@ -8,6 +8,7 @@ public class PlayerMover : MonoBehaviour
 	public PlayerHub player;
 	public CornerHandler cornerHandler;
 	public PlayerInventoryHandler inventoryHandler;
+	public PlayerInteractor interactor;
 	Rigidbody2D rigidbody;
 	PlayerState state;
 	Animator animator;
@@ -128,6 +129,8 @@ public class PlayerMover : MonoBehaviour
 	private bool menuPageRightJustPressed = false;
 	private bool menuPageLeftPressed = false;
 	private bool menuPageLeftJustPressed = false;
+	private bool interactPressed = false;
+	private bool interactJustPressed = false;
 
 	
     // Start is called before the first frame update
@@ -157,6 +160,7 @@ public class PlayerMover : MonoBehaviour
 			HandleStillLanding();
 			HandleCornerGrabbing();
 			HandleItemGrabbing();
+			HandleInteraction();
 			
 			HandleMoveInput();
 		}
@@ -172,6 +176,7 @@ public class PlayerMover : MonoBehaviour
 		menuLeftJustPressed = false;
 		menuPageRightJustPressed = false;
 		menuPageLeftJustPressed = false;
+		interactJustPressed = false;
     }
 	
 	void FixedUpdate(){
@@ -271,6 +276,12 @@ public class PlayerMover : MonoBehaviour
 				state.isStanding = true;
 				physControlLocked = false;
 			}
+		}
+	}
+	
+	void HandleInteraction(){
+		if(interactJustPressed){
+			interactor.Interact();
 		}
 	}
 	
@@ -847,5 +858,10 @@ public class PlayerMover : MonoBehaviour
 	private void OnMenuPageLeft(){
 		menuPageLeftPressed = !menuPageLeftPressed;
 		menuPageLeftJustPressed = menuPageLeftPressed;
+	}
+	
+	private void OnInteract(){
+		interactPressed = !interactPressed;
+		interactJustPressed = interactPressed;
 	}
 }
