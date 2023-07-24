@@ -1976,6 +1976,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 745410257}
     - target: {fileID: 4845049507479276210, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 988680047}
+    - target: {fileID: 4845049507479276210, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: isHubWorld
       value: 0
       objectReference: {fileID: 0}
@@ -3196,7 +3200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655834771}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.5, y: 39, z: -10}
+  m_LocalPosition: {x: 33.5, y: 39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3241,6 +3245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759b502c29ded2a43aeb4d740a4161b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timingManager: {fileID: 988680047}
 --- !u!1 &680812740
 GameObject:
   m_ObjectHideFlags: 0

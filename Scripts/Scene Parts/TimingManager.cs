@@ -7,17 +7,24 @@ public class TimingManager : MonoBehaviour
 {
 	public TextMeshProUGUI nameText;
 	float time;
+	bool isTiming = false;
 	
 	void Start(){
 		time = 0.0f;
 	}
 	
 	void Update(){
-		time += Time.deltaTime;
-		nameText.text = time.ToString();
+		if(isTiming){
+			time += Time.deltaTime;
+			nameText.text = time.ToString();
+		}
 	}
 	
 	public void StartTimer(){
-		
+		isTiming = true;
+	}
+	
+	public void StopTimer(){
+		isTiming = false;
 	}
 }
