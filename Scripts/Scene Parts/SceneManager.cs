@@ -1,9 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class SceneManager : MonoBehaviour
 {
+	public Transform playerSpawnTransform;
+	public Transform profileSelectionLocation;
+	public Transform levelSelectionLocation;
+	
+	public float transitionTime;
+	
 	public GameObject playerPrefab;
 	
 	[System.NonSerialized]
@@ -12,6 +19,15 @@ public class SceneManager : MonoBehaviour
 	public ItemRegistry itemRegistry;
 	public string itemRegistryXml;
 	
+	public LevelRegistry levelRegistry;
+	public string levelRegistryXml;
+	
+	public ProfileManager profileManager;
+	public LevelSelectionManager levelSelectManager;
+	public bool isHubWorld;
+	
+	public CinemachineVirtualCamera vcam;
+	
     GameObject playerStateObjectTest;
     GameObject playerObjectTest;
 	
@@ -19,6 +35,10 @@ public class SceneManager : MonoBehaviour
 		// load in items from data xml
 		itemRegistry = ItemRegistry.Instance();
 		itemRegistry.LoadItems(itemRegistryXml);
+		
+		// load in level list from data xml
+		levelRegistry = LevelRegistry.Instance();
+		levelRegistry.LoadLevels(levelRegistryXml);
 	}
 	
     // Start is called before the first frame update
@@ -32,11 +52,22 @@ public class SceneManager : MonoBehaviour
         else{
             player = playerObjectTest.GetComponent<PlayerHub>();
         }
+		player.transform.position = playerSpawnTransform.position;
+		vcam.m_Follow = player.transform;
+		
+		if(isHubWorld){
+			profileManager.SetupProfileSelection(profileSelectionLocation);
+			levelSelectManager.SetupLevelSelection(levelSelectionLocation);
+		}
     }
 
-    // Update is called once per frame
-    void Update()
+    // loads the scene of the inputted build index
+    public void SwitchScenes(int buildIndex)
     {
-        
+		Debug.Log("SWITCHING SCENES");
+		
+        //yield return new WaitForSeconds(transitionTime);
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(buildIndex);
     }
 }

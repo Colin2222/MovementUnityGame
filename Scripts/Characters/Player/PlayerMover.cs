@@ -821,13 +821,17 @@ public class PlayerMover : MonoBehaviour
     }
 	
 	private void OnInventory(){
+		/*
 		inventoryPressed = !inventoryPressed;
 		inventoryJustPressed = inventoryPressed;
+		*/
 	}
 	
 	private void OnItemGrab(){
+		/*
 		itemGrabPressed = !itemGrabPressed;
 		itemGrabJustPressed = itemGrabPressed;
+		*/
 	}
 	
 	private void OnMenuUp(){

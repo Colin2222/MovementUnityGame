@@ -5,11 +5,11 @@ public class PlayerProfile
 {
 	public int id;
 	public string displayName;
-	public Dictionary<string, float> bestTimes;
+	public Dictionary<int, float> bestTimes;
 	
 	public PlayerProfile(int id, string displayName){
 		this.id = id;
 		this.displayName = displayName;
-		bestTimes = new Dictionary<string, float>();
+		bestTimes = new Dictionary<int, float>();
 	}
 }

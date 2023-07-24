@@ -1,18 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <players>
   <player>
+    <id>8</id>
+    <display_name>Nick</display_name>
+    <time_entry>
+		<level_id>1</level_id>
+		<time>190.873</time>
+	</time_entry>
+  </player>
+  <player>
+    <id>7</id>
+    <display_name>Emmett</display_name>
+    <time_entry>
+		<level_id>1</level_id>
+		<time>190.873</time>
+	</time_entry>
+  </player>
+  <player>
+    <id>6</id>
+    <display_name>Lucien</display_name>
+    <time_entry>
+		<level_id>1</level_id>
+		<time>190.873</time>
+	</time_entry>
+  </player>
+  <player>
+    <id>5</id>
+    <display_name>Dom</display_name>
+    <time_entry>
+		<level_id>1</level_id>
+		<time>190.873</time>
+	</time_entry>
+  </player>
+  <player>
+    <id>4</id>
+    <display_name>Mike</display_name>
+    <time_entry>
+		<level_id>1</level_id>
+		<time>190.873</time>
+	</time_entry>
+  </player>
+  <player>
     <id>1</id>
     <display_name>Colin</display_name>
-    <run_1>120.45</run_1>
+    <time_entry>
+		<level_id>1</level_id>
+		<time>190.873</time>
+	</time_entry>
   </player>
   <player>
     <id>2</id>
     <display_name>Neil</display_name>
-    <run_1>98.21</run_1>
+    <time_entry>
+		<level_id>1</level_id>
+		<time>190.873</time>
+	</time_entry>
   </player>
   <player>
     <id>3</id>
     <display_name>Owen</display_name>
-    <run_1>143.12</run_1>
+    <time_entry>
+		<level_id>1</level_id>
+		<time>190.873</time>
+	</time_entry>
   </player>
 </players>

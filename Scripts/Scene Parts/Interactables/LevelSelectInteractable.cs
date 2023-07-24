@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProfileSelectionInteractable : MonoBehaviour, IInteractable
+public class LevelSelectInteractable : MonoBehaviour, IInteractable
 {
 	[System.NonSerialized]
-	public ProfileManager profileManager;
-	[System.NonSerialized]
-	public int profileId;
+	public int levelId;
 	
     // Start is called before the first frame update
     void Start()
@@ -22,6 +20,6 @@ public class ProfileSelectionInteractable : MonoBehaviour, IInteractable
     }
 	
 	public void Interact(){
-		profileManager.SetCurrentProfile(profileId);
+		GameObject.FindWithTag("SceneManager").GetComponent<SceneManager>().SwitchScenes(levelId);
 	}
 }

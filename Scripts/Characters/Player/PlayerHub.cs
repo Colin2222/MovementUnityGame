@@ -10,7 +10,7 @@ public class PlayerHub : MonoBehaviour
 	public PlayerState state;
 	public Animator animator;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
 		state = new PlayerState();
     }

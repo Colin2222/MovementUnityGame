@@ -17,22 +17,27 @@ public class ItemRegistry
 	}
 	
 	Dictionary<string, Item> items;
+	bool loaded = false;
 	
 	public void LoadItems(string registryXmlFilePath){
-		XmlDocument xmlDoc = new XmlDocument();
-        xmlDoc.Load("Assets/Resources/" + registryXmlFilePath + ".xml");
-		XmlNode currentNode = xmlDoc.FirstChild.NextSibling.FirstChild;
-		
-		while(currentNode != null){
-			string insertionId = currentNode.Attributes["id"].Value;
-			string insertionName = currentNode.Attributes["name"].Value;
-			int insertionType = int.Parse(currentNode.Attributes["type"].Value);
-			Sprite insertionIcon = Resources.Load<Sprite>("ItemSprites/" + currentNode.Attributes["icon"].Value);
-			int insertionStackSize = int.Parse(currentNode.Attributes["stackSize"].Value);
-			Item insertion = new Item(insertionId, insertionName, insertionType, insertionIcon, insertionStackSize, new List<string>());
-			items.Add(insertion.id, insertion);
+		if(!loaded){
+			XmlDocument xmlDoc = new XmlDocument();
+			xmlDoc.Load("Assets/Resources/" + registryXmlFilePath + ".xml");
+			XmlNode currentNode = xmlDoc.FirstChild.NextSibling.FirstChild;
 			
-			currentNode = currentNode.NextSibling;
+			while(currentNode != null){
+				string insertionId = currentNode.Attributes["id"].Value;
+				string insertionName = currentNode.Attributes["name"].Value;
+				int insertionType = int.Parse(currentNode.Attributes["type"].Value);
+				Sprite insertionIcon = Resources.Load<Sprite>("ItemSprites/" + currentNode.Attributes["icon"].Value);
+				int insertionStackSize = int.Parse(currentNode.Attributes["stackSize"].Value);
+				Item insertion = new Item(insertionId, insertionName, insertionType, insertionIcon, insertionStackSize, new List<string>());
+				items.Add(insertion.id, insertion);
+				
+				currentNode = currentNode.NextSibling;
+			}
+			
+			loaded = true;
 		}
 	}
 	
