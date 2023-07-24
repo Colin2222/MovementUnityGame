@@ -14,6 +14,7 @@ public class ProfileManager : MonoBehaviour
 	[System.NonSerialized]
 	public PlayerProfile currentProfile;
 	Dictionary<int, PlayerProfile> profiles;
+	List<int> profileIds;
 	
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class ProfileManager : MonoBehaviour
 	
 	public void SetupProfileSelection(Transform starterLocation){
 		profiles = new Dictionary<int, PlayerProfile>();
+		profileIds = new List<int>();
 		
 		// Load the XML file
         XmlDocument xmlDoc = new XmlDocument();
@@ -54,6 +56,7 @@ public class ProfileManager : MonoBehaviour
             // create profile for interactable
 			PlayerProfile newProfile = new PlayerProfile(id, displayName);
 			profiles.Add(id, newProfile);
+			profileIds.Add(id);
 			interactable.profileId = id;
 			
 			// update index for spacing purposes

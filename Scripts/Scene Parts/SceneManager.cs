@@ -26,6 +26,8 @@ public class SceneManager : MonoBehaviour
 	public LevelSelectionManager levelSelectManager;
 	public bool isHubWorld;
 	
+	public TimingManager timer;
+	
 	public CinemachineVirtualCamera vcam;
 	
     GameObject playerStateObjectTest;
@@ -58,6 +60,8 @@ public class SceneManager : MonoBehaviour
 		if(isHubWorld){
 			profileManager.SetupProfileSelection(profileSelectionLocation);
 			levelSelectManager.SetupLevelSelection(levelSelectionLocation);
+		} else{
+			timer.StartTimer();
 		}
     }
 
