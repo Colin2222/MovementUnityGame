@@ -221,6 +221,7 @@ public class PlayerMover : MonoBehaviour
             timeSinceGrounded = 0.0f;
         } else{
 			if(timeSinceGrounded == 0.0f){
+				// custom logic for running off edges
 				if(state.isRunning || state.isSlideStopping || state.isSlideTurning){
 					state.SweepFalse();
 					state.isStillJumping = true;
@@ -234,6 +235,23 @@ public class PlayerMover : MonoBehaviour
 		if(timeSincePressed < jumpForgivenessTime){
             timeSincePressed += Time.fixedDeltaTime;
         }
+	}
+	
+	public void HitGround(){
+		if(state.isWallColliding || state.isWallBracing || state.isWallPushing || state.isWallLaunching){
+			if(player.physics.bottomCollisionSpeed.y > stillLandSmallMinSpeed){
+				state.SweepFalse();
+				state.isStillLandingSmall = true;
+				state.isStillLanding = true;
+				animator.Play("PlayerLandingStillSmall");
+				stillLandTimer = stillLandLittleTime;
+			} else{
+				state.SweepFalse();
+				state.isStanding = true;
+				animator.Play("PlayerIdle");
+			}
+			movementLocked = false;
+		}
 	}
 	
 	void HandleInventory(){
@@ -393,6 +411,7 @@ public class PlayerMover : MonoBehaviour
 			stillJumped = false;
         } else if(state.isJumping && player.physics.isGrounded && timeSinceGrounded > 0.0f){
 			if(state.isStillJumping && player.physics.bottomCollisionSpeed.y > stillLandSmallMinSpeed){
+				state.SweepFalse();
 				state.isStillLandingSmall = true;
 				state.isStillLanding = true;
 				animator.Play("PlayerLandingStillSmall");

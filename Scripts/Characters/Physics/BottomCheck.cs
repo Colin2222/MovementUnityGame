@@ -7,17 +7,25 @@ public class BottomCheck : MonoBehaviour
     public CharacterPhysicsChecker parentPhysics;
 	public Rigidbody2D rigidbody;
 	public float distanceToGround;
+	public PlayerMover playerMover;
 	LayerMask mask;
+	List<Transform> collisions;
 	
 	void Start(){
+		collisions = new List<Transform>();
 		mask = LayerMask.GetMask("PhysicsEnvironment");
 	}
 
     void OnCollisionEnter2D(Collision2D collision){
 		RaycastHit2D hit = Physics2D.Raycast(rigidbody.position, Vector2.down, distanceToGround, mask);
-		if(hit.collider != null){
+		if(hit.collider != null && hit.transform == collision.transform && !parentPhysics.isGrounded){
 			parentPhysics.isGrounded = true;
 			parentPhysics.bottomCollisionSpeed = new Vector2(collision.relativeVelocity.x, collision.relativeVelocity.y);
+			collisions.Add(collision.transform);
+			
+			if(collisions.Count == 1){
+				playerMover.HitGround();
+			}
 		}
     }
 
@@ -27,6 +35,12 @@ public class BottomCheck : MonoBehaviour
     }
 
     void OnCollisionExit2D(Collision2D collision){
-        parentPhysics.isGrounded = false;
+		if(collisions.Contains(collision.transform)){
+			collisions.Remove(collision.transform);
+		}
+		
+		if(collisions.Count == 0){
+			parentPhysics.isGrounded = false;
+		}
     }
 }
