@@ -434,6 +434,7 @@ public class PlayerMover : MonoBehaviour
 					state.isJumpBracing = false;
 					state.isStanding = true;
 					animator.Play("PlayerIdle");
+					movementLocked = false;
 				}
 				
 				
