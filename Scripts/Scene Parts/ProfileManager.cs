@@ -47,14 +47,18 @@ public class ProfileManager : MonoBehaviour
 			int id = int.Parse(playerNode.SelectSingleNode("id").InnerText);
 			
 			// set best times
+			Dictionary<int, float> timeDict = new Dictionary<int, float>();
 			XmlNodeList timeNodes = playerNode.SelectNodes("time_entry");
 			foreach(XmlNode timeNode in timeNodes){
 				int levelId = int.Parse(timeNode.SelectSingleNode("level_id").InnerText);
 				float bestTime = float.Parse(timeNode.SelectSingleNode("time").InnerText);
+				
+				timeDict.Add(levelId, bestTime);
 			}
 			
             // create profile for interactable
 			PlayerProfile newProfile = new PlayerProfile(id, displayName);
+			newProfile.bestTimes = timeDict;
 			profiles.Add(id, newProfile);
 			profileIds.Add(id);
 			interactable.profileId = id;
@@ -69,7 +73,12 @@ public class ProfileManager : MonoBehaviour
 		nameText.text = currentProfile.displayName;
 	}
 	
-	public void RegisterNewTime(int playerId, int levelId, float time){
+	public void RegisterNewTime(float time){
+		int playerId = currentProfile.id;
+		int levelId = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
+		
+		Debug.Log("playerID: " + playerId);
+		Debug.Log("levelID: " + levelId);
 		if(time < profiles[playerId].bestTimes[levelId]){
 			profiles[playerId].bestTimes[levelId] = time;
 			
@@ -103,6 +112,7 @@ public class ProfileManager : MonoBehaviour
 							// Update the time attribute for the given level
 							XmlNode timeNode = timeEntryNode.SelectSingleNode("time");
 							timeNode.InnerText = time.ToString();
+							xmlDoc.Save("Assets/Resources/" + profileXmlFile + ".xml");
 							break; // Break the loop once the level time is updated
 						}
 					}

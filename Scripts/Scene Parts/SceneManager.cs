@@ -5,7 +5,7 @@ using Cinemachine;
 using TMPro;
 
 public class SceneManager : MonoBehaviour
-{
+{	
 	public Transform playerSpawnTransform;
 	public Transform profileSelectionLocation;
 	public Transform levelSelectionLocation;
@@ -48,12 +48,10 @@ public class SceneManager : MonoBehaviour
 		// load in level list from data xml
 		levelRegistry = LevelRegistry.Instance();
 		levelRegistry.LoadLevels(levelRegistryXml);
-	}
-	
-    // Start is called before the first frame update
-    void Start()
-    {
-        // check if there is a DontDestroyOnLoad player, create a new one if there isnt
+		
+		
+		
+		// check if there is a DontDestroyOnLoad player, create a new one if there isnt
         playerObjectTest = GameObject.FindWithTag("Player");
         if(playerObjectTest == null){
             player = Instantiate(playerPrefab,new Vector3(0,0,0),Quaternion.identity).GetComponent<PlayerHub>();
@@ -73,12 +71,19 @@ public class SceneManager : MonoBehaviour
             profileManager = profileManagerObjectTest.GetComponent<ProfileManager>();
         }
 		profileManager.SetNameTextRef(profileText);
-		
+	}
+	
+    // Start is called before the first frame update
+    void Start()
+    {
 		if(isHubWorld){
 			profileManager.SetupProfileSelection(profileSelectionLocation);
 			levelSelectManager.SetupLevelSelection(levelSelectionLocation);
 			countdownText.gameObject.SetActive(false);
 		} else{
+			// send profilemanager to timer before all the action starts
+			timer.profileManager = profileManager;
+			
 			countdownTimer = countdownTime;
 			countingDownStart = true;
 			player.LockPlayer();

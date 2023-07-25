@@ -6,6 +6,6 @@ public class EndingZone : MonoBehaviour
 {
 	public TimingManager timingManager;
     void OnTriggerEnter2D(Collider2D col){
-		timingManager.StopTimer();
+		timingManager.FinishLevelTimer();
 	}
 }

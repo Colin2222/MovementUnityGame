@@ -5,6 +5,9 @@ using TMPro;
 
 public class TimingManager : MonoBehaviour
 {
+	[System.NonSerialized]
+	public ProfileManager profileManager;
+	
 	public TextMeshProUGUI nameText;
 	float time;
 	bool isTiming = false;
@@ -26,5 +29,10 @@ public class TimingManager : MonoBehaviour
 	
 	public void StopTimer(){
 		isTiming = false;
+	}
+	
+	public void FinishLevelTimer(){
+		StopTimer();
+		profileManager.RegisterNewTime(time);
 	}
 }
