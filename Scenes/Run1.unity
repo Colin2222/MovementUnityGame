@@ -1980,9 +1980,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 745410257}
     - target: {fileID: 4845049507479276210, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: profileText
+      value: 
+      objectReference: {fileID: 650399297}
+    - target: {fileID: 4845049507479276210, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: countdownText
       value: 
       objectReference: {fileID: 2120808782}
+    - target: {fileID: 4845049507479276210, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: profileManagerPrefab
+      value: 
+      objectReference: {fileID: 7138545551088395205, guid: 5a004e8ac2d0dde40afe8faa39b9981f, type: 3}
     - target: {fileID: 4845049507479276211, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3112,6 +3120,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6151d37b8dea783498bf302d5bf7ee74, type: 3}
+--- !u!114 &650399297 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8030947035981809222, guid: 6151d37b8dea783498bf302d5bf7ee74, type: 3}
+  m_PrefabInstance: {fileID: 650399296}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &655834771
 GameObject:
   m_ObjectHideFlags: 0

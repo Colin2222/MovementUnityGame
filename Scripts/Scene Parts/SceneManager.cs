@@ -13,6 +13,7 @@ public class SceneManager : MonoBehaviour
 	public float transitionTime;
 	
 	public GameObject playerPrefab;
+	public GameObject profileManagerPrefab;
 	
 	[System.NonSerialized]
     public PlayerHub player;
@@ -32,6 +33,7 @@ public class SceneManager : MonoBehaviour
 	float countdownTimer;
 	bool countingDownStart = false;
 	public TextMeshProUGUI countdownText;
+	public TextMeshProUGUI profileText;
 	
 	public CinemachineVirtualCamera vcam;
 	
@@ -61,6 +63,16 @@ public class SceneManager : MonoBehaviour
         }
 		player.transform.position = playerSpawnTransform.position;
 		vcam.m_Follow = player.transform;
+		
+		// check if there is a DontDestroyOnLoad profile manager, create a new one if there isnt
+        GameObject profileManagerObjectTest = GameObject.FindWithTag("ProfileManager");
+		if(profileManagerObjectTest == null){
+            profileManager = Instantiate(profileManagerPrefab,new Vector3(0,0,0),Quaternion.identity).GetComponent<ProfileManager>();
+        }
+		else{
+            profileManager = profileManagerObjectTest.GetComponent<ProfileManager>();
+        }
+		profileManager.SetNameTextRef(profileText);
 		
 		if(isHubWorld){
 			profileManager.SetupProfileSelection(profileSelectionLocation);

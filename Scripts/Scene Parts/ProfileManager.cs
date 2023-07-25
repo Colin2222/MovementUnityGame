@@ -19,7 +19,7 @@ public class ProfileManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        DontDestroyOnLoad(gameObject);
     }
 	
 	public void SetupProfileSelection(Transform starterLocation){
@@ -109,6 +109,14 @@ public class ProfileManager : MonoBehaviour
 					break; // Break the loop once the player is found and updated
 				}
 			}
+		}
+	}
+	
+	// used by scene manager to sync profileManager to UI element to display profile name when a new scene is loaded in
+	public void SetNameTextRef(TextMeshProUGUI newText){
+		nameText = newText;
+		if(currentProfile != null){
+			nameText.text = currentProfile.displayName;
 		}
 	}
 }
