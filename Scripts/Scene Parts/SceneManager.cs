@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using TMPro;
 
 public class SceneManager : MonoBehaviour
 {
@@ -27,6 +28,10 @@ public class SceneManager : MonoBehaviour
 	public bool isHubWorld;
 	
 	public TimingManager timer;
+	public float countdownTime;
+	float countdownTimer;
+	bool countingDownStart = false;
+	public TextMeshProUGUI countdownText;
 	
 	public CinemachineVirtualCamera vcam;
 	
@@ -60,10 +65,27 @@ public class SceneManager : MonoBehaviour
 		if(isHubWorld){
 			profileManager.SetupProfileSelection(profileSelectionLocation);
 			levelSelectManager.SetupLevelSelection(levelSelectionLocation);
+			countdownText.gameObject.SetActive(false);
 		} else{
-			timer.StartTimer();
+			countdownTimer = countdownTime;
+			countingDownStart = true;
+			player.LockPlayer();
 		}
     }
+	
+	void Update(){
+		// handle prelevel countdown
+		if(countingDownStart){
+			countdownTimer -= Time.deltaTime;
+			countdownText.text = ((int)(Mathf.Ceil(countdownTimer))).ToString();
+			if(countdownTimer <= 0){
+				countdownText.gameObject.SetActive(false);
+				countingDownStart = false;
+				player.UnlockPlayer();
+				timer.StartTimer();
+			}
+		}
+	}
 
     // loads the scene of the inputted build index
     public void SwitchScenes(int buildIndex)

@@ -20,4 +20,12 @@ public class PlayerHub : MonoBehaviour
     {
         
     }
+	
+	public void LockPlayer(){
+		mover.LockPlayer();
+	}
+	
+	public void UnlockPlayer(){
+		mover.UnlockPlayer();
+	}
 }

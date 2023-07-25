@@ -822,6 +822,16 @@ public class PlayerMover : MonoBehaviour
 		state.isRunJumping = false;
 	}
 	
+	public void LockPlayer(){
+		physControlLocked = true;
+		movementLocked = true;
+	}
+	
+	public void UnlockPlayer(){
+		physControlLocked = false;
+		movementLocked = false;
+	}
+	
 	// controller button methods
     private void OnMove(InputValue value){
         Vector2 vector = value.Get<Vector2>();
