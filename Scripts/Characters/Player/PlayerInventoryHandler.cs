@@ -16,7 +16,9 @@ public class PlayerInventoryHandler : MonoBehaviour
 	// Start is called before the first frame update
     void Start()
     {
-        canvas.SyncInventory(inventory);
+        if(canvas != null){
+			canvas.SyncInventory(inventory);
+		}
 		currentInventory = inventory.gemInventory;
 		reachableItems = new List<WorldItem>();
     }

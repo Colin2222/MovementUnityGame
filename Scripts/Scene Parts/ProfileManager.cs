@@ -77,14 +77,44 @@ public class ProfileManager : MonoBehaviour
 		int playerId = currentProfile.id;
 		int levelId = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
 		
-		Debug.Log("playerID: " + playerId);
-		Debug.Log("levelID: " + levelId);
-		if(time < profiles[playerId].bestTimes[levelId]){
-			profiles[playerId].bestTimes[levelId] = time;
+		// Load the XML file
+		XmlDocument xmlDoc = new XmlDocument();
+		xmlDoc.Load("Assets/Resources/" + profileXmlFile + ".xml");
+		
+		// check if new level time needs to be added to profile in xml
+		if(!profiles[playerId].bestTimes.ContainsKey(levelId)){
+			profiles[playerId].bestTimes.Add(levelId, time);
 			
-			// Load the XML file
-			XmlDocument xmlDoc = new XmlDocument();
-			xmlDoc.Load("Assets/Resources/" + profileXmlFile + ".xml");
+			// Get the root element of the XML file
+			XmlNodeList playerNodes = xmlDoc.SelectNodes("players/player");
+
+			// Iterate through each player
+			foreach (XmlNode playerNode in playerNodes)
+			{
+				// Get the ID of the player
+				XmlNode idNode = playerNode.SelectSingleNode("id");
+				int currentPlayerId = int.Parse(idNode.InnerText);
+
+				// Check if the current player has the given ID
+				if (currentPlayerId == playerId)
+				{
+					XmlNode entryNode = xmlDoc.CreateNode("element", "time_entry", "");
+					XmlNode timeNode = xmlDoc.CreateNode("element", "time", "");
+					XmlNode levelIdNode = xmlDoc.CreateNode("element", "level_id", "");
+					
+					timeNode.InnerText = time.ToString();
+					levelIdNode.InnerText = levelId.ToString();
+					
+					playerNode.AppendChild(entryNode);
+					entryNode.AppendChild(levelIdNode);
+					entryNode.AppendChild(timeNode);
+					
+					xmlDoc.Save("Assets/Resources/" + profileXmlFile + ".xml");
+					break; // Break the loop once the player is found and updated
+				}
+			}
+		} else if(time < profiles[playerId].bestTimes[levelId]){
+			profiles[playerId].bestTimes[levelId] = time;
 			
 			// Get the root element of the XML file
 			XmlNodeList playerNodes = xmlDoc.SelectNodes("players/player");
