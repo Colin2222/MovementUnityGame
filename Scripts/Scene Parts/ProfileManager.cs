@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Xml;
 using TMPro;
+using System.Linq;
 
 public class ProfileManager : MonoBehaviour
 {
@@ -158,5 +159,34 @@ public class ProfileManager : MonoBehaviour
 		if(currentProfile != null){
 			nameText.text = currentProfile.displayName;
 		}
+	}
+	
+	public Queue<(string, float)> GetLevelLeaderboardData(int numEntries){
+		Dictionary<int, float> times = new Dictionary<int, float>();
+		int levelId = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
+		
+		foreach(KeyValuePair<int, PlayerProfile> entry in profiles){
+			float timeInsertion;
+			try{
+				times.Add(entry.Key, entry.Value.bestTimes[levelId]);
+			} catch(KeyNotFoundException e){
+				
+			}
+			
+		}
+		
+		var topEntries = times.OrderByDescending(pair => pair.Value).Take(numEntries);
+		List<int> bestTimeProfileIds = new List<int>();
+		foreach (KeyValuePair<int,float> entry in times.OrderBy(key=> key.Value).Take(numEntries)){ 
+			bestTimeProfileIds.Add(entry.Key);
+		}
+		
+		Queue<(string, float)> data = new Queue<(string, float)>();
+		foreach(int id in bestTimeProfileIds){
+			(string, float) insertion = (profiles[id].displayName, profiles[id].bestTimes[levelId]);
+			data.Enqueue(insertion);
+		}
+		
+		return data;
 	}
 }

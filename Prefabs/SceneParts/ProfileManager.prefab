@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7138545551088395259}
   m_Layer: 0
   m_Name: ProfileManager
-  m_TagString: Untagged
+  m_TagString: ProfileManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
