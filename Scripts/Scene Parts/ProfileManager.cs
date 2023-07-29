@@ -11,6 +11,7 @@ public class ProfileManager : MonoBehaviour
 	public float profileSpacing;
 	public GameObject profileSelectorPrefab;
 	public TextMeshProUGUI nameText;
+	public PlayerHub player;
 	
 	[System.NonSerialized]
 	public PlayerProfile currentProfile;
@@ -40,6 +41,7 @@ public class ProfileManager : MonoBehaviour
         {
 			// set name and id
 			string displayName = playerNode.SelectSingleNode("display_name").InnerText;
+			string spritesheetCode = playerNode.SelectSingleNode("spritesheet_code").InnerText;
 			int id = int.Parse(playerNode.SelectSingleNode("id").InnerText);
 			
 			// create selectable player profile if relevant
@@ -62,7 +64,7 @@ public class ProfileManager : MonoBehaviour
 			}
 			
             // create profile for interactable
-			PlayerProfile newProfile = new PlayerProfile(id, displayName);
+			PlayerProfile newProfile = new PlayerProfile(id, displayName, spritesheetCode);
 			newProfile.bestTimes = timeDict;
 			profiles.Add(id, newProfile);
 			profileIds.Add(id);
@@ -74,6 +76,7 @@ public class ProfileManager : MonoBehaviour
 	
 	public void SetCurrentProfile(int profileId){
 		currentProfile = profiles[profileId];
+		player.SwitchPlayerSpritesheet(currentProfile.spritesheetCode);
 		nameText.text = currentProfile.displayName;
 	}
 	
@@ -166,6 +169,16 @@ public class ProfileManager : MonoBehaviour
 		nameText = newText;
 		if(currentProfile != null){
 			nameText.text = currentProfile.displayName;
+		}
+	}
+	
+	public void SetPlayerRef(PlayerHub newPlayer){
+		player = newPlayer;
+	}
+	
+	public void ResetPlayerSpritesheet(){
+		if(currentProfile != null){
+			player.SwitchPlayerSpritesheet(currentProfile.spritesheetCode);
 		}
 	}
 	

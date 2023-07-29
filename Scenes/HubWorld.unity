@@ -2176,6 +2176,10 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1737852002}
+    - target: {fileID: 622292847772405887, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+      propertyPath: spritesheetCode
+      value: blueclimber
+      objectReference: {fileID: 0}
     - target: {fileID: 6829769311745543616, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
       propertyPath: m_Name
       value: Player

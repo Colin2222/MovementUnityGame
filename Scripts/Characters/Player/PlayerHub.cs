@@ -9,6 +9,7 @@ public class PlayerHub : MonoBehaviour
 	public PlayerMover mover;
 	public PlayerState state;
 	public Animator animator;
+	public PlayerReskinManager reskinner;
     // Start is called before the first frame update
     void Awake()
     {
@@ -27,5 +28,9 @@ public class PlayerHub : MonoBehaviour
 	
 	public void UnlockPlayer(){
 		mover.UnlockPlayer();
+	}
+	
+	public void SwitchPlayerSpritesheet(string spritesheetName){
+		reskinner.SetNewSpritesheet(spritesheetName);
 	}
 }

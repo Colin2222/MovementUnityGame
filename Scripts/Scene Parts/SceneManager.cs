@@ -73,6 +73,8 @@ public class SceneManager : MonoBehaviour
             profileManager = profileManagerObjectTest.GetComponent<ProfileManager>();
         }
 		profileManager.SetNameTextRef(profileText);
+		profileManager.SetPlayerRef(player);
+		profileManager.ResetPlayerSpritesheet();
 	}
 	
     // Start is called before the first frame update

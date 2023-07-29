@@ -1355,6 +1355,7 @@ Transform:
   - {fileID: 1353190295}
   - {fileID: 1011390645}
   - {fileID: 878393383236153197}
+  - {fileID: 1945979171078524165}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1407,7 +1408,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &6829769311745543619
@@ -1426,6 +1427,7 @@ MonoBehaviour:
   physics: {fileID: 6829769312316459285}
   mover: {fileID: 281777110}
   animator: {fileID: 2098515062}
+  reskinner: {fileID: 622292847772405887}
 --- !u!50 &6829769311745543620
 Rigidbody2D:
   serializedVersion: 4
@@ -1638,3 +1640,50 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.24, y: 0.8}
   m_EdgeRadius: 0
+--- !u!1 &7993737416862948930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1945979171078524165}
+  - component: {fileID: 622292847772405887}
+  m_Layer: 0
+  m_Name: ReskinHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1945979171078524165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993737416862948930}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6829769311745543618}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &622292847772405887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993737416862948930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 406cba63e31cd924094acba5ab2b17d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritesheetCode: 
+  originalSpritesheetCode: climber
+  spriteRenderer: {fileID: 6829769311745543617}
