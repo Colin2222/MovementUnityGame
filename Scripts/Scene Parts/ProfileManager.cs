@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Xml;
+using System;
 using TMPro;
 using System.Linq;
 
@@ -51,6 +52,14 @@ public class ProfileManager : MonoBehaviour
 				ProfileSelectionInteractable interactable = instance.GetComponent<ProfileSelectionInteractable>();
 				interactable.profileManager = gameObject.GetComponent<ProfileManager>();
 				interactable.profileId = id;
+				
+				// set the sprite of the selectable profile
+				if(spritesheetCode != ""){
+					// gets the idle frame from the spritesheet
+					Sprite[] spriteSheetCollection = Resources.LoadAll<Sprite>("PlayerSpritesheets/" + spritesheetCode);
+					Sprite newSprite = Array.Find(spriteSheetCollection, item => item.name == (spritesheetCode + "_8"));
+					instance.GetComponent<SpriteRenderer>().sprite = newSprite;
+				}
 			}
 			
 			// set best times
