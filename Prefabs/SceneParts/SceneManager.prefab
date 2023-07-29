@@ -191,6 +191,7 @@ MonoBehaviour:
   levelSelectionLocation: {fileID: 4845049506907639082}
   transitionTime: 0.5
   playerPrefab: {fileID: 6829769311745543616, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
+  profileManagerPrefab: {fileID: 7138545551088395205, guid: 5a004e8ac2d0dde40afe8faa39b9981f, type: 3}
   itemRegistryXml: items
   levelRegistryXml: levels
   profileManager: {fileID: 0}
@@ -199,4 +200,6 @@ MonoBehaviour:
   timer: {fileID: 988680047}
   countdownTime: 4
   countdownText: {fileID: 0}
+  profileText: {fileID: 0}
   vcam: {fileID: 0}
+  hubWorldIndex: 1

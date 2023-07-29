@@ -259,6 +259,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "PostLevelLeaderboard",
+            "id": "bc01e5f7-b7da-46e9-8115-8e06a435e812",
+            "actions": [
+                {
+                    "name": "RestartLevel",
+                    "type": "Button",
+                    "id": "1f4372b9-5202-4a4a-b7f6-a9c21ce633c8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ReturnToHub",
+                    "type": "Button",
+                    "id": "c8605bd7-b92e-4ddb-bf13-9d1ba5b05cf5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9aa145a0-2497-44e0-bb3d-8cba2c5c273a",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RestartLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "60ce0176-3074-413c-86ca-3bf1d5d16435",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReturnToHub",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

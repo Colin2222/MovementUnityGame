@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ea1b3dc2ce907418f6ca55d5232fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numEntries: 3
+  numEntries: 5
   rowHeight: 25
   rowStartPos: {fileID: 6110638477451101992}
   rowPrefab: {fileID: 7318854526374028148, guid: 999a480a727224142aa28e8b33b579a7, type: 3}

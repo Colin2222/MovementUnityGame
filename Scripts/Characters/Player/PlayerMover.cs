@@ -148,22 +148,36 @@ public class PlayerMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {	
-		if(!physControlLocked){
-			HandleBracing();
-			HandleWallBracing();
-			HandleWallLaunching();
-			HandleWallPushing();
-			HandleWallSplatSticking();
-			HandleWallSplatStumbling();
-			HandleJumping();
-			HandleJumpBracing();
-			HandleStillLanding();
-			HandleCornerGrabbing();
-			HandleItemGrabbing();
-			HandleInteraction();
-			
-			HandleMoveInput();
+		if(physControlLocked){
+			jumpJustPressed = false;
+			braceJustPressed = false;
+			inventoryJustPressed = false;
+			itemGrabJustPressed = false;
+			menuUpJustPressed = false;
+			menuDownJustPressed = false;
+			menuRightJustPressed = false;
+			menuLeftJustPressed = false;
+			menuPageRightJustPressed = false;
+			menuPageLeftJustPressed = false;
+			interactJustPressed = false;
+			vertical = 0;
+			horizontal = 0;
 		}
+	
+		HandleBracing();
+		HandleWallBracing();
+		HandleWallLaunching();
+		HandleWallPushing();
+		HandleWallSplatSticking();
+		HandleWallSplatStumbling();
+		HandleJumping();
+		HandleJumpBracing();
+		HandleStillLanding();
+		HandleCornerGrabbing();
+		HandleItemGrabbing();
+		HandleInteraction();
+		HandleMoveInput();
+		
 		HandleInventory();
 		
 		jumpJustPressed = false;
@@ -181,18 +195,16 @@ public class PlayerMover : MonoBehaviour
 	
 	void FixedUpdate(){
 		if(!state.isCornerGrabbing && !state.isCornerClimbing && !state.isCornerMantling){
-			if(!physControlLocked){
-				HandleJumpingPhysics();
+			HandleJumpingPhysics();
 				
 				
-				HandleWallColliding();
-				HandleWallCollidingPhysics();
-				
-				HandleMovePhysics();
-				HandleWallSplatting();
-				
-				CheckGroundedness();
-			}
+			HandleWallColliding();
+			HandleWallCollidingPhysics();
+			
+			HandleMovePhysics();
+			HandleWallSplatting();
+			
+			CheckGroundedness();
 		} else{
 			if(cornerClimbEnding){
 				cornerClimbEnding = false;

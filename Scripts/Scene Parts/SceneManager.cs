@@ -37,6 +37,8 @@ public class SceneManager : MonoBehaviour
 	
 	public CinemachineVirtualCamera vcam;
 	
+	public int hubWorldIndex;
+	
     GameObject playerStateObjectTest;
     GameObject playerObjectTest;
 	
@@ -76,8 +78,8 @@ public class SceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		profileManager.SetupProfileSelection(profileSelectionLocation);
 		if(isHubWorld){
-			profileManager.SetupProfileSelection(profileSelectionLocation);
 			levelSelectManager.SetupLevelSelection(levelSelectionLocation);
 			countdownText.gameObject.SetActive(false);
 		} else{
@@ -113,4 +115,8 @@ public class SceneManager : MonoBehaviour
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(buildIndex);
     }
+	
+	public void ReturnToHub(){
+		UnityEngine.SceneManagement.SceneManager.LoadScene(hubWorldIndex);
+	}
 }

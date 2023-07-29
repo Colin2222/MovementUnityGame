@@ -38,14 +38,18 @@ public class ProfileManager : MonoBehaviour
 		int index = 0;
         foreach (XmlNode playerNode in playerNodes)
         {
-			GameObject instance = Instantiate(profileSelectorPrefab);
-			instance.transform.position = new Vector3(starterLocation.position.x + (profileSpacing * index), starterLocation.position.y, 0.0f);
-			ProfileSelectionInteractable interactable = instance.GetComponent<ProfileSelectionInteractable>();
-			interactable.profileManager = gameObject.GetComponent<ProfileManager>();
-			
 			// set name and id
 			string displayName = playerNode.SelectSingleNode("display_name").InnerText;
 			int id = int.Parse(playerNode.SelectSingleNode("id").InnerText);
+			
+			// create selectable player profile if relevant
+			if(starterLocation != null){
+				GameObject instance = Instantiate(profileSelectorPrefab);
+				instance.transform.position = new Vector3(starterLocation.position.x + (profileSpacing * index), starterLocation.position.y, 0.0f);
+				ProfileSelectionInteractable interactable = instance.GetComponent<ProfileSelectionInteractable>();
+				interactable.profileManager = gameObject.GetComponent<ProfileManager>();
+				interactable.profileId = id;
+			}
 			
 			// set best times
 			Dictionary<int, float> timeDict = new Dictionary<int, float>();
@@ -62,7 +66,6 @@ public class ProfileManager : MonoBehaviour
 			newProfile.bestTimes = timeDict;
 			profiles.Add(id, newProfile);
 			profileIds.Add(id);
-			interactable.profileId = id;
 			
 			// update index for spacing purposes
 			index++;
@@ -75,6 +78,11 @@ public class ProfileManager : MonoBehaviour
 	}
 	
 	public void RegisterNewTime(float time){
+		if(currentProfile == null){
+			return;
+		}
+		
+		
 		int playerId = currentProfile.id;
 		int levelId = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
 		
