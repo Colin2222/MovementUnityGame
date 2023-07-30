@@ -103,7 +103,7 @@ MonoBehaviour:
   moveForce: 15
   maxRunSpeed: 8
   walkJoystickThreshold: 0.4
-  slideStopSpeedTarget: 0.5
+  slideStopSpeedTarget: 0.75
   slideForceMultiplier: 0.5
   wallSplatStickTime: 0.5
   wallSplatStumbleTime: 1.1

@@ -429,7 +429,12 @@ public class PlayerMover : MonoBehaviour
 				animator.Play("PlayerLandingStillSmall");
 				stillLandTimer = stillLandLittleTime;
 			} else{
-				state.isRunning = true;
+				if(Mathf.Abs(rigidbody.velocity.x) > slideStopSpeedTarget){
+					state.isRunning = true;
+				} else{
+					state.isStanding = true;
+					animator.Play("PlayerIdle");
+				}
 			}
 			Land();
 			movementLocked = false;
