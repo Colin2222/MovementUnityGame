@@ -36,6 +36,11 @@
     </time_entry>
   </player>
   <player>
+    <id>9</id>
+    <display_name>Katherine</display_name>
+    <spritesheet_code>katherine</spritesheet_code>
+  </player>
+  <player>
     <id>2</id>
     <display_name>Neil</display_name>
     <spritesheet_code>neil</spritesheet_code>
