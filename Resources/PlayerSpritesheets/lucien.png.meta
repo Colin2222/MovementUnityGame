@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c5de9db78aa431142bdbb4f65ace1075
+guid: a339f0021884cc3429ae52cb767cac17
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: emmett_0
+      name: lucien_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dbdf163983ab9a408dd78f4fd44d9f3
-      internalID: -1329437814
+      spriteID: 4446791293dc1ea4ba5cc352e0dfe047
+      internalID: -1125999660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_1
+      name: lucien_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4439483d3deb6b49b6e132518bec222
-      internalID: 364771455
+      spriteID: fc5c778ea0bdd654fb32bed401abaf49
+      internalID: -1001024046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_2
+      name: lucien_2
       rect:
         serializedVersion: 2
         x: 64
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8791e997bfb407b41bc3540e18437dec
-      internalID: 1713030847
+      spriteID: 00f1f7ee47ebf5b4a9bb1a1f1e3dc29a
+      internalID: 1270812039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_3
+      name: lucien_3
       rect:
         serializedVersion: 2
         x: 96
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caec1011739d9c24fa14c7a5fe33fd2e
-      internalID: -334325425
+      spriteID: e8871892ba8ed5545beaa6a577cb0df0
+      internalID: 1026180395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_4
+      name: lucien_4
       rect:
         serializedVersion: 2
         x: 128
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94336b717ceffe6428fbdfd0b6532fe3
-      internalID: -1152430781
+      spriteID: 2c104e585f5192b4ea599c1107776a2c
+      internalID: 1615471385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_5
+      name: lucien_5
       rect:
         serializedVersion: 2
         x: 160
@@ -224,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b489c895cf56234fa46867306635a63
-      internalID: -662045845
+      spriteID: 073c48c276e0e194a88f319388f3da08
+      internalID: 517154917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_6
+      name: lucien_6
       rect:
         serializedVersion: 2
         x: 192
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29349cfa5acccce42a9e49c8d885a24a
-      internalID: 2120036384
+      spriteID: 54911c4f9ade7984e8a49d1959a3ad7b
+      internalID: 1811951323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_7
+      name: lucien_7
       rect:
         serializedVersion: 2
         x: 224
@@ -266,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f8d0a930e1df4a4c9730b7512928bd9
-      internalID: -1208723638
+      spriteID: 9a7779ac602c4314d87e6926d6b8bace
+      internalID: -894103073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_8
+      name: lucien_8
       rect:
         serializedVersion: 2
         x: 256
@@ -287,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8133c29ca5d07014aaebe306ac73b8f4
-      internalID: 1830070746
+      spriteID: 3c6dbb6a5494a3a44b1bdcccdbf72665
+      internalID: -2025671157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_9
+      name: lucien_9
       rect:
         serializedVersion: 2
         x: 288
@@ -308,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78173430b78535f4184ba3cf31169206
-      internalID: -462695618
+      spriteID: dd0217930049b534f8993ebe112d7318
+      internalID: 1161388915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_10
+      name: lucien_10
       rect:
         serializedVersion: 2
         x: 320
@@ -329,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10981a1dd41ced44dbaa9b59c239db87
-      internalID: -355658507
+      spriteID: 6777d488ef46bf645897921635578af2
+      internalID: 318337810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_11
+      name: lucien_11
       rect:
         serializedVersion: 2
         x: 352
@@ -350,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5397596106ad3454b89c651261cd1083
-      internalID: 2133932296
+      spriteID: dc1ad190d6245c64c816f640ec4d886d
+      internalID: 1367757590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_12
+      name: lucien_12
       rect:
         serializedVersion: 2
         x: 384
@@ -371,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f937627112a822a40ae943bfac72ea33
-      internalID: -885316760
+      spriteID: cf06798d5e5406c4da4e89455986bfba
+      internalID: -1247004595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_13
+      name: lucien_13
       rect:
         serializedVersion: 2
         x: 0
@@ -392,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48d08aeabb3f002468a8ea376ee25409
-      internalID: 819460711
+      spriteID: ae03c2e6b025c6f42a10bc410c0bf226
+      internalID: 1464483787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_14
+      name: lucien_14
       rect:
         serializedVersion: 2
         x: 32
@@ -413,14 +413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33602d7d7ee967848a770f5ea4d9bc86
-      internalID: -1644627214
+      spriteID: e7e22c8f341c4634888ddb357e5c3d95
+      internalID: -2019984462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_15
+      name: lucien_15
       rect:
         serializedVersion: 2
         x: 64
@@ -434,14 +434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b209622045040149b1e4f982133c17b
-      internalID: 1294856876
+      spriteID: 20eafabd84254844e98dda1ca4fc34aa
+      internalID: 996817518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_16
+      name: lucien_16
       rect:
         serializedVersion: 2
         x: 96
@@ -455,14 +455,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff70ab89da6cfab4a8dcb5d03d629c0b
-      internalID: -984888433
+      spriteID: 83c8d08f13d12554ea61123c9418a65a
+      internalID: -390670730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_17
+      name: lucien_17
       rect:
         serializedVersion: 2
         x: 128
@@ -476,14 +476,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0177e98104053864bbf8eac4ef24d36c
-      internalID: 215520145
+      spriteID: a5db5b7d47093014ea153801db629d00
+      internalID: -772594755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_18
+      name: lucien_18
       rect:
         serializedVersion: 2
         x: 160
@@ -497,14 +497,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e75766cc8376a741a30e164f5d1c39e
-      internalID: 1812274697
+      spriteID: 8a252f49ccdb9d34290a7a2cca735bd1
+      internalID: -1237183742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_19
+      name: lucien_19
       rect:
         serializedVersion: 2
         x: 192
@@ -518,14 +518,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7762e0727d36fbe41a5684d6abe9575f
-      internalID: 737274003
+      spriteID: c33159aae049dc240916dd0508076a26
+      internalID: 1839652994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_20
+      name: lucien_20
       rect:
         serializedVersion: 2
         x: 224
@@ -539,14 +539,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad18c3bc95107314c9979da51086a7f8
-      internalID: 1539327542
+      spriteID: f9f91eb536d75f7418dfb78018d4fc2f
+      internalID: -1781645572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_21
+      name: lucien_21
       rect:
         serializedVersion: 2
         x: 256
@@ -560,14 +560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2c6e5c00b8c7fe46ba222ab6c2b57f0
-      internalID: 418224382
+      spriteID: 4ddf8dfa975ae604eb2973cf40d395ce
+      internalID: 1240329471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_22
+      name: lucien_22
       rect:
         serializedVersion: 2
         x: 288
@@ -581,14 +581,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50a5a033012cba64c8247d416aa115af
-      internalID: -1900931205
+      spriteID: 1228dca572b07b44db2751e65e92bb6d
+      internalID: 19049814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_23
+      name: lucien_23
       rect:
         serializedVersion: 2
         x: 320
@@ -602,14 +602,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6ac4c20c3a576f4daf36e9c4e335fbd
-      internalID: 1304456203
+      spriteID: 4aedc596612e68649bf64ce0c1b5561d
+      internalID: -1183185893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_24
+      name: lucien_24
       rect:
         serializedVersion: 2
         x: 352
@@ -623,14 +623,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03976738e041d55419f501fa6bb48fcf
-      internalID: -437521475
+      spriteID: 430eeeb8a47ec12488d61a8db954a79b
+      internalID: 1271314333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_25
+      name: lucien_25
       rect:
         serializedVersion: 2
         x: 384
@@ -644,14 +644,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6fdc752b3a74384a8bace24fabd53f0
-      internalID: 271956594
+      spriteID: 0636fc44ac8a34741887ac67285707c1
+      internalID: 782657861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_26
+      name: lucien_26
       rect:
         serializedVersion: 2
         x: 0
@@ -665,14 +665,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90c7247480370ff478a35ba073460c88
-      internalID: 796773489
+      spriteID: 690ce1ab18356da45843e442be4cfdc6
+      internalID: -969358475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_27
+      name: lucien_27
       rect:
         serializedVersion: 2
         x: 32
@@ -686,14 +686,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09f76074a50f1c44b8aaea20d44a4a42
-      internalID: -1158860616
+      spriteID: 4ec2a5f8aa486e240bf8dab57bab1749
+      internalID: -133418967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_28
+      name: lucien_28
       rect:
         serializedVersion: 2
         x: 64
@@ -707,14 +707,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c359f69aaf2b5a74680366494ac61b02
-      internalID: -76502724
+      spriteID: f0370b4d15045704c85e0f94170a6071
+      internalID: 88506975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_29
+      name: lucien_29
       rect:
         serializedVersion: 2
         x: 96
@@ -728,14 +728,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bee1a181fcdca34fbd773c8fc2ad2da
-      internalID: -2092121789
+      spriteID: 010b1793bb2b67e45bf88e10dd2ff751
+      internalID: -1288261297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_30
+      name: lucien_30
       rect:
         serializedVersion: 2
         x: 128
@@ -749,14 +749,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20136607d77310142b284895e8dd1936
-      internalID: -1654617989
+      spriteID: be2eca9e9244a164ab6aebc181f18290
+      internalID: -912896068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_31
+      name: lucien_31
       rect:
         serializedVersion: 2
         x: 160
@@ -770,14 +770,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 950f0f579bed8ed4aa32bd04e00c1bd8
-      internalID: -1873281312
+      spriteID: c030432f69a008e41876f8ee104519c2
+      internalID: 1074005414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_32
+      name: lucien_32
       rect:
         serializedVersion: 2
         x: 192
@@ -791,14 +791,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b532725b3d88e924abf4a151c5a8a4f4
-      internalID: -939076110
+      spriteID: 352684188b70cdb438ff9bcf503231ed
+      internalID: 621760453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_33
+      name: lucien_33
       rect:
         serializedVersion: 2
         x: 224
@@ -812,14 +812,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a4dbc858ae3618429933f34c57942f8
-      internalID: -1182411231
+      spriteID: ea92c9672c1c7724597f965360185382
+      internalID: 1454308571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_34
+      name: lucien_34
       rect:
         serializedVersion: 2
         x: 256
@@ -833,14 +833,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43038a52e94ce4844a51d59f21c032a8
-      internalID: 2104242508
+      spriteID: c32d76527aa348c49a91b609c389eb35
+      internalID: 743397106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_35
+      name: lucien_35
       rect:
         serializedVersion: 2
         x: 320
@@ -854,14 +854,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f064ab529ea45549ac81d9d8f39ea33
-      internalID: 776865454
+      spriteID: 94de65000bb52194f80c593dd5eac56b
+      internalID: 164073515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_36
+      name: lucien_36
       rect:
         serializedVersion: 2
         x: 352
@@ -875,14 +875,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 529420aeb5314564baeda278a530c31b
-      internalID: 647857503
+      spriteID: 8a047e56aa9575d4d8cf82f61f21576b
+      internalID: 1483235514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_37
+      name: lucien_37
       rect:
         serializedVersion: 2
         x: 0
@@ -896,14 +896,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25e2c8a5eaecf36438def66a8a1bb492
-      internalID: -182824221
+      spriteID: ad0b0173a91fd3b4b8bd81bf2e82d61e
+      internalID: 1706855269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_38
+      name: lucien_38
       rect:
         serializedVersion: 2
         x: 32
@@ -917,14 +917,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 486e370ac6257c54b88714b7731bda53
-      internalID: -1764312736
+      spriteID: 88ace5c4ac84bf649be20c068f4a4aa2
+      internalID: 1842142815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_39
+      name: lucien_39
       rect:
         serializedVersion: 2
         x: 64
@@ -938,14 +938,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0cdbf6ea8ee04242baf06c8c7a844d4
-      internalID: -1374931187
+      spriteID: 270ec953b66bfcb45a71ce345aeab547
+      internalID: 628167373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_40
+      name: lucien_40
       rect:
         serializedVersion: 2
         x: 96
@@ -959,14 +959,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f7fc35cea1215b4f8d43971edff7577
-      internalID: -393346505
+      spriteID: 46cedbb1f8700d343b1a8cf3d58e61e7
+      internalID: 1444131489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_41
+      name: lucien_41
       rect:
         serializedVersion: 2
         x: 128
@@ -980,14 +980,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82a70836fcd862b4aa2b3f4843169a27
-      internalID: 1248436169
+      spriteID: cbec516e6de34f24a98b420d384f1736
+      internalID: 433178347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_42
+      name: lucien_42
       rect:
         serializedVersion: 2
         x: 160
@@ -1001,14 +1001,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39f76d5b37b6e7a4baa00c86cc5e82dc
-      internalID: 1020278495
+      spriteID: e17a6019af3ad4a47bc024d3baab10c3
+      internalID: -1790885484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_43
+      name: lucien_43
       rect:
         serializedVersion: 2
         x: 192
@@ -1022,14 +1022,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48d88aa2e971e5d42a1478a395897d6a
-      internalID: -13868839
+      spriteID: 0e2add45ab33f0f43a5b70a77515d7e6
+      internalID: 678482474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_44
+      name: lucien_44
       rect:
         serializedVersion: 2
         x: 224
@@ -1043,14 +1043,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c41a48bb7c57bf4f8c53438bc77883f
-      internalID: 640613992
+      spriteID: cbb0721a9eb9d744f912170e86826bbe
+      internalID: -548628402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_45
+      name: lucien_45
       rect:
         serializedVersion: 2
         x: 256
@@ -1064,14 +1064,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf1211e15d7e7334f8ee0bfe762b5f87
-      internalID: -591116178
+      spriteID: bc321d55580e5984983c74c5c954a36c
+      internalID: 272999891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_46
+      name: lucien_46
       rect:
         serializedVersion: 2
         x: 320
@@ -1085,14 +1085,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b7bf199da6d84245b5fde19e97f17c7
-      internalID: -861331579
+      spriteID: a6079640337015e4abd2856491fa9270
+      internalID: -1671975326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_47
+      name: lucien_47
       rect:
         serializedVersion: 2
         x: 352
@@ -1106,14 +1106,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1890e6dd13916f4f932caf1ad0c605b
-      internalID: -1211444011
+      spriteID: e7c5589e37d806042b1c72885a45697e
+      internalID: -403439134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_48
+      name: lucien_48
       rect:
         serializedVersion: 2
         x: 384
@@ -1127,14 +1127,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9f02f17366758146bd74070a8618ffa
-      internalID: -1314169787
+      spriteID: 1947d868a9880b742b0eddb911076b41
+      internalID: -1351297020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_49
+      name: lucien_49
       rect:
         serializedVersion: 2
         x: 0
@@ -1148,14 +1148,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c73aed8a5fe6d79469cf3756e4eed842
-      internalID: 1483250457
+      spriteID: 014a797567ec6394eaad1979b4703c77
+      internalID: -626585205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_50
+      name: lucien_50
       rect:
         serializedVersion: 2
         x: 32
@@ -1169,14 +1169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ace91dd01d210a34e86d457a44e711b5
-      internalID: 555979745
+      spriteID: 7f257ee59063633459701dc59d8d6919
+      internalID: 574710298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_51
+      name: lucien_51
       rect:
         serializedVersion: 2
         x: 64
@@ -1190,14 +1190,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 823fcc38ba51c3741a03ea622d156b70
-      internalID: 600681468
+      spriteID: 3eea1cc92f4200a448398abd99220ca5
+      internalID: 1143673320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_52
+      name: lucien_52
       rect:
         serializedVersion: 2
         x: 96
@@ -1211,14 +1211,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76da26d3c108c63479c6e3daadfb07e5
-      internalID: -2091046234
+      spriteID: 6146f443c9a1e1a4d81d4da38efe65b7
+      internalID: 712181827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_53
+      name: lucien_53
       rect:
         serializedVersion: 2
         x: 128
@@ -1232,14 +1232,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af438789db7709c4ba469b5a18278b69
-      internalID: -1154728887
+      spriteID: 8cdbe2327a3afbd408cd658a32fa0e69
+      internalID: -288389180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_54
+      name: lucien_54
       rect:
         serializedVersion: 2
         x: 160
@@ -1253,14 +1253,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5f55bf6387d53d40bc3900d36289194
-      internalID: -1748678983
+      spriteID: dfaf88407e49b39478cd1e52e5ee90f7
+      internalID: -1479328397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_55
+      name: lucien_55
       rect:
         serializedVersion: 2
         x: 192
@@ -1274,14 +1274,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ce45aa1ffe84a74b831f826b649bdb4
-      internalID: 896468830
+      spriteID: 617441cdac58a344387994757c9632c2
+      internalID: 1580978396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_56
+      name: lucien_56
       rect:
         serializedVersion: 2
         x: 224
@@ -1295,14 +1295,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63fa8e501b8210e4587872823374b489
-      internalID: -971029955
+      spriteID: df43ebaad5c2599469cf9fd0163ceeb5
+      internalID: 794455643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_57
+      name: lucien_57
       rect:
         serializedVersion: 2
         x: 256
@@ -1316,14 +1316,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edf5353594f674a4fbbab8cc6e5ff255
-      internalID: -1724165334
+      spriteID: 81237ebfad174b1499e7c9ece98062a4
+      internalID: -983663975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_58
+      name: lucien_58
       rect:
         serializedVersion: 2
         x: 288
@@ -1337,14 +1337,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 217099ea67aedac48b6d4be4ac0cce95
-      internalID: 1714344334
+      spriteID: 3be555ae115728a4090febe47e707d6e
+      internalID: 810706209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_59
+      name: lucien_59
       rect:
         serializedVersion: 2
         x: 320
@@ -1358,14 +1358,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bb111c10a6de1348900989dbe9f1759
-      internalID: -694258724
+      spriteID: 597cdc8e9011e454f89e264e45495b4f
+      internalID: -2136041313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_60
+      name: lucien_60
       rect:
         serializedVersion: 2
         x: 352
@@ -1379,14 +1379,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61c1e477ed9675e41b6c2f96d8d4d277
-      internalID: 353084592
+      spriteID: dc9a42f8ed9898b438973975a8eceec4
+      internalID: -1608576606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_61
+      name: lucien_61
       rect:
         serializedVersion: 2
         x: 384
@@ -1400,14 +1400,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e29ae0fa2f70fba44aa217df8c2243e5
-      internalID: 150904312
+      spriteID: 33777bb316f85534baa43e056ed795cf
+      internalID: 823267639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_62
+      name: lucien_62
       rect:
         serializedVersion: 2
         x: 0
@@ -1421,14 +1421,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27b147c77a3492b4181bf4a3a549e0fe
-      internalID: 1361863346
+      spriteID: 57b7e575a4a12c74c8378a73f2519e2a
+      internalID: 909969400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_63
+      name: lucien_63
       rect:
         serializedVersion: 2
         x: 32
@@ -1442,14 +1442,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c95812a5c50d4c740ab03a94c20a0dfe
-      internalID: 178006332
+      spriteID: 523fd3dbdf4bfa34faf0118513675afd
+      internalID: -1848811562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_64
+      name: lucien_64
       rect:
         serializedVersion: 2
         x: 64
@@ -1463,14 +1463,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78b548e0fe471654b8fbb78c02369eec
-      internalID: -1002729405
+      spriteID: 841b3f5fbfda2a842aa8e127b8444fc5
+      internalID: -400359654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_65
+      name: lucien_65
       rect:
         serializedVersion: 2
         x: 96
@@ -1484,14 +1484,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0c8149f55723fd48b0030be15dc4cae
-      internalID: -2048809931
+      spriteID: 2e28dd6aab3d08b4588c566a3cbc4412
+      internalID: -392630078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_66
+      name: lucien_66
       rect:
         serializedVersion: 2
         x: 128
@@ -1505,14 +1505,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20786a6494a85514e87eb9ed21d18585
-      internalID: -281738633
+      spriteID: 51b33fc63d9e29a4b90ac3fffdf08039
+      internalID: -1566044014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_67
+      name: lucien_67
       rect:
         serializedVersion: 2
         x: 160
@@ -1526,14 +1526,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3a840c54ae784f4f81796c358abe6e6
-      internalID: 2109376923
+      spriteID: 3612331ce9069fe459b11b1169c3e594
+      internalID: 338494342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_68
+      name: lucien_68
       rect:
         serializedVersion: 2
         x: 192
@@ -1547,14 +1547,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 186fd89646c27b8468975ed097de91fe
-      internalID: -510937906
+      spriteID: fbda8559a6362bf4684918ac00c17981
+      internalID: -90360025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_69
+      name: lucien_69
       rect:
         serializedVersion: 2
         x: 224
@@ -1568,14 +1568,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59859d9e563edbb4e82597983614f702
-      internalID: 1811737601
+      spriteID: 2f8dccbd027e2fc4f88728f2ad30a248
+      internalID: -1871654829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_70
+      name: lucien_70
       rect:
         serializedVersion: 2
         x: 256
@@ -1589,14 +1589,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90116479de0e6f447a8e636d6968509f
-      internalID: -488210683
+      spriteID: 28d583a83569432479a95c0f75a7f884
+      internalID: -1698030611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_71
+      name: lucien_71
       rect:
         serializedVersion: 2
         x: 288
@@ -1610,14 +1610,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28ece63c551e3d843aa26e5bd2d82e3f
-      internalID: 775670797
+      spriteID: 337da52b3602cf44b8712fd5d938da9a
+      internalID: 360355262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_72
+      name: lucien_72
       rect:
         serializedVersion: 2
         x: 320
@@ -1631,14 +1631,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3eda8e81361fa134d925f728b4ee1151
-      internalID: -1372762306
+      spriteID: 91843979159759946a7859d8454721c2
+      internalID: -1936651282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_73
+      name: lucien_73
       rect:
         serializedVersion: 2
         x: 352
@@ -1652,14 +1652,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd56f0715eaa318439a17f8791f852d6
-      internalID: -237915724
+      spriteID: f59473acdee9ec848b586cf431ac0c0d
+      internalID: 1734308245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_74
+      name: lucien_74
       rect:
         serializedVersion: 2
         x: 384
@@ -1673,14 +1673,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95735513d1d9aca4586f1a0bddd0262e
-      internalID: 16558532
+      spriteID: 30ce72cea47e4d04388cea2a239e5e53
+      internalID: 1015799984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_75
+      name: lucien_75
       rect:
         serializedVersion: 2
         x: 0
@@ -1694,14 +1694,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c84639649e80f443b1c8bf6197afbfb
-      internalID: -584229841
+      spriteID: 92667ccae6379fb459279275f2155caa
+      internalID: 126156173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_76
+      name: lucien_76
       rect:
         serializedVersion: 2
         x: 32
@@ -1715,14 +1715,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 815104bba7893aa42b41b327338b4ff1
-      internalID: 1138907131
+      spriteID: 870c3d946875af6459da8c7387f03d91
+      internalID: 955536783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_77
+      name: lucien_77
       rect:
         serializedVersion: 2
         x: 64
@@ -1736,14 +1736,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6adf06c3b4a130a418058292708a6d5c
-      internalID: -1256236953
+      spriteID: bacb4a7fe1785df4882b6968d0400dc8
+      internalID: -2072439684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_78
+      name: lucien_78
       rect:
         serializedVersion: 2
         x: 96
@@ -1757,14 +1757,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7deb6d987d65bee4a95627cfdc70336c
-      internalID: -1593538349
+      spriteID: f82131a6adf4bd7429cefbe6a5601b38
+      internalID: -1662908751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_79
+      name: lucien_79
       rect:
         serializedVersion: 2
         x: 128
@@ -1778,14 +1778,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef08e8da9040d9448a0ae8bb776b0554
-      internalID: 1880434296
+      spriteID: 7d4f22eebe77a9941a95f9337baae410
+      internalID: -1988004198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_80
+      name: lucien_80
       rect:
         serializedVersion: 2
         x: 160
@@ -1799,14 +1799,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03133a15d85561044872cccb84662d73
-      internalID: -893566479
+      spriteID: b48f46f716a468e498f694b6a0238450
+      internalID: -1869874727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_81
+      name: lucien_81
       rect:
         serializedVersion: 2
         x: 192
@@ -1820,14 +1820,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60f18834dbad5cb479138bc1c833a5ed
-      internalID: 850861516
+      spriteID: 78d75cc6f58971b4695449dded04f3e5
+      internalID: 825429220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_82
+      name: lucien_82
       rect:
         serializedVersion: 2
         x: 224
@@ -1841,14 +1841,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ced929eec0fb7746b1a60485cecc4f4
-      internalID: 1341168893
+      spriteID: 3264e1660ea194141b75bdc2e4aaee73
+      internalID: 213462924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_83
+      name: lucien_83
       rect:
         serializedVersion: 2
         x: 256
@@ -1862,14 +1862,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4eced6558bef4b041a81915c1c41297a
-      internalID: -1345552712
+      spriteID: 4a4c5ea8a10172b4c9570a0571651b6e
+      internalID: 1110223221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_84
+      name: lucien_84
       rect:
         serializedVersion: 2
         x: 288
@@ -1883,14 +1883,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03df0f9023a23d24f922a2d584333162
-      internalID: 1741383113
+      spriteID: f486b231bbcde4d45a0ea84a27f02f96
+      internalID: -1334721877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_85
+      name: lucien_85
       rect:
         serializedVersion: 2
         x: 320
@@ -1904,14 +1904,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e20989511b29e244e9f6c2de9ab88b11
-      internalID: -755880888
+      spriteID: 85ab58a6217d2d7479e12023fda76fe4
+      internalID: -915363794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_86
+      name: lucien_86
       rect:
         serializedVersion: 2
         x: 352
@@ -1925,14 +1925,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c87a9aba585649409486ffc7d640c62
-      internalID: -226689644
+      spriteID: 4c833309b750af744a9561d3033ba25a
+      internalID: -620575093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_87
+      name: lucien_87
       rect:
         serializedVersion: 2
         x: 0
@@ -1946,14 +1946,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44db7b687d3119a4abc78dace410187c
-      internalID: 85959575
+      spriteID: b412bd43dee15d943a0499d72c83c3fe
+      internalID: 404274055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_88
+      name: lucien_88
       rect:
         serializedVersion: 2
         x: 32
@@ -1967,14 +1967,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8aa7f99a17e13d41b3358b452220efc
-      internalID: 1780774859
+      spriteID: d63640f58fcae7848864fcc53a7cf9f0
+      internalID: -1041823086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_89
+      name: lucien_89
       rect:
         serializedVersion: 2
         x: 96
@@ -1988,14 +1988,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 294eaf8f6068461408a827818091acf5
-      internalID: 858105540
+      spriteID: 772b1813e6b248143b5c9bec2466554d
+      internalID: 911858984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_90
+      name: lucien_90
       rect:
         serializedVersion: 2
         x: 128
@@ -2009,14 +2009,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8f1621b42db981409cf66abc641a3cb
-      internalID: 1592472643
+      spriteID: 0c70e72712f2838499b2267617ef8327
+      internalID: -528568939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_91
+      name: lucien_91
       rect:
         serializedVersion: 2
         x: 192
@@ -2030,14 +2030,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42d3c72576e82df4c91cffeac159bf02
-      internalID: -1811745261
+      spriteID: e02f5a3f64b3a1d4faeb3d63ddad88c5
+      internalID: 1513975374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_92
+      name: lucien_92
       rect:
         serializedVersion: 2
         x: 224
@@ -2051,14 +2051,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16597a0f18ddb724b8b36733c9b0f48e
-      internalID: 104793879
+      spriteID: 177897745a34abe49a1e2c7dcb0be66d
+      internalID: -467740703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_93
+      name: lucien_93
       rect:
         serializedVersion: 2
         x: 256
@@ -2072,14 +2072,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e317b4b2e34eb2f4c92acfc704527eb4
-      internalID: 943022868
+      spriteID: 2abb6d69f890e9d49a8093b09c256c70
+      internalID: -1758317839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_94
+      name: lucien_94
       rect:
         serializedVersion: 2
         x: 288
@@ -2093,14 +2093,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05ddbca391c65f744a30179f3df8c7ef
-      internalID: -864660146
+      spriteID: c5936131ee6d09a4d91f37855ce258d2
+      internalID: 1633541214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_95
+      name: lucien_95
       rect:
         serializedVersion: 2
         x: 320
@@ -2114,14 +2114,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae51e358b6a94a243a8d67949de5df1c
-      internalID: 2135674375
+      spriteID: 88a20c96f1891504a89b6feceb7ca49d
+      internalID: 1058530739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_96
+      name: lucien_96
       rect:
         serializedVersion: 2
         x: 352
@@ -2135,14 +2135,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d217e1ae73a10847ad11b5a42d143e7
-      internalID: 1952359665
+      spriteID: 70e4265e94985384d946e31f0e777f75
+      internalID: 2021581291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_97
+      name: lucien_97
       rect:
         serializedVersion: 2
         x: 0
@@ -2156,14 +2156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df138f3d0b7a5394c9fcced89de682ab
-      internalID: -1715905172
+      spriteID: 4ade11217bb0aca41a2577a528593fa4
+      internalID: -1143880980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_98
+      name: lucien_98
       rect:
         serializedVersion: 2
         x: 32
@@ -2177,14 +2177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0ff1e63299db474ca8e8ab8393dd61b
-      internalID: -622634258
+      spriteID: 16e4fdf0ddccb19449a9fde621bdabf9
+      internalID: -567081466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_99
+      name: lucien_99
       rect:
         serializedVersion: 2
         x: 64
@@ -2198,14 +2198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e03b9c78615b25d449c51200866da712
-      internalID: -1455500724
+      spriteID: a4c87ac26c4a3094892bddaf1de4705a
+      internalID: -2010410387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_100
+      name: lucien_100
       rect:
         serializedVersion: 2
         x: 96
@@ -2219,14 +2219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9501c07d2e2418343bbe349447d0b2c8
-      internalID: 67128988
+      spriteID: 8394723d3370d9d43ac900d011529331
+      internalID: -772643507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_101
+      name: lucien_101
       rect:
         serializedVersion: 2
         x: 128
@@ -2240,14 +2240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 172bbba4201589d48b4c590039a36d9f
-      internalID: -2134925156
+      spriteID: 11bb9f44b54e8d04d8e2e16d1c679832
+      internalID: -1162773338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_102
+      name: lucien_102
       rect:
         serializedVersion: 2
         x: 160
@@ -2261,14 +2261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46b85ea06f608d74882a431e6505641d
-      internalID: 1503665948
+      spriteID: 6097b81e74148de45916c13cd947938a
+      internalID: 4048253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_103
+      name: lucien_103
       rect:
         serializedVersion: 2
         x: 192
@@ -2282,14 +2282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae2a09c0069e9994689bace6075e809d
-      internalID: 1333157660
+      spriteID: d282775f6a9f62543922359c49051baa
+      internalID: 1920731748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_104
+      name: lucien_104
       rect:
         serializedVersion: 2
         x: 224
@@ -2303,14 +2303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0704c414b3b0173429cb48029af1addf
-      internalID: 301043280
+      spriteID: 53fa84593a655d342bb684905c839452
+      internalID: 1811796029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_105
+      name: lucien_105
       rect:
         serializedVersion: 2
         x: 320
@@ -2324,14 +2324,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15f9a7930d67cbb498b6d7629bc98528
-      internalID: -1179496999
+      spriteID: 077e916960ea27c4c9a1805bdf19247f
+      internalID: -737831737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_106
+      name: lucien_106
       rect:
         serializedVersion: 2
         x: 352
@@ -2345,14 +2345,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cee87275f8cd4cc4ba1201fb775289ce
-      internalID: 870522811
+      spriteID: 2fdbf3444b90e4242b0e518e7325b265
+      internalID: 1002998387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_107
+      name: lucien_107
       rect:
         serializedVersion: 2
         x: 0
@@ -2366,14 +2366,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b083e8884ee69e947993ac3f1d5e6dd4
-      internalID: -1666809015
+      spriteID: dd253f01dae05b046a996f03cebb25fb
+      internalID: -1307579178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_108
+      name: lucien_108
       rect:
         serializedVersion: 2
         x: 32
@@ -2387,14 +2387,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11feb0202538c0a429ac9cc71b10b473
-      internalID: -1425322324
+      spriteID: 63c2ba18bec44d940adc0f56cdde5949
+      internalID: 1314375649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_109
+      name: lucien_109
       rect:
         serializedVersion: 2
         x: 64
@@ -2408,14 +2408,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a680fd3a6414f7f4a8952e92265cbc84
-      internalID: -931040348
+      spriteID: 7433fdfc420e80e47b2848bba581b8e0
+      internalID: 231644782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_110
+      name: lucien_110
       rect:
         serializedVersion: 2
         x: 96
@@ -2429,14 +2429,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0eb8984480592f34e99828bd4137198a
-      internalID: 1391540170
+      spriteID: 4cff1e9a8e33f7c419c6af162a011ac0
+      internalID: 2051837179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_111
+      name: lucien_111
       rect:
         serializedVersion: 2
         x: 160
@@ -2450,14 +2450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 740b7488b0d97a74d91f3bacad15bf5d
-      internalID: -982909773
+      spriteID: 3f6505851d0f5664782db8e7d59650db
+      internalID: -183897624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_112
+      name: lucien_112
       rect:
         serializedVersion: 2
         x: 192
@@ -2471,14 +2471,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d378208512bac2f46bc546ca18ba9937
-      internalID: 1243822999
+      spriteID: 763ad5728670ac143b45d74fee1fce83
+      internalID: 1527700826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_113
+      name: lucien_113
       rect:
         serializedVersion: 2
         x: 224
@@ -2492,14 +2492,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4038722a505d02049bb4d50cd4b0f32b
-      internalID: 702872121
+      spriteID: ce3486de5418d564ba8b311550465de0
+      internalID: -79394829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_114
+      name: lucien_114
       rect:
         serializedVersion: 2
         x: 256
@@ -2513,14 +2513,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abfdcc19ef2101c4a93a4d587571fe2f
-      internalID: -1554028647
+      spriteID: 22f5dce226cfc704d91eeb3813eade17
+      internalID: -1371982192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_115
+      name: lucien_115
       rect:
         serializedVersion: 2
         x: 288
@@ -2534,14 +2534,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ccd08528e84206448de1a8c153e1eda
-      internalID: 914557005
+      spriteID: 8b0e1079dd7caf04397cc6d90d12585c
+      internalID: 682852730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_116
+      name: lucien_116
       rect:
         serializedVersion: 2
         x: 320
@@ -2555,14 +2555,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f74b9aee6d76734b8888547cb7ae2a2
-      internalID: 65062729
+      spriteID: d1b0a01e15321b94e91ed34c40dcaf9f
+      internalID: 2096436762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_117
+      name: lucien_117
       rect:
         serializedVersion: 2
         x: 352
@@ -2576,14 +2576,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7c9e3ca5d4de8b4daf9e80cd890cf0e
-      internalID: 1113039231
+      spriteID: e27e2f55f6f78f440a432d893c1a2102
+      internalID: 1499190082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_118
+      name: lucien_118
       rect:
         serializedVersion: 2
         x: 0
@@ -2597,14 +2597,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88099f805aecdd4498b305529bf45138
-      internalID: 1899646169
+      spriteID: 898d0309cb0cf64489f52843526c9a77
+      internalID: -516345191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_119
+      name: lucien_119
       rect:
         serializedVersion: 2
         x: 32
@@ -2618,14 +2618,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77884be32be63f6439f95c3007995fa4
-      internalID: -783777010
+      spriteID: 3b6c7713c1606d4429694010f4a4e589
+      internalID: -1773975370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_120
+      name: lucien_120
       rect:
         serializedVersion: 2
         x: 160
@@ -2639,14 +2639,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5049af3a48ab8ec4188ca798150a1566
-      internalID: 1722304209
+      spriteID: e2fe70cc1ae7eea4ea927f05d752de4a
+      internalID: 1638532252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_121
+      name: lucien_121
       rect:
         serializedVersion: 2
         x: 256
@@ -2660,14 +2660,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ed38d7818c80fe45aefc2eb1746c6fa
-      internalID: 689454836
+      spriteID: 6088f8db7ae682241aea63466e431753
+      internalID: -417361790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_122
+      name: lucien_122
       rect:
         serializedVersion: 2
         x: 288
@@ -2681,14 +2681,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61b41a496ef656c40b7c7c59e01ffd00
-      internalID: -932349434
+      spriteID: 95f732d6f4f69f843b1bc90346c669d1
+      internalID: -1143253927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_123
+      name: lucien_123
       rect:
         serializedVersion: 2
         x: 320
@@ -2702,14 +2702,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: add82eb8ce03cce459b6336049188c16
-      internalID: 496060611
+      spriteID: 2d67b0a7f0702194d85486c68ef4704b
+      internalID: -745788780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_124
+      name: lucien_124
       rect:
         serializedVersion: 2
         x: 352
@@ -2723,14 +2723,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ecf2b97215a95f40bd6c2f2a69d127a
-      internalID: 598281228
+      spriteID: b41454e3505e0824b9122684b73cbd66
+      internalID: 1644627582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_125
+      name: lucien_125
       rect:
         serializedVersion: 2
         x: 256
@@ -2744,14 +2744,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62b43372e55cb244fb1e470c749bc1c6
-      internalID: 412228292
+      spriteID: 2d37ed2ba44e75e4db390bfc9a1aab41
+      internalID: 1630738192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_126
+      name: lucien_126
       rect:
         serializedVersion: 2
         x: 288
@@ -2765,14 +2765,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd2890672d1360e42bc4286428fc25dc
-      internalID: -49977658
+      spriteID: 69faee748ab133646981938d672e52ad
+      internalID: -2092490882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_127
+      name: lucien_127
       rect:
         serializedVersion: 2
         x: 320
@@ -2786,14 +2786,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3006a47592ac3d46bd8355c0317ef22
-      internalID: 1387444761
+      spriteID: 9c3fd46a53e0fb54fa9623fbe8334ea4
+      internalID: -1829660563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_128
+      name: lucien_128
       rect:
         serializedVersion: 2
         x: 352
@@ -2807,14 +2807,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dbb7ac1909272447b799a52e7c9a205
-      internalID: 1197840824
+      spriteID: b851f1b2600129949916a2d2312854e5
+      internalID: -223111953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_129
+      name: lucien_129
       rect:
         serializedVersion: 2
         x: 256
@@ -2828,14 +2828,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70d1e579286a3c4489471535d3ce715b
-      internalID: -1773540796
+      spriteID: a37d988be84d3ed4dae1af8793ac2e26
+      internalID: 1904957652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_130
+      name: lucien_130
       rect:
         serializedVersion: 2
         x: 288
@@ -2849,14 +2849,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2a322f4c0b4a5347a284c0c822b8c9e
-      internalID: 877932488
+      spriteID: f0eaad8bb3bf1714dbf59ec0e749c4ea
+      internalID: 1344523935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_131
+      name: lucien_131
       rect:
         serializedVersion: 2
         x: 320
@@ -2870,14 +2870,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74a58025bf624024c8482091c258114d
-      internalID: -1396386864
+      spriteID: 6af9ff9a88b5473478fbb36cf45667a3
+      internalID: -1487908134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_132
+      name: lucien_132
       rect:
         serializedVersion: 2
         x: 352
@@ -2891,14 +2891,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2591db141d5bf88468e5f44381e44076
-      internalID: -1252408067
+      spriteID: 874d5be88856ce44fa1be8332411b842
+      internalID: 1773002545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: emmett_133
+      name: lucien_133
       rect:
         serializedVersion: 2
         x: 256
@@ -2912,8 +2912,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38215734c8c669d4c80c24fbe2f81e93
-      internalID: -2052948503
+      spriteID: 590d94e11de6870499f709896fba1fe0
+      internalID: -765604621
       vertices: []
       indices: 
       edges: []
@@ -2929,140 +2929,140 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      emmett_120: 1722304209
-      emmett_109: -931040348
-      emmett_79: 1880434296
-      emmett_115: 914557005
-      emmett_110: 1391540170
-      emmett_40: -393346505
-      emmett_46: -861331579
-      emmett_59: -694258724
-      emmett_116: 65062729
-      emmett_42: 1020278495
-      emmett_83: -1345552712
-      emmett_63: 178006332
-      emmett_121: 689454836
-      emmett_101: -2134925156
-      emmett_24: -437521475
-      emmett_105: -1179496999
-      emmett_11: 2133932296
-      emmett_6: 2120036384
-      emmett_29: -2092121789
-      emmett_36: 647857503
-      emmett_34: 2104242508
-      emmett_81: 850861516
-      emmett_28: -76502724
-      emmett_44: 640613992
-      emmett_4: -1152430781
-      emmett_45: -591116178
-      emmett_70: -488210683
-      emmett_108: -1425322324
-      emmett_47: -1211444011
-      emmett_89: 858105540
-      emmett_0: -1329437814
-      emmett_56: -971029955
-      emmett_14: -1644627214
-      emmett_72: -1372762306
-      emmett_62: 1361863346
-      emmett_71: 775670797
-      emmett_5: -662045845
-      emmett_112: 1243822999
-      emmett_49: 1483250457
-      emmett_21: 418224382
-      emmett_27: -1158860616
-      emmett_61: 150904312
-      emmett_57: -1724165334
-      emmett_87: 85959575
-      emmett_1: 364771455
-      emmett_94: -864660146
-      emmett_93: 943022868
-      emmett_2: 1713030847
-      emmett_9: -462695618
-      emmett_119: -783777010
-      emmett_55: 896468830
-      emmett_126: -49977658
-      emmett_133: -2052948503
-      emmett_25: 271956594
-      emmett_31: -1873281312
-      emmett_41: 1248436169
-      emmett_54: -1748678983
-      emmett_12: -885316760
-      emmett_58: 1714344334
-      emmett_53: -1154728887
-      emmett_124: 598281228
-      emmett_43: -13868839
-      emmett_23: 1304456203
-      emmett_99: -1455500724
-      emmett_100: 67128988
-      emmett_52: -2091046234
-      emmett_73: -237915724
-      emmett_19: 737274003
-      emmett_66: -281738633
-      emmett_16: -984888433
-      emmett_33: -1182411231
-      emmett_92: 104793879
-      emmett_111: -982909773
-      emmett_128: 1197840824
-      emmett_15: 1294856876
-      emmett_98: -622634258
-      emmett_37: -182824221
-      emmett_51: 600681468
-      emmett_125: 412228292
-      emmett_13: 819460711
-      emmett_8: 1830070746
-      emmett_7: -1208723638
-      emmett_103: 1333157660
-      emmett_68: -510937906
-      emmett_17: 215520145
-      emmett_18: 1812274697
-      emmett_74: 16558532
-      emmett_106: 870522811
-      emmett_50: 555979745
-      emmett_82: 1341168893
-      emmett_123: 496060611
-      emmett_96: 1952359665
-      emmett_65: -2048809931
-      emmett_86: -226689644
-      emmett_90: 1592472643
-      emmett_32: -939076110
-      emmett_78: -1593538349
-      emmett_95: 2135674375
-      emmett_35: 776865454
-      emmett_131: -1396386864
-      emmett_26: 796773489
-      emmett_38: -1764312736
-      emmett_117: 1113039231
-      emmett_64: -1002729405
-      emmett_69: 1811737601
-      emmett_3: -334325425
-      emmett_84: 1741383113
-      emmett_39: -1374931187
-      emmett_130: 877932488
-      emmett_60: 353084592
-      emmett_122: -932349434
-      emmett_30: -1654617989
-      emmett_80: -893566479
-      emmett_48: -1314169787
-      emmett_91: -1811745261
-      emmett_97: -1715905172
-      emmett_75: -584229841
-      emmett_10: -355658507
-      emmett_20: 1539327542
-      emmett_127: 1387444761
-      emmett_107: -1666809015
-      emmett_102: 1503665948
-      emmett_132: -1252408067
-      emmett_76: 1138907131
-      emmett_77: -1256236953
-      emmett_22: -1900931205
-      emmett_85: -755880888
-      emmett_67: 2109376923
-      emmett_104: 301043280
-      emmett_129: -1773540796
-      emmett_114: -1554028647
-      emmett_113: 702872121
-      emmett_88: 1780774859
-      emmett_118: 1899646169
+      lucien_58: 810706209
+      lucien_129: 1904957652
+      lucien_38: 1842142815
+      lucien_126: -2092490882
+      lucien_108: 1314375649
+      lucien_133: -765604621
+      lucien_62: 909969400
+      lucien_116: 2096436762
+      lucien_127: -1829660563
+      lucien_85: -915363794
+      lucien_37: 1706855269
+      lucien_49: -626585205
+      lucien_101: -1162773338
+      lucien_14: -2019984462
+      lucien_5: 517154917
+      lucien_82: 213462924
+      lucien_71: 360355262
+      lucien_100: -772643507
+      lucien_103: 1920731748
+      lucien_13: 1464483787
+      lucien_33: 1454308571
+      lucien_19: 1839652994
+      lucien_92: -467740703
+      lucien_88: -1041823086
+      lucien_117: 1499190082
+      lucien_119: -1773975370
+      lucien_44: -548628402
+      lucien_35: 164073515
+      lucien_83: 1110223221
+      lucien_106: 1002998387
+      lucien_123: -745788780
+      lucien_109: 231644782
+      lucien_98: -567081466
+      lucien_0: -1125999660
+      lucien_6: 1811951323
+      lucien_93: -1758317839
+      lucien_46: -1671975326
+      lucien_64: -400359654
+      lucien_74: 1015799984
+      lucien_59: -2136041313
+      lucien_75: 126156173
+      lucien_42: -1790885484
+      lucien_50: 574710298
+      lucien_45: 272999891
+      lucien_81: 825429220
+      lucien_21: 1240329471
+      lucien_105: -737831737
+      lucien_65: -392630078
+      lucien_51: 1143673320
+      lucien_78: -1662908751
+      lucien_84: -1334721877
+      lucien_16: -390670730
+      lucien_125: 1630738192
+      lucien_96: 2021581291
+      lucien_102: 4048253
+      lucien_70: -1698030611
+      lucien_89: 911858984
+      lucien_28: 88506975
+      lucien_80: -1869874727
+      lucien_26: -969358475
+      lucien_23: -1183185893
+      lucien_118: -516345191
+      lucien_121: -417361790
+      lucien_43: 678482474
+      lucien_34: 743397106
+      lucien_36: 1483235514
+      lucien_9: 1161388915
+      lucien_115: 682852730
+      lucien_72: -1936651282
+      lucien_48: -1351297020
+      lucien_124: 1644627582
+      lucien_90: -528568939
+      lucien_53: -288389180
+      lucien_69: -1871654829
+      lucien_22: 19049814
+      lucien_67: 338494342
+      lucien_104: 1811796029
+      lucien_91: 1513975374
+      lucien_63: -1848811562
+      lucien_95: 1058530739
+      lucien_66: -1566044014
+      lucien_114: -1371982192
+      lucien_122: -1143253927
+      lucien_1: -1001024046
+      lucien_30: -912896068
+      lucien_17: -772594755
+      lucien_111: -183897624
+      lucien_79: -1988004198
+      lucien_40: 1444131489
+      lucien_56: 794455643
+      lucien_2: 1270812039
+      lucien_32: 621760453
+      lucien_76: 955536783
+      lucien_4: 1615471385
+      lucien_86: -620575093
+      lucien_41: 433178347
+      lucien_12: -1247004595
+      lucien_7: -894103073
+      lucien_57: -983663975
+      lucien_107: -1307579178
+      lucien_128: -223111953
+      lucien_8: -2025671157
+      lucien_31: 1074005414
+      lucien_39: 628167373
+      lucien_25: 782657861
+      lucien_47: -403439134
+      lucien_61: 823267639
+      lucien_15: 996817518
+      lucien_112: 1527700826
+      lucien_60: -1608576606
+      lucien_73: 1734308245
+      lucien_77: -2072439684
+      lucien_11: 1367757590
+      lucien_68: -90360025
+      lucien_120: 1638532252
+      lucien_99: -2010410387
+      lucien_132: 1773002545
+      lucien_55: 1580978396
+      lucien_20: -1781645572
+      lucien_52: 712181827
+      lucien_113: -79394829
+      lucien_3: 1026180395
+      lucien_131: -1487908134
+      lucien_130: 1344523935
+      lucien_24: 1271314333
+      lucien_27: -133418967
+      lucien_97: -1143880980
+      lucien_29: -1288261297
+      lucien_54: -1479328397
+      lucien_87: 404274055
+      lucien_94: 1633541214
+      lucien_110: 2051837179
+      lucien_10: 318337810
+      lucien_18: -1237183742
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

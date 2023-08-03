@@ -3,37 +3,27 @@
   <player>
     <id>8</id>
     <display_name>Nick</display_name>
-    <spritesheet_code>blueclimber</spritesheet_code>
+    <spritesheet_code>nick</spritesheet_code>
   </player>
   <player>
     <id>7</id>
     <display_name>Emmett</display_name>
-    <spritesheet_code>blueclimber</spritesheet_code>
+    <spritesheet_code>emmett</spritesheet_code>
   </player>
   <player>
     <id>6</id>
     <display_name>Lucien</display_name>
-    <spritesheet_code>blueclimber</spritesheet_code>
+    <spritesheet_code>lucien</spritesheet_code>
   </player>
   <player>
     <id>5</id>
     <display_name>Dom</display_name>
-    <spritesheet_code>blueclimber</spritesheet_code>
+    <spritesheet_code>dom</spritesheet_code>
   </player>
   <player>
     <id>4</id>
     <display_name>Mike</display_name>
     <spritesheet_code>mike</spritesheet_code>
-  </player>
-  <player>
-    <id>1</id>
-    <display_name>Colin</display_name>
-    <spritesheet_code>
-    </spritesheet_code>
-    <time_entry>
-      <level_id>0</level_id>
-      <time>34.20174</time>
-    </time_entry>
   </player>
   <player>
     <id>9</id>
@@ -46,8 +36,13 @@
     <spritesheet_code>neil</spritesheet_code>
   </player>
   <player>
-    <id>3</id>
-    <display_name>Owen</display_name>
-    <spritesheet_code>blueclimber</spritesheet_code>
+    <id>1</id>
+    <display_name>Colin</display_name>
+    <spritesheet_code>
+    </spritesheet_code>
+    <time_entry>
+      <level_id>0</level_id>
+      <time>34.20174</time>
+    </time_entry>
   </player>
 </players>

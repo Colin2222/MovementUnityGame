@@ -103,7 +103,7 @@ MonoBehaviour:
   moveForce: 15
   maxRunSpeed: 8
   walkJoystickThreshold: 0.4
-  slideStopSpeedTarget: 0.75
+  slideStopSpeedTarget: 1
   slideForceMultiplier: 0.5
   wallSplatStickTime: 0.5
   wallSplatStumbleTime: 1.1
@@ -1408,7 +1408,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &6829769311745543619
