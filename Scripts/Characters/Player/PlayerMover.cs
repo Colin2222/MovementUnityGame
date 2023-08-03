@@ -749,7 +749,7 @@ public class PlayerMover : MonoBehaviour
 	
 	void HandleCornerGrabbing(){
 		if(state.isBracing && !state.isCornerGrabbing && !state.isCornerClimbing && !state.isCornerMantling){
-			if(cornerHandler.corner != null){
+			if(cornerHandler.corner != null && !player.physics.isGrounded){
 				state.SweepFalse();
 				state.isCornerGrabbing = true;
 				animator.Play("PlayerCornerGrabbing");
