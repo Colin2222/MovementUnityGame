@@ -4,4 +4,8 @@
     <id>0</id>
     <display_name>test_level</display_name>
   </level>
+  <level>
+    <id>2</id>
+    <display_name>Baby's first level</display_name>
+  </level>
 </levels>

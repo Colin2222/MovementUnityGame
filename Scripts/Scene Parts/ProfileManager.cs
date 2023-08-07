@@ -56,7 +56,7 @@ public class ProfileManager : MonoBehaviour
 				// set the sprite of the selectable profile
 				if(spritesheetCode != ""){
 					// gets the idle frame from the spritesheet
-					Sprite[] spriteSheetCollection = Resources.LoadAll<Sprite>("PlayerSpritesheets/" + spritesheetCode);
+					Sprite[] spriteSheetCollection = Resources.LoadAll<Sprite>(spritesheetCode);
 					Sprite newSprite = Array.Find(spriteSheetCollection, item => item.name == (spritesheetCode + "_8"));
 					instance.GetComponent<SpriteRenderer>().sprite = newSprite;
 				}

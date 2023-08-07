@@ -39,6 +39,8 @@ public class SceneManager : MonoBehaviour
 	
 	public int hubWorldIndex;
 	
+	public SceneTransitionManager transitionManager;
+	
     GameObject playerStateObjectTest;
     GameObject playerObjectTest;
 	
@@ -92,6 +94,8 @@ public class SceneManager : MonoBehaviour
 			countingDownStart = true;
 			player.LockPlayer();
 		}
+		
+		transitionManager.EnterTransition();
     }
 	
 	void Update(){
@@ -119,6 +123,6 @@ public class SceneManager : MonoBehaviour
     }
 	
 	public void ReturnToHub(){
-		UnityEngine.SceneManagement.SceneManager.LoadScene(hubWorldIndex);
+		transitionManager.ExitTransition(hubWorldIndex);
 	}
 }

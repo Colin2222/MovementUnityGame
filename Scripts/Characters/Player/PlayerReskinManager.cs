@@ -29,7 +29,7 @@ public class PlayerReskinManager : MonoBehaviour
 	public void SetNewSpritesheet(string spritesheetCode){
 		if(spritesheetCode != originalSpritesheetCode && spritesheetCode != ""){
 			this.spritesheetCode = spritesheetCode;
-			spriteSheetCollection = Resources.LoadAll<Sprite>("PlayerSpritesheets/" + spritesheetCode);
+			spriteSheetCollection = Resources.LoadAll<Sprite>(spritesheetCode);
 			reskinActive = true;
 		} else{
 			reskinActive = false;

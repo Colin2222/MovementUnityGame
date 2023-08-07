@@ -29,6 +29,10 @@
     <id>9</id>
     <display_name>Katherine</display_name>
     <spritesheet_code>katherine</spritesheet_code>
+    <time_entry>
+      <level_id>2</level_id>
+      <time>11.24481</time>
+    </time_entry>
   </player>
   <player>
     <id>2</id>
@@ -38,11 +42,14 @@
   <player>
     <id>1</id>
     <display_name>Colin</display_name>
-    <spritesheet_code>
-    </spritesheet_code>
+    <spritesheet_code>colin</spritesheet_code>
     <time_entry>
       <level_id>0</level_id>
       <time>34.20174</time>
+    </time_entry>
+    <time_entry>
+      <level_id>2</level_id>
+      <time>10.17717</time>
     </time_entry>
   </player>
 </players>

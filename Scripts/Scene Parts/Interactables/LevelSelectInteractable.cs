@@ -20,6 +20,6 @@ public class LevelSelectInteractable : MonoBehaviour, IInteractable
     }
 	
 	public void Interact(){
-		GameObject.FindWithTag("SceneManager").GetComponent<SceneManager>().SwitchScenes(levelId);
+		GameObject.FindWithTag("SceneTransitionManager").GetComponent<SceneTransitionManager>().ExitTransition(levelId);
 	}
 }
