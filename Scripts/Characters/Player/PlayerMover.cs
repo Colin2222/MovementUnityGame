@@ -454,6 +454,17 @@ public class PlayerMover : MonoBehaviour
 			movementLocked = true;
 			jumpBraceCounter += Time.deltaTime;
 			
+			if(horizontal > 0)
+			{
+				 gameObject.transform.parent.transform.eulerAngles = new Vector2(0,0);
+				 state.direction = 1;
+			}
+			if(horizontal < 0)
+			{
+				gameObject.transform.parent.transform.eulerAngles = new Vector2(0,180);
+				state.direction = -1;
+			}
+			
 			if(!jumpPressed){
 				// check if player held down the jump button long enough to meet minimum length to execute jump
 				float jumpForceMultiplier = Mathf.Clamp(jumpBraceCounter, 0.0f, jumpBraceTime) / jumpBraceTime;
