@@ -125,4 +125,8 @@ public class SceneManager : MonoBehaviour
 	public void ReturnToHub(){
 		transitionManager.ExitTransition(hubWorldIndex);
 	}
+	
+	public void RestartLevel(){
+		transitionManager.ExitTransition(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+	}
 }

@@ -26,7 +26,8 @@ public class EndingZone : MonoBehaviour
 	
 	void OnRestartLevel(){
 		if(levelFinished){
-			sceneManager.SwitchScenes(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+			sceneManager.RestartLevel();
+			
 		}
 	}
 	
