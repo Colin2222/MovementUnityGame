@@ -8,4 +8,8 @@
     <id>2</id>
     <display_name>Baby's first level</display_name>
   </level>
+  <level>
+    <id>3</id>
+    <display_name>Arizona Hike</display_name>
+  </level>
 </levels>
