@@ -22,4 +22,16 @@ public class PlayerStateManager : MonoBehaviour
 	public void Move(float horizontal, float vertical){
 		currentState = currentState.Move(horizontal, vertical);
 	}
+	
+	public void HitGround(float hitForce){
+		currentState = currentState.HitGround(hitForce);
+	}
+	
+	public void PressJump(){
+		currentState = currentState.PressJump();
+	}
+	
+	public void ReleaseJump(){
+		currentState = currentState.ReleaseJump();
+	}
 }

@@ -2,38 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PStateIdle : PState
+public class PStateSoaring : PState
 {
-	public PStateIdle(PlayerHub player, PlayerAttributeSet attr, Rigidbody2D rigidbody){
-		PState.player = player;
-		PState.attr = attr;
-		PState.rigidbody = rigidbody;
-		PState.direction = 1;
-	}
-	
-	public PStateIdle(){
+    public PStateSoaring(){
 		
 	}
 	
     public override PState Update(){
-		PState.player.animator.Play("PlayerIdle");
 		return this;
 	}
 	
 	public override PState FixedUpdate(){
-		// apply resistive force to prevent some residual sliding after ending a slide stop/turn
-		PState.rigidbody.AddForce(PState.rigidbody.velocity * PState.attr.moveForce * -1.0f, ForceMode2D.Force);
 		return this;
 	}
 	
     public override PState HitGround(float hitSpeed){
-		return this;
+		return new PStateMoving();
 	}
 	
 	public override PState Move(float horizontal, float vertical){
-		if(Mathf.Abs(horizontal) > 0.0f){
-			return new PStateMoving();
-		}
 		return this;
 	}
 	
@@ -46,8 +33,7 @@ public class PStateIdle : PState
 	}
 	
 	public override PState PressJump(){
-		PState.player.animator.Play("PlayerJumpBracing");
-		return new PStateJumpBracing();
+		return this;
 	}
 	
 	public override PState ReleaseJump(){

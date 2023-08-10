@@ -24,10 +24,11 @@ public class PStateMoving : PState
 		if(Mathf.Abs(PState.rigidbody.velocity.x) > PState.attr.maxRunSpeed){
 			PState.rigidbody.velocity = new Vector2(PState.attr.maxRunSpeed * Mathf.Sign(PState.rigidbody.velocity.x), PState.rigidbody.velocity.y);
 		}
+		
 		return this;
 	}
 	
-    public override PState HitGround(){
+    public override PState HitGround(float hitSpeed){
 		return this;
 	}
 	
@@ -57,7 +58,8 @@ public class PStateMoving : PState
 	}
 	
 	public override PState PressJump(){
-		return this;
+		PState.player.animator.Play("PlayerJumpBracing");
+		return new PStateJumpBracing();
 	}
 	
 	public override PState ReleaseJump(){

@@ -1288,6 +1288,11 @@ MonoBehaviour:
     maxRunSpeed: 8
     slideForceMultiplier: 0.5
     slideStopSpeedTarget: 1
+    runningJumpSpeed: 6.5
+    jumpBraceTime: 0.7
+    maxStillJumpAngleFromYAxis: 0.7
+    stillJumpLaunchTime: 0.08
+    jumpForce: 17
 --- !u!1 &6829769310522087713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,7 +1350,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23, y: 0.1}
+  m_Size: {x: 0.24, y: 0.1}
   m_EdgeRadius: 0
 --- !u!114 &6829769310522087715
 MonoBehaviour:
@@ -1667,6 +1672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47aa942d3813e9488f06493fa625091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateManager: {fileID: 5555245007042818769}
 --- !u!61 &6829769312316459286
 BoxCollider2D:
   m_ObjectHideFlags: 0

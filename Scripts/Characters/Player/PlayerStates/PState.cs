@@ -11,15 +11,15 @@ public abstract class PState
 	
 	public abstract PState Update();
 	public abstract PState FixedUpdate();
-    public abstract PState HitGround();
 	public abstract PState Move(float horizontal, float vertical);
+	public abstract PState HitGround(float hitSpeed);
+	public abstract PState LeaveGround();
 	public abstract PState ClimbUp();
 	public abstract PState ClimbDown();
 	public abstract PState PressJump();
 	public abstract PState ReleaseJump();
 	public abstract PState HitWall();
 	public abstract PState PressBrace();
-	public abstract PState LeaveGround();
 	
 	protected void SetDirection(float horizontal){
 		if(horizontal > 0){

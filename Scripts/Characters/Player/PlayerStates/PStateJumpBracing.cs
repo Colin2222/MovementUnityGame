@@ -2,27 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PStateIdle : PState
+public class PStateJumpBracing : PState
 {
-	public PStateIdle(PlayerHub player, PlayerAttributeSet attr, Rigidbody2D rigidbody){
-		PState.player = player;
-		PState.attr = attr;
-		PState.rigidbody = rigidbody;
-		PState.direction = 1;
-	}
+	float jumpBraceCounter;
+	float horizontal;
+	float vertical;
 	
-	public PStateIdle(){
-		
+    public PStateJumpBracing(){
+		jumpBraceCounter = 0.0f;
 	}
 	
     public override PState Update(){
-		PState.player.animator.Play("PlayerIdle");
+		jumpBraceCounter += Time.deltaTime;
 		return this;
 	}
 	
 	public override PState FixedUpdate(){
-		// apply resistive force to prevent some residual sliding after ending a slide stop/turn
-		PState.rigidbody.AddForce(PState.rigidbody.velocity * PState.attr.moveForce * -1.0f, ForceMode2D.Force);
+		// apply resistive force
+		PState.rigidbody.AddForce(PState.rigidbody.velocity * PState.attr.moveForce * -1.0f * PState.attr.slideForceMultiplier, ForceMode2D.Force);
 		return this;
 	}
 	
@@ -31,9 +28,10 @@ public class PStateIdle : PState
 	}
 	
 	public override PState Move(float horizontal, float vertical){
-		if(Mathf.Abs(horizontal) > 0.0f){
-			return new PStateMoving();
-		}
+		this.horizontal = horizontal;
+		this.vertical = vertical;
+		
+		base.SetDirection(horizontal);
 		return this;
 	}
 	
@@ -46,12 +44,13 @@ public class PStateIdle : PState
 	}
 	
 	public override PState PressJump(){
-		PState.player.animator.Play("PlayerJumpBracing");
-		return new PStateJumpBracing();
+		return this;
 	}
 	
 	public override PState ReleaseJump(){
-		return this;
+		float jumpForceMultiplier = Mathf.Clamp(jumpBraceCounter, 0.0f, PState.attr.jumpBraceTime) / PState.attr.jumpBraceTime;
+		float aimAngle = Mathf.Atan2(vertical, horizontal);
+		return new PStateStillJumpLaunching(jumpForceMultiplier, aimAngle);
 	}
 	
 	public override PState HitWall(){

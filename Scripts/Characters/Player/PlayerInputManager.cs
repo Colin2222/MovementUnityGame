@@ -70,6 +70,12 @@ public class PlayerInputManager : MonoBehaviour
 	private void OnJump(){
         jumpPressed = !jumpPressed;
         jumpJustPressed = jumpPressed;
+		
+		if(jumpPressed){
+			stateManager.PressJump();
+		} else{
+			stateManager.ReleaseJump();
+		}
     }
 	
 	private void OnBrace(){

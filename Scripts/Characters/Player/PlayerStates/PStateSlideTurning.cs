@@ -25,7 +25,7 @@ public class PStateSlideTurning : PState
 		return this;
 	}
 	
-    public override PState HitGround(){
+    public override PState HitGround(float hitSpeed){
 		return this;
 	}
 	
@@ -45,7 +45,8 @@ public class PStateSlideTurning : PState
 	}
 	
 	public override PState PressJump(){
-		return this;
+		PState.player.animator.Play("PlayerJumpBracing");
+		return new PStateJumpBracing();
 	}
 	
 	public override PState ReleaseJump(){
