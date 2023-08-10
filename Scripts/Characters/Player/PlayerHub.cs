@@ -6,10 +6,12 @@ public class PlayerHub : MonoBehaviour
 {
 	public Rigidbody2D rigidbody;
 	public CharacterPhysicsChecker physics;
-	public PlayerMover mover;
+	public PlayerInputManager inputManager;
+	public PlayerStateManager stateManager;
 	public PlayerState state;
 	public Animator animator;
 	public PlayerReskinManager reskinner;
+	public PlayerAttributeManager attributeManager;
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,11 +25,11 @@ public class PlayerHub : MonoBehaviour
     }
 	
 	public void LockPlayer(){
-		mover.LockPlayer();
+		//mover.LockPlayer();
 	}
 	
 	public void UnlockPlayer(){
-		mover.UnlockPlayer();
+		//mover.UnlockPlayer();
 	}
 	
 	public void SwitchPlayerSpritesheet(string spritesheetName){
