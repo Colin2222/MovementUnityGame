@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharacterPhysicsChecker : MonoBehaviour
 {
+	public PlayerStateManager stateManager;
+	
     [System.NonSerialized]
     public bool isGrounded = false;
     [System.NonSerialized]

@@ -21,7 +21,7 @@ public class EndingZone : MonoBehaviour
 		timingManager.FinishLevelTimer();
 		leaderboardObject.SetActive(true);
 		leaderboard.ActivateLeaderboard();
-		player.mover.LockPlayer();
+		//player.mover.LockPlayer();
 	}
 	
 	void OnRestartLevel(){

@@ -107,7 +107,6 @@ public class PlayerMover : MonoBehaviour
 	float inventoryExitTimer;
 	
 	
-	
 	// button pressing
     private bool jumpPressed = false;
     private bool jumpJustPressed = false;
@@ -139,6 +138,7 @@ public class PlayerMover : MonoBehaviour
         rigidbody = player.rigidbody;
 		state = player.state;
 		animator = player.animator;
+		
 		
 		//Time.timeScale = 0.1f;
 		//Time.timeScale = 0.3f;

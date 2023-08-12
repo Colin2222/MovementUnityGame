@@ -59,10 +59,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 281777108}
-  - component: {fileID: 281777110}
   - component: {fileID: 281777111}
+  - component: {fileID: 588900340537133547}
   m_Layer: 0
-  m_Name: Mover
+  m_Name: InputManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,64 +83,6 @@ Transform:
   m_Father: {fileID: 6829769311745543618}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &281777110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 281777107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32ec4d84d0fec134fa64ac45f7cc3686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 6829769311745543619}
-  cornerHandler: {fileID: 2062545488}
-  inventoryHandler: {fileID: 1568975044}
-  interactor: {fileID: 1011390647}
-  speed: 1
-  moveForce: 15
-  maxRunSpeed: 8
-  walkJoystickThreshold: 0.4
-  slideStopSpeedTarget: 1
-  slideForceMultiplier: 0.5
-  wallSplatStickTime: 0.5
-  wallSplatStumbleTime: 1.1
-  wallSplatStumbleSpeed: 0.55
-  wallSplatMinSpeed: 6.2
-  wallSlideUpwardsCoefficient: 15
-  wallSlideDownwardsCoefficient: 20
-  wallLaunchCoefficient: 30
-  wallBraceTime: 0.35
-  wallAirSplatMinSpeed: 10000
-  wallLaunchTime: 0.375
-  wallPushTime: 0.3125
-  wallLaunchHorizontalRetention: 0.7
-  wallLaunchMinimumHorizontal: 3
-  wallPushHorizontalRetention: 0.15
-  wallLaunchBoost: 7
-  wallPushBoost: 2
-  wallLaunchMaxVerticalSpeed: 7.5
-  braceTime: 0.5
-  braceCooldownTime: 0.5
-  jumpForce: 17
-  jumpForgivenessTime: 0.3
-  coyoteTime: 0.3
-  jumpTime: 0.8
-  runningJumpSpeed: 6.5
-  jumpBraceTime: 0.7
-  jumpBraceStartingTime: 0.2
-  jumpLaunchTime: 0.08
-  minimumJumpBraceRatio: 0.4
-  stillLandLittleTime: 0.5
-  stillLandBigTime: 0
-  stillLandSmallMinSpeed: 13
-  maxStillJumpAngleFromYAxis: 0.7
-  cornerClimbTime: 0.916667
-  cornerMantleTime: 0.583333
-  cornerClimbVertJoystickThreshold: 0.9
-  inventoryExitTime: 0.625
 --- !u!114 &281777111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,6 +113,54 @@ MonoBehaviour:
   m_DefaultActionMap: PlayerRegular
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &588900340537133547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281777107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3155ff01e792ab64eb40a36093a8c28d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6829769311745543619}
+  stateManager: {fileID: 5555245007042818769}
+  attr:
+    moveForce: 0
+    maxRunSpeed: 0
+    slideForceMultiplier: 0
+    slideStopSpeedTarget: 0
+    runningJumpSpeed: 0
+    jumpBraceTime: 0
+    maxStillJumpAngleFromYAxis: 0
+    stillJumpLaunchTime: 0
+    jumpForce: 0
+    braceTime: 0
+    braceCooldownTime: 0
+    gravityScale: 0
+    cornerMantleTime: 0
+    cornerClimbTime: 0
+    cornerClimbVertJoystickThreshold: 0
+    wallBraceTime: 0
+    wallPushTime: 0
+    wallPushHorizontalRetention: 0
+    wallPushBoost: 0
+    wallLaunchTime: 0
+    wallLaunchHorizontalRetention: 0
+    wallLaunchMinimumHorizontal: 0
+    wallLaunchBoost: 0
+    wallLaunchMaxVerticalSpeed: 0
+    wallSlideUpwardsCoefficient: 0
+    wallSlideDownwardsCoefficient: 0
+    wallPushLaunchCoefficient: 0
+    wallPushToLaunchHorizontalRetention: 0
+    wallPushToLaunchBoost: 0
+    wallSplatMinSpeed: 0
+    wallSplatStickTime: 0
+    wallSplatStumbleTime: 0
+    wallSplatStumbleSpeed: 0
 --- !u!1 &1011390644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,6 +1229,129 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.8}
   m_EdgeRadius: 0
+--- !u!1 &6073811509661454979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9186423888794225313}
+  - component: {fileID: 5555245007042818769}
+  m_Layer: 0
+  m_Name: StateManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9186423888794225313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6073811509661454979}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6829769311745543618}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5555245007042818769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6073811509661454979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20791ae0dcddf8f4d8c6454447962a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6829769311745543619}
+--- !u!1 &6351005850754153587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5972361109059700172}
+  - component: {fileID: 6501627088609475746}
+  m_Layer: 0
+  m_Name: AttributeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5972361109059700172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6351005850754153587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6829769311745543618}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6501627088609475746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6351005850754153587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcbb0b2362cc80b439e707dedb15955d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attrSet:
+    moveForce: 14
+    maxRunSpeed: 8
+    slideForceMultiplier: 0.5
+    slideStopSpeedTarget: 1
+    runningJumpSpeed: 6.5
+    jumpBraceTime: 0.5
+    maxStillJumpAngleFromYAxis: 0.7
+    stillJumpLaunchTime: 0.08
+    jumpForce: 17
+    braceTime: 0.5
+    braceCooldownTime: 0.5
+    gravityScale: 2.5
+    cornerMantleTime: 0.5833333
+    cornerClimbTime: 0.9166667
+    cornerClimbVertJoystickThreshold: 0.9
+    wallBraceTime: 0.35
+    wallPushTime: 0.3125
+    wallPushHorizontalRetention: 0.15
+    wallPushBoost: 2
+    wallLaunchTime: 0.25
+    wallLaunchHorizontalRetention: 0.7
+    wallLaunchMinimumHorizontal: 3
+    wallLaunchBoost: 7
+    wallLaunchMaxVerticalSpeed: 7.5
+    wallSlideUpwardsCoefficient: 15
+    wallSlideDownwardsCoefficient: 20
+    wallPushLaunchCoefficient: 30
+    wallPushToLaunchHorizontalRetention: 0.45
+    wallPushToLaunchBoost: 4
+    wallSplatMinSpeed: 6.2
+    wallSplatStickTime: 0.5
+    wallSplatStumbleTime: 1.1
+    wallSplatStumbleSpeed: 0.55
 --- !u!1 &6829769310522087713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,7 +1378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6829769310522087713}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1285,7 +1398,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.45}
+  m_Offset: {x: 0, y: -0.35}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1296,7 +1409,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23, y: 0.1}
+  m_Size: {x: 0.24, y: 0.1}
   m_EdgeRadius: 0
 --- !u!114 &6829769310522087715
 MonoBehaviour:
@@ -1313,7 +1426,7 @@ MonoBehaviour:
   parentPhysics: {fileID: 6829769312316459285}
   rigidbody: {fileID: 6829769311745543620}
   distanceToGround: 1.05
-  playerMover: {fileID: 281777110}
+  playerMover: {fileID: 0}
 --- !u!1 &6829769311745543616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,6 +1469,8 @@ Transform:
   - {fileID: 1011390645}
   - {fileID: 878393383236153197}
   - {fileID: 1945979171078524165}
+  - {fileID: 9186423888794225313}
+  - {fileID: 5972361109059700172}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1425,9 +1540,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 6829769311745543620}
   physics: {fileID: 6829769312316459285}
-  mover: {fileID: 281777110}
+  inputManager: {fileID: 588900340537133547}
+  stateManager: {fileID: 5555245007042818769}
+  cornerHandler: {fileID: 2062545488}
   animator: {fileID: 2098515062}
   reskinner: {fileID: 622292847772405887}
+  attributeManager: {fileID: 6501627088609475746}
 --- !u!50 &6829769311745543620
 Rigidbody2D:
   serializedVersion: 4
@@ -1614,6 +1732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47aa942d3813e9488f06493fa625091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateManager: {fileID: 5555245007042818769}
 --- !u!61 &6829769312316459286
 BoxCollider2D:
   m_ObjectHideFlags: 0
