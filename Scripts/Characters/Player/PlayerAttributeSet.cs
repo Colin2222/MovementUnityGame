@@ -20,4 +20,22 @@ public class PlayerAttributeSet
 	public float cornerMantleTime;
 	public float cornerClimbTime;
 	public float cornerClimbVertJoystickThreshold;
+	public float wallBraceTime;
+	public float wallPushTime;
+	public float wallPushHorizontalRetention;
+	public float wallPushBoost;
+	public float wallLaunchTime;
+	public float wallLaunchHorizontalRetention;
+	public float wallLaunchMinimumHorizontal;
+	public float wallLaunchBoost;
+	public float wallLaunchMaxVerticalSpeed;
+	public float wallSlideUpwardsCoefficient;
+	public float wallSlideDownwardsCoefficient;
+	public float wallPushLaunchCoefficient;
+	public float wallPushToLaunchHorizontalRetention;
+	public float wallPushToLaunchBoost;
+	public float wallSplatMinSpeed;
+	public float wallSplatStickTime;
+	public float wallSplatStumbleTime;
+	public float wallSplatStumbleSpeed;
 }

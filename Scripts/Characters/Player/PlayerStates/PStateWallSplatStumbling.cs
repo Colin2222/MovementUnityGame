@@ -2,13 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PStateSoaring : PState
+public class PStateWallSplatStumbling : PState
 {
-    public PStateSoaring(){
-		
+	int splatDirection;
+	float wallSplatStumbleTimer;
+	
+    public PStateWallSplatStumbling(int direction){
+		PState.player.animator.Play("PlayerWallSplatStumbling");
+		splatDirection = direction;
+		wallSplatStumbleTimer = PState.attr.wallSplatStumbleTime;
+		PState.rigidbody.velocity = new Vector2(PState.attr.wallSplatStumbleSpeed * splatDirection, PState.rigidbody.velocity.y);
 	}
 	
     public override PState Update(){
+		wallSplatStumbleTimer -= Time.deltaTime;
+		if(wallSplatStumbleTimer <= 0.0f){
+			return new PStateIdle();
+		}
 		return this;
 	}
 	
@@ -17,7 +27,7 @@ public class PStateSoaring : PState
 	}
 	
     public override PState HitGround(float hitSpeed){
-		return new PStateMoving();
+		return this;
 	}
 	
 	public override PState Move(float horizontal, float vertical){
@@ -41,19 +51,10 @@ public class PStateSoaring : PState
 	}
 	
 	public override PState HitWall(Vector2 wallCollisionVelocity){
-		if(Mathf.Abs(wallCollisionVelocity.x) > 0.0f){
-			return new PStateWallBracing(wallCollisionVelocity);
-		} else{
-			return this;
-		}
+		return this;
 	}
 	
 	public override PState Brace(){
-		if(PState.player.cornerHandler.mantleCorner != null){
-			return new PStateCornerMantling();
-		} else if(PState.player.cornerHandler.corner != null){
-			return new PStateCornerGrabbing();
-		}
 		return this;
 	}
 	

@@ -143,6 +143,24 @@ MonoBehaviour:
     cornerMantleTime: 0
     cornerClimbTime: 0
     cornerClimbVertJoystickThreshold: 0
+    wallBraceTime: 0
+    wallPushTime: 0
+    wallPushHorizontalRetention: 0
+    wallPushBoost: 0
+    wallLaunchTime: 0
+    wallLaunchHorizontalRetention: 0
+    wallLaunchMinimumHorizontal: 0
+    wallLaunchBoost: 0
+    wallLaunchMaxVerticalSpeed: 0
+    wallSlideUpwardsCoefficient: 0
+    wallSlideDownwardsCoefficient: 0
+    wallPushLaunchCoefficient: 0
+    wallPushToLaunchHorizontalRetention: 0
+    wallPushToLaunchBoost: 0
+    wallSplatMinSpeed: 0
+    wallSplatStickTime: 0
+    wallSplatStumbleTime: 0
+    wallSplatStumbleSpeed: 0
 --- !u!1 &1011390644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,6 +1334,24 @@ MonoBehaviour:
     cornerMantleTime: 0.5833333
     cornerClimbTime: 0.9166667
     cornerClimbVertJoystickThreshold: 0.9
+    wallBraceTime: 0.35
+    wallPushTime: 0.3125
+    wallPushHorizontalRetention: 0.15
+    wallPushBoost: 2
+    wallLaunchTime: 0.25
+    wallLaunchHorizontalRetention: 0.7
+    wallLaunchMinimumHorizontal: 3
+    wallLaunchBoost: 7
+    wallLaunchMaxVerticalSpeed: 7.5
+    wallSlideUpwardsCoefficient: 15
+    wallSlideDownwardsCoefficient: 20
+    wallPushLaunchCoefficient: 30
+    wallPushToLaunchHorizontalRetention: 0.45
+    wallPushToLaunchBoost: 4
+    wallSplatMinSpeed: 6.2
+    wallSplatStickTime: 0.5
+    wallSplatStumbleTime: 1.1
+    wallSplatStumbleSpeed: 0.55
 --- !u!1 &6829769310522087713
 GameObject:
   m_ObjectHideFlags: 0

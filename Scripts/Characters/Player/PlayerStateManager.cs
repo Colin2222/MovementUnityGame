@@ -32,6 +32,10 @@ public class PlayerStateManager : MonoBehaviour
 		currentState = currentState.HitGround(hitForce);
 	}
 	
+	public void HitWall(Vector2 wallCollisionVelocity){
+		currentState = currentState.HitWall(wallCollisionVelocity);
+	}
+	
 	public void LeaveGround(){
 		currentState = currentState.LeaveGround();
 	}

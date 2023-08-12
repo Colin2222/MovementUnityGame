@@ -53,7 +53,7 @@ public class PStateJumpBracing : PState
 		return new PStateStillJumpLaunching(jumpForceMultiplier, aimAngle);
 	}
 	
-	public override PState HitWall(){
+	public override PState HitWall(Vector2 wallCollisionVelocity){
 		return this;
 	}
 	
