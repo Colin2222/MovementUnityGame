@@ -5,11 +5,26 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputManager : MonoBehaviour
 {
+	public PlayerHub player;
 	public PlayerStateManager stateManager;
+	public PlayerAttributeSet attr;
+	
+	// locking player input
+	bool locked = false;
 	
 	// joystick movement
 	float horizontal;
 	float vertical;
+	
+	// bracing tracking
+	bool bracing = false;
+	float braceTimer;
+	float braceCooldownTimer;
+	bool justBraceChanged = false;
+	
+	// climbing up/down tracking
+	bool canClimbUp = false;
+	bool canClimbDown = false;
 	
 	// button pressing
     private bool jumpPressed = false;
@@ -38,13 +53,21 @@ public class PlayerInputManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        attr = player.attributeManager.attrSet;
     }
 
     // Update is called once per frame
     void Update()
     {
-		stateManager.Move(horizontal, vertical);
+		if(!locked){
+			stateManager.Move(horizontal, vertical);
+			HandleBracing();
+			HandleClimbing();
+			
+			if(bracing){
+				bracing = !(stateManager.Brace());
+			}
+		}
 		
         jumpJustPressed = false;
 		braceJustPressed = false;
@@ -58,6 +81,53 @@ public class PlayerInputManager : MonoBehaviour
 		menuPageLeftJustPressed = false;
 		interactJustPressed = false;
     }
+	
+	public void LockPlayer(){
+		locked = true;
+	}
+	
+	public void UnlockPlayer(){
+		locked = false;
+	}
+	
+	// handles bracing timing
+	private void HandleBracing(){
+		if(bracing){
+			braceTimer -= Time.deltaTime;
+			if(braceTimer <= 0.0f || !bracePressed){
+				bracing = false;
+				braceCooldownTimer = attr.braceCooldownTime;
+			}
+		} else{
+			if(braceCooldownTimer > 0.0f){
+				braceCooldownTimer -= Time.deltaTime;
+			} else{
+				if(braceJustPressed){
+					bracing = true;
+					braceTimer = attr.braceTime;
+				}
+			}
+		}
+	}
+	
+	private void HandleClimbing(){
+		if(vertical <= -(attr.cornerClimbVertJoystickThreshold)){
+			canClimbUp = true;
+			if(canClimbDown){
+				stateManager.ClimbDown();
+				canClimbDown = false;
+			}
+		} else if(vertical >= attr.cornerClimbVertJoystickThreshold){
+			canClimbDown = true;
+			if(canClimbUp){
+				stateManager.ClimbUp();
+				canClimbUp = false;
+			}
+		} else {
+			canClimbDown = true;
+			canClimbUp = true;
+		}
+	}
 	
 	// controller button methods
     private void OnMove(InputValue value){

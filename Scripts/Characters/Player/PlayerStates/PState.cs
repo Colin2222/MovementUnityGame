@@ -19,7 +19,7 @@ public abstract class PState
 	public abstract PState PressJump();
 	public abstract PState ReleaseJump();
 	public abstract PState HitWall();
-	public abstract PState PressBrace();
+	public abstract PState Brace();
 	
 	protected void SetDirection(float horizontal){
 		if(horizontal > 0){

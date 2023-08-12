@@ -57,11 +57,12 @@ public class PStateJumpBracing : PState
 		return this;
 	}
 	
-	public override PState PressBrace(){
+	public override PState Brace(){
 		return this;
 	}
 	
 	public override PState LeaveGround(){
-		return this;
+		PState.player.animator.Play("PlayerSoaringStill");
+		return new PStateSoaring();
 	}
 }

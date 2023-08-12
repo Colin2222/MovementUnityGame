@@ -93,11 +93,17 @@ public class PStateStillJumpLaunching : PState
 		return this;
 	}
 	
-	public override PState PressBrace(){
+	public override PState Brace(){
+		if(PState.player.cornerHandler.mantleCorner != null){
+			return new PStateCornerMantling();
+		} else if(PState.player.cornerHandler.corner != null){
+			return new PStateCornerGrabbing();
+		}
 		return this;
 	}
 	
 	public override PState LeaveGround(){
-		return this;
+		PState.player.animator.Play("PlayerSoaringStill");
+		return new PStateSoaring();
 	}
 }

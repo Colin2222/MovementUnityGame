@@ -8,6 +8,7 @@ public class PlayerHub : MonoBehaviour
 	public CharacterPhysicsChecker physics;
 	public PlayerInputManager inputManager;
 	public PlayerStateManager stateManager;
+	public CornerHandler cornerHandler;
 	public PlayerState state;
 	public Animator animator;
 	public PlayerReskinManager reskinner;
@@ -25,11 +26,11 @@ public class PlayerHub : MonoBehaviour
     }
 	
 	public void LockPlayer(){
-		//mover.LockPlayer();
+		inputManager.LockPlayer();
 	}
 	
 	public void UnlockPlayer(){
-		//mover.UnlockPlayer();
+		inputManager.UnlockPlayer();
 	}
 	
 	public void SwitchPlayerSpritesheet(string spritesheetName){

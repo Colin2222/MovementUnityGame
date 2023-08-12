@@ -14,4 +14,10 @@ public class PlayerAttributeSet
 	public float maxStillJumpAngleFromYAxis;
 	public float stillJumpLaunchTime;
 	public float jumpForce;
+	public float braceTime;
+	public float braceCooldownTime;
+	public float gravityScale;
+	public float cornerMantleTime;
+	public float cornerClimbTime;
+	public float cornerClimbVertJoystickThreshold;
 }

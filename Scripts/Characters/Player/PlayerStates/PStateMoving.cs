@@ -58,8 +58,15 @@ public class PStateMoving : PState
 	}
 	
 	public override PState PressJump(){
-		PState.player.animator.Play("PlayerJumpBracing");
-		return new PStateJumpBracing();
+		if(Mathf.Abs(PState.rigidbody.velocity.x) > PState.attr.runningJumpSpeed){
+			PState.rigidbody.velocity = new Vector2(PState.rigidbody.velocity.x, 0);
+			PState.rigidbody.AddForce(new Vector2(0,PState.attr.jumpForce), ForceMode2D.Impulse);
+			PState.player.animator.Play("PlayerJumpingRunning");
+			return new PStateSoaring();
+		} else{
+			PState.player.animator.Play("PlayerJumpBracing");
+			return new PStateJumpBracing();
+		}
 	}
 	
 	public override PState ReleaseJump(){
@@ -70,11 +77,17 @@ public class PStateMoving : PState
 		return this;
 	}
 	
-	public override PState PressBrace(){
+	public override PState Brace(){
+		if(PState.player.cornerHandler.mantleCorner != null){
+			return new PStateCornerMantling();
+		} else if(PState.player.cornerHandler.corner != null){
+			return new PStateCornerGrabbing();
+		}
 		return this;
 	}
 	
 	public override PState LeaveGround(){
-		return this;
+		PState.player.animator.Play("PlayerSoaringStill");
+		return new PStateSoaring();
 	}
 }

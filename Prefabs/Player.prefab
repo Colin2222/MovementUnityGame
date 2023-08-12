@@ -125,7 +125,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3155ff01e792ab64eb40a36093a8c28d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 6829769311745543619}
   stateManager: {fileID: 5555245007042818769}
+  attr:
+    moveForce: 0
+    maxRunSpeed: 0
+    slideForceMultiplier: 0
+    slideStopSpeedTarget: 0
+    runningJumpSpeed: 0
+    jumpBraceTime: 0
+    maxStillJumpAngleFromYAxis: 0
+    stillJumpLaunchTime: 0
+    jumpForce: 0
+    braceTime: 0
+    braceCooldownTime: 0
+    gravityScale: 0
+    cornerMantleTime: 0
+    cornerClimbTime: 0
+    cornerClimbVertJoystickThreshold: 0
 --- !u!1 &1011390644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,10 +1306,16 @@ MonoBehaviour:
     slideForceMultiplier: 0.5
     slideStopSpeedTarget: 1
     runningJumpSpeed: 6.5
-    jumpBraceTime: 0.7
+    jumpBraceTime: 0.5
     maxStillJumpAngleFromYAxis: 0.7
     stillJumpLaunchTime: 0.08
     jumpForce: 17
+    braceTime: 0.5
+    braceCooldownTime: 0.5
+    gravityScale: 2.5
+    cornerMantleTime: 0.5833333
+    cornerClimbTime: 0.9166667
+    cornerClimbVertJoystickThreshold: 0.9
 --- !u!1 &6829769310522087713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,6 +1506,7 @@ MonoBehaviour:
   physics: {fileID: 6829769312316459285}
   inputManager: {fileID: 588900340537133547}
   stateManager: {fileID: 5555245007042818769}
+  cornerHandler: {fileID: 2062545488}
   animator: {fileID: 2098515062}
   reskinner: {fileID: 622292847772405887}
   attributeManager: {fileID: 6501627088609475746}

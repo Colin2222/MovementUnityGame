@@ -40,6 +40,7 @@ public class BottomCheck : MonoBehaviour
 		
 		if(collisions.Count == 0){
 			parentPhysics.isGrounded = false;
+			parentPhysics.stateManager.LeaveGround();
 		}
     }
 }
