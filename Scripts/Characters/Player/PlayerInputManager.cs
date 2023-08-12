@@ -8,6 +8,7 @@ public class PlayerInputManager : MonoBehaviour
 	public PlayerHub player;
 	public PlayerStateManager stateManager;
 	public PlayerAttributeSet attr;
+	public PlayerInteractor interactor;
 	
 	// locking player input
 	bool locked = false;
@@ -196,5 +197,9 @@ public class PlayerInputManager : MonoBehaviour
 	private void OnInteract(){
 		interactPressed = !interactPressed;
 		interactJustPressed = interactPressed;
+		
+		if(interactJustPressed){
+			interactor.Interact();
+		}
 	}
 }

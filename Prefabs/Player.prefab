@@ -161,6 +161,7 @@ MonoBehaviour:
     wallSplatStickTime: 0
     wallSplatStumbleTime: 0
     wallSplatStumbleSpeed: 0
+  interactor: {fileID: 1011390647}
 --- !u!1 &1011390644
 GameObject:
   m_ObjectHideFlags: 0
