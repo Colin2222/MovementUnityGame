@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CustomizerInteractable : MonoBehaviour, IInteractable
 {
-	public CustomizerManager customizer;
+	CustomizerManager customizer;
 	
     // Start is called before the first frame update
     void Start()
     {
-        
+        customizer = GameObject.FindWithTag("CustomizerManager").GetComponent<CustomizerManager>();
     }
 
     // Update is called once per frame

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PartPreviewer : MonoBehaviour
 {
+	[System.NonSerialized]
 	public CustomizerColorPalette colorManager;
 	public SpriteRenderer rightArrow;
 	public SpriteRenderer leftArrow;
@@ -11,6 +12,10 @@ public class PartPreviewer : MonoBehaviour
     public Sprite[] previews;
 	int currentSelection = 0;
 	int currentColor = 0;
+	
+	void Start(){
+		
+	}
 	
 	public (int, int) GetSelection(){
 		return (currentSelection, currentColor);
@@ -38,6 +43,10 @@ public class PartPreviewer : MonoBehaviour
 	}
 	
 	public void UpdateSelectionImage(){
+		if(colorManager == null){
+			colorManager = GameObject.FindWithTag("ColorPaletteManager").GetComponent<CustomizerColorPalette>();
+		}
+		
 		if(previews.Length != 0){
 			renderer.sprite = previews[currentSelection];
 			renderer.color = colorManager.GetColor(currentColor);

@@ -45,23 +45,6 @@ public class ProfileManager : MonoBehaviour
 			string spritesheetCode = playerNode.SelectSingleNode("spritesheet_code").InnerText;
 			int id = int.Parse(playerNode.SelectSingleNode("id").InnerText);
 			
-			// create selectable player profile if relevant
-			if(starterLocation != null){
-				GameObject instance = Instantiate(profileSelectorPrefab);
-				instance.transform.position = new Vector3(starterLocation.position.x + (profileSpacing * index), starterLocation.position.y, 0.0f);
-				ProfileSelectionInteractable interactable = instance.GetComponent<ProfileSelectionInteractable>();
-				interactable.profileManager = gameObject.GetComponent<ProfileManager>();
-				interactable.profileId = id;
-				
-				// set the sprite of the selectable profile
-				if(spritesheetCode != ""){
-					// gets the idle frame from the spritesheet
-					Sprite[] spriteSheetCollection = Resources.LoadAll<Sprite>(spritesheetCode);
-					Sprite newSprite = Array.Find(spriteSheetCollection, item => item.name == (spritesheetCode + "_8"));
-					instance.GetComponent<SpriteRenderer>().sprite = newSprite;
-				}
-			}
-			
 			// set best times
 			Dictionary<int, float> timeDict = new Dictionary<int, float>();
 			XmlNodeList timeNodes = playerNode.SelectNodes("time_entry");
@@ -89,6 +72,17 @@ public class ProfileManager : MonoBehaviour
 			profiles.Add(id, newProfile);
 			profileIds.Add(id);
 			
+			// create selectable player profile if relevant
+			if(starterLocation != null){
+				GameObject instance = Instantiate(profileSelectorPrefab);
+				instance.transform.position = new Vector3(starterLocation.position.x + (profileSpacing * index), starterLocation.position.y, 0.0f);
+				ProfileSelectionInteractable interactable = instance.GetComponent<ProfileSelectionInteractable>();
+				interactable.profileManager = gameObject.GetComponent<ProfileManager>();
+				interactable.profileId = id;
+				CustomizerColorPalette colorManager = GameObject.FindWithTag("ColorPaletteManager").GetComponent<CustomizerColorPalette>();
+				interactable.SetCustomization(customizationCodes, colorManager);
+			}
+			
 			// update index for spacing purposes
 			index++;
         }
@@ -96,7 +90,8 @@ public class ProfileManager : MonoBehaviour
 	
 	public void SetCurrentProfile(int profileId){
 		currentProfile = profiles[profileId];
-		player.SwitchPlayerSpritesheet(currentProfile.spritesheetCode);
+		GameObject.FindWithTag("CustomizerManager").GetComponent<CustomizerManager>().StitchNewPlayerSpritesheet(profiles[profileId].customizationCodes);
+		player.SwitchPlayerSpritesheet("currentplayer");
 		nameText.text = currentProfile.displayName;
 	}
 	
@@ -198,7 +193,7 @@ public class ProfileManager : MonoBehaviour
 	
 	public void ResetPlayerSpritesheet(){
 		if(currentProfile != null){
-			player.SwitchPlayerSpritesheet(currentProfile.spritesheetCode);
+			player.SwitchPlayerSpritesheet("currentplayer");
 		}
 	}
 	
