@@ -49,8 +49,11 @@ public class PStateJumpBracing : PState
 	
 	public override PState ReleaseJump(){
 		float jumpForceMultiplier = Mathf.Clamp(jumpBraceCounter, 0.0f, PState.attr.jumpBraceTime) / PState.attr.jumpBraceTime;
-		float aimAngle = Mathf.Atan2(vertical, horizontal);
-		return new PStateStillJumpLaunching(jumpForceMultiplier, aimAngle);
+		if(jumpForceMultiplier > PState.attr.stillJumpMinimumBraceRatio){
+			float aimAngle = Mathf.Atan2(vertical, horizontal);
+			return new PStateStillJumpLaunching(jumpForceMultiplier, aimAngle);
+		}
+		return new PStateIdle();
 	}
 	
 	public override PState HitWall(Vector2 wallCollisionVelocity){

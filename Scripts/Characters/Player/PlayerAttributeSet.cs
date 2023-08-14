@@ -13,6 +13,7 @@ public class PlayerAttributeSet
 	public float jumpBraceTime;
 	public float maxStillJumpAngleFromYAxis;
 	public float stillJumpLaunchTime;
+	public float stillJumpMinimumBraceRatio;
 	public float jumpForce;
 	public float braceTime;
 	public float braceCooldownTime;

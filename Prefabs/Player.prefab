@@ -136,6 +136,7 @@ MonoBehaviour:
     jumpBraceTime: 0
     maxStillJumpAngleFromYAxis: 0
     stillJumpLaunchTime: 0
+    stillJumpMinimumBraceRatio: 0
     jumpForce: 0
     braceTime: 0
     braceCooldownTime: 0
@@ -1328,6 +1329,7 @@ MonoBehaviour:
     jumpBraceTime: 0.5
     maxStillJumpAngleFromYAxis: 0.7
     stillJumpLaunchTime: 0.08
+    stillJumpMinimumBraceRatio: 0.4
     jumpForce: 17
     braceTime: 0.5
     braceCooldownTime: 0.5
