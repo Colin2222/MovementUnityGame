@@ -31,6 +31,9 @@ public class BottomCheck : MonoBehaviour
     }
 
     void OnCollisionStay2D(Collision2D collision){
+		if(!collisions.Contains(collision.transform)){
+			collisions.Add(collision.transform);
+		}
 		parentPhysics.bottomCollisionSpeed = new Vector2(0.0f, 0.0f);
     }
 

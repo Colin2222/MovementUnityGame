@@ -41,6 +41,9 @@ public class SceneManager : MonoBehaviour
 	
 	public SceneTransitionManager transitionManager;
 	
+	public Color obstacleColor;
+	public Color backgroundColor;
+	
     GameObject playerStateObjectTest;
     GameObject playerObjectTest;
 	
@@ -96,6 +99,12 @@ public class SceneManager : MonoBehaviour
 		}
 		
 		transitionManager.EnterTransition();
+		
+		GameObject[] colorChanges = GameObject.FindGameObjectsWithTag("LevelBlock");
+		foreach(GameObject block in colorChanges){
+			block.GetComponent<SpriteRenderer>().color = obstacleColor;
+		}
+		GameObject.FindWithTag("MainCamera").GetComponent<Camera>().backgroundColor = backgroundColor;
     }
 	
 	void Update(){

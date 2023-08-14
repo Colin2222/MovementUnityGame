@@ -31,6 +31,7 @@ public class PStateCornerMantling : PState
 			PState.player.transform.position = new Vector3(mantleCorner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), mantleCorner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
 			PState.rigidbody.gravityScale = PState.attr.gravityScale;
 			PState.direction = cornerDir;
+			PState.player.physics.isGrounded = false;
 			return new PStateIdle();
 		}
 		return this;
