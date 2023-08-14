@@ -36,6 +36,7 @@ public class CustomizerPreviewController : MonoBehaviour
 				transitioning = false;
 				
 				customizer.StitchNewPlayerSpritesheet(customizerDataToSet);
+				GameObject.FindWithTag("ProfileManager").GetComponent<ProfileManager>().UpdateSelectionPoint(customizerDataToSet);
 				GameObject.FindWithTag("Player").GetComponent<PlayerHub>().UnlockPlayer();
 				gameObject.SetActive(false);
 			}

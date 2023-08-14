@@ -270,4 +270,16 @@ public class ProfileManager : MonoBehaviour
 			}
 		}
 	}
+	
+	public void UpdateSelectionPoint(List<(int, int)> customizationData){
+		if(currentProfile != null){
+			GameObject[] selectionObjects = GameObject.FindGameObjectsWithTag("ProfileSelection");
+			foreach(GameObject instance in selectionObjects){
+				ProfileSelectionInteractable interactable = instance.GetComponent<ProfileSelectionInteractable>();
+				if(interactable.profileId == currentProfile.id){
+					interactable.SetCustomization(customizationData, GameObject.FindWithTag("ColorPaletteManager").GetComponent<CustomizerColorPalette>());
+				}
+			}
+		}
+	}
 }
