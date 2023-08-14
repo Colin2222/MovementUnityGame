@@ -1344,7 +1344,7 @@ MonoBehaviour:
     wallLaunchMinimumHorizontal: 3
     wallLaunchBoost: 7
     wallLaunchMaxVerticalSpeed: 7.5
-    wallSlideUpwardsCoefficient: 15
+    wallSlideUpwardsCoefficient: 10
     wallSlideDownwardsCoefficient: 20
     wallPushLaunchCoefficient: 30
     wallPushToLaunchHorizontalRetention: 0.45

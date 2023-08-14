@@ -86,7 +86,7 @@
       <header_id>0</header_id>
       <header_color_id>23</header_color_id>
       <head_id>0</head_id>
-      <head_color_id>20</head_color_id>
+      <head_color_id>19</head_color_id>
       <body_id>0</body_id>
       <body_color_id>54</body_color_id>
     </customization_codes>
@@ -99,7 +99,7 @@
       <header_id>2</header_id>
       <header_color_id>23</header_color_id>
       <head_id>0</head_id>
-      <head_color_id>26</head_color_id>
+      <head_color_id>15</head_color_id>
       <body_id>0</body_id>
       <body_color_id>1</body_color_id>
     </customization_codes>
@@ -113,7 +113,7 @@
     </time_entry>
     <time_entry>
       <level_id>3</level_id>
-      <time>31.16422</time>
+      <time>30.46201</time>
     </time_entry>
   </player>
 </players>

@@ -17,19 +17,20 @@ public class BottomCheck : MonoBehaviour
 	}
 
     void OnCollisionEnter2D(Collision2D collision){
-		RaycastHit2D hit = Physics2D.Raycast(rigidbody.position, Vector2.down, distanceToGround, mask);
-		if(hit.collider != null && hit.transform == collision.transform){
-			parentPhysics.isGrounded = true;
-			parentPhysics.bottomCollisionSpeed = new Vector2(collision.relativeVelocity.x, collision.relativeVelocity.y);
+		if(collision.GetContact(0).normal.y == 1.0f){
 			if(!collisions.Contains(collision.transform)){
 				collisions.Add(collision.transform);
 			}
-			parentPhysics.stateManager.HitGround(collision.relativeVelocity.y);
+			
+			if(!parentPhysics.isGrounded){
+				parentPhysics.isGrounded = true;
+				parentPhysics.bottomCollisionSpeed = new Vector2(collision.relativeVelocity.x, collision.relativeVelocity.y);
+				parentPhysics.stateManager.HitGround(collision.relativeVelocity.y);
+			}
 		}
     }
 
     void OnCollisionStay2D(Collision2D collision){
-        parentPhysics.isGrounded = true;
 		parentPhysics.bottomCollisionSpeed = new Vector2(0.0f, 0.0f);
     }
 
