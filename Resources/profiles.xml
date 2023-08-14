@@ -5,12 +5,12 @@
     <display_name>Nick</display_name>
     <spritesheet_code>nick</spritesheet_code>
     <customization_codes>
-      <header_id>0</header_id>
-      <header_color_id>0</header_color_id>
+      <header_id>1</header_id>
+      <header_color_id>17</header_color_id>
       <head_id>0</head_id>
-      <head_color_id>0</head_color_id>
+      <head_color_id>15</head_color_id>
       <body_id>0</body_id>
-      <body_color_id>0</body_color_id>
+      <body_color_id>7</body_color_id>
     </customization_codes>
   </player>
   <player>
@@ -18,12 +18,12 @@
     <display_name>Emmett</display_name>
     <spritesheet_code>emmett</spritesheet_code>
     <customization_codes>
-      <header_id>0</header_id>
-      <header_color_id>0</header_color_id>
+      <header_id>1</header_id>
+      <header_color_id>23</header_color_id>
       <head_id>0</head_id>
-      <head_color_id>0</head_color_id>
+      <head_color_id>15</head_color_id>
       <body_id>0</body_id>
-      <body_color_id>0</body_color_id>
+      <body_color_id>40</body_color_id>
     </customization_codes>
   </player>
   <player>
@@ -31,12 +31,12 @@
     <display_name>Lucien</display_name>
     <spritesheet_code>lucien</spritesheet_code>
     <customization_codes>
-      <header_id>0</header_id>
-      <header_color_id>0</header_color_id>
+      <header_id>2</header_id>
+      <header_color_id>19</header_color_id>
       <head_id>0</head_id>
-      <head_color_id>0</head_color_id>
+      <head_color_id>15</head_color_id>
       <body_id>0</body_id>
-      <body_color_id>0</body_color_id>
+      <body_color_id>1</body_color_id>
     </customization_codes>
   </player>
   <player>
@@ -44,12 +44,12 @@
     <display_name>Dom</display_name>
     <spritesheet_code>dom</spritesheet_code>
     <customization_codes>
-      <header_id>0</header_id>
-      <header_color_id>0</header_color_id>
+      <header_id>2</header_id>
+      <header_color_id>23</header_color_id>
       <head_id>0</head_id>
-      <head_color_id>0</head_color_id>
+      <head_color_id>14</head_color_id>
       <body_id>0</body_id>
-      <body_color_id>0</body_color_id>
+      <body_color_id>45</body_color_id>
     </customization_codes>
   </player>
   <player>
@@ -58,11 +58,11 @@
     <spritesheet_code>mike</spritesheet_code>
     <customization_codes>
       <header_id>0</header_id>
-      <header_color_id>0</header_color_id>
+      <header_color_id>23</header_color_id>
       <head_id>0</head_id>
-      <head_color_id>0</head_color_id>
+      <head_color_id>15</head_color_id>
       <body_id>0</body_id>
-      <body_color_id>0</body_color_id>
+      <body_color_id>8</body_color_id>
     </customization_codes>
   </player>
   <player>
@@ -71,11 +71,11 @@
     <spritesheet_code>katherine</spritesheet_code>
     <customization_codes>
       <header_id>0</header_id>
-      <header_color_id>0</header_color_id>
+      <header_color_id>29</header_color_id>
       <head_id>0</head_id>
-      <head_color_id>0</head_color_id>
+      <head_color_id>14</head_color_id>
       <body_id>0</body_id>
-      <body_color_id>0</body_color_id>
+      <body_color_id>34</body_color_id>
     </customization_codes>
   </player>
   <player>
@@ -84,11 +84,11 @@
     <spritesheet_code>neil</spritesheet_code>
     <customization_codes>
       <header_id>0</header_id>
-      <header_color_id>0</header_color_id>
+      <header_color_id>23</header_color_id>
       <head_id>0</head_id>
-      <head_color_id>0</head_color_id>
+      <head_color_id>20</head_color_id>
       <body_id>0</body_id>
-      <body_color_id>0</body_color_id>
+      <body_color_id>54</body_color_id>
     </customization_codes>
   </player>
   <player>
@@ -96,12 +96,12 @@
     <display_name>Colin</display_name>
     <spritesheet_code>colin</spritesheet_code>
     <customization_codes>
-      <header_id>1</header_id>
-      <header_color_id>7</header_color_id>
+      <header_id>2</header_id>
+      <header_color_id>23</header_color_id>
       <head_id>0</head_id>
-      <head_color_id>5</head_color_id>
+      <head_color_id>27</head_color_id>
       <body_id>0</body_id>
-      <body_color_id>3</body_color_id>
+      <body_color_id>1</body_color_id>
     </customization_codes>
     <time_entry>
       <level_id>0</level_id>
