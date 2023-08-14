@@ -72,9 +72,20 @@ public class ProfileManager : MonoBehaviour
 				timeDict.Add(levelId, bestTime);
 			}
 			
+			// set customization codes
+			List<(int, int)> customizationCodes = new List<(int, int)>();
+			XmlNode customizationNode = playerNode.SelectSingleNode("customization_codes");
+			(int, int) headerInsertion = (int.Parse(customizationNode.SelectSingleNode("header_id").InnerText), int.Parse(customizationNode.SelectSingleNode("header_color_id").InnerText));
+			(int, int) headInsertion = (int.Parse(customizationNode.SelectSingleNode("head_id").InnerText), int.Parse(customizationNode.SelectSingleNode("head_color_id").InnerText));
+			(int, int) bodyInsertion = (int.Parse(customizationNode.SelectSingleNode("body_id").InnerText), int.Parse(customizationNode.SelectSingleNode("body_color_id").InnerText));
+			customizationCodes.Add(headerInsertion);
+			customizationCodes.Add(headInsertion);
+			customizationCodes.Add(bodyInsertion);
+			
             // create profile for interactable
 			PlayerProfile newProfile = new PlayerProfile(id, displayName, spritesheetCode);
 			newProfile.bestTimes = timeDict;
+			newProfile.customizationCodes = customizationCodes;
 			profiles.Add(id, newProfile);
 			profileIds.Add(id);
 			
@@ -218,5 +229,50 @@ public class ProfileManager : MonoBehaviour
 		}
 		
 		return data;
+	}
+	
+	public List<(int, int)> GetCustomizationData(){
+		return currentProfile.customizationCodes;
+	}
+	
+	public void SetCustomizationData(List<(int type, int colorId)> codes){
+		int playerId = currentProfile.id;
+		
+		// Load the XML file
+		XmlDocument xmlDoc = new XmlDocument();
+		xmlDoc.Load("Assets/Resources/" + profileXmlFile + ".xml");
+		
+		// Get the root element of the XML file
+		XmlNodeList playerNodes = xmlDoc.SelectNodes("players/player");
+
+		// Iterate through each player
+		foreach (XmlNode playerNode in playerNodes)
+		{
+			// Get the ID of the player
+			XmlNode idNode = playerNode.SelectSingleNode("id");
+			int currentPlayerId = int.Parse(idNode.InnerText);
+
+			// Check if the current player has the given ID
+			if (currentPlayerId == playerId)
+			{
+				
+				// Get the customization_codes node for the current player profile
+				XmlNode customizationNode = playerNode.SelectSingleNode("customization_codes");
+				
+				customizationNode.SelectSingleNode("header_id").InnerText = codes[0].type.ToString();
+				customizationNode.SelectSingleNode("header_color_id").InnerText = codes[0].colorId.ToString();
+				customizationNode.SelectSingleNode("head_id").InnerText = codes[1].type.ToString();
+				customizationNode.SelectSingleNode("head_color_id").InnerText = codes[1].colorId.ToString();
+				customizationNode.SelectSingleNode("body_id").InnerText = codes[2].type.ToString();
+				customizationNode.SelectSingleNode("body_color_id").InnerText = codes[2].colorId.ToString();
+				
+				currentProfile.customizationCodes[0] = (codes[0].type, codes[0].colorId);
+				currentProfile.customizationCodes[1] = (codes[1].type, codes[1].colorId);
+				currentProfile.customizationCodes[2] = (codes[2].type, codes[2].colorId);
+				
+				xmlDoc.Save("Assets/Resources/" + profileXmlFile + ".xml");
+				break; // Break the loop once the player is found and updated
+			}
+		}
 	}
 }

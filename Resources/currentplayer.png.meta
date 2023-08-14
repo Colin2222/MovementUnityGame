@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 12245761c858f1d45b3cfca647b31d73
+guid: e85fb5f2491dd924884cf0c440800786
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: colin_0
+      name: currentplayer_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92691143ad3589643a27b50dd664cbf1
-      internalID: -484487731
+      spriteID: c8a9f982b2c0e6e4980da814d90af54f
+      internalID: -1402532793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_1
+      name: currentplayer_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96e25454113108e4e8adecce0067e8ed
-      internalID: 1476871986
+      spriteID: 79613ddb79706c144a86ac5bea33d0f5
+      internalID: -1098463322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_2
+      name: currentplayer_2
       rect:
         serializedVersion: 2
         x: 64
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d6784d4392afb94ba07209e6d896a53
-      internalID: -1943776756
+      spriteID: c0c06072512f10e4d90d75ae0bec643c
+      internalID: 1357560184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_3
+      name: currentplayer_3
       rect:
         serializedVersion: 2
         x: 96
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01f6f11b0dcb1a148aa8f15986a61f86
-      internalID: 2115783648
+      spriteID: 8120aca76b2e5c64c8894ff12b80d8cf
+      internalID: 97599936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_4
+      name: currentplayer_4
       rect:
         serializedVersion: 2
         x: 128
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67e54179c0d93d241ba0ef2fbf1a9fbb
-      internalID: 1403042500
+      spriteID: 0a2df01c428b21d428ccabde0cf0dd28
+      internalID: 1923256830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_5
+      name: currentplayer_5
       rect:
         serializedVersion: 2
         x: 160
@@ -224,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af4bad18a8384cd4fb850a40a64dd412
-      internalID: -1232421423
+      spriteID: 71b94ed93ef79bd48b679c5ab066bc65
+      internalID: -786048805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_6
+      name: currentplayer_6
       rect:
         serializedVersion: 2
         x: 192
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc7e9b70dd7b6e543a7d3ab42056f3cc
-      internalID: 678557219
+      spriteID: ebc3b992e2c2e0743a78004035a9c5e9
+      internalID: 1026874652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_7
+      name: currentplayer_7
       rect:
         serializedVersion: 2
         x: 224
@@ -266,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac7d5b170a49afe4a9b4366ef95cc964
-      internalID: 1550735871
+      spriteID: b27ff29699da2344e954eb9a11c2f750
+      internalID: 2041676721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_8
+      name: currentplayer_8
       rect:
         serializedVersion: 2
         x: 256
@@ -287,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aae15c0a54725ae44a3ec83514bd70ec
-      internalID: 277659346
+      spriteID: a6d165aef7c22af40a8b0f0548770ce5
+      internalID: -507146111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_9
+      name: currentplayer_9
       rect:
         serializedVersion: 2
         x: 288
@@ -308,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07f48019eeac9c545995c096986db379
-      internalID: -1510931394
+      spriteID: 6f911383d81915949afa11cf849dce01
+      internalID: -1468720594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_10
+      name: currentplayer_10
       rect:
         serializedVersion: 2
         x: 320
@@ -329,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbc7a798fc9978d498d1e2b798ce9dbf
-      internalID: 505345452
+      spriteID: 297cd1edd226028479d08268e1524c8f
+      internalID: -1014247422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_11
+      name: currentplayer_11
       rect:
         serializedVersion: 2
         x: 352
@@ -350,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3655e399e07e66747867ff0ab33f0e03
-      internalID: -774212239
+      spriteID: 92c31a791c2bf31459dff9f9137acdca
+      internalID: 1880387884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_12
+      name: currentplayer_12
       rect:
         serializedVersion: 2
         x: 384
@@ -371,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c703bab9d491c3b45ac5497826982dcb
-      internalID: -1813247638
+      spriteID: 23bfbc4d01b3d904d81d8d2201b83818
+      internalID: 555044931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_13
+      name: currentplayer_13
       rect:
         serializedVersion: 2
         x: 0
@@ -392,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cdc8a877d47f434a823f80a0ae7f6cc
-      internalID: -1582839837
+      spriteID: ce810b1f878362c49b19983f596cba72
+      internalID: -1451614532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_14
+      name: currentplayer_14
       rect:
         serializedVersion: 2
         x: 32
@@ -413,14 +413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e46e54a2b94c44d4fa2a464cdab6aa18
-      internalID: 1174955459
+      spriteID: bf83468c3116301458206a0ba59b949c
+      internalID: 1881665983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_15
+      name: currentplayer_15
       rect:
         serializedVersion: 2
         x: 64
@@ -434,14 +434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8796d104c7524974588b020a24a7bf5d
-      internalID: -366716001
+      spriteID: 16a678fe4d76cd1498ae843a1c65c966
+      internalID: -535326531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_16
+      name: currentplayer_16
       rect:
         serializedVersion: 2
         x: 96
@@ -455,14 +455,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1baeaaf0da1e1cc42abe1bd8623a84f6
-      internalID: -688159060
+      spriteID: 4e2e384d52a69874f9ad122b22f38cf6
+      internalID: -640151464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_17
+      name: currentplayer_17
       rect:
         serializedVersion: 2
         x: 128
@@ -476,14 +476,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83b86bdc02c2cf84fbcd6fa26f48e898
-      internalID: -1106307699
+      spriteID: 5c7e8d64f6a23524080b871c86260e92
+      internalID: -61339146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_18
+      name: currentplayer_18
       rect:
         serializedVersion: 2
         x: 160
@@ -497,14 +497,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5a5b9cc652c2ec46ba544e45be817c1
-      internalID: -327578597
+      spriteID: 07d1d13b0b2577246893827f50b39ce0
+      internalID: -628280373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_19
+      name: currentplayer_19
       rect:
         serializedVersion: 2
         x: 192
@@ -518,14 +518,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e5a8e02bd68afc498cbd915aa97a9b8
-      internalID: -355520043
+      spriteID: fad4efca9e7788446be627ad04bd808a
+      internalID: -1469744796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_20
+      name: currentplayer_20
       rect:
         serializedVersion: 2
         x: 224
@@ -539,14 +539,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1ba54a979faf84408b7712ec05d1367
-      internalID: 609541761
+      spriteID: 5099ed1d70d98da4593835789dd3591c
+      internalID: -1944708474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_21
+      name: currentplayer_21
       rect:
         serializedVersion: 2
         x: 256
@@ -560,14 +560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44ee642700768394e8680cff01fe58f8
-      internalID: 774652530
+      spriteID: 784fe7d5375d20643b697b6f593fae98
+      internalID: 1639217770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_22
+      name: currentplayer_22
       rect:
         serializedVersion: 2
         x: 288
@@ -581,14 +581,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96e92da732f16f843bb09344d853435b
-      internalID: -1827925660
+      spriteID: f44111d8829cf5a4d86c8faa392c45b4
+      internalID: 1966024617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_23
+      name: currentplayer_23
       rect:
         serializedVersion: 2
         x: 320
@@ -602,14 +602,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e00b4cf7532c81e4e807a5aa9b0b4801
-      internalID: -1232890708
+      spriteID: ce1f38960a33eeb40affee2477dd7287
+      internalID: 977802219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_24
+      name: currentplayer_24
       rect:
         serializedVersion: 2
         x: 352
@@ -623,14 +623,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e85455c6b30ffe1439262960fe2dafea
-      internalID: -221937251
+      spriteID: faad975084a47d7409501d22a73e566d
+      internalID: -1683167543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_25
+      name: currentplayer_25
       rect:
         serializedVersion: 2
         x: 384
@@ -644,14 +644,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bc0b8e594f99884cb88866ff9bc5c30
-      internalID: -1851262645
+      spriteID: 207988009cd35e1449287b632d76cb01
+      internalID: -585601259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_26
+      name: currentplayer_26
       rect:
         serializedVersion: 2
         x: 0
@@ -665,14 +665,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a19f248faa636fb4897ce79849619062
-      internalID: -916091244
+      spriteID: 9df6ca779d8dc1641bde36c5baf4ae10
+      internalID: 2024502098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_27
+      name: currentplayer_27
       rect:
         serializedVersion: 2
         x: 32
@@ -686,14 +686,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37986d7bccf394a458649d83c7fd1379
-      internalID: 554252142
+      spriteID: bb75c852849e6e44faf06c71ec90af2d
+      internalID: 513653722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_28
+      name: currentplayer_28
       rect:
         serializedVersion: 2
         x: 64
@@ -707,14 +707,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 107964e0246f72f4f984e1c9db9c3a45
-      internalID: 1830885713
+      spriteID: 061dbb35642cd4e4694ace9471efb0d6
+      internalID: 1807921807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_29
+      name: currentplayer_29
       rect:
         serializedVersion: 2
         x: 96
@@ -728,14 +728,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7dea1dcbce44d34da0d0fbd319838c6
-      internalID: 90505254
+      spriteID: dcff4452cf6a8c74fa12ae6dcd4d89e5
+      internalID: 835233786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_30
+      name: currentplayer_30
       rect:
         serializedVersion: 2
         x: 128
@@ -749,14 +749,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53bd25d9556f36b4a8dee8b4b9e96bc7
-      internalID: -189609315
+      spriteID: d7774e41e41fbc34d9dab3703e1bdcc7
+      internalID: 2094809565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_31
+      name: currentplayer_31
       rect:
         serializedVersion: 2
         x: 160
@@ -770,14 +770,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9486bed26db3317469b159116dc1fec1
-      internalID: 85905675
+      spriteID: 7fff2ac26ec02364dadac3fd25456f55
+      internalID: 994155398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_32
+      name: currentplayer_32
       rect:
         serializedVersion: 2
         x: 192
@@ -791,14 +791,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8869c7928edc9f43a3b192c2be92938
-      internalID: -787940875
+      spriteID: 9527fe2846badfb49aafdc6fb915b034
+      internalID: 1828542319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_33
+      name: currentplayer_33
       rect:
         serializedVersion: 2
         x: 224
@@ -812,14 +812,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56574f6b88dbf0642890a41101ce4c7a
-      internalID: 247987643
+      spriteID: 53434e94b63cb21459e6397976a1288d
+      internalID: 1808903868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_34
+      name: currentplayer_34
       rect:
         serializedVersion: 2
         x: 256
@@ -833,14 +833,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d9249d27c2b7e9478bf1f2cbe68e7bb
-      internalID: 1445598129
+      spriteID: 3f79304370545814e86e63c69f407c6f
+      internalID: -1093187457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_35
+      name: currentplayer_35
       rect:
         serializedVersion: 2
         x: 320
@@ -854,14 +854,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cb841f4f64153a4f95764f497031252
-      internalID: 560420025
+      spriteID: be51e1435acbcd9478f1d453517c8a11
+      internalID: 1103573396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_36
+      name: currentplayer_36
       rect:
         serializedVersion: 2
         x: 352
@@ -875,14 +875,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0cb574be33b8bb418e586bd42ba253b
-      internalID: 1669213709
+      spriteID: e8fdcb5d9d8954146ad4e3ae689348fc
+      internalID: 1228869191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_37
+      name: currentplayer_37
       rect:
         serializedVersion: 2
         x: 0
@@ -896,14 +896,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b841143f8cc66be47bf6ea62d90150f5
-      internalID: -1065125855
+      spriteID: db527da8f20126b4db741ba38b711347
+      internalID: 1905612063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_38
+      name: currentplayer_38
       rect:
         serializedVersion: 2
         x: 32
@@ -917,14 +917,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d424e4a3dfd9524587d2cc2930a2185
-      internalID: 854056234
+      spriteID: 2f10ef8ba1123794e8d76f946851092b
+      internalID: 499253376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_39
+      name: currentplayer_39
       rect:
         serializedVersion: 2
         x: 64
@@ -938,14 +938,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 271bc6440f4b76e44b4bedc57a3f6370
-      internalID: 453410089
+      spriteID: d4c060208552e654ab1d8894ba8cf7a5
+      internalID: -1759662416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_40
+      name: currentplayer_40
       rect:
         serializedVersion: 2
         x: 96
@@ -959,20 +959,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae69431cea8ca0447bd69652d51caa7b
-      internalID: 2046745778
+      spriteID: ffbf4a0b7720a454997da04a8e291b65
+      internalID: -1641110623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_41
+      name: currentplayer_41
       rect:
         serializedVersion: 2
         x: 128
-        y: 385
+        y: 384
         width: 32
-        height: 31
+        height: 32
       alignment: 9
       pivot: {x: 0.40625, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -980,14 +980,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaee6b7d46a43364fa24f31870d1b998
-      internalID: -398149462
+      spriteID: 2a134cf835c79ba4e9289ee056487414
+      internalID: 1097841706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_42
+      name: currentplayer_42
       rect:
         serializedVersion: 2
         x: 160
@@ -1001,14 +1001,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a3b27194c819b547b5b2796b3f31db2
-      internalID: 1084949972
+      spriteID: b95c155670f640349a0d56314f227e5e
+      internalID: 123709673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_43
+      name: currentplayer_43
       rect:
         serializedVersion: 2
         x: 192
@@ -1022,14 +1022,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7328ae4de92d9f498bbc999a88c8853
-      internalID: -697158579
+      spriteID: b22cc32065ed88e49b50d938bb1f7e78
+      internalID: -105969833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_44
+      name: currentplayer_44
       rect:
         serializedVersion: 2
         x: 224
@@ -1043,14 +1043,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19781e83529c7084baae974e30cf6bd2
-      internalID: 1357910804
+      spriteID: 28287d972f4474548acc1861e827c38b
+      internalID: 1311611374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_45
+      name: currentplayer_45
       rect:
         serializedVersion: 2
         x: 256
@@ -1064,14 +1064,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dc2c13aa5b909440a15059a26b02b59
-      internalID: -1766488419
+      spriteID: ae0356178bba06a4da6ca613b8c4ec9c
+      internalID: 789404472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_46
+      name: currentplayer_46
       rect:
         serializedVersion: 2
         x: 320
@@ -1085,14 +1085,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71180e4abdc08d6409fb66c9552fb999
-      internalID: -1679585803
+      spriteID: ef1dcbc09621a8344a3327400db68c36
+      internalID: -1954069909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_47
+      name: currentplayer_47
       rect:
         serializedVersion: 2
         x: 352
@@ -1106,14 +1106,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 122d834f50e830247b171ad325f4cbff
-      internalID: -193686687
+      spriteID: 5aedae2c5307da848af4e2144873a796
+      internalID: 1146966776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_48
+      name: currentplayer_48
       rect:
         serializedVersion: 2
         x: 384
@@ -1127,14 +1127,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00e550ead8e10e641a64252eb55de850
-      internalID: -243645133
+      spriteID: 0590948d440f2e848bc0dd0587c3583c
+      internalID: 1406243252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_49
+      name: currentplayer_49
       rect:
         serializedVersion: 2
         x: 0
@@ -1148,14 +1148,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffe6f6dbb5f3d3f4183b179bb00d9285
-      internalID: -1769500802
+      spriteID: 4c88666900c110742b46189dc3ebac0b
+      internalID: 1266838242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_50
+      name: currentplayer_50
       rect:
         serializedVersion: 2
         x: 32
@@ -1169,14 +1169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e97e8d22663bc6748b2164fd12a81b5f
-      internalID: 1340807001
+      spriteID: e0b1cbb37c7fa404884f0e7e47a849b8
+      internalID: -316614459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_51
+      name: currentplayer_51
       rect:
         serializedVersion: 2
         x: 64
@@ -1190,14 +1190,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f23d25faf1b3344289d2903c3c7d174
-      internalID: 1662339574
+      spriteID: de63d9eeffed84f40ba6e9a8b0307ee5
+      internalID: -66277123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_52
+      name: currentplayer_52
       rect:
         serializedVersion: 2
         x: 96
@@ -1211,14 +1211,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 779bd122628ebd344becf8d887f80ed6
-      internalID: 2002882593
+      spriteID: 1835cb2b30061064189ca304ec6bacb6
+      internalID: -1156451195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_53
+      name: currentplayer_53
       rect:
         serializedVersion: 2
         x: 128
@@ -1232,14 +1232,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d01077f5909a33843821dcb8388ea94a
-      internalID: -2000998972
+      spriteID: 7c777e3213ae01c48bf705d926e7cade
+      internalID: -150512336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_54
+      name: currentplayer_54
       rect:
         serializedVersion: 2
         x: 160
@@ -1253,14 +1253,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c16060d946c9cce448a5bf00961916b9
-      internalID: 1501522325
+      spriteID: ed0df3d1b78f72d4aafcb5b601e176f8
+      internalID: 268509703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_55
+      name: currentplayer_55
       rect:
         serializedVersion: 2
         x: 192
@@ -1274,14 +1274,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abd3a7efed20d6e4fb30222994c5361f
-      internalID: 647748334
+      spriteID: 47282da92af92ce40be97b4a1c0ce83c
+      internalID: -882603801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_56
+      name: currentplayer_56
       rect:
         serializedVersion: 2
         x: 224
@@ -1295,14 +1295,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abe09885c17f1574db9156d535ba9ab2
-      internalID: 360059900
+      spriteID: 5d1e25eb41bc0c84086e304f09626693
+      internalID: 635880349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_57
+      name: currentplayer_57
       rect:
         serializedVersion: 2
         x: 256
@@ -1316,14 +1316,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3384d307924f354fadba4f0910547b5
-      internalID: -1494955085
+      spriteID: 3017ab56a17854848b6ddf0e837f3dcd
+      internalID: 1556540821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_58
+      name: currentplayer_58
       rect:
         serializedVersion: 2
         x: 288
@@ -1337,14 +1337,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55bea1fe12e6fa54299bb1cca7ac65ab
-      internalID: -1678357952
+      spriteID: 68b8a3dd64691a640ae14f52841fb628
+      internalID: -65735968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_59
+      name: currentplayer_59
       rect:
         serializedVersion: 2
         x: 320
@@ -1358,14 +1358,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f48de2e9041ac74885f371d18055d85
-      internalID: -701620318
+      spriteID: aca6809d5a20eb341ac245bc33fe0c38
+      internalID: 1596958433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_60
+      name: currentplayer_60
       rect:
         serializedVersion: 2
         x: 352
@@ -1379,14 +1379,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cab86784578281147bd2a70f27fc2b51
-      internalID: 578193256
+      spriteID: 9c2ce115ef1f52148aa2781ef29815ec
+      internalID: 1173341460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_61
+      name: currentplayer_61
       rect:
         serializedVersion: 2
         x: 384
@@ -1400,14 +1400,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a91e0f82150fa64c9db2b87082aadeb
-      internalID: 697844707
+      spriteID: 9cf6511af196b644784f877c4b3596a8
+      internalID: -770094891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_62
+      name: currentplayer_62
       rect:
         serializedVersion: 2
         x: 0
@@ -1421,14 +1421,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6000d3c87945c245aac32329b3fdcb3
-      internalID: -1111495634
+      spriteID: a6c23b0d0f49b9c44a3696be8e5094c6
+      internalID: -952949346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_63
+      name: currentplayer_63
       rect:
         serializedVersion: 2
         x: 32
@@ -1442,14 +1442,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bf5b63d8c605c34397ee0d7813cf7e5
-      internalID: -1282242729
+      spriteID: 12eff0cd472fc9a479fa0cd81bd14b07
+      internalID: -527475237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_64
+      name: currentplayer_64
       rect:
         serializedVersion: 2
         x: 64
@@ -1463,14 +1463,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b845f2e952d582f468baab7a9f39427b
-      internalID: 566349357
+      spriteID: 3ee8fbd9167ef10468fd55960f7f8819
+      internalID: 176869240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_65
+      name: currentplayer_65
       rect:
         serializedVersion: 2
         x: 96
@@ -1484,14 +1484,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdcd9438982838b438f91a7c7199563b
-      internalID: -892246547
+      spriteID: c3cbce3d6b1a1164fa18769b78d32da1
+      internalID: 1928181310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_66
+      name: currentplayer_66
       rect:
         serializedVersion: 2
         x: 128
@@ -1505,14 +1505,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6787cf7af89cad4aa08a74d682e4ccb
-      internalID: -1759104519
+      spriteID: 36792aa55b08a0c47ae9bc0e7d437a1b
+      internalID: -1328501730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_67
+      name: currentplayer_67
       rect:
         serializedVersion: 2
         x: 160
@@ -1526,14 +1526,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f16352838d137b41a8e8e8f9d42a343
-      internalID: 1595485402
+      spriteID: 3f5f96b1ba737284a961231a882ef479
+      internalID: -1215137450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_68
+      name: currentplayer_68
       rect:
         serializedVersion: 2
         x: 192
@@ -1547,14 +1547,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c1003bc7ce0b814a964ee2512469765
-      internalID: 844698917
+      spriteID: 9bb429d472746fa46a9d4c24673b8663
+      internalID: 1644779578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_69
+      name: currentplayer_69
       rect:
         serializedVersion: 2
         x: 224
@@ -1568,14 +1568,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b8cb0d2c85dd564189dd6c549e95485
-      internalID: -1936105887
+      spriteID: 419f61db66579e24da5698506d8f21c0
+      internalID: -1144210627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_70
+      name: currentplayer_70
       rect:
         serializedVersion: 2
         x: 256
@@ -1589,14 +1589,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48839a162ecb6ba49afd43834e645d9c
-      internalID: 26558447
+      spriteID: 39462db6308eefc498563889792aa7f6
+      internalID: 91919646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_71
+      name: currentplayer_71
       rect:
         serializedVersion: 2
         x: 288
@@ -1610,14 +1610,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51331139035fd2944b94086943402ff0
-      internalID: -2087518991
+      spriteID: 61474a0f1ef93914f9fb3fb5bc348a80
+      internalID: 1543230263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_72
+      name: currentplayer_72
       rect:
         serializedVersion: 2
         x: 320
@@ -1631,14 +1631,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c341dc5a590038e4685f00923c8d9e4e
-      internalID: 51857828
+      spriteID: 88d41d6bc7c83b54384b8e5529e5cc1b
+      internalID: 1229742153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_73
+      name: currentplayer_73
       rect:
         serializedVersion: 2
         x: 352
@@ -1652,14 +1652,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70fd0c4bd9812f54c90919ff7c1a795e
-      internalID: -114731731
+      spriteID: 0e05a68d82d8b3f4f978ae36c2e45f8e
+      internalID: 949184871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_74
+      name: currentplayer_74
       rect:
         serializedVersion: 2
         x: 384
@@ -1673,14 +1673,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5796e3d15e4d7a48bcb74e70aae0055
-      internalID: 126375066
+      spriteID: 66402503474960f41a3257a5a7ecd5a4
+      internalID: -1568829587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_75
+      name: currentplayer_75
       rect:
         serializedVersion: 2
         x: 0
@@ -1694,14 +1694,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d28ddf6cd2999543bb14d04a8eed195
-      internalID: 473168287
+      spriteID: 7048398b1c92838459ae00d9d75a888f
+      internalID: -1287799578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_76
+      name: currentplayer_76
       rect:
         serializedVersion: 2
         x: 32
@@ -1715,14 +1715,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80def2cd64950c947b7c49a952154725
-      internalID: -1202576952
+      spriteID: 3001dd93572d9e549a68d8aa9e0fd6fc
+      internalID: -2060556978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_77
+      name: currentplayer_77
       rect:
         serializedVersion: 2
         x: 64
@@ -1736,14 +1736,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c4dac268304cc141ba66b4d28c6c6a4
-      internalID: 620105670
+      spriteID: 7481c96bc9f0b444d92e5e561bda9074
+      internalID: 367643327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_78
+      name: currentplayer_78
       rect:
         serializedVersion: 2
         x: 96
@@ -1757,14 +1757,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43a41570569f34b4eb3e33a3a65a9aa3
-      internalID: -1195263811
+      spriteID: e231132f77a71564ea6d14a47b852483
+      internalID: -589377392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_79
+      name: currentplayer_79
       rect:
         serializedVersion: 2
         x: 128
@@ -1778,14 +1778,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 168c5f5d835f5454f957752b2b4dca86
-      internalID: 46442308
+      spriteID: 319e29577b2d8cf4392ef5f0def99d5b
+      internalID: -1782763430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_80
+      name: currentplayer_80
       rect:
         serializedVersion: 2
         x: 160
@@ -1799,14 +1799,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac56a6eb1b07eb74e87ce6ed368c5744
-      internalID: 1792707430
+      spriteID: 901f20463e9ac2e439f33d54df450e90
+      internalID: -1788859308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_81
+      name: currentplayer_81
       rect:
         serializedVersion: 2
         x: 192
@@ -1820,14 +1820,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3eee0ba425a1cc24cb9d99f22c723ca7
-      internalID: -234049333
+      spriteID: 5886c7aa63aca5f44a28cca254068a7f
+      internalID: 535238310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_82
+      name: currentplayer_82
       rect:
         serializedVersion: 2
         x: 224
@@ -1841,14 +1841,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59cd5b0aabb3e4449a7f91437931a4be
-      internalID: 1512336985
+      spriteID: 03954f7032030c24bb309bb51aefbb5b
+      internalID: 912014397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_83
+      name: currentplayer_83
       rect:
         serializedVersion: 2
         x: 256
@@ -1862,14 +1862,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b389e5a9f4f28884b8cf16403516e9e5
-      internalID: -322877844
+      spriteID: f408bdf4ce705264b8925123eb41bddd
+      internalID: 1906988086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_84
+      name: currentplayer_84
       rect:
         serializedVersion: 2
         x: 288
@@ -1883,14 +1883,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 609cf2fa46dbc7341b3f9f4723f379de
-      internalID: 393149893
+      spriteID: 871ade59a015b6640b8a065a5fdadbdb
+      internalID: -1865194137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_85
+      name: currentplayer_85
       rect:
         serializedVersion: 2
         x: 320
@@ -1904,14 +1904,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b916d5739831e8541b652895143370dd
-      internalID: -1527159710
+      spriteID: 343fda743940477489c28ea6749b2010
+      internalID: -1735947253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_86
+      name: currentplayer_86
       rect:
         serializedVersion: 2
         x: 352
@@ -1925,14 +1925,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5038b16b3a3aa0a4b8ee5207cbefab69
-      internalID: -1511097471
+      spriteID: 00a0be76cdbba3d4b8f797decb749689
+      internalID: -1639988153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_87
+      name: currentplayer_87
       rect:
         serializedVersion: 2
         x: 0
@@ -1946,14 +1946,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a91427549ad277449aa9891210639c2
-      internalID: 959727842
+      spriteID: 5f5ee7374adfec34ab870f50fd94165c
+      internalID: -593181648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_88
+      name: currentplayer_88
       rect:
         serializedVersion: 2
         x: 32
@@ -1967,14 +1967,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0eec8928af922c84cbdcf8b8e851adbd
-      internalID: -1030034408
+      spriteID: 7763b3f6fde386c419e45cb49f6aff52
+      internalID: 1723988136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_89
+      name: currentplayer_89
       rect:
         serializedVersion: 2
         x: 96
@@ -1988,14 +1988,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6eda9a039bfbe143bdfd734caa657f2
-      internalID: -2102619622
+      spriteID: 60144abed3b2d2345834e7b1951149a5
+      internalID: -1718551309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_90
+      name: currentplayer_90
       rect:
         serializedVersion: 2
         x: 128
@@ -2009,14 +2009,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8058e05c28d8cf042b6d4d097330bcf8
-      internalID: -1502000345
+      spriteID: 69b2013685a322f4f870b1ebb38081b6
+      internalID: 2047119158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_91
+      name: currentplayer_91
       rect:
         serializedVersion: 2
         x: 192
@@ -2030,14 +2030,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a2f1f9d5e1120347a43c81e87f21698
-      internalID: -295046015
+      spriteID: f3b87ed6dd8c2db47aabc81aaf4a7aa9
+      internalID: -1039038713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_92
+      name: currentplayer_92
       rect:
         serializedVersion: 2
         x: 224
@@ -2051,14 +2051,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cd20c2722fb2dd46b20cbed2457a9f8
-      internalID: -1936126583
+      spriteID: 8cdc8181fe06333479d437391db2434a
+      internalID: 99442509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_93
+      name: currentplayer_93
       rect:
         serializedVersion: 2
         x: 256
@@ -2072,14 +2072,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d611f93eec23234b88d9e9c217e1e7d
-      internalID: -1469895746
+      spriteID: ad928690efae848428b5c095afdc92c1
+      internalID: 334127516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_94
+      name: currentplayer_94
       rect:
         serializedVersion: 2
         x: 288
@@ -2093,14 +2093,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d100969c9f406ac498f0280114c509a4
-      internalID: 2049372980
+      spriteID: d77dcd19b580dc44fa9698c454b2d987
+      internalID: 1054973300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_95
+      name: currentplayer_95
       rect:
         serializedVersion: 2
         x: 320
@@ -2114,14 +2114,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af4a5f40d1868fd46bd4aa98a089b909
-      internalID: 1846285659
+      spriteID: 7d674811961dddb4694752f6917c1f2b
+      internalID: -1375649531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_96
+      name: currentplayer_96
       rect:
         serializedVersion: 2
         x: 352
@@ -2135,14 +2135,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31b9f951eec93854c95ab02abc05505e
-      internalID: -716093362
+      spriteID: ed164d3b8ce71dc428ec5b295276e3c3
+      internalID: 1371590401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_97
+      name: currentplayer_97
       rect:
         serializedVersion: 2
         x: 0
@@ -2156,14 +2156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80e93d930a346f1498de80686d48a13a
-      internalID: -1224500357
+      spriteID: 145a5323c909aeb4fbe8e691ae069c06
+      internalID: 544674896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_98
+      name: currentplayer_98
       rect:
         serializedVersion: 2
         x: 32
@@ -2177,14 +2177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6a90840339448b49802c8f0a8bf962c
-      internalID: -445019505
+      spriteID: 33d9bedebdcb1734bab697310fb336d6
+      internalID: -584714757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_99
+      name: currentplayer_99
       rect:
         serializedVersion: 2
         x: 64
@@ -2198,14 +2198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ea2ac2f69486fd4d92c08e7b1428066
-      internalID: -2004303035
+      spriteID: db2a4660fd75533408e2a34fc1994b30
+      internalID: -152497110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_100
+      name: currentplayer_100
       rect:
         serializedVersion: 2
         x: 96
@@ -2219,14 +2219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32b385570cf427643b65f175beaf6094
-      internalID: -1532542429
+      spriteID: 8358ea8a6194b1443a7494a02aa635e7
+      internalID: -906211597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_101
+      name: currentplayer_101
       rect:
         serializedVersion: 2
         x: 128
@@ -2240,14 +2240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b1b53c74d2fcd34ab625228ee2dda20
-      internalID: -2043640938
+      spriteID: 3ee8563017a227c43a5dd5c4fbac71ee
+      internalID: -780897914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_102
+      name: currentplayer_102
       rect:
         serializedVersion: 2
         x: 160
@@ -2261,14 +2261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43c30ee371f600d45b9786edda080d15
-      internalID: 79791383
+      spriteID: 122d6c3437c330143a259c593190e080
+      internalID: -661204558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_103
+      name: currentplayer_103
       rect:
         serializedVersion: 2
         x: 192
@@ -2282,14 +2282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 516d0c84159e42b4e88869f963e219e7
-      internalID: -1711469888
+      spriteID: c9aaa90e2935dfa4c9b678afd4ab779f
+      internalID: -1823149569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_104
+      name: currentplayer_104
       rect:
         serializedVersion: 2
         x: 224
@@ -2303,14 +2303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d0be190613b40545934a481ecdd43e6
-      internalID: -42095466
+      spriteID: c53c61526532f5b4c8a74ffe77bd473c
+      internalID: 65987665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_105
+      name: currentplayer_105
       rect:
         serializedVersion: 2
         x: 320
@@ -2324,14 +2324,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ba76e4613327414da0d9548f56f88d7
-      internalID: -760776715
+      spriteID: 4e99b4db3b25a3a43ad219949e5cacce
+      internalID: -1996148207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_106
+      name: currentplayer_106
       rect:
         serializedVersion: 2
         x: 352
@@ -2345,14 +2345,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee129cd73668812408f201badac558c6
-      internalID: 1895633680
+      spriteID: 7ea8559949f66a14b84b6680f2d12474
+      internalID: -1278463769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_107
+      name: currentplayer_107
       rect:
         serializedVersion: 2
         x: 0
@@ -2366,14 +2366,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71179e186491f994fa0071cf02f9462a
-      internalID: 575316430
+      spriteID: 8d4b1330703868343b94b68dbc53b376
+      internalID: 687375115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_108
+      name: currentplayer_108
       rect:
         serializedVersion: 2
         x: 32
@@ -2387,14 +2387,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae39551dc38a70b49ae38105757b2bab
-      internalID: 1435778804
+      spriteID: 45cce58fa8de71148a0d90db4b546af1
+      internalID: 71263218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_109
+      name: currentplayer_109
       rect:
         serializedVersion: 2
         x: 64
@@ -2408,14 +2408,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36f66270cd7cad1439c2ed74764834b5
-      internalID: 1937849723
+      spriteID: a11bedbd6748bb14db2ad24c24398a22
+      internalID: 326509463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_110
+      name: currentplayer_110
       rect:
         serializedVersion: 2
         x: 96
@@ -2429,14 +2429,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb376c1bc75bff2468c687f1745316e8
-      internalID: -739952957
+      spriteID: acf89d4956617ba4c8828082055397de
+      internalID: -1062664101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_111
+      name: currentplayer_111
       rect:
         serializedVersion: 2
         x: 160
@@ -2450,14 +2450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa81558f933c61f448d529c2fed24c6e
-      internalID: 23343601
+      spriteID: 5eb5fb4e6f6dc3746bf6b9853a1dfc42
+      internalID: 644476186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_112
+      name: currentplayer_112
       rect:
         serializedVersion: 2
         x: 192
@@ -2471,14 +2471,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cfe0e23c4eece04480b8aad9d614786
-      internalID: -399730054
+      spriteID: a6df742ef64a5564fa209a0618ddf5e4
+      internalID: 1216901967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_113
+      name: currentplayer_113
       rect:
         serializedVersion: 2
         x: 224
@@ -2492,14 +2492,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 923132c229dfe0e4696d699756b86174
-      internalID: 1577627916
+      spriteID: 3d31aa53a0a65404fadc94efe36e7a3e
+      internalID: 394137728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_114
+      name: currentplayer_114
       rect:
         serializedVersion: 2
         x: 256
@@ -2513,14 +2513,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18ec86f4efc6fbe45aba2ee70094a2b3
-      internalID: 176811210
+      spriteID: 1cd28bac95d5d66409153f81b0d21bc2
+      internalID: 423799695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_115
+      name: currentplayer_115
       rect:
         serializedVersion: 2
         x: 288
@@ -2534,14 +2534,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f16a37ecba8d4754faec4ce3b77b3b9d
-      internalID: 1444190064
+      spriteID: db4cc7e6d15b40b448384981de054baa
+      internalID: 1632668957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_116
+      name: currentplayer_116
       rect:
         serializedVersion: 2
         x: 320
@@ -2555,14 +2555,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a763611b89ed95e42b4404e5e85bcde7
-      internalID: -411999906
+      spriteID: 378aa888cdeaf6840b9c39cc49d1d70e
+      internalID: 1921439271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_117
+      name: currentplayer_117
       rect:
         serializedVersion: 2
         x: 352
@@ -2576,14 +2576,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f55d8784b93cfc54a8937f204d4d01a6
-      internalID: 570439662
+      spriteID: 0c86181250eb0444193c166aae13770b
+      internalID: -1673260486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_118
+      name: currentplayer_118
       rect:
         serializedVersion: 2
         x: 0
@@ -2597,14 +2597,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc32d46e3155fa84dad3fbb4189a3951
-      internalID: -1169082996
+      spriteID: 84fc4ff89712cf443ba6080c7941bfec
+      internalID: -1730871743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_119
+      name: currentplayer_119
       rect:
         serializedVersion: 2
         x: 32
@@ -2618,14 +2618,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e33fe51d086102b4595a1dc7e419a03d
-      internalID: -1283619471
+      spriteID: f38e196eb85725b4686dd11a6b3aba71
+      internalID: 544208496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_120
+      name: currentplayer_120
       rect:
         serializedVersion: 2
         x: 160
@@ -2639,14 +2639,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 319035571be4490468f65fe2b0a407cd
-      internalID: 2129037539
+      spriteID: 22d3deb2db8d6544fb7a6b0a8f8e617a
+      internalID: -803581972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_121
+      name: currentplayer_121
       rect:
         serializedVersion: 2
         x: 256
@@ -2660,14 +2660,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c086a5eb45b95ac43b6548e529ae648b
-      internalID: 1862773709
+      spriteID: 411f556e2dffad24ca23202c34626538
+      internalID: 1047787145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_122
+      name: currentplayer_122
       rect:
         serializedVersion: 2
         x: 288
@@ -2681,14 +2681,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6798c9861b8c89488ed16c2109e3c40
-      internalID: 1793087460
+      spriteID: 232b7fc5652559149ad1a6eadf9ca1cf
+      internalID: 795088060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_123
+      name: currentplayer_123
       rect:
         serializedVersion: 2
         x: 320
@@ -2702,14 +2702,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a6e3a3aa73f7f148ac176338b90ccea
-      internalID: -1414846285
+      spriteID: 752ecbaa290b0e54b9d53aa43f1474af
+      internalID: -639393835
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_124
+      name: currentplayer_124
       rect:
         serializedVersion: 2
         x: 352
@@ -2723,14 +2723,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c48a44b6a963a844b9bcc323ee744ca
-      internalID: 438931754
+      spriteID: b62ba294a0e91af4ea5adaab8022a418
+      internalID: -490111797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_125
+      name: currentplayer_125
       rect:
         serializedVersion: 2
         x: 256
@@ -2744,14 +2744,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 020ee05cd0eccda47862e276317ed8ab
-      internalID: -16907419
+      spriteID: ccf3a0412d8c05a4bb35c95e67b7abf6
+      internalID: -1025870369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_126
+      name: currentplayer_126
       rect:
         serializedVersion: 2
         x: 288
@@ -2765,14 +2765,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa9e6352667f059479831229b5dc731c
-      internalID: 1349651164
+      spriteID: 782685d4aba05d047946ffc245694a41
+      internalID: 1154232422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_127
+      name: currentplayer_127
       rect:
         serializedVersion: 2
         x: 320
@@ -2786,14 +2786,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13913764cb9c2eb4fa53e00b76e6a50f
-      internalID: -1467634275
+      spriteID: e08508277176909488c0d0113700499b
+      internalID: 1437246482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_128
+      name: currentplayer_128
       rect:
         serializedVersion: 2
         x: 352
@@ -2807,14 +2807,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b99d35613e1c70a4f8c377c7b80358a4
-      internalID: 1484780332
+      spriteID: 3a1711c521ff21045abc1b0e9ff0413d
+      internalID: 695697053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_129
+      name: currentplayer_129
       rect:
         serializedVersion: 2
         x: 256
@@ -2828,14 +2828,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f379ea864b8b8c42a1d13fbb34d771a
-      internalID: 1196154263
+      spriteID: fad96add10488f64986efb9fc4fa0bea
+      internalID: -1670534117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_130
+      name: currentplayer_130
       rect:
         serializedVersion: 2
         x: 288
@@ -2849,14 +2849,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f27b3e2d4a22d5428dc4a26c4418354
-      internalID: -1096012592
+      spriteID: f5ed9b11a4474a34fb4cea7fc3f6629e
+      internalID: 2052752142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_131
+      name: currentplayer_131
       rect:
         serializedVersion: 2
         x: 320
@@ -2870,14 +2870,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef9e78b8afe892a4aa981df7be7bfe92
-      internalID: 684034789
+      spriteID: c4a229c5ce7f7c840be45664e42fb821
+      internalID: -166998130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_132
+      name: currentplayer_132
       rect:
         serializedVersion: 2
         x: 352
@@ -2891,14 +2891,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c90f481977411c64c876bb6ec5b2ef30
-      internalID: -1603010965
+      spriteID: 46f4980df68696645905466c5e8adc21
+      internalID: 1223398855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colin_133
+      name: currentplayer_133
       rect:
         serializedVersion: 2
         x: 256
@@ -2912,8 +2912,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33c8e71e20172b54abb8082e12eb1a80
-      internalID: -1547773554
+      spriteID: d5bee754e59144949888cd5f3bc1f3d4
+      internalID: 2134626873
       vertices: []
       indices: 
       edges: []
@@ -2929,140 +2929,140 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      colin_131: 684034789
-      colin_47: -193686687
-      colin_14: 1174955459
-      colin_81: -234049333
-      colin_6: 678557219
-      colin_130: -1096012592
-      colin_23: -1232890708
-      colin_46: -1679585803
-      colin_97: -1224500357
-      colin_122: 1793087460
-      colin_98: -445019505
-      colin_78: -1195263811
-      colin_120: 2129037539
-      colin_69: -1936105887
-      colin_26: -916091244
-      colin_83: -322877844
-      colin_5: -1232421423
-      colin_85: -1527159710
-      colin_74: 126375066
-      colin_79: 46442308
-      colin_43: -697158579
-      colin_60: 578193256
-      colin_17: -1106307699
-      colin_39: 453410089
-      colin_3: 2115783648
-      colin_110: -739952957
-      colin_105: -760776715
-      colin_32: -787940875
-      colin_9: -1510931394
-      colin_82: 1512336985
-      colin_87: 959727842
-      colin_63: -1282242729
-      colin_91: -295046015
-      colin_36: 1669213709
-      colin_18: -327578597
-      colin_95: 1846285659
-      colin_127: -1467634275
-      colin_123: -1414846285
-      colin_107: 575316430
-      colin_64: 566349357
-      colin_8: 277659346
-      colin_125: -16907419
-      colin_7: 1550735871
-      colin_31: 85905675
-      colin_44: 1357910804
-      colin_70: 26558447
-      colin_94: 2049372980
-      colin_102: 79791383
-      colin_30: -189609315
-      colin_24: -221937251
-      colin_54: 1501522325
-      colin_4: 1403042500
-      colin_76: -1202576952
-      colin_106: 1895633680
-      colin_111: 23343601
-      colin_121: 1862773709
-      colin_71: -2087518991
-      colin_53: -2000998972
-      colin_119: -1283619471
-      colin_126: 1349651164
-      colin_13: -1582839837
-      colin_67: 1595485402
-      colin_22: -1827925660
-      colin_27: 554252142
-      colin_109: 1937849723
-      colin_92: -1936126583
-      colin_56: 360059900
-      colin_100: -1532542429
-      colin_52: 2002882593
-      colin_38: 854056234
-      colin_73: -114731731
-      colin_116: -411999906
-      colin_68: 844698917
-      colin_103: -1711469888
-      colin_113: 1577627916
-      colin_35: 560420025
-      colin_101: -2043640938
-      colin_33: 247987643
-      colin_128: 1484780332
-      colin_114: 176811210
-      colin_112: -399730054
-      colin_42: 1084949972
-      colin_49: -1769500802
-      colin_66: -1759104519
-      colin_34: 1445598129
-      colin_62: -1111495634
-      colin_80: 1792707430
-      colin_59: -701620318
-      colin_12: -1813247638
-      colin_2: -1943776756
-      colin_86: -1511097471
-      colin_89: -2102619622
-      colin_37: -1065125855
-      colin_108: 1435778804
-      colin_57: -1494955085
-      colin_115: 1444190064
-      colin_50: 1340807001
-      colin_124: 438931754
-      colin_15: -366716001
-      colin_90: -1502000345
-      colin_20: 609541761
-      colin_11: -774212239
-      colin_117: 570439662
-      colin_72: 51857828
-      colin_96: -716093362
-      colin_16: -688159060
-      colin_48: -243645133
-      colin_58: -1678357952
-      colin_0: -484487731
-      colin_29: 90505254
-      colin_84: 393149893
-      colin_75: 473168287
-      colin_88: -1030034408
-      colin_104: -42095466
-      colin_99: -2004303035
-      colin_25: -1851262645
-      colin_1: 1476871986
-      colin_61: 697844707
-      colin_132: -1603010965
-      colin_129: 1196154263
-      colin_21: 774652530
-      colin_10: 505345452
-      colin_77: 620105670
-      colin_41: -398149462
-      colin_93: -1469895746
-      colin_28: 1830885713
-      colin_40: 2046745778
-      colin_45: -1766488419
-      colin_19: -355520043
-      colin_51: 1662339574
-      colin_65: -892246547
-      colin_133: -1547773554
-      colin_118: -1169082996
-      colin_55: 647748334
+      currentplayer_11: 1880387884
+      currentplayer_63: -527475237
+      currentplayer_78: -589377392
+      currentplayer_125: -1025870369
+      currentplayer_26: 2024502098
+      currentplayer_24: -1683167543
+      currentplayer_129: -1670534117
+      currentplayer_38: 499253376
+      currentplayer_86: -1639988153
+      currentplayer_3: 97599936
+      currentplayer_113: 394137728
+      currentplayer_10: -1014247422
+      currentplayer_57: 1556540821
+      currentplayer_5: -786048805
+      currentplayer_36: 1228869191
+      currentplayer_81: 535238310
+      currentplayer_59: 1596958433
+      currentplayer_72: 1229742153
+      currentplayer_93: 334127516
+      currentplayer_101: -780897914
+      currentplayer_9: -1468720594
+      currentplayer_33: 1808903868
+      currentplayer_75: -1287799578
+      currentplayer_82: 912014397
+      currentplayer_1: -1098463322
+      currentplayer_105: -1996148207
+      currentplayer_53: -150512336
+      currentplayer_60: 1173341460
+      currentplayer_90: 2047119158
+      currentplayer_132: 1223398855
+      currentplayer_19: -1469744796
+      currentplayer_64: 176869240
+      currentplayer_45: 789404472
+      currentplayer_41: 1097841706
+      currentplayer_116: 1921439271
+      currentplayer_79: -1782763430
+      currentplayer_28: 1807921807
+      currentplayer_108: 71263218
+      currentplayer_49: 1266838242
+      currentplayer_34: -1093187457
+      currentplayer_109: 326509463
+      currentplayer_54: 268509703
+      currentplayer_128: 695697053
+      currentplayer_31: 994155398
+      currentplayer_0: -1402532793
+      currentplayer_62: -952949346
+      currentplayer_100: -906211597
+      currentplayer_25: -585601259
+      currentplayer_21: 1639217770
+      currentplayer_17: -61339146
+      currentplayer_47: 1146966776
+      currentplayer_32: 1828542319
+      currentplayer_99: -152497110
+      currentplayer_117: -1673260486
+      currentplayer_85: -1735947253
+      currentplayer_27: 513653722
+      currentplayer_74: -1568829587
+      currentplayer_97: 544674896
+      currentplayer_131: -166998130
+      currentplayer_133: 2134626873
+      currentplayer_68: 1644779578
+      currentplayer_71: 1543230263
+      currentplayer_23: 977802219
+      currentplayer_87: -593181648
+      currentplayer_92: 99442509
+      currentplayer_4: 1923256830
+      currentplayer_70: 91919646
+      currentplayer_106: -1278463769
+      currentplayer_48: 1406243252
+      currentplayer_20: -1944708474
+      currentplayer_37: 1905612063
+      currentplayer_115: 1632668957
+      currentplayer_16: -640151464
+      currentplayer_22: 1966024617
+      currentplayer_50: -316614459
+      currentplayer_15: -535326531
+      currentplayer_42: 123709673
+      currentplayer_29: 835233786
+      currentplayer_88: 1723988136
+      currentplayer_44: 1311611374
+      currentplayer_114: 423799695
+      currentplayer_12: 555044931
+      currentplayer_120: -803581972
+      currentplayer_69: -1144210627
+      currentplayer_103: -1823149569
+      currentplayer_124: -490111797
+      currentplayer_94: 1054973300
+      currentplayer_83: 1906988086
+      currentplayer_30: 2094809565
+      currentplayer_112: 1216901967
+      currentplayer_95: -1375649531
+      currentplayer_2: 1357560184
+      currentplayer_80: -1788859308
+      currentplayer_35: 1103573396
+      currentplayer_40: -1641110623
+      currentplayer_66: -1328501730
+      currentplayer_121: 1047787145
+      currentplayer_98: -584714757
+      currentplayer_122: 795088060
+      currentplayer_130: 2052752142
+      currentplayer_123: -639393835
+      currentplayer_127: 1437246482
+      currentplayer_77: 367643327
+      currentplayer_18: -628280373
+      currentplayer_14: 1881665983
+      currentplayer_104: 65987665
+      currentplayer_13: -1451614532
+      currentplayer_61: -770094891
+      currentplayer_46: -1954069909
+      currentplayer_107: 687375115
+      currentplayer_65: 1928181310
+      currentplayer_8: -507146111
+      currentplayer_96: 1371590401
+      currentplayer_126: 1154232422
+      currentplayer_56: 635880349
+      currentplayer_51: -66277123
+      currentplayer_84: -1865194137
+      currentplayer_118: -1730871743
+      currentplayer_110: -1062664101
+      currentplayer_111: 644476186
+      currentplayer_55: -882603801
+      currentplayer_58: -65735968
+      currentplayer_6: 1026874652
+      currentplayer_119: 544208496
+      currentplayer_39: -1759662416
+      currentplayer_73: 949184871
+      currentplayer_76: -2060556978
+      currentplayer_7: 2041676721
+      currentplayer_52: -1156451195
+      currentplayer_89: -1718551309
+      currentplayer_43: -105969833
+      currentplayer_91: -1039038713
+      currentplayer_67: -1215137450
+      currentplayer_102: -661204558
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

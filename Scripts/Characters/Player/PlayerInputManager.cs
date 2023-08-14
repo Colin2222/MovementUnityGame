@@ -142,10 +142,12 @@ public class PlayerInputManager : MonoBehaviour
         jumpPressed = !jumpPressed;
         jumpJustPressed = jumpPressed;
 		
-		if(jumpPressed){
-			stateManager.PressJump();
-		} else{
-			stateManager.ReleaseJump();
+		if(!locked){
+			if(jumpPressed){
+				stateManager.PressJump();
+			} else{
+				stateManager.ReleaseJump();
+			}
 		}
     }
 	
@@ -198,7 +200,7 @@ public class PlayerInputManager : MonoBehaviour
 		interactPressed = !interactPressed;
 		interactJustPressed = interactPressed;
 		
-		if(interactJustPressed){
+		if(!locked && interactJustPressed){
 			interactor.Interact();
 		}
 	}
