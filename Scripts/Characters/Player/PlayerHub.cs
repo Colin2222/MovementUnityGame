@@ -17,6 +17,7 @@ public class PlayerHub : MonoBehaviour
     void Awake()
     {
 		state = new PlayerState();
+		SwitchPlayerSpritesheet("currentplayer");
     }
 
     // Update is called once per frame
