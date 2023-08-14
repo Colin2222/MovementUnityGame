@@ -17,12 +17,30 @@ public class CustomizerPreviewController : MonoBehaviour
 	public PartPreviewer legsPreviewer;
 	public PartPreviewer armsPreviewer;
 	
+	List<(int, int)> customizerDataToSet;
+	public float transitionTime;
+	float transitionTimer;
+	bool transitioning = false;
+	
     // Start is called before the first frame update
     void Start()
     {
         currentPreviewer = 1;
 		UpdatePreviewer();
     }
+	
+	void Update(){
+		if(transitioning){
+			transitionTimer -= Time.deltaTime;
+			if(transitionTimer <= 0.0f){
+				transitioning = false;
+				
+				customizer.StitchNewPlayerSpritesheet(customizerDataToSet);
+				GameObject.FindWithTag("Player").GetComponent<PlayerHub>().UnlockPlayer();
+				gameObject.SetActive(false);
+			}
+		}
+	}
 	
 	public void InitializePreviewer(){
 		ProfileManager profileManager = GameObject.FindWithTag("ProfileManager").GetComponent<ProfileManager>();
@@ -133,10 +151,10 @@ public class CustomizerPreviewController : MonoBehaviour
 		if(profileManager.currentProfile != null){
 			profileManager.SetCustomizationData(newCustomizerData);
 		}
-		customizer.StitchNewPlayerSpritesheet(newCustomizerData);
-		
-		GameObject.FindWithTag("Player").GetComponent<PlayerHub>().UnlockPlayer();
-		gameObject.SetActive(false);
+		customizerDataToSet = newCustomizerData;
+		transitionTimer = transitionTime;
+		transitioning = true;
+		GameObject.FindWithTag("SceneTransitionManager").GetComponent<SceneTransitionManager>().TempTransition(transitionTime);
 	}
 	
 	void OnColorRight(){

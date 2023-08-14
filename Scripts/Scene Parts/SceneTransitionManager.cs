@@ -11,26 +11,52 @@ public class SceneTransitionManager : MonoBehaviour
 	public float transitionSpeed;
 	public float transitionTime;
 	float transitionTimer;
+	float timeUntilAction;
 	bool exiting = false;
 	bool entering = false;
+	bool tempTransitioning = false;
 	int sceneTransitionIndex;
     // Update is called once per frame
     void Update()
     {
-        if(exiting){
-			transitionShape.transform.localPosition += (transitionSpeed * Time.deltaTime * Vector3.right);
-			transitionTimer -= Time.deltaTime;
-			if(transitionTimer <= 0.0f){
-				sceneManager.SwitchScenes(sceneTransitionIndex);
+		if(tempTransitioning){
+			if(exiting){
+				transitionShape.transform.localPosition += (transitionSpeed * Time.deltaTime * Vector3.right);
+				transitionTimer -= Time.deltaTime;
+				if(transitionTimer <= 0.0f){
+					exiting = false;
+					transitionTimer = timeUntilAction - transitionTime;
+				}
+			} else if(entering){
+				transitionShape.transform.localPosition += (transitionSpeed * Time.deltaTime * Vector3.right);
+				transitionTimer -= Time.deltaTime;
+				if(transitionTimer <= 0.0f){
+					entering = false;
+					tempTransitioning = false;
+					transitionShape.gameObject.SetActive(false);
+				}
+			} else{
+				transitionTimer -= Time.deltaTime;
+				if(transitionTimer <= 0.0f){
+					EnterTransition();
+				}
 			}
-		}
-		
-		if(entering){
-			transitionShape.transform.localPosition += (transitionSpeed * Time.deltaTime * Vector3.right);
-			transitionTimer -= Time.deltaTime;
-			if(transitionTimer <= 0.0f){
-				entering = false;
-				transitionShape.gameObject.SetActive(false);
+		} else{
+			if(exiting){
+				transitionShape.transform.localPosition += (transitionSpeed * Time.deltaTime * Vector3.right);
+				transitionTimer -= Time.deltaTime;
+				if(transitionTimer <= 0.0f){
+					sceneManager.SwitchScenes(sceneTransitionIndex);
+				}
+			}
+			
+			if(entering){
+				transitionShape.transform.localPosition += (transitionSpeed * Time.deltaTime * Vector3.right);
+				transitionTimer -= Time.deltaTime;
+				if(transitionTimer <= 0.0f){
+					entering = false;
+					transitionShape.gameObject.SetActive(false);
+				}
 			}
 		}
     }
@@ -48,5 +74,14 @@ public class SceneTransitionManager : MonoBehaviour
 		transitionShape.transform.localPosition = Vector3.zero;
 		transitionTimer = transitionTime;
 		entering = true;
+	}
+	
+	public void TempTransition(float timeUntilAction){
+		this.timeUntilAction = timeUntilAction;
+		transitionShape.gameObject.SetActive(true);
+		transitionShape.transform.localPosition = exitPos.transform.localPosition;
+		transitionTimer = transitionTime;
+		exiting = true;
+		tempTransitioning = true;
 	}
 }

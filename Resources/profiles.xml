@@ -97,11 +97,11 @@
     <spritesheet_code>colin</spritesheet_code>
     <customization_codes>
       <header_id>2</header_id>
-      <header_color_id>1</header_color_id>
+      <header_color_id>6</header_color_id>
       <head_id>0</head_id>
-      <head_color_id>11</head_color_id>
+      <head_color_id>3</head_color_id>
       <body_id>0</body_id>
-      <body_color_id>4</body_color_id>
+      <body_color_id>7</body_color_id>
     </customization_codes>
     <time_entry>
       <level_id>0</level_id>
