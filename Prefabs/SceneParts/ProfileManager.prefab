@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profileXmlFile: profiles
-  profileSpacing: 2.5
+  profileSpacing: 2.25
   profileSelectorPrefab: {fileID: 6671170218041453765, guid: b310fbadb38780c4ca9d5ec3f24f3684, type: 3}
   nameText: {fileID: 0}
+  player: {fileID: 0}

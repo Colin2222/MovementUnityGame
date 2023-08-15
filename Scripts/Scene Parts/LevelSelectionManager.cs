@@ -11,7 +11,7 @@ public class LevelSelectionManager : MonoBehaviour
 		int index = 0;
 		foreach(int id in LevelRegistry.GetLevelIdList()){
 			GameObject instance = Instantiate(levelSelectionPrefab);
-			instance.transform.position = new Vector3(starterLocation.position.x + (levelSelectSpacing * index), starterLocation.position.y, 0.0f);
+			instance.transform.position = new Vector3(starterLocation.position.x - (levelSelectSpacing * index), starterLocation.position.y, 0.0f);
 			LevelSelectInteractable interactable = instance.GetComponent<LevelSelectInteractable>();
 			interactable.levelId = id;
 			

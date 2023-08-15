@@ -12,4 +12,8 @@
     <id>3</id>
     <display_name>Arizona Hike</display_name>
   </level>
+  <level>
+    <id>4</id>
+    <display_name>Keep Up the Momentum</display_name>
+  </level>
 </levels>
