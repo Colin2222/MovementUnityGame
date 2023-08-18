@@ -291,6 +291,7 @@ MonoBehaviour:
   renderer: {fileID: 1345304897701239309}
   previews:
   - {fileID: -607906412, guid: bb1cac1825a59454e8e4b4981dedad68, type: 3}
+  - {fileID: 339722989, guid: bb1cac1825a59454e8e4b4981dedad68, type: 3}
 --- !u!212 &1345304897701239309
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -907,6 +908,8 @@ MonoBehaviour:
   - {fileID: 358914026, guid: 295a292aa00337c4d80641682da01785, type: 3}
   - {fileID: 1613765259, guid: 295a292aa00337c4d80641682da01785, type: 3}
   - {fileID: 601140600, guid: 295a292aa00337c4d80641682da01785, type: 3}
+  - {fileID: -119426767, guid: 295a292aa00337c4d80641682da01785, type: 3}
+  - {fileID: -1543096314, guid: 295a292aa00337c4d80641682da01785, type: 3}
 --- !u!1 &1345304898234352394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,7 +1196,7 @@ GameObject:
   - component: {fileID: 6587301549109030473}
   m_Layer: 11
   m_Name: Customizer
-  m_TagString: Untagged
+  m_TagString: CustomizerManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
