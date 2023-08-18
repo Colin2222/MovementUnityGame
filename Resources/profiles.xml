@@ -96,7 +96,7 @@
     <display_name>Colin</display_name>
     <spritesheet_code>colin</spritesheet_code>
     <customization_codes>
-      <header_id>2</header_id>
+      <header_id>4</header_id>
       <header_color_id>23</header_color_id>
       <head_id>1</head_id>
       <head_color_id>15</head_color_id>
@@ -109,11 +109,15 @@
     </time_entry>
     <time_entry>
       <level_id>2</level_id>
-      <time>8.925836</time>
+      <time>8.876585</time>
     </time_entry>
     <time_entry>
       <level_id>3</level_id>
-      <time>30.46201</time>
+      <time>29.79717</time>
+    </time_entry>
+    <time_entry>
+      <level_id>4</level_id>
+      <time>9.810387</time>
     </time_entry>
   </player>
 </players>
