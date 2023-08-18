@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6024a91ff08edb4fb3ec6b1526e8303
-      internalID: -1543096314
+      spriteID: a9738a19a97d9c948b62087fbfb731ce
+      internalID: 1761322027
       vertices: []
       indices: 
       edges: []
@@ -224,7 +224,7 @@ TextureImporter:
       HairPreviews_0: 358914026
       HairPreviews_1: 1613765259
       HairPreviews_3: -119426767
-      HairPreviews_4: -1543096314
+      HairPreviews_4: 1761322027
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

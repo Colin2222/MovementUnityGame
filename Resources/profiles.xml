@@ -5,13 +5,21 @@
     <display_name>Nick</display_name>
     <spritesheet_code>nick</spritesheet_code>
     <customization_codes>
-      <header_id>1</header_id>
+      <header_id>4</header_id>
       <header_color_id>17</header_color_id>
-      <head_id>1</head_id>
-      <head_color_id>15</head_color_id>
+      <head_id>0</head_id>
+      <head_color_id>45</head_color_id>
       <body_id>0</body_id>
-      <body_color_id>7</body_color_id>
+      <body_color_id>21</body_color_id>
     </customization_codes>
+    <time_entry>
+      <level_id>2</level_id>
+      <time>22.1721</time>
+    </time_entry>
+    <time_entry>
+      <level_id>0</level_id>
+      <time>90.54121</time>
+    </time_entry>
   </player>
   <player>
     <id>7</id>
@@ -108,16 +116,16 @@
       <time>34.20174</time>
     </time_entry>
     <time_entry>
-      <level_id>2</level_id>
-      <time>8.876585</time>
-    </time_entry>
-    <time_entry>
       <level_id>3</level_id>
       <time>29.79717</time>
     </time_entry>
     <time_entry>
       <level_id>4</level_id>
       <time>22.15546</time>
+    </time_entry>
+    <time_entry>
+      <level_id>2</level_id>
+      <time>9.793238</time>
     </time_entry>
   </player>
 </players>
