@@ -47,4 +47,8 @@ public class BottomCheck : MonoBehaviour
 			parentPhysics.stateManager.LeaveGround();
 		}
     }
+	
+	public void ClearReferences(){
+		collisions.Clear();
+	}
 }

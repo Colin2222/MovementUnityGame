@@ -54,6 +54,7 @@ public class PStateStillJumpLaunching : PState
 				}
 			}
 			rigidbody.AddForce(new Vector2(PState.attr.jumpForce * Mathf.Cos(aimAngle) * jumpForceMultiplier, PState.attr.jumpForce * Mathf.Sin(aimAngle) * jumpForceMultiplier), ForceMode2D.Impulse);
+			PState.player.physics.ClearBottomCheck();
 			return new PStateSoaring();
 		}
 		return this;

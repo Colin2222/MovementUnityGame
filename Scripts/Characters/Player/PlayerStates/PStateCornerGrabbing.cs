@@ -17,6 +17,7 @@ public class PStateCornerGrabbing : PState
 		}
 		
 		PState.player.transform.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerOffsetY, 0);
+		PState.player.soundInterface.PlayCornerGrab();
 		PState.player.animator.Play("PlayerCornerGrabbing");
 	}
 	

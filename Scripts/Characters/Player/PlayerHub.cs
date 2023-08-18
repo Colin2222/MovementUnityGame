@@ -13,6 +13,7 @@ public class PlayerHub : MonoBehaviour
 	public Animator animator;
 	public PlayerReskinManager reskinner;
 	public PlayerAttributeManager attributeManager;
+	public PlayerSoundInterface soundInterface;
     // Start is called before the first frame update
     void Awake()
     {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterPhysicsChecker : MonoBehaviour
 {
 	public PlayerStateManager stateManager;
+	public BottomCheck bottomCheck;
 	
     [System.NonSerialized]
     public bool isGrounded = false;
@@ -35,4 +36,9 @@ public class CharacterPhysicsChecker : MonoBehaviour
         LayerMask layer = collision.gameObject.layer;
         Vector3 otherPos = collision.transform.position;
     }
+	
+	public void ClearBottomCheck(){
+		bottomCheck.ClearReferences();
+		isGrounded = false;
+	}
 }

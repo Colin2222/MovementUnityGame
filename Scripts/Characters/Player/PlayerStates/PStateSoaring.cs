@@ -17,6 +17,7 @@ public class PStateSoaring : PState
 	}
 	
     public override PState HitGround(float hitSpeed){
+		PState.player.soundInterface.PlayStillJumpLand();
 		return new PStateMoving();
 	}
 	
