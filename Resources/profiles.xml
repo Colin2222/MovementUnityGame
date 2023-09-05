@@ -7,8 +7,8 @@
     <customization_codes>
       <header_id>4</header_id>
       <header_color_id>17</header_color_id>
-      <head_id>0</head_id>
-      <head_color_id>45</head_color_id>
+      <head_id>1</head_id>
+      <head_color_id>52</head_color_id>
       <body_id>0</body_id>
       <body_color_id>21</body_color_id>
     </customization_codes>
@@ -18,7 +18,15 @@
     </time_entry>
     <time_entry>
       <level_id>0</level_id>
-      <time>90.54121</time>
+      <time>60.13385</time>
+    </time_entry>
+    <time_entry>
+      <level_id>4</level_id>
+      <time>32.96727</time>
+    </time_entry>
+    <time_entry>
+      <level_id>3</level_id>
+      <time>98.51705</time>
     </time_entry>
   </player>
   <player>
@@ -70,8 +78,12 @@
       <head_id>1</head_id>
       <head_color_id>15</head_color_id>
       <body_id>0</body_id>
-      <body_color_id>8</body_color_id>
+      <body_color_id>26</body_color_id>
     </customization_codes>
+    <time_entry>
+      <level_id>0</level_id>
+      <time>610.4183</time>
+    </time_entry>
   </player>
   <player>
     <id>9</id>
