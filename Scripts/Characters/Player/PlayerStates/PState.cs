@@ -25,14 +25,14 @@ public abstract class PState
 		if(horizontal > 0){
 			if(direction != 1){
 				player.transform.eulerAngles = new Vector2(0,0);
+				direction = 1;
 			}
-			direction = 1;
 		}
 		if(horizontal < 0){
 			if(direction != -1){
 				player.transform.eulerAngles = new Vector2(0,180);
+				direction = -1;
 			}
-			direction = -1;
 		}
 	}
 	

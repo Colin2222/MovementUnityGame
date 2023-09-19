@@ -30,7 +30,7 @@ public class PStateCornerClimbing : PState
 		if(cornerClimbTimer <= 0){
 			PState.player.transform.position = new Vector3(corner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), corner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
 			PState.rigidbody.gravityScale = PState.attr.gravityScale;
-			PState.direction = cornerDir;
+			PState.direction = 0;
 			PState.player.physics.isGrounded = false;
 			return new PStateIdle();
 		}
