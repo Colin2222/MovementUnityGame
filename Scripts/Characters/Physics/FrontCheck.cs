@@ -32,5 +32,6 @@ public class FrontCheck : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision){
         parentPhysics.isWalled = false;
+		parentPhysics.stateManager.LeaveWall();
     }
 }

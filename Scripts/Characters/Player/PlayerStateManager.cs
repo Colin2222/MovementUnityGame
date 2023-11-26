@@ -40,6 +40,10 @@ public class PlayerStateManager : MonoBehaviour
 		currentState = currentState.LeaveGround();
 	}
 	
+	public void LeaveWall(){
+		currentState = currentState.LeaveWall();
+	}
+	
 	public void PressJump(){
 		currentState = currentState.PressJump();
 	}

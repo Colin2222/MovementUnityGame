@@ -76,4 +76,8 @@ public class PStateCornerMantling : PState
 	public override PState LeaveGround(){
 		return this;
 	}
+	
+	public override PState LeaveWall(){
+		return this;
+	}
 }

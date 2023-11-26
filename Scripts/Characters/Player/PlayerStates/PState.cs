@@ -14,6 +14,7 @@ public abstract class PState
 	public abstract PState Move(float horizontal, float vertical);
 	public abstract PState HitGround(float hitSpeed);
 	public abstract PState LeaveGround();
+	public abstract PState LeaveWall();
 	public abstract PState ClimbUp();
 	public abstract PState ClimbDown();
 	public abstract PState PressJump();

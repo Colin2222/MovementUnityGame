@@ -82,4 +82,8 @@ public class PStateWallBracing : PState
 	public override PState LeaveGround(){
 		return this;
 	}
+	
+	public override PState LeaveWall(){
+		return new PStateSoaring();
+	}
 }

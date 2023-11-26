@@ -94,4 +94,8 @@ public class PStateMoving : PState
 		PState.player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
+	
+	public override PState LeaveWall(){
+		return this;
+	}
 }
