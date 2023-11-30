@@ -20,6 +20,14 @@ public class PlayerHub : MonoBehaviour
 		state = new PlayerState();
 		SwitchPlayerSpritesheet("currentplayer");
     }
+	
+	void Start(){
+		AudioClip bgAudio = GameObject.FindWithTag("SceneManager").GetComponent<SceneManager>().bgAudio;
+		
+		if(bgAudio != null){
+			soundInterface.SetBackgroundAudio(bgAudio);
+		}
+	}
 
     // Update is called once per frame
     void Update()

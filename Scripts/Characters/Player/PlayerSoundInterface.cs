@@ -7,6 +7,8 @@ public class PlayerSoundInterface : MonoBehaviour
 	public Rigidbody2D rb;
 	public float footstepVolumeTopSpeed;
 	
+	public AudioSource background;
+	
     public AudioSource step1;
     public AudioSource step2;
 	public AudioSource runningJump;
@@ -17,6 +19,12 @@ public class PlayerSoundInterface : MonoBehaviour
 	public AudioSource cornerClimb;
 	public AudioSource wallImpact;
 	public AudioSource wallJump;
+	
+	public void SetBackgroundAudio(AudioClip bgAudio){
+		background.clip = bgAudio;
+		background.loop = true;
+		background.Play();
+	}
 	
 	public void PrintEvent(){
 		Debug.Log("STEP");

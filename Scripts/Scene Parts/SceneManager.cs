@@ -44,6 +44,8 @@ public class SceneManager : MonoBehaviour
 	public Color obstacleColor;
 	public Color backgroundColor;
 	
+	public AudioClip bgAudio;
+	
     GameObject playerStateObjectTest;
     GameObject playerObjectTest;
 	
