@@ -6,6 +6,7 @@ public class PlayerSoundInterface : MonoBehaviour
 {
 	public Rigidbody2D rb;
 	public float footstepVolumeTopSpeed;
+	public float footstepMaxVolume;
 	
 	public AudioSource background;
 	
@@ -31,12 +32,12 @@ public class PlayerSoundInterface : MonoBehaviour
 	}
 	
 	public void PlayStep1(){
-		step1.volume = Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed);
+		step1.volume = Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed) * footstepMaxVolume;
 		step1.Play();
 	}
 	
 	public void PlayStep2(){
-		step2.volume = Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed);
+		step2.volume = Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed) * footstepMaxVolume;
 		step2.Play();
 	}
 	
