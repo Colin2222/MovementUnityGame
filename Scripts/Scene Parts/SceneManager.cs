@@ -43,6 +43,7 @@ public class SceneManager : MonoBehaviour
 	
 	public Color obstacleColor;
 	public Color backgroundColor;
+	public bool invertPlayerColor;
 	
 	public AudioClip bgAudio;
 	
@@ -82,6 +83,10 @@ public class SceneManager : MonoBehaviour
 		profileManager.SetNameTextRef(profileText);
 		profileManager.SetPlayerRef(player);
 		profileManager.ResetPlayerSpritesheet();
+		
+		if(invertPlayerColor){
+			player.InvertPlayerOutline();
+		}
 	}
 	
     // Start is called before the first frame update

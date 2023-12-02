@@ -46,4 +46,8 @@ public class PlayerHub : MonoBehaviour
 	public void SwitchPlayerSpritesheet(string spritesheetName){
 		reskinner.SetNewSpritesheet(spritesheetName);
 	}
+	
+	public void InvertPlayerOutline(){
+		
+	}
 }
