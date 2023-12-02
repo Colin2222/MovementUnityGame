@@ -84,9 +84,7 @@ public class SceneManager : MonoBehaviour
 		profileManager.SetPlayerRef(player);
 		profileManager.ResetPlayerSpritesheet();
 		
-		if(invertPlayerColor){
-			player.InvertPlayerOutline();
-		}
+		player.InvertPlayerOutline(invertPlayerColor);
 	}
 	
     // Start is called before the first frame update
