@@ -1182,7 +1182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4845049507479276210, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: invertPlayerColor
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4845049507479276211, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: m_RootOrder

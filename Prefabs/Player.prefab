@@ -1619,7 +1619,7 @@ MonoBehaviour:
   spritesheetCode: 
   originalSpritesheetCode: climber
   spriteRenderer: {fileID: 6829769311745543617}
-  invertedEdge: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
+  invertedEdge: {r: 0.9098039, g: 0.9098039, b: 0.9098039, a: 1}
   noninvertedEdge: {r: 0, g: 0, b: 0, a: 1}
-  invertedSkin: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
+  invertedSkin: {r: 0, g: 0, b: 0, a: 1}
   noninvertedSkin: {r: 1, g: 1, b: 1, a: 1}

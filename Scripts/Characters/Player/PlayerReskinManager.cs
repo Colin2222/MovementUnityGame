@@ -44,12 +44,19 @@ public class PlayerReskinManager : MonoBehaviour
 	public void SetPlayerInvertSkin(bool inverted){
 		string spritesheetName = "currentplayer";
 		Texture2D originalTexture = Resources.Load<Texture2D>(spritesheetName);
+		bool firstFound = false;
 		
 		if(inverted){
 			for(int i = 0; i < originalTexture.width; i++){
 				for(int j = 0; j < originalTexture.height; j++){
 					Color currentPixel = originalTexture.GetPixel(i, j);
 					if(currentPixel.a != 0.0f){
+						if(!firstFound && CheckColorEquality(currentPixel, invertedEdge)){
+							return;
+						} else{
+							firstFound = true;
+						}
+						
 						if(CheckColorEquality(currentPixel, noninvertedEdge)){
 							currentPixel = invertedEdge;
 						} else if(CheckColorEquality(currentPixel, noninvertedSkin)){
@@ -63,7 +70,14 @@ public class PlayerReskinManager : MonoBehaviour
 			for(int i = 0; i < originalTexture.width; i++){
 				for(int j = 0; j < originalTexture.height; j++){
 					Color currentPixel = originalTexture.GetPixel(i, j);
+					
 					if(currentPixel.a != 0.0f){
+						if(!firstFound && CheckColorEquality(currentPixel, noninvertedEdge)){
+							return;
+						} else{
+							firstFound = true;
+						}
+						
 						if(CheckColorEquality(currentPixel, invertedEdge)){
 							currentPixel = noninvertedEdge;
 						} else if(CheckColorEquality(currentPixel, invertedSkin)){
