@@ -41,6 +41,8 @@ public class SceneManager : MonoBehaviour
 	
 	public SceneTransitionManager transitionManager;
 	
+	public CutsceneManager cutsceneManager;
+	
 	public Color obstacleColor;
 	public Color backgroundColor;
 	public bool invertPlayerColor;
@@ -98,9 +100,11 @@ public class SceneManager : MonoBehaviour
 			// send profilemanager to timer before all the action starts
 			timer.profileManager = profileManager;
 			
+			/*
 			countdownTimer = countdownTime;
 			countingDownStart = true;
 			player.LockPlayer();
+			*/
 		}
 		
 		transitionManager.EnterTransition();
@@ -110,6 +114,8 @@ public class SceneManager : MonoBehaviour
 			block.GetComponent<SpriteRenderer>().color = obstacleColor;
 		}
 		GameObject.FindWithTag("MainCamera").GetComponent<Camera>().backgroundColor = backgroundColor;
+		
+		cutsceneManager.StartCutscene("Poop", 6.0f);
     }
 	
 	void Update(){
