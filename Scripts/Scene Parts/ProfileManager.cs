@@ -206,7 +206,7 @@ public class ProfileManager : MonoBehaviour
 			try{
 				times.Add(entry.Key, entry.Value.bestTimes[levelId]);
 			} catch(KeyNotFoundException e){
-				
+				Debug.Log(e);
 			}
 			
 		}

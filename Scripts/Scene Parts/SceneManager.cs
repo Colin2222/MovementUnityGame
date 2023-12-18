@@ -115,7 +115,8 @@ public class SceneManager : MonoBehaviour
 		}
 		GameObject.FindWithTag("MainCamera").GetComponent<Camera>().backgroundColor = backgroundColor;
 		
-		cutsceneManager.StartCutscene("Poop", 6.0f);
+		cutsceneManager.LoadCutscene("room_0_c0");
+		cutsceneManager.PlayCutscene(1);
     }
 	
 	void Update(){

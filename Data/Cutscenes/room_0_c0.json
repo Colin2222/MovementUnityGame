@@ -1,0 +1,18 @@
+{
+	"id":1,
+	"duration":5.5,
+	"tasks":[
+		{
+			"id":1,
+			"trigger_time":0.0,
+			"anim_name":"BurnFire",
+			"custom_action":"PrintSomething"
+		},
+		{
+			"id":1,
+			"trigger_time":3.5,
+			"anim_name":"NoBurn",
+			"custom_action":"PrintSomething"
+		}
+	]
+}
