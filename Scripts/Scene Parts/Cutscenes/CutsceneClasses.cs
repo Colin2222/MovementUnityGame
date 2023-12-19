@@ -5,15 +5,21 @@ using System.Collections.Generic;
 public class Cutscene{
     public int id;
 	public float duration;
-	public Task[] tasks;
+	public CutsceneTask[] tasks;
 }
 
 [System.Serializable]
-public class Task{
+public class CutsceneTask{
 	public int id;
 	public float trigger_time;
 	public string anim_name;
-	public string custom_action;
+	public CustomAction[] custom_actions;
+}
+
+[System.Serializable]
+public class CustomAction{
+	public string name;
+	public float[] parameters;
 }
 
 

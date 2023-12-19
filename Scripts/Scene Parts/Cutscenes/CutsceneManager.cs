@@ -16,7 +16,7 @@ public class CutsceneManager : MonoBehaviour
 	bool inCutscene;
 	Cutscene currentCutscene;
 	int currentTaskIndex;
-	Task currentTask;
+	CutsceneTask currentTask;
 	List<CutsceneAction> actions; 
 	Dictionary<int, List<CutsceneActor>> actorsDict;
 	Dictionary<int, Cutscene> cutsceneDict;
@@ -52,34 +52,8 @@ public class CutsceneManager : MonoBehaviour
         if(inCutscene){
 			cutsceneTimer += Time.deltaTime;
 			
-			if(currentTaskIndex < currentCutscene.tasks.Length && cutsceneTimer >= currentTask.trigger_time){
-				bool groupingDone = false;
-				
-				// continue triggering events in the cutscene until all events of the current frame are triggered
-				while(!groupingDone){
-					// check that the actors for the task exist
-					if(!actorsDict.ContainsKey(currentTask.id)){
-						break;
-					}
-					
-					foreach(CutsceneActor actor in actorsDict[currentTask.id]){
-						actor.animate(currentTask.anim_name);
-					}
-					
-					currentTaskIndex++;
-					
-					// check if the end of events array has been reached
-					if(currentTaskIndex < currentCutscene.tasks.Length){
-						currentTask = currentCutscene.tasks[currentTaskIndex];
-						
-						// check if new event is at a later time
-						if(cutsceneTimer < currentTask.trigger_time){
-							groupingDone = true;
-						}
-					} else{
-						groupingDone = true;
-					}
-				}
+			while(currentTaskIndex < currentCutscene.tasks.Length && cutsceneTimer >= currentTask.trigger_time){
+				EvaluateTask(currentTask);
 			}
 			
 			// check for end of cutscene
@@ -89,6 +63,21 @@ public class CutsceneManager : MonoBehaviour
 			}
 		}
     }
+	
+	void EvaluateTask(CutsceneTask task){
+		// check that the actors for the task exist
+		if(actorsDict.ContainsKey(task.id)){
+			// trigger event for all actors with the id for the task
+			foreach(CutsceneActor actor in actorsDict[task.id]){
+				actor.animate(task.anim_name);
+			}
+		}
+		
+		currentTaskIndex++;
+		if(currentTaskIndex < currentCutscene.tasks.Length){
+			currentTask = currentCutscene.tasks[currentTaskIndex];
+		}
+	}
 	
 	public void LoadCutscene(string cutsceneName){
 		// load in json of cutscene into TextAsset
