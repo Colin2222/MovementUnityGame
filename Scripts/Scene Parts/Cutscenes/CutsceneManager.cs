@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
+using System;
 using UnityEngine;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceLocations;
@@ -13,7 +15,10 @@ public class CutsceneManager : MonoBehaviour
 	float cutsceneDuration;
 	string cutsceneAddressHeader = "Assets/Data/Cutscenes/";
 	TextAsset currentCutsceneTxt;
-	bool inCutscene;
+	
+	[System.NonSerialized]
+	public bool inCutscene;
+	
 	Cutscene currentCutscene;
 	int currentTaskIndex;
 	CutsceneTask currentTask;
@@ -42,6 +47,7 @@ public class CutsceneManager : MonoBehaviour
 					actorsDict.Add(id, new List<CutsceneActor>());
 				}
 				actorsDict[id].Add(actor);
+				actor.cutsceneManager = this;
 			}
 		}
     }
@@ -60,6 +66,7 @@ public class CutsceneManager : MonoBehaviour
 			if(cutsceneTimer >= cutsceneDuration){
 				sceneManager.player.UnlockPlayer();
 				inCutscene = false;
+				currentCutscene.active = false;
 			}
 		}
     }
@@ -69,7 +76,16 @@ public class CutsceneManager : MonoBehaviour
 		if(actorsDict.ContainsKey(task.id)){
 			// trigger event for all actors with the id for the task
 			foreach(CutsceneActor actor in actorsDict[task.id]){
+				// do the animation
 				actor.animate(task.anim_name);
+				
+				// do any additional custom actions
+				foreach(CustomAction action in task.custom_actions){
+					MethodInfo method = actor.GetType().GetMethod(action.name);
+					object[] oParameters = new object[action.parameters.Length];
+					Array.Copy(action.parameters, oParameters, action.parameters.Length);
+					method.Invoke(actor, oParameters);
+				}
 			}
 		}
 		
@@ -86,6 +102,7 @@ public class CutsceneManager : MonoBehaviour
 		
 		// parse json into cutscene object
 		Cutscene cs = JsonConvert.DeserializeObject<Cutscene>(currentCutsceneTxt.text);
+		cs.active = false;
 		cutsceneDict.Add(cs.id, cs);
 		
 		// done parsing json, release asset out of memory
@@ -94,6 +111,7 @@ public class CutsceneManager : MonoBehaviour
 	
 	public void PlayCutscene(int cutsceneId){
 		currentCutscene = cutsceneDict[cutsceneId];
+		currentCutscene.active = true;
 		cutsceneTimer = 0.0f;
 		currentTaskIndex = 0;
 		currentTask = currentCutscene.tasks[0];

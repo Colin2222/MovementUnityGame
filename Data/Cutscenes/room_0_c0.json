@@ -14,7 +14,7 @@
 			"anim_name":"PlayerWalking",
 			"custom_actions":[
 				{
-					"name":"MoveRight",
+					"name":"SetHorizontalVelocity",
 					"parameters":[
 						1.0
 					]
@@ -33,9 +33,9 @@
 			"anim_name":"PlayerIdle",
 			"custom_actions":[
 				{
-					"name":"MoveRight",
+					"name":"SetHorizontalVelocity",
 					"parameters":[
-						1.0
+						0.0
 					]
 				}
 			]

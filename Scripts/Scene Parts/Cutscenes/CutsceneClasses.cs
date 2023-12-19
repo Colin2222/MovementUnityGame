@@ -6,6 +6,7 @@ public class Cutscene{
     public int id;
 	public float duration;
 	public CutsceneTask[] tasks;
+	public bool active;
 }
 
 [System.Serializable]
