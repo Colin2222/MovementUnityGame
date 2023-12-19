@@ -11,7 +11,7 @@
 		{
 			"id":0,
 			"trigger_time":3.5,
-			"anim_name":"NoBurn",
+			"anim_name":"PlayerWalking",
 			"custom_actions":[
 				{
 					"name":"MoveRight",
@@ -26,6 +26,19 @@
 			"trigger_time":3.5,
 			"anim_name":"NoBurn",
 			"custom_actions":[]
+		},
+		{
+			"id":0,
+			"trigger_time":5.5,
+			"anim_name":"PlayerIdle",
+			"custom_actions":[
+				{
+					"name":"MoveRight",
+					"parameters":[
+						1.0
+					]
+				}
+			]
 		}
 	]
 }
