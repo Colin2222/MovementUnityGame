@@ -1084,6 +1084,7 @@ MonoBehaviour:
   animator: {fileID: 2098515062}
   id: 0
   rb: {fileID: 6829769311745543620}
+  spriteRenderer: {fileID: 6829769311745543617}
 --- !u!1 &6073811509661454979
 GameObject:
   m_ObjectHideFlags: 0

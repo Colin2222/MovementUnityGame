@@ -115,7 +115,7 @@ public class SceneManager : MonoBehaviour
 		}
 		GameObject.FindWithTag("MainCamera").GetComponent<Camera>().backgroundColor = backgroundColor;
 		
-		cutsceneManager.LoadCutscene("room_0_c0");
+		cutsceneManager.LoadCutscene("room_1_c0");
 		cutsceneManager.PlayCutscene(1);
     }
 	

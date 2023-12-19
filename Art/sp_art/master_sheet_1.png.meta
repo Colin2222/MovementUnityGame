@@ -112,7 +112,7 @@ TextureImporter:
         y: 1318
         width: 12
         height: 26
-      alignment: 6
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -133,7 +133,7 @@ TextureImporter:
         y: 1318
         width: 8
         height: 5
-      alignment: 6
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -154,7 +154,7 @@ TextureImporter:
         y: 997
         width: 505
         height: 340
-      alignment: 6
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -175,7 +175,7 @@ TextureImporter:
         y: 1262
         width: 48
         height: 42
-      alignment: 6
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -196,7 +196,7 @@ TextureImporter:
         y: 1130
         width: 178
         height: 160
-      alignment: 6
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -217,7 +217,7 @@ TextureImporter:
         y: 995
         width: 103
         height: 130
-      alignment: 6
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -238,7 +238,7 @@ TextureImporter:
         y: 993
         width: 103
         height: 130
-      alignment: 6
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -259,7 +259,7 @@ TextureImporter:
         y: 1020
         width: 75
         height: 170
-      alignment: 6
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -280,7 +280,7 @@ TextureImporter:
         y: 1106
         width: 372
         height: 126
-      alignment: 6
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -297,11 +297,11 @@ TextureImporter:
       name: master_sheet_1_9
       rect:
         serializedVersion: 2
-        x: 4
-        y: 997
-        width: 95
-        height: 84
-      alignment: 6
+        x: 1494
+        y: 1066
+        width: 37
+        height: 50
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -318,11 +318,11 @@ TextureImporter:
       name: master_sheet_1_10
       rect:
         serializedVersion: 2
-        x: 242
-        y: 523
-        width: 16
-        height: 26
-      alignment: 6
+        x: 1543
+        y: 1066
+        width: 37
+        height: 50
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -339,11 +339,11 @@ TextureImporter:
       name: master_sheet_1_11
       rect:
         serializedVersion: 2
-        x: 400
-        y: 149
-        width: 755
-        height: 560
-      alignment: 6
+        x: 1590
+        y: 1066
+        width: 37
+        height: 50
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -360,11 +360,11 @@ TextureImporter:
       name: master_sheet_1_12
       rect:
         serializedVersion: 2
-        x: 1226
-        y: 490
-        width: 177
-        height: 249
-      alignment: 6
+        x: 1637
+        y: 1066
+        width: 37
+        height: 50
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -373,6 +373,111 @@ TextureImporter:
       bones: []
       spriteID: 367cb8912f724324ea199648eb142f89
       internalID: 1012085613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: master_sheet_1_13
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 1066
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450c9f57420b41f4f92d12f975d81c9d
+      internalID: -601887324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: master_sheet_1_14
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 997
+        width: 95
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34f064cc73d2e8438ae14df2d6c2b4f
+      internalID: 700035410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: master_sheet_1_15
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 523
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b8575c28a0d2045a933ef8bb406f74
+      internalID: -1647064991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: master_sheet_1_16
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 149
+        width: 755
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b05ef9202bafca4ba81bbfecc8ad595
+      internalID: 319088825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: master_sheet_1_17
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 490
+        width: 177
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa689b2c3eca34428e567f10ae131e2
+      internalID: -1658471404
       vertices: []
       indices: 
       edges: []
@@ -389,15 +494,20 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       master_sheet_1_5: 1346396374
+      master_sheet_1_15: -1647064991
       master_sheet_1_4: -1781747981
       master_sheet_1_10: -861821475
       master_sheet_1_0: -2016042945
       master_sheet_1_12: 1012085613
+      master_sheet_1_14: 700035410
       master_sheet_1_2: -665350745
       master_sheet_1_6: 326248750
       master_sheet_1_7: -2127101998
       master_sheet_1_1: 1964273771
       master_sheet_1_3: -1734622466
+      master_sheet_1_13: -601887324
+      master_sheet_1_16: 319088825
+      master_sheet_1_17: -1658471404
       master_sheet_1_8: -651041935
       master_sheet_1_11: 1574848805
       master_sheet_1_9: 194020909

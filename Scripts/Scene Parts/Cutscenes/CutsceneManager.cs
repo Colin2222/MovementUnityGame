@@ -77,7 +77,9 @@ public class CutsceneManager : MonoBehaviour
 			// trigger event for all actors with the id for the task
 			foreach(CutsceneActor actor in actorsDict[task.id]){
 				// do the animation
-				actor.animate(task.anim_name);
+				if(task.anim_name != ""){
+					actor.animate(task.anim_name);
+				}
 				
 				// do any additional custom actions
 				foreach(CustomAction action in task.custom_actions){

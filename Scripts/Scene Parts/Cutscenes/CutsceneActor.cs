@@ -7,7 +7,10 @@ public class CutsceneActor : MonoBehaviour
     public Animator animator;
 	public int id;
 	public Rigidbody2D rb;
+	public SpriteRenderer spriteRenderer;
 	
+	float tempGrav;
+	bool gravityPaused = false;
 	Vector2 cutsceneVelocity;
 	[System.NonSerialized]
 	public CutsceneManager cutsceneManager;
@@ -33,5 +36,21 @@ public class CutsceneActor : MonoBehaviour
 	
 	public void SetHorizontalVelocity(float velocity){
 		cutsceneVelocity = new Vector2(velocity, cutsceneVelocity.y);
+	}
+	
+	public void ToggleGravity(){
+		if(gravityPaused){
+			rb.gravityScale = tempGrav;
+			gravityPaused = false;
+		} else{
+			tempGrav = rb.gravityScale;
+			rb.gravityScale = 0.0f;
+			gravityPaused = true;
+		}
+	}
+	
+	public void SetSpriteOrder(float orderF){
+		int order = (int)orderF;
+		spriteRenderer.sortingOrder = order;
 	}
 }
