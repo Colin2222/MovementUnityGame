@@ -29,25 +29,24 @@
 		{
 			"id":0,
 			"trigger_time":3.5,
-			"anim_name":"PlayerWalking",
-			"custom_actions":[
-				{
-					"name":"SetHorizontalVelocity",
-					"parameters":[
-						1.0
-					]
-				}
-			]
+			"anim_name":"PlayerWalkingDownStairs",
+			"custom_actions":[]
 		},
 		{
 			"id":0,
-			"trigger_time":5.5,
+			"trigger_time":4.5,
 			"anim_name":"PlayerIdle",
 			"custom_actions":[
 				{
 					"name":"SetHorizontalVelocity",
 					"parameters":[
 						0.0
+					]
+				},
+				{
+					"name":"VerticalShift",
+					"parameters":[
+						-0.55
 					]
 				}
 			]

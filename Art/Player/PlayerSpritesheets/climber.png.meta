@@ -2918,6 +2918,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: climber_134
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318c7f5b2baab164480196c991bea771
+      internalID: 1271992536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_135
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0c05ffe2c7e9b40b3d2cde1c8161c6
+      internalID: -1898787186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_136
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.65625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9d36e7ba9fb124b87d8d3cece966a3
+      internalID: -1536394791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_137
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0837e0f03c2c046479aa4c78982dcc67
+      internalID: 1900162873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -2977,6 +3061,7 @@ TextureImporter:
       climber_42: -70024076
       climber_32: 1761049271
       climber_86: -2122267675
+      climber_135: -1898787186
       climber_98: 270524739
       climber_82: -1986966335
       climber_51: 610329971
@@ -2989,6 +3074,7 @@ TextureImporter:
       climber_126: 954349324
       climber_7: 960599566
       climber_72: 1645760963
+      climber_134: 1271992536
       climber_11: -828391627
       climber_120: -661614877
       climber_60: 1558291517
@@ -3021,6 +3107,8 @@ TextureImporter:
       climber_20: -1085170298
       climber_21: 114796651
       climber_75: 546767951
+      climber_136: -1536394791
+      climber_137: 1900162873
       climber_129: -1031902473
       climber_133: -2066142659
       climber_79: 1795756305

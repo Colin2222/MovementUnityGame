@@ -38,6 +38,11 @@ public class CutsceneActor : MonoBehaviour
 		cutsceneVelocity = new Vector2(velocity, cutsceneVelocity.y);
 	}
 	
+	public void VerticalShift(float shift){
+		Transform trans = rb.gameObject.transform;
+		trans.position = new Vector3(trans.position.x, trans.position.y + shift, trans.position.z);
+	}
+	
 	public void ToggleGravity(){
 		if(gravityPaused){
 			rb.gravityScale = tempGrav;
