@@ -1,6 +1,6 @@
 {
 	"id":1,
-	"duration":6.5,
+	"duration":7.5,
 	"tasks":[
 		{
 			"id":0,
@@ -27,6 +27,19 @@
 			]
 		},
 		{
+			"id":1,
+			"trigger_time":3.5,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetSpriteOrder",
+					"parameters":[
+						-4.0
+					]
+				}
+			]
+		},
+		{
 			"id":0,
 			"trigger_time":3.5,
 			"anim_name":"PlayerWalkingDownStairs",
@@ -46,20 +59,37 @@
 				{
 					"name":"VerticalShift",
 					"parameters":[
-						-0.55
+						-0.6
 					]
 				}
 			]
 		},
 		{
-			"id":1,
-			"trigger_time":6.5,
-			"anim_name":"",
+			"id":0,
+			"trigger_time":5.0,
+			"anim_name":"PlayerWalking",
 			"custom_actions":[
 				{
-					"name":"SetSpriteOrder",
+					"name":"SetHorizontalVelocity",
 					"parameters":[
-						-4.0
+						-1.0
+					]
+				},
+				{
+					"name":"FaceLeft",
+					"parameters":[]
+				}
+			]
+		},
+		{
+			"id":0,
+			"trigger_time":6.5,
+			"anim_name":"PlayerIdle",
+			"custom_actions":[
+				{
+					"name":"SetHorizontalVelocity",
+					"parameters":[
+						0.0
 					]
 				}
 			]

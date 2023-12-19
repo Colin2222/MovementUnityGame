@@ -43,6 +43,21 @@ public class CutsceneActor : MonoBehaviour
 		trans.position = new Vector3(trans.position.x, trans.position.y + shift, trans.position.z);
 	}
 	
+	public void SetCoordinates(float x, float y){
+		Transform trans = rb.gameObject.transform;
+		trans.position = new Vector3(x, y, trans.position.z);
+	}
+	
+	public void FaceLeft(){
+		Transform trans = rb.gameObject.transform;
+		trans.eulerAngles = new Vector2(0,180);
+	}
+	
+	public void FaceRight(){
+		Transform trans = rb.gameObject.transform;
+		trans.eulerAngles = new Vector2(0,0);
+	}
+	
 	public void ToggleGravity(){
 		if(gravityPaused){
 			rb.gravityScale = tempGrav;
