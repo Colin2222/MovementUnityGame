@@ -2,26 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PStateSoaring : PState
+public class PStateRolling : PState
 {
-    public PStateSoaring(){
-		
+	float rollTimer;
+	float rollTime;
+	float minRollSpeed;
+	Rigidbody2D rb;
+	
+    public PStateRolling(){
+		PState.player.animator.Play("PlayerRolling");
+		minRollSpeed = PState.attr.groundRollMinSpeed;
+		rb = PState.rigidbody;
+		rollTime = PState.attr.groundRollTime;
+		rollTimer = 0.0f;
 	}
 	
     public override PState Update(){
+		rollTimer += Time.deltaTime;
+		if(rollTimer >= rollTime){
+			return new PStateMoving();
+		}
 		return this;
 	}
 	
 	public override PState FixedUpdate(){
+		if(Mathf.Abs(rb.velocity.x) < minRollSpeed){
+			float newVelo = minRollSpeed;
+			if(PState.direction == -1){
+				newVelo = newVelo * -1;
+			}
+			
+			rb.velocity = new Vector2(newVelo, rb.velocity.y);
+		}
 		return this;
 	}
 	
     public override PState HitGround(float hitSpeed){
-		PState.player.soundInterface.PlayStillJumpLand();
-		if(hitSpeed > PState.attr.groundHitSpeedRollThreshold){
-			return new PStateRollEntering();
-		}
-		return new PStateMoving();
+		return this;
 	}
 	
 	public override PState Move(float horizontal, float vertical){
@@ -45,19 +62,10 @@ public class PStateSoaring : PState
 	}
 	
 	public override PState HitWall(Vector2 wallCollisionVelocity){
-		if(Mathf.Abs(wallCollisionVelocity.x) > 0.0f){
-			return new PStateWallBracing(wallCollisionVelocity);
-		} else{
-			return this;
-		}
+		return this;
 	}
 	
 	public override PState Brace(){
-		if(PState.player.cornerHandler.mantleCorner != null){
-			return new PStateCornerMantling();
-		} else if(PState.player.cornerHandler.corner != null){
-			return new PStateCornerGrabbing();
-		}
 		return this;
 	}
 	

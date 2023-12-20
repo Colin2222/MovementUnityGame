@@ -3002,6 +3002,153 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: climber_138
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4281901ab3e14634b80b38322e704b72
+      internalID: -34253078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_139
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77cfc6d8ff729bd4c82bdc11a6ae653b
+      internalID: -299490526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_140
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6a0e583beba244287dcef29ee4ab12
+      internalID: 162345274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_141
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bb0a004a8b0ec4c8a811e0a675cc8f
+      internalID: 2053062626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_142
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2424266893cba947aec3e9697f7fab3
+      internalID: 2056343726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_143
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5737d547bdc7f429257c9e351d6ff6
+      internalID: 550168521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_144
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4521cf4ed83769428c281624017a8db
+      internalID: 577465788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -3028,6 +3175,7 @@ TextureImporter:
       climber_117: 2011190579
       climber_112: 860869102
       climber_94: 1793328015
+      climber_140: 162345274
       climber_58: -1937730778
       climber_22: 310695809
       climber_62: -1185919669
@@ -3047,6 +3195,7 @@ TextureImporter:
       climber_33: 864771259
       climber_78: -41287734
       climber_125: 1072806145
+      climber_143: 550168521
       climber_3: 1848742559
       climber_67: 1639587330
       climber_131: -1366221358
@@ -3084,6 +3233,7 @@ TextureImporter:
       climber_116: -435496955
       climber_14: -671057949
       climber_45: 426345408
+      climber_142: 2056343726
       climber_128: -1166522353
       climber_119: 1682304820
       climber_96: -1518058939
@@ -3105,6 +3255,7 @@ TextureImporter:
       climber_9: 387934992
       climber_107: -484280705
       climber_20: -1085170298
+      climber_139: -299490526
       climber_21: 114796651
       climber_75: 546767951
       climber_136: -1536394791
@@ -3144,12 +3295,15 @@ TextureImporter:
       climber_8: 746086249
       climber_26: 1204249027
       climber_93: -1689256263
+      climber_138: -34253078
       climber_17: -1277290294
       climber_81: -1638377369
+      climber_141: 2053062626
       climber_95: -832102157
       climber_101: 660880830
       climber_25: 1266912898
       climber_74: -194150775
+      climber_144: 577465788
       climber_80: -904632561
   spritePackingTag: 
   pSDRemoveMatte: 0

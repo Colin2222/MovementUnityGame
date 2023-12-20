@@ -2483,6 +2483,7 @@ MonoBehaviour:
   animator: {fileID: 1190378525}
   id: 1
   rb: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!95 &1190378525
 Animator:
   serializedVersion: 4
