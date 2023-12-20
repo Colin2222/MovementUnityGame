@@ -28,7 +28,9 @@ public class PStateRolling : PState
 	public override PState FixedUpdate(){
 		if(Mathf.Abs(rb.velocity.x) < minRollSpeed){
 			float newVelo = minRollSpeed;
-			if(PState.direction == -1){
+			if(rb.velocity.x == 0.0f){
+				newVelo = newVelo * PState.direction;
+			} else if(rb.velocity.x < 0.0f){
 				newVelo = newVelo * -1;
 			}
 			
@@ -70,7 +72,7 @@ public class PStateRolling : PState
 	}
 	
 	public override PState LeaveGround(){
-		return this;
+		return new PStateSoaring();
 	}
 	
 	public override PState LeaveWall(){

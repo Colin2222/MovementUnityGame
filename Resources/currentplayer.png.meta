@@ -3011,7 +3011,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3032,7 +3032,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3053,7 +3053,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3074,7 +3074,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3095,7 +3095,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3116,7 +3116,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3137,7 +3137,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3145,6 +3145,195 @@ TextureImporter:
       bones: []
       spriteID: 04b0981c404e85c44ba33bc5f8c47619
       internalID: -1993568689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_145
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f3924ec1323af47a2e2325cb23da2e
+      internalID: -100816209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_146
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e160291df1f5534daa68f61b5ff7199
+      internalID: 1985048406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_147
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91875203f2a6d024a8206ed8d952ecba
+      internalID: -2115471147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_148
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d67fe2bde3eaecc4887360eda3981ea2
+      internalID: 2005727069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_149
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8099180c2a786c545989bbae95436201
+      internalID: -1199627214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_150
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7be13b04327794781f19ba4b080b8f
+      internalID: -1683727132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_151
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d63ac5b12266b84b900fe05cc999511
+      internalID: -463208444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_152
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c51ac78f4d1db419ebcdea7ecdfd82
+      internalID: 2144872210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_153
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0f4a28c4830524ba881bfae4cd84ad
+      internalID: -1718799367
       vertices: []
       indices: 
       edges: []
@@ -3174,6 +3363,7 @@ TextureImporter:
       currentplayer_113: 394137728
       currentplayer_10: -1014247422
       currentplayer_57: 1556540821
+      currentplayer_149: -1199627214
       currentplayer_5: -786048805
       currentplayer_36: 1228869191
       currentplayer_81: 535238310
@@ -3211,6 +3401,7 @@ TextureImporter:
       currentplayer_62: -952949346
       currentplayer_100: -906211597
       currentplayer_25: -585601259
+      currentplayer_151: -463208444
       currentplayer_21: 1639217770
       currentplayer_17: -61339146
       currentplayer_47: 1146966776
@@ -3222,6 +3413,7 @@ TextureImporter:
       currentplayer_74: -1568829587
       currentplayer_97: 544674896
       currentplayer_131: -166998130
+      currentplayer_145: -100816209
       currentplayer_133: 2134626873
       currentplayer_135: -1163384418
       currentplayer_68: 1644779578
@@ -3234,6 +3426,8 @@ TextureImporter:
       currentplayer_70: 91919646
       currentplayer_106: -1278463769
       currentplayer_48: 1406243252
+      currentplayer_147: -2115471147
+      currentplayer_153: -1718799367
       currentplayer_20: -1944708474
       currentplayer_37: 1905612063
       currentplayer_115: 1632668957
@@ -3268,8 +3462,10 @@ TextureImporter:
       currentplayer_122: 795088060
       currentplayer_130: 2052752142
       currentplayer_123: -639393835
+      currentplayer_146: 1985048406
       currentplayer_134: -2111570363
       currentplayer_127: 1437246482
+      currentplayer_150: -1683727132
       currentplayer_77: 367643327
       currentplayer_18: -628280373
       currentplayer_14: 1881665983
@@ -3293,11 +3489,13 @@ TextureImporter:
       currentplayer_58: -65735968
       currentplayer_6: 1026874652
       currentplayer_119: 544208496
+      currentplayer_152: 2144872210
       currentplayer_39: -1759662416
       currentplayer_73: 949184871
       currentplayer_76: -2060556978
       currentplayer_142: -1706684134
       currentplayer_7: 2041676721
+      currentplayer_148: 2005727069
       currentplayer_52: -1156451195
       currentplayer_89: -1718551309
       currentplayer_43: -105969833

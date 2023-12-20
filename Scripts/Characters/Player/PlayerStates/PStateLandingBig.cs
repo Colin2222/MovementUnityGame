@@ -2,26 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PStateRollEntering : PState
+public class PStateLandingBig : PState
 {
-	float rollWindowTimer;
-	float rollWindow;
+	float landingTimer;
+	float landingTime;
+	float moveForce;
+	float landingBigForceMultiplier;
 	
-    public PStateRollEntering(){
-		PState.player.animator.Play("PlayerRollEntering");
-		rollWindow = PState.attr.groundRollBraceWindow;
-		rollWindowTimer = 0.0f;
+    public PStateLandingBig(){
+		PState.player.animator.Play("PlayerLandingBig");
+		landingTime = PState.attr.landingBigTime;
+		moveForce = PState.attr.moveForce;
+		landingBigForceMultiplier = PState.attr.landingBigForceMultiplier;
 	}
 	
     public override PState Update(){
-		rollWindowTimer += Time.deltaTime;
-		if(rollWindowTimer >= rollWindow){
-			return new PStateLandingBig();
+		landingTimer += Time.deltaTime;
+		if(landingTimer >= landingTime){
+			return new PStateIdle();
 		}
 		return this;
 	}
 	
 	public override PState FixedUpdate(){
+		// apply resistive force
+		PState.rigidbody.AddForce(PState.rigidbody.velocity * moveForce * -1.0f * landingBigForceMultiplier, ForceMode2D.Force);
 		return this;
 	}
 	
@@ -54,7 +59,7 @@ public class PStateRollEntering : PState
 	}
 	
 	public override PState Brace(){
-		return new PStateRolling();
+		return this;
 	}
 	
 	public override PState LeaveGround(){

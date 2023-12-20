@@ -167,6 +167,8 @@ MonoBehaviour:
     groundRollBraceWindow: 0
     groundRollTime: 0
     groundRollMinSpeed: 0
+    landingBigTime: 0
+    landingBigForceMultiplier: 0
   interactor: {fileID: 1011390647}
 --- !u!1 &1011390644
 GameObject:
@@ -1218,7 +1220,9 @@ MonoBehaviour:
     groundHitSpeedMaxThreshold: 0
     groundRollBraceWindow: 0.125
     groundRollTime: 0.4
-    groundRollMinSpeed: 3
+    groundRollMinSpeed: 5
+    landingBigTime: 0.8
+    landingBigForceMultiplier: 0.9
 --- !u!1 &6829769310522087713
 GameObject:
   m_ObjectHideFlags: 0
