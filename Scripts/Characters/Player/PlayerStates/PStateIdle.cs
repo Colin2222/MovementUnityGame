@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PStateIdle : PState
 {
-	public PStateIdle(PlayerHub player, PlayerAttributeSet attr, Rigidbody2D rigidbody){
+	public PStateIdle(PlayerHub player, PlayerInputManager inputManager, PlayerAttributeSet attr, Rigidbody2D rigidbody){
 		PState.player = player;
+		PState.inputManager = inputManager;
 		PState.attr = attr;
 		PState.rigidbody = rigidbody;
 		PState.direction = 1;
@@ -16,6 +17,7 @@ public class PStateIdle : PState
 	}
 	
     public override PState Update(){
+		PState.timeSinceLastGroundHit += Time.deltaTime;
 		return this;
 	}
 	
@@ -62,6 +64,8 @@ public class PStateIdle : PState
 			return new PStateCornerMantling();
 		} else if(PState.player.cornerHandler.corner != null){
 			return new PStateCornerGrabbing();
+		} else if(PState.timeSinceLastGroundHit < PState.attr.optionalRollWindow){
+			return new PStateRolling();
 		}
 		return this;
 	}

@@ -5,9 +5,12 @@ using UnityEngine;
 public abstract class PState
 {
 	protected static PlayerHub player;
+	protected static PlayerInputManager inputManager;
 	protected static PlayerAttributeSet attr;
 	protected static Rigidbody2D rigidbody;
 	protected static int direction;
+	protected static float timeSinceLastGroundHit;
+	protected static float lastGroundHitSpeed;
 	
 	public abstract PState Update();
 	public abstract PState FixedUpdate();

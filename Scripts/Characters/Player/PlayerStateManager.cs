@@ -13,7 +13,7 @@ public class PlayerStateManager : MonoBehaviour
 	}
 	
 	void Start(){
-		currentState = new PStateIdle(player, player.attributeManager.attrSet, player.rigidbody);
+		currentState = new PStateIdle(player, player.inputManager, player.attributeManager.attrSet, player.rigidbody);
 	}
 	
 	void Update(){

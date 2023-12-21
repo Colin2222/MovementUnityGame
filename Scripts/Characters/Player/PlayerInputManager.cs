@@ -18,7 +18,7 @@ public class PlayerInputManager : MonoBehaviour
 	float vertical;
 	
 	// bracing tracking
-	bool bracing = false;
+	public bool bracing = false;
 	float braceTimer;
 	float braceCooldownTimer;
 	bool justBraceChanged = false;

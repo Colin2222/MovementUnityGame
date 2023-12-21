@@ -41,10 +41,12 @@ public class PlayerAttributeSet
 	public float wallSplatStumbleSpeed;
 	
 	public float groundHitSpeedRollThreshold;
+	public float groundHitSpeedRollMin;
 	public float groundHitSpeedMaxThreshold;
 	public float groundRollBraceWindow;
 	public float groundRollTime;
 	public float groundRollMinSpeed;
 	public float landingBigTime;
 	public float landingBigForceMultiplier;
+	public float optionalRollWindow;
 }

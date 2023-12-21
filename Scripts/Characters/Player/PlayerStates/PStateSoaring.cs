@@ -20,7 +20,11 @@ public class PStateSoaring : PState
 		PState.player.soundInterface.PlayStillJumpLand();
 		if(hitSpeed > PState.attr.groundHitSpeedRollThreshold){
 			return new PStateRollEntering();
+		} else if(hitSpeed > PState.attr.groundHitSpeedRollMin && PState.inputManager.bracing){
+			return new PStateRolling();
 		}
+		PState.timeSinceLastGroundHit = 0.0f;
+		PState.lastGroundHitSpeed = hitSpeed;
 		return new PStateMoving();
 	}
 	

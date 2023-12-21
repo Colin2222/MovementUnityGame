@@ -163,13 +163,16 @@ MonoBehaviour:
     wallSplatStumbleTime: 0
     wallSplatStumbleSpeed: 0
     groundHitSpeedRollThreshold: 0
+    groundHitSpeedRollMin: 0
     groundHitSpeedMaxThreshold: 0
     groundRollBraceWindow: 0
     groundRollTime: 0
     groundRollMinSpeed: 0
     landingBigTime: 0
     landingBigForceMultiplier: 0
+    optionalRollWindow: 0
   interactor: {fileID: 1011390647}
+  bracing: 0
 --- !u!1 &1011390644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,12 +1220,14 @@ MonoBehaviour:
     wallSplatStumbleTime: 1.1
     wallSplatStumbleSpeed: 0.55
     groundHitSpeedRollThreshold: 15
+    groundHitSpeedRollMin: 0
     groundHitSpeedMaxThreshold: 0
     groundRollBraceWindow: 0.125
     groundRollTime: 0.4
     groundRollMinSpeed: 5
     landingBigTime: 0.8
     landingBigForceMultiplier: 0.9
+    optionalRollWindow: 0.125
 --- !u!1 &6829769310522087713
 GameObject:
   m_ObjectHideFlags: 0

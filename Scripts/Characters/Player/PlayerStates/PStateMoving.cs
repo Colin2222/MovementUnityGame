@@ -13,6 +13,7 @@ public class PStateMoving : PState
 	
     public override PState Update(){
 		PState.player.animator.Play("PlayerRunning");
+		PState.timeSinceLastGroundHit += Time.deltaTime;
 		return this;
 	}
 	
@@ -86,6 +87,8 @@ public class PStateMoving : PState
 			return new PStateCornerMantling();
 		} else if(PState.player.cornerHandler.corner != null){
 			return new PStateCornerGrabbing();
+		} else if(PState.timeSinceLastGroundHit < PState.attr.optionalRollWindow){
+			return new PStateRolling();
 		}
 		return this;
 	}
