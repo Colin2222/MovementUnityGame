@@ -27,16 +27,16 @@ public abstract class PState
 	
 	protected void SetDirection(float horizontal){
 		if(horizontal > 0){
-			if(direction != 1){
+			if(player.transform.eulerAngles.y == 180){
 				player.transform.eulerAngles = new Vector2(0,0);
-				direction = 1;
 			}
+			direction = 1;
 		}
 		if(horizontal < 0){
-			if(direction != -1){
+			if(player.transform.eulerAngles.y == 0){
 				player.transform.eulerAngles = new Vector2(0,180);
-				direction = -1;
 			}
+			direction = -1;
 		}
 	}
 	
