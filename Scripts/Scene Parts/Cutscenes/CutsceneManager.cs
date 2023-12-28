@@ -22,7 +22,6 @@ public class CutsceneManager : MonoBehaviour
 	Cutscene currentCutscene;
 	int currentTaskIndex;
 	CutsceneTask currentTask;
-	List<CutsceneAction> actions; 
 	Dictionary<int, List<CutsceneActor>> actorsDict;
 	Dictionary<int, Cutscene> cutsceneDict;
 	
@@ -47,6 +46,12 @@ public class CutsceneManager : MonoBehaviour
 					actorsDict.Add(id, new List<CutsceneActor>());
 				}
 				actorsDict[id].Add(actor);
+				
+				// deactivate actor's gameobject if designated as deactivated
+				if(actor.deactivatedOnStart){
+					actor.gameObject.SetActive(false);
+				}
+				
 				actor.cutsceneManager = this;
 			}
 		}
@@ -76,17 +81,17 @@ public class CutsceneManager : MonoBehaviour
 		if(actorsDict.ContainsKey(task.id)){
 			// trigger event for all actors with the id for the task
 			foreach(CutsceneActor actor in actorsDict[task.id]){
-				// do the animation
-				if(task.anim_name != ""){
-					actor.animate(task.anim_name);
-				}
-				
-				// do any additional custom actions
+				// do any custom actions
 				foreach(CustomAction action in task.custom_actions){
 					MethodInfo method = actor.GetType().GetMethod(action.name);
 					object[] oParameters = new object[action.parameters.Length];
 					Array.Copy(action.parameters, oParameters, action.parameters.Length);
 					method.Invoke(actor, oParameters);
+				}
+				
+				// do the animation
+				if(task.anim_name != ""){
+					actor.animate(task.anim_name);
 				}
 			}
 		}

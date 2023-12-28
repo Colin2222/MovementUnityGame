@@ -144,6 +144,7 @@ MonoBehaviour:
     cornerMantleTime: 0
     cornerClimbTime: 0
     cornerClimbVertJoystickThreshold: 0
+    cornerMantleMinHorizontalKeepSpeed: 0
     wallBraceTime: 0
     wallPushTime: 0
     wallPushHorizontalRetention: 0
@@ -904,7 +905,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09181118, y: 0.59}
+  m_Size: {x: 0.091, y: 0.64}
   m_EdgeRadius: 0
 --- !u!114 &1585249587
 MonoBehaviour:
@@ -1201,6 +1202,7 @@ MonoBehaviour:
     cornerMantleTime: 0.5833333
     cornerClimbTime: 0.9166667
     cornerClimbVertJoystickThreshold: 0.9
+    cornerMantleMinHorizontalKeepSpeed: 0
     wallBraceTime: 0.2
     wallPushTime: 0.1
     wallPushHorizontalRetention: 0.05

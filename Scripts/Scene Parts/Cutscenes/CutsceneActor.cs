@@ -8,6 +8,7 @@ public class CutsceneActor : MonoBehaviour
 	public int id;
 	public Rigidbody2D rb;
 	public SpriteRenderer spriteRenderer;
+	public bool deactivatedOnStart;
 	
 	float tempGrav;
 	bool gravityPaused = false;
@@ -56,6 +57,10 @@ public class CutsceneActor : MonoBehaviour
 	public void FaceRight(){
 		Transform trans = rb.gameObject.transform;
 		trans.eulerAngles = new Vector2(0,0);
+	}
+	
+	public void ToggleActivation(){
+		gameObject.SetActive(!(gameObject.activeInHierarchy));
 	}
 	
 	public void ToggleGravity(){

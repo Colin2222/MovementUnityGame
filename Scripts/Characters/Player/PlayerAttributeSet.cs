@@ -21,6 +21,7 @@ public class PlayerAttributeSet
 	public float cornerMantleTime;
 	public float cornerClimbTime;
 	public float cornerClimbVertJoystickThreshold;
+	public float cornerMantleMinHorizontalKeepSpeed;
 	public float wallBraceTime;
 	public float wallPushTime;
 	public float wallPushHorizontalRetention;

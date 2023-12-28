@@ -39,6 +39,17 @@
 					]
 				}
 			]
+		},
+		{
+			"id":2,
+			"trigger_time":5.5,
+			"anim_name":"LimboDoorOpening",
+			"custom_actions":[
+				{
+					"name":"ToggleActivation",
+					"parameters":[]
+				}
+			]
 		}
 	]
 }
