@@ -7,7 +7,6 @@ public class BottomCheck : MonoBehaviour
     public CharacterPhysicsChecker parentPhysics;
 	public Rigidbody2D rigidbody;
 	public float distanceToGround;
-	public PlayerMover playerMover;
 	LayerMask mask;
 	List<Transform> collisions;
 	
