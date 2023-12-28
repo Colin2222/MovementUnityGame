@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SceneTransitionManager : MonoBehaviour
 {
 	public SceneManager sceneManager;
+	PersistentState persistentState;
 	public RawImage transitionShape;
 	public RectTransform exitPos;
 	public float transitionSpeed;

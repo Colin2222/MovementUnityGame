@@ -41,6 +41,9 @@ public class SceneManager : MonoBehaviour
 	
 	public SceneTransitionManager transitionManager;
 	
+	public PersistentState persistentState;
+	public GameObject persistentStatePrefab;
+	
 	public CutsceneManager cutsceneManager;
 	
 	public Color obstacleColor;
@@ -51,6 +54,7 @@ public class SceneManager : MonoBehaviour
 	
     GameObject playerStateObjectTest;
     GameObject playerObjectTest;
+    GameObject persistentStateTest;
 	
 	void Awake(){
 		// load in items from data xml
@@ -61,7 +65,15 @@ public class SceneManager : MonoBehaviour
 		levelRegistry = LevelRegistry.Instance();
 		levelRegistry.LoadLevels(levelRegistryXml);
 		
-		
+		// check if there is a DontDestroyOnLoad persistent state
+		// used for determining which door the player will enter from
+		persistentStateTest = GameObject.FindWithTag("PersistentState");
+        if(persistentStateTest == null){
+            persistentState = Instantiate(persistentStatePrefab,new Vector3(0,0,0),Quaternion.identity).GetComponent<PersistentState>();
+        }
+        else{
+            persistentState = persistentStateTest.GetComponent<PersistentState>();
+        }
 		
 		// check if there is a DontDestroyOnLoad player, create a new one if there isnt
         playerObjectTest = GameObject.FindWithTag("Player");

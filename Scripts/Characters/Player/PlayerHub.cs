@@ -9,7 +9,7 @@ public class PlayerHub : MonoBehaviour
 	public PlayerInputManager inputManager;
 	public PlayerStateManager stateManager;
 	public CornerHandler cornerHandler;
-	public PlayerState state;
+	public PersistentState state;
 	public Animator animator;
 	public PlayerReskinManager reskinner;
 	public PlayerAttributeManager attributeManager;
@@ -17,7 +17,6 @@ public class PlayerHub : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-		state = new PlayerState();
 		SwitchPlayerSpritesheet("currentplayer");
     }
 	

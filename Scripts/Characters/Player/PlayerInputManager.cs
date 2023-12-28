@@ -21,7 +21,6 @@ public class PlayerInputManager : MonoBehaviour
 	public bool bracing = false;
 	float braceTimer;
 	float braceCooldownTimer;
-	bool justBraceChanged = false;
 	
 	// climbing up/down tracking
 	bool canClimbUp = false;
