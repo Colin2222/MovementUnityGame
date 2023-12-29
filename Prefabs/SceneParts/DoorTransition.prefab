@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 1838350060965085992}
   - component: {fileID: 1838350060965085993}
   m_Layer: 0
-  m_Name: limbo_door_0
+  m_Name: DoorTransition
   m_TagString: CutsceneActor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

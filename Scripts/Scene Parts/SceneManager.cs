@@ -146,11 +146,11 @@ public class SceneManager : MonoBehaviour
 	}
 
     // loads the scene of the inputted build index
-    public void SwitchScenes(int buildIndex)
+    public IEnumerator SwitchScenes(int buildIndex)
     {
 		Debug.Log("SWITCHING SCENES");
 		
-        //yield return new WaitForSeconds(transitionTime);
+        yield return new WaitForSeconds(transitionTime);
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(buildIndex);
     }
