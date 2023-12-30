@@ -1227,7 +1227,7 @@ MonoBehaviour:
     groundHitSpeedMaxThreshold: 0
     groundRollBraceWindow: 0.125
     groundRollTime: 0.4
-    groundRollMinSpeed: 5
+    groundRollMinSpeed: 6.5
     landingBigTime: 0.8
     landingBigForceMultiplier: 0.9
     optionalRollWindow: 0.125
@@ -1305,7 +1305,6 @@ MonoBehaviour:
   parentPhysics: {fileID: 6829769312316459285}
   rigidbody: {fileID: 6829769311745543620}
   distanceToGround: 1.05
-  playerMover: {fileID: 0}
 --- !u!1 &6829769311745543616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,6 +1422,7 @@ MonoBehaviour:
   inputManager: {fileID: 588900340537133547}
   stateManager: {fileID: 5555245007042818769}
   cornerHandler: {fileID: 2062545488}
+  state: {fileID: 0}
   animator: {fileID: 2098515062}
   reskinner: {fileID: 622292847772405887}
   attributeManager: {fileID: 6501627088609475746}
