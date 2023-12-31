@@ -25,6 +25,10 @@ MonoBehaviour:
     m_Address: Assets/Data/Cutscenes/room_1_c0.json
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 261b836a33f3b3e469f50f7fa1621b63
+    m_Address: Assets/Data/journal_data.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:

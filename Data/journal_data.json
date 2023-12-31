@@ -1,8 +1,8 @@
 {
-	"pages":[
+	"entries":[
 		{
 			"number":0,
-			"textImageLocation":"poop",
+			"writingImageLocation":"test_page",
 			"drawingImageLocation":"poop",
 			"found":false,
 			"completed":false
