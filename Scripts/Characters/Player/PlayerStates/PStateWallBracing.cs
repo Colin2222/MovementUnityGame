@@ -86,4 +86,8 @@ public class PStateWallBracing : PState
 	public override PState LeaveWall(){
 		return new PStateSoaring();
 	}
+	
+	public override PState ToggleJournal(){
+		return this;
+	}
 }

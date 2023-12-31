@@ -13,6 +13,9 @@ public class PlayerInputManager : MonoBehaviour
 	// locking player input
 	bool locked = false;
 	
+	// in ui
+	bool inUI = false;
+	
 	// joystick movement
 	float horizontal;
 	float vertical;
@@ -49,6 +52,8 @@ public class PlayerInputManager : MonoBehaviour
 	private bool menuPageLeftJustPressed = false;
 	private bool interactPressed = false;
 	private bool interactJustPressed = false;
+	private bool toggleJournalPressed = false;
+	private bool toggleJournalJustPressed = false;
 	
     // Start is called before the first frame update
     void Start()
@@ -80,6 +85,7 @@ public class PlayerInputManager : MonoBehaviour
 		menuPageRightJustPressed = false;
 		menuPageLeftJustPressed = false;
 		interactJustPressed = false;
+		toggleJournalJustPressed = false;
     }
 	
 	public void LockPlayer(){
@@ -201,6 +207,21 @@ public class PlayerInputManager : MonoBehaviour
 		
 		if(!locked && interactJustPressed){
 			interactor.Interact();
+		}
+	}
+	
+	private void OnToggleJournal(){
+		toggleJournalPressed = !toggleJournalPressed;
+		toggleJournalJustPressed = toggleJournalPressed;
+		
+		if(toggleJournalJustPressed){
+			if(stateManager.ToggleJournal()){
+				LockPlayer();
+				inUI = true;
+			} else{
+				UnlockPlayer();
+				inUI = false;
+			}
 		}
 	}
 }

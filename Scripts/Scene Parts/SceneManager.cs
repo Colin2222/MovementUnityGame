@@ -24,6 +24,8 @@ public class SceneManager : MonoBehaviour
 	public LevelRegistry levelRegistry;
 	public string levelRegistryXml;
 	
+	public JournalManager journalManager;
+	
 	public ProfileManager profileManager;
 	public LevelSelectionManager levelSelectManager;
 	public bool isHubWorld;

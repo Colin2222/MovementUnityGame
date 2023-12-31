@@ -72,4 +72,8 @@ public class PStateJumpBracing : PState
 	public override PState LeaveWall(){
 		return this;
 	}
+	
+	public override PState ToggleJournal(){
+		return this;
+	}
 }

@@ -76,4 +76,8 @@ public class PStateWallPushing : PState
 	public override PState LeaveWall(){
 		return new PStateSoaring();
 	}
+	
+	public override PState ToggleJournal(){
+		return this;
+	}
 }

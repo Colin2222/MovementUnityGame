@@ -65,4 +65,9 @@ public class PlayerStateManager : MonoBehaviour
 	public void ClimbDown(){
 		currentState = currentState.ClimbDown();
 	}
+	
+	public bool ToggleJournal(){
+		currentState = currentState.ToggleJournal();
+		return (currentState is PStateViewingJournal);
+	}
 }

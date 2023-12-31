@@ -24,6 +24,7 @@ public abstract class PState
 	public abstract PState ReleaseJump();
 	public abstract PState HitWall(Vector2 wallCollisionVelocity);
 	public abstract PState Brace();
+	public abstract PState ToggleJournal();
 	
 	protected void SetDirection(float horizontal){
 		if(horizontal > 0){
