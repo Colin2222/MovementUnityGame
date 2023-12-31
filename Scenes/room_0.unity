@@ -1239,7 +1239,7 @@ PrefabInstance:
     - target: {fileID: 4883283184172750917, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: journalUI
       value: 
-      objectReference: {fileID: 916820323}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
 --- !u!1 &461218410
@@ -1941,11 +1941,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &916820323 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 713886638131594899, guid: 6151d37b8dea783498bf302d5bf7ee74, type: 3}
-  m_PrefabInstance: {fileID: 650399296}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &950842988
 GameObject:
   m_ObjectHideFlags: 0
@@ -4480,6 +4475,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6851262453042025105, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8611919730278009160, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
       propertyPath: m_Name
       value: JournalCanvas
