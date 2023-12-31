@@ -11,9 +11,9 @@ public class JournalManager : MonoBehaviour
 	public bool active = false;
 	
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -28,6 +28,10 @@ public class JournalManager : MonoBehaviour
 	
 	public void Deactivate(){
 		journalUI.SetActive(false);
+	}
+	
+	public void SeekUI(){
+		journalUI = GameObject.FindWithTag("JournalUI").GetComponent<JournalCanvasScript>().journalObject;
 	}
 }
 

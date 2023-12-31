@@ -223,7 +223,6 @@ Transform:
   - {fileID: 313734395}
   - {fileID: 1400514093123442446}
   - {fileID: 8206124179566576502}
-  - {fileID: 577923998945782638}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -247,7 +246,7 @@ MonoBehaviour:
   profileManagerPrefab: {fileID: 7138545551088395205, guid: 5a004e8ac2d0dde40afe8faa39b9981f, type: 3}
   itemRegistryXml: items
   levelRegistryXml: levels
-  journalManager: {fileID: 4883283184172750917}
+  journalManagerPrefab: {fileID: 4832083573445037560, guid: 38cb56a6c448e7a468542eac88d9edae, type: 3}
   profileManager: {fileID: 0}
   levelSelectManager: {fileID: 0}
   isHubWorld: 0
@@ -413,48 +412,3 @@ MonoBehaviour:
   - {r: 0.8000001, g: 0.78823537, b: 0.47058827, a: 1}
   - {r: 0.8000001, g: 0.61960787, b: 0.5019608, a: 1}
   - {r: 0.8000001, g: 0.43921572, b: 0.49803925, a: 1}
---- !u!1 &8917698343800192023
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 577923998945782638}
-  - component: {fileID: 4883283184172750917}
-  m_Layer: 0
-  m_Name: JournalManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &577923998945782638
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8917698343800192023}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4845049507479276211}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4883283184172750917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8917698343800192023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95beadc498b0f7a49a092acadb3310d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  journalUI: {fileID: 0}

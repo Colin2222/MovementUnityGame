@@ -24,7 +24,9 @@ public class SceneManager : MonoBehaviour
 	public LevelRegistry levelRegistry;
 	public string levelRegistryXml;
 	
+	[System.NonSerialized]
 	public JournalManager journalManager;
+	public GameObject journalManagerPrefab;
 	
 	public ProfileManager profileManager;
 	public LevelSelectionManager levelSelectManager;
@@ -100,6 +102,15 @@ public class SceneManager : MonoBehaviour
 		profileManager.SetPlayerRef(player);
 		profileManager.ResetPlayerSpritesheet();
 		
+		// check if there is a DontDestroyOnLoad journal manager, create a new one if there isnt
+        GameObject journalManagerObjectTest = GameObject.FindWithTag("JournalManager");
+		if(journalManagerObjectTest == null){
+            journalManager = Instantiate(journalManagerPrefab,new Vector3(0,0,0),Quaternion.identity).GetComponent<JournalManager>();
+        }
+		else{
+            journalManager = journalManagerObjectTest.GetComponent<JournalManager>();
+        }
+		
 		player.InvertPlayerOutline(invertPlayerColor);
 	}
 	
@@ -128,6 +139,8 @@ public class SceneManager : MonoBehaviour
 			block.GetComponent<SpriteRenderer>().color = obstacleColor;
 		}
 		GameObject.FindWithTag("MainCamera").GetComponent<Camera>().backgroundColor = backgroundColor;
+		
+		journalManager.SeekUI();
 		
 		cutsceneManager.LoadCutscene("room_0_c0");
 		cutsceneManager.PlayCutscene(1);
