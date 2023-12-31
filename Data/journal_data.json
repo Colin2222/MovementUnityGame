@@ -1,5 +1,11 @@
 {
 	"pages":[
-		
+		{
+			"number":0,
+			"textImageLocation":"poop",
+			"drawingImageLocation":"poop",
+			"found":false,
+			"completed":false
+		}
 	]
 }

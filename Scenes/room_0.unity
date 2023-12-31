@@ -4475,6 +4475,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 854370941286667748, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 854370941286667748, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 854370941286667748, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950065576100139324, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950065576100139324, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6851262453042025105, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4482,6 +4502,30 @@ PrefabInstance:
     - target: {fileID: 8611919730278009160, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
       propertyPath: m_Name
       value: JournalCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611919730278009162, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
+      propertyPath: m_ScaleFactor
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611919730278009162, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611919730278009162, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611919730278009162, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611919730278009162, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611919730278009162, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 8611919730278009164, guid: 1625daa32a2b8974597977b04da27a89, type: 3}
       propertyPath: m_Pivot.x

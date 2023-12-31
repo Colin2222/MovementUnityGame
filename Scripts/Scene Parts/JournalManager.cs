@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JournalManager : MonoBehaviour
 {
-	public GameObject journalUI;
+	public JournalCanvasScript journalUI;
 	int currentPage;
 	
 	[System.NonSerialized]
@@ -14,6 +14,8 @@ public class JournalManager : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+		
+		// load in persistent journal data
     }
 
     // Update is called once per frame
@@ -23,19 +25,22 @@ public class JournalManager : MonoBehaviour
     }
 	
 	public void Activate(){
-		journalUI.SetActive(true);
+		journalUI.journalObject.SetActive(true);
 	}
 	
 	public void Deactivate(){
-		journalUI.SetActive(false);
+		journalUI.journalObject.SetActive(false);
 	}
 	
 	public void SeekUI(){
-		journalUI = GameObject.FindWithTag("JournalUI").GetComponent<JournalCanvasScript>().journalObject;
+		journalUI = GameObject.FindWithTag("JournalUI").GetComponent<JournalCanvasScript>();
 	}
 }
 
 public class JournalEntry{
+	int number;
 	string textImageLocation;
 	string drawingImageLocation;
+	bool found;
+	bool completed;
 }
