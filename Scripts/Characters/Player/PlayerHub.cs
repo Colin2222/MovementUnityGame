@@ -9,7 +9,7 @@ public class PlayerHub : MonoBehaviour
 	public PlayerInputManager inputManager;
 	public PlayerStateManager stateManager;
 	public CornerHandler cornerHandler;
-	public PersistentState state;
+	public PersistentState persistentState;
 	public Animator animator;
 	public PlayerReskinManager reskinner;
 	public PlayerAttributeManager attributeManager;

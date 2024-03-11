@@ -29,6 +29,10 @@ MonoBehaviour:
     m_Address: Assets/Data/journal_data.json
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: d7d8bf728eb415349877adc784aeea46
+    m_Address: Assets/Data/JournalPages/test_page.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:
