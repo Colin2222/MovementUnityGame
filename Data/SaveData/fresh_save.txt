@@ -1,86 +1,63 @@
 {
-	"completed_quests":[
-	
-	],
-	"current_quests":[
-	
-	],
-	"uncompleted_quests":[
-	
-	],
-	"rooms":[
-		{
-			"id":"room_0",
-			"display_name":"Limbo",
-			"sites":[
-				{
-					"id":0,
-					"display_name":"western hideout under the overhang"
-					"active":0
-				},
-				{
-					"id":1,
-					"display_name":"western opening under the overhang"
-					"active":0
-				}
-			]
-		}
-	]
-
-
-
-
-	"id":1,
-	"duration":6.5,
-	"tasks":[
-		{
-			"id":1,
-			"trigger_time":0.0,
-			"anim_name":"BurnFire",
-			"custom_actions":[]
-		},
-		{
-			"id":0,
-			"trigger_time":3.5,
-			"anim_name":"PlayerWalking",
-			"custom_actions":[
-				{
-					"name":"SetHorizontalVelocity",
-					"parameters":[
-						1.0
-					]
-				}
-			]
-		},
-		{
-			"id":1,
-			"trigger_time":3.5,
-			"anim_name":"NoBurn",
-			"custom_actions":[]
-		},
-		{
-			"id":0,
-			"trigger_time":5.5,
-			"anim_name":"PlayerIdle",
-			"custom_actions":[
-				{
-					"name":"SetHorizontalVelocity",
-					"parameters":[
-						0.0
-					]
-				}
-			]
-		},
-		{
-			"id":2,
-			"trigger_time":5.5,
-			"anim_name":"LimboDoorOpening",
-			"custom_actions":[
-				{
-					"name":"ToggleActivation",
-					"parameters":[]
-				}
-			]
-		}
-	]
+	"completed_quests":{
+		"quest_4":
+			{
+				"id":"quest_4",
+				"display_name":"Boot up the game",
+				"decision_tags":[]
+			}
+	},
+	"current_quests":{
+		"quest_0":
+			{
+				"id":"quest_0",
+				"display_name":"Reach the guidestone",
+				"decision_tags":[]
+			}
+	},
+	"uncompleted_quests":{
+		"quest_6":
+			{
+				"id":"quest_6",
+				"display_name":"Beat the game",
+				"decision_tags":[]
+			},
+		"quest_7":
+			{
+				"id":"quest_7",
+				"display_name":"Do the secret quest",
+				"decision_tags":[]
+			}
+	},
+	"rooms":{
+		"room_0":
+			{
+				"id":"room_0",
+				"display_name":"Limbo",
+				"sites":[
+					{
+						"id":0,
+						"display_name":"western hideout under the overhang",
+						"active":0
+					},
+					{
+						"id":1,
+						"display_name":"western opening on the overhang",
+						"active":0
+					}
+				]
+			},
+		"room_1":
+			{
+				"id":"room_0",
+				"display_name":"Front of Home",
+				"sites":[
+					{
+						"id":0,
+						"display_name":"front yard to the right of the front door",
+						"active":0
+					}
+				]
+			}
+	}
 }

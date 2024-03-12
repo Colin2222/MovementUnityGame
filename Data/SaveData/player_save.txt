@@ -1,0 +1,50 @@
+{
+	"completed_quests":[
+	
+	],
+	"current_quests":[
+		{
+			"quest_0":
+				{
+					"id":"quest_0",
+					"display_name":"Reach the guidestone",
+					"decision_tags":[]
+				}
+		}
+	],
+	"uncompleted_quests":[
+	
+	],
+	"rooms":[
+		{
+			"room_0":
+				{
+					"id":"room_0",
+					"display_name":"Limbo",
+					"sites":[
+						{
+							"id":0,
+							"display_name":"western hideout under the overhang"
+							"active":0
+						},
+						{
+							"id":1,
+							"display_name":"western opening on the overhang"
+							"active":0
+						}
+					]
+				}
+		},
+		{
+			"id":"room_1",
+			"display_name":"Front of Home",
+			"sites":[
+				{
+					"id":0,
+					"display_name":"front yard to the right of the front door"
+					"active":0
+				}
+			]
+		}
+	]
+}

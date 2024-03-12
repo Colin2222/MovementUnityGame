@@ -70,10 +70,15 @@ public class SceneManager : MonoBehaviour
 		levelRegistry.LoadLevels(levelRegistryXml);
 		
 		// check if there is a DontDestroyOnLoad persistent state
+		// used for keeping track of serializable game save object (see SaveDataClasses and PersistentState scripts)
 		// used for determining which door the player will enter from
 		persistentStateTest = GameObject.FindWithTag("PersistentState");
         if(persistentStateTest == null){
             persistentState = Instantiate(persistentStatePrefab,new Vector3(0,0,0),Quaternion.identity).GetComponent<PersistentState>();
+			
+			//CREATE NEW SAVE, THIS IS TEMPORARY
+			persistentState.CreateNewSave();
+			Debug.Log(persistentState.saveData.uncompleted_quests["quest_7"].display_name);
         }
         else{
             persistentState = persistentStateTest.GetComponent<PersistentState>();

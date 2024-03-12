@@ -33,6 +33,14 @@ MonoBehaviour:
     m_Address: Assets/Data/JournalPages/test_page.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 784c675a1f3dba7488cb671a88341bd7
+    m_Address: Assets/Data/SaveData/fresh_save.txt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 27b63696298a68644a7c3571994dd069
+    m_Address: Assets/Data/SaveData/player_save.txt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:
