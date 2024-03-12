@@ -78,7 +78,7 @@ public class SceneManager : MonoBehaviour
 			
 			//CREATE NEW SAVE, THIS IS TEMPORARY
 			persistentState.CreateNewSave();
-			Debug.Log(persistentState.saveData.uncompleted_quests["quest_7"].display_name);
+			persistentState.WriteSave();
         }
         else{
             persistentState = persistentStateTest.GetComponent<PersistentState>();
