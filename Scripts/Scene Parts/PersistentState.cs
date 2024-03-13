@@ -55,4 +55,25 @@ public class PersistentState : MonoBehaviour
 		// done parsing json, release asset out of memory
 		Addressables.Release(operation);
 	}
+	
+	public void AddDecisionTag(string questID, string decisionTag){
+		Quest quest = saveData.current_quests[questID];
+		quest.decision_tags.Add(decisionTag);
+	}
+	
+	public void StartQuest(string questID){
+		if(saveData.uncompleted_quests.ContainsKey(questID)){
+			Quest newQuest = saveData.uncompleted_quests[questID];
+			saveData.current_quests.Add(questID, newQuest);
+			saveData.uncompleted_quests.Remove(questID);
+		}
+	}
+	
+	public void CompleteQuest(string questID){
+		if(saveData.current_quests.ContainsKey(questID)){
+			Quest finishedQuest = saveData.current_quests[questID];
+			saveData.completed_quests.Add(questID, finishedQuest);
+			saveData.current_quests.Remove(questID);
+		}
+	}
 }

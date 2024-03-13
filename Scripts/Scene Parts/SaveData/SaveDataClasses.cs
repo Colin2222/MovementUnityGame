@@ -14,7 +14,7 @@ public class GameSaveData{
 public class Quest{
 	public string id;
 	public string display_name;
-	public string[] decision_tags;
+	public List<string> decision_tags;
 }
 
 [System.Serializable]
@@ -35,5 +35,5 @@ public enum SiteTag{
 public class Room{
 	public string id;
 	public string display_name;
-	public Site[] sites;
+	public List<Site> sites;
 }
