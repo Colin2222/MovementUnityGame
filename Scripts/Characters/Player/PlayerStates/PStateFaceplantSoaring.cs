@@ -2,13 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PStateViewingJournal : PState
+public class PStateFaceplantSoaring : PState
 {
-	JournalManager journalManager;
-	
-	public PStateViewingJournal(){
-		journalManager = GameObject.FindWithTag("SceneManager").GetComponent<SceneManager>().journalManager;
-		journalManager.Activate();
+    public PStateFaceplantSoaring(Vector2 exitVelocity){
+		PState.rigidbody.velocity = exitVelocity * PState.attr.cornerTripSpeedLoss;
 	}
 	
     public override PState Update(){
@@ -60,7 +57,6 @@ public class PStateViewingJournal : PState
 	}
 	
 	public override PState ToggleJournal(){
-		journalManager.Deactivate();
-		return new PStateIdle();
+		return this;
 	}
 }

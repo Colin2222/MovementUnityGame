@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PStateCornerMantling : PState
+public class PStateCornerVaulting : PState
 {
     int cornerDir;
-	float cornerClimbTimer;
+	float cornerVaultTimer;
 	Transform mantleCorner;
 	CornerHandler cornerHandler;
+	float exitSpeed;
 
-    public PStateCornerMantling(){
+    public PStateCornerVaulting(){
 		cornerHandler = PState.player.cornerHandler;
 		mantleCorner = cornerHandler.mantleCorner;
 		PState.rigidbody.gravityScale = 0f;
@@ -21,13 +22,13 @@ public class PStateCornerMantling : PState
 		}
 		
 		PState.player.transform.position = new Vector3(cornerHandler.mantleCorner.position.x + (cornerHandler.mantleClimbOffsetX * cornerDir), cornerHandler.mantleCorner.position.y - cornerHandler.mantleClimbOffsetY, 0);
-		cornerClimbTimer = PState.attr.cornerMantleTime;
-		PState.player.animator.Play("PlayerCornerMantling");
+		cornerVaultTimer = PState.attr.cornerVaultTime;
+		PState.player.animator.Play("PlayerCornerVaulting");
 	}
 	
     public override PState Update(){
-		cornerClimbTimer -= Time.deltaTime;
-		if(cornerClimbTimer <= 0){
+		cornerVaultTimer -= Time.deltaTime;
+		if(cornerVaultTimer <= 0){
 			PState.player.transform.position = new Vector3(mantleCorner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), mantleCorner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
 			PState.rigidbody.gravityScale = PState.attr.gravityScale;
 			PState.direction = 0;
@@ -85,3 +86,4 @@ public class PStateCornerMantling : PState
 		return this;
 	}
 }
+

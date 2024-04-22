@@ -20,6 +20,14 @@ public class PlayerAttributeSet
 	public float gravityScale;
 	public float cornerMantleTime;
 	public float cornerClimbTime;
+	public float cornerTripSpeedLoss;
+	public float cornerTripTime;
+	public float cornerTripMinimumSpeed;
+	public float cornerStunSpeedCoefficient;
+	public float cornerStunGetupStartSpeed;
+	public float cornerStunGetupWaitTime;
+	public float cornerStunGetupTime;
+	public float cornerVaultTime;
 	public float cornerClimbVertJoystickThreshold;
 	public float cornerMantleMinHorizontalKeepSpeed;
 	public float wallBraceTime;

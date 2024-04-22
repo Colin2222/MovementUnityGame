@@ -2,16 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PStateViewingJournal : PState
+public class PStateFaceplantStanding : PState
 {
-	JournalManager journalManager;
-	
-	public PStateViewingJournal(){
-		journalManager = GameObject.FindWithTag("SceneManager").GetComponent<SceneManager>().journalManager;
-		journalManager.Activate();
+	float standupTimer = 0.0f;
+
+    public PStateFaceplantStanding(Vector2 exitVelocity){
+		PState.rigidbody.velocity = new Vector2(0,0);
+		standupTimer = PState.attr.cornerStunGetupTime;
+		PState.player.animator.Play("PlayerStunFaceGetup");
 	}
 	
     public override PState Update(){
+		if(standupTimer > 0){
+			standupTimer -= Time.deltaTime;
+			if(standupTimer <= 0){
+				return new PStateIdle();
+			}
+		}
 		return this;
 	}
 	
@@ -60,7 +67,6 @@ public class PStateViewingJournal : PState
 	}
 	
 	public override PState ToggleJournal(){
-		journalManager.Deactivate();
-		return new PStateIdle();
+		return this;
 	}
 }

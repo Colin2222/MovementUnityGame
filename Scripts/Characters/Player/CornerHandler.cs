@@ -11,6 +11,11 @@ public class CornerHandler : MonoBehaviour
 	[System.NonSerialized]
 	public Transform mantleCorner = null;
 	
+	[System.NonSerialized]
+	public Transform trackedCorner = null;
+	[System.NonSerialized]
+	public Transform lastTrackedCorner = null;
+	
 	public float cornerOffsetX;
 	public float cornerOffsetY;
 	public float cornerClimbOffsetX;
