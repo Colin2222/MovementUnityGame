@@ -859,7 +859,7 @@ GameObject:
   - component: {fileID: 1585249586}
   - component: {fileID: 1585249588}
   - component: {fileID: 1585249587}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: MantleHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -931,7 +931,7 @@ GameObject:
   - component: {fileID: 2062545486}
   - component: {fileID: 2062545488}
   - component: {fileID: 9024032372949374633}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: CornerHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1422,7 +1422,7 @@ MonoBehaviour:
   inputManager: {fileID: 588900340537133547}
   stateManager: {fileID: 5555245007042818769}
   cornerHandler: {fileID: 2062545488}
-  state: {fileID: 0}
+  persistentState: {fileID: 0}
   animator: {fileID: 2098515062}
   reskinner: {fileID: 622292847772405887}
   attributeManager: {fileID: 6501627088609475746}
