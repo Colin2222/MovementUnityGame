@@ -155,6 +155,32 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &-7136431341504839112
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerCornerClimbingDown
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 933c930a41a9eef4d801fde89748b8a5, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1101 &-6895666171595458457
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -260,25 +286,25 @@ AnimatorStateMachine:
     m_Position: {x: -365, y: 755, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8270824826200251175}
-    m_Position: {x: -330, y: 860, z: 0}
+    m_Position: {x: -330, y: 820, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2561042959113105936}
-    m_Position: {x: -40, y: 860, z: 0}
+    m_Position: {x: -40, y: 800, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8026007227081745000}
     m_Position: {x: -40, y: 920, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4378588430576645333}
-    m_Position: {x: 0, y: 980, z: 0}
+    m_Position: {x: -5, y: 985, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -7136431341504839112}
+    m_Position: {x: 30, y: 1050, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 7615305413271297841}
+    m_Position: {x: 65, y: 1115, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1196924671227305265}
-    m_Position: {x: -320, y: 950, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -4466952764017727955}
-    m_Position: {x: -140, y: 760, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 7506368052939271482}
-    m_Position: {x: -105, y: 825, z: 0}
+    m_Position: {x: 100, y: 1180, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -390,32 +416,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1102 &-4466952764017727955
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerCornerVaulting
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 45a81ff2ac93bcd40aeaf8e05f82428a, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &-4378588430576645333
 AnimatorState:
   serializedVersion: 6
@@ -1251,14 +1251,14 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &7506368052939271482
+--- !u!1102 &7615305413271297841
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TESTINGANIM
+  m_Name: PlayerCornerQuickMantling
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -1271,7 +1271,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 163da36663c557240ae452a2c2d2e683, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1eb6a9b2bf908e14498126e79ebb513e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

@@ -55,7 +55,7 @@ public class PStateIdle : PState
 		return this;
 	}
 	
-	public override PState HitWall(Vector2 wallCollisionVelocity, WallCollisionInfo collInfo){
+	public override PState HitWall(Vector2 wallCollisionVelocity){
 		return this;
 	}
 	
