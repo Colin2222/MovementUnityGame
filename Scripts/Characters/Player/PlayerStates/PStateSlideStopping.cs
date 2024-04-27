@@ -62,7 +62,7 @@ public class PStateSlideStopping : PState
 		return this;
 	}
 	
-	public override PState HitWall(Vector2 wallCollisionVelocity){
+	public override PState HitWall(Vector2 wallCollisionVelocity, WallCollisionInfo collInfo){
 		if(Mathf.Abs(wallCollisionVelocity.x) > PState.attr.wallSplatMinSpeed){
 			return new PStateWallSplatting((int)Mathf.Sign(wallCollisionVelocity.x));
 		}

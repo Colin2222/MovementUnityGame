@@ -56,7 +56,7 @@ public class PStateJumpBracing : PState
 		return new PStateIdle();
 	}
 	
-	public override PState HitWall(Vector2 wallCollisionVelocity){
+	public override PState HitWall(Vector2 wallCollisionVelocity, WallCollisionInfo collInfo){
 		return this;
 	}
 	

@@ -22,7 +22,7 @@ public abstract class PState
 	public abstract PState ClimbDown();
 	public abstract PState PressJump();
 	public abstract PState ReleaseJump();
-	public abstract PState HitWall(Vector2 wallCollisionVelocity);
+	public abstract PState HitWall(Vector2 wallCollisionVelocity, WallCollisionInfo collInfo);
 	public abstract PState Brace();
 	public abstract PState ToggleJournal();
 	

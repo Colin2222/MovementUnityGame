@@ -49,7 +49,7 @@ public class PStateRollEntering : PState
 		return this;
 	}
 	
-	public override PState HitWall(Vector2 wallCollisionVelocity){
+	public override PState HitWall(Vector2 wallCollisionVelocity, WallCollisionInfo collInfo){
 		return this;
 	}
 	

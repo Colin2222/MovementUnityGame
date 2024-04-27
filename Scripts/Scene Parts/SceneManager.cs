@@ -148,7 +148,7 @@ public class SceneManager : MonoBehaviour
 		journalManager.SeekUI();
 		
 		cutsceneManager.LoadCutscene("room_0_c0");
-		cutsceneManager.PlayCutscene(1);
+		//cutsceneManager.PlayCutscene(1);
     }
 	
 	void Update(){

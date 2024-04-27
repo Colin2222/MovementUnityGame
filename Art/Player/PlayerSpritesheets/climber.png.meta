@@ -3347,7 +3347,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3368,7 +3368,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3389,7 +3389,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3410,7 +3410,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3431,7 +3431,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3452,7 +3452,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3473,7 +3473,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3481,6 +3481,1077 @@ TextureImporter:
       bones: []
       spriteID: 5b4bb62112a976040922187735b1e27f
       internalID: -333817965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_161
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be951dc3c4581a94e99eecbcdd7ad170
+      internalID: 175964248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_162
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.40625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975e75294e2cff34ca8c877bc74f838e
+      internalID: -145447919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_163
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 416
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f39221ce35a3f41a8bb23358ec2fd7
+      internalID: -1319715666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_164
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 416
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d6ddb9dba223d4081576a935d7ea68
+      internalID: -1372879691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_165
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 384
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025762c942e06ec4bb80f8c7138c6c93
+      internalID: 2133548914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_166
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d303d9c7c12e64480ac274eacc1a49
+      internalID: -1547639513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_167
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323fb3e54b1ef304db37ddc4b6004632
+      internalID: -1173192951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_168
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78d5268b97bc704a862412e207bc019
+      internalID: -1685946920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_169
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60dae2044b5b49242b86f58197d19345
+      internalID: 1300546425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_170
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b382a7f0ef10a741ad97d83e2849687
+      internalID: -1651471464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_171
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151cda9e252acf94990b582850087c70
+      internalID: 274453463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_172
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7f4130d9c66e0428524839344f6fe6
+      internalID: -1878435320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_173
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd931ee852adfe43979d9973c346dcc
+      internalID: -187479726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_174
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378ce62d73900e141ac09b5ad1184711
+      internalID: 1179811536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_175
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b22c69dff9f484d9e871257241a783
+      internalID: 1572132561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_176
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d70092088270304ab90d8cbbecbafa5
+      internalID: -1480840591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_177
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdfd3a93e4f97ad4687ffd72f2880317
+      internalID: -1783539357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_178
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936ebcc91ae422d4baea08d2e060d360
+      internalID: 709836381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_179
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6032050d9be100a40954f26b390c9726
+      internalID: -943742772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_180
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61cf3c13599db44429c3e02d5842d1ac
+      internalID: 1382913660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_181
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d14281e72bc925489786b08545f2b24
+      internalID: 1827737393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_182
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96ffb21b631b8f4291067bc72179182
+      internalID: 9894316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_183
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3528d66086a4cda4b93f54088b681eaf
+      internalID: 1171375888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_184
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fdab26c59270494386f6022e38ba163
+      internalID: -7263208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_185
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b6255e16e5d9c4eae8219bfcab2d84
+      internalID: -1705532179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_186
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a1b5ed81f11e84db3ac3560bb9fede
+      internalID: 358162746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_187
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecd379a43707f94f9a64c3f0836d032
+      internalID: 2135452726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_188
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd724ffa02af66f458bf6791e7619dcf
+      internalID: -1661865282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_189
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57206162c0e0f0547a8a96a89f9d18b0
+      internalID: 1878059167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_190
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5f9638e1aa9a3438fc92aa45ab33f7
+      internalID: -484325024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_191
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b2a217a0839c4449958eb48b708a01
+      internalID: 71181727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_192
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c9a04412a98e04ba270d2fc2dba60b
+      internalID: -1208345355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_193
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4517e82b0b328429fe011f838c65e3
+      internalID: -1549664648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_194
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3910d07a85302214ca5eabf4867ea04a
+      internalID: -809726101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_195
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a1077759ebf0b4cad8c84ec363f2d8
+      internalID: 1811873911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_196
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2dfcc359782e4848a2f917e1a6d737c
+      internalID: -1606981014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_197
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d8946b8d6523849a0e06d8d2508854
+      internalID: -2112763383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_198
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c07930d79e5a184bbf60ee84d5bbce7
+      internalID: 2039881391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_199
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63eb308b34de4949999274044dbc840
+      internalID: -981583704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_200
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f419747ef17efbd4bbfb9b0418c4fd2f
+      internalID: 58720362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_201
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a721293af23a5ee4599a71eecd936db6
+      internalID: -1982044768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_202
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05963853e5c3e8c43b18e194f5657d92
+      internalID: 1383087454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_203
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b0d85bb5eb3004fa4498b429e0c1f1
+      internalID: 544760141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_204
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96fd0e9b322d21c4999c39a862920ef0
+      internalID: -1966683619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_205
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f304b11c56173214185ab8bf21c7d874
+      internalID: 1976534337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_206
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57ea16685061f04493410cbd9043f8f
+      internalID: -317389630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_207
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9b9524930a652429cf2dd826e6197d
+      internalID: 274123792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_208
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e68a93a834ffa345a0876cefa9ba8af
+      internalID: 1222640234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_209
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d27cf616434514baf0c56d42b424c0
+      internalID: 1437462273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_210
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4854e085242acf4689154f15db7a784
+      internalID: 1781337629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_211
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80dae7274d707584391f7b6d53e7e27c
+      internalID: -1531985370
       vertices: []
       indices: 
       edges: []
@@ -3496,11 +4567,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      climber_30: -2126400401
-      climber_2: -140344504
-      climber_87: -910341491
       climber_145: -141829942
-      climber_46: -1985117557
+      climber_2: -140344504
+      climber_179: -943742772
       climber_63: -1578065867
       climber_76: 1939946890
       climber_38: -1387778993
@@ -3508,155 +4577,208 @@ TextureImporter:
       climber_52: 360839866
       climber_108: 930527625
       climber_1: -13870314
-      climber_65: 474189950
       climber_117: 2011190579
-      climber_112: 860869102
-      climber_94: 1793328015
-      climber_140: 162345274
+      climber_199: -981583704
+      climber_167: -1173192951
+      climber_197: -2112763383
       climber_58: -1937730778
-      climber_22: 310695809
-      climber_62: -1185919669
-      climber_18: 469110364
-      climber_109: -2066142151
-      climber_70: -979908883
-      climber_118: -1055927273
+      climber_189: 1878059167
       climber_155: 774294534
+      climber_70: -979908883
       climber_50: 735020032
       climber_84: -1615572998
-      climber_69: -70502509
       climber_54: -1757016724
       climber_23: -124115989
-      climber_56: 91413608
-      climber_73: 2083489195
       climber_97: -401019236
-      climber_6: 1908549515
-      climber_33: 864771259
+      climber_188: -1661865282
       climber_78: -41287734
-      climber_125: 1072806145
-      climber_143: 550168521
       climber_153: 121345252
-      climber_3: 1848742559
-      climber_67: 1639587330
-      climber_131: -1366221358
-      climber_123: 66131754
-      climber_158: 441412371
-      climber_154: 2130504838
-      climber_13: -1225888566
       climber_35: -69517436
-      climber_34: 103699823
-      climber_59: -276410904
+      climber_170: -1651471464
       climber_55: 2040394786
-      climber_19: 1341655616
-      climber_40: 479857318
+      climber_204: -1966683619
+      climber_163: -1319715666
       climber_42: -70024076
-      climber_146: 926415180
+      climber_184: -7263208
+      climber_196: -1606981014
       climber_32: 1761049271
       climber_86: -2122267675
       climber_135: -1898787186
       climber_98: 270524739
-      climber_82: -1986966335
       climber_51: 610329971
-      climber_29: -129850156
       climber_115: 1566409575
       climber_150: 1585693520
       climber_48: -1063351614
-      climber_159: -1536118796
+      climber_180: 1382913660
       climber_99: 1359331772
-      climber_0: -1035249889
       climber_122: 167602481
       climber_126: 954349324
-      climber_7: 960599566
-      climber_72: 1645760963
       climber_134: 1271992536
-      climber_160: -333817965
       climber_11: -828391627
-      climber_120: -661614877
-      climber_60: 1558291517
+      climber_193: -1549664648
       climber_149: -1098804210
       climber_142: 2056343726
       climber_64: 1729261391
-      climber_85: -2086002962
-      climber_106: 1733434904
       climber_116: -435496955
       climber_14: -671057949
       climber_45: 426345408
       climber_128: -1166522353
       climber_119: 1682304820
-      climber_96: -1518058939
+      climber_127: -286775658
       climber_91: 1227564341
       climber_10: 1749621978
       climber_104: 1226503564
       climber_24: -1283924522
-      climber_105: -1386242127
-      climber_121: -2120612301
+      climber_171: 274453463
       climber_47: -106640518
-      climber_71: -65566520
-      climber_15: -2073509980
-      climber_92: -1437882621
-      climber_53: -1237964472
-      climber_16: 1062938622
-      climber_127: -286775658
-      climber_88: 1758874859
       climber_124: -1592322902
+      climber_92: -1437882621
+      climber_151: 1340683906
+      climber_88: 1758874859
+      climber_182: 9894316
       climber_9: 387934992
       climber_107: -484280705
-      climber_147: -1820679445
-      climber_20: -1085170298
-      climber_139: -299490526
       climber_21: 114796651
-      climber_75: 546767951
+      climber_185: -1705532179
       climber_136: -1536394791
+      climber_201: -1982044768
       climber_137: 1900162873
-      climber_129: -1031902473
-      climber_133: -2066142659
       climber_79: 1795756305
-      climber_12: 1824422434
+      climber_190: -484325024
       climber_132: 1344676974
       climber_130: -1885757787
+      climber_198: 2039881391
+      climber_31: -1872776800
+      climber_110: 1075706789
+      climber_166: -1547639513
+      climber_183: 1171375888
+      climber_66: -1390283714
+      climber_186: 358162746
+      climber_100: 1055484611
+      climber_41: 1327030635
+      climber_39: 73265111
+      climber_68: 226286132
+      climber_43: 742444060
+      climber_156: 1079603312
+      climber_77: -1070387375
+      climber_89: -1662966548
+      climber_5: -260490070
+      climber_177: -1783539357
+      climber_37: -134672548
+      climber_208: 1222640234
+      climber_169: 1300546425
+      climber_178: 709836381
+      climber_202: 1383087454
+      climber_8: 746086249
+      climber_93: -1689256263
+      climber_138: -34253078
+      climber_17: -1277290294
+      climber_168: -1685946920
+      climber_95: -832102157
+      climber_101: 660880830
+      climber_74: -194150775
+      climber_144: 577465788
+      climber_80: -904632561
+      climber_30: -2126400401
+      climber_87: -910341491
+      climber_162: -145447919
+      climber_46: -1985117557
+      climber_173: -187479726
+      climber_65: 474189950
+      climber_112: 860869102
+      climber_165: 2133548914
+      climber_94: 1793328015
+      climber_140: 162345274
+      climber_22: 310695809
+      climber_62: -1185919669
+      climber_18: 469110364
+      climber_195: 1811873911
+      climber_118: -1055927273
+      climber_109: -2066142151
+      climber_207: 274123792
+      climber_69: -70502509
+      climber_154: 2130504838
+      climber_56: 91413608
+      climber_73: 2083489195
+      climber_143: 550168521
+      climber_6: 1908549515
+      climber_33: 864771259
+      climber_125: 1072806145
+      climber_172: -1878435320
+      climber_161: 175964248
+      climber_3: 1848742559
+      climber_67: 1639587330
+      climber_131: -1366221358
+      climber_123: 66131754
+      climber_158: 441412371
+      climber_164: -1372879691
+      climber_13: -1225888566
+      climber_34: 103699823
+      climber_59: -276410904
+      climber_19: 1341655616
+      climber_40: 479857318
+      climber_192: -1208345355
+      climber_146: 926415180
+      climber_205: 1976534337
+      climber_82: -1986966335
+      climber_29: -129850156
+      climber_211: -1531985370
+      climber_159: -1536118796
+      climber_0: -1035249889
+      climber_7: 960599566
+      climber_72: 1645760963
+      climber_160: -333817965
+      climber_120: -661614877
+      climber_60: 1558291517
+      climber_85: -2086002962
+      climber_106: 1733434904
+      climber_191: 71181727
+      climber_187: 2135452726
+      climber_96: -1518058939
+      climber_147: -1820679445
+      climber_105: -1386242127
+      climber_121: -2120612301
+      climber_139: -299490526
+      climber_133: -2066142659
+      climber_71: -65566520
+      climber_15: -2073509980
+      climber_16: 1062938622
+      climber_53: -1237964472
+      climber_200: 58720362
+      climber_209: 1437462273
+      climber_20: -1085170298
+      climber_75: 546767951
+      climber_175: 1572132561
+      climber_129: -1031902473
+      climber_12: 1824422434
+      climber_206: -317389630
       climber_36: 1083052896
       climber_28: -648194420
       climber_4: 259706751
-      climber_31: -1872776800
-      climber_110: 1075706789
+      climber_203: 544760141
       climber_111: -1199188939
       climber_152: -1474034807
-      climber_66: -1390283714
-      climber_100: 1055484611
-      climber_41: 1327030635
-      climber_151: 1340683906
-      climber_39: 73265111
       climber_57: 1638449106
-      climber_68: 226286132
-      climber_43: 742444060
       climber_103: -1758564110
       climber_44: -792855845
       climber_90: 1316894154
       climber_49: -1501950211
-      climber_156: 1079603312
       climber_113: -1030253905
       climber_27: 279528938
-      climber_77: -1070387375
       climber_83: 2114387517
       climber_148: 1657531744
-      climber_89: -1662966548
-      climber_5: -260490070
-      climber_37: -134672548
+      climber_194: -809726101
+      climber_181: 1827737393
       climber_102: 664624569
       climber_114: -880427220
-      climber_8: 746086249
+      climber_176: -1480840591
       climber_26: 1204249027
-      climber_93: -1689256263
-      climber_138: -34253078
       climber_157: -2056864109
-      climber_17: -1277290294
+      climber_174: 1179811536
       climber_81: -1638377369
       climber_141: 2053062626
-      climber_95: -832102157
-      climber_101: 660880830
+      climber_210: 1781337629
       climber_25: 1266912898
-      climber_74: -194150775
-      climber_144: 577465788
-      climber_80: -904632561
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
