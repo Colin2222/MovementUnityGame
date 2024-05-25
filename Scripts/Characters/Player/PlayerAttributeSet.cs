@@ -24,7 +24,8 @@ public class PlayerAttributeSet
 	public float cornerTripSpeedLoss;
 	public float cornerTripTime;
 	public float cornerTripMinimumSpeed;
-	public float cornerStunSpeedCoefficient;
+	public float cornerStunReboundMinSpeed;
+	public float cornerStunSlideCoefficient;
 	public float cornerStunGetupStartSpeed;
 	public float cornerStunGetupWaitTime;
 	public float cornerStunGetupTime;

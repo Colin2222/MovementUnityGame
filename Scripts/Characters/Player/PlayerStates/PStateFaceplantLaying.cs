@@ -2,31 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PStateFaceplantSoaring : PState
+public class PStateFaceplantLaying : PState
 {
-    public PStateFaceplantSoaring(Vector2 exitVelocity){
-		PState.rigidbody.velocity = exitVelocity * PState.attr.cornerTripSpeedLoss;
-	}
+	float layTimer;
+	bool laying; 
 	
-	public PStateFaceplantSoaring(){
-		
+    public PStateFaceplantLaying(){
+		laying = false; 
 	}
 
     public override PState Update(){
+		if(laying){
+			layTimer -= Time.deltaTime;
+			if(layTimer <= 0.0f){
+				return new PStateFaceplantGettingUp();
+			}
+		}
 		return this;
 	}
 
 	public override PState FixedUpdate(){
+		PState.rigidbody.AddForce(PState.rigidbody.velocity * PState.attr.cornerStunSlideCoefficient * -1.0f, ForceMode2D.Force);
+		if(!laying && Mathf.Abs(PState.rigidbody.velocity.x) < PState.attr.cornerStunGetupStartSpeed){
+			laying = true;
+			layTimer = PState.attr.cornerStunGetupWaitTime;
+		}
 		return this;
 	}
 
     public override PState HitGround(float hitSpeed){
-		if(PState.rigidbody.velocity.y < -(PState.attr.cornerStunReboundMinSpeed)){
-			PState.player.animator.Play("PlayerFaceplantLanding");
-		} else{
-			PState.player.animator.Play("PlayerFaceplantLaying");
-		}
-		return new PStateFaceplantLaying();
+		return this;
 	}
 
 	public override PState Move(float horizontal, float vertical){
@@ -58,7 +63,8 @@ public class PStateFaceplantSoaring : PState
 	}
 
 	public override PState LeaveGround(){
-		return this;
+		PState.player.animator.Play("PlayerFaceplantSoaring");
+		return new PStateFaceplantSoaring();
 	}
 
 	public override PState LeaveWall(){
@@ -69,3 +75,4 @@ public class PStateFaceplantSoaring : PState
 		return this;
 	}
 }
+

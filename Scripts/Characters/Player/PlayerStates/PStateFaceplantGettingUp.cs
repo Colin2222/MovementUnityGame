@@ -2,31 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PStateFaceplantSoaring : PState
+public class PStateFaceplantGettingUp : PState
 {
-    public PStateFaceplantSoaring(Vector2 exitVelocity){
-		PState.rigidbody.velocity = exitVelocity * PState.attr.cornerTripSpeedLoss;
-	}
+	float getupTimer;
 	
-	public PStateFaceplantSoaring(){
-		
+    public PStateFaceplantGettingUp(){
+		PState.player.animator.Play("PlayerFaceplantGettingUp");
+		getupTimer = PState.attr.cornerStunGetupTime;
 	}
 
     public override PState Update(){
+		getupTimer -= Time.deltaTime;
+		if(getupTimer <= 0.0f){
+			PState.player.animator.Play("PlayerIdle");
+			return new PStateIdle();
+		}
 		return this;
 	}
 
 	public override PState FixedUpdate(){
+		PState.rigidbody.AddForce(PState.rigidbody.velocity * PState.attr.cornerStunSlideCoefficient * -1.0f, ForceMode2D.Force);
 		return this;
 	}
 
     public override PState HitGround(float hitSpeed){
-		if(PState.rigidbody.velocity.y < -(PState.attr.cornerStunReboundMinSpeed)){
-			PState.player.animator.Play("PlayerFaceplantLanding");
-		} else{
-			PState.player.animator.Play("PlayerFaceplantLaying");
-		}
-		return new PStateFaceplantLaying();
+		return this;
 	}
 
 	public override PState Move(float horizontal, float vertical){
