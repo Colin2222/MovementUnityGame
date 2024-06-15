@@ -24,7 +24,7 @@ public class BottomCheck : MonoBehaviour
 			if(!parentPhysics.isGrounded){
 				parentPhysics.isGrounded = true;
 				parentPhysics.bottomCollisionSpeed = new Vector2(collision.relativeVelocity.x, collision.relativeVelocity.y);
-				parentPhysics.stateManager.HitGround(collision.relativeVelocity.y);
+				parentPhysics.stateManager.HitGround(collision.relativeVelocity.x, collision.relativeVelocity.y);
 			}
 		}
     }

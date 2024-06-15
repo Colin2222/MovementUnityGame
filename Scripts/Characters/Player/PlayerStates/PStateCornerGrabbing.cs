@@ -29,7 +29,7 @@ public class PStateCornerGrabbing : PState
 		return this;
 	}
 	
-    public override PState HitGround(float hitSpeed){
+    public override PState HitGround(float hitSpeedX, float hitSpeedY){
 		return this;
 	}
 	

@@ -1352,8 +1352,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attrSet:
-    moveForce: 14
-    maxRunSpeed: 8
+    moveForce: 12
+    maxRunSpeed: 12
     slideForceMultiplier: 0.5
     slideStopSpeedTarget: 1
     runningJumpSpeed: 6.5
