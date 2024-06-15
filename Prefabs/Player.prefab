@@ -1372,7 +1372,7 @@ MonoBehaviour:
     cornerTripTime: 0
     cornerTripMinimumSpeed: 3
     cornerStunReboundMinSpeed: 7
-    cornerStunSlideCoefficient: 0.4
+    cornerStunSlideCoefficient: 0.1
     cornerStunGetupStartSpeed: 0.5
     cornerStunGetupWaitTime: 0.5
     cornerStunGetupTime: 0.75
@@ -1524,7 +1524,6 @@ Transform:
   - {fileID: 9186423888794225313}
   - {fileID: 5972361109059700172}
   - {fileID: 365383143609738961}
-  - {fileID: 1188934331186650971}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1881,47 +1880,3 @@ MonoBehaviour:
   noninvertedEdge: {r: 0, g: 0, b: 0, a: 1}
   invertedSkin: {r: 0, g: 0, b: 0, a: 1}
   noninvertedSkin: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &8982330161994291416
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1188934331186650971}
-  - component: {fileID: 1326899356353551786}
-  m_Layer: 0
-  m_Name: HitboxManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1188934331186650971
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8982330161994291416}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6829769311745543618}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1326899356353551786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8982330161994291416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c7974fe16d9b94a8de95e5c685b532, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

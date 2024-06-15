@@ -50,7 +50,7 @@ public class PStateSoaring : PState
 	
 	public override PState HitWall(Vector2 wallCollisionVelocity, WallCollisionInfo collInfo){
 		if(!collInfo.touchLowerMiddle && collInfo.touchFeet && Mathf.Abs(wallCollisionVelocity.x) > PState.attr.cornerTripMinimumSpeed){
-			return new PStateCornerFaceplanting(wallCollisionVelocity);
+			//return new PStateCornerFaceplanting(wallCollisionVelocity);
 		}
 		
 		if(Mathf.Abs(wallCollisionVelocity.x) > 0.0f){
