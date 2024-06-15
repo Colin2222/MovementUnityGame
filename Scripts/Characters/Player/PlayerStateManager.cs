@@ -28,8 +28,8 @@ public class PlayerStateManager : MonoBehaviour
 		currentState = currentState.Move(horizontal, vertical);
 	}
 	
-	public void HitGround(float hitForce){
-		currentState = currentState.HitGround(hitForce);
+	public void HitGround(float hitSpeedX, float hitSpeedY){
+		currentState = currentState.HitGround(hitSpeedX, hitSpeedY);
 	}
 	
 	public void HitWall(Vector2 wallCollisionVelocity, WallCollisionInfo collInfo){

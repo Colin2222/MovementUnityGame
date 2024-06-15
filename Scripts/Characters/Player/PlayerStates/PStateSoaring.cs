@@ -13,18 +13,19 @@ public class PStateSoaring : PState
 	}
 	
 	public override PState FixedUpdate(){
+		PState.lastAirSpeed = PState.rigidbody.velocity.x;
 		return this;
 	}
 	
-    public override PState HitGround(float hitSpeed){
+    public override PState HitGround(float hitSpeedX, float hitSpeedY){
 		PState.player.soundInterface.PlayStillJumpLand();
-		if(hitSpeed > PState.attr.groundHitSpeedRollThreshold){
+		if(hitSpeedY > PState.attr.groundHitSpeedRollThreshold){
 			return new PStateRollEntering();
-		} else if(hitSpeed > PState.attr.groundHitSpeedRollMin && PState.inputManager.bracing){
+		} else if(hitSpeedY > PState.attr.groundHitSpeedRollMin && PState.inputManager.bracing){
 			return new PStateRolling();
 		}
 		PState.timeSinceLastGroundHit = 0.0f;
-		PState.lastGroundHitSpeed = hitSpeed;
+		PState.lastGroundHitSpeed = hitSpeedY;
 		return new PStateMoving();
 	}
 	

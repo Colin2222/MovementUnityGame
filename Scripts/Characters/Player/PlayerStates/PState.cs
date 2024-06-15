@@ -11,11 +11,12 @@ public abstract class PState
 	protected static int direction;
 	protected static float timeSinceLastGroundHit;
 	protected static float lastGroundHitSpeed;
+	protected static float lastAirSpeed;
 	
 	public abstract PState Update();
 	public abstract PState FixedUpdate();
 	public abstract PState Move(float horizontal, float vertical);
-	public abstract PState HitGround(float hitSpeed);
+	public abstract PState HitGround(float hitX, float hitY);
 	public abstract PState LeaveGround();
 	public abstract PState LeaveWall();
 	public abstract PState ClimbUp();

@@ -20,8 +20,8 @@ public class PStateFaceplantSoaring : PState
 		return this;
 	}
 
-    public override PState HitGround(float hitSpeed){
-		if(PState.rigidbody.velocity.y < -(PState.attr.cornerStunReboundMinSpeed)){
+    public override PState HitGround(float hitSpeedX, float hitSpeedY){
+		if(hitSpeedY > PState.attr.cornerStunReboundMinSpeed){
 			PState.player.animator.Play("PlayerFaceplantLanding");
 		} else{
 			PState.player.animator.Play("PlayerFaceplantLaying");

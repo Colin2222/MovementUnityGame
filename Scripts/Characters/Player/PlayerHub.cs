@@ -34,6 +34,10 @@ public class PlayerHub : MonoBehaviour
         
     }
 	
+	void FixedUpdate(){
+		
+	}
+	
 	public void LockPlayer(){
 		inputManager.LockPlayer();
 	}
