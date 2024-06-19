@@ -1353,15 +1353,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attrSet:
     moveForce: 12
-    maxRunSpeed: 12
+    maxRunSpeed: 8.5
     slideForceMultiplier: 0.5
     slideStopSpeedTarget: 1
-    runningJumpSpeed: 6.5
+    runningJumpSpeed: 6.25
     jumpBraceTime: 0.5
     maxStillJumpAngleFromYAxis: 0.7
     stillJumpLaunchTime: 0.08
     stillJumpMinimumBraceRatio: 0.4
-    jumpForce: 17
+    jumpForce: 13
     braceTime: 0.5
     braceCooldownTime: 0.5
     gravityScale: 2.5
@@ -1401,7 +1401,7 @@ MonoBehaviour:
     groundHitSpeedMaxThreshold: 0
     groundRollBraceWindow: 0.125
     groundRollTime: 0.4
-    groundRollMinSpeed: 6.5
+    groundRollMinSpeed: 5.5
     landingBigTime: 0.8
     landingBigForceMultiplier: 0.9
     optionalRollWindow: 0.125

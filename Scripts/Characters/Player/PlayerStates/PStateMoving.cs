@@ -23,7 +23,6 @@ public class PStateMoving : PState
 		
 		// hold player under maximum run speed
 		if(Mathf.Abs(PState.rigidbody.velocity.x) > PState.attr.maxRunSpeed){
-			Debug.Log(PState.rigidbody.velocity.x);
 			PState.rigidbody.velocity = new Vector2(PState.attr.maxRunSpeed * Mathf.Sign(PState.rigidbody.velocity.x), PState.rigidbody.velocity.y);
 		}
 		
