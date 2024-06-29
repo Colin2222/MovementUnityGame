@@ -24,6 +24,7 @@ public class PlayerInputManager : MonoBehaviour
 	public bool bracing = false;
 	float braceTimer;
 	float braceCooldownTimer;
+	bool braceCooldownCancelled = false;
 	
 	// climbing up/down tracking
 	bool canClimbUp = false;
@@ -102,7 +103,11 @@ public class PlayerInputManager : MonoBehaviour
 			braceTimer -= Time.deltaTime;
 			if(braceTimer <= 0.0f || !bracePressed){
 				bracing = false;
-				braceCooldownTimer = attr.braceCooldownTime;
+				if(braceCooldownCancelled){
+					braceCooldownCancelled = false;
+				} else{
+					braceCooldownTimer = attr.braceCooldownTime;
+				}
 			}
 		} else{
 			if(braceCooldownTimer > 0.0f){
@@ -114,6 +119,10 @@ public class PlayerInputManager : MonoBehaviour
 				}
 			}
 		}
+	}
+	
+	public void CancelBraceCooldown(){
+		braceCooldownCancelled = true;
 	}
 	
 	private void HandleClimbing(){

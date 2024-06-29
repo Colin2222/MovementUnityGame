@@ -50,4 +50,8 @@ public abstract class PState
 			player.transform.eulerAngles = new Vector2(0,0);
 		}
 	}
+	
+	protected void CancelBraceCooldown(){
+		inputManager.CancelBraceCooldown();
+	}
 }

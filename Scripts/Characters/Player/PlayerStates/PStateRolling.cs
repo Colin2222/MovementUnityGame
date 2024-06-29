@@ -23,11 +23,9 @@ public class PStateRolling : PState
 		
 		// calculate if roll will be slow or full-speed
 		float rollSpeedCalc = Mathf.Abs(hitSpeedX * 0.75f) + Mathf.Abs(hitSpeedY * 0.25f);
-		Debug.Log(rollSpeedCalc);
 		if(rollSpeedCalc < PState.attr.groundRollSlowThreshold){
 			minRollSpeed *= PState.attr.groundRollSlowMultiplier;
 			slowRoll = true;
-			Debug.Log("SLOW");
 		} else{
 			slowRoll = false;
 		}
@@ -36,6 +34,7 @@ public class PStateRolling : PState
     public override PState Update(){
 		rollTimer += Time.deltaTime;
 		if(rollTimer >= rollTime){
+			CancelBraceCooldown();
 			if(runningJumpQueued){
 				if(slowRoll){
 					PState.player.animator.Play("PlayerJumpBracing");
