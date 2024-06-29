@@ -7,6 +7,8 @@ public class PStateRolling : PState
 	float rollTimer;
 	float rollTime;
 	float minRollSpeed;
+	bool runningJumpQueued;
+	float jumpQueueTime;
 	Rigidbody2D rb;
 	
     public PStateRolling(){
@@ -15,12 +17,27 @@ public class PStateRolling : PState
 		rb = PState.rigidbody;
 		rollTime = PState.attr.groundRollTime;
 		rollTimer = 0.0f;
+		runningJumpQueued = false;
+		jumpQueueTime = PState.attr.groundRollJumpQueueTime;
 	}
 	
     public override PState Update(){
 		rollTimer += Time.deltaTime;
 		if(rollTimer >= rollTime){
-			return new PStateMoving();
+			if(runningJumpQueued){
+				float jumpDir;
+				if(PState.rigidbody.velocity.x > 0){
+					jumpDir = 1.0f;
+				} else{
+					jumpDir = -1.0f;
+				}
+				PState.rigidbody.velocity = new Vector2(PState.attr.runningJumpSpeed * jumpDir, 0);
+				PState.rigidbody.AddForce(new Vector2(0,PState.attr.jumpForce), ForceMode2D.Impulse);
+				PState.player.animator.Play("PlayerJumpingRunning");
+				return new PStateSoaring();
+			} else{
+				return new PStateMoving();
+			}
 		}
 		return this;
 	}
@@ -56,6 +73,9 @@ public class PStateRolling : PState
 	}
 	
 	public override PState PressJump(){
+		if(rollTimer > jumpQueueTime){
+			runningJumpQueued = true;
+		}
 		return this;
 	}
 	
