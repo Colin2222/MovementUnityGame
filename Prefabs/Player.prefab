@@ -1356,7 +1356,7 @@ MonoBehaviour:
     maxRunSpeed: 8.5
     slideForceMultiplier: 0.5
     slideStopSpeedTarget: 1
-    runningJumpSpeed: 6.25
+    runningJumpSpeed: 6
     jumpBraceTime: 0.5
     maxStillJumpAngleFromYAxis: 0.7
     stillJumpLaunchTime: 0.08
