@@ -8,6 +8,7 @@ public abstract class PState
 	protected static PlayerInputManager inputManager;
 	protected static PlayerAttributeSet attr;
 	protected static Rigidbody2D rigidbody;
+	protected static CharacterPhysicsChecker physics;
 	protected static int direction;
 	protected static float timeSinceLastGroundHit;
 	protected static float lastGroundHitSpeed;

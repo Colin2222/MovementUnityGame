@@ -9,9 +9,10 @@ public class PStateRolling : PState
 	float minRollSpeed;
 	bool runningJumpQueued;
 	float jumpQueueTime;
+	bool slowRoll;
 	Rigidbody2D rb;
 	
-    public PStateRolling(){
+    public PStateRolling(float hitSpeedX, float hitSpeedY){
 		PState.player.animator.Play("PlayerRolling");
 		minRollSpeed = PState.attr.groundRollMinSpeed;
 		rb = PState.rigidbody;
@@ -19,12 +20,28 @@ public class PStateRolling : PState
 		rollTimer = 0.0f;
 		runningJumpQueued = false;
 		jumpQueueTime = PState.attr.groundRollJumpQueueTime;
+		
+		// calculate if roll will be slow or full-speed
+		float rollSpeedCalc = Mathf.Abs(hitSpeedX * 0.75f) + Mathf.Abs(hitSpeedY * 0.25f);
+		Debug.Log(rollSpeedCalc);
+		if(rollSpeedCalc < PState.attr.groundRollSlowThreshold){
+			minRollSpeed *= PState.attr.groundRollSlowMultiplier;
+			slowRoll = true;
+			Debug.Log("SLOW");
+		} else{
+			slowRoll = false;
+		}
 	}
 	
     public override PState Update(){
 		rollTimer += Time.deltaTime;
 		if(rollTimer >= rollTime){
 			if(runningJumpQueued){
+				if(slowRoll){
+					PState.player.animator.Play("PlayerJumpBracing");
+					return new PStateJumpBracing();
+				}
+				
 				float jumpDir;
 				if(PState.rigidbody.velocity.x > 0){
 					jumpDir = 1.0f;

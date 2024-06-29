@@ -56,6 +56,8 @@ public class PlayerAttributeSet
 	public float groundRollBraceWindow;
 	public float groundRollTime;
 	public float groundRollMinSpeed;
+	public float groundRollSlowMultiplier;
+	public float groundRollSlowThreshold;
 	public float groundRollJumpQueueTime;
 	public float landingBigTime;
 	public float landingBigForceMultiplier;

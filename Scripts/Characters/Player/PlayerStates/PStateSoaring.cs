@@ -22,7 +22,7 @@ public class PStateSoaring : PState
 		if(hitSpeedY > PState.attr.groundHitSpeedRollThreshold){
 			return new PStateRollEntering();
 		} else if(hitSpeedY > PState.attr.groundHitSpeedRollMin && PState.inputManager.bracing){
-			return new PStateRolling();
+			return new PStateRolling(hitSpeedX, hitSpeedY);
 		}
 		PState.timeSinceLastGroundHit = 0.0f;
 		PState.lastGroundHitSpeed = hitSpeedY;

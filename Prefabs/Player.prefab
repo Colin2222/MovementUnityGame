@@ -178,6 +178,8 @@ MonoBehaviour:
     groundRollBraceWindow: 0
     groundRollTime: 0
     groundRollMinSpeed: 0
+    groundRollSlowMultiplier: 0
+    groundRollSlowThreshold: 0
     groundRollJumpQueueTime: 0
     landingBigTime: 0
     landingBigForceMultiplier: 0
@@ -1403,6 +1405,8 @@ MonoBehaviour:
     groundRollBraceWindow: 0.125
     groundRollTime: 0.4
     groundRollMinSpeed: 5.5
+    groundRollSlowMultiplier: 0.5
+    groundRollSlowThreshold: 3.5
     groundRollJumpQueueTime: 0.3
     landingBigTime: 0.8
     landingBigForceMultiplier: 0.9

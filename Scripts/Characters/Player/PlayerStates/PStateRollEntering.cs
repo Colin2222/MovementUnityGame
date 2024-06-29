@@ -54,7 +54,7 @@ public class PStateRollEntering : PState
 	}
 	
 	public override PState Brace(){
-		return new PStateRolling();
+		return new PStateRolling(PState.physics.lastBottomCollisionSpeed.x, PState.physics.lastBottomCollisionSpeed.y);
 	}
 	
 	public override PState LeaveGround(){

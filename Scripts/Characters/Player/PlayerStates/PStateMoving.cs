@@ -88,7 +88,7 @@ public class PStateMoving : PState
 		} else if(PState.player.cornerHandler.corner != null){
 			return new PStateCornerGrabbing();
 		} else if(PState.timeSinceLastGroundHit < PState.attr.optionalRollWindow){
-			return new PStateRolling();
+			return new PStateRolling(PState.physics.lastBottomCollisionSpeed.x, PState.physics.lastBottomCollisionSpeed.y);
 		}
 		return this;
 	}
