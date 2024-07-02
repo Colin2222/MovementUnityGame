@@ -1359,7 +1359,7 @@ MonoBehaviour:
     maxRunSpeed: 8.5
     slideForceMultiplier: 0.5
     slideStopSpeedTarget: 1
-    runningJumpSpeed: 6
+    runningJumpSpeed: 6.5
     jumpBraceTime: 0.5
     maxStillJumpAngleFromYAxis: 0.7
     stillJumpLaunchTime: 0.08
@@ -1407,7 +1407,7 @@ MonoBehaviour:
     groundRollMinSpeed: 5.5
     groundRollSlowMultiplier: 0.5
     groundRollSlowThreshold: 3.5
-    groundRollJumpQueueTime: 0.3
+    groundRollJumpQueueTime: 0.2
     landingBigTime: 0.8
     landingBigForceMultiplier: 0.9
     optionalRollWindow: 0.125
