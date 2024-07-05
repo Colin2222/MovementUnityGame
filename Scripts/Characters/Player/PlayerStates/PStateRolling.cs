@@ -108,6 +108,7 @@ public class PStateRolling : PState
 	}
 	
 	public override PState LeaveGround(){
+		PState.player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
 	
