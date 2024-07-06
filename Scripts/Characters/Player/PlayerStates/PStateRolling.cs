@@ -9,6 +9,7 @@ public class PStateRolling : PState
 	float minRollSpeed;
 	bool runningJumpQueued;
 	float jumpQueueTime;
+	float rollCancelTime;
 	bool slowRoll;
 	Rigidbody2D rb;
 	
@@ -20,6 +21,7 @@ public class PStateRolling : PState
 		rollTimer = 0.0f;
 		runningJumpQueued = false;
 		jumpQueueTime = PState.attr.groundRollJumpQueueTime;
+		rollCancelTime = PState.attr.groundRollEdgeCancelTime;
 		
 		// calculate if roll will be slow or full-speed
 		float rollSpeedCalc = Mathf.Abs(hitSpeedX * 0.75f) + Mathf.Abs(hitSpeedY * 0.25f);
@@ -108,6 +110,18 @@ public class PStateRolling : PState
 	}
 	
 	public override PState LeaveGround(){
+		if(runningJumpQueued && rollTimer > rollCancelTime){
+			float jumpDir;
+			if(PState.rigidbody.velocity.x > 0){
+				jumpDir = 1.0f;
+			} else{
+				jumpDir = -1.0f;
+			}
+			PState.rigidbody.velocity = new Vector2(PState.attr.runningJumpSpeed * jumpDir, 0);
+			PState.rigidbody.AddForce(new Vector2(0,PState.attr.jumpForce), ForceMode2D.Impulse);
+			PState.player.animator.Play("PlayerJumpingRunning");
+			return new PStateSoaring();
+		}
 		PState.player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
