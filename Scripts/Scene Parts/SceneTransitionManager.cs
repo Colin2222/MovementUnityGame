@@ -17,6 +17,9 @@ public class SceneTransitionManager : MonoBehaviour
 	bool entering = false;
 	bool tempTransitioning = false;
 	int sceneTransitionIndex;
+	
+	int currentEntranceNumber;
+	int currentTransitionDirection;
     // Update is called once per frame
     void Update()
     {
@@ -47,7 +50,7 @@ public class SceneTransitionManager : MonoBehaviour
 				transitionShape.transform.localPosition += (transitionSpeed * Time.deltaTime * Vector3.right);
 				transitionTimer -= Time.deltaTime;
 				if(transitionTimer <= 0.0f){
-					sceneManager.SwitchScenes(sceneTransitionIndex);
+					//sceneManager.SwitchScenes(sceneTransitionIndex);
 				}
 			}
 			

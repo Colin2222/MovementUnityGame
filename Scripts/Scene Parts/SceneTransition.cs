@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class SceneTransition : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public int transitionBuildIndex;
+	public int transitionDirection;
+	public int entranceNumber;
+	public Transform spawnTransform;
+	SessionManager sessionManager;
+	
+	void Awake(){
+		GameObject sessionManagerTest = GameObject.FindWithTag("SessionManager");
+		if(sessionManagerTest != null){
+			sessionManager = sessionManagerTest.GetComponent<SessionManager>();
+		}
+		
+		if(sessionManager.currentEntranceNumber == entranceNumber){
+			sessionManager.UpdateSpawnPoint(spawnTransform);
+		}
+	}
+	
+    void OnTriggerEnter2D(Collider2D col){
+		sessionManager.TransitionScene(transitionBuildIndex, entranceNumber, transitionDirection);
+	}
 }

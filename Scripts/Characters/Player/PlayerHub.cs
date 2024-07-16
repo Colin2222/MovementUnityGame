@@ -14,6 +14,11 @@ public class PlayerHub : MonoBehaviour
 	public PlayerReskinManager reskinner;
 	public PlayerAttributeManager attributeManager;
 	public PlayerSoundInterface soundInterface;
+	
+	[System.NonSerialized]
+	public bool isSpawning = false;
+	public float spawnTime;
+	
     // Start is called before the first frame update
     void Awake()
     {
@@ -21,6 +26,9 @@ public class PlayerHub : MonoBehaviour
     }
 	
 	void Start(){
+		DontDestroyOnLoad(gameObject);
+		StartCoroutine(RunSpawnBufferTimer());
+		
 		AudioClip bgAudio = GameObject.FindWithTag("SceneManager").GetComponent<SceneManager>().bgAudio;
 		
 		if(bgAudio != null){
@@ -53,4 +61,10 @@ public class PlayerHub : MonoBehaviour
 	public void InvertPlayerOutline(bool inverted){
 		reskinner.SetPlayerInvertSkin(inverted);
 	}
+	
+	public IEnumerator RunSpawnBufferTimer(){
+        isSpawning = true;
+		yield return new WaitForSeconds(spawnTime);
+		isSpawning = false;
+    }
 }

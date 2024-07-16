@@ -260,6 +260,8 @@ MonoBehaviour:
   persistentState: {fileID: 0}
   persistentStatePrefab: {fileID: 4400052616845131820, guid: d6473ba1db6dec54f9d1f732bcb0e927, type: 3}
   cutsceneManager: {fileID: 3206585092610622937}
+  sessionManager: {fileID: 0}
+  sessionManagerPrefab: {fileID: 2751784867081830622, guid: d3eec8576515a594ea567f49798cddc0, type: 3}
   obstacleColor: {r: 0, g: 0, b: 0, a: 0}
   backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   invertPlayerColor: 0

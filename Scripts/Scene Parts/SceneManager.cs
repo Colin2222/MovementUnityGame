@@ -50,6 +50,10 @@ public class SceneManager : MonoBehaviour
 	
 	public CutsceneManager cutsceneManager;
 	
+	[System.NonSerialized]
+	public SessionManager sessionManager;
+	public GameObject sessionManagerPrefab;
+	
 	public Color obstacleColor;
 	public Color backgroundColor;
 	public bool invertPlayerColor;
@@ -59,6 +63,7 @@ public class SceneManager : MonoBehaviour
     GameObject playerStateObjectTest;
     GameObject playerObjectTest;
     GameObject persistentStateTest;
+	GameObject sessionManagerTest;
 	
 	void Awake(){
 		// load in items from data xml
@@ -84,6 +89,16 @@ public class SceneManager : MonoBehaviour
             persistentState = persistentStateTest.GetComponent<PersistentState>();
         }
 		
+		// check if there is a DontDestroyOnLoad session manager, create a new one if there isnt
+		sessionManagerTest = GameObject.FindWithTag("SessionManager");
+        if(sessionManagerTest == null){
+            sessionManager = Instantiate(sessionManagerPrefab,new Vector3(0,0,0),Quaternion.identity).GetComponent<SessionManager>();
+        }
+        else{
+            sessionManager = sessionManagerTest.GetComponent<SessionManager>();
+        }
+		sessionManager.UpdateSceneManager(this);
+		
 		// check if there is a DontDestroyOnLoad player, create a new one if there isnt
         playerObjectTest = GameObject.FindWithTag("Player");
         if(playerObjectTest == null){
@@ -92,8 +107,8 @@ public class SceneManager : MonoBehaviour
         else{
             player = playerObjectTest.GetComponent<PlayerHub>();
         }
-		player.transform.position = playerSpawnTransform.position;
 		vcam.m_Follow = player.transform;
+		sessionManager.UpdatePlayer(player);
 		
 		// check if there is a DontDestroyOnLoad profile manager, create a new one if there isnt
         GameObject profileManagerObjectTest = GameObject.FindWithTag("ProfileManager");
@@ -122,6 +137,9 @@ public class SceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		// set player spawn point which has been determined by matching SceneTranstion to entranceNumber
+		player.transform.position = playerSpawnTransform.position;
+		
 		profileManager.SetupProfileSelection(profileSelectionLocation);
 		if(isHubWorld){
 			levelSelectManager.SetupLevelSelection(levelSelectionLocation);
@@ -147,7 +165,7 @@ public class SceneManager : MonoBehaviour
 		
 		journalManager.SeekUI();
 		
-		cutsceneManager.LoadCutscene("room_0_c0");
+		//cutsceneManager.LoadCutscene("room_0_c0");
 		//cutsceneManager.PlayCutscene(1);
     }
 	
@@ -165,7 +183,7 @@ public class SceneManager : MonoBehaviour
 		}
 	}
 
-    // loads the scene of the inputted build index
+    // loads the scene of the inputted build index with delay 
     public IEnumerator SwitchScenes(int buildIndex)
     {
 		Debug.Log("SWITCHING SCENES");
