@@ -49,6 +49,9 @@ public class BottomCheck : MonoBehaviour
     }
 	
 	public void ClearReferences(){
+		if(collisions == null){
+			collisions = new List<Transform>();
+		}
 		collisions.Clear();
 	}
 }

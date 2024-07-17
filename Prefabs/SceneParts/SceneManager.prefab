@@ -241,7 +241,7 @@ MonoBehaviour:
   playerSpawnTransform: {fileID: 4845049506762891137}
   profileSelectionLocation: {fileID: 0}
   levelSelectionLocation: {fileID: 0}
-  transitionTime: 0.875
+  transitionTime: 0.5
   playerPrefab: {fileID: 6829769311745543616, guid: cd1a6418704797742927571d4b0e1ea0, type: 3}
   profileManagerPrefab: {fileID: 7138545551088395205, guid: 5a004e8ac2d0dde40afe8faa39b9981f, type: 3}
   itemRegistryXml: items
@@ -260,7 +260,6 @@ MonoBehaviour:
   persistentState: {fileID: 0}
   persistentStatePrefab: {fileID: 4400052616845131820, guid: d6473ba1db6dec54f9d1f732bcb0e927, type: 3}
   cutsceneManager: {fileID: 3206585092610622937}
-  sessionManager: {fileID: 0}
   sessionManagerPrefab: {fileID: 2751784867081830622, guid: d3eec8576515a594ea567f49798cddc0, type: 3}
   obstacleColor: {r: 0, g: 0, b: 0, a: 0}
   backgroundColor: {r: 0, g: 0, b: 0, a: 0}

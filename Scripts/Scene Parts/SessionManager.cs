@@ -10,7 +10,7 @@ public class SessionManager : MonoBehaviour
 	public PlayerHub player;
 	
 	[System.NonSerialized]
-	public int currentEntranceNumber;
+	public int currentEntranceNumber = 0;
 	int currentDirectionNumber;
 	
 	void Awake(){
@@ -31,8 +31,14 @@ public class SessionManager : MonoBehaviour
 	
 	public void TransitionScene(int buildIndex, int entranceNumber, int directionNumber){
 		if(!player.isSpawning){
+			// set entrance number
+			this.currentEntranceNumber = entranceNumber;
+			
 			// trigger overlay and player animations
 			sceneManager.transitionManager.ExitTransition(buildIndex);
+
+			// cue player buffer time on spawning so they dont ping pong load between rooms
+			StartCoroutine(player.RunSpawnBufferTimer());
 
 			// load into new scene
 			StartCoroutine(sceneManager.SwitchScenes(buildIndex));

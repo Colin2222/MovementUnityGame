@@ -50,6 +50,7 @@ public class SceneTransitionManager : MonoBehaviour
 				transitionShape.transform.localPosition += (transitionSpeed * Time.deltaTime * Vector3.right);
 				transitionTimer -= Time.deltaTime;
 				if(transitionTimer <= 0.0f){
+					transitionSpeed = 0.0f;
 					//sceneManager.SwitchScenes(sceneTransitionIndex);
 				}
 			}

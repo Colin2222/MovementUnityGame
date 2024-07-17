@@ -138,7 +138,24 @@ public class SceneManager : MonoBehaviour
     void Start()
     {
 		// set player spawn point which has been determined by matching SceneTranstion to entranceNumber
-		player.transform.position = playerSpawnTransform.position;
+		bool entranceFound = false;
+		GameObject[] sceneTransitions = GameObject.FindGameObjectsWithTag("SceneTransition");
+		foreach(GameObject transitionObj in sceneTransitions){
+			SceneTransition transition = transitionObj.GetComponent<SceneTransition>();
+			if(transition.entranceNumber == sessionManager.currentEntranceNumber){
+				player.transform.position = transition.spawnTransform.position;
+				entranceFound = true;
+				break;
+			}
+		}
+		if(!entranceFound){
+			player.transform.position = playerSpawnTransform.position;
+		}
+		
+		// clear the players tracking for its groundcheck since unity scene transition doesnt frickin exit a 2d collision dammit
+		if(player.physics != null){
+			player.physics.ClearBottomCheck();
+		}
 		
 		profileManager.SetupProfileSelection(profileSelectionLocation);
 		if(isHubWorld){

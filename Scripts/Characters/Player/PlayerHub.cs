@@ -27,7 +27,6 @@ public class PlayerHub : MonoBehaviour
 	
 	void Start(){
 		DontDestroyOnLoad(gameObject);
-		StartCoroutine(RunSpawnBufferTimer());
 		
 		AudioClip bgAudio = GameObject.FindWithTag("SceneManager").GetComponent<SceneManager>().bgAudio;
 		
