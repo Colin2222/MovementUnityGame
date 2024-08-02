@@ -24,6 +24,7 @@ public class CutsceneManager : MonoBehaviour
 	CutsceneTask currentTask;
 	Dictionary<int, List<CutsceneActor>> actorsDict;
 	Dictionary<int, Cutscene> cutsceneDict;
+	int lastCutsceneLoaded = 0;
 	
 	public SceneManager sceneManager;
 	
@@ -111,12 +112,16 @@ public class CutsceneManager : MonoBehaviour
 		Cutscene cs = JsonConvert.DeserializeObject<Cutscene>(currentCutsceneTxt.text);
 		cs.active = false;
 		cutsceneDict.Add(cs.id, cs);
+		lastCutsceneLoaded = cs.id;
 		
 		// done parsing json, release asset out of memory
 		Addressables.Release(operation);
 	}
 	
 	public void PlayCutscene(int cutsceneId){
+		if(cutsceneId == -1){
+			cutsceneId = lastCutsceneLoaded;
+		}
 		currentCutscene = cutsceneDict[cutsceneId];
 		currentCutscene.active = true;
 		cutsceneTimer = 0.0f;
