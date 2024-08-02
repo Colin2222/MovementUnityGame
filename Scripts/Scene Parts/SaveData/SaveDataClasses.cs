@@ -4,10 +4,13 @@ using UnityEngine;
 
 [System.Serializable]
 public class GameSaveData{
+	public Dictionary<string, bool> progressMarkers;
+	/*
 	public Dictionary<string, Quest> completed_quests;
 	public Dictionary<string, Quest> current_quests;
 	public Dictionary<string, Quest> uncompleted_quests;
 	public Dictionary<string, Room> rooms;
+	*/
 }
 
 [System.Serializable]

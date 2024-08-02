@@ -18,7 +18,7 @@ public class PersistentState : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
     }
-	
+	/*
 	public void CreateNewSave(){
 		// load in json of fresh save into TextAsset
 		var operation = Addressables.LoadAssetAsync<TextAsset>(addressHeader + "fresh_save.txt");
@@ -76,4 +76,5 @@ public class PersistentState : MonoBehaviour
 			saveData.current_quests.Remove(questID);
 		}
 	}
+	*/
 }

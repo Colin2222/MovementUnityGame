@@ -1,57 +1,7 @@
 {
-  "completed_quests": {
-    "quest_4": {
-      "id": "quest_4",
-      "display_name": "Boot up the game",
-      "decision_tags": []
-    }
-  },
-  "current_quests": {
-    "quest_0": {
-      "id": "quest_0",
-      "display_name": "Reach the guidestone",
-      "decision_tags": []
-    }
-  },
-  "uncompleted_quests": {
-    "quest_6": {
-      "id": "quest_6",
-      "display_name": "Beat the game",
-      "decision_tags": []
-    },
-    "quest_7": {
-      "id": "quest_7",
-      "display_name": "Do the secret quest",
-      "decision_tags": []
-    }
-  },
-  "rooms": {
-    "room_0": {
-      "id": "room_0",
-      "display_name": "Limbo",
-      "sites": [
-        {
-          "site_id": 0,
-          "display_name": "western hideout under the overhang",
-          "active": false
-        },
-        {
-          "site_id": 0,
-          "display_name": "western opening on the overhang",
-          "active": false
-        }
-      ]
-    },
-    "room_1": {
-      "id": "room_0",
-      "display_name": "Front of Home",
-      "sites": [
-        {
-          "site_id": 0,
-          "display_name": "front yard to the right of the front door",
-          "active": false
-        }
-      ]
-    }
+  "progressMarkers": {
+    "started_game": true,
+    "halfway_done": false,
+    "finished_game": false
   }
 }

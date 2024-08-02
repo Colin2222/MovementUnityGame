@@ -1,0 +1,7 @@
+{
+	"progressMarkers":{
+		"started_game":true,
+		"halfway_done":false,
+		"finished_game":false
+	}
+}

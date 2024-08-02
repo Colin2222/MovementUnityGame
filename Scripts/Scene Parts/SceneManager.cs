@@ -74,21 +74,6 @@ public class SceneManager : MonoBehaviour
 		levelRegistry = LevelRegistry.Instance();
 		levelRegistry.LoadLevels(levelRegistryXml);
 		
-		// check if there is a DontDestroyOnLoad persistent state
-		// used for keeping track of serializable game save object (see SaveDataClasses and PersistentState scripts)
-		// used for determining which door the player will enter from
-		persistentStateTest = GameObject.FindWithTag("PersistentState");
-        if(persistentStateTest == null){
-            persistentState = Instantiate(persistentStatePrefab,new Vector3(0,0,0),Quaternion.identity).GetComponent<PersistentState>();
-			
-			//CREATE NEW SAVE, THIS IS TEMPORARY
-			persistentState.CreateNewSave();
-			persistentState.WriteSave();
-        }
-        else{
-            persistentState = persistentStateTest.GetComponent<PersistentState>();
-        }
-		
 		// check if there is a DontDestroyOnLoad session manager, create a new one if there isnt
 		sessionManagerTest = GameObject.FindWithTag("SessionManager");
         if(sessionManagerTest == null){
@@ -98,6 +83,8 @@ public class SceneManager : MonoBehaviour
             sessionManager = sessionManagerTest.GetComponent<SessionManager>();
         }
 		sessionManager.UpdateSceneManager(this);
+		sessionManager.CreateNewSave();
+		sessionManager.SaveData();
 		
 		// check if there is a DontDestroyOnLoad player, create a new one if there isnt
         playerObjectTest = GameObject.FindWithTag("Player");

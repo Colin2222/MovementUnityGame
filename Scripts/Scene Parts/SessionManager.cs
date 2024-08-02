@@ -1,6 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceLocations;
+using UnityEngine.AddressableAssets;
+using Newtonsoft.Json;
 
 // THIS CLASS WILL HOLD ALL INFORMATION RELEVANT TO THE CURRENT PLAY SESSION
 // SAVE STATE, TRANSITIONS BETWEEN ROOM
@@ -12,6 +17,10 @@ public class SessionManager : MonoBehaviour
 	[System.NonSerialized]
 	public int currentEntranceNumber = 0;
 	int currentDirectionNumber;
+	
+	public GameSaveData saveData;
+	public string currentPlayerName = "player";
+	string addressHeader = "Assets/Data/SaveData/";
 	
 	void Awake(){
 		DontDestroyOnLoad(gameObject);
@@ -28,6 +37,51 @@ public class SessionManager : MonoBehaviour
     {
         
     }
+	
+	public void LoadData(){
+		// load in json of player's save into TextAsset
+		var operation = Addressables.LoadAssetAsync<TextAsset>(addressHeader + currentPlayerName + "_save.txt");
+		TextAsset txtAsset = operation.WaitForCompletion();
+		
+		// parse json into cutscene object
+		saveData = JsonConvert.DeserializeObject<GameSaveData>(txtAsset.text);
+		
+		// done parsing json, release asset out of memory
+		Addressables.Release(operation);
+	}
+	
+	public void SaveData(){
+		// load in json of player's save into TextAsset
+		var operation = Addressables.LoadAssetAsync<TextAsset>(addressHeader + currentPlayerName + "_save.txt");
+		TextAsset txtAsset = operation.WaitForCompletion();
+		
+		// serialize saveData into json
+		string jsonText = JsonConvert.SerializeObject(saveData, Formatting.Indented);
+		File.WriteAllText(addressHeader + currentPlayerName + "_save.txt", jsonText);
+		
+		// done parsing json, release asset out of memory
+		Addressables.Release(operation);
+	}
+	
+	public bool GetData(string dataKey){
+		bool result = saveData.progressMarkers[dataKey];
+		if(result != null){
+			return result;
+		}
+		return false;
+	}
+	
+	public void CreateNewSave(){
+		// load in json of fresh save into TextAsset
+		var operation = Addressables.LoadAssetAsync<TextAsset>(addressHeader + "new_save.txt");
+		TextAsset freshSaveTxt = operation.WaitForCompletion();
+		
+		// parse json into cutscene object
+		saveData = JsonConvert.DeserializeObject<GameSaveData>(freshSaveTxt.text);
+		
+		// done parsing json, release asset out of memory
+		Addressables.Release(operation);
+	}
 	
 	public void TransitionScene(int buildIndex, int entranceNumber, int directionNumber){
 		if(!player.isSpawning){

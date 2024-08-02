@@ -41,6 +41,10 @@ MonoBehaviour:
     m_Address: Assets/Data/SaveData/player_save.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 575e1684c2400f140a160ae3f4c350d2
+    m_Address: Assets/Data/SaveData/new_save.txt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:
