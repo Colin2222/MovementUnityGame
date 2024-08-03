@@ -71,6 +71,10 @@ public class SessionManager : MonoBehaviour
 		return false;
 	}
 	
+	public void SetData(string dataKey, bool dataValue){
+		saveData.progressMarkers[dataKey] = dataValue;
+	}
+	
 	public void CreateNewSave(){
 		// load in json of fresh save into TextAsset
 		var operation = Addressables.LoadAssetAsync<TextAsset>(addressHeader + "new_save.txt");

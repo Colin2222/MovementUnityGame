@@ -1867,6 +1867,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd02de9a19a0f864abea5ce360ff9855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataTriggers:
+  - cutsceneName: revelation_1
+    dataToCheck:
+    - dataName: first_revelation
+      dataValue: 0
+    dataToSet:
+    - dataName: first_revelation
+      dataValue: 1
   cutsceneName: revelation_1
 --- !u!1 &443113131
 GameObject:

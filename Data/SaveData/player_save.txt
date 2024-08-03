@@ -3,6 +3,6 @@
     "started_game": true,
     "halfway_done": false,
     "finished_game": false,
-    "first_revelation": false
+    "first_revelation": true
   }
 }

@@ -116,7 +116,9 @@ public class CutsceneManager : MonoBehaviour
 		// parse json into cutscene object
 		Cutscene cs = JsonConvert.DeserializeObject<Cutscene>(currentCutsceneTxt.text);
 		cs.active = false;
-		cutsceneDict.Add(cs.id, cs);
+		if(!cutsceneDict.ContainsKey(cs.id)){
+			cutsceneDict.Add(cs.id, cs);
+		}
 		lastCutsceneLoaded = cs.id;
 		
 		// done parsing json, release asset out of memory
