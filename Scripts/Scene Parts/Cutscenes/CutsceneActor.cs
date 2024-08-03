@@ -101,4 +101,8 @@ public class CutsceneActor : MonoBehaviour
 		int order = (int)orderF;
 		spriteRenderer.sortingOrder = order;
 	}
+	
+	public void SetCameraAnchorPoint(){
+		cutsceneManager.SwitchCameraAnchor(gameObject.transform);
+	}
 }

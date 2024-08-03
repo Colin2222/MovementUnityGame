@@ -3,6 +3,17 @@
 	"duration":7.5,
 	"tasks":[
 		{
+			"id":10,
+			"trigger_time":0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetCameraAnchorPoint",
+					"parameters":[]
+				}
+			]
+		},
+		{
 			"id":0,
 			"trigger_time":1.5,
 			"anim_name":"PlayerWalking",

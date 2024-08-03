@@ -8,6 +8,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceLocations;
 using UnityEngine.AddressableAssets;
 using Newtonsoft.Json;
+using Cinemachine;
 
 public class CutsceneManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class CutsceneManager : MonoBehaviour
 	float cutsceneDuration;
 	string cutsceneAddressHeader = "Assets/Data/Cutscenes/";
 	TextAsset currentCutsceneTxt;
+	
+	public CinemachineVirtualCamera vcam;
 	
 	[System.NonSerialized]
 	public bool inCutscene;
@@ -24,6 +27,7 @@ public class CutsceneManager : MonoBehaviour
 	CutsceneTask currentTask;
 	Dictionary<int, List<CutsceneActor>> actorsDict;
 	Dictionary<int, Cutscene> cutsceneDict;
+	Dictionary<int, Transform> cameraAnchorPoints;
 	int lastCutsceneLoaded = 0;
 	
 	public SceneManager sceneManager;
@@ -73,6 +77,7 @@ public class CutsceneManager : MonoBehaviour
 				sceneManager.player.UnlockPlayer();
 				inCutscene = false;
 				currentCutscene.active = false;
+				SwitchCameraAnchor(sceneManager.player.gameObject.transform);
 			}
 		}
     }
@@ -130,5 +135,9 @@ public class CutsceneManager : MonoBehaviour
 		cutsceneDuration = currentCutscene.duration;
 		inCutscene = true; 
 		sceneManager.player.LockPlayer();
+	}
+	
+	public void SwitchCameraAnchor(Transform anchor){
+		vcam.m_Follow = anchor;
 	}
 }
