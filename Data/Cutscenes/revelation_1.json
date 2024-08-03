@@ -1,0 +1,32 @@
+{
+	"id":1,
+	"duration":7.5,
+	"tasks":[
+		{
+			"id":0,
+			"trigger_time":1.5,
+			"anim_name":"PlayerWalking",
+			"custom_actions":[
+				{
+					"name":"SetHorizontalVelocityToTarget",
+					"parameters":[
+						1.0, -88.6
+					]
+				}
+			]
+		},
+		{
+			"id":0,
+			"trigger_time":5.5,
+			"anim_name":"PlayerIdle",
+			"custom_actions":[
+				{
+					"name":"SetHorizontalVelocity",
+					"parameters":[
+						0.0
+					]
+				}
+			]
+		},
+	]
+}

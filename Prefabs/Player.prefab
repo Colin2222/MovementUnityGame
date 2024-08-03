@@ -1204,6 +1204,7 @@ MonoBehaviour:
   rb: {fileID: 6829769311745543620}
   spriteRenderer: {fileID: 6829769311745543617}
   deactivatedOnStart: 0
+  defaultAnim: PlayerIdle
 --- !u!1 &4083818656014556212
 GameObject:
   m_ObjectHideFlags: 0

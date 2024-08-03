@@ -13,6 +13,10 @@ public class CutsceneActor : MonoBehaviour
 	float tempGrav;
 	bool gravityPaused = false;
 	Vector2 cutsceneVelocity;
+	float targetX;
+	bool movingToTarget;
+	int targetDirection;
+	public string defaultAnim;
 	[System.NonSerialized]
 	public CutsceneManager cutsceneManager;
 	
@@ -26,6 +30,13 @@ public class CutsceneActor : MonoBehaviour
     void FixedUpdate()
     {
 		if(cutsceneManager.inCutscene && rb != null){
+			if(movingToTarget){
+				if((targetDirection == 1 && rb.transform.position.x > targetX) || (targetDirection == -1 && rb.transform.position.x < targetX)){
+					cutsceneVelocity = new Vector2(0.0f, cutsceneVelocity.y);
+					animate(defaultAnim);
+					movingToTarget = false;
+				}
+			} 
 			rb.velocity = cutsceneVelocity;
 		}
     }
@@ -36,6 +47,18 @@ public class CutsceneActor : MonoBehaviour
 	}
 	
 	public void SetHorizontalVelocity(float velocity){
+		cutsceneVelocity = new Vector2(velocity, cutsceneVelocity.y);
+	}
+	
+	public void SetHorizontalVelocityToTarget(float velocity, float targetX){
+		if(targetX > rb.transform.position.x){
+			targetDirection = 1;
+		} else{
+			targetDirection = -1;
+		}
+		
+		this.targetX = targetX;
+		movingToTarget = true;
 		cutsceneVelocity = new Vector2(velocity, cutsceneVelocity.y);
 	}
 	
