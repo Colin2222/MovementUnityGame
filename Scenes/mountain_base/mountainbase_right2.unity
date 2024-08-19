@@ -643,7 +643,7 @@ GameObject:
   - component: {fileID: 205296385}
   m_Layer: 8
   m_Name: base_block (34)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -677,7 +677,7 @@ GameObject:
   - component: {fileID: 208522988}
   m_Layer: 8
   m_Name: base_block (33)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 264649360}
   m_Layer: 8
   m_Name: base_block (27)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -744,7 +744,7 @@ GameObject:
   - component: {fileID: 351455075}
   m_Layer: 8
   m_Name: base_block (36)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 353922032}
   m_Layer: 8
   m_Name: base_block (28)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1029,7 +1029,7 @@ GameObject:
   - component: {fileID: 438600430}
   m_Layer: 8
   m_Name: base_block (31)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 454485793}
   m_Layer: 8
   m_Name: base_block (38)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1548,7 +1548,7 @@ GameObject:
   - component: {fileID: 519911261}
   m_Layer: 8
   m_Name: base_block (29)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2584,7 +2584,7 @@ GameObject:
   - component: {fileID: 819884732}
   m_Layer: 8
   m_Name: base_block (41)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2924,7 +2924,7 @@ GameObject:
   - component: {fileID: 906667446}
   m_Layer: 8
   m_Name: base_block (42)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3068,7 +3068,7 @@ GameObject:
   - component: {fileID: 933263223}
   m_Layer: 8
   m_Name: base_block (46)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3430,7 +3430,7 @@ GameObject:
   - component: {fileID: 1000442155}
   m_Layer: 8
   m_Name: base_block (39)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3692,7 +3692,7 @@ GameObject:
   - component: {fileID: 1157506900}
   m_Layer: 8
   m_Name: base_block (35)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3947,7 +3947,7 @@ GameObject:
   - component: {fileID: 1190783546}
   m_Layer: 8
   m_Name: base_block (37)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4219,7 +4219,7 @@ GameObject:
   - component: {fileID: 1350890871}
   m_Layer: 8
   m_Name: base_block (30)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4252,7 +4252,7 @@ GameObject:
   - component: {fileID: 1358417845}
   m_Layer: 8
   m_Name: base_block (24)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4555,7 +4555,7 @@ GameObject:
   - component: {fileID: 1395334514}
   m_Layer: 8
   m_Name: base_block (32)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4746,7 +4746,7 @@ GameObject:
   - component: {fileID: 1477801587}
   m_Layer: 8
   m_Name: base_block (43)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5155,7 +5155,7 @@ GameObject:
   - component: {fileID: 1569960338}
   m_Layer: 8
   m_Name: base_block (40)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5299,7 +5299,7 @@ GameObject:
   - component: {fileID: 1721518472}
   m_Layer: 8
   m_Name: base_block (1)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5509,7 +5509,7 @@ GameObject:
   - component: {fileID: 1752491387}
   m_Layer: 8
   m_Name: base_block (45)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6063,7 +6063,7 @@ GameObject:
   - component: {fileID: 1874647720}
   m_Layer: 8
   m_Name: base_block (44)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6144,7 +6144,7 @@ GameObject:
   - component: {fileID: 1924153545}
   m_Layer: 8
   m_Name: base_block (25)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6372,7 +6372,7 @@ GameObject:
   - component: {fileID: 2027544104}
   m_Layer: 8
   m_Name: base_block (26)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6680,7 +6680,7 @@ GameObject:
   - component: {fileID: 2117811434}
   m_Layer: 8
   m_Name: base_block (23)
-  m_TagString: Untagged
+  m_TagString: PhysicsBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
