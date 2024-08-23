@@ -5,6 +5,8 @@ using UnityEngine;
 public class PStateCornerGrabbing : PState
 {	
 	int cornerDir;
+	float horizontal;
+	float vertical;
 
     public PStateCornerGrabbing(){
 		CornerHandler cornerHandler = PState.player.cornerHandler;
@@ -34,6 +36,8 @@ public class PStateCornerGrabbing : PState
 	}
 	
 	public override PState Move(float horizontal, float vertical){
+		this.horizontal = horizontal;
+		this.vertical = vertical;
 		return this;
 	}
 	
@@ -48,6 +52,28 @@ public class PStateCornerGrabbing : PState
 	}
 	
 	public override PState PressJump(){
+		if(Mathf.Abs(horizontal) >= PState.attr.cornerJumpHorizontalJoystickThreshold && Mathf.Sign(cornerDir) == Mathf.Sign(horizontal)){
+			float aimAngle = Mathf.Atan2(vertical, horizontal);
+			float horizontalForce = PState.attr.cornerJumpForce * Mathf.Cos(aimAngle);
+			float verticalForce = PState.attr.cornerJumpForce * Mathf.Sin(aimAngle);
+			
+			horizontalForce *= PState.attr.cornerJumpHorizontalForceCoefficient;
+			if(Mathf.Abs(horizontalForce) > PState.attr.cornerJumpMaximumHorizontalForce){
+				horizontalForce = PState.attr.cornerJumpMaximumHorizontalForce * cornerDir;
+			}
+
+			if(verticalForce > 0.0f && verticalForce >= PState.attr.cornerJumpMaximumVerticalForce){
+				verticalForce *= PState.attr.cornerJumpVerticalForceCoefficient;
+			} else if(verticalForce < PState.attr.cornerJumpMaximumVerticalForce){
+				verticalForce = PState.attr.cornerJumpMaximumVerticalForce;
+			}
+			rigidbody.AddForce(new Vector2(horizontalForce, verticalForce), ForceMode2D.Impulse);
+			
+			SetDirection(horizontal);
+			PState.rigidbody.gravityScale = PState.attr.gravityScale;
+			PState.player.animator.Play("PlayerSoaringStill");
+			return new PStateSoaring();
+		}
 		return this;
 	}
 	

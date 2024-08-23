@@ -31,6 +31,12 @@ public class PlayerAttributeSet
 	public float cornerStunGetupTime;
 	public float cornerVaultTime;
 	public float cornerMantleMinHorizontalKeepSpeed;
+	public float cornerJumpHorizontalJoystickThreshold;
+	public float cornerJumpForce;
+	public float cornerJumpHorizontalForceCoefficient;
+	public float cornerJumpVerticalForceCoefficient;
+	public float cornerJumpMaximumHorizontalForce;
+	public float cornerJumpMaximumVerticalForce;
 	public float wallBraceTime;
 	public float wallPushTime;
 	public float wallPushHorizontalRetention;

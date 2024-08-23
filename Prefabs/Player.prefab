@@ -154,6 +154,12 @@ MonoBehaviour:
     cornerStunGetupTime: 0
     cornerVaultTime: 0
     cornerMantleMinHorizontalKeepSpeed: 0
+    cornerJumpHorizontalJoystickThreshold: 0
+    cornerJumpForce: 0
+    cornerJumpHorizontalForceCoefficient: 0
+    cornerJumpVerticalForceCoefficient: 0
+    cornerJumpMaximumHorizontalForce: 0
+    cornerJumpMaximumVerticalForce: 0
     wallBraceTime: 0
     wallPushTime: 0
     wallPushHorizontalRetention: 0
@@ -1383,6 +1389,12 @@ MonoBehaviour:
     cornerStunGetupTime: 0.75
     cornerVaultTime: 0
     cornerMantleMinHorizontalKeepSpeed: 0
+    cornerJumpHorizontalJoystickThreshold: 0.55
+    cornerJumpForce: 13
+    cornerJumpHorizontalForceCoefficient: 1
+    cornerJumpVerticalForceCoefficient: 1.25
+    cornerJumpMaximumHorizontalForce: 10
+    cornerJumpMaximumVerticalForce: 1
     wallBraceTime: 0.2
     wallPushTime: 0.1
     wallPushHorizontalRetention: 0.05
