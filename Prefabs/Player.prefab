@@ -1393,7 +1393,7 @@ MonoBehaviour:
     cornerJumpForce: 13
     cornerJumpHorizontalForceCoefficient: 1
     cornerJumpVerticalForceCoefficient: 1.25
-    cornerJumpMaximumHorizontalForce: 10
+    cornerJumpMaximumHorizontalForce: 9
     cornerJumpMaximumVerticalForce: 1
     wallBraceTime: 0.2
     wallPushTime: 0.1

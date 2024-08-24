@@ -71,7 +71,7 @@ public class PStateCornerGrabbing : PState
 			
 			SetDirection(horizontal);
 			PState.rigidbody.gravityScale = PState.attr.gravityScale;
-			PState.player.animator.Play("PlayerSoaringStill");
+			PState.player.animator.Play("PlayerWallPushing");
 			return new PStateSoaring();
 		}
 		return this;
