@@ -83,7 +83,9 @@ public class PStateMoving : PState
 	}
 	
 	public override PState Brace(){
-		if(PState.player.cornerHandler.mantleCorner != null){
+		if(Mathf.Abs(PState.rigidbody.velocity.x) < PState.attr.cornerClimbDownMaxEntrySpeed && PState.player.cornerHandler.CheckFootHandler(PState.direction)){
+			return new PStateCornerClimbingDown(PState.direction);
+		} else if(PState.player.cornerHandler.mantleCorner != null){
 			return new PStateCornerMantling();
 		} else if(PState.player.cornerHandler.corner != null){
 			return new PStateCornerGrabbing();

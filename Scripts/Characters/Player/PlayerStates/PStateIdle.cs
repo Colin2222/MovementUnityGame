@@ -61,7 +61,9 @@ public class PStateIdle : PState
 	}
 	
 	public override PState Brace(){
-		if(PState.player.cornerHandler.mantleCorner != null){
+		if(PState.player.cornerHandler.CheckFootHandler(PState.direction)){
+			return new PStateCornerClimbingDown(PState.direction);
+		} else if(PState.player.cornerHandler.mantleCorner != null){
 			return new PStateCornerMantling();
 		} else if(PState.player.cornerHandler.corner != null){
 			return new PStateCornerGrabbing();

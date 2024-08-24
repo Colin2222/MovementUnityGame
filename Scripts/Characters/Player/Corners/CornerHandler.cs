@@ -10,6 +10,8 @@ public class CornerHandler : MonoBehaviour
 	public Transform lastCorner = null;
 	[System.NonSerialized]
 	public Transform mantleCorner = null;
+	[System.NonSerialized]
+	public Transform footCorner = null;
 	
 	[System.NonSerialized]
 	public Transform trackedCorner = null;
@@ -25,6 +27,8 @@ public class CornerHandler : MonoBehaviour
 	public float mantleClimbOffsetX;
 	public float mantleClimbOffsetY;
 	
+	public FootHandler footHandler;
+	
     void OnTriggerEnter2D(Collider2D col){
 		corner = col.gameObject.transform;
 	}
@@ -32,5 +36,9 @@ public class CornerHandler : MonoBehaviour
 	void OnTriggerExit2D(Collider2D col){
 		lastCorner = corner;
 		corner = null;
+	}
+	
+	public bool CheckFootHandler(int direction){
+		return footHandler.CheckForCorner(direction);
 	}
 }

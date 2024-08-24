@@ -38,6 +38,7 @@ public class PlayerAttributeSet
 	public float cornerJumpVerticalForceCoefficient;
 	public float cornerJumpMaximumHorizontalForce;
 	public float cornerJumpMaximumVerticalForce;
+	public float cornerClimbDownMaxEntrySpeed;
 	public float wallBraceTime;
 	public float wallPushTime;
 	public float wallPushHorizontalRetention;
