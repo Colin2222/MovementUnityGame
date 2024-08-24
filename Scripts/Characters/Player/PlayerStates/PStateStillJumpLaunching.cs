@@ -7,11 +7,13 @@ public class PStateStillJumpLaunching : PState
 	float jumpLaunchTimer;
 	float jumpForceMultiplier;
 	float aimAngle;
+	float jumpMag;
 	
-    public PStateStillJumpLaunching(float jumpForceMultiplier, float aimAngle){
+    public PStateStillJumpLaunching(float jumpForceMultiplier, float aimAngle, float jumpMag){
 		jumpLaunchTimer = 0.0f;
 		this.jumpForceMultiplier = jumpForceMultiplier;
 		this.aimAngle = aimAngle;
+		this.jumpMag = jumpMag;
 	}
 	
     public override PState Update(){
@@ -53,7 +55,12 @@ public class PStateStillJumpLaunching : PState
 					}
 				}
 			}
-			rigidbody.AddForce(new Vector2(PState.attr.jumpForce * Mathf.Cos(aimAngle) * jumpForceMultiplier, PState.attr.jumpForce * Mathf.Sin(aimAngle) * jumpForceMultiplier), ForceMode2D.Impulse);
+			float horizontalForce = PState.attr.jumpForce * Mathf.Cos(aimAngle) * jumpForceMultiplier * jumpMag;
+			float verticalForce = PState.attr.jumpForce * Mathf.Sin(aimAngle) * jumpForceMultiplier * jumpMag;
+			if(verticalForce < PState.attr.minVerticalJumpForce){
+				verticalForce = PState.attr.minVerticalJumpForce;
+			}
+			rigidbody.AddForce(new Vector2(horizontalForce, verticalForce), ForceMode2D.Impulse);
 			PState.player.physics.ClearBottomCheck();
 			return new PStateSoaring();
 		}

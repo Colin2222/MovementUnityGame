@@ -15,6 +15,7 @@ public class PlayerAttributeSet
 	public float stillJumpLaunchTime;
 	public float stillJumpMinimumBraceRatio;
 	public float jumpForce;
+	public float minVerticalJumpForce;
 	public float braceTime;
 	public float braceCooldownTime;
 	public float gravityScale;

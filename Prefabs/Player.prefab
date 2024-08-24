@@ -138,6 +138,7 @@ MonoBehaviour:
     stillJumpLaunchTime: 0
     stillJumpMinimumBraceRatio: 0
     jumpForce: 0
+    minVerticalJumpForce: 0
     braceTime: 0
     braceCooldownTime: 0
     gravityScale: 0
@@ -1373,6 +1374,7 @@ MonoBehaviour:
     stillJumpLaunchTime: 0.08
     stillJumpMinimumBraceRatio: 0.4
     jumpForce: 13
+    minVerticalJumpForce: 7
     braceTime: 0.5
     braceCooldownTime: 0.5
     gravityScale: 2.5
@@ -1389,7 +1391,7 @@ MonoBehaviour:
     cornerStunGetupTime: 0.75
     cornerVaultTime: 0
     cornerMantleMinHorizontalKeepSpeed: 0
-    cornerJumpHorizontalJoystickThreshold: 0.55
+    cornerJumpHorizontalJoystickThreshold: 0.45
     cornerJumpForce: 13
     cornerJumpHorizontalForceCoefficient: 1
     cornerJumpVerticalForceCoefficient: 1.25

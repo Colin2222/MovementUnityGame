@@ -51,7 +51,13 @@ public class PStateJumpBracing : PState
 		float jumpForceMultiplier = Mathf.Clamp(jumpBraceCounter, 0.0f, PState.attr.jumpBraceTime) / PState.attr.jumpBraceTime;
 		if(jumpForceMultiplier > PState.attr.stillJumpMinimumBraceRatio){
 			float aimAngle = Mathf.Atan2(vertical, horizontal);
-			return new PStateStillJumpLaunching(jumpForceMultiplier, aimAngle);
+			float jumpMag = new Vector2(horizontal, vertical).magnitude;
+			Debug.Log(jumpMag);
+			// TO DO ADD CONTROLLER DEADZONE
+			if(jumpMag < 0.04f){
+				jumpMag = 1.0f;
+			}
+			return new PStateStillJumpLaunching(jumpForceMultiplier, aimAngle, jumpMag);
 		}
 		return new PStateIdle();
 	}

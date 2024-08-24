@@ -67,7 +67,7 @@ public class PStateCornerGrabbing : PState
 			} else if(verticalForce < PState.attr.cornerJumpMaximumVerticalForce){
 				verticalForce = PState.attr.cornerJumpMaximumVerticalForce;
 			}
-			rigidbody.AddForce(new Vector2(horizontalForce, verticalForce), ForceMode2D.Impulse);
+			rigidbody.AddForce((new Vector2(horizontalForce, verticalForce)) * (new Vector2(horizontal, vertical)).magnitude, ForceMode2D.Impulse);
 			
 			SetDirection(horizontal);
 			PState.rigidbody.gravityScale = PState.attr.gravityScale;
