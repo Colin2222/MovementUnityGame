@@ -1364,11 +1364,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attrSet:
-    moveForce: 12
+    moveForce: 11
     maxRunSpeed: 8.5
     slideForceMultiplier: 0.5
     slideStopSpeedTarget: 1
-    runningJumpSpeed: 6.5
+    runningJumpSpeed: 6
     jumpBraceTime: 0.5
     maxStillJumpAngleFromYAxis: 0.7
     stillJumpLaunchTime: 0.08
