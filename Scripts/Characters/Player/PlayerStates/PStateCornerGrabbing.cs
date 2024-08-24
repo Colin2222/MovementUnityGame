@@ -88,6 +88,7 @@ public class PStateCornerGrabbing : PState
 	
 	public override PState Brace(){
 		PState.rigidbody.gravityScale = PState.attr.gravityScale;
+		PState.physics.ClearBottomCheck();
 		PState.player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}

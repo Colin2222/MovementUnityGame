@@ -10,6 +10,11 @@ public class FootHandler : MonoBehaviour
 	public float checkDistance;
 	public float groundCheckDistance;
 	
+	// not in reference to player, in reference to corner player will potentially be climbing down
+	public float smallCornerCheckVerticalOffset;
+	public float smallCornerCheckHorizontalOffset;
+	public float smallCornerCheckDistance;
+	
 	LayerMask cornerMask;
 	LayerMask groundMask;
 	
@@ -27,12 +32,19 @@ public class FootHandler : MonoBehaviour
 	}
 	
 	public bool CheckForCorner(int direction){
+		// check there is a corner the player can climb down
 		RaycastHit2D hitFeet = Physics2D.Raycast(checkingTrans.position, Vector2.right * direction, checkDistance, cornerMask);
 		if(hitFeet.collider != null){
+			//check the player is facing the right way to climb down the corner
 			RaycastHit2D groundCheck = Physics2D.Raycast(groundCheckTrans.position, Vector2.down, groundCheckDistance, groundMask);
 			if(groundCheck.collider != null){
-				cornerHandler.footCorner = hitFeet.collider.transform;
-				return true;
+				//check the player wouldnt be climbing down a small ledge and clip into the world after climbing down
+				Vector2 cornerCheckPos = new Vector2(hitFeet.collider.transform.position.x + (smallCornerCheckHorizontalOffset * direction), hitFeet.collider.transform.position.y - smallCornerCheckVerticalOffset);
+				RaycastHit2D smallCornerCheck = Physics2D.Raycast(cornerCheckPos, Vector2.down, smallCornerCheckDistance, groundMask);
+				if(smallCornerCheck.collider == null){
+					cornerHandler.footCorner = hitFeet.collider.transform;
+					return true;
+				}
 			}
 		}
 		return false;
