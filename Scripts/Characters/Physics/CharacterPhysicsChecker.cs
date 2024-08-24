@@ -6,6 +6,7 @@ public class CharacterPhysicsChecker : MonoBehaviour
 {
 	public PlayerStateManager stateManager;
 	public BottomCheck bottomCheck;
+	public FrontCheck frontCheck;
 	
     [System.NonSerialized]
     public bool isGrounded = false;

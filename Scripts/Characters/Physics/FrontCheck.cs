@@ -8,6 +8,7 @@ public class FrontCheck : MonoBehaviour
 	public Rigidbody2D rigidbody;
 	public float distanceToWall;
 	LayerMask mask;
+	Collision2D lastFrontCollision;
 	
 	public Transform headCheck;
 	public Transform middleUpperCheck;
@@ -27,6 +28,7 @@ public class FrontCheck : MonoBehaviour
 			parentPhysics.wallSide = Mathf.Sign(-collision.relativeVelocity.x);
 			Vector2 normal = collision.GetContact(0).normal;
 			if(normal.x != 0.0f){
+				lastFrontCollision = collision;
 				parentPhysics.stateManager.HitWall(new Vector2(collision.relativeVelocity.x, collision.relativeVelocity.y), new WallCollisionInfo(hitHead.collider != null, hitUpperMiddle.collider != null, hitLowerMiddle.collider != null, hitFeet.collider != null));
 			}
 			/*
@@ -53,6 +55,11 @@ public class FrontCheck : MonoBehaviour
         parentPhysics.isWalled = false;
 		parentPhysics.stateManager.LeaveWall();
     }
+	
+	public bool IsLowerContact(int direction){		
+		RaycastHit2D hitLowerMiddle = Physics2D.Raycast(middleLowerCheck.position, Vector2.right * -direction, distanceToWall, mask);
+		return hitLowerMiddle.collider != null;
+	}
 }
 
 public class WallCollisionInfo{

@@ -52,7 +52,7 @@ public class PStateCornerGrabbing : PState
 	}
 	
 	public override PState PressJump(){
-		if(Mathf.Abs(horizontal) >= PState.attr.cornerJumpHorizontalJoystickThreshold && Mathf.Sign(cornerDir) == Mathf.Sign(horizontal)){
+		if(Mathf.Abs(horizontal) >= PState.attr.cornerJumpHorizontalJoystickThreshold && Mathf.Sign(cornerDir) == Mathf.Sign(horizontal) && PState.physics.frontCheck.IsLowerContact(cornerDir)){
 			float aimAngle = Mathf.Atan2(vertical, horizontal);
 			float horizontalForce = PState.attr.cornerJumpForce * Mathf.Cos(aimAngle);
 			float verticalForce = PState.attr.cornerJumpForce * Mathf.Sin(aimAngle);

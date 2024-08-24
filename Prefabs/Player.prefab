@@ -1821,6 +1821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateManager: {fileID: 5555245007042818769}
   bottomCheck: {fileID: 6829769310522087715}
+  frontCheck: {fileID: 6829769312154430463}
 --- !u!1 &7418277986815639229
 GameObject:
   m_ObjectHideFlags: 0
