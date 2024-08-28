@@ -1241,7 +1241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377485290462935867, guid: ba5fd7263e1040c4aad0663da2ab8e7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -109.05831
+      value: -109.79
       objectReference: {fileID: 0}
     - target: {fileID: 7377485290462935867, guid: ba5fd7263e1040c4aad0663da2ab8e7d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2349,6 +2349,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 15
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2415,7 +2416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -74.76984, y: 36, z: -10}
+  m_LocalPosition: {x: -75.68077, y: 29.56263, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2468,6 +2469,39 @@ AudioEchoFilter:
   m_DecayRatio: 0.1
   m_WetMix: 0.5
   m_DryMix: 0.5
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &521163167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2791,7 +2825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562052225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -149.6875, y: -11.25, z: 0}
+  m_LocalPosition: {x: -149.6875, y: -11.25, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4569,6 +4603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 900868167}
   - component: {fileID: 900868166}
+  - component: {fileID: 900868168}
   m_Layer: 15
   m_Name: bound
   m_TagString: Untagged
@@ -4583,7 +4618,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900868165}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -4617,6 +4652,38 @@ Transform:
   m_Father: {fileID: 1814887287}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &900868168
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900868165}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 4.1116714, y: 31.557205}
+      - {x: -47.134087, y: 29.366634}
+      - {x: -47.020836, y: 14.186031}
+      - {x: -24.337502, y: 7.7340736}
+      - {x: -0.68123764, y: -21.834618}
+      - {x: 36.409042, y: -21.743519}
+      - {x: 36.40904, y: 6.753723}
 --- !u!1 &903879962
 GameObject:
   m_ObjectHideFlags: 0
@@ -4776,7 +4843,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921743927}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -151, y: -14, z: 4}
+  m_LocalPosition: {x: -155.16, y: -21.5, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6336,7 +6403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193064112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -141, y: -3, z: 0}
+  m_LocalPosition: {x: -141, y: -3, z: -0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7011,7 +7078,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1334063140
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7072,7 +7139,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334063139}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -142.25, y: -3.75, z: 1}
+  m_LocalPosition: {x: -144.6, y: -7.3, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7790,7 +7857,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487479696}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -139.4375, y: -1.8125, z: 0}
+  m_LocalPosition: {x: -139.4375, y: -1.8125, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9111,22 +9178,31 @@ CompositeCollider2D:
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
-  - m_Collider: {fileID: 900868166}
+  - m_Collider: {fileID: 900868168}
     m_ColliderPaths:
-    - - X: 373200000
-        Y: 284400000
-      - X: -399199968
-        Y: 284400000
-      - X: -399199968
-        Y: -284400000
-      - X: 373200000
-        Y: -284400000
+    - - X: 41116716
+        Y: 315572064
+      - X: -471340864
+        Y: 293666336
+      - X: -470208352
+        Y: 141860320
+      - X: -243375008
+        Y: 77340736
+      - X: -6812376
+        Y: -218346176
+      - X: 364090432
+        Y: -217435184
+      - X: 364090400
+        Y: 67537232
   m_CompositePaths:
     m_Paths:
-    - - {x: 37.319973, y: -28.44}
-      - {x: 37.319973, y: 28.44}
-      - {x: -39.92, y: 28.439972}
-      - {x: -39.919968, y: -28.44}
+    - - {x: -0.6812455, y: -21.834608}
+      - {x: 36.409042, y: -21.74349}
+      - {x: 36.40903, y: 6.7537313}
+      - {x: 4.1116624, y: 31.557207}
+      - {x: -47.134087, y: 29.366606}
+      - {x: -47.020817, y: 14.186026}
+      - {x: -24.337496, y: 7.7340674}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1814887289
