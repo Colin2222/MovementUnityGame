@@ -7,6 +7,9 @@ public class PlayerSoundInterface : MonoBehaviour
 	public Rigidbody2D rb;
 	public float footstepVolumeTopSpeed;
 	public float footstepMaxVolume;
+	public float footstepMaxVariance;
+	float footstepBasePitch1;
+	float footstepBasePitch2;
 	
 	public AudioSource background;
 	
@@ -21,6 +24,11 @@ public class PlayerSoundInterface : MonoBehaviour
 	public AudioSource wallImpact;
 	public AudioSource wallJump;
 	
+	void Start(){
+		footstepBasePitch1 = step1.pitch;
+		footstepBasePitch2 = step2.pitch;
+	}
+	
 	public void SetBackgroundAudio(AudioClip bgAudio){
 		background.clip = bgAudio;
 		background.loop = true;
@@ -33,11 +41,13 @@ public class PlayerSoundInterface : MonoBehaviour
 	
 	public void PlayStep1(){
 		step1.volume = Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed) * footstepMaxVolume;
+		step1.pitch = footstepBasePitch1 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
 		step1.Play();
 	}
 	
 	public void PlayStep2(){
 		step2.volume = Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed) * footstepMaxVolume;
+		step2.pitch = footstepBasePitch2 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
 		step2.Play();
 	}
 	

@@ -326,9 +326,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e5e514d1916349f4f81be1fc4303fbd6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a7d7c377f547d19408c89371df2ab676, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1.37
   Loop: 0
   Mute: 0
@@ -422,9 +422,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e5e514d1916349f4f81be1fc4303fbd6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a7d7c377f547d19408c89371df2ab676, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -518,9 +518,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e5e514d1916349f4f81be1fc4303fbd6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a7d7c377f547d19408c89371df2ab676, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1.5
   Loop: 0
   Mute: 0
@@ -1770,6 +1770,7 @@ MonoBehaviour:
   rb: {fileID: 6829769311745543620}
   footstepVolumeTopSpeed: 8
   footstepMaxVolume: 0.5
+  footstepMaxVariance: 0.25
   background: {fileID: 2980620523279650452}
   step1: {fileID: 1353190296}
   step2: {fileID: 1353190298}
