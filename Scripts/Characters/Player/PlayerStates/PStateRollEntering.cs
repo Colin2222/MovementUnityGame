@@ -9,6 +9,7 @@ public class PStateRollEntering : PState
 	
     public PStateRollEntering(){
 		PState.player.animator.Play("PlayerRollEntering");
+		PState.player.soundInterface.PlayStillJumpLand();
 		rollWindow = PState.attr.groundRollBraceWindow;
 		rollWindowTimer = 0.0f;
 	}

@@ -62,6 +62,7 @@ public class PStateStillJumpLaunching : PState
 			}
 			rigidbody.AddForce(new Vector2(horizontalForce, verticalForce), ForceMode2D.Impulse);
 			PState.player.physics.ClearBottomCheck();
+			PState.player.soundInterface.PlayStillJump();
 			return new PStateSoaring();
 		}
 		return this;

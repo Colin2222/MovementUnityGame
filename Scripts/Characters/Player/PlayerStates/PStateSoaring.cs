@@ -18,7 +18,6 @@ public class PStateSoaring : PState
 	}
 	
     public override PState HitGround(float hitSpeedX, float hitSpeedY){
-		PState.player.soundInterface.PlayStillJumpLand();
 		if(hitSpeedY > PState.attr.groundHitSpeedRollThreshold){
 			return new PStateRollEntering();
 		} else if(hitSpeedY > PState.attr.groundHitSpeedRollMin && PState.inputManager.bracing){

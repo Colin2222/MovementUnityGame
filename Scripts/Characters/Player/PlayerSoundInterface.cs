@@ -8,8 +8,10 @@ public class PlayerSoundInterface : MonoBehaviour
 	public float footstepVolumeTopSpeed;
 	public float footstepMaxVolume;
 	public float footstepMaxVariance;
+	public float stillJumpMaxVariance;
 	float footstepBasePitch1;
 	float footstepBasePitch2;
+	float stillJumpBasePitch;
 	
 	public AudioSource background;
 	
@@ -27,6 +29,7 @@ public class PlayerSoundInterface : MonoBehaviour
 	void Start(){
 		footstepBasePitch1 = step1.pitch;
 		footstepBasePitch2 = step2.pitch;
+		stillJumpBasePitch = stillJump.pitch;
 	}
 	
 	public void SetBackgroundAudio(AudioClip bgAudio){
@@ -52,11 +55,12 @@ public class PlayerSoundInterface : MonoBehaviour
 	}
 	
 	public void PlayRunningJump(){
+		runningJump.volume = Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed) * footstepMaxVolume;
 		runningJump.Play();
 	}
 	
 	public void PlayWallJump(){
-		wallJump.Play();
+		//wallJump.Play();
 	}
 	
 	public void PlayStillJumpLand(){
@@ -64,22 +68,23 @@ public class PlayerSoundInterface : MonoBehaviour
 	}
 	
 	public void PlayRunningJumpLand(){
-		runningJumpLand.Play();
+		//runningJumpLand.Play();
 	}
 	
 	public void PlayWallImpact(){
-		wallImpact.Play();
+		//wallImpact.Play();
 	}
 	
 	public void PlayCornerGrab(){
-		cornerGrab.Play();
+		//cornerGrab.Play();
 	}
 	
 	public void PlayCornerClimb(){
-		cornerClimb.Play();
+		//cornerClimb.Play();
 	}
 	
 	public void PlayStillJump(){
+		stillJump.pitch = stillJumpBasePitch + (Random.Range(-1.0f, 1.0f) * stillJumpMaxVariance);
 		stillJump.Play();
 	}
 }

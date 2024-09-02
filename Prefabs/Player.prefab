@@ -280,7 +280,8 @@ GameObject:
   - component: {fileID: 1353190298}
   - component: {fileID: 1353190299}
   - component: {fileID: 2733753475484469466}
-  - component: {fileID: 2980620523279650452}
+  - component: {fileID: 6325971668709186608}
+  - component: {fileID: 7700095823517252470}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -521,7 +522,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: a7d7c377f547d19408c89371df2ab676, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.75
-  m_Pitch: 1.5
+  m_Pitch: 1.62
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -700,7 +701,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &2980620523279650452
+--- !u!82 &6325971668709186608
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -710,10 +711,106 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.139
-  m_Pitch: 1.45
+  m_audioClip: {fileID: 8300000, guid: 041c25ac61a8ca044962a120c74f7d3c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.447
+  m_Pitch: 0.87
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &7700095823517252470
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353190294}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 29ccc7108d5d79247bff54989d8f4968, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.27
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1771,17 +1868,18 @@ MonoBehaviour:
   footstepVolumeTopSpeed: 8
   footstepMaxVolume: 0.5
   footstepMaxVariance: 0.25
-  background: {fileID: 2980620523279650452}
+  stillJumpMaxVariance: 0.1
+  background: {fileID: 0}
   step1: {fileID: 1353190296}
   step2: {fileID: 1353190298}
   runningJump: {fileID: 1353190299}
-  stillJump: {fileID: 2733753475484469466}
-  stillJumpLand: {fileID: 1353190299}
-  runningJumpLand: {fileID: 1353190299}
-  cornerGrab: {fileID: 1353190299}
+  stillJump: {fileID: 7700095823517252470}
+  stillJumpLand: {fileID: 6325971668709186608}
+  runningJumpLand: {fileID: 0}
+  cornerGrab: {fileID: 0}
   cornerClimb: {fileID: 0}
-  wallImpact: {fileID: 1353190299}
-  wallJump: {fileID: 1353190299}
+  wallImpact: {fileID: 0}
+  wallJump: {fileID: 0}
 --- !u!1 &6829769312154430460
 GameObject:
   m_ObjectHideFlags: 0
