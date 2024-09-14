@@ -8,7 +8,7 @@ public class PStateMoving : PState
 	float vertical;
 	
     public PStateMoving(){
-		
+		PState.player.soundInterface.PlayStep2();
 	}
 	
     public override PState Update(){

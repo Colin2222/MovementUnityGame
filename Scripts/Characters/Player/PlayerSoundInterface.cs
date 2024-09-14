@@ -8,9 +8,11 @@ public class PlayerSoundInterface : MonoBehaviour
 	public float footstepVolumeTopSpeed;
 	public float footstepMaxVolume;
 	public float footstepMaxVariance;
+	public float footstepMinVolume;
 	public float stillJumpMaxVariance;
 	float footstepBasePitch1;
 	float footstepBasePitch2;
+	float footstepStartBasePitch;
 	float stillJumpBasePitch;
 	
 	public AudioSource background;
@@ -25,10 +27,12 @@ public class PlayerSoundInterface : MonoBehaviour
 	public AudioSource cornerClimb;
 	public AudioSource wallImpact;
 	public AudioSource wallJump;
+	public AudioSource footScuff;
 	
 	void Start(){
 		footstepBasePitch1 = step1.pitch;
 		footstepBasePitch2 = step2.pitch;
+		footstepStartBasePitch = footScuff.pitch;
 		stillJumpBasePitch = stillJump.pitch;
 	}
 	
@@ -43,15 +47,20 @@ public class PlayerSoundInterface : MonoBehaviour
 	}
 	
 	public void PlayStep1(){
-		step1.volume = Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed) * footstepMaxVolume;
+		step1.volume = Mathf.Clamp(Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed) * footstepMaxVolume, footstepMinVolume, 10f);
 		step1.pitch = footstepBasePitch1 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
 		step1.Play();
 	}
 	
 	public void PlayStep2(){
-		step2.volume = Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed) * footstepMaxVolume;
+		step2.volume = Mathf.Clamp(Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed) * footstepMaxVolume, footstepMinVolume, 10f);
 		step2.pitch = footstepBasePitch2 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
 		step2.Play();
+	}
+	
+	public void PlayStepStart(){
+		footScuff.pitch = footstepBasePitch1 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
+		footScuff.Play();
 	}
 	
 	public void PlayRunningJump(){
