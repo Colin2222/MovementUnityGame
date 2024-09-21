@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PStateFaceplantGettingUp : PState
+public class PStateHeadHitGettingUp : PState
 {
-	float getupTimer;
+    float getupTimer;
 	
-    public PStateFaceplantGettingUp(){
+    public PStateHeadHitGettingUp(){
 		// prevents clipping when switching hitboxes
 		PState.player.transform.position += new Vector3(0.0f, 0.5f, 0.0f);
 		
 		PState.physics.SwitchHitboxes(1);
-		PState.player.animator.Play("PlayerFaceplantGettingUp");
-		getupTimer = PState.attr.cornerStunGetupTime;
+		PState.player.animator.Play("PlayerHeadHitGettingUp");
+		getupTimer = PState.attr.cornerBackStunGetupTime;
 	}
 
     public override PState Update(){

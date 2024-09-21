@@ -44,4 +44,11 @@ public class CharacterPhysicsChecker : MonoBehaviour
 		bottomCheck.ClearReferences();
 		isGrounded = false;
 	}
+	
+	// 1 == upright/normal
+	// 2 == laying down
+	public void SwitchHitboxes(int hitboxType){
+		bottomCheck.SwitchHitboxes(hitboxType);
+		frontCheck.SwitchHitboxes(hitboxType);
+	}
 }

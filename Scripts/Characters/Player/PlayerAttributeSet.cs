@@ -30,6 +30,7 @@ public class PlayerAttributeSet
 	public float cornerStunGetupStartSpeed;
 	public float cornerStunGetupWaitTime;
 	public float cornerStunGetupTime;
+	public float cornerBackStunGetupTime;
 	public float cornerVaultTime;
 	public float cornerMantleMinHorizontalKeepSpeed;
 	public float cornerJumpHorizontalJoystickThreshold;

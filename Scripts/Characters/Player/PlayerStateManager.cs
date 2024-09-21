@@ -31,7 +31,7 @@ public class PlayerStateManager : MonoBehaviour
 	public void HitGround(float hitSpeedX, float hitSpeedY, bool stayCollision){
 		// add an option for the weird stay collisions, only triggers in the states where it gets weird
 		if(stayCollision){
-			if(currentState is PStateFaceplantSoaring){
+			if(currentState is PStateFaceplantSoaring || currentState is PStateHeadHitSoaring){
 				currentState = currentState.HitGround(hitSpeedX, hitSpeedY);
 			}
 		} else{

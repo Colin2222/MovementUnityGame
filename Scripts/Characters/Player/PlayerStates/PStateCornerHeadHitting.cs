@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PStateCornerFaceplanting : PState
+public class PStateCornerHeadHitting : PState
 {
     int cornerDir;
 	float tripTimer;
@@ -10,24 +10,18 @@ public class PStateCornerFaceplanting : PState
 	CornerHandler cornerHandler;
 	Vector2 exitVelocity;
 
-    public PStateCornerFaceplanting(Vector2 wallCollisionVelocity){
+    public PStateCornerHeadHitting(Vector2 wallCollisionVelocity){
 		exitVelocity = wallCollisionVelocity * -1.0f;
-		cornerHandler = PState.player.cornerHandler;
-		corner = cornerHandler.trackedCorner;
-		if(PState.player.transform.position.x > cornerHandler.trackedCorner.transform.position.x){
-			cornerDir = 1;
-		} else{
-			cornerDir = -1;
-		}
 
-		PState.player.transform.position = new Vector3(corner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), corner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
+		PState.player.transform.position += new Vector3(0.0f, -0.5f, 0.0f);
+		//PState.player.transform.position = new Vector3(corner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), corner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
 		tripTimer = PState.attr.cornerTripTime;
-		PState.player.animator.Play("PlayerFaceplanting");
+		PState.player.animator.Play("PlayerCornerHeadHitting");
 	}
 
     public override PState Update(){
 		PState.physics.SwitchHitboxes(2);
-		return new PStateFaceplantSoaring(exitVelocity);
+		return new PStateHeadHitSoaring(exitVelocity);
 		/*
 		tripTimer -= Time.deltaTime;
 		if(tripTimer <= 0){

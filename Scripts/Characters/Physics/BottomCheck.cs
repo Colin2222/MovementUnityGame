@@ -10,6 +10,9 @@ public class BottomCheck : MonoBehaviour
 	LayerMask mask;
 	List<Transform> collisions;
 	
+	public BoxCollider2D uprightHitbox;
+	public BoxCollider2D flatHitbox;
+	
 	void Start(){
 		collisions = new List<Transform>();
 		mask = LayerMask.GetMask("PhysicsEnvironment");
@@ -54,5 +57,18 @@ public class BottomCheck : MonoBehaviour
 			collisions = new List<Transform>();
 		}
 		collisions.Clear();
+	}
+	
+	public void SwitchHitboxes(int hitboxType){
+		switch(hitboxType){
+			case 1:
+				uprightHitbox.enabled = true;
+				flatHitbox.enabled = false;
+				break;
+			case 2:
+				uprightHitbox.enabled = false;
+				flatHitbox.enabled = true;
+				break;
+		}
 	}
 }

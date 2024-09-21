@@ -2,35 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PStateFaceplantGettingUp : PState
+public class PStateHeadHitSoaring : PState
 {
-	float getupTimer;
-	
-    public PStateFaceplantGettingUp(){
-		// prevents clipping when switching hitboxes
-		PState.player.transform.position += new Vector3(0.0f, 0.5f, 0.0f);
+    public PStateHeadHitSoaring(Vector2 exitVelocity){
+		PState.rigidbody.velocity = exitVelocity * PState.attr.cornerTripSpeedLoss;
 		
-		PState.physics.SwitchHitboxes(1);
-		PState.player.animator.Play("PlayerFaceplantGettingUp");
-		getupTimer = PState.attr.cornerStunGetupTime;
+		if(PState.physics.isGrounded){
+			this.HitGround(0.0f, 0.0f);
+		}
+	}
+	
+	public PStateHeadHitSoaring(){
+		
 	}
 
     public override PState Update(){
-		getupTimer -= Time.deltaTime;
-		if(getupTimer <= 0.0f){
-			PState.player.animator.Play("PlayerIdle");
-			return new PStateIdle();
-		}
 		return this;
 	}
 
 	public override PState FixedUpdate(){
-		PState.rigidbody.AddForce(PState.rigidbody.velocity * PState.attr.cornerStunSlideCoefficient * -1.0f, ForceMode2D.Force);
 		return this;
 	}
 
     public override PState HitGround(float hitSpeedX, float hitSpeedY){
-		return this;
+		if(hitSpeedY > PState.attr.cornerStunReboundMinSpeed){
+			PState.player.animator.Play("PlayerHeadHitLanding");
+		}
+		return new PStateHeadHitLaying();
 	}
 
 	public override PState Move(float horizontal, float vertical){
