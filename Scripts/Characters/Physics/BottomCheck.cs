@@ -25,7 +25,7 @@ public class BottomCheck : MonoBehaviour
 				parentPhysics.isGrounded = true;
 				parentPhysics.bottomCollisionSpeed = new Vector2(collision.relativeVelocity.x, collision.relativeVelocity.y);
 				parentPhysics.lastBottomCollisionSpeed = parentPhysics.bottomCollisionSpeed;
-				parentPhysics.stateManager.HitGround(collision.relativeVelocity.x, collision.relativeVelocity.y);
+				parentPhysics.stateManager.HitGround(collision.relativeVelocity.x, collision.relativeVelocity.y, false);
 			}
 		}
     }
@@ -33,6 +33,7 @@ public class BottomCheck : MonoBehaviour
     void OnCollisionStay2D(Collision2D collision){
 		if(!collisions.Contains(collision.transform)){
 			collisions.Add(collision.transform);
+			parentPhysics.stateManager.HitGround(collision.relativeVelocity.x, 0.0f, true);
 		}
 		parentPhysics.bottomCollisionSpeed = new Vector2(0.0f, 0.0f);
     }

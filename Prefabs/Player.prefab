@@ -1664,9 +1664,9 @@ MonoBehaviour:
     cornerClimbVertJoystickThreshold: 0.9
     cornerTripSpeedLoss: 0.9
     cornerTripTime: 0
-    cornerTripMinimumSpeed: 3
+    cornerTripMinimumSpeed: 4
     cornerStunReboundMinSpeed: 7
-    cornerStunSlideCoefficient: 0.5
+    cornerStunSlideCoefficient: 3.5
     cornerStunGetupStartSpeed: 0.5
     cornerStunGetupWaitTime: 0.5
     cornerStunGetupTime: 0.75
@@ -1767,7 +1767,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.27, y: 0.1}
+  m_Size: {x: 0.26, y: 0.1}
   m_EdgeRadius: 0
 --- !u!114 &6829769310522087715
 MonoBehaviour:

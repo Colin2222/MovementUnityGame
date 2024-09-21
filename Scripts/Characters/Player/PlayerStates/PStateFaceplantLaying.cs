@@ -63,7 +63,6 @@ public class PStateFaceplantLaying : PState
 	}
 
 	public override PState LeaveGround(){
-		PState.player.animator.Play("PlayerFaceplantSoaring");
 		return new PStateFaceplantSoaring();
 	}
 

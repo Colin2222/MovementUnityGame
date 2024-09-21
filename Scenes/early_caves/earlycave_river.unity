@@ -1045,31 +1045,31 @@ CompositeCollider2D:
   - m_Collider: {fileID: 924429472}
     m_ColliderPaths:
     - - X: 33437500
-        Y: -887681
+        Y: 11254958
       - X: -17812500
-        Y: -887681
+        Y: 11254958
       - X: -17812500
-        Y: -30597610
+        Y: -18454970
       - X: 33437500
-        Y: -30597610
+        Y: -18454970
   - m_Collider: {fileID: 1795577358}
     m_ColliderPaths:
     - - X: 33437500
-        Y: 1250000
+        Y: 11250000
       - X: -33437500
-        Y: 1250000
+        Y: 11250000
       - X: -33437500
-        Y: -1250000
+        Y: 8750000
       - X: 33437500
-        Y: -1250000
+        Y: 8750000
   m_CompositePaths:
     m_Paths:
-    - - {x: 3.343721, y: -3.059761}
-      - {x: 3.343721, y: 0.125}
-      - {x: -3.34375, y: 0.124970704}
-      - {x: -3.343721, y: -0.125}
-      - {x: -1.78125, y: -0.1250294}
-      - {x: -1.7812208, y: -3.059761}
+    - - {x: 3.343721, y: -1.845497}
+      - {x: 3.343721, y: 1.1254958}
+      - {x: -3.34375, y: 1.1249707}
+      - {x: -3.343721, y: 0.875}
+      - {x: -1.78125, y: 0.8749706}
+      - {x: -1.7812208, y: -1.845497}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &400867738
@@ -1101,7 +1101,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400867736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.34375, y: 52.25, z: 0}
+  m_LocalPosition: {x: -44.34375, y: 51.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2030,7 +2030,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924429471}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.78125, y: -1.5742629, z: 0}
+  m_LocalPosition: {x: 0.78125, y: -0.36, z: 0}
   m_LocalScale: {x: 5.125, y: 2.9709928, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2680,7 +2680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203941672}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.344, y: 0.125, z: 0}
+  m_LocalPosition: {x: -3.344, y: 1.125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3307,7 +3307,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795577357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 6.6875, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3516,16 +3516,6 @@ CompositeCollider2D:
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
-  - m_Collider: {fileID: 1180454804}
-    m_ColliderPaths:
-    - - X: 5000000
-        Y: 17500000
-      - X: -5000000
-        Y: 17500000
-      - X: -5000000
-        Y: -17500000
-      - X: 5000000
-        Y: -17500000
   - m_Collider: {fileID: 1806788756}
     m_ColliderPaths:
     - - X: 4375000
@@ -3536,6 +3526,16 @@ CompositeCollider2D:
         Y: -51250000
       - X: 4375000
         Y: -51250000
+  - m_Collider: {fileID: 1180454804}
+    m_ColliderPaths:
+    - - X: 5000000
+        Y: 17500000
+      - X: -5000000
+        Y: 17500000
+      - X: -5000000
+        Y: -17500000
+      - X: 5000000
+        Y: -17500000
   m_CompositePaths:
     m_Paths:
     - - {x: 0.4374707, y: -5.125}
@@ -3669,7 +3669,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981501513}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.344, y: 0.125, z: 0}
+  m_LocalPosition: {x: 3.344, y: 1.125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

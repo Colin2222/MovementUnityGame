@@ -6,6 +6,10 @@ public class PStateFaceplantSoaring : PState
 {
     public PStateFaceplantSoaring(Vector2 exitVelocity){
 		PState.rigidbody.velocity = exitVelocity * PState.attr.cornerTripSpeedLoss;
+		
+		if(PState.physics.isGrounded){
+			this.HitGround(0.0f, 0.0f);
+		}
 	}
 	
 	public PStateFaceplantSoaring(){
@@ -24,7 +28,9 @@ public class PStateFaceplantSoaring : PState
 		if(hitSpeedY > PState.attr.cornerStunReboundMinSpeed){
 			PState.player.animator.Play("PlayerFaceplantLanding");
 		} else{
-			PState.player.animator.Play("PlayerFaceplantLaying");
+			if(hitSpeedY > 0.0f){
+				PState.player.animator.Play("PlayerFaceplantLaying");
+			}
 		}
 		return new PStateFaceplantLaying();
 	}

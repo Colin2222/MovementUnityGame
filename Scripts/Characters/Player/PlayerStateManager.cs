@@ -28,8 +28,15 @@ public class PlayerStateManager : MonoBehaviour
 		currentState = currentState.Move(horizontal, vertical);
 	}
 	
-	public void HitGround(float hitSpeedX, float hitSpeedY){
-		currentState = currentState.HitGround(hitSpeedX, hitSpeedY);
+	public void HitGround(float hitSpeedX, float hitSpeedY, bool stayCollision){
+		// add an option for the weird stay collisions, only triggers in the states where it gets weird
+		if(stayCollision){
+			if(currentState is PStateFaceplantSoaring){
+				currentState = currentState.HitGround(hitSpeedX, hitSpeedY);
+			}
+		} else{
+			currentState = currentState.HitGround(hitSpeedX, hitSpeedY);
+		}
 	}
 	
 	public void HitWall(Vector2 wallCollisionVelocity, WallCollisionInfo collInfo){
