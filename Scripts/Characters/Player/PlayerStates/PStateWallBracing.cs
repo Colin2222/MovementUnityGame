@@ -10,11 +10,11 @@ public class PStateWallBracing : PState
 	float wallSlideDownwardsCoefficient;
 	
     public PStateWallBracing(Vector2 wallCollisionVelocity){
-		wallSlideUpwardsCoefficient = PState.attr.wallSlideUpwardsCoefficient;
-		wallSlideDownwardsCoefficient = PState.attr.wallSlideDownwardsCoefficient;
+		wallSlideUpwardsCoefficient = attr.wallSlideUpwardsCoefficient;
+		wallSlideDownwardsCoefficient = attr.wallSlideDownwardsCoefficient;
 		this.wallCollisionVelocity = wallCollisionVelocity;
-		wallBraceTimer = PState.attr.wallBraceTime;
-		PState.player.animator.Play("PlayerWallBracing");
+		wallBraceTimer = attr.wallBraceTime;
+		player.animator.Play("PlayerWallBracing");
 	}
 	
     public override PState Update(){
@@ -26,10 +26,10 @@ public class PStateWallBracing : PState
 	}
 	
 	public override PState FixedUpdate(){
-		if(PState.rigidbody.velocity.y > 0){
-			PState.rigidbody.AddForce(PState.rigidbody.velocity * -1.0f * wallSlideUpwardsCoefficient, ForceMode2D.Force);
+		if(rigidbody.velocity.y > 0){
+			rigidbody.AddForce(rigidbody.velocity * -1.0f * wallSlideUpwardsCoefficient, ForceMode2D.Force);
 		} else{
-			PState.rigidbody.AddForce(PState.rigidbody.velocity * -1.0f * wallSlideDownwardsCoefficient, ForceMode2D.Force);
+			rigidbody.AddForce(rigidbody.velocity * -1.0f * wallSlideDownwardsCoefficient, ForceMode2D.Force);
 		}
 		return this;
 	}
@@ -51,13 +51,13 @@ public class PStateWallBracing : PState
 	}
 	
 	public override PState PressJump(){
-		PState.player.animator.Play("PlayerWallLaunching");
+		player.animator.Play("PlayerWallLaunching");
 		float jumpDir = Mathf.Sign(wallCollisionVelocity.x);
-		PState.rigidbody.velocity = new Vector2((Mathf.Clamp(Mathf.Abs(wallCollisionVelocity.x) * PState.attr.wallLaunchHorizontalRetention, PState.attr.wallLaunchMinimumHorizontal, 10000.0f)) * jumpDir, Mathf.Clamp((wallCollisionVelocity.y * -1.0f) + PState.attr.wallLaunchBoost, -1000f, PState.attr.wallLaunchMaxVerticalSpeed));
+		rigidbody.velocity = new Vector2((Mathf.Clamp(Mathf.Abs(wallCollisionVelocity.x) * attr.wallLaunchHorizontalRetention, attr.wallLaunchMinimumHorizontal, 10000.0f)) * jumpDir, Mathf.Clamp((wallCollisionVelocity.y * -1.0f) + attr.wallLaunchBoost, -1000f, attr.wallLaunchMaxVerticalSpeed));
 		if(jumpDir == -1){
-			PState.player.transform.eulerAngles = new Vector2(0,180);
+			player.transform.eulerAngles = new Vector2(0,180);
 		} else{
-			PState.player.transform.eulerAngles = new Vector2(0,0);
+			player.transform.eulerAngles = new Vector2(0,0);
 		}
 		return new PStateSoaring();
 	}
@@ -71,9 +71,9 @@ public class PStateWallBracing : PState
 	}
 	
 	public override PState Brace(){
-		if(PState.player.cornerHandler.mantleCorner != null){
+		if(player.cornerHandler.mantleCorner != null){
 			return new PStateCornerMantling();
-		} else if(PState.player.cornerHandler.corner != null){
+		} else if(player.cornerHandler.corner != null){
 			return new PStateCornerGrabbing();
 		}
 		return this;

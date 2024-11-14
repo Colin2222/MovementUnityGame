@@ -8,10 +8,10 @@ public class PStateWallSplatStumbling : PState
 	float wallSplatStumbleTimer;
 	
     public PStateWallSplatStumbling(int direction){
-		PState.player.animator.Play("PlayerWallSplatStumbling");
+		player.animator.Play("PlayerWallSplatStumbling");
 		splatDirection = direction;
-		wallSplatStumbleTimer = PState.attr.wallSplatStumbleTime;
-		PState.rigidbody.velocity = new Vector2(PState.attr.wallSplatStumbleSpeed * splatDirection, PState.rigidbody.velocity.y);
+		wallSplatStumbleTimer = attr.wallSplatStumbleTime;
+		rigidbody.velocity = new Vector2(attr.wallSplatStumbleSpeed * splatDirection, rigidbody.velocity.y);
 	}
 	
     public override PState Update(){

@@ -8,22 +8,22 @@ public class PStateMoving : PState
 	float vertical;
 	
     public PStateMoving(){
-		PState.player.soundInterface.PlayStep2();
+		player.soundInterface.PlayStep2();
 	}
 	
     public override PState Update(){
-		PState.player.animator.Play("PlayerRunning");
-		PState.timeSinceLastGroundHit += Time.deltaTime;
+		player.animator.Play("PlayerRunning");
+		timeSinceLastGroundHit += Time.deltaTime;
 		return this;
 	}
 	
 	public override PState FixedUpdate(){
 		// apply running force
-		PState.rigidbody.AddForce(new Vector2(horizontal, 0.0f) * PState.attr.moveForce, ForceMode2D.Force);
+		rigidbody.AddForce(new Vector2(horizontal, 0.0f) * attr.moveForce, ForceMode2D.Force);
 		
 		// hold player under maximum run speed
-		if(Mathf.Abs(PState.rigidbody.velocity.x) > PState.attr.maxRunSpeed){
-			PState.rigidbody.velocity = new Vector2(PState.attr.maxRunSpeed * Mathf.Sign(PState.rigidbody.velocity.x), PState.rigidbody.velocity.y);
+		if(Mathf.Abs(rigidbody.velocity.x) > attr.maxRunSpeed){
+			rigidbody.velocity = new Vector2(attr.maxRunSpeed * Mathf.Sign(rigidbody.velocity.x), rigidbody.velocity.y);
 		}
 		
 		return this;
@@ -40,7 +40,7 @@ public class PStateMoving : PState
 		if(horizontal == 0.0f){
 			base.SetDirection(horizontal);
 			return new PStateSlideStopping();
-		} else if(Mathf.Sign(horizontal) != Mathf.Sign(PState.rigidbody.velocity.x) && Mathf.Abs(PState.rigidbody.velocity.x) > PState.attr.slideStopSpeedTarget){
+		} else if(Mathf.Sign(horizontal) != Mathf.Sign(rigidbody.velocity.x) && Mathf.Abs(rigidbody.velocity.x) > attr.slideStopSpeedTarget){
 			base.SetDirection(horizontal);
 			return new PStateSlideTurning();
 		} else{
@@ -59,13 +59,13 @@ public class PStateMoving : PState
 	}
 	
 	public override PState PressJump(){
-		if(Mathf.Abs(PState.rigidbody.velocity.x) > PState.attr.runningJumpSpeed){
-			PState.rigidbody.velocity = new Vector2(PState.rigidbody.velocity.x, 0);
-			PState.rigidbody.AddForce(new Vector2(0,PState.attr.jumpForce), ForceMode2D.Impulse);
-			PState.player.animator.Play("PlayerJumpingRunning");
+		if(Mathf.Abs(rigidbody.velocity.x) > attr.runningJumpSpeed){
+			rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
+			rigidbody.AddForce(new Vector2(0,attr.jumpForce), ForceMode2D.Impulse);
+			player.animator.Play("PlayerJumpingRunning");
 			return new PStateSoaring();
 		} else{
-			PState.player.animator.Play("PlayerJumpBracing");
+			player.animator.Play("PlayerJumpBracing");
 			return new PStateJumpBracing();
 		}
 	}
@@ -75,7 +75,7 @@ public class PStateMoving : PState
 	}
 	
 	public override PState HitWall(Vector2 wallCollisionVelocity, WallCollisionInfo collInfo){
-		if(Mathf.Abs(wallCollisionVelocity.x) > PState.attr.wallSplatMinSpeed){
+		if(Mathf.Abs(wallCollisionVelocity.x) > attr.wallSplatMinSpeed){
 			return new PStateWallSplatting((int)Mathf.Sign(wallCollisionVelocity.x));
 		}
 		
@@ -83,20 +83,20 @@ public class PStateMoving : PState
 	}
 	
 	public override PState Brace(){
-		if(Mathf.Abs(PState.rigidbody.velocity.x) < PState.attr.cornerClimbDownMaxEntrySpeed && PState.player.cornerHandler.CheckFootHandler(PState.direction)){
-			return new PStateCornerClimbingDown(PState.direction);
-		} else if(PState.player.cornerHandler.mantleCorner != null){
+		if(Mathf.Abs(rigidbody.velocity.x) < attr.cornerClimbDownMaxEntrySpeed && player.cornerHandler.CheckFootHandler(direction)){
+			return new PStateCornerClimbingDown(direction);
+		} else if(player.cornerHandler.mantleCorner != null){
 			return new PStateCornerMantling();
-		} else if(PState.player.cornerHandler.corner != null){
+		} else if(player.cornerHandler.corner != null){
 			return new PStateCornerGrabbing();
-		} else if(PState.timeSinceLastGroundHit < PState.attr.optionalRollWindow){
-			return new PStateRolling(PState.physics.lastBottomCollisionSpeed.x, PState.physics.lastBottomCollisionSpeed.y);
+		} else if(timeSinceLastGroundHit < attr.optionalRollWindow){
+			return new PStateRolling(physics.lastBottomCollisionSpeed.x, physics.lastBottomCollisionSpeed.y);
 		}
 		return this;
 	}
 	
 	public override PState LeaveGround(){
-		PState.player.animator.Play("PlayerSoaringStill");
+		player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
 	

@@ -5,9 +5,9 @@ using UnityEngine;
 public class PStateHeadHitSoaring : PState
 {
     public PStateHeadHitSoaring(Vector2 exitVelocity){
-		PState.rigidbody.velocity = exitVelocity * PState.attr.cornerTripSpeedLoss;
+		rigidbody.velocity = exitVelocity * attr.cornerTripSpeedLoss;
 		
-		if(PState.physics.isGrounded){
+		if(physics.isGrounded){
 			this.HitGround(0.0f, 0.0f);
 		}
 	}
@@ -25,8 +25,8 @@ public class PStateHeadHitSoaring : PState
 	}
 
     public override PState HitGround(float hitSpeedX, float hitSpeedY){
-		if(hitSpeedY > PState.attr.cornerStunReboundMinSpeed){
-			PState.player.animator.Play("PlayerHeadHitLanding");
+		if(hitSpeedY > attr.cornerStunReboundMinSpeed){
+			player.animator.Play("PlayerHeadHitLanding");
 		}
 		return new PStateHeadHitLaying();
 	}

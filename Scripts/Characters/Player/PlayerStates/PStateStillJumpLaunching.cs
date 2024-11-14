@@ -17,52 +17,52 @@ public class PStateStillJumpLaunching : PState
 	}
 	
     public override PState Update(){
-		PState.player.animator.Play("PlayerJumpingStill");
+		player.animator.Play("PlayerJumpingStill");
 		jumpLaunchTimer += Time.deltaTime;
 		
-		if(jumpLaunchTimer >= PState.attr.stillJumpLaunchTime){
-			PState.rigidbody.velocity = new Vector2(PState.rigidbody.velocity.x, 0);
+		if(jumpLaunchTimer >= attr.stillJumpLaunchTime){
+			rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
 			
 			if(aimAngle == 0.0f){
 				aimAngle = 1.5707f;
 			}
-			if(PState.direction == 1){
+			if(direction == 1){
 				if(aimAngle >= 0){
-					if(aimAngle < 1.5707f - PState.attr.maxStillJumpAngleFromYAxis){
-						aimAngle = 1.5707f - PState.attr.maxStillJumpAngleFromYAxis;
+					if(aimAngle < 1.5707f - attr.maxStillJumpAngleFromYAxis){
+						aimAngle = 1.5707f - attr.maxStillJumpAngleFromYAxis;
 					} else if (aimAngle > 1.5707f){
 						aimAngle = 1.5707f;
 					}
 				} else{
 					if(aimAngle > -.785f){
-						aimAngle = 1.5707f - PState.attr.maxStillJumpAngleFromYAxis;
+						aimAngle = 1.5707f - attr.maxStillJumpAngleFromYAxis;
 					} else{
 						aimAngle = 1.5707f;
 					}
 				}
-			} else if(PState.direction == -1){
+			} else if(direction == -1){
 				if(aimAngle >= 0){
-					if(aimAngle > 1.5707f + PState.attr.maxStillJumpAngleFromYAxis){
-						aimAngle = 1.5707f + PState.attr.maxStillJumpAngleFromYAxis;
+					if(aimAngle > 1.5707f + attr.maxStillJumpAngleFromYAxis){
+						aimAngle = 1.5707f + attr.maxStillJumpAngleFromYAxis;
 					} else if(aimAngle < 1.5707f){
 						aimAngle = 1.5707f;
 					}
 				} else{
 					if(aimAngle < -2.356f){
-						aimAngle = 1.5707f + PState.attr.maxStillJumpAngleFromYAxis;
+						aimAngle = 1.5707f + attr.maxStillJumpAngleFromYAxis;
 					} else{
 						aimAngle = 1.5707f;
 					}
 				}
 			}
-			float horizontalForce = PState.attr.jumpForce * Mathf.Cos(aimAngle) * jumpForceMultiplier * jumpMag;
-			float verticalForce = PState.attr.jumpForce * Mathf.Sin(aimAngle) * jumpForceMultiplier * jumpMag;
-			if(verticalForce < PState.attr.minVerticalJumpForce){
-				verticalForce = PState.attr.minVerticalJumpForce;
+			float horizontalForce = attr.jumpForce * Mathf.Cos(aimAngle) * jumpForceMultiplier * jumpMag;
+			float verticalForce = attr.jumpForce * Mathf.Sin(aimAngle) * jumpForceMultiplier * jumpMag;
+			if(verticalForce < attr.minVerticalJumpForce){
+				verticalForce = attr.minVerticalJumpForce;
 			}
 			rigidbody.AddForce(new Vector2(horizontalForce, verticalForce), ForceMode2D.Impulse);
-			PState.player.physics.ClearBottomCheck();
-			PState.player.soundInterface.PlayStillJump();
+			player.physics.ClearBottomCheck();
+			player.soundInterface.PlayStillJump();
 			return new PStateSoaring();
 		}
 		return this;
@@ -70,7 +70,7 @@ public class PStateStillJumpLaunching : PState
 	
 	public override PState FixedUpdate(){
 		// apply resistive force
-		PState.rigidbody.AddForce(PState.rigidbody.velocity * PState.attr.moveForce * -1.0f * PState.attr.slideForceMultiplier, ForceMode2D.Force);
+		rigidbody.AddForce(rigidbody.velocity * attr.moveForce * -1.0f * attr.slideForceMultiplier, ForceMode2D.Force);
 		return this;
 	}
 	
@@ -103,16 +103,16 @@ public class PStateStillJumpLaunching : PState
 	}
 	
 	public override PState Brace(){
-		if(PState.player.cornerHandler.mantleCorner != null){
+		if(player.cornerHandler.mantleCorner != null){
 			return new PStateCornerMantling();
-		} else if(PState.player.cornerHandler.corner != null){
+		} else if(player.cornerHandler.corner != null){
 			return new PStateCornerGrabbing();
 		}
 		return this;
 	}
 	
 	public override PState LeaveGround(){
-		PState.player.animator.Play("PlayerSoaringStill");
+		player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
 	

@@ -19,7 +19,7 @@ public class PStateJumpBracing : PState
 	
 	public override PState FixedUpdate(){
 		// apply resistive force
-		PState.rigidbody.AddForce(PState.rigidbody.velocity * PState.attr.moveForce * -1.0f * PState.attr.slideForceMultiplier, ForceMode2D.Force);
+		rigidbody.AddForce(rigidbody.velocity * attr.moveForce * -1.0f * attr.slideForceMultiplier, ForceMode2D.Force);
 		return this;
 	}
 	
@@ -48,8 +48,8 @@ public class PStateJumpBracing : PState
 	}
 	
 	public override PState ReleaseJump(){
-		float jumpForceMultiplier = Mathf.Clamp(jumpBraceCounter, 0.0f, PState.attr.jumpBraceTime) / PState.attr.jumpBraceTime;
-		if(jumpForceMultiplier > PState.attr.stillJumpMinimumBraceRatio){
+		float jumpForceMultiplier = Mathf.Clamp(jumpBraceCounter, 0.0f, attr.jumpBraceTime) / attr.jumpBraceTime;
+		if(jumpForceMultiplier > attr.stillJumpMinimumBraceRatio){
 			float aimAngle = Mathf.Atan2(vertical, horizontal);
 			float jumpMag = new Vector2(horizontal, vertical).magnitude;
 			// TO DO ADD CONTROLLER DEADZONE
@@ -70,7 +70,7 @@ public class PStateJumpBracing : PState
 	}
 	
 	public override PState LeaveGround(){
-		PState.player.animator.Play("PlayerSoaringStill");
+		player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
 	

@@ -10,16 +10,16 @@ public class PStateCornerClimbingDown : PState
 	CornerHandler cornerHandler;
 
     public PStateCornerClimbingDown(int direction){
-		cornerHandler = PState.player.cornerHandler;
+		cornerHandler = player.cornerHandler;
 		footCorner = cornerHandler.footCorner;
-		PState.rigidbody.gravityScale = 0f;
-		PState.rigidbody.velocity = new Vector2(0f,0f);
+		rigidbody.gravityScale = 0f;
+		rigidbody.velocity = new Vector2(0f,0f);
 		cornerDir = direction;
 		SetDirection(-cornerDir);
 		
-		PState.player.transform.position = new Vector3(cornerHandler.footCorner.position.x + (cornerHandler.cornerClimbOffsetX * cornerDir), cornerHandler.footCorner.position.y - cornerHandler.cornerClimbOffsetY, 0);
-		cornerClimbTimer = PState.attr.cornerClimbTime;
-		PState.player.animator.Play("PlayerCornerClimbingDown");
+		player.transform.position = new Vector3(cornerHandler.footCorner.position.x + (cornerHandler.cornerClimbOffsetX * cornerDir), cornerHandler.footCorner.position.y - cornerHandler.cornerClimbOffsetY, 0);
+		cornerClimbTimer = attr.cornerClimbTime;
+		player.animator.Play("PlayerCornerClimbingDown");
 	}
 	
     public override PState Update(){

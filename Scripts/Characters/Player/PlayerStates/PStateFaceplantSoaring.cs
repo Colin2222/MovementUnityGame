@@ -5,9 +5,9 @@ using UnityEngine;
 public class PStateFaceplantSoaring : PState
 {
     public PStateFaceplantSoaring(Vector2 exitVelocity){
-		PState.rigidbody.velocity = exitVelocity * PState.attr.cornerTripSpeedLoss;
+		rigidbody.velocity = exitVelocity * attr.cornerTripSpeedLoss;
 		
-		if(PState.physics.isGrounded){
+		if(physics.isGrounded){
 			this.HitGround(0.0f, 0.0f);
 		}
 	}
@@ -25,11 +25,11 @@ public class PStateFaceplantSoaring : PState
 	}
 
     public override PState HitGround(float hitSpeedX, float hitSpeedY){
-		if(hitSpeedY > PState.attr.cornerStunReboundMinSpeed){
-			PState.player.animator.Play("PlayerFaceplantLanding");
+		if(hitSpeedY > attr.cornerStunReboundMinSpeed){
+			player.animator.Play("PlayerFaceplantLanding");
 		} else{
 			if(hitSpeedY > 0.0f){
-				PState.player.animator.Play("PlayerFaceplantLaying");
+				player.animator.Play("PlayerFaceplantLaying");
 			}
 		}
 		return new PStateFaceplantLaying();

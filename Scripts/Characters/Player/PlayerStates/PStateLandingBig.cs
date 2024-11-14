@@ -10,10 +10,10 @@ public class PStateLandingBig : PState
 	float landingBigForceMultiplier;
 	
     public PStateLandingBig(){
-		PState.player.animator.Play("PlayerLandingBig");
-		landingTime = PState.attr.landingBigTime;
-		moveForce = PState.attr.moveForce;
-		landingBigForceMultiplier = PState.attr.landingBigForceMultiplier;
+		player.animator.Play("PlayerLandingBig");
+		landingTime = attr.landingBigTime;
+		moveForce = attr.moveForce;
+		landingBigForceMultiplier = attr.landingBigForceMultiplier;
 	}
 	
     public override PState Update(){
@@ -26,7 +26,7 @@ public class PStateLandingBig : PState
 	
 	public override PState FixedUpdate(){
 		// apply resistive force
-		PState.rigidbody.AddForce(PState.rigidbody.velocity * moveForce * -1.0f * landingBigForceMultiplier, ForceMode2D.Force);
+		rigidbody.AddForce(rigidbody.velocity * moveForce * -1.0f * landingBigForceMultiplier, ForceMode2D.Force);
 		return this;
 	}
 	

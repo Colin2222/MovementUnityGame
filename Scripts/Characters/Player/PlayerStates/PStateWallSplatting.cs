@@ -8,9 +8,9 @@ public class PStateWallSplatting : PState
 	int splatDirection;
 	
     public PStateWallSplatting(int direction){
-		PState.player.soundInterface.PlayWallImpact();
-		PState.player.animator.Play("PlayerWallSplatting");
-		wallSplatStickTimer = PState.attr.wallSplatStickTime;
+		player.soundInterface.PlayWallImpact();
+		player.animator.Play("PlayerWallSplatting");
+		wallSplatStickTimer = attr.wallSplatStickTime;
 		splatDirection = direction;
 	}
 	

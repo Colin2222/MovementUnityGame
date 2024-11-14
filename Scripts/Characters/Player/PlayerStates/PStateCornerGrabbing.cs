@@ -9,18 +9,18 @@ public class PStateCornerGrabbing : PState
 	float vertical;
 
     public PStateCornerGrabbing(){
-		CornerHandler cornerHandler = PState.player.cornerHandler;
-		PState.rigidbody.gravityScale = 0f;
-		PState.rigidbody.velocity = new Vector2(0f,0f);
-		if(PState.player.transform.position.x > cornerHandler.corner.transform.position.x){
+		CornerHandler cornerHandler = player.cornerHandler;
+		rigidbody.gravityScale = 0f;
+		rigidbody.velocity = new Vector2(0f,0f);
+		if(player.transform.position.x > cornerHandler.corner.transform.position.x){
 			cornerDir = 1;
 		} else{
 			cornerDir = -1;
 		}
 		
-		PState.player.transform.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerOffsetY, 0);
-		PState.player.soundInterface.PlayCornerGrab();
-		PState.player.animator.Play("PlayerCornerGrabbing");
+		player.transform.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerOffsetY, 0);
+		player.soundInterface.PlayCornerGrab();
+		player.animator.Play("PlayerCornerGrabbing");
 	}
 	
     public override PState Update(){
@@ -46,32 +46,32 @@ public class PStateCornerGrabbing : PState
 	}
 	
 	public override PState ClimbDown(){
-		PState.rigidbody.gravityScale = PState.attr.gravityScale;
-		PState.player.animator.Play("PlayerSoaringStill");
+		rigidbody.gravityScale = attr.gravityScale;
+		player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
 	
 	public override PState PressJump(){
-		if(Mathf.Abs(horizontal) >= PState.attr.cornerJumpHorizontalJoystickThreshold && Mathf.Sign(cornerDir) == Mathf.Sign(horizontal) && PState.physics.frontCheck.IsLowerContact(cornerDir)){
+		if(Mathf.Abs(horizontal) >= attr.cornerJumpHorizontalJoystickThreshold && Mathf.Sign(cornerDir) == Mathf.Sign(horizontal) && physics.frontCheck.IsLowerContact(cornerDir)){
 			float aimAngle = Mathf.Atan2(vertical, horizontal);
-			float horizontalForce = PState.attr.cornerJumpForce * Mathf.Cos(aimAngle);
-			float verticalForce = PState.attr.cornerJumpForce * Mathf.Sin(aimAngle);
+			float horizontalForce = attr.cornerJumpForce * Mathf.Cos(aimAngle);
+			float verticalForce = attr.cornerJumpForce * Mathf.Sin(aimAngle);
 			
-			horizontalForce *= PState.attr.cornerJumpHorizontalForceCoefficient;
-			if(Mathf.Abs(horizontalForce) > PState.attr.cornerJumpMaximumHorizontalForce){
-				horizontalForce = PState.attr.cornerJumpMaximumHorizontalForce * cornerDir;
+			horizontalForce *= attr.cornerJumpHorizontalForceCoefficient;
+			if(Mathf.Abs(horizontalForce) > attr.cornerJumpMaximumHorizontalForce){
+				horizontalForce = attr.cornerJumpMaximumHorizontalForce * cornerDir;
 			}
 
-			if(verticalForce > 0.0f && verticalForce >= PState.attr.cornerJumpMaximumVerticalForce){
-				verticalForce *= PState.attr.cornerJumpVerticalForceCoefficient;
-			} else if(verticalForce < PState.attr.cornerJumpMaximumVerticalForce){
-				verticalForce = PState.attr.cornerJumpMaximumVerticalForce;
+			if(verticalForce > 0.0f && verticalForce >= attr.cornerJumpMaximumVerticalForce){
+				verticalForce *= attr.cornerJumpVerticalForceCoefficient;
+			} else if(verticalForce < attr.cornerJumpMaximumVerticalForce){
+				verticalForce = attr.cornerJumpMaximumVerticalForce;
 			}
 			rigidbody.AddForce((new Vector2(horizontalForce, verticalForce)) * (new Vector2(horizontal, vertical)).magnitude, ForceMode2D.Impulse);
 			
 			SetDirection(horizontal);
-			PState.rigidbody.gravityScale = PState.attr.gravityScale;
-			PState.player.animator.Play("PlayerWallPushing");
+			rigidbody.gravityScale = attr.gravityScale;
+			player.animator.Play("PlayerWallPushing");
 			return new PStateSoaring();
 		}
 		return this;
@@ -86,12 +86,12 @@ public class PStateCornerGrabbing : PState
 	}
 	
 	public override PState Brace(){
-		PState.rigidbody.gravityScale = PState.attr.gravityScale;
-		if(PState.physics.isGrounded){
+		rigidbody.gravityScale = attr.gravityScale;
+		if(physics.isGrounded){
 			return new PStateIdle();
 		}
-		PState.physics.ClearBottomCheck();
-		PState.player.animator.Play("PlayerSoaringStill");
+		physics.ClearBottomCheck();
+		player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
 	

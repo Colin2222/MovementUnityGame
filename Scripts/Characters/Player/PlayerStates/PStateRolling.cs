@@ -14,19 +14,19 @@ public class PStateRolling : PState
 	Rigidbody2D rb;
 	
     public PStateRolling(float hitSpeedX, float hitSpeedY){
-		PState.player.animator.Play("PlayerRolling");
-		minRollSpeed = PState.attr.groundRollMinSpeed;
-		rb = PState.rigidbody;
-		rollTime = PState.attr.groundRollTime;
+		player.animator.Play("PlayerRolling");
+		minRollSpeed = attr.groundRollMinSpeed;
+		rb = rigidbody;
+		rollTime = attr.groundRollTime;
 		rollTimer = 0.0f;
 		runningJumpQueued = false;
-		jumpQueueTime = PState.attr.groundRollJumpQueueTime;
-		rollCancelTime = PState.attr.groundRollEdgeCancelTime;
+		jumpQueueTime = attr.groundRollJumpQueueTime;
+		rollCancelTime = attr.groundRollEdgeCancelTime;
 		
 		// calculate if roll will be slow or full-speed
 		float rollSpeedCalc = Mathf.Abs(hitSpeedX * 0.75f) + Mathf.Abs(hitSpeedY * 0.25f);
-		if(rollSpeedCalc < PState.attr.groundRollSlowThreshold){
-			minRollSpeed *= PState.attr.groundRollSlowMultiplier;
+		if(rollSpeedCalc < attr.groundRollSlowThreshold){
+			minRollSpeed *= attr.groundRollSlowMultiplier;
 			slowRoll = true;
 		} else{
 			slowRoll = false;
@@ -39,19 +39,19 @@ public class PStateRolling : PState
 			CancelBraceCooldown();
 			if(runningJumpQueued){
 				if(slowRoll){
-					PState.player.animator.Play("PlayerJumpBracing");
+					player.animator.Play("PlayerJumpBracing");
 					return new PStateJumpBracing();
 				}
 				
 				float jumpDir;
-				if(PState.rigidbody.velocity.x > 0){
+				if(rigidbody.velocity.x > 0){
 					jumpDir = 1.0f;
 				} else{
 					jumpDir = -1.0f;
 				}
-				PState.rigidbody.velocity = new Vector2(PState.attr.runningJumpSpeed * jumpDir, 0);
-				PState.rigidbody.AddForce(new Vector2(0,PState.attr.jumpForce), ForceMode2D.Impulse);
-				PState.player.animator.Play("PlayerJumpingRunning");
+				rigidbody.velocity = new Vector2(attr.runningJumpSpeed * jumpDir, 0);
+				rigidbody.AddForce(new Vector2(0,attr.jumpForce), ForceMode2D.Impulse);
+				player.animator.Play("PlayerJumpingRunning");
 				return new PStateSoaring();
 			} else{
 				return new PStateMoving();
@@ -64,7 +64,7 @@ public class PStateRolling : PState
 		if(Mathf.Abs(rb.velocity.x) < minRollSpeed){
 			float newVelo = minRollSpeed;
 			if(rb.velocity.x == 0.0f){
-				newVelo = newVelo * PState.direction;
+				newVelo = newVelo * direction;
 			} else if(rb.velocity.x < 0.0f){
 				newVelo = newVelo * -1;
 			}
@@ -112,17 +112,17 @@ public class PStateRolling : PState
 	public override PState LeaveGround(){
 		if(runningJumpQueued && rollTimer > rollCancelTime){
 			float jumpDir;
-			if(PState.rigidbody.velocity.x > 0){
+			if(rigidbody.velocity.x > 0){
 				jumpDir = 1.0f;
 			} else{
 				jumpDir = -1.0f;
 			}
-			PState.rigidbody.velocity = new Vector2(PState.attr.runningJumpSpeed * jumpDir, 0);
-			PState.rigidbody.AddForce(new Vector2(0,PState.attr.jumpForce), ForceMode2D.Impulse);
-			PState.player.animator.Play("PlayerJumpingRunning");
+			rigidbody.velocity = new Vector2(attr.runningJumpSpeed * jumpDir, 0);
+			rigidbody.AddForce(new Vector2(0,attr.jumpForce), ForceMode2D.Impulse);
+			player.animator.Play("PlayerJumpingRunning");
 			return new PStateSoaring();
 		}
-		PState.player.animator.Play("PlayerSoaringStill");
+		player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
 	

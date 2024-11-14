@@ -9,23 +9,23 @@ public class PStateWallPushing : PState
 	float wallPushLaunchCoefficient;
 	
     public PStateWallPushing(Vector2 wallCollisionVelocity){
-		wallPushLaunchCoefficient = PState.attr.wallPushLaunchCoefficient;
+		wallPushLaunchCoefficient = attr.wallPushLaunchCoefficient;
 		this.wallCollisionVelocity = wallCollisionVelocity;
-		wallPushTimer = PState.attr.wallPushTime;
-		PState.player.animator.Play("PlayerWallPushing");
+		wallPushTimer = attr.wallPushTime;
+		player.animator.Play("PlayerWallPushing");
 	}
 	
     public override PState Update(){
 		wallPushTimer -= Time.deltaTime;
 		if(wallPushTimer <= 0){
-			PState.rigidbody.velocity = new Vector2(wallCollisionVelocity.x * PState.attr.wallPushHorizontalRetention, PState.rigidbody.velocity.y + PState.attr.wallPushBoost);
+			rigidbody.velocity = new Vector2(wallCollisionVelocity.x * attr.wallPushHorizontalRetention, rigidbody.velocity.y + attr.wallPushBoost);
 			return new PStateSoaring();
 		}
 		return this;
 	}
 	
 	public override PState FixedUpdate(){
-		PState.rigidbody.AddForce(PState.rigidbody.velocity * -1.0f * wallPushLaunchCoefficient, ForceMode2D.Force);
+		rigidbody.AddForce(rigidbody.velocity * -1.0f * wallPushLaunchCoefficient, ForceMode2D.Force);
 		return this;
 	}
 	
@@ -46,13 +46,13 @@ public class PStateWallPushing : PState
 	}
 	
 	public override PState PressJump(){
-		PState.player.animator.Play("PlayerWallLaunching");
+		player.animator.Play("PlayerWallLaunching");
 		float jumpDir = Mathf.Sign(wallCollisionVelocity.x);
-		PState.rigidbody.velocity = new Vector2((Mathf.Clamp(Mathf.Abs(wallCollisionVelocity.x) * PState.attr.wallPushToLaunchHorizontalRetention, PState.attr.wallLaunchMinimumHorizontal, 10000.0f)) * jumpDir, Mathf.Clamp((wallCollisionVelocity.y * -1.0f) + PState.attr.wallPushToLaunchBoost, -1000f, PState.attr.wallLaunchMaxVerticalSpeed));
+		rigidbody.velocity = new Vector2((Mathf.Clamp(Mathf.Abs(wallCollisionVelocity.x) * attr.wallPushToLaunchHorizontalRetention, attr.wallLaunchMinimumHorizontal, 10000.0f)) * jumpDir, Mathf.Clamp((wallCollisionVelocity.y * -1.0f) + attr.wallPushToLaunchBoost, -1000f, attr.wallLaunchMaxVerticalSpeed));
 		if(jumpDir == -1){
-			PState.player.transform.eulerAngles = new Vector2(0,180);
+			player.transform.eulerAngles = new Vector2(0,180);
 		} else{
-			PState.player.transform.eulerAngles = new Vector2(0,0);
+			player.transform.eulerAngles = new Vector2(0,0);
 		}
 		return new PStateSoaring();
 	}

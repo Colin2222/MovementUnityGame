@@ -10,27 +10,27 @@ public class PStateCornerMantling : PState
 	CornerHandler cornerHandler;
 
     public PStateCornerMantling(){
-		cornerHandler = PState.player.cornerHandler;
+		cornerHandler = player.cornerHandler;
 		mantleCorner = cornerHandler.mantleCorner;
-		PState.rigidbody.gravityScale = 0f;
-		PState.rigidbody.velocity = new Vector2(0f,0f);
-		if(PState.player.transform.position.x > cornerHandler.mantleCorner.transform.position.x){
+		rigidbody.gravityScale = 0f;
+		rigidbody.velocity = new Vector2(0f,0f);
+		if(player.transform.position.x > cornerHandler.mantleCorner.transform.position.x){
 			cornerDir = 1;
 		} else{
 			cornerDir = -1;
 		}
 		
-		PState.player.transform.position = new Vector3(cornerHandler.mantleCorner.position.x + (cornerHandler.mantleClimbOffsetX * cornerDir), cornerHandler.mantleCorner.position.y - cornerHandler.mantleClimbOffsetY, 0);
-		cornerClimbTimer = PState.attr.cornerMantleTime;
-		PState.player.animator.Play("PlayerCornerMantling");
+		player.transform.position = new Vector3(cornerHandler.mantleCorner.position.x + (cornerHandler.mantleClimbOffsetX * cornerDir), cornerHandler.mantleCorner.position.y - cornerHandler.mantleClimbOffsetY, 0);
+		cornerClimbTimer = attr.cornerMantleTime;
+		player.animator.Play("PlayerCornerMantling");
 	}
 	
     public override PState Update(){
 		cornerClimbTimer -= Time.deltaTime;
 		if(cornerClimbTimer <= 0){
-			PState.player.transform.position = new Vector3(mantleCorner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), mantleCorner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
-			PState.rigidbody.gravityScale = PState.attr.gravityScale;
-			PState.player.physics.isGrounded = false;
+			player.transform.position = new Vector3(mantleCorner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), mantleCorner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
+			rigidbody.gravityScale = attr.gravityScale;
+			player.physics.isGrounded = false;
 			SetDirection(-cornerDir);
 			return new PStateIdle();
 		}

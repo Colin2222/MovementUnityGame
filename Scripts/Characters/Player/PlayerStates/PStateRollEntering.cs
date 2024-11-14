@@ -8,9 +8,9 @@ public class PStateRollEntering : PState
 	float rollWindow;
 	
     public PStateRollEntering(){
-		PState.player.animator.Play("PlayerRollEntering");
-		PState.player.soundInterface.PlayStillJumpLand();
-		rollWindow = PState.attr.groundRollBraceWindow;
+		player.animator.Play("PlayerRollEntering");
+		player.soundInterface.PlayStillJumpLand();
+		rollWindow = attr.groundRollBraceWindow;
 		rollWindowTimer = 0.0f;
 	}
 	
@@ -55,11 +55,11 @@ public class PStateRollEntering : PState
 	}
 	
 	public override PState Brace(){
-		return new PStateRolling(PState.physics.lastBottomCollisionSpeed.x, PState.physics.lastBottomCollisionSpeed.y);
+		return new PStateRolling(physics.lastBottomCollisionSpeed.x, physics.lastBottomCollisionSpeed.y);
 	}
 	
 	public override PState LeaveGround(){
-		PState.player.animator.Play("PlayerSoaringStill");
+		player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
 	

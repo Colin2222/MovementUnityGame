@@ -13,18 +13,18 @@ public class PStateSoaring : PState
 	}
 	
 	public override PState FixedUpdate(){
-		PState.lastAirSpeed = PState.rigidbody.velocity.x;
+		lastAirSpeed = rigidbody.velocity.x;
 		return this;
 	}
 	
     public override PState HitGround(float hitSpeedX, float hitSpeedY){
-		if(hitSpeedY > PState.attr.groundHitSpeedRollThreshold){
+		if(hitSpeedY > attr.groundHitSpeedRollThreshold){
 			return new PStateRollEntering();
-		} else if(hitSpeedY > PState.attr.groundHitSpeedRollMin && PState.inputManager.bracing){
+		} else if(hitSpeedY > attr.groundHitSpeedRollMin && inputManager.bracing){
 			return new PStateRolling(hitSpeedX, hitSpeedY);
 		}
-		PState.timeSinceLastGroundHit = 0.0f;
-		PState.lastGroundHitSpeed = hitSpeedY;
+		timeSinceLastGroundHit = 0.0f;
+		lastGroundHitSpeed = hitSpeedY;
 		return new PStateMoving();
 	}
 	
@@ -49,9 +49,9 @@ public class PStateSoaring : PState
 	}
 	
 	public override PState HitWall(Vector2 wallCollisionVelocity, WallCollisionInfo collInfo){
-		if(!collInfo.touchFaceplant && collInfo.touchFeet && Mathf.Abs(wallCollisionVelocity.x) > PState.attr.cornerTripMinimumSpeed){
+		if(!collInfo.touchFaceplant && collInfo.touchFeet && Mathf.Abs(wallCollisionVelocity.x) > attr.cornerTripMinimumSpeed){
 			return new PStateCornerFaceplanting(wallCollisionVelocity);
-		} else if(!collInfo.touchLowerHead && collInfo.touchHead && Mathf.Abs(wallCollisionVelocity.x) > PState.attr.cornerTripMinimumSpeed){
+		} else if(!collInfo.touchLowerHead && collInfo.touchHead && Mathf.Abs(wallCollisionVelocity.x) > attr.cornerTripMinimumSpeed){
 			return new PStateCornerHeadHitting(wallCollisionVelocity);
 		}
 		
@@ -63,9 +63,9 @@ public class PStateSoaring : PState
 	}
 	
 	public override PState Brace(){
-		if(PState.player.cornerHandler.mantleCorner != null){
+		if(player.cornerHandler.mantleCorner != null){
 			return new PStateCornerMantling();
-		} else if(PState.player.cornerHandler.corner != null){
+		} else if(player.cornerHandler.corner != null){
 			return new PStateCornerGrabbing();
 		}
 		return this;

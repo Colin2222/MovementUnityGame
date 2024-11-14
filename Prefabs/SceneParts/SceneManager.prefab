@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6cdb01c746af34db9dc31cd13fb848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vcam: {fileID: 0}
   sceneManager: {fileID: 4845049507479276210}
 --- !u!1 &7220019229819489586
 GameObject:

@@ -10,16 +10,16 @@ public class PStateSlideTurning : PState
 	
     public override PState Update(){
 		base.InverseDirectionCorrection();
-		PState.player.animator.Play("PlayerSlideTurning");
+		player.animator.Play("PlayerSlideTurning");
 		return this;
 	}
 	
 	public override PState FixedUpdate(){
 		// apply resistive force
-		PState.rigidbody.AddForce(PState.rigidbody.velocity * PState.attr.moveForce * -1.0f * PState.attr.slideForceMultiplier, ForceMode2D.Force);
+		rigidbody.AddForce(rigidbody.velocity * attr.moveForce * -1.0f * attr.slideForceMultiplier, ForceMode2D.Force);
 		
 		// check if player has slowed down enough to exit slide
-		if(Mathf.Abs(PState.rigidbody.velocity.x) < PState.attr.slideStopSpeedTarget){
+		if(Mathf.Abs(rigidbody.velocity.x) < attr.slideStopSpeedTarget){
 			return new PStateIdle();
 		}
 		return this;
@@ -30,7 +30,7 @@ public class PStateSlideTurning : PState
 	}
 	
 	public override PState Move(float horizontal, float vertical){
-		if(Mathf.Sign(horizontal) == Mathf.Sign(PState.rigidbody.velocity.x) && horizontal != 0.0f){
+		if(Mathf.Sign(horizontal) == Mathf.Sign(rigidbody.velocity.x) && horizontal != 0.0f){
 			return new PStateMoving();
 		}
 		return this;
@@ -45,7 +45,7 @@ public class PStateSlideTurning : PState
 	}
 	
 	public override PState PressJump(){
-		PState.player.animator.Play("PlayerJumpBracing");
+		player.animator.Play("PlayerJumpBracing");
 		return new PStateJumpBracing();
 	}
 	
@@ -54,7 +54,7 @@ public class PStateSlideTurning : PState
 	}
 	
 	public override PState HitWall(Vector2 wallCollisionVelocity, WallCollisionInfo collInfo){
-		if(Mathf.Abs(wallCollisionVelocity.x) > PState.attr.wallSplatMinSpeed){
+		if(Mathf.Abs(wallCollisionVelocity.x) > attr.wallSplatMinSpeed){
 			return new PStateWallSplatting((int)Mathf.Sign(wallCollisionVelocity.x));
 		}
 		
@@ -62,16 +62,16 @@ public class PStateSlideTurning : PState
 	}
 	
 	public override PState Brace(){
-		if(PState.player.cornerHandler.mantleCorner != null){
+		if(player.cornerHandler.mantleCorner != null){
 			return new PStateCornerMantling();
-		} else if(PState.player.cornerHandler.corner != null){
+		} else if(player.cornerHandler.corner != null){
 			return new PStateCornerGrabbing();
 		}
 		return this;
 	}
 	
 	public override PState LeaveGround(){
-		PState.player.animator.Play("PlayerSoaringStill");
+		player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
 	

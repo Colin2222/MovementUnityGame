@@ -12,29 +12,29 @@ public class PStateCornerFaceplanting : PState
 
     public PStateCornerFaceplanting(Vector2 wallCollisionVelocity){
 		exitVelocity = wallCollisionVelocity * -1.0f;
-		cornerHandler = PState.player.cornerHandler;
+		cornerHandler = player.cornerHandler;
 		corner = cornerHandler.trackedCorner;
-		if(PState.player.transform.position.x > cornerHandler.trackedCorner.transform.position.x){
+		if(player.transform.position.x > cornerHandler.trackedCorner.transform.position.x){
 			cornerDir = 1;
 		} else{
 			cornerDir = -1;
 		}
 
-		PState.player.transform.position = new Vector3(corner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), corner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
-		tripTimer = PState.attr.cornerTripTime;
-		PState.player.animator.Play("PlayerFaceplanting");
+		player.transform.position = new Vector3(corner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), corner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
+		tripTimer = attr.cornerTripTime;
+		player.animator.Play("PlayerFaceplanting");
 	}
 
     public override PState Update(){
-		PState.physics.SwitchHitboxes(2);
+		physics.SwitchHitboxes(2);
 		return new PStateFaceplantSoaring(exitVelocity);
 		/*
 		tripTimer -= Time.deltaTime;
 		if(tripTimer <= 0){
-			PState.player.transform.position = new Vector3(corner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), corner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
-			PState.rigidbody.gravityScale = PState.attr.gravityScale;
-			PState.direction = 0;
-			PState.player.physics.isGrounded = false;
+			player.transform.position = new Vector3(corner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), corner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
+			rigidbody.gravityScale = attr.gravityScale;
+			direction = 0;
+			player.physics.isGrounded = false;
 			Debug.Log("SOARING");
 			return new PStateFaceplantSoaring(exitVelocity);
 		}

@@ -8,24 +8,24 @@ public class PStateFaceplantGettingUp : PState
 	
     public PStateFaceplantGettingUp(){
 		// prevents clipping when switching hitboxes
-		PState.player.transform.position += new Vector3(0.0f, 0.5f, 0.0f);
+		player.transform.position += new Vector3(0.0f, 0.5f, 0.0f);
 		
-		PState.physics.SwitchHitboxes(1);
-		PState.player.animator.Play("PlayerFaceplantGettingUp");
-		getupTimer = PState.attr.cornerStunGetupTime;
+		physics.SwitchHitboxes(1);
+		player.animator.Play("PlayerFaceplantGettingUp");
+		getupTimer = attr.cornerStunGetupTime;
 	}
 
     public override PState Update(){
 		getupTimer -= Time.deltaTime;
 		if(getupTimer <= 0.0f){
-			PState.player.animator.Play("PlayerIdle");
+			player.animator.Play("PlayerIdle");
 			return new PStateIdle();
 		}
 		return this;
 	}
 
 	public override PState FixedUpdate(){
-		PState.rigidbody.AddForce(PState.rigidbody.velocity * PState.attr.cornerStunSlideCoefficient * -1.0f, ForceMode2D.Force);
+		rigidbody.AddForce(rigidbody.velocity * attr.cornerStunSlideCoefficient * -1.0f, ForceMode2D.Force);
 		return this;
 	}
 

@@ -14,17 +14,17 @@ public class PStateIdle : PState
 	}
 	
 	public PStateIdle(){
-		PState.player.animator.Play("PlayerIdle");
+		player.animator.Play("PlayerIdle");
 	}
 	
     public override PState Update(){
-		PState.timeSinceLastGroundHit += Time.deltaTime;
+		timeSinceLastGroundHit += Time.deltaTime;
 		return this;
 	}
 	
 	public override PState FixedUpdate(){
 		// apply resistive force to prevent some residual sliding after ending a slide stop/turn
-		PState.rigidbody.AddForce(PState.rigidbody.velocity * PState.attr.moveForce * -1.0f, ForceMode2D.Force);
+		rigidbody.AddForce(rigidbody.velocity * attr.moveForce * -1.0f, ForceMode2D.Force);
 		return this;
 	}
 	
@@ -48,7 +48,7 @@ public class PStateIdle : PState
 	}
 	
 	public override PState PressJump(){
-		PState.player.animator.Play("PlayerJumpBracing");
+		player.animator.Play("PlayerJumpBracing");
 		return new PStateJumpBracing();
 	}
 	
@@ -61,20 +61,20 @@ public class PStateIdle : PState
 	}
 	
 	public override PState Brace(){
-		if(PState.player.cornerHandler.CheckFootHandler(PState.direction)){
-			return new PStateCornerClimbingDown(PState.direction);
-		} else if(PState.player.cornerHandler.mantleCorner != null){
+		if(player.cornerHandler.CheckFootHandler(direction)){
+			return new PStateCornerClimbingDown(direction);
+		} else if(player.cornerHandler.mantleCorner != null){
 			return new PStateCornerMantling();
-		} else if(PState.player.cornerHandler.corner != null){
+		} else if(player.cornerHandler.corner != null){
 			return new PStateCornerGrabbing();
-		} else if(PState.timeSinceLastGroundHit < PState.attr.optionalRollWindow){
-			return new PStateRolling(PState.physics.lastBottomCollisionSpeed.x, PState.physics.lastBottomCollisionSpeed.y);
+		} else if(timeSinceLastGroundHit < attr.optionalRollWindow){
+			return new PStateRolling(physics.lastBottomCollisionSpeed.x, physics.lastBottomCollisionSpeed.y);
 		}
 		return this;
 	}
 	
 	public override PState LeaveGround(){
-		PState.player.animator.Play("PlayerSoaringStill");
+		player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
 	

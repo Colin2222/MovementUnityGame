@@ -22,10 +22,10 @@ public class PStateFaceplantLaying : PState
 	}
 
 	public override PState FixedUpdate(){
-		PState.rigidbody.AddForce(PState.rigidbody.velocity * PState.attr.cornerStunSlideCoefficient * -1.0f, ForceMode2D.Force);
-		if(!laying && Mathf.Abs(PState.rigidbody.velocity.x) < PState.attr.cornerStunGetupStartSpeed){
+		rigidbody.AddForce(rigidbody.velocity * attr.cornerStunSlideCoefficient * -1.0f, ForceMode2D.Force);
+		if(!laying && Mathf.Abs(rigidbody.velocity.x) < attr.cornerStunGetupStartSpeed){
 			laying = true;
-			layTimer = PState.attr.cornerStunGetupWaitTime;
+			layTimer = attr.cornerStunGetupWaitTime;
 		}
 		return this;
 	}

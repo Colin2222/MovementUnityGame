@@ -10,27 +10,27 @@ public class PStateCornerClimbing : PState
 	CornerHandler cornerHandler;
 
     public PStateCornerClimbing(){
-		cornerHandler = PState.player.cornerHandler;
+		cornerHandler = player.cornerHandler;
 		corner = cornerHandler.corner;
-		PState.rigidbody.gravityScale = 0f;
-		PState.rigidbody.velocity = new Vector2(0f,0f);
-		if(PState.player.transform.position.x > cornerHandler.corner.transform.position.x){
+		rigidbody.gravityScale = 0f;
+		rigidbody.velocity = new Vector2(0f,0f);
+		if(player.transform.position.x > cornerHandler.corner.transform.position.x){
 			cornerDir = 1;
 		} else{
 			cornerDir = -1;
 		}
 		
-		PState.player.transform.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerClimbOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerClimbOffsetY, 0);
-		cornerClimbTimer = PState.attr.cornerClimbTime;
-		PState.player.animator.Play("PlayerCornerClimbing");
+		player.transform.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerClimbOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerClimbOffsetY, 0);
+		cornerClimbTimer = attr.cornerClimbTime;
+		player.animator.Play("PlayerCornerClimbing");
 	}
 	
     public override PState Update(){
 		cornerClimbTimer -= Time.deltaTime;
 		if(cornerClimbTimer <= 0){
-			PState.player.transform.position = new Vector3(corner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), corner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
-			PState.rigidbody.gravityScale = PState.attr.gravityScale;
-			PState.player.physics.isGrounded = true;
+			player.transform.position = new Vector3(corner.position.x + (cornerHandler.cornerEndClimbOffsetX * cornerDir * -1), corner.position.y + cornerHandler.cornerEndClimbOffsetY, 0);
+			rigidbody.gravityScale = attr.gravityScale;
+			player.physics.isGrounded = true;
 			SetDirection(-cornerDir);
 			return new PStateIdle();
 		}
