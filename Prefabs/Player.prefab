@@ -1681,17 +1681,17 @@ MonoBehaviour:
     cornerJumpMaximumHorizontalForce: 9
     cornerJumpMaximumVerticalForce: 1
     cornerClimbDownMaxEntrySpeed: 1.75
-    wallBraceTime: 0.2
+    wallBraceTime: 0.3
     wallPushTime: 0.1
     wallPushHorizontalRetention: 0.05
-    wallPushBoost: 0
+    wallPushBoost: 0.5
     wallLaunchTime: 0.25
     wallLaunchHorizontalRetention: 0.7
     wallLaunchMinimumHorizontal: 3
     wallLaunchBoost: 7
     wallLaunchMaxVerticalSpeed: 7.5
-    wallSlideUpwardsCoefficient: 5
-    wallSlideDownwardsCoefficient: 5
+    wallSlideUpwardsCoefficient: 3
+    wallSlideDownwardsCoefficient: 6.5
     wallPushLaunchCoefficient: 7.5
     wallPushToLaunchHorizontalRetention: 0.45
     wallPushToLaunchBoost: 4

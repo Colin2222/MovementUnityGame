@@ -7,9 +7,13 @@ public class PStateWallPushing : PState
 	float wallPushTimer;
 	Vector2 wallCollisionVelocity;
 	float wallPushLaunchCoefficient;
+	float wallSlideUpwardsCoefficient;
+	float wallSlideDownwardsCoefficient;
 	
     public PStateWallPushing(Vector2 wallCollisionVelocity){
 		wallPushLaunchCoefficient = attr.wallPushLaunchCoefficient;
+		wallSlideUpwardsCoefficient = attr.wallSlideUpwardsCoefficient;
+		wallSlideDownwardsCoefficient = attr.wallSlideDownwardsCoefficient;
 		this.wallCollisionVelocity = wallCollisionVelocity;
 		wallPushTimer = attr.wallPushTime;
 		player.animator.Play("PlayerWallPushing");
@@ -25,7 +29,11 @@ public class PStateWallPushing : PState
 	}
 	
 	public override PState FixedUpdate(){
-		rigidbody.AddForce(rigidbody.velocity * -1.0f * wallPushLaunchCoefficient, ForceMode2D.Force);
+		if(rigidbody.velocity.y > 0){
+			rigidbody.AddForce(rigidbody.velocity * -1.0f * wallSlideUpwardsCoefficient, ForceMode2D.Force);
+		} else{
+			rigidbody.AddForce(rigidbody.velocity * -1.0f * wallSlideDownwardsCoefficient, ForceMode2D.Force);
+		}
 		return this;
 	}
 	
