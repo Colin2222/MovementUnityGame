@@ -78,8 +78,16 @@ public class PStateSoaring : PState
 	public override PState LeaveWall(){
 		return this;
 	}
+
+	public override PState Interact(){
+		return this;
+	}
 	
 	public override PState ToggleJournal(){
+		return this;
+	}
+
+	public override PState ToggleInventory(){
 		return this;
 	}
 }

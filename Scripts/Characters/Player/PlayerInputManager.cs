@@ -47,6 +47,8 @@ public class PlayerInputManager : MonoBehaviour
 	private bool menuRightJustPressed = false;
 	private bool menuLeftPressed = false;
 	private bool menuLeftJustPressed = false;
+	private bool menuExitPressed = false;
+	private bool menuExitJustPressed = false;
 	private bool menuPageRightPressed = false;
 	private bool menuPageRightJustPressed = false;
 	private bool menuPageLeftPressed = false;
@@ -55,6 +57,8 @@ public class PlayerInputManager : MonoBehaviour
 	private bool interactJustPressed = false;
 	private bool toggleJournalPressed = false;
 	private bool toggleJournalJustPressed = false;
+	private bool toggleInventoryPressed = false;
+	private bool toggleInventoryJustPressed = false;
 	
     // Start is called before the first frame update
     void Start()
@@ -73,6 +77,8 @@ public class PlayerInputManager : MonoBehaviour
 			if(bracing){
 				bracing = !(stateManager.Brace());
 			}
+		} else if(inUI){
+			HandleMenu();
 		}
 		
         jumpJustPressed = false;
@@ -83,10 +89,12 @@ public class PlayerInputManager : MonoBehaviour
 		menuDownJustPressed = false;
 		menuRightJustPressed = false;
 		menuLeftJustPressed = false;
+		menuExitJustPressed = false;
 		menuPageRightJustPressed = false;
 		menuPageLeftJustPressed = false;
 		interactJustPressed = false;
 		toggleJournalJustPressed = false;
+		toggleInventoryJustPressed = false;
     }
 	
 	public void LockPlayer(){
@@ -97,6 +105,29 @@ public class PlayerInputManager : MonoBehaviour
 		locked = false;
 	}
 	
+	private void HandleMenu(){
+		if(inUI){
+			if(menuUpJustPressed){
+				stateManager.MenuUp();
+			}
+			if(menuDownJustPressed){
+				stateManager.MenuDown();
+			}
+			if(menuRightJustPressed){
+				stateManager.MenuRight();
+			}
+			if(menuLeftJustPressed){
+				stateManager.MenuLeft();
+			}
+			if(menuExitJustPressed){
+				if(stateManager.MenuExit()){
+					UnlockPlayer();
+					inUI = false;
+				}
+			}
+		}
+	}
+
 	// handles bracing timing
 	private void HandleBracing(){
 		if(bracing){
@@ -199,6 +230,11 @@ public class PlayerInputManager : MonoBehaviour
 		menuLeftPressed = !menuLeftPressed;
 		menuLeftJustPressed = menuLeftPressed;
 	}
+
+	private void OnMenuExit(){
+		menuExitPressed = !menuExitPressed;
+		menuExitJustPressed = menuExitPressed;
+	}
 	
 	private void OnMenuPageRight(){
 		menuPageRightPressed = !menuPageRightPressed;
@@ -215,7 +251,10 @@ public class PlayerInputManager : MonoBehaviour
 		interactJustPressed = interactPressed;
 		
 		if(!locked && interactJustPressed){
-			interactor.Interact();
+			if(stateManager.Interact()){
+				LockPlayer();
+				inUI = true;
+			}
 		}
 	}
 	
@@ -225,6 +264,21 @@ public class PlayerInputManager : MonoBehaviour
 		
 		if(toggleJournalJustPressed){
 			if(stateManager.ToggleJournal()){
+				LockPlayer();
+				inUI = true;
+			} else{
+				UnlockPlayer();
+				inUI = false;
+			}
+		}
+	}
+
+	private void OnToggleInventory(){
+		toggleInventoryPressed = !toggleInventoryPressed;
+		toggleInventoryJustPressed = toggleInventoryPressed;
+		
+		if(toggleInventoryJustPressed){
+			if(stateManager.ToggleInventory()){
 				LockPlayer();
 				inUI = true;
 			} else{

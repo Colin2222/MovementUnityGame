@@ -4,103 +4,40 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-	public int gemInventoryWidth;
-	public int gemInventoryHeight;
-	public int itemInventoryWidth;
-	public int itemInventoryHeight;
-	public int cassetteInventoryWidth;
-	public int cassetteInventoryHeight;
-	
-	[System.NonSerialized]
-	public SubInventory gemInventory;
-	[System.NonSerialized]
-	public SubInventory itemInventory;
-	[System.NonSerialized]
-	public SubInventory cassetteInventory;
-	
-	[System.NonSerialized]
-	public bool hasGemInventory;
-	[System.NonSerialized]
-	public bool hasItemInventory;
-	[System.NonSerialized]
-	public bool hasCassetteInventory;
+	public InventoryItem[,] contents;
+	public int width;
+	public int height;
+	public int id;
     // Start is called before the first frame update
     void Start()
     {
-        gemInventory = new SubInventory(gemInventoryHeight, gemInventoryWidth, 1);
-		/*
-		for(int i = 0; i < gemInventoryHeight; i++){
-			for(int j = 0; j < gemInventoryWidth; j++){
-				gemInventory[i, j] = null;
-			}
-		}
-		*/
-        itemInventory = new SubInventory(itemInventoryHeight, itemInventoryWidth, 0);
-        cassetteInventory = new SubInventory(cassetteInventoryHeight, cassetteInventoryWidth, 2);
+		contents = new InventoryItem[height, width];
     }
 
     public void AddItem(Item insertion, int quantity){
-		SubInventory currentInven;
-		switch(insertion.type){
-			case 0:
-				currentInven = itemInventory;
-				break;
-			case 1:
-				currentInven = gemInventory;
-				break;
-			case 2:
-				currentInven = cassetteInventory;
-				break;
-			default:
-				currentInven = itemInventory;
-				break;
-		}
-		(int sCoordX, int sCoordY) startCoordinates = (0, 0);
-		
-		while(quantity > 0){
-			(int invenX, int invenY, int num) searchData = FindOpenSlot(currentInven, insertion, startCoordinates);
-			Debug.Log(searchData);
-			if(searchData.invenX != -1){
-				currentInven.contents[searchData.invenY, searchData.invenX].item = insertion;
-				currentInven.contents[searchData.invenY, searchData.invenX].quantity += Mathf.Clamp(quantity, 0, searchData.num);
-				quantity -= Mathf.Clamp(quantity, 0, searchData.num);
-			}
-			startCoordinates = (searchData.invenX + 1, searchData.invenY);
+		(int invenX, int invenY) searchData = FindOpenSlot(insertion);
+		Debug.Log(searchData);
+		if(searchData.invenX != -1){
+			contents[searchData.invenY, searchData.invenX].item = insertion;
+			contents[searchData.invenY, searchData.invenX].quantity += quantity;
 		}
 	}
 	
-	// returns tuple with first two values as inventory coordinates. third value is the amount that can fit in the slot
-	(int invenX, int invenY, int num) FindOpenSlot(SubInventory currentInven, Item insertion, (int startX, int startY) startCoordinates){
-		// check rest of first row
-		for(int j = startCoordinates.startX; j < currentInven.width; j++){
-			if(currentInven.contents[startCoordinates.startY, j] == null){
-				currentInven.contents[startCoordinates.startY, j] = new InventoryItem();
-				return (j, startCoordinates.startY, insertion.stackSize - currentInven.contents[startCoordinates.startY, j].quantity);
-			} else if(currentInven.contents[startCoordinates.startY, j].item.id == insertion.id){
-				return (j, startCoordinates.startY, insertion.stackSize - currentInven.contents[startCoordinates.startY, j].quantity);
-			}
-		}
-		
-		// check subsequent rows entirely
-		for(int i = startCoordinates.startY; i < currentInven.height; i++){
-			for(int j = 0; j < currentInven.width; j++){
-				if(currentInven.contents[i, j].item == null){
-					currentInven.contents[i, j] = new InventoryItem();
-					return (j, i, insertion.stackSize - currentInven.contents[i, j].quantity);
-				} else if(currentInven.contents[i, j].item.id == insertion.id){
-					return (j, i, insertion.stackSize - currentInven.contents[i, j].quantity);
+	// returns tuple of inventory coordinates to place insertion
+	// searches for existing stack of insertion item, returns empty slot if none found
+	(int xIndex, int yIndex) FindOpenSlot(Item insertion){
+		(int xIndex, int yIndex) firstEmptySlot = (-1, -1);	
+		for(int i = 0; i < height; i++){
+			for(int j = 0; j < width; j++){
+				if(contents[i, j].item == null && firstEmptySlot == (-1, -1)){
+					firstEmptySlot = (j, i);
+				} else if(contents[i, j].item.id == insertion.id){
+					return (j, i);
 				}
 			}
 		}
 		
-		return (-1, -1, 0);
-	}
-	
-	
-	void checkInventoryPresence(){
-		hasGemInventory = gemInventoryWidth > 0 && gemInventoryHeight > 0;
-		hasItemInventory = itemInventoryWidth > 0 && itemInventoryHeight > 0;
-		hasCassetteInventory = cassetteInventoryWidth > 0 && cassetteInventoryHeight > 0;
+		return firstEmptySlot;
 	}
 }
 

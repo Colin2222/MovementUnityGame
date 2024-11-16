@@ -7,6 +7,4 @@ public class CutsceneAction
 	public float triggerTime;
 	public string animation;
 	public string customAction;
-	
-	//public CutsceneAction(
 }

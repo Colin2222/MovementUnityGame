@@ -6,11 +6,13 @@ public class PlayerInteractor : MonoBehaviour
 {
 	Transform interactable;
 	
-    public void Interact(){
+    public IInteractable Interact(){
 		if(interactable != null){
 			IInteractable iFace = interactable.GetComponent<IInteractable>();
 			iFace.Interact();
+			return iFace;
 		}
+		return null;
 	}
 	
 	void OnTriggerEnter2D(Collider2D col){

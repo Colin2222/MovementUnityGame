@@ -13,6 +13,8 @@ public class PlayerHub : MonoBehaviour
 	public Animator animator;
 	public PlayerReskinManager reskinner;
 	public PlayerAttributeManager attributeManager;
+	public PlayerInventoryHandler inventoryHandler;
+	public PlayerInteractor interactor;
 	public PlayerSoundInterface soundInterface;
 	
 	[System.NonSerialized]

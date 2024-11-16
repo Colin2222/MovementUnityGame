@@ -86,7 +86,15 @@ public class PStateCornerFaceplanting : PState
 		return this;
 	}
 
+	public override PState Interact(){
+		return this;
+	}
+
 	public override PState ToggleJournal(){
+		return this;
+	}
+
+	public override PState ToggleInventory(){
 		return this;
 	}
 }

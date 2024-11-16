@@ -12,4 +12,8 @@ public class DoorTransitionInteractable : MonoBehaviour, IInteractable
 		GameObject.FindWithTag("Player").GetComponent<Animator>().Play("PlayerEnteringDoor");
 		StartCoroutine(GameObject.FindWithTag("SceneManager").GetComponent<SceneManager>().SwitchScenes(buildIndex));
 	}
+
+	public void LeaveInteraction(){
+        
+    }
 }

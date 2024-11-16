@@ -22,4 +22,8 @@ public class LevelSelectInteractable : MonoBehaviour, IInteractable
 	public void Interact(){
 		GameObject.FindWithTag("SceneTransitionManager").GetComponent<SceneTransitionManager>().ExitTransition(levelId);
 	}
+
+    public void LeaveInteraction(){
+        
+    }
 }

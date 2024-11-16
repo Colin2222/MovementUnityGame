@@ -6,6 +6,7 @@ using TMPro;
 
 public class SceneManager : MonoBehaviour
 {	
+	public string sceneName;
 	public Transform playerSpawnTransform;
 	public Transform profileSelectionLocation;
 	public Transform levelSelectionLocation;
@@ -96,6 +97,7 @@ public class SceneManager : MonoBehaviour
         }
 		vcam.m_Follow = player.transform;
 		sessionManager.UpdatePlayer(player);
+		player.inventoryHandler.SceneSwitchReset();
 		
 		// check if there is a DontDestroyOnLoad profile manager, create a new one if there isnt
         GameObject profileManagerObjectTest = GameObject.FindWithTag("ProfileManager");

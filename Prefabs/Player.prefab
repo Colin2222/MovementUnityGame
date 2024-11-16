@@ -44,12 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fbc5e377ac558a40bb4c7f4e8e61e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemInventoryWidth: 3
-  gemInventoryHeight: 4
-  itemInventoryWidth: 3
-  itemInventoryHeight: 3
-  cassetteInventoryWidth: 2
-  cassetteInventoryHeight: 2
+  width: 4
+  height: 4
+  id: 0
 --- !u!1 &281777107
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +206,7 @@ GameObject:
   - component: {fileID: 1011390647}
   m_Layer: 11
   m_Name: Interactor
-  m_TagString: Untagged
+  m_TagString: PlayerInteractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1650,7 +1647,7 @@ MonoBehaviour:
     maxRunSpeed: 8.5
     slideForceMultiplier: 0.5
     slideStopSpeedTarget: 1
-    runningJumpSpeed: 6
+    runningJumpSpeed: 5.75
     jumpBraceTime: 0.5
     maxStillJumpAngleFromYAxis: 0.7
     stillJumpLaunchTime: 0.08
@@ -1937,6 +1934,8 @@ MonoBehaviour:
   animator: {fileID: 2098515062}
   reskinner: {fileID: 622292847772405887}
   attributeManager: {fileID: 6501627088609475746}
+  inventoryHandler: {fileID: 1568975044}
+  interactor: {fileID: 1011390647}
   soundInterface: {fileID: 2146572807}
   spawnTime: 2
 --- !u!50 &6829769311745543620

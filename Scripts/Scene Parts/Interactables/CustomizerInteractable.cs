@@ -21,4 +21,8 @@ public class CustomizerInteractable : MonoBehaviour, IInteractable
 	public void Interact(){
 		customizer.ActivatePreviewer();
 	}
+
+    public void LeaveInteraction(){
+        
+    }
 }

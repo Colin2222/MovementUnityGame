@@ -13,7 +13,7 @@ public class PlayerStateManager : MonoBehaviour
 	}
 	
 	void Start(){
-		currentState = new PStateIdle(player, player.inputManager, player.attributeManager.attrSet, player.rigidbody, player.physics);
+		currentState = new PStateIdle(player, player.inputManager, player.attributeManager.attrSet, player.rigidbody, player.physics, player.interactor);
 	}
 	
 	void Update(){
@@ -72,9 +72,52 @@ public class PlayerStateManager : MonoBehaviour
 	public void ClimbDown(){
 		currentState = currentState.ClimbDown();
 	}
+
+	// returns true if the player successfully interacts with an interactable that halts movement (menus, dialogue, etc.)
+	public bool Interact(){
+		currentState = currentState.Interact();
+		return (currentState is PStateInteracting);
+	}
 	
 	public bool ToggleJournal(){
 		currentState = currentState.ToggleJournal();
 		return (currentState is PStateViewingJournal);
+	}
+
+	public bool ToggleInventory(){
+		currentState = currentState.ToggleInventory();
+		return (currentState is PStateViewingInventory);
+	}
+
+	public void MenuUp(){
+		if(currentState is IMenuState){
+			((IMenuState)currentState).MenuUp();
+		}
+	}
+
+	public void MenuDown(){
+		if(currentState is IMenuState){
+			((IMenuState)currentState).MenuDown();
+		}
+	}
+
+	public void MenuLeft(){
+		if(currentState is IMenuState){
+			((IMenuState)currentState).MenuLeft();
+		}
+	}
+
+	public void MenuRight(){
+		if(currentState is IMenuState){
+			((IMenuState)currentState).MenuRight();
+		}
+	}
+
+	// returns true if the menu is exited successfully
+	public bool MenuExit(){
+		if(currentState is IMenuState){
+			currentState = ((IMenuState)currentState).MenuExit();
+		}
+		return (currentState is not IMenuState);
 	}
 }

@@ -58,9 +58,17 @@ public class PStateViewingJournal : PState
 	public override PState LeaveWall(){
 		return this;
 	}
+
+	public override PState Interact(){
+		return this;
+	}
 	
 	public override PState ToggleJournal(){
 		journalManager.Deactivate();
 		return new PStateIdle();
+	}
+
+	public override PState ToggleInventory(){
+		return this;
 	}
 }

@@ -6,6 +6,7 @@ public abstract class PState
 {
 	protected static PlayerHub player;
 	protected static PlayerInputManager inputManager;
+	protected static PlayerInteractor interactor;
 	protected static PlayerAttributeSet attr;
 	protected static Rigidbody2D rigidbody;
 	protected static CharacterPhysicsChecker physics;
@@ -26,7 +27,9 @@ public abstract class PState
 	public abstract PState ReleaseJump();
 	public abstract PState HitWall(Vector2 wallCollisionVelocity, WallCollisionInfo collInfo);
 	public abstract PState Brace();
+	public abstract PState Interact();
 	public abstract PState ToggleJournal();
+	public abstract PState ToggleInventory();
 	
 	protected void SetDirection(float horizontal){
 		if(horizontal > 0){

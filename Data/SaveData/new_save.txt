@@ -1,8 +1,29 @@
 {
-	"progressMarkers":{
+	"progress_markers":{
 		"started_game":true,
 		"halfway_done":false,
 		"finished_game":false,
 		"first_revelation":false
+	},
+	"rooms":{
+		"room":{
+			"id":"mountainbase_rightedge1",
+			"sites":[
+				{
+					"id":"1",
+					"type":"1",
+					"display_name":"the rock outcrop just west of base camp",
+					"active":false,
+					"structure":{}
+				},
+				{
+					"id":"2",
+					"type":"1",
+					"display_name":"the cliff edge by the bluestone deposit just west of base camp",
+					"active":false,
+					"structure":{}
+				}
+			]
+		}
 	}
 }

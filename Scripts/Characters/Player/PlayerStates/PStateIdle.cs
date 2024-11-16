@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PStateIdle : PState
 {
-	public PStateIdle(PlayerHub player, PlayerInputManager inputManager, PlayerAttributeSet attr, Rigidbody2D rigidbody, CharacterPhysicsChecker physics){
+	public PStateIdle(PlayerHub player, PlayerInputManager inputManager, PlayerAttributeSet attr, Rigidbody2D rigidbody, CharacterPhysicsChecker physics, PlayerInteractor interactor){
 		PState.player = player;
 		PState.inputManager = inputManager;
 		PState.attr = attr;
 		PState.rigidbody = rigidbody;
 		PState.physics = physics;
 		PState.direction = 1;
+		PState.interactor = interactor;
 	}
 	
 	public PStateIdle(){
@@ -81,8 +82,20 @@ public class PStateIdle : PState
 	public override PState LeaveWall(){
 		return this;
 	}
+
+	public override PState Interact(){
+		IInteractable result = interactor.Interact();
+		if(result != null){
+			return new PStateInteracting(result);
+		}
+		return this;
+	}
 	
 	public override PState ToggleJournal(){
 		return new PStateViewingJournal();
+	}
+
+	public override PState ToggleInventory(){
+		return new PStateViewingInventory();
 	}
 }

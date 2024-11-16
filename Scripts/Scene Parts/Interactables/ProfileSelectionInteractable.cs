@@ -37,6 +37,10 @@ public class ProfileSelectionInteractable : MonoBehaviour, IInteractable
 		transitioning = true;
 		GameObject.FindWithTag("SceneTransitionManager").GetComponent<SceneTransitionManager>().TempTransition(transitionTime);
 	}
+
+	public void LeaveInteraction(){
+        
+    }
 	
 	public void SetCustomization(List<(int, int)> customizationData, CustomizerColorPalette colorManager){
 		previewer.SyncCustomizationData(customizationData, colorManager);
