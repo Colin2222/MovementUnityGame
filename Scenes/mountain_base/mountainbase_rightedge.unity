@@ -5793,6 +5793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e590c12ff5b684bb774334f93a0f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraDistance: 5
   id: 1
   type: 1
   active: 0
