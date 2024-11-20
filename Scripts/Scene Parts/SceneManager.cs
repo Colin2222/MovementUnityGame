@@ -6,6 +6,8 @@ using TMPro;
 
 public class SceneManager : MonoBehaviour
 {	
+	public static SceneManager Instance { get; private set; }
+
 	public string sceneName;
 	public Transform playerSpawnTransform;
 	public Transform profileSelectionLocation;
@@ -67,6 +69,15 @@ public class SceneManager : MonoBehaviour
 	GameObject sessionManagerTest;
 	
 	void Awake(){
+		// SINGLETON PATTERN
+		if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+		// assign this instance as singleton
+        Instance = this;
+
 		// load in items from data xml
 		itemRegistry = ItemRegistry.Instance();
 		itemRegistry.LoadItems(itemRegistryXml);

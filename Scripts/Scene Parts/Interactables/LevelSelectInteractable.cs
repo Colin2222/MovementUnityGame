@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelSelectInteractable : MonoBehaviour, IInteractable
+public class LevelSelectInteractable : IInteractable
 {
 	[System.NonSerialized]
 	public int levelId;
@@ -19,11 +19,11 @@ public class LevelSelectInteractable : MonoBehaviour, IInteractable
         
     }
 	
-	public void Interact(){
+	public override void Interact(){
 		GameObject.FindWithTag("SceneTransitionManager").GetComponent<SceneTransitionManager>().ExitTransition(levelId);
 	}
 
-    public void LeaveInteraction(){
+    public override void LeaveInteraction(){
         
     }
 }

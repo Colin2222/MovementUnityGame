@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Site : MonoBehaviour, IInteractable
+public class Site : IInteractable
 {
     public int id;
     public int type;
@@ -23,12 +23,12 @@ public class Site : MonoBehaviour, IInteractable
         
     }
 
-    public void Interact(){
+    public override void Interact(){
         Debug.Log("Interacting with site");
         active = true;
     }
 
-    public void LeaveInteraction(){
+    public override void LeaveInteraction(){
         Debug.Log("Leaving interaction with site");
         active = false;
     }

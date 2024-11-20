@@ -81,12 +81,12 @@ public class PlayerStateManager : MonoBehaviour
 	
 	public bool ToggleJournal(){
 		currentState = currentState.ToggleJournal();
-		return (currentState is PStateViewingJournal);
+		return (currentState is IMenuState);
 	}
 
 	public bool ToggleInventory(){
 		currentState = currentState.ToggleInventory();
-		return (currentState is PStateViewingInventory);
+		return (currentState is IMenuState);
 	}
 
 	public void MenuUp(){

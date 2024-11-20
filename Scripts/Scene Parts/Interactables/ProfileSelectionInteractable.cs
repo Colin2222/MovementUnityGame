@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProfileSelectionInteractable : MonoBehaviour, IInteractable
+public class ProfileSelectionInteractable : IInteractable
 {
 	[System.NonSerialized]
 	public ProfileManager profileManager;
@@ -32,13 +32,13 @@ public class ProfileSelectionInteractable : MonoBehaviour, IInteractable
 		}
     }
 	
-	public void Interact(){
+	public override void Interact(){
 		transitionTimer = transitionTime;
 		transitioning = true;
 		GameObject.FindWithTag("SceneTransitionManager").GetComponent<SceneTransitionManager>().TempTransition(transitionTime);
 	}
 
-	public void LeaveInteraction(){
+	public override void LeaveInteraction(){
         
     }
 	

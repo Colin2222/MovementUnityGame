@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomizerInteractable : MonoBehaviour, IInteractable
+public class CustomizerInteractable : IInteractable
 {
 	CustomizerManager customizer;
 	
@@ -18,11 +18,11 @@ public class CustomizerInteractable : MonoBehaviour, IInteractable
         
     }
 	
-	public void Interact(){
+	public override void Interact(){
 		customizer.ActivatePreviewer();
 	}
 
-    public void LeaveInteraction(){
+    public override void LeaveInteraction(){
         
     }
 }

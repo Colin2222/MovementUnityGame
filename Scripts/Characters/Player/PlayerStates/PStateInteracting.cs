@@ -1,15 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PStateInteracting : PState, IMenuState
 {
     PlayerInventoryHandler inventoryHandler;
     IInteractable interactable;
+
+	GameObject cameraTargetObj;
+	float originalCameraDistance;
 	
 	public PStateInteracting(IInteractable interactable){
 		inventoryHandler = player.inventoryHandler;
 		this.interactable = interactable;
+
+		// set camera to split player and interactable
+		Vector3 midPoint = (player.transform.position + interactable.gameObject.transform.position) / 2;
+		cameraTargetObj = new GameObject();
+		cameraTargetObj.transform.position = midPoint;
+		SceneManager.Instance.vcam.m_Follow = cameraTargetObj.transform;
+		originalCameraDistance = SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance;
+		SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = interactable.cameraDistance;
 	}
 	
     public override PState Update(){
@@ -94,6 +106,12 @@ public class PStateInteracting : PState, IMenuState
 
 	public PState MenuExit(){
         interactable.LeaveInteraction();
+
+		// set camera to follow player again
+		SceneManager.Instance.vcam.m_Follow = player.transform;
+		SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = originalCameraDistance;
+		UnityEngine.Object.Destroy(cameraTargetObj);
+
 		return new PStateIdle();
 	}
 }
