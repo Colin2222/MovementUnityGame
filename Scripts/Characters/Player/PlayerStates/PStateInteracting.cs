@@ -6,19 +6,19 @@ using Cinemachine;
 public class PStateInteracting : PState, IMenuState
 {
     PlayerInventoryHandler inventoryHandler;
-    IInteractable interactable;
+    Interactable interactable;
 
 	GameObject cameraTargetObj;
 	float originalCameraDistance;
 	
-	public PStateInteracting(IInteractable interactable){
+	public PStateInteracting(Interactable interactable){
 		inventoryHandler = player.inventoryHandler;
 		this.interactable = interactable;
 
 		// set camera to split player and interactable
 		Vector3 midPoint = (player.transform.position + interactable.gameObject.transform.position) / 2;
 		cameraTargetObj = new GameObject();
-		cameraTargetObj.transform.position = midPoint;
+		cameraTargetObj.transform.position = midPoint + new Vector3(interactable.cameraOffset.x, interactable.cameraOffset.y, 0);
 		SceneManager.Instance.vcam.m_Follow = cameraTargetObj.transform;
 		originalCameraDistance = SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance;
 		SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = interactable.cameraDistance;
@@ -85,23 +85,23 @@ public class PStateInteracting : PState, IMenuState
 	}
 
 	public void MenuUp(){
-		//inventoryHandler.MoveUp();
+		interactable.MenuUp();
 	}
 
 	public void MenuDown(){
-		//inventoryHandler.MoveDown();
+		interactable.MenuDown();
 	}
 
 	public void MenuLeft(){
-		//inventoryHandler.MoveLeft();
+		interactable.MenuLeft();
 	}
 
 	public void MenuRight(){
-		//inventoryHandler.MoveRight();
+		interactable.MenuRight();
 	}
 
 	public void MenuSelect(){
-		
+		interactable.MenuSelect();
 	}
 
 	public PState MenuExit(){

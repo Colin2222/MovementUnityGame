@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerHub : MonoBehaviour
 {
+	public static PlayerHub Instance { get; private set; }
 	public Rigidbody2D rigidbody;
 	public CharacterPhysicsChecker physics;
 	public PlayerInputManager inputManager;
@@ -21,15 +22,22 @@ public class PlayerHub : MonoBehaviour
 	public bool isSpawning = false;
 	public float spawnTime;
 	
-    // Start is called before the first frame update
     void Awake()
     {
+		// SINGLETON PATTERN
+		if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+		// assign this instance as singleton
+        Instance = this;
+		DontDestroyOnLoad(gameObject);
+
 		SwitchPlayerSpritesheet("currentplayer");
     }
 	
 	void Start(){
-		DontDestroyOnLoad(gameObject);
-		
 		AudioClip bgAudio = GameObject.FindWithTag("SceneManager").GetComponent<SceneManager>().bgAudio;
 		
 		if(bgAudio != null){

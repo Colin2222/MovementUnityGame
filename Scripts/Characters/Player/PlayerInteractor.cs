@@ -6,9 +6,9 @@ public class PlayerInteractor : MonoBehaviour
 {
 	Transform interactable;
 	
-    public IInteractable Interact(){
+    public Interactable Interact(){
 		if(interactable != null){
-			IInteractable iFace = interactable.GetComponent<IInteractable>();
+			Interactable iFace = interactable.GetComponent<Interactable>();
 			iFace.Interact();
 			return iFace;
 		}

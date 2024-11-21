@@ -84,7 +84,7 @@ public class PStateIdle : PState
 	}
 
 	public override PState Interact(){
-		IInteractable result = interactor.Interact();
+		Interactable result = interactor.Interact();
 		if(result != null){
 			return new PStateInteracting(result);
 		}

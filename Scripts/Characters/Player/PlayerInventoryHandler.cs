@@ -89,7 +89,7 @@ public class PlayerInventoryHandler : MonoBehaviour
 	}
 	
 	// TODO: MAKE FUNCTIONS TO ONLY CHANGE THE RELEVANT ICONS IN THE INVENTORY
-	void UpdateIcons(){
+	public void UpdateIcons(){
 		for(int i = 0; i < inventory.height; i++){
 			for(int j = 0; j < inventory.width; j++){
 				if(inventory.contents[i, j] != null){

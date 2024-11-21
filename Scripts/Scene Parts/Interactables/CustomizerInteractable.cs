@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomizerInteractable : IInteractable
+public class CustomizerInteractable : Interactable
 {
 	CustomizerManager customizer;
 	
@@ -25,4 +25,24 @@ public class CustomizerInteractable : IInteractable
     public override void LeaveInteraction(){
         
     }
+
+    public override void MenuUp(){
+		
+	}
+
+	public override void MenuDown(){
+		
+	}
+
+	public override void MenuLeft(){
+		
+	}
+
+	public override void MenuRight(){
+		
+	}
+
+	public override void MenuSelect(){
+		
+	}
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelSelectInteractable : IInteractable
+public class LevelSelectInteractable : Interactable
 {
 	[System.NonSerialized]
 	public int levelId;
@@ -26,4 +26,24 @@ public class LevelSelectInteractable : IInteractable
     public override void LeaveInteraction(){
         
     }
+
+    public override void MenuUp(){
+		
+	}
+
+	public override void MenuDown(){
+		
+	}
+
+	public override void MenuLeft(){
+		
+	}
+
+	public override void MenuRight(){
+		
+	}
+
+	public override void MenuSelect(){
+		
+	}
 }

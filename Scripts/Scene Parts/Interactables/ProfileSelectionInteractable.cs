@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProfileSelectionInteractable : IInteractable
+public class ProfileSelectionInteractable : Interactable
 {
 	[System.NonSerialized]
 	public ProfileManager profileManager;
@@ -44,5 +44,25 @@ public class ProfileSelectionInteractable : IInteractable
 	
 	public void SetCustomization(List<(int, int)> customizationData, CustomizerColorPalette colorManager){
 		previewer.SyncCustomizationData(customizationData, colorManager);
+	}
+
+	public override void MenuUp(){
+		
+	}
+
+	public override void MenuDown(){
+		
+	}
+
+	public override void MenuLeft(){
+		
+	}
+
+	public override void MenuRight(){
+		
+	}
+
+	public override void MenuSelect(){
+		
 	}
 }
