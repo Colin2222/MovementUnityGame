@@ -5292,7 +5292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: {fileID: 41229525}
   itemsObject: {fileID: 41229524}
-  slotSize: 1
+  slotSize: 0.75
   slotPrefab: {fileID: 3921071579799571280, guid: 97514acbc7c792b4fa05d306a36903c6, type: 3}
   defaultSlotColor: {r: 0.58431375, g: 0.58431375, b: 0.58431375, a: 1}
   selectedSlotColor: {r: 1, g: 0.3137255, b: 0, a: 1}
