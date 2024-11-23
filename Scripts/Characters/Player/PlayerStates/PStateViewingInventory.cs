@@ -89,6 +89,10 @@ public class PStateViewingInventory : PState, IMenuState
 	}
 
 	public void MenuSelect(){
+		inventoryHandler.MenuSelect();
+	}
+
+	public void MenuDrop(){
 		
 	}
 

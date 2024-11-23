@@ -10731,6 +10731,38 @@ PrefabInstance:
       propertyPath: m_PixelPerfect
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2081719887704256651, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
+      propertyPath: currentSlotColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081719887704256651, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
+      propertyPath: currentSlotColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081719887704256651, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
+      propertyPath: currentSlotColor.g
+      value: 0.29632065
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081719887704256651, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
+      propertyPath: currentSlotColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081719887704256651, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
+      propertyPath: selectionSlotColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081719887704256651, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
+      propertyPath: selectionSlotColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081719887704256651, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
+      propertyPath: selectionSlotColor.g
+      value: 0.070296764
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081719887704256651, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
+      propertyPath: selectionSlotColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2081719887704256692, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
       propertyPath: m_Name
       value: InventoryCanvas
@@ -10742,6 +10774,14 @@ PrefabInstance:
     - target: {fileID: 2081719887704256694, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
       propertyPath: m_MatchWidthOrHeight
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081719887704256695, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081719887704256695, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
+      propertyPath: m_IgnoreReversedGraphics
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2081719888026585303, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
       propertyPath: m_IsActive

@@ -47,6 +47,10 @@ public class PlayerInputManager : MonoBehaviour
 	private bool menuRightJustPressed = false;
 	private bool menuLeftPressed = false;
 	private bool menuLeftJustPressed = false;
+	private bool menuSelectPressed = false;
+	private bool menuSelectJustPressed = false;
+	private bool menuDropPressed = false;
+	private bool menuDropJustPressed = false;
 	private bool menuExitPressed = false;
 	private bool menuExitJustPressed = false;
 	private bool menuPageRightPressed = false;
@@ -90,6 +94,8 @@ public class PlayerInputManager : MonoBehaviour
 		menuDownJustPressed = false;
 		menuRightJustPressed = false;
 		menuLeftJustPressed = false;
+		menuSelectJustPressed = false;
+		menuDropJustPressed = false;
 		menuExitJustPressed = false;
 		menuPageRightJustPressed = false;
 		menuPageLeftJustPressed = false;
@@ -119,6 +125,12 @@ public class PlayerInputManager : MonoBehaviour
 			}
 			if(menuLeftJustPressed){
 				stateManager.MenuLeft();
+			}
+			if(menuSelectJustPressed){
+				stateManager.MenuSelect();
+			}
+			if(menuDropJustPressed){
+				//stateManager.MenuDrop();
 			}
 			if(menuExitJustPressed){
 				if(stateManager.MenuExit()){
@@ -241,6 +253,16 @@ public class PlayerInputManager : MonoBehaviour
 	private void OnMenuExit(){
 		menuExitPressed = !menuExitPressed;
 		menuExitJustPressed = menuExitPressed;
+	}
+
+	private void OnMenuSelect(){
+		menuSelectPressed = !menuSelectPressed;
+		menuSelectJustPressed = menuSelectPressed;
+	}
+
+	private void OnMenuDrop(){
+		menuDropPressed = !menuDropPressed;
+		menuDropJustPressed = menuDropPressed;
 	}
 	
 	private void OnMenuPageRight(){

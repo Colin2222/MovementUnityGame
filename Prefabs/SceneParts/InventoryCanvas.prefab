@@ -349,7 +349,8 @@ MonoBehaviour:
   slotSize: 48
   slotPrefab: {fileID: 8430735637751347737, guid: 5ddb74473703cc242903320c657bd1e3, type: 3}
   defaultSlotColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
-  selectedSlotColor: {r: 1, g: 0.3137255, b: 0, a: 1}
+  currentSlotColor: {r: 1, g: 0.37793317, b: 0, a: 1}
+  selectionSlotColor: {r: 0, g: 0.13552761, b: 1, a: 1}
 --- !u!1 &2081719888026585303
 GameObject:
   m_ObjectHideFlags: 0

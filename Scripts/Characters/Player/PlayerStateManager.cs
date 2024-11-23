@@ -113,6 +113,12 @@ public class PlayerStateManager : MonoBehaviour
 		}
 	}
 
+	public void MenuSelect(){
+		if(currentState is IMenuState){
+			((IMenuState)currentState).MenuSelect();
+		}
+	}
+
 	// returns true if the menu is exited successfully
 	public bool MenuExit(){
 		if(currentState is IMenuState){

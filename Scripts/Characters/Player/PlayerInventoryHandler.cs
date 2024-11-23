@@ -8,6 +8,8 @@ public class PlayerInventoryHandler : MonoBehaviour
 	public Inventory inventory;
 	//[Header("0=Item, 1=Gem, 2=Cassette")]
 	(int x, int y) currentSlotPos;
+	(int x, int y) selectionPos;
+	bool inSelection = false;
 	bool isOpen = false;
 	
 	List<WorldItem> reachableItems;
@@ -76,6 +78,24 @@ public class PlayerInventoryHandler : MonoBehaviour
 			canvas.ChangeSelection(currentSlotPos.y, currentSlotPos.x);
 		}
 	}
+
+	public void MenuSelect(){
+		if(inSelection){
+			if(selectionPos == currentSlotPos){
+				inSelection = false;
+				canvas.EndSelection();
+			} else{
+				inventory.SwapItem(selectionPos.x, selectionPos.y, currentSlotPos.x, currentSlotPos.y);
+				UpdateIcons();
+				canvas.EndSelection();
+				inSelection = false;
+			}
+		} else{
+			selectionPos = currentSlotPos;
+			canvas.StartSelection(currentSlotPos.y, currentSlotPos.x);
+			inSelection = true;
+		}
+	}
 	
 	public void Pickup(){
 		if(reachableItems.Count > 0){
@@ -94,6 +114,8 @@ public class PlayerInventoryHandler : MonoBehaviour
 			for(int j = 0; j < inventory.width; j++){
 				if(inventory.contents[i, j] != null){
 					canvas.SetIcon(i, j, inventory.contents[i, j].item.icon);
+				} else{
+					canvas.SetIcon(i, j, null);
 				}
 			}
 		}

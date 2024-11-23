@@ -21,6 +21,12 @@ public class Inventory : MonoBehaviour
 			contents[searchData.invenY, searchData.invenX].quantity += quantity;
 		}
 	}
+
+	public void SwapItem(int x1, int y1, int x2, int y2){
+		InventoryItem temp = contents[y1, x1];
+		contents[y1, x1] = contents[y2, x2];
+		contents[y2, x2] = temp;
+	}
 	
 	// returns tuple of inventory coordinates to place insertion
 	// searches for existing stack of insertion item, returns empty slot if none found

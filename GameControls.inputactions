@@ -87,6 +87,24 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "MenuSelect",
+                    "type": "Button",
+                    "id": "6ad2797b-331e-4e88-9aaf-92ed23402687",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MenuDrop",
+                    "type": "Button",
+                    "id": "5986d8d6-50f3-45a4-ba0f-02087381843a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "MenuExit",
                     "type": "Button",
                     "id": "a68204f4-2a95-4a50-ad60-6719f1df3727",
@@ -335,6 +353,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ToggleInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3ae61ff1-9471-4ee2-8064-11c6229c9ac0",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenuSelect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e5d86c58-123d-473b-9028-2ba2b429a27b",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenuDrop",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
