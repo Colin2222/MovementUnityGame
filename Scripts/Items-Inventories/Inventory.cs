@@ -16,7 +16,6 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Item insertion, int quantity){
 		(int invenX, int invenY) searchData = FindOpenSlot(insertion);
-		Debug.Log(searchData);
 		if(searchData.invenX != -1){
 			contents[searchData.invenY, searchData.invenX].item = insertion;
 			contents[searchData.invenY, searchData.invenX].quantity += quantity;
@@ -29,28 +28,15 @@ public class Inventory : MonoBehaviour
 		(int xIndex, int yIndex) firstEmptySlot = (-1, -1);	
 		for(int i = 0; i < height; i++){
 			for(int j = 0; j < width; j++){
-				if(contents[i, j].item == null && firstEmptySlot == (-1, -1)){
+				if(firstEmptySlot == (-1, -1) && contents[i, j] == null){
 					firstEmptySlot = (j, i);
-				} else if(contents[i, j].item.id == insertion.id){
+				} else if(contents[i, j] != null && contents[i, j].item.id == insertion.id){
 					return (j, i);
 				}
 			}
 		}
 		
+		contents[firstEmptySlot.yIndex, firstEmptySlot.xIndex] = new InventoryItem(insertion, 0);
 		return firstEmptySlot;
-	}
-}
-
-public class SubInventory{
-	public InventoryItem[,] contents;
-	public int width;
-	public int height;
-	public int id;
-	
-	public SubInventory(int height, int width, int id){
-		this.contents = new InventoryItem[height, width];
-		this.width = width;
-		this.height = height;
-		this.id = id;
 	}
 }

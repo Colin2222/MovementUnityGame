@@ -73,6 +73,7 @@ public class PlayerInputManager : MonoBehaviour
 			stateManager.Move(horizontal, vertical);
 			HandleBracing();
 			HandleClimbing();
+			HandleItemGrabbing();
 			
 			if(bracing){
 				bracing = !(stateManager.Brace());
@@ -149,6 +150,12 @@ public class PlayerInputManager : MonoBehaviour
 					braceTimer = attr.braceTime;
 				}
 			}
+		}
+	}
+
+	private void HandleItemGrabbing(){
+		if(itemGrabJustPressed){
+			player.inventoryHandler.Pickup();
 		}
 	}
 	
