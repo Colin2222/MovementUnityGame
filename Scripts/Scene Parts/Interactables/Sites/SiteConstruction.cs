@@ -51,14 +51,6 @@ public class SiteConstruction : Site
         sitePanel.gameObject.SetActive(false);
     }
 
-    public override bool HasMenu(){
-        return true;
-    }
-
-    public override bool HasPlayerInventoryMenu(){
-        return true;
-    }
-
     public override void MenuUp(){
         if(currentInventory == "player"){
             if(currentSlotPos.y > 0){

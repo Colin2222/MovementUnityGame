@@ -4,10 +4,6 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    public float cameraDistance;
-    public Vector2 cameraOffset;
-    public bool hasUI;
-
     public abstract void Interact();
     public abstract void LeaveInteraction();
     abstract public void MenuUp();

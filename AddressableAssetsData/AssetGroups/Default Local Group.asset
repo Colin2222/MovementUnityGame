@@ -49,6 +49,26 @@ MonoBehaviour:
     m_Address: Assets/Data/Cutscenes/revelation_1.json
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 35cf263e23c3b054b98d7ddbef1b00d8
+    m_Address: Assets/Data/Items/items.xml
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a68d9be542822d94398551143a91463b
+    m_Address: Assets/Data/Items/ItemIcons/test_item.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5281ba2c06b6ad54a8606352029bf37a
+    m_Address: Assets/Data/Items/ItemIcons/test_item2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ac47a5af66be86644b1b1a569f5a62bf
+    m_Address: Assets/Data/Items/ItemIcons/iron_rod.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2b5e5d7fcaf5c36469d32bcdb6d541c5
+    m_Address: Assets/Data/Items/ItemIcons/wood_log.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:

@@ -64,7 +64,7 @@ public class SessionManager : MonoBehaviour
 	}
 	
 	public bool GetData(string dataKey){
-		bool result = saveData.progressMarkers[dataKey];
+		bool result = saveData.progress_markers[dataKey];
 		if(result != null){
 			return result;
 		}
@@ -72,7 +72,7 @@ public class SessionManager : MonoBehaviour
 	}
 	
 	public void SetData(string dataKey, bool dataValue){
-		saveData.progressMarkers[dataKey] = dataValue;
+		saveData.progress_markers[dataKey] = dataValue;
 	}
 	
 	public void CreateNewSave(){

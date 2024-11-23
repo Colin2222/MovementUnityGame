@@ -53,6 +53,5 @@ public class SiteConstructionPanel : MonoBehaviour
 				itemSlots[i, j].name = "Slot[" + i + "," + j + "]";
 			}
 		}
-        Debug.Log(inventory.height + " " + inventory.width);
 	}
 }

@@ -1,5 +1,10 @@
 {
-  "progressMarkers": null,
+  "progress_markers": {
+    "started_game": true,
+    "halfway_done": false,
+    "finished_game": false,
+    "first_revelation": false
+  },
   "rooms": {
     "room": {
       "id": "mountainbase_rightedge1",

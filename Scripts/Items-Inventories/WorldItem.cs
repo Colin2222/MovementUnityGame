@@ -11,6 +11,8 @@ public class WorldItem : MonoBehaviour
 	
 	void Start(){
 		item = ItemRegistry.Instance().GetItem(item_id);
+		Debug.Log("Item: " + item.name);
+		Debug.Log("Icon: " + item.icon);
 		renderer.sprite = item.icon;
 	}
 }

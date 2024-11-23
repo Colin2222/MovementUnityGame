@@ -4,7 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class GameSaveData{
-	public Dictionary<string, bool> progressMarkers;
+	public Dictionary<string, bool> progress_markers;
 	public Dictionary<string, SavedRoom> rooms;
 }
 

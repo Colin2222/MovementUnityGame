@@ -1,0 +1,32 @@
+{
+	"registry_items": [
+		{
+			"id": "test_item1",
+			"name": "Test Gem A",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "test_item.png"
+		},
+		{
+			"id": "test_item2",
+			"name": "Test Gem B",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "test_item2.png"
+		},
+		{
+			"id": "wood_log",
+			"name": "Wood Log",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "wood_log.png"
+		},
+		{
+			"id": "iron_rod",
+			"name": "Iron Rod",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "iron_rod.png"
+		}
+	]
+}

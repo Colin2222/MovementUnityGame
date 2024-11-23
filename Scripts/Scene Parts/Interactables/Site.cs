@@ -6,6 +6,10 @@ public abstract class Site : Interactable
 {
     public int id;
     public int type;
+    public float cameraDistance;
+    public Vector2 cameraOffset;
+    public bool hasMenu;
+    public bool hasPlayerInventoryMenu;
 
     public override void Interact(){
         Debug.Log("Interacting with site");
@@ -29,7 +33,4 @@ public abstract class Site : Interactable
 
     abstract protected void EnterRange();
     abstract protected void ExitRange();
-
-    abstract public bool HasMenu();
-    abstract public bool HasPlayerInventoryMenu();
 }

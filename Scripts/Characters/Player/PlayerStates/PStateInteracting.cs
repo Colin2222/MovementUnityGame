@@ -7,6 +7,7 @@ public class PStateInteracting : PState, IMenuState
 {
     PlayerInventoryHandler inventoryHandler;
     Interactable interactable;
+	Site site;
 
 	GameObject cameraTargetObj;
 	float originalCameraDistance;
@@ -14,14 +15,19 @@ public class PStateInteracting : PState, IMenuState
 	public PStateInteracting(Interactable interactable){
 		inventoryHandler = player.inventoryHandler;
 		this.interactable = interactable;
+		if(interactable is Site){
+			site = (Site)interactable;
+		}
 
-		// set camera to split player and interactable
-		Vector3 midPoint = (player.transform.position + interactable.gameObject.transform.position) / 2;
-		cameraTargetObj = new GameObject();
-		cameraTargetObj.transform.position = midPoint + new Vector3(interactable.cameraOffset.x, interactable.cameraOffset.y, 0);
-		SceneManager.Instance.vcam.m_Follow = cameraTargetObj.transform;
-		originalCameraDistance = SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance;
-		SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = interactable.cameraDistance;
+		if(site.hasMenu){
+			// set camera to split player and interactable
+			Vector3 midPoint = (player.transform.position + site.gameObject.transform.position) / 2;
+			cameraTargetObj = new GameObject();
+			cameraTargetObj.transform.position = midPoint + new Vector3(site.cameraOffset.x, site.cameraOffset.y, 0);
+			SceneManager.Instance.vcam.m_Follow = cameraTargetObj.transform;
+			originalCameraDistance = SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance;
+			SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = site.cameraDistance;
+		}
 	}
 	
     public override PState Update(){
