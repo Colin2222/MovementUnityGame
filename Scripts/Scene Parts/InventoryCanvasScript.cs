@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventoryCanvasScript : MonoBehaviour
 {
@@ -49,8 +50,10 @@ public class InventoryCanvasScript : MonoBehaviour
 		selectionSlot.SetActive(false);
 	}
 	
-	public void SetIcon(int y, int x, Sprite icon){
+	public void SetIcon(int y, int x, Sprite icon, int quantity){
 		itemSlots[y, x].transform.GetChild(0).gameObject.SetActive(icon != null);
+		itemSlots[y, x].transform.GetChild(1).gameObject.SetActive(icon != null);
+		itemSlots[y, x].transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = icon == null ? "" : quantity.ToString();
 		itemSlots[y, x].transform.GetChild(0).GetComponent<Image>().sprite = icon;
 	}
 	

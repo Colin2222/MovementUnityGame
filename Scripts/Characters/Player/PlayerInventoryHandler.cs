@@ -113,9 +113,9 @@ public class PlayerInventoryHandler : MonoBehaviour
 		for(int i = 0; i < inventory.height; i++){
 			for(int j = 0; j < inventory.width; j++){
 				if(inventory.contents[i, j] != null){
-					canvas.SetIcon(i, j, inventory.contents[i, j].item.icon);
+					canvas.SetIcon(i, j, inventory.contents[i, j].item.icon, inventory.contents[i, j].quantity);
 				} else{
-					canvas.SetIcon(i, j, null);
+					canvas.SetIcon(i, j, null, 0);
 				}
 			}
 		}
