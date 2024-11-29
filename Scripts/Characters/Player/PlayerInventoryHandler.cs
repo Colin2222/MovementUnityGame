@@ -45,6 +45,8 @@ public class PlayerInventoryHandler : MonoBehaviour
 			canvas.ChangeSelection(currentSlotPos.y, currentSlotPos.x);
 			UpdateIcons();
 		} else{
+			canvas.EndSelection();
+			inSelection = false;
 			canvas.itemsObject.SetActive(false);
 		}
 		

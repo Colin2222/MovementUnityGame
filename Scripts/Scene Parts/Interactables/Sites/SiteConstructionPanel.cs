@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SiteConstructionPanel : MonoBehaviour
 {
@@ -13,9 +14,11 @@ public class SiteConstructionPanel : MonoBehaviour
 	public float slotSize;
 	public GameObject slotPrefab;
 	public Color defaultSlotColor;
-	public Color selectedSlotColor;
+	public Color currentSlotColor;
 
     (int y, int x) selection;
+	GameObject selectionSlot;
+	public Color selectionSlotColor;
 
     // Start is called before the first frame update
     void Start()
@@ -32,13 +35,24 @@ public class SiteConstructionPanel : MonoBehaviour
     public void ChangeSelection(int y, int x){
         itemSlots[selection.y, selection.x].GetComponent<SpriteRenderer>().color = defaultSlotColor;
 		if(y >= 0 && x >= 0){
-			itemSlots[y, x].GetComponent<SpriteRenderer>().color = selectedSlotColor;
+			itemSlots[y, x].GetComponent<SpriteRenderer>().color = currentSlotColor;
 			selection = (y, x);
 		}
 	}
 
-    public void SetIcon(int y, int x, Sprite icon){
-		itemSlots[y, x].transform.GetChild(0).gameObject.SetActive(true);
+	public void StartSelection(int y, int x){
+		selectionSlot.transform.localPosition = new Vector3(x * slotSize, -y * slotSize, 0);
+		selectionSlot.SetActive(true);
+	}
+
+	public void EndSelection(){
+		selectionSlot.SetActive(false);
+	}
+
+    public void SetIcon(int y, int x, Sprite icon, int quantity){
+		itemSlots[y, x].transform.GetChild(0).gameObject.SetActive(icon != null);
+		itemSlots[y, x].transform.GetChild(1).gameObject.SetActive(icon != null);
+		itemSlots[y, x].transform.GetChild(1).gameObject.GetComponent<TMP_Text>().text = icon == null ? "" : quantity.ToString();
 		itemSlots[y, x].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = icon;
 	}
 
@@ -53,5 +67,11 @@ public class SiteConstructionPanel : MonoBehaviour
 				itemSlots[i, j].name = "Slot[" + i + "," + j + "]";
 			}
 		}
+
+		// initiate selection slot
+		selectionSlot = Instantiate(slotPrefab, items, false);
+		selectionSlot.GetComponent<Transform>().localScale = new Vector3(slotSize, slotSize, 0);
+		selectionSlot.GetComponent<SpriteRenderer>().color = selectionSlotColor;
+		selectionSlot.SetActive(false);
 	}
 }

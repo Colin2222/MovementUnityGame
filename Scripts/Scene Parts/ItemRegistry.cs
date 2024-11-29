@@ -26,10 +26,10 @@ public class ItemRegistry
 	public void LoadItems(string registryXmlFilePath){
 		if(!loaded){
 			// load in json of player's save into TextAsset
-			var operation = Addressables.LoadAssetAsync<TextAsset>("Assets/Data/Items/" + registryXmlFilePath + ".xml");
+			var operation = Addressables.LoadAssetAsync<TextAsset>("Assets/Data/Items/" + registryXmlFilePath + ".json");
 			TextAsset txtAsset = operation.WaitForCompletion();
 			
-			// parse json into cutscene object
+			// parse json into object
 			ItemJsonList itemJson = JsonConvert.DeserializeObject<ItemJsonList>(txtAsset.text);
 			foreach(RegistryItem item in itemJson.registry_items){
 				var spriteOperation = Addressables.LoadAssetAsync<Sprite>("Assets/Data/Items/ItemIcons/" + item.icon);

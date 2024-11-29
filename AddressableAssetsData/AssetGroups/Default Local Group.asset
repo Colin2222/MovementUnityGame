@@ -50,7 +50,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 35cf263e23c3b054b98d7ddbef1b00d8
-    m_Address: Assets/Data/Items/items.xml
+    m_Address: Assets/Data/Items/items.json
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: a68d9be542822d94398551143a91463b

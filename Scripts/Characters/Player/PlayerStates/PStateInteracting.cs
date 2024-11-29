@@ -91,27 +91,27 @@ public class PStateInteracting : PState, IMenuState
 	}
 
 	public void MenuUp(){
-		interactable.MenuUp();
+		site.MenuUp();
 	}
 
 	public void MenuDown(){
-		interactable.MenuDown();
+		site.MenuDown();
 	}
 
 	public void MenuLeft(){
-		interactable.MenuLeft();
+		site.MenuLeft();
 	}
 
 	public void MenuRight(){
-		interactable.MenuRight();
+		site.MenuRight();
 	}
 
 	public void MenuSelect(){
-		interactable.MenuSelect();
+		site.MenuSelect();
 	}
 
 	public PState MenuExit(){
-        interactable.LeaveInteraction();
+        site.LeaveInteraction();
 
 		// set camera to follow player again
 		SceneManager.Instance.vcam.m_Follow = player.transform;

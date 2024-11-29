@@ -27,6 +27,12 @@ public class Inventory : MonoBehaviour
 		contents[y1, x1] = contents[y2, x2];
 		contents[y2, x2] = temp;
 	}
+
+	public void TradeItem(int x1, int y1, Inventory otherInventory, int x2, int y2){
+		InventoryItem temp = contents[y2, x2];
+		contents[y2, x2] = otherInventory.contents[y1, x1];
+		otherInventory.contents[y1, x1] = temp;
+	}
 	
 	// returns tuple of inventory coordinates to place insertion
 	// searches for existing stack of insertion item, returns empty slot if none found

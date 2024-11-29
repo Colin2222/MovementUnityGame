@@ -25,24 +25,4 @@ public class CustomizerInteractable : Interactable
     public override void LeaveInteraction(){
         
     }
-
-    public override void MenuUp(){
-		
-	}
-
-	public override void MenuDown(){
-		
-	}
-
-	public override void MenuLeft(){
-		
-	}
-
-	public override void MenuRight(){
-		
-	}
-
-	public override void MenuSelect(){
-		
-	}
 }
