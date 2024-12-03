@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SiteConstruction : Site
+public class SiteChest : Site
 {
     public GameObject rangeEffect;
     bool active;
@@ -12,11 +12,8 @@ public class SiteConstruction : Site
     (int x, int y) selectionPos;
 	bool inSelection = false;
     Inventory playerInventory;
-    public SiteConstructionPanel sitePanel;
+    public SiteChestPanel sitePanel;
     public Inventory siteInventory;
-
-    public ConstructionRequirement[] requirements;
-
 
     // can be player or site
     string currentInventory = "player";
@@ -27,11 +24,7 @@ public class SiteConstruction : Site
     }
 
     void Start(){
-        siteInventory.ResetInventory(1, requirements.Length);
-
-        foreach(ConstructionRequirement req in requirements){
-            sitePanel.AddRequirementSlot(req.item, req.quantity, siteInventory);
-        }
+        sitePanel.SyncInventory(siteInventory);
     }
 
     protected override void EnterRange(){
@@ -204,14 +197,4 @@ public class SiteConstruction : Site
 			}
 		}
 	}
-}
-
-[System.Serializable]
-public class ConstructionRequirement{
-    public string item;
-    public int quantity;
-    public ConstructionRequirement(string item, int quantity){
-        this.item = item;
-        this.quantity = quantity;
-    }
 }

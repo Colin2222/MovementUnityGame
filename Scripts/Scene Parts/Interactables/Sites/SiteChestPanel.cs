@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class SiteConstructionPanel : MonoBehaviour
+public class SiteChestPanel : MonoBehaviour
 {
     public Transform items;
     public GameObject itemsObject;
@@ -13,18 +13,12 @@ public class SiteConstructionPanel : MonoBehaviour
 	
 	public float slotSize;
 	public GameObject slotPrefab;
-	public GameObject iconPrefab;
-	int numRequirements;
 	public Color defaultSlotColor;
 	public Color currentSlotColor;
 
     (int y, int x) selection;
 	GameObject selectionSlot;
 	public Color selectionSlotColor;
-
-	void Awake(){
-		numRequirements = 0;
-	}
 
     // Start is called before the first frame update
     void Start()
@@ -79,30 +73,5 @@ public class SiteConstructionPanel : MonoBehaviour
 		selectionSlot.GetComponent<Transform>().localScale = new Vector3(slotSize, slotSize, 0);
 		selectionSlot.GetComponent<SpriteRenderer>().color = selectionSlotColor;
 		selectionSlot.SetActive(false);
-	}
-
-	public void AddRequirementSlot(string item, int quantity, Inventory inventory){
-		if(numRequirements == 0){
-			itemSlots = new GameObject[inventory.height, 1];
-
-			// initiate selection slot
-			selectionSlot = Instantiate(slotPrefab, items, false);
-			selectionSlot.GetComponent<Transform>().localScale = new Vector3(slotSize, slotSize, 0);
-			selectionSlot.GetComponent<SpriteRenderer>().color = selectionSlotColor;
-			selectionSlot.SetActive(false);
-		}
-
-		itemSlots[numRequirements, 0] = Instantiate(slotPrefab, items, false);
-		itemSlots[numRequirements, 0].GetComponent<Transform>().localScale = new Vector3(slotSize, slotSize, 1);
-		itemSlots[numRequirements, 0].GetComponent<SpriteRenderer>().color = defaultSlotColor;
-		itemSlots[numRequirements, 0].transform.localPosition = new Vector3(0, -numRequirements * slotSize, 0);
-		itemSlots[numRequirements, 0].name = "Slot[" + numRequirements + "," + "0" + "]";
-		GameObject icon = Instantiate(iconPrefab, itemSlots[numRequirements, 0].transform, false);
-		icon.GetComponent<Transform>().localPosition = new Vector3(2, 0, 0);
-		icon.GetComponent<SpriteRenderer>().sprite = ItemRegistry.Instance().GetItem(item).icon;
-		icon.transform.GetChild(0).GetComponent<TMP_Text>().text = quantity.ToString();
-		icon.transform.GetChild(0).gameObject.SetActive(true);
-
-		numRequirements++;
 	}
 }

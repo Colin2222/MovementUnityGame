@@ -51,4 +51,10 @@ public class Inventory : MonoBehaviour
 		contents[firstEmptySlot.yIndex, firstEmptySlot.xIndex] = new InventoryItem(insertion, 0);
 		return firstEmptySlot;
 	}
+
+	public void ResetInventory(int width, int height){
+		this.width = width;
+		this.height = height;
+		contents = new InventoryItem[height, width];
+	}
 }
