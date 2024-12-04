@@ -143,7 +143,7 @@ public class SiteChest : Site
 			    } else{
                     if(currentSelection == "site"){
                         Debug.Log("Trading item site to player");
-                        playerInventory.TradeItem(selectionPos.x, selectionPos.y, siteInventory, currentSlotPos.x, currentSlotPos.y);
+                        playerInventory.TradeItem(siteInventory, selectionPos.x, selectionPos.y, currentSlotPos.x, currentSlotPos.y);
                     } else{
                         playerInventory.SwapItem(selectionPos.x, selectionPos.y, currentSlotPos.x, currentSlotPos.y);
                     }
@@ -160,7 +160,7 @@ public class SiteChest : Site
                 } else{
                     if(currentSelection == "player"){
                         Debug.Log("Trading item player to site");
-                        siteInventory.TradeItem(selectionPos.x, selectionPos.y, playerInventory, currentSlotPos.x, currentSlotPos.y);
+                        siteInventory.TradeItem(playerInventory, selectionPos.x, selectionPos.y, currentSlotPos.x, currentSlotPos.y);
                     } else{
                         siteInventory.SwapItem(selectionPos.x, selectionPos.y, currentSlotPos.x, currentSlotPos.y);
                     }

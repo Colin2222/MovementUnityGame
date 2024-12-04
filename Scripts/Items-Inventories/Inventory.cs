@@ -28,10 +28,10 @@ public class Inventory : MonoBehaviour
 		contents[y2, x2] = temp;
 	}
 
-	public void TradeItem(int x1, int y1, Inventory otherInventory, int x2, int y2){
-		InventoryItem temp = contents[y2, x2];
-		contents[y2, x2] = otherInventory.contents[y1, x1];
-		otherInventory.contents[y1, x1] = temp;
+	public void TradeItem(Inventory otherInventory, int xOther, int yOther, int xThis, int yThis){
+		InventoryItem temp = contents[yThis, xThis];
+		contents[yThis, xThis] = otherInventory.contents[yOther, xOther];
+		otherInventory.contents[yOther, xOther] = temp;
 	}
 	
 	// returns tuple of inventory coordinates to place insertion
