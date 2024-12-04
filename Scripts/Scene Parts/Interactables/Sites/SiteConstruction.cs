@@ -32,6 +32,7 @@ public class SiteConstruction : Site
         int i = 0;
         foreach(ConstructionRequirement req in requirements){
             siteInventory.maxQuantities[i, 0] = req.quantity;
+            siteInventory.slotTypes[i, 0] = req.item;
             sitePanel.AddRequirementSlot(req.item, req.quantity, siteInventory);
 
             i++;

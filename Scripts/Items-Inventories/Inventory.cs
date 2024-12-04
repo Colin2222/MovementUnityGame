@@ -6,6 +6,7 @@ public class Inventory : MonoBehaviour
 {
 	public InventoryItem[,] contents;
 	public int[,] maxQuantities;
+	public string[,] slotTypes;
 	public int width;
 	public int height;
 	public int id;
@@ -19,6 +20,7 @@ public class Inventory : MonoBehaviour
 				maxQuantities[i, j] = 10000;
 			}
 		}
+		slotTypes = new string[height, width];
 	}
     void Start()
     {
@@ -47,7 +49,12 @@ public class Inventory : MonoBehaviour
 
 	// meant for inserting items into an empty or existing stack (of the same item of course)
 	public void InsertItem(Inventory otherInventory, int xOther, int yOther, int xThis, int yThis){
-		// check if the receiving slot is empty and TODO TODO TODO check if the slot is intended for this item
+		// check if the receiving slot is compatible with the item being inserted
+		if(slotTypes[yThis, xThis] != null && slotTypes[yThis, xThis] != otherInventory.contents[yOther, xOther].item.id){
+			return;
+		}
+
+		// check if the receiving slot is empty
 		if(contents[yThis, xThis] != null){
 			// check if the items are the same
 			if(contents[yThis, xThis].item.id == otherInventory.contents[yOther, xOther].item.id){
@@ -61,9 +68,12 @@ public class Inventory : MonoBehaviour
 					otherInventory.contents[yOther, xOther].quantity = totalQuantity - maxQuantities[yThis, xThis];
 				}
 			} else{
-				// check there would be no quantities going over maximums from swapping
+				// check there would be no quantities going over maximums from swapping and other slot is compatible slot
 				if(!(contents[yThis, xThis].quantity > otherInventory.maxQuantities[yOther, xOther] || otherInventory.contents[yOther, xOther].quantity > maxQuantities[yThis, xThis])){
-					TradeItem(otherInventory, xOther, yOther, xThis, yThis);
+					// check if other slot is compatible with item from this inventory
+					if(slotTypes[yOther, xOther] == null || slotTypes[yOther, xOther] == contents[yThis, xThis].item.id){
+						TradeItem(otherInventory, xOther, yOther, xThis, yThis);
+					}
 				}
 			}
 		} else{
