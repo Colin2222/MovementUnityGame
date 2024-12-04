@@ -10947,7 +10947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &8961282481656090842
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11033,6 +11033,7 @@ MonoBehaviour:
   slotSize: 0.75
   slotPrefab: {fileID: 3921071579799571280, guid: 97514acbc7c792b4fa05d306a36903c6, type: 3}
   iconPrefab: {fileID: 4542392931211738145, guid: 8e990be3f5dbe2142bc55c3ed5deb914, type: 3}
+  buttonPrefab: {fileID: 5162061369137590721, guid: ab469c0e3bda5444f8901f3feafe434e, type: 3}
   defaultSlotColor: {r: 0.58431375, g: 0.58431375, b: 0.58431375, a: 1}
   currentSlotColor: {r: 1, g: 0.29803923, b: 0, a: 1}
   selectionSlotColor: {r: 0, g: 0.07058824, b: 1, a: 1}

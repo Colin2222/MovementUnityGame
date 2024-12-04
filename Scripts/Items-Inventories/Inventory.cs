@@ -71,7 +71,7 @@ public class Inventory : MonoBehaviour
 				// check there would be no quantities going over maximums from swapping and other slot is compatible slot
 				if(!(contents[yThis, xThis].quantity > otherInventory.maxQuantities[yOther, xOther] || otherInventory.contents[yOther, xOther].quantity > maxQuantities[yThis, xThis])){
 					// check if other slot is compatible with item from this inventory
-					if(slotTypes[yOther, xOther] == null || slotTypes[yOther, xOther] == contents[yThis, xThis].item.id){
+					if(otherInventory.slotTypes[yOther, xOther] == null || slotTypes[yOther, xOther] == contents[yThis, xThis].item.id){
 						TradeItem(otherInventory, xOther, yOther, xThis, yThis);
 					}
 				}

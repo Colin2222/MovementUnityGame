@@ -37,6 +37,7 @@ public class SiteConstruction : Site
 
             i++;
         }
+        sitePanel.AddConstructButton();
     }
 
     protected override void EnterRange(){
@@ -101,7 +102,8 @@ public class SiteConstruction : Site
                 canvas.ChangeSelection(currentSlotPos.y, currentSlotPos.x);
             }
         } else if(currentInventory == "site"){
-            if(currentSlotPos.y < siteInventory.height - 1){
+            // LEAVE AN EXTRA SLOT FOR THE BUTTON AT THE BOTTOM
+            if(currentSlotPos.y < siteInventory.height){
                 (currentSlotPos.y)++;
                 sitePanel.ChangeSelection(currentSlotPos.y, currentSlotPos.x);
             }

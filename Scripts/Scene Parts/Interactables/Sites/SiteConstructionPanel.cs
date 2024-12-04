@@ -10,10 +10,12 @@ public class SiteConstructionPanel : MonoBehaviour
     public GameObject itemsObject;
 	
 	GameObject[,] itemSlots;
+	GameObject buttonObject;
 	
 	public float slotSize;
 	public GameObject slotPrefab;
 	public GameObject iconPrefab;
+	public GameObject buttonPrefab;
 	int numRequirements;
 	public Color defaultSlotColor;
 	public Color currentSlotColor;
@@ -83,7 +85,7 @@ public class SiteConstructionPanel : MonoBehaviour
 
 	public void AddRequirementSlot(string item, int quantity, Inventory inventory){
 		if(numRequirements == 0){
-			itemSlots = new GameObject[inventory.height, 1];
+			itemSlots = new GameObject[inventory.height + 1, 1];
 
 			// initiate selection slot
 			selectionSlot = Instantiate(slotPrefab, items, false);
@@ -102,6 +104,17 @@ public class SiteConstructionPanel : MonoBehaviour
 		icon.GetComponent<SpriteRenderer>().sprite = ItemRegistry.Instance().GetItem(item).icon;
 		icon.transform.GetChild(0).GetComponent<TMP_Text>().text = quantity.ToString();
 		icon.transform.GetChild(0).gameObject.SetActive(true);
+
+		numRequirements++;
+	}
+
+	public void AddConstructButton(){
+		buttonObject = Instantiate(buttonPrefab, items, false);
+		buttonObject.GetComponent<Transform>().localScale = new Vector3(slotSize, slotSize, 1);
+		buttonObject.transform.localPosition = new Vector3(1, -numRequirements * slotSize, 0);
+		buttonObject.name = "Button";
+		
+		itemSlots[numRequirements, 0] = buttonObject;
 
 		numRequirements++;
 	}
