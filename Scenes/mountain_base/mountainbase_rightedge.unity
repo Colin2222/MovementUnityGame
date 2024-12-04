@@ -10947,7 +10947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &8961282481656090842
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11177,6 +11177,7 @@ MonoBehaviour:
     quantity: 2
   - item: iron_rod
     quantity: 1
+  builtSitePrefabPLACEHOLDER: {fileID: 1681624965566122536, guid: 009dc98ad950b4141b8ac8105e9f410a, type: 3}
 --- !u!1 &8961282482223415794
 GameObject:
   m_ObjectHideFlags: 0

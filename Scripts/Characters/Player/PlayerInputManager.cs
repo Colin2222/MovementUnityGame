@@ -111,6 +111,13 @@ public class PlayerInputManager : MonoBehaviour
 	public void UnlockPlayer(){
 		locked = false;
 	}
+
+	public void LeaveInteraction(){
+		if(stateManager.MenuExit()){
+			UnlockPlayer();
+			inUI = false;
+		}
+	}
 	
 	private void HandleMenu(){
 		if(inUI){

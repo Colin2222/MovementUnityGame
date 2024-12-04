@@ -16,6 +16,7 @@ public class SiteConstruction : Site
     public Inventory siteInventory;
 
     public ConstructionRequirement[] requirements;
+    public GameObject builtSitePrefabPLACEHOLDER;
 
 
     // can be player or site
@@ -157,6 +158,26 @@ public class SiteConstruction : Site
     public override void MenuSelect(){
         Inventory selectedInv = currentSelection == "player" ? playerInventory : siteInventory;
         Inventory currentInv = currentInventory == "player" ? playerInventory : siteInventory;
+
+        // check if construct button is pressed
+        if(currentInventory == "site" && currentSlotPos.y == siteInventory.height){
+            bool canConstruct = true;
+            for(int i = 0; i < siteInventory.height; i++){
+                if(siteInventory.contents[i, 0] == null || siteInventory.contents[i, 0].quantity < siteInventory.maxQuantities[i, 0]){
+                    canConstruct = false;
+                    break;
+                }
+            }
+
+            if(canConstruct){
+                Instantiate(builtSitePrefabPLACEHOLDER, transform.position, Quaternion.identity);
+                siteInventory = null;
+                PlayerHub.Instance.inputManager.LeaveInteraction();
+                Destroy(gameObject);
+            }
+            return;
+        }
+
         if(inSelection){
             if(selectedInv != currentInv || selectionPos != currentSlotPos){
                 currentInv.InsertItem(selectedInv, selectionPos.x, selectionPos.y, currentSlotPos.x, currentSlotPos.y);
