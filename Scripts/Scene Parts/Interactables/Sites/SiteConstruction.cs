@@ -29,8 +29,12 @@ public class SiteConstruction : Site
     void Start(){
         siteInventory.ResetInventory(1, requirements.Length);
 
+        int i = 0;
         foreach(ConstructionRequirement req in requirements){
+            siteInventory.maxQuantities[i, 0] = req.quantity;
             sitePanel.AddRequirementSlot(req.item, req.quantity, siteInventory);
+
+            i++;
         }
     }
 
@@ -148,15 +152,14 @@ public class SiteConstruction : Site
     }
 
     public override void MenuSelect(){
+        Inventory selectedInv = currentSelection == "player" ? playerInventory : siteInventory;
+        Inventory currentInv = currentInventory == "player" ? playerInventory : siteInventory;
         if(inSelection){
-            Inventory selectedInv = currentSelection == "player" ? playerInventory : siteInventory;
-            Inventory currentInv = currentInventory == "player" ? playerInventory : siteInventory;
-
             if(selectedInv != currentInv || selectionPos != currentSlotPos){
-                selectedInv.TradeItem(currentInv, currentSlotPos.x, currentSlotPos.y, selectionPos.x, selectionPos.y);
+                currentInv.InsertItem(selectedInv, selectionPos.x, selectionPos.y, currentSlotPos.x, currentSlotPos.y);
             }
             EndSelection();
-		} else{
+		} else if (currentInv.contents[currentSlotPos.y, currentSlotPos.x] != null){
             currentSelection = currentInventory;
             selectionPos = currentSlotPos;
             inSelection = true;

@@ -5,10 +5,21 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
 	public InventoryItem[,] contents;
+	public int[,] maxQuantities;
 	public int width;
 	public int height;
 	public int id;
-    // Start is called before the first frame update
+    
+	void Awake(){
+		// initialize max quantities to 10000, default value
+		// owner sites can override this value
+		maxQuantities = new int[height, width];
+		for(int i = 0; i < height; i++){
+			for(int j = 0; j < width; j++){
+				maxQuantities[i, j] = 10000;
+			}
+		}
+	}
     void Start()
     {
 		contents = new InventoryItem[height, width];
@@ -33,6 +44,40 @@ public class Inventory : MonoBehaviour
 		contents[yThis, xThis] = otherInventory.contents[yOther, xOther];
 		otherInventory.contents[yOther, xOther] = temp;
 	}
+
+	// meant for inserting items into an empty or existing stack (of the same item of course)
+	public void InsertItem(Inventory otherInventory, int xOther, int yOther, int xThis, int yThis){
+		// check if the receiving slot is empty and TODO TODO TODO check if the slot is intended for this item
+		if(contents[yThis, xThis] != null){
+			// check if the items are the same
+			if(contents[yThis, xThis].item.id == otherInventory.contents[yOther, xOther].item.id){
+				int totalQuantity = contents[yThis, xThis].quantity + otherInventory.contents[yOther, xOther].quantity;
+				if(totalQuantity <= maxQuantities[yThis, xThis]){
+				contents[yThis, xThis] = otherInventory.contents[yOther, xOther];
+				contents[yThis, xThis].quantity = totalQuantity;
+				otherInventory.contents[yOther, xOther] = null;
+				} else{
+					contents[yThis, xThis].quantity = maxQuantities[yThis, xThis];
+					otherInventory.contents[yOther, xOther].quantity = totalQuantity - maxQuantities[yThis, xThis];
+				}
+			} else{
+				// check there would be no quantities going over maximums from swapping
+				if(!(contents[yThis, xThis].quantity > otherInventory.maxQuantities[yOther, xOther] || otherInventory.contents[yOther, xOther].quantity > maxQuantities[yThis, xThis])){
+					TradeItem(otherInventory, xOther, yOther, xThis, yThis);
+				}
+			}
+		} else{
+			int totalQuantity = otherInventory.contents[yOther, xOther].quantity;
+			if(totalQuantity <= maxQuantities[yThis, xThis]){
+				contents[yThis, xThis] = otherInventory.contents[yOther, xOther];
+				otherInventory.contents[yOther, xOther] = null;
+			} else{
+				contents[yThis, xThis] = new InventoryItem(otherInventory.contents[yOther, xOther].item, maxQuantities[yThis, xThis]);
+				otherInventory.contents[yOther, xOther].quantity = totalQuantity - maxQuantities[yThis, xThis];
+			}
+			return;
+		}
+	}
 	
 	// returns tuple of inventory coordinates to place insertion
 	// searches for existing stack of insertion item, returns empty slot if none found
@@ -56,5 +101,14 @@ public class Inventory : MonoBehaviour
 		this.width = width;
 		this.height = height;
 		contents = new InventoryItem[height, width];
+
+		// initialize max quantities to 10000, default value
+		// owner sites can override this value
+		maxQuantities = new int[height, width];
+		for(int i = 0; i < height; i++){
+			for(int j = 0; j < width; j++){
+				maxQuantities[i, j] = 10000;
+			}
+		}
 	}
 }

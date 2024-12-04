@@ -11166,7 +11166,7 @@ MonoBehaviour:
   id: 3
   type: 0
   cameraDistance: 7.5
-  cameraOffset: {x: 0, y: 2}
+  cameraOffset: {x: -2, y: 2}
   hasMenu: 1
   rangeEffect: {fileID: 8961282482223415794}
   sitePanel: {fileID: 8961282481656090846}
