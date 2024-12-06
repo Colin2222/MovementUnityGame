@@ -24,12 +24,13 @@ public class SessionManager : MonoBehaviour
 	
 	void Awake(){
 		DontDestroyOnLoad(gameObject);
+		LoadData();
 	}
 	
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -45,7 +46,7 @@ public class SessionManager : MonoBehaviour
 		
 		// parse json into cutscene object
 		saveData = JsonConvert.DeserializeObject<GameSaveData>(txtAsset.text);
-		
+
 		// done parsing json, release asset out of memory
 		Addressables.Release(operation);
 	}

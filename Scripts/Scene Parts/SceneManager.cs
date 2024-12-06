@@ -65,6 +65,8 @@ public class SceneManager : MonoBehaviour
 	public SitePrefabRegistry sitePrefabRegistry;
 	
 	public AudioClip bgAudio;
+
+	public SiteManager siteManager;
 	
     GameObject playerStateObjectTest;
     GameObject playerObjectTest;
@@ -228,5 +230,9 @@ public class SceneManager : MonoBehaviour
 	
 	public void RestartLevel(){
 		transitionManager.ExitTransition(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+	}
+
+	public SavedRoom GetCurrentRoomSave(){
+		return sessionManager.saveData.rooms[sceneName];
 	}
 }

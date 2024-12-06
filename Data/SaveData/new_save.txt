@@ -6,22 +6,21 @@
 		"first_revelation":false
 	},
 	"rooms":{
-		"room":{
-			"id":"mountainbase_rightedge1",
-			"sites":[
+		"mountainbase_rightedge1":{
+			"site_slots":[
 				{
-					"id":"1",
-					"type":"1",
+					"id":"0",
 					"display_name":"the rock outcrop just west of base camp",
-					"active":false,
-					"structure":{}
+					"site":{
+						"name":"chest"
+					}
 				},
 				{
-					"id":"2",
-					"type":"1",
+					"id":"1",
 					"display_name":"the cliff edge by the bluestone deposit just west of base camp",
-					"active":false,
-					"structure":{}
+					"site":{
+						"name":"pulleyanchor"
+					}
 				}
 			]
 		}

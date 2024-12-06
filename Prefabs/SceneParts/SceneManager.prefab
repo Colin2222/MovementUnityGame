@@ -94,6 +94,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 0}
+--- !u!1 &765340509504085644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2458010624619611469}
+  - component: {fileID: 7238369947876987365}
+  m_Layer: 0
+  m_Name: SiteManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2458010624619611469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765340509504085644}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4845049507479276211}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7238369947876987365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765340509504085644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a506b233a084dd4e932987bbbf0d6d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4845049506497319639
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +267,7 @@ Transform:
   - {fileID: 313734395}
   - {fileID: 1400514093123442446}
   - {fileID: 8206124179566576502}
+  - {fileID: 2458010624619611469}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -238,6 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb91667e9902e2b4ab33e1a7d2083539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: 
   playerSpawnTransform: {fileID: 4845049506762891137}
   profileSelectionLocation: {fileID: 0}
   levelSelectionLocation: {fileID: 0}
@@ -264,7 +310,10 @@ MonoBehaviour:
   obstacleColor: {r: 0, g: 0, b: 0, a: 0}
   backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   invertPlayerColor: 0
+  sitePrefabRegistryPrefab: {fileID: 0}
+  sitePrefabRegistry: {fileID: 0}
   bgAudio: {fileID: 0}
+  siteManager: {fileID: 7238369947876987365}
 --- !u!1 &5118703167308506579
 GameObject:
   m_ObjectHideFlags: 0

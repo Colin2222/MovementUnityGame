@@ -230,6 +230,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: wood_chest
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 1376
+        width: 43
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.84210527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c41ec48ade9ba41a1940522f9b0f3f
+      internalID: 1881503777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -244,6 +265,7 @@ TextureImporter:
       mountainbase_rightedge_5: 1751303713
       mountainbase_rightedge_1: -324171473
       mountainbase_rightedge_2: 1451103722
+      wood_chest: 1881503777
       mountainbase_rightedge_4: 1517178921
       mountainbase_rightedge_0: -908539397
       mountainbase_rightedge_3: -1482043059
