@@ -60,6 +60,9 @@ public class SceneManager : MonoBehaviour
 	public Color obstacleColor;
 	public Color backgroundColor;
 	public bool invertPlayerColor;
+
+	public GameObject sitePrefabRegistryPrefab;
+	public SitePrefabRegistry sitePrefabRegistry;
 	
 	public AudioClip bgAudio;
 	
@@ -130,6 +133,15 @@ public class SceneManager : MonoBehaviour
 		else{
             journalManager = journalManagerObjectTest.GetComponent<JournalManager>();
         }
+
+		// check if there is a DontDestroyOnLoad SitePrefabRegistry, create a new one if there isnt
+		GameObject sitePrefabRegistryTest = GameObject.FindWithTag("SitePrefabRegistry");
+		if(sitePrefabRegistryTest == null){
+			sitePrefabRegistry = Instantiate(sitePrefabRegistryPrefab,new Vector3(0,0,0),Quaternion.identity).GetComponent<SitePrefabRegistry>();
+		}
+		else{
+			sitePrefabRegistry = sitePrefabRegistryTest.GetComponent<SitePrefabRegistry>();
+		}
 		
 		player.InvertPlayerOutline(invertPlayerColor);
 	}

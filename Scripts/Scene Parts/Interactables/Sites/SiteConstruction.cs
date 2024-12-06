@@ -15,8 +15,9 @@ public class SiteConstruction : Site
     public SiteConstructionPanel sitePanel;
     public Inventory siteInventory;
 
-    public ConstructionRequirement[] requirements;
-    public GameObject builtSitePrefabPLACEHOLDER;
+    public string siteName;
+    ConstructionRequirement[] requirements;
+    GameObject constructedSitePrefab;
 
 
     // can be player or site
@@ -28,6 +29,11 @@ public class SiteConstruction : Site
     }
 
     void Start(){
+        SitePrefabRegistry registry = GameObject.FindWithTag("SitePrefabRegistry").GetComponent<SitePrefabRegistry>();
+        SitePrefabEntry entry = registry.GetEntry(siteName);
+        requirements = entry.requirements;
+        constructedSitePrefab = entry.prefab;
+
         siteInventory.ResetInventory(1, requirements.Length);
 
         int i = 0;
@@ -170,7 +176,7 @@ public class SiteConstruction : Site
             }
 
             if(canConstruct){
-                Instantiate(builtSitePrefabPLACEHOLDER, transform.position, Quaternion.identity);
+                Instantiate(constructedSitePrefab, transform.position, Quaternion.identity);
                 siteInventory = null;
                 PlayerHub.Instance.inputManager.LeaveInteraction();
                 Destroy(gameObject);
