@@ -83,6 +83,7 @@ public class SessionManager : MonoBehaviour
 		
 		// parse json into cutscene object
 		saveData = JsonConvert.DeserializeObject<GameSaveData>(freshSaveTxt.text);
+		//Debug.Log(saveData.rooms["mountainbase_rightedge1"].site_slots[1].site.inventories.Count);
 		
 		// done parsing json, release asset out of memory
 		Addressables.Release(operation);

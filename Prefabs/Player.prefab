@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fbc5e377ac558a40bb4c7f4e8e61e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 4
-  height: 4
+  width: 0
+  height: 0
   id: 0
 --- !u!1 &281777107
 GameObject:
@@ -1035,6 +1035,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
   inventory: {fileID: 4168297}
+  invWidth: 3
+  invHeight: 4
 --- !u!61 &1568975045
 BoxCollider2D:
   m_ObjectHideFlags: 0

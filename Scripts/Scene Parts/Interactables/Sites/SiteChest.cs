@@ -197,4 +197,11 @@ public class SiteChest : Site
 			}
 		}
 	}
+
+    public override void LoadSite(SavedSite savedSite){
+        Debug.Log("Loading site chest");
+        // populate inventory
+        SavedInventory inv = savedSite.inventories[0];
+        SaveDataHelperMethods.LoadInventory(siteInventory, inv);
+    }
 }

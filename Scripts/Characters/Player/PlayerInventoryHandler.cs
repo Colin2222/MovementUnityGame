@@ -7,6 +7,8 @@ public class PlayerInventoryHandler : MonoBehaviour
     public InventoryCanvasScript canvas;
 	public Inventory inventory;
 	//[Header("0=Item, 1=Gem, 2=Cassette")]
+	public int invWidth = 4;
+	public int invHeight = 4;
 	(int x, int y) currentSlotPos;
 	(int x, int y) selectionPos;
 	bool inSelection = false;
@@ -14,7 +16,10 @@ public class PlayerInventoryHandler : MonoBehaviour
 	
 	List<WorldItem> reachableItems;
 	
-	// Start is called before the first frame update
+	void Awake(){
+		inventory.ResetInventory(invWidth, invHeight);
+	}
+
     void Start()
     {
 		

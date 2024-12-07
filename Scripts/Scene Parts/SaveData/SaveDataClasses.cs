@@ -13,6 +13,8 @@ public class GameSaveData{
 [System.Serializable]
 public class SavedSite{
 	public string name;
+	public List<SavedInventory> inventories;
+	public Dictionary<string, string> additional_data;
 }
 
 // the "slot" in the game world that the player can build things on
@@ -26,4 +28,17 @@ public class SavedSiteSlot{
 [System.Serializable]
 public class SavedRoom{
 	public List<SavedSiteSlot> site_slots;
+}
+
+[System.Serializable]
+public class SavedInventoryItem{
+	public string item_name;
+	public int quantity;
+}
+
+[System.Serializable]
+public class SavedInventory{
+	public int width;
+	public int height;
+	public SavedInventoryItem[] contents;
 }

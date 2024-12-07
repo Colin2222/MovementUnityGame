@@ -12,14 +12,41 @@
 					"id":"0",
 					"display_name":"the rock outcrop just west of base camp",
 					"site":{
-						"name":"chest"
+						"name":"construction",
+						"inventories":[
+							{
+								"width":1,
+								"height":2,
+								"contents": [{"item_name":"wood_log", "quantity":2}, {"item_name":"iron_rod", "quantity":1}]
+							}
+						],
+						"additional_data":{
+							"site_construction":"pulleyanchor"
+						}
 					}
 				},
 				{
 					"id":"1",
 					"display_name":"the cliff edge by the bluestone deposit just west of base camp",
 					"site":{
-						"name":"pulleyanchor"
+						"name":"pulleyanchor",
+						"inventories":[],
+						"additional_data":{}
+					}
+				},
+				{
+					"id":"2",
+					"display_name":"the bottom of the ascent to the west of base camp",
+					"site":{
+						"name":"chest",
+						"inventories":[
+							{
+								"width":3,
+								"height":4,
+								"contents": [{"item_name":"wood_log", "quantity":1}, {"item_name":"iron_rod", "quantity":1}, null, null, null, null, null, null, null, null, null, null, ]
+							}
+						],
+						"additional_data":{}
 					}
 				}
 			]

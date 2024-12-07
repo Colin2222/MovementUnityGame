@@ -38,7 +38,9 @@ public class SiteManager : MonoBehaviour
         SitePrefabRegistry registry = sceneManager.sitePrefabRegistry;
         foreach(SavedSiteSlot slot in savedSlots){
             if(slot.site.name != "none"){
-                Instantiate(registry.GetPrefab(slot.site.name), siteSlots[slot.id].transform.position, Quaternion.identity);
+                GameObject siteObj = Instantiate(registry.GetPrefab(slot.site.name), siteSlots[slot.id].transform.position, Quaternion.identity, siteSlots[slot.id].transform);
+                Site site = siteObj.GetComponent<Site>();
+                site.LoadSite(slot.site);
             }
         }
     }

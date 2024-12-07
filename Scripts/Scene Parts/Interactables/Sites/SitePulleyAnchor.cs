@@ -39,4 +39,8 @@ public class SitePulleyAnchor : Site
     public override void MenuSelect(){
         
     }
+
+    public override void LoadSite(SavedSite savedSite){
+        
+    }
 }

@@ -12,19 +12,11 @@ public class Inventory : MonoBehaviour
 	public int id;
     
 	void Awake(){
-		// initialize max quantities to 10000, default value
-		// owner sites can override this value
-		maxQuantities = new int[height, width];
-		for(int i = 0; i < height; i++){
-			for(int j = 0; j < width; j++){
-				maxQuantities[i, j] = 10000;
-			}
-		}
-		slotTypes = new string[height, width];
+		
 	}
     void Start()
     {
-		contents = new InventoryItem[height, width];
+		//contents = new InventoryItem[height, width];
     }
 
     public void AddItem(Item insertion, int quantity){
@@ -120,5 +112,6 @@ public class Inventory : MonoBehaviour
 				maxQuantities[i, j] = 10000;
 			}
 		}
+		slotTypes = new string[height, width];
 	}
 }

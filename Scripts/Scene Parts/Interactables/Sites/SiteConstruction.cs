@@ -29,22 +29,7 @@ public class SiteConstruction : Site
     }
 
     void Start(){
-        SitePrefabRegistry registry = GameObject.FindWithTag("SitePrefabRegistry").GetComponent<SitePrefabRegistry>();
-        SitePrefabEntry entry = registry.GetEntry(siteName);
-        requirements = entry.requirements;
-        constructedSitePrefab = entry.prefab;
-
-        siteInventory.ResetInventory(1, requirements.Length);
-
-        int i = 0;
-        foreach(ConstructionRequirement req in requirements){
-            siteInventory.maxQuantities[i, 0] = req.quantity;
-            siteInventory.slotTypes[i, 0] = req.item;
-            sitePanel.AddRequirementSlot(req.item, req.quantity, siteInventory);
-
-            i++;
-        }
-        sitePanel.AddConstructButton();
+        
     }
 
     protected override void EnterRange(){
@@ -205,6 +190,7 @@ public class SiteConstruction : Site
 		for(int i = 0; i < siteInventory.height; i++){
 			for(int j = 0; j < siteInventory.width; j++){
 				if(siteInventory.contents[i, j] != null){
+                    Debug.Log("Updating icon: " + siteInventory.contents[i, j].item.id);
 					sitePanel.SetIcon(i, j, siteInventory.contents[i, j].item.icon, siteInventory.contents[i, j].quantity);
 				} else{
 					sitePanel.SetIcon(i, j, null, 0);
@@ -219,6 +205,37 @@ public class SiteConstruction : Site
         sitePanel.EndSelection();
         canvas.EndSelection();
         inSelection = false;
+    }
+
+    public override void LoadSite(SavedSite savedSite){
+        Debug.Log("Loading site construction");
+        // set construction target site
+        siteName = savedSite.additional_data["site_construction"];
+
+        // populate inventory
+        SavedInventory inv = savedSite.inventories[0];
+        SaveDataHelperMethods.LoadInventory(siteInventory, inv);
+
+        Debug.Log("Site construction inventory: " + siteInventory.contents[0, 0].item.id);
+        Debug.Log("Site construction inventory: " + siteInventory.contents[1, 0].item.id);
+
+        // populate requirements
+        SitePrefabRegistry registry = GameObject.FindWithTag("SitePrefabRegistry").GetComponent<SitePrefabRegistry>();
+        SitePrefabEntry entry = registry.GetEntry(siteName);
+        requirements = entry.requirements;
+        constructedSitePrefab = entry.prefab;
+        int i = 0;
+        foreach(ConstructionRequirement req in requirements){
+            siteInventory.maxQuantities[i, 0] = req.quantity;
+            siteInventory.slotTypes[i, 0] = req.item;
+            sitePanel.AddRequirementSlot(req.item, req.quantity, siteInventory);
+
+            i++;
+        }
+        sitePanel.AddConstructButton();
+
+        Debug.Log("Site construction inventory: " + siteInventory.contents[0, 0].item.id);
+        Debug.Log("Site construction inventory: " + siteInventory.contents[1, 0].item.id);
     }
 }
 

@@ -46,4 +46,5 @@ public abstract class Site : Interactable
     abstract public void MenuLeft();
     abstract public void MenuRight();
     abstract public void MenuSelect();
+    abstract public void LoadSite(SavedSite savedSite);
 }

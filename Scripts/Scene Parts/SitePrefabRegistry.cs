@@ -13,7 +13,6 @@ public class SitePrefabRegistry : MonoBehaviour
         foreach(SitePrefabEntry entry in sitePrefabEntries){
             sitePrefabs.Add(entry.id, entry);
         }
-        Debug.Log(sitePrefabs.Count);
     }
 	
 	public SitePrefabEntry GetEntry(string key){
