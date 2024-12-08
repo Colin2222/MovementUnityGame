@@ -325,6 +325,7 @@ public class PlayerInputManager : MonoBehaviour
 	}
 	
 	private void OnSaveData(){
+		GameObject.FindWithTag("SessionManager").GetComponent<SessionManager>().SetCurrentRoom();
 		GameObject.FindWithTag("SessionManager").GetComponent<SessionManager>().SaveData();
 		Debug.Log("DATA SAVED");
 	}

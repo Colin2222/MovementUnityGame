@@ -109,6 +109,9 @@ public class SiteChest : Site
             } else{
                 currentInventory = "player";
                 sitePanel.ChangeSelection(-1, -1);
+                if(currentSlotPos.y >= playerInventory.height){
+                    currentSlotPos.y = playerInventory.height - 1;
+                }
                 canvas.ChangeSelection(currentSlotPos.y, playerInventory.width - 1);
                 currentSlotPos.x = playerInventory.width - 1;
             }
@@ -123,6 +126,9 @@ public class SiteChest : Site
             } else{
                 currentInventory = "site";
                 canvas.ChangeSelection(-1, -1);
+                if(currentSlotPos.y >= siteInventory.height){
+                    currentSlotPos.y = siteInventory.height - 1;
+                }
                 sitePanel.ChangeSelection(currentSlotPos.y, 0);
                 currentSlotPos.x = 0;
             }
@@ -135,55 +141,32 @@ public class SiteChest : Site
     }
 
     public override void MenuSelect(){
+        Inventory selectedInv = currentSelection == "player" ? playerInventory : siteInventory;
+        Inventory currentInv = currentInventory == "player" ? playerInventory : siteInventory;
+        
         if(inSelection){
-            if(currentInventory == "player"){
-                if(selectionPos == currentSlotPos && currentSelection == "player"){
-                    inSelection = false;
-                    canvas.EndSelection();
-			    } else{
-                    if(currentSelection == "site"){
-                        Debug.Log("Trading item site to player");
-                        playerInventory.TradeItem(siteInventory, selectionPos.x, selectionPos.y, currentSlotPos.x, currentSlotPos.y);
-                    } else{
-                        playerInventory.SwapItem(selectionPos.x, selectionPos.y, currentSlotPos.x, currentSlotPos.y);
-                    }
-                    UpdateIcons();
-                    PlayerHub.Instance.inventoryHandler.UpdateIcons();
-                    canvas.EndSelection();
-                    sitePanel.EndSelection();
-                    inSelection = false;
-                }
-			} else if (currentInventory == "site"){
-                if(selectionPos == currentSlotPos && currentSelection == "site"){
-                    inSelection = false;
-                    sitePanel.EndSelection();
-                } else{
-                    if(currentSelection == "player"){
-                        Debug.Log("Trading item player to site");
-                        siteInventory.TradeItem(playerInventory, selectionPos.x, selectionPos.y, currentSlotPos.x, currentSlotPos.y);
-                    } else{
-                        siteInventory.SwapItem(selectionPos.x, selectionPos.y, currentSlotPos.x, currentSlotPos.y);
-                    }
-                    UpdateIcons();
-                    PlayerHub.Instance.inventoryHandler.UpdateIcons();
-                    sitePanel.EndSelection();
-                    canvas.EndSelection();
-                    inSelection = false;
-                }
+            if(selectedInv != currentInv || selectionPos != currentSlotPos){
+                currentInv.InsertItem(selectedInv, selectionPos.x, selectionPos.y, currentSlotPos.x, currentSlotPos.y);
             }
-		} else{
+            EndSelection();
+		} else if (currentInv.contents[currentSlotPos.y, currentSlotPos.x] != null){
+            currentSelection = currentInventory;
+            selectionPos = currentSlotPos;
+            inSelection = true;
             if(currentInventory == "site"){
-                currentSelection = "site";
-                selectionPos = currentSlotPos;
                 sitePanel.StartSelection(currentSlotPos.y, currentSlotPos.x);
-                inSelection = true;
             } else if(currentInventory == "player"){
-                currentSelection = "player";
-                selectionPos = currentSlotPos;
                 canvas.StartSelection(currentSlotPos.y, currentSlotPos.x);
-                inSelection = true;
             }
 		}
+    }
+
+    void EndSelection(){
+        UpdateIcons();
+        PlayerHub.Instance.inventoryHandler.UpdateIcons();
+        sitePanel.EndSelection();
+        canvas.EndSelection();
+        inSelection = false;
     }
 
     public void UpdateIcons(){
@@ -199,9 +182,17 @@ public class SiteChest : Site
 	}
 
     public override void LoadSite(SavedSite savedSite){
-        Debug.Log("Loading site chest");
         // populate inventory
         SavedInventory inv = savedSite.inventories[0];
         SaveDataHelperMethods.LoadInventory(siteInventory, inv);
+    }
+
+    public override SavedSite SaveSite(){
+        SavedSite savedSite = new SavedSite();
+        savedSite.name = "chest";
+        savedSite.additional_data = new Dictionary<string, string>();
+        savedSite.inventories = new List<SavedInventory>();
+        savedSite.inventories.Add(siteInventory.SaveInventory());
+        return savedSite;
     }
 }

@@ -10,7 +10,7 @@
       "site_slots": [
         {
           "id": 0,
-          "display_name": "the rock outcrop just west of base camp",
+          "display_name": null,
           "site": {
             "name": "construction",
             "inventories": [
@@ -36,7 +36,7 @@
         },
         {
           "id": 1,
-          "display_name": "the cliff edge by the bluestone deposit just west of base camp",
+          "display_name": null,
           "site": {
             "name": "pulleyanchor",
             "inventories": [],
@@ -45,7 +45,7 @@
         },
         {
           "id": 2,
-          "display_name": "the bottom of the ascent to the west of base camp",
+          "display_name": null,
           "site": {
             "name": "chest",
             "inventories": [
@@ -57,17 +57,17 @@
                     "item_name": "wood_log",
                     "quantity": 1
                   },
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
                   {
                     "item_name": "iron_rod",
                     "quantity": 1
                   },
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
                   null,
                   null,
                   null

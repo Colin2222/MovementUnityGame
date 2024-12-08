@@ -43,4 +43,12 @@ public class SitePulleyAnchor : Site
     public override void LoadSite(SavedSite savedSite){
         
     }
+
+    public override SavedSite SaveSite(){
+        SavedSite savedSite = new SavedSite();
+        savedSite.name = "pulleyanchor";
+        savedSite.additional_data = new Dictionary<string, string>();
+        savedSite.inventories = new List<SavedInventory>();
+        return savedSite;
+    }
 }

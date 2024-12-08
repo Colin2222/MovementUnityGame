@@ -43,7 +43,7 @@
 							{
 								"width":3,
 								"height":4,
-								"contents": [{"item_name":"wood_log", "quantity":1}, {"item_name":"iron_rod", "quantity":1}, null, null, null, null, null, null, null, null, null, null, ]
+								"contents": [{"item_name":"wood_log", "quantity":1}, null, null, null, null, null, null, null, {"item_name":"iron_rod", "quantity":1}, null, null, null, ]
 							}
 						],
 						"additional_data":{}

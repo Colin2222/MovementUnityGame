@@ -190,7 +190,6 @@ public class SiteConstruction : Site
 		for(int i = 0; i < siteInventory.height; i++){
 			for(int j = 0; j < siteInventory.width; j++){
 				if(siteInventory.contents[i, j] != null){
-                    Debug.Log("Updating icon: " + siteInventory.contents[i, j].item.id);
 					sitePanel.SetIcon(i, j, siteInventory.contents[i, j].item.icon, siteInventory.contents[i, j].quantity);
 				} else{
 					sitePanel.SetIcon(i, j, null, 0);
@@ -208,16 +207,12 @@ public class SiteConstruction : Site
     }
 
     public override void LoadSite(SavedSite savedSite){
-        Debug.Log("Loading site construction");
         // set construction target site
         siteName = savedSite.additional_data["site_construction"];
 
         // populate inventory
         SavedInventory inv = savedSite.inventories[0];
         SaveDataHelperMethods.LoadInventory(siteInventory, inv);
-
-        Debug.Log("Site construction inventory: " + siteInventory.contents[0, 0].item.id);
-        Debug.Log("Site construction inventory: " + siteInventory.contents[1, 0].item.id);
 
         // populate requirements
         SitePrefabRegistry registry = GameObject.FindWithTag("SitePrefabRegistry").GetComponent<SitePrefabRegistry>();
@@ -233,9 +228,16 @@ public class SiteConstruction : Site
             i++;
         }
         sitePanel.AddConstructButton();
+    }
 
-        Debug.Log("Site construction inventory: " + siteInventory.contents[0, 0].item.id);
-        Debug.Log("Site construction inventory: " + siteInventory.contents[1, 0].item.id);
+    public override SavedSite SaveSite(){
+        SavedSite savedSite = new SavedSite();
+        savedSite.name = "construction";
+        savedSite.additional_data = new Dictionary<string, string>();
+        savedSite.additional_data.Add("site_construction", siteName);
+        savedSite.inventories = new List<SavedInventory>();
+        savedSite.inventories.Add(siteInventory.SaveInventory());
+        return savedSite;
     }
 }
 

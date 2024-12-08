@@ -34,6 +34,11 @@ public class SavedRoom{
 public class SavedInventoryItem{
 	public string item_name;
 	public int quantity;
+
+	public SavedInventoryItem(string item_name, int quantity){
+		this.item_name = item_name;
+		this.quantity = quantity;
+	}
 }
 
 [System.Serializable]

@@ -114,4 +114,19 @@ public class Inventory : MonoBehaviour
 		}
 		slotTypes = new string[height, width];
 	}
+
+	public SavedInventory SaveInventory(){
+		SavedInventory savedInventory = new SavedInventory();
+		savedInventory.width = width;
+		savedInventory.height = height;
+		savedInventory.contents = new SavedInventoryItem[width * height];
+		int i = 0;
+		foreach(InventoryItem invItem in contents){
+			if(invItem != null){
+				savedInventory.contents[i] = new SavedInventoryItem(invItem.item.id, invItem.quantity);
+			}
+			i++;
+		}
+		return savedInventory;
+	}
 }

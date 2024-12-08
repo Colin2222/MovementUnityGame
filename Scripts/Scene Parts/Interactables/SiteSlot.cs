@@ -4,18 +4,12 @@ using UnityEngine;
 
 public class SiteSlot : MonoBehaviour
 {
-    [System.NonSerialized]
-    public Site site;
     public int id;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    [System.NonSerialized]
+    public string display_name;
+
+    public Site GetSite(){
+        return GetComponentInChildren<Site>();
     }
 }

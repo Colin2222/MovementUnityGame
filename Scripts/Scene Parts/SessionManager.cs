@@ -75,6 +75,10 @@ public class SessionManager : MonoBehaviour
 	public void SetData(string dataKey, bool dataValue){
 		saveData.progress_markers[dataKey] = dataValue;
 	}
+
+	public void SetCurrentRoom(){
+		saveData.rooms[sceneManager.sceneName] = sceneManager.siteManager.SaveSites();
+	}
 	
 	public void CreateNewSave(){
 		// load in json of fresh save into TextAsset

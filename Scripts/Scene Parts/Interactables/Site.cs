@@ -34,9 +34,6 @@ public abstract class Site : Interactable
 
     void Start(){
         inventories = new Dictionary<string, Inventory>();
-
-        // read the json file
-
     }
 
     abstract protected void EnterRange();
@@ -47,4 +44,5 @@ public abstract class Site : Interactable
     abstract public void MenuRight();
     abstract public void MenuSelect();
     abstract public void LoadSite(SavedSite savedSite);
+    abstract public SavedSite SaveSite();
 }

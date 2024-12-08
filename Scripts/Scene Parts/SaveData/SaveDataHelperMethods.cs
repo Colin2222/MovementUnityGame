@@ -9,7 +9,6 @@ public class SaveDataHelperMethods
         int i = 0;
         foreach (SavedInventoryItem item in savedInventory.contents){
             if(item != null && item.quantity > 0){
-                Debug.Log(" Y: " + (int)(i / savedInventory.width) + "X: " + (i % savedInventory.width));
                 inventory.contents[(int)(i / savedInventory.width), (i % savedInventory.width)] = new InventoryItem(ItemRegistry.Instance().GetItem(item.item_name), item.quantity);
             }
             i++;

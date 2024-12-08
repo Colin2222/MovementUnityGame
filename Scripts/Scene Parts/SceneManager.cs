@@ -101,7 +101,7 @@ public class SceneManager : MonoBehaviour
         }
 		sessionManager.UpdateSceneManager(this);
 		sessionManager.CreateNewSave();
-		sessionManager.SaveData();
+		sessionManager.LoadData();
 		
 		// check if there is a DontDestroyOnLoad player, create a new one if there isnt
         playerObjectTest = GameObject.FindWithTag("Player");
