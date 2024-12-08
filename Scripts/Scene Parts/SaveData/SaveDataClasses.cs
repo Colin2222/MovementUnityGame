@@ -28,6 +28,8 @@ public class SavedSiteSlot{
 [System.Serializable]
 public class SavedRoom{
 	public List<SavedSiteSlot> site_slots;
+	public List<SavedWorldItem> world_items;
+
 }
 
 [System.Serializable]
@@ -46,4 +48,11 @@ public class SavedInventory{
 	public int width;
 	public int height;
 	public SavedInventoryItem[] contents;
+}
+
+[System.Serializable]
+public class SavedWorldItem{
+	public string item_id;
+	public float x_pos;
+	public float y_pos;
 }

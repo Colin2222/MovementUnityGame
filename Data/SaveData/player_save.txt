@@ -77,6 +77,33 @@
             "additional_data": {}
           }
         }
+      ],
+      "world_items": [
+        {
+          "item_id": "iron_rod",
+          "x_pos": -76.61,
+          "y_pos": 17.26486
+        },
+        {
+          "item_id": "wood_log",
+          "x_pos": -91.93998,
+          "y_pos": 5.264734
+        },
+        {
+          "item_id": "wood_log",
+          "x_pos": -85.36727,
+          "y_pos": 4.0150466
+        },
+        {
+          "item_id": "iron_rod",
+          "x_pos": -80.2,
+          "y_pos": 7.26485825
+        },
+        {
+          "item_id": "wood_log",
+          "x_pos": -89.5,
+          "y_pos": 4.0150466
+        }
       ]
     }
   }
