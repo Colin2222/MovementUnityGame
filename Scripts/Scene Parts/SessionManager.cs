@@ -84,6 +84,10 @@ public class SessionManager : MonoBehaviour
 		saveData.rooms[sceneManager.sceneName].world_items = sceneManager.itemManager.GetWorldItems();
 	}
 
+	public void SetPlayerInventory(SavedInventory inventory){
+		saveData.player_inventory = inventory;
+	}
+
 	public void LoadRoomItems(){
 		List<SavedWorldItem> items = saveData.rooms[sceneManager.sceneName].world_items;
 		sceneManager.itemManager.LoadWorldItems(items);

@@ -17,7 +17,7 @@ public class PlayerInventoryHandler : MonoBehaviour
 	List<WorldItem> reachableItems;
 	
 	void Awake(){
-		inventory.ResetInventory(invWidth, invHeight);
+		SaveDataHelperMethods.LoadInventory(inventory, SceneManager.Instance.sessionManager.saveData.player_inventory);
 	}
 
     void Start()

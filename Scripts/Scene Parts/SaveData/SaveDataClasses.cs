@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameSaveData{
 	public Dictionary<string, bool> progress_markers;
 	public Dictionary<string, SavedRoom> rooms;
+	public SavedInventory player_inventory;
 }
 
 // the sometimes interactable objects that the player can build on sites

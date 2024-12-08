@@ -198,7 +198,7 @@ public class SceneManager : MonoBehaviour
 		
 		//cutsceneManager.LoadCutscene("room_0_c0");
 		//cutsceneManager.PlayCutscene(1);
-
+		
 		player.inventoryHandler.SceneSwitchReset();
     }
 	

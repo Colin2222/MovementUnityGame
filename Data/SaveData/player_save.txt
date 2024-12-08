@@ -80,14 +80,9 @@
       ],
       "world_items": [
         {
-          "item_id": "iron_rod",
-          "x_pos": -76.61,
-          "y_pos": 17.26486
-        },
-        {
           "item_id": "wood_log",
           "x_pos": -91.93998,
-          "y_pos": 5.264734
+          "y_pos": 5.26499748
         },
         {
           "item_id": "wood_log",
@@ -97,7 +92,7 @@
         {
           "item_id": "iron_rod",
           "x_pos": -80.2,
-          "y_pos": 7.26485825
+          "y_pos": 7.26499748
         },
         {
           "item_id": "wood_log",
@@ -106,5 +101,30 @@
         }
       ]
     }
+  },
+  "player_inventory": {
+    "width": 4,
+    "height": 4,
+    "contents": [
+      {
+        "item_name": "iron_rod",
+        "quantity": 1
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   }
 }
