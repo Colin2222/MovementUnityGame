@@ -24,12 +24,13 @@ public class SessionManager : MonoBehaviour
 	
 	void Awake(){
 		DontDestroyOnLoad(gameObject);
+		LoadData();
 	}
 	
     // Start is called before the first frame update
     void Start()
     {
-
+		
     }
 
     // Update is called once per frame
@@ -45,7 +46,7 @@ public class SessionManager : MonoBehaviour
 		
 		// parse json into cutscene object
 		saveData = JsonConvert.DeserializeObject<GameSaveData>(txtAsset.text);
-		//Debug.Log(saveData.rooms["mountainbase_rightedge1"].site_slots.Count);
+		//Debug.Log(saveData.rooms["guidestone_cave"].site_slots);
 
 		// done parsing json, release asset out of memory
 		Addressables.Release(operation);
@@ -86,11 +87,6 @@ public class SessionManager : MonoBehaviour
 
 	public void SetPlayerInventory(SavedInventory inventory){
 		saveData.player_inventory = inventory;
-	}
-
-	public void LoadRoomItems(){
-		List<SavedWorldItem> items = saveData.rooms[sceneManager.sceneName].world_items;
-		sceneManager.itemManager.LoadWorldItems(items);
 	}
 	
 	public void CreateNewSave(){

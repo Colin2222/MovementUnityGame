@@ -119,6 +119,12 @@ public class PlayerStateManager : MonoBehaviour
 		}
 	}
 
+	public void MenuDrop(){
+		if(currentState is IMenuState){
+			((IMenuState)currentState).MenuDrop();
+		}
+	}
+
 	// returns true if the menu is exited successfully
 	public bool MenuExit(){
 		if(currentState is IMenuState){

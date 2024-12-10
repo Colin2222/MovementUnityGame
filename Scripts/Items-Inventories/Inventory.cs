@@ -39,6 +39,13 @@ public class Inventory : MonoBehaviour
 		otherInventory.contents[yOther, xOther] = temp;
 	}
 
+	public void RemoveItem(int x, int y, int quantity){
+		contents[y, x].quantity -= quantity;
+		if(contents[y, x].quantity <= 0){
+			contents[y, x] = null;
+		}
+	}
+
 	// meant for inserting items into an empty or existing stack (of the same item of course)
 	public void InsertItem(Inventory otherInventory, int xOther, int yOther, int xThis, int yThis){
 		// check if the receiving slot is compatible with the item being inserted

@@ -110,6 +110,10 @@ public class PStateInteracting : PState, IMenuState
 		site.MenuSelect();
 	}
 
+	public void MenuDrop(){
+		
+	}
+
 	public PState MenuExit(){
         site.LeaveInteraction();
 

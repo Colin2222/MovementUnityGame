@@ -137,7 +137,7 @@ public class PlayerInputManager : MonoBehaviour
 				stateManager.MenuSelect();
 			}
 			if(menuDropJustPressed){
-				//stateManager.MenuDrop();
+				stateManager.MenuDrop();
 			}
 			if(menuExitJustPressed){
 				if(stateManager.MenuExit()){

@@ -101,8 +101,6 @@ public class SceneManager : MonoBehaviour
             sessionManager = sessionManagerTest.GetComponent<SessionManager>();
         }
 		sessionManager.UpdateSceneManager(this);
-		//sessionManager.CreateNewSave();
-		sessionManager.LoadData();
 		
 		// check if there is a DontDestroyOnLoad player, create a new one if there isnt
         playerObjectTest = GameObject.FindWithTag("Player");
@@ -198,7 +196,7 @@ public class SceneManager : MonoBehaviour
 		
 		//cutsceneManager.LoadCutscene("room_0_c0");
 		//cutsceneManager.PlayCutscene(1);
-		
+
 		player.inventoryHandler.SceneSwitchReset();
     }
 	
@@ -219,6 +217,11 @@ public class SceneManager : MonoBehaviour
     // loads the scene of the inputted build index with delay 
     public IEnumerator SwitchScenes(int buildIndex)
     {
+		sessionManager.SetCurrentRoom();
+		sessionManager.SetRoomItems();
+		sessionManager.SetPlayerInventory(player.inventoryHandler.inventory.SaveInventory());
+		//sessionManager.SaveData();
+
 		Debug.Log("SWITCHING SCENES");
 		
         yield return new WaitForSeconds(transitionTime);

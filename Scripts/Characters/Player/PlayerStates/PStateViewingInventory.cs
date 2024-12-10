@@ -93,7 +93,7 @@ public class PStateViewingInventory : PState, IMenuState
 	}
 
 	public void MenuDrop(){
-		
+		inventoryHandler.DropCurrentItem();
 	}
 
 	public PState MenuExit(){

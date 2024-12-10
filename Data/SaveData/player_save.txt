@@ -6,6 +6,32 @@
     "first_revelation": false
   },
   "rooms": {
+    "basecamp": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "basecamp_river": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "earlycave_exit": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "earlycave_river": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "guidestone_cave": {
+      "site_slots": [],
+      "world_items": [
+        {
+          "item_id": "iron_rod",
+          "x_pos": -75.62621,
+          "y_pos": 86.38996
+        }
+      ]
+    },
     "mountainbase_rightedge1": {
       "site_slots": [
         {
@@ -106,11 +132,11 @@
     "width": 4,
     "height": 4,
     "contents": [
+      null,
       {
-        "item_name": "iron_rod",
+        "item_name": "wood_log",
         "quantity": 1
       },
-      null,
       null,
       null,
       null,

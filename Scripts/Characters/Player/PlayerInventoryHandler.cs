@@ -9,6 +9,8 @@ public class PlayerInventoryHandler : MonoBehaviour
 	//[Header("0=Item, 1=Gem, 2=Cassette")]
 	public int invWidth = 4;
 	public int invHeight = 4;
+
+	public GameObject itemPrefab;
 	(int x, int y) currentSlotPos;
 	(int x, int y) selectionPos;
 	bool inSelection = false;
@@ -22,7 +24,7 @@ public class PlayerInventoryHandler : MonoBehaviour
 
     void Start()
     {
-		
+
     }
 
     // Update is called once per frame
@@ -111,6 +113,16 @@ public class PlayerInventoryHandler : MonoBehaviour
 			reachableItems.RemoveAt(0);
 			Destroy(pickup.gameObject);
 			inventory.AddItem(pickupItem, 1);
+			UpdateIcons();
+		}
+	}
+
+	public void DropCurrentItem(){
+		if(inventory.contents[currentSlotPos.y, currentSlotPos.x] != null){
+			Item dropItem = inventory.contents[currentSlotPos.y, currentSlotPos.x].item;
+			inventory.RemoveItem(currentSlotPos.x, currentSlotPos.y, 1);
+			WorldItem droppedItem = Instantiate(itemPrefab, transform.position, Quaternion.identity).GetComponent<WorldItem>();
+			droppedItem.item_id = dropItem.id;
 			UpdateIcons();
 		}
 	}

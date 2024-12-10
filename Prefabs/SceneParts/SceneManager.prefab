@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a506b233a084dd4e932987bbbf0d6d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneManager: {fileID: 0}
+  sceneManager: {fileID: 4845049507479276210}
 --- !u!1 &4845049506497319639
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,7 +358,7 @@ MonoBehaviour:
   obstacleColor: {r: 0, g: 0, b: 0, a: 0}
   backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   invertPlayerColor: 0
-  sitePrefabRegistryPrefab: {fileID: 0}
+  sitePrefabRegistryPrefab: {fileID: 8148355940044835786, guid: e7bc6f0034ee8bd489eb3a6db1635a17, type: 3}
   sitePrefabRegistry: {fileID: 0}
   bgAudio: {fileID: 0}
   siteManager: {fileID: 7238369947876987365}

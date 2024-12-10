@@ -1037,6 +1037,7 @@ MonoBehaviour:
   inventory: {fileID: 4168297}
   invWidth: 3
   invHeight: 4
+  itemPrefab: {fileID: 4896596533424298757, guid: 01d3b84925fab564f9c4388039322bcc, type: 3}
 --- !u!61 &1568975045
 BoxCollider2D:
   m_ObjectHideFlags: 0
