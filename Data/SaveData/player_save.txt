@@ -24,13 +24,7 @@
     },
     "guidestone_cave": {
       "site_slots": [],
-      "world_items": [
-        {
-          "item_id": "iron_rod",
-          "x_pos": -75.62621,
-          "y_pos": 86.38996
-        }
-      ]
+      "world_items": []
     },
     "mountainbase_rightedge1": {
       "site_slots": [
@@ -112,18 +106,18 @@
         },
         {
           "item_id": "wood_log",
-          "x_pos": -85.36727,
+          "x_pos": -89.5,
           "y_pos": 4.0150466
-        },
-        {
-          "item_id": "iron_rod",
-          "x_pos": -80.2,
-          "y_pos": 7.26499748
         },
         {
           "item_id": "wood_log",
-          "x_pos": -89.5,
-          "y_pos": 4.0150466
+          "x_pos": -73.0816956,
+          "y_pos": 4.01499748
+        },
+        {
+          "item_id": "iron_rod",
+          "x_pos": -76.701355,
+          "y_pos": 17.2647686
         }
       ]
     }
@@ -132,9 +126,12 @@
     "width": 4,
     "height": 4,
     "contents": [
-      null,
       {
         "item_name": "wood_log",
+        "quantity": 1
+      },
+      {
+        "item_name": "iron_rod",
         "quantity": 1
       },
       null,

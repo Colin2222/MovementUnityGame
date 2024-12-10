@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceLocations;
@@ -41,6 +42,9 @@ public class SessionManager : MonoBehaviour
 	
 	public void LoadData(){
 		// load in json of player's save into TextAsset
+		Addressables.ClearDependencyCacheAsync(addressHeader + currentPlayerName + "_save.txt");
+		Caching.ClearCache();
+		AssetDatabase.Refresh();
 		var operation = Addressables.LoadAssetAsync<TextAsset>(addressHeader + currentPlayerName + "_save.txt");
 		TextAsset txtAsset = operation.WaitForCompletion();
 		
