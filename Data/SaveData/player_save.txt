@@ -110,14 +110,9 @@
           "y_pos": 4.0150466
         },
         {
-          "item_id": "wood_log",
-          "x_pos": -73.0816956,
-          "y_pos": 4.01499748
-        },
-        {
           "item_id": "iron_rod",
           "x_pos": -76.701355,
-          "y_pos": 17.2647686
+          "y_pos": 17.26499
         }
       ]
     }
@@ -128,7 +123,7 @@
     "contents": [
       {
         "item_name": "wood_log",
-        "quantity": 1
+        "quantity": 2
       },
       {
         "item_name": "iron_rod",
