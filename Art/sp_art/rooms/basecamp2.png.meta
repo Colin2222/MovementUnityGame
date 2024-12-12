@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fdfce4eba0613134a9753a697ffbeb47
+guid: 657de53699bdd7247840c4fd55a79aeb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,112 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: basecamp1_0
-      rect:
-        serializedVersion: 2
-        x: 1027
-        y: 1084
-        width: 107
-        height: 107
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88b528b5aa5250743a593d025a7b4923
-      internalID: 1294795392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: basecamp1_1
-      rect:
-        serializedVersion: 2
-        x: 92
-        y: 875
-        width: 1549
-        height: 176
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec59cfc415d19d54898f151c722276cc
-      internalID: 1858714400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: basecamp1_2
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 674
-        width: 1520
-        height: 191
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94728413408d8864b8a0ddc8bc28c40a
-      internalID: -1131653835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: basecamp1_3
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 461
-        width: 1577
-        height: 198
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5de4ad6c921988418ebf43f4dac0baf
-      internalID: 1555367098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: basecamp1_4
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 136
-        width: 1631
-        height: 260
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f8f76afea239d740a70d90ad36476c8
-      internalID: -1909433872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -219,12 +114,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      basecamp1_1: 1858714400
-      basecamp1_3: 1555367098
-      basecamp1_4: -1909433872
-      basecamp1_0: 1294795392
-      basecamp1_2: -1131653835
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
