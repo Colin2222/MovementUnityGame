@@ -6,6 +6,26 @@
     "first_revelation": false
   },
   "rooms": {
+    "basecamp": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "basecamp_river": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "earlycave_exit": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "earlycave_river": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "guidestone_cave": {
+      "site_slots": [],
+      "world_items": []
+    },
     "mountainbase_rightedge1": {
       "site_slots": [
         {
@@ -80,31 +100,73 @@
       ],
       "world_items": [
         {
-          "item_id": "iron_rod",
-          "x_pos": -76.61,
-          "y_pos": 17.26486
-        },
-        {
           "item_id": "wood_log",
           "x_pos": -91.93998,
-          "y_pos": 5.264734
-        },
-        {
-          "item_id": "wood_log",
-          "x_pos": -85.36727,
-          "y_pos": 4.0150466
-        },
-        {
-          "item_id": "iron_rod",
-          "x_pos": -80.2,
-          "y_pos": 7.26485825
+          "y_pos": 5.26499748
         },
         {
           "item_id": "wood_log",
           "x_pos": -89.5,
           "y_pos": 4.0150466
+        },
+        {
+          "item_id": "iron_rod",
+          "x_pos": -76.701355,
+          "y_pos": 17.26499
         }
       ]
+    },
+    "mountainbase_cave1": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "mountainbase_mid1": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "mountainbase_minicave1": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "mountainbase_right1": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "mountainbase_right2": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "mountainbase_right3": {
+      "site_slots": [],
+      "world_items": []
     }
+  },
+  "player_inventory": {
+    "width": 4,
+    "height": 4,
+    "contents": [
+      {
+        "item_name": "wood_log",
+        "quantity": 2
+      },
+      {
+        "item_name": "iron_rod",
+        "quantity": 1
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   }
 }

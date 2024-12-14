@@ -115,6 +115,30 @@
           "y_pos": 17.26499
         }
       ]
+    },
+    "mountainbase_cave1": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "mountainbase_mid1": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "mountainbase_minicave1": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "mountainbase_right1": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "mountainbase_right2": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "mountainbase_right3": {
+      "site_slots": [],
+      "world_items": []
     }
   },
   "player_inventory": {

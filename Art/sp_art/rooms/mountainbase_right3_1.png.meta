@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fdfce4eba0613134a9753a697ffbeb47
+guid: 2adbfca2938159740beeabb6ccc653ca
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: basecamp1_0
+      name: mountainbase_right3_1_0
       rect:
         serializedVersion: 2
-        x: 1027
-        y: 1084
-        width: 107
-        height: 107
+        x: 4
+        y: 1385
+        width: 534
+        height: 659
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88b528b5aa5250743a593d025a7b4923
-      internalID: 1294795392
+      spriteID: f5fbb6fd03fbb6742b59e32da65e8847
+      internalID: 1213162587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basecamp1_1
+      name: mountainbase_right3_1_2
       rect:
         serializedVersion: 2
-        x: 92
-        y: 875
-        width: 1549
-        height: 176
+        x: 556
+        y: 1382
+        width: 554
+        height: 664
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec59cfc415d19d54898f151c722276cc
-      internalID: 1858714400
+      spriteID: 9b8ca77d7ce2c654288a0eef358d9521
+      internalID: -289750389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basecamp1_2
+      name: mountainbase_right3_1_4
       rect:
         serializedVersion: 2
-        x: 116
-        y: 674
-        width: 1520
-        height: 191
+        x: 1119
+        y: 1373
+        width: 568
+        height: 672
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94728413408d8864b8a0ddc8bc28c40a
-      internalID: -1131653835
+      spriteID: 6fea462e81dc5be488c2566af14db3e4
+      internalID: 1466580337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basecamp1_3
+      name: mountainbase_right3_1_8
       rect:
         serializedVersion: 2
-        x: 113
-        y: 461
-        width: 1577
-        height: 198
+        x: 0
+        y: 346
+        width: 726
+        height: 957
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5de4ad6c921988418ebf43f4dac0baf
-      internalID: 1555367098
+      spriteID: 112e517014042b1438e7b7ec490f7d0f
+      internalID: 1749270327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basecamp1_4
+      name: mountainbase_right3_1_10
       rect:
         serializedVersion: 2
-        x: 80
-        y: 136
-        width: 1631
-        height: 260
+        x: 766
+        y: 810
+        width: 318
+        height: 520
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f8f76afea239d740a70d90ad36476c8
-      internalID: -1909433872
+      spriteID: 79f546f63fd8ab446b962909f35aba6e
+      internalID: -1749629239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basecamp1_5
+      name: mountainbase_right3_1_11
       rect:
         serializedVersion: 2
-        x: 1182
-        y: 1095
-        width: 50
-        height: 58
+        x: 789
+        y: 232
+        width: 973
+        height: 529
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d988185fc6d13c046a61b168501c6030
-      internalID: -1413288882
+      spriteID: a5f7960e4c92f0c4c9cb772eadddbc6b
+      internalID: -315927296
       vertices: []
       indices: 
       edges: []
@@ -241,12 +241,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      basecamp1_1: 1858714400
-      basecamp1_3: 1555367098
-      basecamp1_5: -1413288882
-      basecamp1_4: -1909433872
-      basecamp1_0: 1294795392
-      basecamp1_2: -1131653835
+      mountainbase_right3_1_8: 1749270327
+      mountainbase_right3_1_4: 1466580337
+      mountainbase_right3_1_7: -67683822
+      mountainbase_right3_1_11: -315927296
+      mountainbase_right3_1_0: 1213162587
+      mountainbase_right3_1_6: 1347072254
+      mountainbase_right3_1_2: -289750389
+      mountainbase_right3_1_3: 1237730247
+      mountainbase_right3_1_5: -1579001358
+      mountainbase_right3_1_9: -1107128477
+      mountainbase_right3_1_10: -1749629239
+      mountainbase_right3_1_1: -1387991396
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

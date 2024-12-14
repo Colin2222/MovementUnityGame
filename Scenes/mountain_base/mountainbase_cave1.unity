@@ -1849,6 +1849,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4845049507479276210, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: sceneName
+      value: mountainbase_cave1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845049507479276210, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: profileText
       value: 
       objectReference: {fileID: 650399297}
