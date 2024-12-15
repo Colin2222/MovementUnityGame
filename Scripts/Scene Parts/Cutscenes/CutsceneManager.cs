@@ -20,7 +20,9 @@ public class CutsceneManager : MonoBehaviour
 	public CinemachineVirtualCamera vcam;
 	
 	[System.NonSerialized]
-	public bool inCutscene;
+	public bool inCutscene = false;
+	[System.NonSerialized]
+	public bool playerLocked = false;
 	
 	Cutscene currentCutscene;
 	int currentTaskIndex;
@@ -75,6 +77,7 @@ public class CutsceneManager : MonoBehaviour
 			// check for end of cutscene
 			if(cutsceneTimer >= cutsceneDuration){
 				sceneManager.player.UnlockPlayer();
+				sceneManager.player.inputManager.ExitCutscene();
 				inCutscene = false;
 				currentCutscene.active = false;
 				SwitchCameraAnchor(sceneManager.player.gameObject.transform);
@@ -136,10 +139,18 @@ public class CutsceneManager : MonoBehaviour
 		currentTask = currentCutscene.tasks[0];
 		cutsceneDuration = currentCutscene.duration;
 		inCutscene = true; 
-		sceneManager.player.LockPlayer();
+
+		playerLocked = currentCutscene.lock_player;
+		if(playerLocked){
+			sceneManager.player.stateManager.ResetPlayer();
+			sceneManager.player.inputManager.EnterCutscene();
+			sceneManager.player.LockPlayer();
+		}
 	}
 	
 	public void SwitchCameraAnchor(Transform anchor){
-		vcam.m_Follow = anchor;
+		if(vcam != null){
+			vcam.m_Follow = anchor;
+		}
 	}
 }

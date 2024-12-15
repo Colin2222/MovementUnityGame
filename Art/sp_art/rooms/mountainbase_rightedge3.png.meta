@@ -109,9 +109,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 958
-        width: 1564
-        height: 1085
+        y: 847
+        width: 1927
+        height: 1196
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,8 +129,8 @@ TextureImporter:
       name: mountainbase_rightedge3_1
       rect:
         serializedVersion: 2
-        x: 191
-        y: 116
+        x: 289
+        y: 0
         width: 1358
         height: 820
       alignment: 6

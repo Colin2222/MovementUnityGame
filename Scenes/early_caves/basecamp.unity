@@ -482,9 +482,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1812058587
-  m_SortingLayer: 1
-  m_SortingOrder: 10
+  m_SortingLayerID: 571857765
+  m_SortingLayer: 3
+  m_SortingOrder: -1
   m_Sprite: {fileID: 1294795392, guid: fdfce4eba0613134a9753a697ffbeb47, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1821,7 +1821,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 571857765
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1413288882, guid: fdfce4eba0613134a9753a697ffbeb47, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2214,6 +2214,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7944780749396800460, guid: 6ae1ee2c8d6de2146bd7d4f016369428, type: 3}
+      propertyPath: m_LookaheadTime
+      value: 0.888
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944780749396800460, guid: 6ae1ee2c8d6de2146bd7d4f016369428, type: 3}
+      propertyPath: m_LookaheadSmoothing
+      value: 10.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7944780750038520283, guid: 6ae1ee2c8d6de2146bd7d4f016369428, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
@@ -2722,7 +2730,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736714530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -123.1, y: 36.99, z: 75}
+  m_LocalPosition: {x: -142.2, y: 40.3, z: 75}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3094,11 +3102,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377485290462935866, guid: ba5fd7263e1040c4aad0663da2ab8e7d, type: 3}
       propertyPath: entranceNumber
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7377485290462935866, guid: ba5fd7263e1040c4aad0663da2ab8e7d, type: 3}
       propertyPath: transitionBuildIndex
-      value: 18
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7377485290462935867, guid: ba5fd7263e1040c4aad0663da2ab8e7d, type: 3}
       propertyPath: m_RootOrder

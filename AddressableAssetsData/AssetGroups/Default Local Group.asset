@@ -69,6 +69,18 @@ MonoBehaviour:
     m_Address: Assets/Data/Items/ItemIcons/wood_log.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7630c27878a3bb842b79513f0e4480dd
+    m_Address: Assets/Data/Cutscenes/tutorialpanels_1.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f08876a1118a83f429f65c7c08590e14
+    m_Address: Assets/Data/Cutscenes/tutorialpanels_2.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 782e73d731f14ab4f9463424faf0809d
+    m_Address: Assets/Data/Cutscenes/tutorialpanels_3.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:

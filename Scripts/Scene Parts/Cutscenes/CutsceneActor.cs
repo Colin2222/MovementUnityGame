@@ -19,6 +19,7 @@ public class CutsceneActor : MonoBehaviour
 	public string defaultAnim;
 	[System.NonSerialized]
 	public CutsceneManager cutsceneManager;
+	public bool isPlayer;
 	
 	// Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class CutsceneActor : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-		if(cutsceneManager.inCutscene && rb != null){
+		if(cutsceneManager.inCutscene && (cutsceneManager.playerLocked || !isPlayer) && rb != null){
 			if(movingToTarget){
 				if((targetDirection == 1 && rb.transform.position.x > targetX) || (targetDirection == -1 && rb.transform.position.x < targetX)){
 					cutsceneVelocity = new Vector2(0.0f, cutsceneVelocity.y);

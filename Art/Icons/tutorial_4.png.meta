@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9a14dfe54c035b8459fef21304ef6f6b
+guid: 211847c81fb651f478606ebd4cb785d0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,91 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: earlycave_exit_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 802
-        width: 751
-        height: 698
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0a3810ebf7fd674e85bedcf883ea0b6
-      internalID: 1099477939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: earlycave_exit_1
-      rect:
-        serializedVersion: 2
-        x: 809
-        y: 984
-        width: 684
-        height: 474
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cddc73feb521dd6459142ba8ee8ab84c
-      internalID: -1608878232
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: earlycave_exit_2
-      rect:
-        serializedVersion: 2
-        x: 819
-        y: 222
-        width: 1028
-        height: 669
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91bbc129f3acb2a489fe67adf0935f2c
-      internalID: -2138321107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: earlycave_exit_3
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 453
-        width: 757
-        height: 328
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3e1ba819933b0e4babdc0191c91b1fc
-      internalID: -1337704192
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -198,11 +114,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      earlycave_exit_3: -1337704192
-      earlycave_exit_0: 1099477939
-      earlycave_exit_1: -1608878232
-      earlycave_exit_2: -2138321107
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

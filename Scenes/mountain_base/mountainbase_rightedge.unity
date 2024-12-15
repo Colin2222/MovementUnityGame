@@ -2621,7 +2621,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -76.24076, y: 29.63826, z: -10}
+  m_LocalPosition: {x: -77.66868, y: 29.67718, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3030,7 +3030,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562052225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -149.6875, y: -11.25, z: -1.3}
+  m_LocalPosition: {x: -148.75, y: -10.5, z: -1.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4916,12 +4916,13 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 4.1116714, y: 31.557205}
-      - {x: -47.134087, y: 29.366634}
-      - {x: -47.020836, y: 14.186031}
-      - {x: -22.891281, y: -1.5488281}
+      - {x: -34.55636, y: 28.050365}
+      - {x: -34.443108, y: 14.332287}
+      - {x: -23.915054, y: 2.5462456}
+      - {x: -17.132507, y: -3.4437828}
       - {x: -0.68123764, y: -21.834618}
-      - {x: 36.409042, y: -21.743519}
-      - {x: 36.40904, y: 6.753723}
+      - {x: 35.531532, y: -21.743519}
+      - {x: 34.946507, y: 6.753723}
 --- !u!1 &903879962
 GameObject:
   m_ObjectHideFlags: 0
@@ -5063,7 +5064,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: -5
   m_Sprite: {fileID: -1119344761, guid: 2e787cdef45a99343b39339384bb1d40, type: 3}
-  m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5081,8 +5082,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921743927}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -180.9, y: -37.5, z: 15}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: -352.5, y: -97.8, z: 75}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -9492,27 +9493,30 @@ CompositeCollider2D:
     m_ColliderPaths:
     - - X: 41116716
         Y: 315572064
-      - X: -471340864
-        Y: 293666336
-      - X: -470208352
-        Y: 141860320
-      - X: -228912816
-        Y: -15488281
+      - X: -345563584
+        Y: 280503648
+      - X: -344431072
+        Y: 143322864
+      - X: -239150544
+        Y: 25462456
+      - X: -171325072
+        Y: -34437828
       - X: -6812376
         Y: -218346176
-      - X: 364090432
+      - X: 355315328
         Y: -217435184
-      - X: 364090400
+      - X: 349465056
         Y: 67537232
   m_CompositePaths:
     m_Paths:
-    - - {x: -0.6812452, y: -21.834612}
-      - {x: 36.409042, y: -21.74349}
-      - {x: 36.40903, y: 6.7537313}
-      - {x: 4.1116624, y: 31.557207}
-      - {x: -47.134087, y: 29.366606}
-      - {x: -47.020824, y: 14.186024}
-      - {x: -22.891281, y: -1.5488299}
+    - - {x: -0.6812454, y: -21.834608}
+      - {x: 35.531532, y: -21.743488}
+      - {x: 34.946495, y: 6.7537313}
+      - {x: 4.1116614, y: 31.557207}
+      - {x: -34.55636, y: 28.050339}
+      - {x: -34.4431, y: 14.332278}
+      - {x: -23.915052, y: 2.5462449}
+      - {x: -17.132505, y: -3.443784}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1814887289

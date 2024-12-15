@@ -15,6 +15,9 @@ public class PlayerInputManager : MonoBehaviour
 	
 	// in ui
 	bool inUI = false;
+
+	// in cutscene
+	bool inCutscene = false;
 	
 	// joystick movement
 	float horizontal;
@@ -110,6 +113,14 @@ public class PlayerInputManager : MonoBehaviour
 	
 	public void UnlockPlayer(){
 		locked = false;
+	}
+
+	public void EnterCutscene(){
+		inCutscene = true;
+	}
+
+	public void ExitCutscene(){
+		inCutscene = false;
 	}
 
 	public void LeaveInteraction(){
@@ -314,10 +325,10 @@ public class PlayerInputManager : MonoBehaviour
 		toggleInventoryJustPressed = toggleInventoryPressed;
 		
 		if(toggleInventoryJustPressed){
-			if(stateManager.ToggleInventory()){
+			if(!inCutscene && stateManager.ToggleInventory()){
 				LockPlayer();
 				inUI = true;
-			} else{
+			} else if(inUI){
 				UnlockPlayer();
 				inUI = false;
 			}

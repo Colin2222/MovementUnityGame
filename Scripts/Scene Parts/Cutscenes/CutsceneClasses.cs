@@ -4,6 +4,7 @@ using System.Collections.Generic;
 [System.Serializable]
 public class Cutscene{
     public int id;
+	public bool lock_player;
 	public float duration;
 	public CutsceneTask[] tasks;
 	public bool active;

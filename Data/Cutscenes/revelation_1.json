@@ -1,5 +1,6 @@
 {
 	"id":1,
+	"lock_player":true,
 	"duration":7.5,
 	"tasks":[
 		{
@@ -38,6 +39,6 @@
 					]
 				}
 			]
-		},
+		}
 	]
 }

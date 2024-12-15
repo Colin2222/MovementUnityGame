@@ -23,6 +23,10 @@ public class PlayerStateManager : MonoBehaviour
 	void FixedUpdate(){
 		currentState = currentState.FixedUpdate();
 	}
+
+	public void ResetPlayer(){
+		currentState = new PStateIdle();
+	}
 	
 	public void Move(float horizontal, float vertical){
 		currentState = currentState.Move(horizontal, vertical);
