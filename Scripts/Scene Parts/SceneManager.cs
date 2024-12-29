@@ -110,7 +110,9 @@ public class SceneManager : MonoBehaviour
         else{
             player = playerObjectTest.GetComponent<PlayerHub>();
         }
-		vcam.m_Follow = player.transform;
+		if(vcam != null){
+			vcam.m_Follow = player.transform;
+		}
 		sessionManager.UpdatePlayer(player);
 		
 		// check if there is a DontDestroyOnLoad profile manager, create a new one if there isnt
