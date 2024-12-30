@@ -25,7 +25,7 @@ public class PStateCornerClimbingDown : PState
     public override PState Update(){
 		cornerClimbTimer -= Time.deltaTime;
 		if(cornerClimbTimer <= 0){
-			return new PStateCornerGrabbing();
+			return new PStateCornerGrabbing(0.0f);
 		}
 		return this;
 	}

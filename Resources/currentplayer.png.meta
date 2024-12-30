@@ -4556,6 +4556,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: currentplayer_212
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072c3c31b1b0ac7478ffe18d0212f7cc
+      internalID: -293193816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_213
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0c0319152038543aaecc38f0c4a642
+      internalID: 1996317676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_214
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1546d324c07a80b4d8781158f92cc959
+      internalID: -50822257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_215
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2395f246202d64085ac00d026f6d6d
+      internalID: 1249721547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -4682,6 +4766,7 @@ TextureImporter:
       currentplayer_39: -1759662416
       currentplayer_76: -2060556978
       currentplayer_142: -1706684134
+      currentplayer_212: -293193816
       currentplayer_52: -1156451195
       currentplayer_196: -819096385
       currentplayer_89: -1718551309
@@ -4694,6 +4779,7 @@ TextureImporter:
       currentplayer_195: -1269078079
       currentplayer_140: -415112697
       currentplayer_86: -1639988153
+      currentplayer_214: -50822257
       currentplayer_3: 97599936
       currentplayer_162: 863623604
       currentplayer_113: 394137728
@@ -4725,6 +4811,7 @@ TextureImporter:
       currentplayer_74: -1568829587
       currentplayer_133: 2134626873
       currentplayer_135: -1163384418
+      currentplayer_213: 1996317676
       currentplayer_68: 1644779578
       currentplayer_139: -981638114
       currentplayer_23: 977802219
@@ -4762,6 +4849,7 @@ TextureImporter:
       currentplayer_56: 635880349
       currentplayer_202: -1360227242
       currentplayer_84: -1865194137
+      currentplayer_215: 1249721547
       currentplayer_118: -1730871743
       currentplayer_137: -897269475
       currentplayer_55: -882603801

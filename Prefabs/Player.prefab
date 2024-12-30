@@ -142,6 +142,7 @@ MonoBehaviour:
     gravityScale: 0
     cornerMantleTime: 0
     cornerClimbTime: 0
+    cornerGrabbingSpeedThreshold: 0
     cornerClimbVertJoystickThreshold: 0
     cornerTripSpeedLoss: 0
     cornerTripTime: 0
@@ -1294,6 +1295,37 @@ MonoBehaviour:
   smallCornerCheckVerticalOffset: 1.1
   smallCornerCheckHorizontalOffset: 0.05
   smallCornerCheckDistance: 0.5
+--- !u!1 &2259952265169312102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3752873277975775910}
+  m_Layer: 7
+  m_Name: MiddleMiddleCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3752873277975775910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2259952265169312102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.12, y: -0.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6829769312154430461}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2484774714578880240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,7 +1557,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6829769312154430461}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4669667201958783841
 GameObject:
@@ -1665,6 +1697,7 @@ MonoBehaviour:
     gravityScale: 2.5
     cornerMantleTime: 0.5833333
     cornerClimbTime: 0.9166667
+    cornerGrabbingSpeedThreshold: 3.5
     cornerClimbVertJoystickThreshold: 0.9
     cornerTripSpeedLoss: 0.9
     cornerTripTime: 0
@@ -2049,6 +2082,7 @@ Transform:
   - {fileID: 6327753572648725871}
   - {fileID: 2818190872178831460}
   - {fileID: 2137636211071038183}
+  - {fileID: 3752873277975775910}
   - {fileID: 5244994258030628890}
   - {fileID: 8835491423660843104}
   - {fileID: 8345548934992822580}
@@ -2072,6 +2106,7 @@ MonoBehaviour:
   distanceToWall: 0.27
   headCheck: {fileID: 6327753572648725871}
   middleUpperCheck: {fileID: 2137636211071038183}
+  middleMiddleCheck: {fileID: 3752873277975775910}
   middleLowerCheck: {fileID: 5244994258030628890}
   feetCheck: {fileID: 8345548934992822580}
   faceplantCheck: {fileID: 8835491423660843104}
@@ -2208,7 +2243,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6829769312154430461}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7668887041606926689
 GameObject:
@@ -2270,7 +2305,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6829769312154430461}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7993737416862948930
 GameObject:

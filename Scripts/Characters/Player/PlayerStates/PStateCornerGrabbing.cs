@@ -8,7 +8,7 @@ public class PStateCornerGrabbing : PState
 	float horizontal;
 	float vertical;
 
-    public PStateCornerGrabbing(){
+    public PStateCornerGrabbing(float airSpeed){
 		CornerHandler cornerHandler = player.cornerHandler;
 		rigidbody.gravityScale = 0f;
 		rigidbody.velocity = new Vector2(0f,0f);
@@ -20,7 +20,11 @@ public class PStateCornerGrabbing : PState
 		
 		player.transform.position = new Vector3(cornerHandler.corner.position.x + (cornerHandler.cornerOffsetX * cornerDir), cornerHandler.corner.position.y - cornerHandler.cornerOffsetY, 0);
 		player.soundInterface.PlayCornerGrab();
-		player.animator.Play("PlayerCornerGrabbing");
+		if(airSpeed > attr.cornerGrabbingSpeedThreshold && !physics.frontCheck.IsMiddleContact(cornerDir)){
+			player.animator.Play("PlayerCornerGrabbingSwinging");
+		} else{
+			player.animator.Play("PlayerCornerGrabbing");
+		}
 	}
 	
     public override PState Update(){

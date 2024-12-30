@@ -9,9 +9,13 @@ public class FrontCheck : MonoBehaviour
 	public float distanceToWall;
 	LayerMask mask;
 	Collision2D lastFrontCollision;
+
+	[System.NonSerialized]
+	public WallCollisionInfo lastWallCollisionInfo;
 	
 	public Transform headCheck;
 	public Transform middleUpperCheck;
+	public Transform middleMiddleCheck;
 	public Transform middleLowerCheck;
 	public Transform feetCheck;
 	public Transform faceplantCheck;
@@ -27,6 +31,7 @@ public class FrontCheck : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision){
 		RaycastHit2D hitFeet = Physics2D.Raycast(feetCheck.position, Vector2.right * Mathf.Sign(-collision.relativeVelocity.x), distanceToWall, mask);
 		RaycastHit2D hitUpperMiddle = Physics2D.Raycast(middleUpperCheck.position, Vector2.right * Mathf.Sign(-collision.relativeVelocity.x), distanceToWall, mask);
+		RaycastHit2D hitMiddleMiddle = Physics2D.Raycast(middleMiddleCheck.position, Vector2.right * Mathf.Sign(-collision.relativeVelocity.x), distanceToWall, mask);
 		RaycastHit2D hitLowerMiddle = Physics2D.Raycast(middleLowerCheck.position, Vector2.right * Mathf.Sign(-collision.relativeVelocity.x), distanceToWall, mask);
 		RaycastHit2D hitHead = Physics2D.Raycast(headCheck.position, Vector2.right * Mathf.Sign(-collision.relativeVelocity.x), distanceToWall, mask);
 		RaycastHit2D hitFaceplant = Physics2D.Raycast(faceplantCheck.position, Vector2.right * Mathf.Sign(-collision.relativeVelocity.x), distanceToWall, mask);
@@ -36,7 +41,9 @@ public class FrontCheck : MonoBehaviour
 			Vector2 normal = collision.GetContact(0).normal;
 			if(normal.x != 0.0f){
 				lastFrontCollision = collision;
-				parentPhysics.stateManager.HitWall(new Vector2(collision.relativeVelocity.x, collision.relativeVelocity.y), new WallCollisionInfo(hitHead.collider != null, hitUpperMiddle.collider != null, hitLowerMiddle.collider != null, hitFeet.collider != null, hitFaceplant.collider != null, hitLowerHead.collider != null));
+				WallCollisionInfo collInfo = new WallCollisionInfo(hitHead.collider != null, hitUpperMiddle.collider != null, hitMiddleMiddle.collider != null, hitLowerMiddle.collider != null, hitFeet.collider != null, hitFaceplant.collider != null, hitLowerHead.collider != null);
+				lastWallCollisionInfo = collInfo;
+				parentPhysics.stateManager.HitWall(new Vector2(collision.relativeVelocity.x, collision.relativeVelocity.y), collInfo);
 			}
 			/*
 			if(!parentPhysics.isWalled && false){
@@ -67,6 +74,11 @@ public class FrontCheck : MonoBehaviour
 		RaycastHit2D hitLowerMiddle = Physics2D.Raycast(middleLowerCheck.position, Vector2.right * -direction, distanceToWall, mask);
 		return hitLowerMiddle.collider != null;
 	}
+
+	public bool IsMiddleContact(int direction){		
+		RaycastHit2D hitMiddleMiddle = Physics2D.Raycast(middleMiddleCheck.position, Vector2.right * -direction, distanceToWall, mask);
+		return hitMiddleMiddle.collider != null;
+	}
 	
 	public void SwitchHitboxes(int hitboxType){
 		switch(hitboxType){
@@ -85,14 +97,16 @@ public class FrontCheck : MonoBehaviour
 public class WallCollisionInfo{
 	public bool touchHead;
 	public bool touchUpperMiddle;
+	public bool touchMiddleMiddle;
 	public bool touchLowerMiddle;
 	public bool touchFeet;
 	public bool touchFaceplant;
 	public bool touchLowerHead;
 
-	public WallCollisionInfo(bool head, bool upperMiddle, bool lowerMiddle, bool feet, bool faceplant, bool lowerHead){
+	public WallCollisionInfo(bool head, bool upperMiddle, bool middleMiddle, bool lowerMiddle, bool feet, bool faceplant, bool lowerHead){
 		this.touchHead = head;
 		this.touchUpperMiddle = upperMiddle;
+		this.touchMiddleMiddle = middleMiddle;
 		this.touchLowerMiddle = lowerMiddle;
 		this.touchFeet = feet;
 		this.touchFaceplant = faceplant;

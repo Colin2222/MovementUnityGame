@@ -4959,8 +4959,8 @@ AudioEchoFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
-  m_Delay: 300
-  m_DecayRatio: 0.15
+  m_Delay: 450
+  m_DecayRatio: 0.18
   m_WetMix: 0.05
   m_DryMix: 0.75
 --- !u!114 &519420035

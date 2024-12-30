@@ -74,7 +74,7 @@ public class PStateWallBracing : PState
 		if(player.cornerHandler.mantleCorner != null){
 			return new PStateCornerMantling();
 		} else if(player.cornerHandler.corner != null){
-			return new PStateCornerGrabbing();
+			return new PStateCornerGrabbing(Mathf.Abs(lastAirSpeed) - Mathf.Clamp(rigidbody.velocity.y, -100f, 0.0f));
 		}
 		return this;
 	}
