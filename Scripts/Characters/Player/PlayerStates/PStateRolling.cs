@@ -51,6 +51,7 @@ public class PStateRolling : PState
 				}
 				rigidbody.velocity = new Vector2(attr.runningJumpSpeed * jumpDir, 0);
 				rigidbody.AddForce(new Vector2(0,attr.jumpForce), ForceMode2D.Impulse);
+				player.soundInterface.PlayStillJump();
 				player.animator.Play("PlayerJumpingRunning");
 				return new PStateSoaring();
 			} else{
@@ -119,6 +120,7 @@ public class PStateRolling : PState
 			}
 			rigidbody.velocity = new Vector2(attr.runningJumpSpeed * jumpDir, 0);
 			rigidbody.AddForce(new Vector2(0,attr.jumpForce), ForceMode2D.Impulse);
+			player.soundInterface.PlayStillJump();
 			player.animator.Play("PlayerJumpingRunning");
 			return new PStateSoaring();
 		}

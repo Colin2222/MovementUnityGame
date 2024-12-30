@@ -62,6 +62,7 @@ public class PStateMoving : PState
 		if(Mathf.Abs(rigidbody.velocity.x) > attr.runningJumpSpeed){
 			rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
 			rigidbody.AddForce(new Vector2(0,attr.jumpForce), ForceMode2D.Impulse);
+			player.soundInterface.PlayStillJump();
 			player.animator.Play("PlayerJumpingRunning");
 			return new PStateSoaring();
 		} else{

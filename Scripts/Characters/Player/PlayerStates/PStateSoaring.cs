@@ -30,6 +30,9 @@ public class PStateSoaring : PState
 		if(hitSpeedY > attr.groundHitSpeedRollThreshold){
 			return new PStateRollEntering();
 		} else if(hitSpeedY > attr.groundHitSpeedRollMin && inputManager.bracing){
+			if(hitSpeedY > attr.groundHitSpeedRollThreshold){
+				player.soundInterface.PlayStillJumpLand();
+			}
 			return new PStateRolling(hitSpeedX, hitSpeedY);
 		}
 		timeSinceLastGroundHit = 0.0f;
@@ -53,6 +56,7 @@ public class PStateSoaring : PState
 		if(coyoteTimer > 0.0f){
 			rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
 			rigidbody.AddForce(new Vector2(0,attr.jumpForce), ForceMode2D.Impulse);
+			player.soundInterface.PlayStillJump();
 			player.animator.Play("PlayerJumpingRunning");
 			return new PStateSoaring();
 		}
