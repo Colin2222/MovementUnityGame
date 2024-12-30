@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class PStateSoaring : PState
 {
+	float coyoteTimer = 0.0f;
+
     public PStateSoaring(){
 		
 	}
+
+	public PStateSoaring(float coyoteTime){
+		coyoteTimer = coyoteTime;
+	}
 	
     public override PState Update(){
+		if(coyoteTimer > 0.0f){
+			coyoteTimer -= Time.deltaTime;
+		}
 		return this;
 	}
 	
@@ -41,6 +50,12 @@ public class PStateSoaring : PState
 	}
 	
 	public override PState PressJump(){
+		if(coyoteTimer > 0.0f){
+			rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
+			rigidbody.AddForce(new Vector2(0,attr.jumpForce), ForceMode2D.Impulse);
+			player.animator.Play("PlayerJumpingRunning");
+			return new PStateSoaring();
+		}
 		return this;
 	}
 	

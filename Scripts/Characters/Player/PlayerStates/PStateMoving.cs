@@ -97,6 +97,9 @@ public class PStateMoving : PState
 	
 	public override PState LeaveGround(){
 		player.animator.Play("PlayerSoaringStill");
+		if(Mathf.Abs(rigidbody.velocity.x) > attr.runningJumpSpeed){
+			return new PStateSoaring(attr.runningJumpCoyoteTime);
+		}
 		return new PStateSoaring();
 	}
 	

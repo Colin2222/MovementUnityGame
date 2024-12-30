@@ -130,6 +130,7 @@ MonoBehaviour:
     slideForceMultiplier: 0
     slideStopSpeedTarget: 0
     runningJumpSpeed: 0
+    runningJumpCoyoteTime: 0
     jumpBraceTime: 0
     maxStillJumpAngleFromYAxis: 0
     stillJumpLaunchTime: 0
@@ -1652,6 +1653,7 @@ MonoBehaviour:
     slideForceMultiplier: 0.5
     slideStopSpeedTarget: 1
     runningJumpSpeed: 5.75
+    runningJumpCoyoteTime: 0.1
     jumpBraceTime: 0.5
     maxStillJumpAngleFromYAxis: 0.7
     stillJumpLaunchTime: 0.08
