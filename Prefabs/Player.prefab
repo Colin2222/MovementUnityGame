@@ -712,7 +712,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 041c25ac61a8ca044962a120c74f7d3c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.389
   m_Pitch: 0.87
   Loop: 0
@@ -808,7 +808,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 29ccc7108d5d79247bff54989d8f4968, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.232
   m_Pitch: 1
   Loop: 0
@@ -1190,7 +1190,7 @@ MonoBehaviour:
   cornerClimbOffsetX: 0.24
   cornerClimbOffsetY: 0.8
   cornerEndClimbOffsetX: 0.24
-  cornerEndClimbOffsetY: 0.8
+  cornerEndClimbOffsetY: 1
   mantleClimbOffsetX: 0.25
   mantleClimbOffsetY: 0
   footHandler: {fileID: 337670249509167978}
