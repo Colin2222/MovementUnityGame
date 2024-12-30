@@ -85,6 +85,10 @@ MonoBehaviour:
     m_Address: Assets/Data/Cutscenes/tutorialpanels_4.json
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e586502c80a13e844883b5d2f5226d75
+    m_Address: Assets/Art/NPCs/blacksmith.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:
