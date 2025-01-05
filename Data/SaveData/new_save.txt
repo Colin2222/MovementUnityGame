@@ -1,5 +1,9 @@
 {
   "progress_markers": {
+    "tutorial_1_viewed": false,
+    "tutorial_2_viewed": false,
+    "tutorial_3_viewed": false,
+    "tutorial_4_viewed": false,
     "started_game": true,
     "halfway_done": false,
     "finished_game": false,

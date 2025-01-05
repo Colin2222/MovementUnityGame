@@ -316,6 +316,7 @@ Transform:
   - {fileID: 8206124179566576502}
   - {fileID: 2458010624619611469}
   - {fileID: 3584058970222366302}
+  - {fileID: 7742234726561147950}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -363,6 +364,7 @@ MonoBehaviour:
   bgAudio: {fileID: 0}
   siteManager: {fileID: 7238369947876987365}
   itemManager: {fileID: 1496377342219492773}
+  dialogueManager: {fileID: 3052486192322220350}
 --- !u!1 &5118703167308506579
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +411,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vcam: {fileID: 0}
   sceneManager: {fileID: 4845049507479276210}
+--- !u!1 &5832255010354565303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7742234726561147950}
+  - component: {fileID: 3052486192322220350}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: DialogueManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7742234726561147950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5832255010354565303}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4845049507479276211}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3052486192322220350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5832255010354565303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f03f3d1ca29e746aace19825f2d5bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 0}
+  nameText: {fileID: 0}
+  dialogueImage: {fileID: 0}
+  nameImage: {fileID: 0}
 --- !u!1 &7220019229819489586
 GameObject:
   m_ObjectHideFlags: 0

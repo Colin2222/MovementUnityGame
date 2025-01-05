@@ -45,4 +45,29 @@ public class ProfileSelectionInteractable : Interactable
 	public void SetCustomization(List<(int, int)> customizationData, CustomizerColorPalette colorManager){
 		previewer.SyncCustomizationData(customizationData, colorManager);
 	}
+
+	public override void MenuUp()
+    {
+        
+    }
+
+    public override void MenuDown()
+    {
+        
+    }
+
+    public override void MenuLeft()
+    {
+        
+    }
+
+    public override void MenuRight()
+    {
+        
+    }
+
+    public override void MenuSelect()
+    {
+        
+    }
 }

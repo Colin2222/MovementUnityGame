@@ -85,7 +85,7 @@ public class PStateIdle : PState
 
 	public override PState Interact(){
 		Interactable result = interactor.Interact();
-		if(result != null && result is Site && ((Site)result).hasMenu){
+		if(result != null && (result is Site && ((Site)result).hasMenu) || (result is NPCInteractable && ((NPCInteractable)result).hasDialogue)){
 			return new PStateInteracting(result);
 		}
 		return this;

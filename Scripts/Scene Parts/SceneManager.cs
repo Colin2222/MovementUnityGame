@@ -68,6 +68,7 @@ public class SceneManager : MonoBehaviour
 
 	public SiteManager siteManager;
 	public ItemManager itemManager;
+	public DialogueManager dialogueManager;
 	
     GameObject playerStateObjectTest;
     GameObject playerObjectTest;

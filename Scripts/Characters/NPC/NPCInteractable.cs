@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomizerInteractable : Interactable
+public class NPCInteractable : Interactable
 {
-	CustomizerManager customizer;
-	
+    DialogueManager dialogueManager;
+    public NPCHub npcHub;
+    public bool hasDialogue;
     // Start is called before the first frame update
     void Start()
     {
-        customizer = GameObject.FindWithTag("CustomizerManager").GetComponent<CustomizerManager>();
+        dialogueManager = GameObject.FindWithTag("DialogueManager").GetComponent<DialogueManager>();
     }
 
     // Update is called once per frame
@@ -17,13 +18,15 @@ public class CustomizerInteractable : Interactable
     {
         
     }
-	
-	public override void Interact(){
-		customizer.ActivatePreviewer();
-	}
 
-    public override void LeaveInteraction(){
-        
+    public override void Interact()
+    {
+        dialogueManager.StartDialogue(npcHub.npcName);
+    }
+
+    public override void LeaveInteraction()
+    {
+        dialogueManager.EndDialogue();
     }
 
     public override void MenuUp()
@@ -48,6 +51,6 @@ public class CustomizerInteractable : Interactable
 
     public override void MenuSelect()
     {
-        
+        dialogueManager.NextNode();
     }
 }

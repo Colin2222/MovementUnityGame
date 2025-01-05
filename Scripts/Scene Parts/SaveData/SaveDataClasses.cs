@@ -57,3 +57,9 @@ public class SavedWorldItem{
 	public float x_pos;
 	public float y_pos;
 }
+
+[System.Serializable]
+public class SavedNPC{
+	public string name;
+	public List<SavedInventory> inventories;
+}

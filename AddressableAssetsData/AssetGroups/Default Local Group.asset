@@ -89,6 +89,10 @@ MonoBehaviour:
     m_Address: Assets/Art/NPCs/blacksmith.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 50fc3fad1ee8bcd4baec72253ac756fa
+    m_Address: Assets/Data/Dialogue/game_dialogue.txt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:

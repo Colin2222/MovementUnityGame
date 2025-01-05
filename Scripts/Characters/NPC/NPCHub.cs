@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NPCHub : MonoBehaviour
 {
+    public string npcName;
     public Rigidbody2D rigidbody;
     public NPCReskinManager reskinner;
     

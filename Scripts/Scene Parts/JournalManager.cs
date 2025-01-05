@@ -56,7 +56,7 @@ public class JournalManager : MonoBehaviour
 	}
 	
 	public void SeekUI(){
-		journalUI = GameObject.FindWithTag("JournalUI").GetComponent<JournalCanvasScript>();
+		//journalUI = GameObject.FindWithTag("JournalUI").GetComponent<JournalCanvasScript>();
 	}
 }
 

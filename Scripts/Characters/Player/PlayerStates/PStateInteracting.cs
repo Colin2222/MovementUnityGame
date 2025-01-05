@@ -17,16 +17,15 @@ public class PStateInteracting : PState, IMenuState
 		this.interactable = interactable;
 		if(interactable is Site){
 			site = (Site)interactable;
-		}
-
-		if(site.hasMenu){
-			// set camera to split player and interactable
-			Vector3 midPoint = (player.transform.position + site.gameObject.transform.position) / 2;
-			cameraTargetObj = new GameObject();
-			cameraTargetObj.transform.position = midPoint + new Vector3(site.cameraOffset.x, site.cameraOffset.y, 0);
-			SceneManager.Instance.vcam.m_Follow = cameraTargetObj.transform;
-			originalCameraDistance = SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance;
-			SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = site.cameraDistance;
+			if(site.hasMenu){
+				// set camera to split player and interactable
+				Vector3 midPoint = (player.transform.position + site.gameObject.transform.position) / 2;
+				cameraTargetObj = new GameObject();
+				cameraTargetObj.transform.position = midPoint + new Vector3(site.cameraOffset.x, site.cameraOffset.y, 0);
+				SceneManager.Instance.vcam.m_Follow = cameraTargetObj.transform;
+				originalCameraDistance = SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance;
+				SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = site.cameraDistance;
+			}
 		}
 	}
 	
@@ -91,23 +90,23 @@ public class PStateInteracting : PState, IMenuState
 	}
 
 	public void MenuUp(){
-		site.MenuUp();
+		interactable.MenuUp();
 	}
 
 	public void MenuDown(){
-		site.MenuDown();
+		interactable.MenuDown();
 	}
 
 	public void MenuLeft(){
-		site.MenuLeft();
+		interactable.MenuLeft();
 	}
 
 	public void MenuRight(){
-		site.MenuRight();
+		interactable.MenuRight();
 	}
 
 	public void MenuSelect(){
-		site.MenuSelect();
+		interactable.MenuSelect();
 	}
 
 	public void MenuDrop(){
@@ -115,12 +114,14 @@ public class PStateInteracting : PState, IMenuState
 	}
 
 	public PState MenuExit(){
-        site.LeaveInteraction();
+        interactable.LeaveInteraction();
 
-		// set camera to follow player again
-		SceneManager.Instance.vcam.m_Follow = player.transform;
-		SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = originalCameraDistance;
-		UnityEngine.Object.Destroy(cameraTargetObj);
+		if(interactable is Site){
+			// set camera to follow player again
+			SceneManager.Instance.vcam.m_Follow = player.transform;
+			SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = originalCameraDistance;
+			UnityEngine.Object.Destroy(cameraTargetObj);
+		}
 
 		return new PStateIdle();
 	}

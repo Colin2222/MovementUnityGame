@@ -1,0 +1,29 @@
+{
+  "npc_dialogues":{
+    "blacksmith": {
+      "branches":[
+        {
+          "conditions":[
+            {
+              "type": "progress_marker",
+              "key": "tutorial_1_viewed",
+              "value": false
+            }
+          ],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "THIS IS A TEST ANNOUNCEMENT",
+              "speaker": "Blacksmith"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "DO NOT PANIC",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -38,11 +38,6 @@ public abstract class Site : Interactable
 
     abstract protected void EnterRange();
     abstract protected void ExitRange();
-    abstract public void MenuUp();
-    abstract public void MenuDown();
-    abstract public void MenuLeft();
-    abstract public void MenuRight();
-    abstract public void MenuSelect();
     abstract public void LoadSite(SavedSite savedSite);
     abstract public SavedSite SaveSite();
 }

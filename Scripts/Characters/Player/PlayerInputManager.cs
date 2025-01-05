@@ -129,6 +129,14 @@ public class PlayerInputManager : MonoBehaviour
 			inUI = false;
 		}
 	}
+
+	// has to just reset player to idle state to prevent loop between stateManager MenuExit and NPCInteractable LeaveInteraction and DialogueManager EndDialogue 
+	// shits fucked
+	public void LeaveDialogue(){
+		stateManager.ResetPlayer();
+		locked = false;
+		inUI = false;
+	}
 	
 	private void HandleMenu(){
 		if(inUI){

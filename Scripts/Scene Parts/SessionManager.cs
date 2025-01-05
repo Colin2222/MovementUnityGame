@@ -7,6 +7,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceLocations;
 using UnityEngine.AddressableAssets;
 using Newtonsoft.Json;
+using DialogueDataClasses;
 
 // THIS CLASS WILL HOLD ALL INFORMATION RELEVANT TO THE CURRENT PLAY SESSION
 // SAVE STATE, TRANSITIONS BETWEEN ROOM
@@ -22,10 +23,14 @@ public class SessionManager : MonoBehaviour
 	public GameSaveData saveData;
 	public string currentPlayerName = "player";
 	string addressHeader = "Assets/Data/SaveData/";
+
+	public GameDialogueData dialogueData;
+	string dialogueAddress = "Assets/Data/Dialogue/game_dialogue.txt";
 	
 	void Awake(){
 		DontDestroyOnLoad(gameObject);
 		LoadData();
+		LoadDialogue();
 	}
 	
     // Start is called before the first frame update
@@ -39,6 +44,21 @@ public class SessionManager : MonoBehaviour
     {
         
     }
+
+	public void LoadDialogue(){
+		var operation = Addressables.LoadAssetAsync<TextAsset>(dialogueAddress);
+		TextAsset txtAsset = operation.WaitForCompletion();
+
+		JsonSerializerSettings settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Objects };
+		dialogueData = JsonConvert.DeserializeObject<GameDialogueData>(txtAsset.text, settings);
+		//Debug.Log(((DialogueNodeText)(dialogueData.npc_dialogues["blacksmith"].branches[0].nodes[0])).text);
+
+		Addressables.Release(operation);
+	}
+
+	public DialogueTree GetDialogueTree(string npcName){
+		return dialogueData.npc_dialogues[npcName];
+	}
 	
 	public void LoadData(){
 		// load in json of player's save into TextAsset
