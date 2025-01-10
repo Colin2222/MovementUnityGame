@@ -16,6 +16,7 @@ public class SoundRepeater : MonoBehaviour
     void Start()
     {
         timer = 0;
+        audioSource.time = startTime;
         audioSource.Play();
     }
 
@@ -25,6 +26,7 @@ public class SoundRepeater : MonoBehaviour
         if(!loopingOnStart){
             timer += Time.deltaTime;
             if(timer >= repeatTime){
+                audioSource.time = startTime;
                 audioSource.Play();
                 timer = 0;
             }
