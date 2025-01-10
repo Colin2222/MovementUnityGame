@@ -361,7 +361,7 @@ MonoBehaviour:
   invertPlayerColor: 0
   sitePrefabRegistryPrefab: {fileID: 8148355940044835786, guid: e7bc6f0034ee8bd489eb3a6db1635a17, type: 3}
   sitePrefabRegistry: {fileID: 0}
-  bgAudio: {fileID: 0}
+  bgAudio: {fileID: 8300000, guid: 23fbaec3bf622314c9b65beb06479564, type: 3}
   siteManager: {fileID: 7238369947876987365}
   itemManager: {fileID: 1496377342219492773}
   dialogueManager: {fileID: 3052486192322220350}
