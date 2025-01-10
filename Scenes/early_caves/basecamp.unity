@@ -2375,9 +2375,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1262023519}
-  repeatTime: 35
+  repeatTime: 30
   startTime: 1.5
-  loopingOnStart: 1
+  loopingOnStart: 0
 --- !u!4 &1262023521
 Transform:
   m_ObjectHideFlags: 0
