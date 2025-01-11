@@ -7359,7 +7359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296751717403649441, guid: 714cb514c57ab7349ba8ab30c0495568, type: 3}
       propertyPath: id
-      value: 1
+      value: 100002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 714cb514c57ab7349ba8ab30c0495568, type: 3}
@@ -10859,7 +10859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296751717403649441, guid: 714cb514c57ab7349ba8ab30c0495568, type: 3}
       propertyPath: id
-      value: 0
+      value: 100001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 714cb514c57ab7349ba8ab30c0495568, type: 3}
@@ -10974,38 +10974,6 @@ PrefabInstance:
     - target: {fileID: 8148355940044835787, guid: e7bc6f0034ee8bd489eb3a6db1635a17, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8148355940044835796, guid: e7bc6f0034ee8bd489eb3a6db1635a17, type: 3}
-      propertyPath: sitePrefabEntries.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8148355940044835796, guid: e7bc6f0034ee8bd489eb3a6db1635a17, type: 3}
-      propertyPath: sitePrefabEntries.Array.data[2].id
-      value: construction
-      objectReference: {fileID: 0}
-    - target: {fileID: 8148355940044835796, guid: e7bc6f0034ee8bd489eb3a6db1635a17, type: 3}
-      propertyPath: sitePrefabEntries.Array.data[2].prefab
-      value: 
-      objectReference: {fileID: 3366856974621672427, guid: 0833ad0234b3c574db3f4d5133056309, type: 3}
-    - target: {fileID: 8148355940044835796, guid: e7bc6f0034ee8bd489eb3a6db1635a17, type: 3}
-      propertyPath: sitePrefabEntries.Array.data[2].requirements.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8148355940044835796, guid: e7bc6f0034ee8bd489eb3a6db1635a17, type: 3}
-      propertyPath: sitePrefabEntries.Array.data[2].requirements.Array.data[0].item
-      value: wood_log
-      objectReference: {fileID: 0}
-    - target: {fileID: 8148355940044835796, guid: e7bc6f0034ee8bd489eb3a6db1635a17, type: 3}
-      propertyPath: sitePrefabEntries.Array.data[2].requirements.Array.data[1].item
-      value: iron_rod
-      objectReference: {fileID: 0}
-    - target: {fileID: 8148355940044835796, guid: e7bc6f0034ee8bd489eb3a6db1635a17, type: 3}
-      propertyPath: sitePrefabEntries.Array.data[2].requirements.Array.data[0].quantity
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8148355940044835796, guid: e7bc6f0034ee8bd489eb3a6db1635a17, type: 3}
-      propertyPath: sitePrefabEntries.Array.data[2].requirements.Array.data[1].quantity
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7bc6f0034ee8bd489eb3a6db1635a17, type: 3}

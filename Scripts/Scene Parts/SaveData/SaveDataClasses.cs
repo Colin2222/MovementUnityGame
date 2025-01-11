@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class GameSaveData{
 	public Dictionary<string, bool> progress_markers;
+	public Dictionary<string, int> integer_markers;
 	public Dictionary<string, SavedRoom> rooms;
 	public SavedInventory player_inventory;
 }
@@ -62,4 +63,14 @@ public class SavedWorldItem{
 public class SavedNPC{
 	public string name;
 	public List<SavedInventory> inventories;
+}
+
+public class RoomMappingData{
+	public Dictionary<string, PulleyAnchorPointMapping> anchor_points;
+	public Dictionary<string, string> build_to_name;
+}
+
+public class PulleyAnchorPointMapping{
+	public int build_index;
+	public int entrance_index;
 }

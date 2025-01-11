@@ -57,3 +57,10 @@ MonoBehaviour:
       quantity: 3
     - item: iron_rod
       quantity: 1
+  - id: cablecar
+    prefab: {fileID: 7618449593680058695, guid: b248b758d6a16cd4f9207479463479b7, type: 3}
+    requirements:
+    - item: wood_log
+      quantity: 3
+    - item: iron_rod
+      quantity: 1

@@ -10,11 +10,12 @@ public class SiteManager : MonoBehaviour
 
     void Awake(){
         DetectSites();
+        LoadSites(sceneManager.GetCurrentRoomSave().site_slots);
     }
     // Start is called before the first frame update
     void Start()
     {
-        LoadSites(sceneManager.GetCurrentRoomSave().site_slots);
+        
     }
 
     // Update is called once per frame
@@ -40,6 +41,7 @@ public class SiteManager : MonoBehaviour
             if(slot.site != null){
                 GameObject siteObj = Instantiate(registry.GetPrefab(slot.site.name), siteSlots[slot.id].transform.position, Quaternion.identity, siteSlots[slot.id].transform);
                 Site site = siteObj.GetComponent<Site>();
+                site.id = slot.id;
                 site.LoadSite(slot.site);
             }
         }

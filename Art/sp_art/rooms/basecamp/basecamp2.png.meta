@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fdfce4eba0613134a9753a697ffbeb47
+guid: 76d400d8fabd6234980f911c2ddd59d3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: basecamp1_0
+      name: basecamp2_0
       rect:
         serializedVersion: 2
-        x: 1027
-        y: 1084
-        width: 107
-        height: 107
+        x: 119
+        y: 829
+        width: 687
+        height: 303
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88b528b5aa5250743a593d025a7b4923
-      internalID: 1294795392
+      spriteID: a021aa93c237e0b4da1301531b353798
+      internalID: -1632258290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basecamp1_1
+      name: basecamp2_1
       rect:
         serializedVersion: 2
-        x: 92
-        y: 875
-        width: 1549
-        height: 176
+        x: 131
+        y: 434
+        width: 687
+        height: 303
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,113 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec59cfc415d19d54898f151c722276cc
-      internalID: 1858714400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: basecamp1_2
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 674
-        width: 1520
-        height: 191
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94728413408d8864b8a0ddc8bc28c40a
-      internalID: -1131653835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: basecamp1_3
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 461
-        width: 1577
-        height: 198
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5de4ad6c921988418ebf43f4dac0baf
-      internalID: 1555367098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: basecamp1_4
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 136
-        width: 1631
-        height: 260
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f8f76afea239d740a70d90ad36476c8
-      internalID: -1909433872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: basecamp1_5
-      rect:
-        serializedVersion: 2
-        x: 1182
-        y: 1095
-        width: 50
-        height: 58
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d988185fc6d13c046a61b168501c6030
-      internalID: -1413288882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: basecamp1_6
-      rect:
-        serializedVersion: 2
-        x: 932
-        y: 1140
-        width: 65
-        height: 28
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1dd1e8497bc61fd4cbe23c6417990803
-      internalID: -1003312649
+      spriteID: 05f9b0ce1b07c0749880d1bf71adcdca
+      internalID: -1641082429
       vertices: []
       indices: 
       edges: []
@@ -262,13 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      basecamp1_1: 1858714400
-      basecamp1_3: 1555367098
-      basecamp1_5: -1413288882
-      basecamp1_4: -1909433872
-      basecamp1_0: 1294795392
-      basecamp1_6: -1003312649
-      basecamp1_2: -1131653835
+      basecamp2_1: -1641082429
+      basecamp2_0: -1632258290
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

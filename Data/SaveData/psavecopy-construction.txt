@@ -11,8 +11,7 @@
     "first_dialogue_completed": false
   },
   "integer_markers": {
-    "pulley_anchor_points": 4,
-    "cable_car_location": 100001
+    "pulley_anchor_points": 4
   },
   "rooms": {
     "basecamp": {
@@ -23,7 +22,9 @@
           "site": {
             "name": "cablecar",
             "inventories": null,
-            "additional_data": {}
+            "additional_data": {
+              "cable_car_present": "False"
+            }
           }
         }
       ],
@@ -48,21 +49,40 @@
     "mountainbase_rightedge1": {
       "site_slots": [
         {
+          "id": 0,
+          "display_name": null,
+          "site": {
+            "name": "construction",
+            "inventories": [
+              {
+                "width": 1,
+                "height": 2,
+                "contents": [
+                  {
+                    "item_name": "wood_log",
+                    "quantity": 2
+                  },
+                  {
+                    "item_name": "iron_rod",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ],
+            "additional_data": {
+              "site_construction": "pulleyanchor"
+            }
+          }
+        },
+        {
           "id": 100001,
           "display_name": null,
           "site": {
             "name": "cablecar",
             "inventories": null,
-            "additional_data": null
-          }
-        },
-        {
-          "id": 100002,
-          "display_name": null,
-          "site": {
-            "name": "cablecar",
-            "inventories": null,
-            "additional_data": null
+            "additional_data": {
+              "cable_car_present": "False"
+            }
           }
         },
         {
@@ -135,17 +155,7 @@
       "world_items": []
     },
     "mountainbase_right2": {
-      "site_slots": [
-        {
-          "id": 100003,
-          "display_name": null,
-          "site": {
-            "name": "cablecar",
-            "inventories": null,
-            "additional_data": {}
-          }
-        }
-      ],
+      "site_slots": [],
       "world_items": []
     },
     "mountainbase_right3": {

@@ -93,6 +93,10 @@ MonoBehaviour:
     m_Address: Assets/Data/Dialogue/game_dialogue.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 58d57a0c0c203194c863ace3a8445a44
+    m_Address: Assets/Data/room_mapping_data.txt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:

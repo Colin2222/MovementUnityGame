@@ -1,0 +1,33 @@
+{
+  "anchor_points":{
+    "100000":{
+      "build_index":10,
+      "entrance_index":1001
+    },
+    "100001":{
+      "build_index":11,
+      "entrance_index":1001
+    },
+    "100002":{
+      "build_index":11,
+      "entrance_index":1002
+    },
+    "100003":{
+      "build_index":15,
+      "entrance_index":1002
+    }
+  },
+  "build_to_name":{
+    "7":"earlycave_exit",
+    "8":"guidestone_cave",
+    "9":"earlycave_river",
+    "10":"basecamp",
+    "11":"mountainbase_rightedge1",
+    "12":"mountainbase_cave1",
+    "13":"mountainbase_mid1",
+    "14":"mountainbase_right1",
+    "15":"mountainbase_right2",
+    "16":"mountainbase_minicave1",
+    "17":"mountainbase_right3"
+  }
+}

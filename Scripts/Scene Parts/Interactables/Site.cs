@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Site : Interactable
 {
+    [System.NonSerialized]
     public int id;
     public int type;
     public float cameraDistance;
@@ -40,4 +41,16 @@ public abstract class Site : Interactable
     abstract protected void ExitRange();
     abstract public void LoadSite(SavedSite savedSite);
     abstract public SavedSite SaveSite();
+
+    public void ActivateCamera(){
+        // set camera to split player and interactable
+        Vector3 midPoint = (SceneManager.Instance.player.transform.position + gameObject.transform.position) / 2;
+        GameObject cameraTargetObj = new GameObject();
+        cameraTargetObj.transform.position = midPoint + new Vector3(cameraOffset.x, cameraOffset.y, 0);
+        SceneManager.Instance.SetCamera(cameraTargetObj, cameraDistance);
+    }
+
+    public void DeactivateCamera(){
+        SceneManager.Instance.ResetCamera();
+    }
 }

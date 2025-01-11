@@ -13,6 +13,7 @@ using DialogueDataClasses;
 // SAVE STATE, TRANSITIONS BETWEEN ROOM
 public class SessionManager : MonoBehaviour
 {
+	public static SessionManager Instance { get; private set; }
 	public SceneManager sceneManager;
 	public PlayerHub player;
 	
@@ -26,11 +27,24 @@ public class SessionManager : MonoBehaviour
 
 	public GameDialogueData dialogueData;
 	string dialogueAddress = "Assets/Data/Dialogue/game_dialogue.txt";
+
+	public RoomMappingData roomMappingData;
+	string roomMappingAddress =  "Assets/Data/room_mapping_data.txt";
 	
 	void Awake(){
+		// SINGLETON PATTERN
+		if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+		// assign this instance as singleton
+        Instance = this;
+
 		DontDestroyOnLoad(gameObject);
 		LoadData();
 		LoadDialogue();
+		LoadRoomMappings();
 	}
 	
     // Start is called before the first frame update
@@ -44,6 +58,17 @@ public class SessionManager : MonoBehaviour
     {
         
     }
+
+	public void LoadRoomMappings(){
+		var operation = Addressables.LoadAssetAsync<TextAsset>(roomMappingAddress);
+		TextAsset txtAsset = operation.WaitForCompletion();
+
+		JsonSerializerSettings settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Objects };
+		roomMappingData = JsonConvert.DeserializeObject<RoomMappingData>(txtAsset.text, settings);
+		Debug.Log(roomMappingData.anchor_points);
+
+		Addressables.Release(operation);
+	}
 
 	public void LoadDialogue(){
 		var operation = Addressables.LoadAssetAsync<TextAsset>(dialogueAddress);
@@ -111,6 +136,14 @@ public class SessionManager : MonoBehaviour
 
 	public void SetPlayerInventory(SavedInventory inventory){
 		saveData.player_inventory = inventory;
+	}
+
+	public void SetCableCar(int anchorPointIndex){
+		saveData.integer_markers["cable_car_location"] = anchorPointIndex;
+	}
+
+	public bool CheckCableCar(int anchorPointIndex){
+		return saveData.integer_markers["cable_car_location"] == anchorPointIndex;
 	}
 	
 	public void CreateNewSave(){

@@ -14,8 +14,6 @@ public class SceneTransition : MonoBehaviour
 		GameObject sessionManagerTest = GameObject.FindWithTag("SessionManager");
 		if(sessionManagerTest != null){
 			sessionManager = sessionManagerTest.GetComponent<SessionManager>();
-		} else{
-			Debug.Log("OOOPS");
 		}
 	}
 	

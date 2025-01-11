@@ -43,6 +43,8 @@ public class SceneManager : MonoBehaviour
 	public TextMeshProUGUI profileText;
 	
 	public CinemachineVirtualCamera vcam;
+	float originalCameraDistance;
+	GameObject cameraAimObj;
 	
 	public int hubWorldIndex;
 	
@@ -151,27 +153,7 @@ public class SceneManager : MonoBehaviour
 	
     // Start is called before the first frame update
     void Start()
-    {
-		// set player spawn point which has been determined by matching SceneTranstion to entranceNumber
-		bool entranceFound = false;
-		GameObject[] sceneTransitions = GameObject.FindGameObjectsWithTag("SceneTransition");
-		foreach(GameObject transitionObj in sceneTransitions){
-			SceneTransition transition = transitionObj.GetComponent<SceneTransition>();
-			if(transition.entranceNumber == sessionManager.currentEntranceNumber){
-				player.transform.position = transition.spawnTransform.position;
-				entranceFound = true;
-				break;
-			}
-		}
-		if(!entranceFound){
-			player.transform.position = playerSpawnTransform.position;
-		}
-		
-		// clear the players tracking for its groundcheck since unity scene transition doesnt frickin exit a 2d collision dammit
-		if(player.physics != null){
-			player.physics.ClearBottomCheck();
-		}
-		
+    {	
 		profileManager.SetupProfileSelection(profileSelectionLocation);
 		if(isHubWorld){
 			levelSelectManager.SetupLevelSelection(levelSelectionLocation);
@@ -242,5 +224,18 @@ public class SceneManager : MonoBehaviour
 
 	public SavedRoom GetCurrentRoomSave(){
 		return sessionManager.saveData.rooms[sceneName];
+	}
+
+	public void SetCamera(GameObject cameraTargetObj, float distance){
+		cameraAimObj = cameraTargetObj;
+		vcam.m_Follow = cameraTargetObj.transform;
+		originalCameraDistance = vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance;
+		vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = distance;
+	}
+
+	public void ResetCamera(){
+		vcam.m_Follow = player.transform;
+		vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = originalCameraDistance;
+		UnityEngine.Object.Destroy(cameraAimObj);
 	}
 }

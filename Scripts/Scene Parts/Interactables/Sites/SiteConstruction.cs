@@ -56,6 +56,9 @@ public class SiteConstruction : Site
 
             // activate site panel
             sitePanel.gameObject.SetActive(true);
+
+            // activate camera
+            ActivateCamera();
         }
         active = true;
     }
@@ -71,6 +74,9 @@ public class SiteConstruction : Site
         canvas.itemsObject.SetActive(false);
         canvas.openBagObject.SetActive(false);
         sitePanel.gameObject.SetActive(false);
+
+        // deactivate camera
+        DeactivateCamera();
     }
 
     public override void MenuUp(){
