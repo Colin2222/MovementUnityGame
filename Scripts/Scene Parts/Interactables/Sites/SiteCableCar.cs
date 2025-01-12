@@ -14,6 +14,18 @@ public class SiteCableCar : Site
     bool cableCarPresent = false;
     public GameObject cableCarObj;
     public SceneTransition sceneTransition;
+    public float transitionTime;
+    float transitionTimer = 0;
+    bool transitioning = false;
+    int buildIndex;
+    int nextEntranceNumber;
+    public Transform walkTransform;
+
+    public Transform aimPoint;
+    public float aimPointSpeed;
+    Vector3 aimPointVelocity;
+    bool moving = false;
+    public float moveStartTime;
 
     void Start()
     {
@@ -23,6 +35,25 @@ public class SiteCableCar : Site
         roomMappingData = sessionManager.roomMappingData;
         anchor_points = roomMappingData.anchor_points;
         sceneTransition.entranceNumber = anchor_points[id.ToString()].entrance_index;
+    }
+
+    void Update(){
+        if(transitioning){
+            transitionTimer += Time.deltaTime;
+            if(transitionTimer >= transitionTime){
+                transitioning = false;
+                // transition to scene with data set previously
+                SessionManager.Instance.TransitionScene(buildIndex, nextEntranceNumber, 0);
+            } else if(transitionTimer >= moveStartTime){
+                if(!moving){
+                    StartCableCarMovement();
+                }
+
+            }
+        }
+        if(moving){
+            cableCarObj.transform.position += aimPointVelocity * Time.deltaTime;
+        }
     }
 
     void ActivateCableCar(){
@@ -79,18 +110,25 @@ public class SiteCableCar : Site
 
     public override void MenuSelect(){
         int selection = sitePanel.SelectOption() + 100000;
-        DeactivateCableCar();
+        cableCarPresent = false;
         LeaveInteraction();
 
         // find the build index of the room to switch into
-        int buildIndex = roomMappingData.anchor_points[selection.ToString()].build_index;
-        int nextEntranceNumber = roomMappingData.anchor_points[selection.ToString()].entrance_index;
+        buildIndex = roomMappingData.anchor_points[selection.ToString()].build_index;
+        nextEntranceNumber = roomMappingData.anchor_points[selection.ToString()].entrance_index;
 
         // set game data to move cable car to new location
         SessionManager.Instance.SetCableCar(selection);
 
-        // transition to scene with data set above
-        SessionManager.Instance.TransitionScene(buildIndex, nextEntranceNumber, 0);
+        // start timer before transitioning
+        transitioning = true;
+        PlayerHub.Instance.overrideManager.WalkToPoint(walkTransform.position.x);
+
+        // determine aim point for cabin movement
+        int direction = selection > id ? -1 : 1;
+        sessionManager.currentEntranceDirection = direction;
+        FindAimPoint(direction);
+        Debug.Log(aimPoint.position);
     }
 
     public override void LoadSite(SavedSite savedSite){
@@ -108,11 +146,28 @@ public class SiteCableCar : Site
         return savedSite;
     }
 
+
+
     protected override void EnterRange(){
         
     }
 
     protected override void ExitRange(){
         
+    }
+
+    void FindAimPoint(int direction){
+        GameObject[] points = GameObject.FindGameObjectsWithTag("CableCarAimPoint");
+        foreach(GameObject point in points){
+            if(point.GetComponent<SiteCableCarAimPoint>().siteId == id - direction){
+                aimPoint = point.transform;
+                break;
+            }
+        }
+    }
+
+    void StartCableCarMovement(){
+        moving = true;
+        aimPointVelocity = (aimPoint.position - cableCarObj.transform.position).normalized * aimPointSpeed;
     }
 }

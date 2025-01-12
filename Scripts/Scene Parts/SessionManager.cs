@@ -19,6 +19,8 @@ public class SessionManager : MonoBehaviour
 	
 	[System.NonSerialized]
 	public int currentEntranceNumber = 0;
+	[System.NonSerialized]
+	public int currentEntranceDirection = 0;
 	int currentDirectionNumber;
 	
 	public GameSaveData saveData;
@@ -65,7 +67,6 @@ public class SessionManager : MonoBehaviour
 
 		JsonSerializerSettings settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Objects };
 		roomMappingData = JsonConvert.DeserializeObject<RoomMappingData>(txtAsset.text, settings);
-		Debug.Log(roomMappingData.anchor_points);
 
 		Addressables.Release(operation);
 	}

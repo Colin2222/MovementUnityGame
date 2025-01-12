@@ -17,6 +17,7 @@ public class PlayerHub : MonoBehaviour
 	public PlayerInventoryHandler inventoryHandler;
 	public PlayerInteractor interactor;
 	public PlayerSoundInterface soundInterface;
+	public PlayerOverrideManager overrideManager;
 	
 	[System.NonSerialized]
 	public bool isSpawning = false;

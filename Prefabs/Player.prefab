@@ -1994,6 +1994,7 @@ Transform:
   - {fileID: 5972361109059700172}
   - {fileID: 365383143609738961}
   - {fileID: 5484429588737797308}
+  - {fileID: 5385391014688584708}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2073,6 +2074,7 @@ MonoBehaviour:
   inventoryHandler: {fileID: 1568975044}
   interactor: {fileID: 1011390647}
   soundInterface: {fileID: 2146572807}
+  overrideManager: {fileID: 856869671391944395}
   spawnTime: 2
 --- !u!50 &6829769311745543620
 Rigidbody2D:
@@ -2311,6 +2313,56 @@ MonoBehaviour:
   stateManager: {fileID: 5555245007042818769}
   bottomCheck: {fileID: 6829769310522087715}
   frontCheck: {fileID: 6829769312154430463}
+--- !u!1 &7205801389566659767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5385391014688584708}
+  - component: {fileID: 856869671391944395}
+  m_Layer: 0
+  m_Name: OverrideManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5385391014688584708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7205801389566659767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6829769311745543618}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &856869671391944395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7205801389566659767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7180339c6b4643478b83cb3240e16a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6829769311745543619}
+  rb: {fileID: 6829769311745543620}
+  playerStateManager: {fileID: 5555245007042818769}
+  playerInputManager: {fileID: 588900340537133547}
+  animator: {fileID: 2098515062}
+  walkToPointSpeed: 2
 --- !u!1 &7418277986815639229
 GameObject:
   m_ObjectHideFlags: 0
