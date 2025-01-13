@@ -26,6 +26,8 @@ public class SiteCableCar : Site
     Vector3 aimPointVelocity;
     bool moving = false;
     public float moveStartTime;
+    public Animator cableCarAnimator;
+    int cableCarDirection;
 
     void Start()
     {
@@ -125,9 +127,9 @@ public class SiteCableCar : Site
         PlayerHub.Instance.overrideManager.WalkToPoint(walkTransform.position.x);
 
         // determine aim point for cabin movement
-        int direction = selection > id ? -1 : 1;
-        sessionManager.currentEntranceDirection = direction;
-        FindAimPoint(direction);
+        cableCarDirection = selection > id ? -1 : 1;
+        sessionManager.currentEntranceDirection = cableCarDirection;
+        FindAimPoint(cableCarDirection);
         Debug.Log(aimPoint.position);
     }
 
@@ -169,5 +171,6 @@ public class SiteCableCar : Site
     void StartCableCarMovement(){
         moving = true;
         aimPointVelocity = (aimPoint.position - cableCarObj.transform.position).normalized * aimPointSpeed;
+        cableCarAnimator.Play(cableCarDirection == 1 ? "cablecar_empty_moveright" : "cablecar_empty_moveleft");
     }
 }

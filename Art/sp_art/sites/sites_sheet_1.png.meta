@@ -125,6 +125,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: cablecar_right
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 881
+        width: 86
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac564a3a38bf1c429c2fac396844c41
+      internalID: 1114500558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cablecar_left
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 881
+        width: 86
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c186dd12e87ddb4bbafd6ae0283184f
+      internalID: 1048716967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -136,6 +178,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      cablecar_left: 1048716967
+      cablecar_right: 1114500558
       cablecar_1: -895675769
   spritePackingTag: 
   pSDRemoveMatte: 0
