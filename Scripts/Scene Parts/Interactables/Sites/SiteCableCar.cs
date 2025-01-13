@@ -11,7 +11,8 @@ public class SiteCableCar : Site
     RoomMappingData roomMappingData;
     Dictionary<string, PulleyAnchorPointMapping> anchor_points;
 
-    bool cableCarPresent = false;
+    [System.NonSerialized]
+    public bool cableCarPresent = false;
     public GameObject cableCarObj;
     public SceneTransition sceneTransition;
     public float transitionTime;
@@ -28,6 +29,11 @@ public class SiteCableCar : Site
     public float moveStartTime;
     public Animator cableCarAnimator;
     int cableCarDirection;
+    public Transform cableCarCenterTransform;
+    public Transform cableCarTopTransform;
+    bool entering = false;
+
+    public Vector3 cableCarOffset;
 
     void Start()
     {
@@ -44,6 +50,7 @@ public class SiteCableCar : Site
             transitionTimer += Time.deltaTime;
             if(transitionTimer >= transitionTime){
                 transitioning = false;
+                PlayerHub.Instance.stateManager.ExitTransformFollow();
                 // transition to scene with data set previously
                 SessionManager.Instance.TransitionScene(buildIndex, nextEntranceNumber, 0);
             } else if(transitionTimer >= moveStartTime){
@@ -53,14 +60,19 @@ public class SiteCableCar : Site
 
             }
         }
-        if(moving){
+        if(moving || entering){
             cableCarObj.transform.position += aimPointVelocity * Time.deltaTime;
+        }
+        if(entering && Vector3.Distance(cableCarObj.transform.position, aimPoint.position - cableCarTopTransform.localPosition) < 0.1){
+            entering = false;
+            cableCarPresent = true;
+            cableCarObj.transform.localPosition = cableCarOffset;
         }
     }
 
     void ActivateCableCar(){
-        cableCarPresent = true;
         cableCarObj.SetActive(true);
+        cableCarPresent = true;
     }
 
     void DeactivateCableCar(){
@@ -79,9 +91,13 @@ public class SiteCableCar : Site
 
             // activate camera
             ActivateCamera();
-        } else{
+        } else if(!entering && !moving){
+            SessionManager.Instance.SetCableCar(id);
             this.hasMenu = false;
             ActivateCableCar();
+            cableCarPresent = false;
+            FindEntryPoint(sessionManager.currentEntranceDirection);
+            StartCableCarEntry();
         }
     }
 
@@ -130,7 +146,6 @@ public class SiteCableCar : Site
         cableCarDirection = selection > id ? -1 : 1;
         sessionManager.currentEntranceDirection = cableCarDirection;
         FindAimPoint(cableCarDirection);
-        Debug.Log(aimPoint.position);
     }
 
     public override void LoadSite(SavedSite savedSite){
@@ -170,7 +185,38 @@ public class SiteCableCar : Site
 
     void StartCableCarMovement(){
         moving = true;
-        aimPointVelocity = (aimPoint.position - cableCarObj.transform.position).normalized * aimPointSpeed;
+        aimPointVelocity = (aimPoint.position - cableCarTopTransform.position).normalized * aimPointSpeed;
         cableCarAnimator.Play(cableCarDirection == 1 ? "cablecar_empty_moveright" : "cablecar_empty_moveleft");
+        PlayerHub.Instance.stateManager.EnterTransformFollow(cableCarCenterTransform);
     }
+
+    void FindEntryPoint(int direction){
+        GameObject[] points = GameObject.FindGameObjectsWithTag("CableCarAimPoint");
+        foreach(GameObject point in points){
+            if(point.GetComponent<SiteCableCarAimPoint>().siteId == id){
+                aimPoint = point.transform;
+            }
+            if(point.GetComponent<SiteCableCarAimPoint>().siteId == id + direction){
+                cableCarObj.transform.position = point.transform.position - cableCarTopTransform.localPosition;
+            }
+        }
+    }
+
+    void StartCableCarEntry(){
+        entering = true;
+        aimPointVelocity = (aimPoint.position - cableCarTopTransform.position).normalized * aimPointSpeed;
+        ClearOtherCableCarsInScene();
+    }
+
+    void ClearOtherCableCarsInScene(){
+        GameObject[] siteObjs = GameObject.FindGameObjectsWithTag("SiteSlot");
+        foreach(GameObject siteObj in siteObjs){
+            GameObject child = siteObj.transform.GetChild(0).gameObject;
+            if(child != null && child.GetComponent<SiteCableCar>() != null && child.GetComponent<SiteCableCar>().id != id){
+                child.GetComponent<SiteCableCar>().cableCarObj.SetActive(false);
+                child.GetComponent<SiteCableCar>().cableCarPresent = false;
+            }
+        }
+    }
+
 }

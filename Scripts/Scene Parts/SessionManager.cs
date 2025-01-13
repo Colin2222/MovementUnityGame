@@ -100,6 +100,9 @@ public class SessionManager : MonoBehaviour
 
 		// done parsing json, release asset out of memory
 		Addressables.Release(operation);
+
+		// sync cable car location to get entrance direction
+		SetCableCar(saveData.integer_markers["cable_car_location"]);
 	}
 	
 	public void SaveData(){
@@ -140,6 +143,7 @@ public class SessionManager : MonoBehaviour
 	}
 
 	public void SetCableCar(int anchorPointIndex){
+		currentEntranceDirection = saveData.integer_markers["cable_car_location"] < anchorPointIndex ? -1 : 1;
 		saveData.integer_markers["cable_car_location"] = anchorPointIndex;
 	}
 

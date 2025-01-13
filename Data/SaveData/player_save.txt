@@ -12,7 +12,7 @@
   },
   "integer_markers": {
     "pulley_anchor_points": 4,
-    "cable_car_location": 100000
+    "cable_car_location": 100001
   },
   "rooms": {
     "basecamp": {

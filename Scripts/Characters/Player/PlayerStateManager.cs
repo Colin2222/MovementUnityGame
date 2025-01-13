@@ -7,6 +7,7 @@ public class PlayerStateManager : MonoBehaviour
 {
 	public PlayerHub player;
     PState currentState;
+	bool settingTransformFollow = false;
 	
 	public Type GetStateType(){
 		return currentState.GetType();
@@ -48,7 +49,9 @@ public class PlayerStateManager : MonoBehaviour
 	}
 	
 	public void LeaveGround(){
-		currentState = currentState.LeaveGround();
+		if(!settingTransformFollow){
+			currentState = currentState.LeaveGround();
+		}
 	}
 	
 	public void LeaveWall(){
@@ -135,5 +138,22 @@ public class PlayerStateManager : MonoBehaviour
 			currentState = ((IMenuState)currentState).MenuExit();
 		}
 		return (currentState is not IMenuState);
+	}
+
+	public void EnterTransformFollow(Transform followTarget){
+		if(currentState is PStateIdle){
+			settingTransformFollow = true;
+			currentState = new PStateTransformFollowing(followTarget);
+		}
+	}
+
+	public void ExitTransformFollow(){
+		if(currentState is PStateTransformFollowing){
+			settingTransformFollow = false;
+			player.rigidbody.bodyType = RigidbodyType2D.Dynamic;
+			player.transform.SetParent(null, true);
+			player.physics.gameObject.SetActive(true);
+			ResetPlayer();
+		}
 	}
 }

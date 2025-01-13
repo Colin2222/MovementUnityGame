@@ -15,6 +15,8 @@ public class PlayerOverrideManager : MonoBehaviour
     public float walkToPointSpeed;
     int walkDirection;
     float walkTarget;
+
+    Transform followTarget;
     // Start is called before the first frame update
     void Start()
     {
