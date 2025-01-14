@@ -162,6 +162,10 @@ public class SiteCableCar : Site
         return savedSite;
     }
 
+    public override void ConstructSite(){
+        
+    }
+
 
 
     protected override void EnterRange(){

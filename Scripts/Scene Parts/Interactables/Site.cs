@@ -41,6 +41,7 @@ public abstract class Site : Interactable
     abstract protected void ExitRange();
     abstract public void LoadSite(SavedSite savedSite);
     abstract public SavedSite SaveSite();
+    abstract public void ConstructSite();
 
     public void ActivateCamera(){
         // set camera to split player and interactable

@@ -51,4 +51,8 @@ public class SitePulleyAnchor : Site
         savedSite.inventories = new List<SavedInventory>();
         return savedSite;
     }
+
+    public override void ConstructSite(){
+        
+    }
 }

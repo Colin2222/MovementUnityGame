@@ -167,6 +167,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: construction_site_wisp1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 839
+        width: 34
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5480870033bbf74f880dd117ac17363
+      internalID: 1560307163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction_site_wisp2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 839
+        width: 34
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c033475e14e6e244a9a82b6b6fb64f17
+      internalID: -1369235791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction_site_wisp3
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 803
+        width: 34
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ace9f38fccc2044b2f72a638937f13
+      internalID: 428801753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction_site_wisp4
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 803
+        width: 34
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fb1f7f88a52124cb0059378f5236ef
+      internalID: -26241575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: construction_site_wisp5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 767
+        width: 34
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd65b6e5e1654084b90a1d4c9c5cfe02
+      internalID: -795650668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -178,9 +283,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      construction_site_wisp1: 1560307163
       cablecar_left: 1048716967
       cablecar_right: 1114500558
+      construction_site_wisp3: 428801753
+      construction_site_wisp4: -26241575
+      construction_site_wisp2: -1369235791
       cablecar_1: -895675769
+      construction_site_wisp5: -795650668
+      sites_sheet_1_0: 1331790500
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

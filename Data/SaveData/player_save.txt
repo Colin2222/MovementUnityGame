@@ -12,7 +12,7 @@
   },
   "integer_markers": {
     "pulley_anchor_points": 4,
-    "cable_car_location": 100001
+    "cable_car_location": 100000
   },
   "rooms": {
     "basecamp": {
@@ -25,7 +25,29 @@
             "inventories": null,
             "additional_data": null
           }
-        }
+        },
+        {
+          "id": 2,
+          "display_name": null,
+          "site": {
+            "name": "construction",
+            "inventories": [
+              {
+                "width": 1,
+                "height": 1,
+                "contents": [
+                  {
+                    "item_name": "wood_log",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ],
+            "additional_data": {
+              "site_construction": "chest"
+            }
+          }
+        },
       ],
       "world_items": []
     },
@@ -51,9 +73,26 @@
           "id": 100001,
           "display_name": null,
           "site": {
-            "name": "cablecar",
-            "inventories": null,
-            "additional_data": null
+            "name": "construction",
+            "inventories": [
+              {
+                "width": 1,
+                "height": 2,
+                "contents": [
+                  {
+                    "item_name": "wood_log",
+                    "quantity": 2
+                  },
+                  {
+                    "item_name": "iron_rod",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ],
+            "additional_data": {
+              "site_construction": "cablecar"
+            }
           }
         },
         {

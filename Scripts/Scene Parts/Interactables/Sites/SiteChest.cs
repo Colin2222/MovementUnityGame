@@ -201,4 +201,8 @@ public class SiteChest : Site
         savedSite.inventories.Add(siteInventory.SaveInventory());
         return savedSite;
     }
+
+    public override void ConstructSite(){
+        siteInventory.ResetInventory(siteInventory.width, siteInventory.height);
+    }
 }

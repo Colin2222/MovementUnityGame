@@ -167,7 +167,11 @@ public class SiteConstruction : Site
             }
 
             if(canConstruct){
-                Instantiate(constructedSitePrefab, transform.position, Quaternion.identity);
+                GameObject constructedObj = Instantiate(constructedSitePrefab, transform.position, Quaternion.identity);
+                constructedObj.GetComponent<Site>().id = id;
+                constructedObj.transform.SetParent(transform.parent);
+                constructedObj.GetComponent<Site>().ConstructSite();
+                SessionManager.Instance.SetSite(constructedObj.GetComponent<Site>().SaveSite(), id);
                 siteInventory = null;
                 PlayerHub.Instance.inputManager.LeaveInteraction();
                 Destroy(gameObject);
@@ -244,6 +248,10 @@ public class SiteConstruction : Site
         savedSite.inventories = new List<SavedInventory>();
         savedSite.inventories.Add(siteInventory.SaveInventory());
         return savedSite;
+    }
+
+    public override void ConstructSite(){
+        
     }
 }
 

@@ -10,13 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 3366856973031358689}
   - component: {fileID: 3366856973031358688}
+  - component: {fileID: 7958510266266334994}
   m_Layer: 0
   m_Name: near_effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3366856973031358689
 Transform:
   m_ObjectHideFlags: 0
@@ -84,6 +85,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &7958510266266334994
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3366856973031358695}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0e67a214aafe8a249afea8ae1de0d462, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 0e67a214aafe8a249afea8ae1de0d462, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &3366856973630570728
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6f8e31b7c0efb4e99dd95ee2842278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 3
   type: 0
   cameraDistance: 7.5
   cameraOffset: {x: -2, y: 2}

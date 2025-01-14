@@ -150,6 +150,20 @@ public class SessionManager : MonoBehaviour
 	public bool CheckCableCar(int anchorPointIndex){
 		return saveData.integer_markers["cable_car_location"] == anchorPointIndex;
 	}
+
+	public void SetSite(SavedSite site, int siteSlot){
+		int siteIndex = FindSiteSlotIndex(saveData.rooms[sceneManager.sceneName], siteSlot);
+		saveData.rooms[sceneManager.sceneName].site_slots[siteIndex].site = site;
+	}
+
+	int FindSiteSlotIndex(SavedRoom room, int siteId){
+		for(int i = 0; i < room.site_slots.Count; i++){
+			if(room.site_slots[i].id == siteId){
+				return i;
+			}
+		}
+		return -1;
+	}
 	
 	public void CreateNewSave(){
 		// load in json of fresh save into TextAsset

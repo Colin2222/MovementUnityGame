@@ -64,3 +64,6 @@ MonoBehaviour:
       quantity: 3
     - item: iron_rod
       quantity: 1
+  - id: construction
+    prefab: {fileID: 3366856974621672427, guid: 0833ad0234b3c574db3f4d5133056309, type: 3}
+    requirements: []
