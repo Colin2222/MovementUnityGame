@@ -156,6 +156,14 @@ public class SessionManager : MonoBehaviour
 		saveData.rooms[sceneManager.sceneName].site_slots[siteIndex].site = site;
 	}
 
+	public int GetIntegerMarker(string markerName){
+		return saveData.integer_markers[markerName];
+	}
+
+	public void SetIntegerMarker(string markerName, int value){
+		saveData.integer_markers[markerName] = value;
+	}
+
 	int FindSiteSlotIndex(SavedRoom room, int siteId){
 		for(int i = 0; i < room.site_slots.Count; i++){
 			if(room.site_slots[i].id == siteId){

@@ -32,6 +32,7 @@ public class SiteCableCar : Site
     public Transform cableCarCenterTransform;
     public Transform cableCarTopTransform;
     bool entering = false;
+    bool operational;
 
     public Vector3 cableCarOffset;
 
@@ -80,10 +81,17 @@ public class SiteCableCar : Site
     }
 
     public override void Interact(){
+        if(!operational){
+            HandleCableCarProgress();
+            if(!operational){
+                Debug.Log("Cable car not operational");
+                return;
+            }
+        }
         if(cableCarPresent){
             this.hasMenu = true;
             // sync options
-            sitePanel.SyncOptions(saveData.integer_markers["pulley_anchor_points"], id - 100000);
+            sitePanel.SyncOptions(saveData.integer_markers["cable_car_progress"], id - 100000);
 
             // activate site panel
             sitePanel.gameObject.SetActive(true);
@@ -163,10 +171,21 @@ public class SiteCableCar : Site
     }
 
     public override void ConstructSite(){
-        
+        HandleCableCarProgress();
     }
 
-
+    void HandleCableCarProgress(){
+        SessionManager sessionManager = SessionManager.Instance;
+        int currentCableCarProgress = sessionManager.GetIntegerMarker("cable_car_progress");
+        if(currentCableCarProgress == id - 1){
+            sessionManager.SetIntegerMarker("cable_car_progress", id);
+            operational = true;
+        } else if(currentCableCarProgress >= id){
+            operational = true;
+        } else{
+            operational = false;
+        }
+    }
 
     protected override void EnterRange(){
         

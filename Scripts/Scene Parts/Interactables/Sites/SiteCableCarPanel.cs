@@ -44,9 +44,9 @@ public class SiteCableCarPanel : MonoBehaviour
         return currentSelection;
     }
 
-    public void SyncOptions(int numAnchorPoints, int playerLocation){
+    public void SyncOptions(int cableCarProgress, int playerLocation){
         // activate the option slots
-        this.numAnchorPoints = numAnchorPoints;
+        this.numAnchorPoints = cableCarProgress - 99999;
         for(int i = 0; i < numAnchorPoints; i++){
             optionSlots[i].SetActive(true);
         }
