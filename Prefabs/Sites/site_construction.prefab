@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3366856973031358689}
   - component: {fileID: 3366856973031358688}
-  - component: {fileID: 7958510266266334994}
+  - component: {fileID: 2122286543084806294}
   m_Layer: 0
   m_Name: near_effect
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3366856973031358695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.0625, y: -1.0625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73,9 +73,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 571857765
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: -1020441647, guid: 5dece94067e92d94ab9d8e3e752a9618, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5419287, g: 0.77001005, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -85,22 +85,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &7958510266266334994
-Animation:
+--- !u!95 &2122286543084806294
+Animator:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3366856973031358695}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 0e67a214aafe8a249afea8ae1de0d462, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 0e67a214aafe8a249afea8ae1de0d462, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0ea897b6e6d54c548a9fe167a1c16052, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3366856973630570728
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +395,7 @@ MonoBehaviour:
   cameraDistance: 7.5
   cameraOffset: {x: -2, y: 2}
   hasMenu: 1
-  rangeEffect: {fileID: 3366856973031358695}
+  rangeEffect: {fileID: 0}
   sitePanel: {fileID: 3366856974536118731}
   siteInventory: {fileID: 3366856973826639323}
   siteName: chest

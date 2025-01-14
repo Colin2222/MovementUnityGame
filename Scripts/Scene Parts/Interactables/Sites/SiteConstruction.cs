@@ -33,11 +33,15 @@ public class SiteConstruction : Site
     }
 
     protected override void EnterRange(){
-        rangeEffect.SetActive(true);
+        if(rangeEffect != null){
+            rangeEffect.SetActive(true);
+        }
     }
 
     protected override void ExitRange(){
-        rangeEffect.SetActive(false);
+        if(rangeEffect != null){
+            rangeEffect.SetActive(false);
+        }
     }
 
     public override void Interact(){

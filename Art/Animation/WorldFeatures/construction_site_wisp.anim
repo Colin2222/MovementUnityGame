@@ -8,7 +8,7 @@ AnimationClip:
   m_PrefabAsset: {fileID: 0}
   m_Name: construction_site_wisp
   serializedVersion: 6
-  m_Legacy: 1
+  m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
@@ -39,8 +39,20 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
-    pptrCurveMapping: []
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 1560307163, guid: b7177d11ba75eb2498ec2a02fbb12b1c, type: 3}
+    - {fileID: -1369235791, guid: b7177d11ba75eb2498ec2a02fbb12b1c, type: 3}
+    - {fileID: 428801753, guid: b7177d11ba75eb2498ec2a02fbb12b1c, type: 3}
+    - {fileID: -26241575, guid: b7177d11ba75eb2498ec2a02fbb12b1c, type: 3}
+    - {fileID: -795650668, guid: b7177d11ba75eb2498ec2a02fbb12b1c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
