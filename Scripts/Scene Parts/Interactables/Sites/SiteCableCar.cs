@@ -50,7 +50,6 @@ public class SiteCableCar : Site
             transitionTimer += Time.deltaTime;
             if(transitionTimer >= transitionTime){
                 transitioning = false;
-                PlayerHub.Instance.stateManager.ExitTransformFollow();
                 // transition to scene with data set previously
                 SessionManager.Instance.TransitionScene(buildIndex, nextEntranceNumber, 0);
             } else if(transitionTimer >= moveStartTime){

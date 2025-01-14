@@ -211,6 +211,7 @@ public class SceneManager : MonoBehaviour
 		
         yield return new WaitForSeconds(transitionTime);
 
+		player.stateManager.ExitTransformFollow();
         UnityEngine.SceneManagement.SceneManager.LoadScene(buildIndex);
     }
 	
