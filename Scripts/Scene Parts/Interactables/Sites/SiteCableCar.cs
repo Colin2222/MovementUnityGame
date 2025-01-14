@@ -85,6 +85,7 @@ public class SiteCableCar : Site
             HandleCableCarProgress();
             if(!operational){
                 Debug.Log("Cable car not operational");
+                this.hasMenu = false;
                 return;
             }
         }
