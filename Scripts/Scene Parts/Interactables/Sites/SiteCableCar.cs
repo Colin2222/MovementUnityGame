@@ -159,6 +159,7 @@ public class SiteCableCar : Site
         if(SessionManager.Instance.CheckCableCar(id)){
             ActivateCableCar();
         }
+        HandleCableSprites();
     }
 
     public override SavedSite SaveSite(){
@@ -184,6 +185,17 @@ public class SiteCableCar : Site
             operational = true;
         } else{
             operational = false;
+        }
+        HandleCableSprites();
+    }
+
+    void HandleCableSprites(){
+        GameObject[] points = GameObject.FindGameObjectsWithTag("CableCarCable");
+        foreach(GameObject point in points){
+            SiteCableCarCable cablePoint = point.GetComponent<SiteCableCarCable>();
+            if(cablePoint.siteId <= SessionManager.Instance.GetIntegerMarker("cable_car_progress") && cablePoint.cableObj != null){
+                cablePoint.cableObj.SetActive(true);
+            }
         }
     }
 

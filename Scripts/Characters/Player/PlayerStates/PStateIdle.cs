@@ -76,7 +76,6 @@ public class PStateIdle : PState
 	}
 	
 	public override PState LeaveGround(){
-		Debug.Log("WHY ARE YOU LEAVING THE GROUND?");
 		player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
