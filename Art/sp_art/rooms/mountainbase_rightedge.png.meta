@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -251,6 +251,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: large_bluestone_bg
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 1620
+        width: 130
+        height: 149
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e0588b3fbd311479af5f03e9dd0a90
+      internalID: -1078262359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -265,6 +286,7 @@ TextureImporter:
       mountainbase_rightedge_5: 1751303713
       mountainbase_rightedge_1: -324171473
       mountainbase_rightedge_2: 1451103722
+      large_bluestone_bg: -1078262359
       wood_chest: 1881503777
       mountainbase_rightedge_4: 1517178921
       mountainbase_rightedge_0: -908539397
