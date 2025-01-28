@@ -169,7 +169,11 @@ public class SceneManager : MonoBehaviour
 			*/
 		}
 		
-		transitionManager.EnterTransition();
+		if(sessionManager.currentWalkEntraceDirection == 1){
+			transitionManager.EnterTransition(1);
+		} else{
+			transitionManager.EnterTransition(-1);
+		}
 		
 		GameObject[] colorChanges = GameObject.FindGameObjectsWithTag("LevelBlock");
 		foreach(GameObject block in colorChanges){

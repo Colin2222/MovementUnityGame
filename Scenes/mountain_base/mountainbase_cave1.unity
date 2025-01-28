@@ -1579,12 +1579,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2862003155368440551, guid: ba5fd7263e1040c4aad0663da2ab8e7d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5592630151386527471, guid: ba5fd7263e1040c4aad0663da2ab8e7d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 7377485290462935845, guid: ba5fd7263e1040c4aad0663da2ab8e7d, type: 3}
       propertyPath: m_Name
       value: door
       objectReference: {fileID: 0}
     - target: {fileID: 7377485290462935866, guid: ba5fd7263e1040c4aad0663da2ab8e7d, type: 3}
       propertyPath: entranceNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7377485290462935866, guid: ba5fd7263e1040c4aad0663da2ab8e7d, type: 3}
+      propertyPath: transitionDirection
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7377485290462935866, guid: ba5fd7263e1040c4aad0663da2ab8e7d, type: 3}
@@ -1601,7 +1613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377485290462935867, guid: ba5fd7263e1040c4aad0663da2ab8e7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.349757
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 7377485290462935867, guid: ba5fd7263e1040c4aad0663da2ab8e7d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1820,6 +1832,14 @@ PrefabInstance:
       propertyPath: exitPos
       value: 
       objectReference: {fileID: 650399301}
+    - target: {fileID: 313734396, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: leftPos
+      value: 
+      objectReference: {fileID: 650399301}
+    - target: {fileID: 313734396, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: rightPos
+      value: 
+      objectReference: {fileID: 1167475630}
     - target: {fileID: 313734396, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: transitionShape
       value: 
@@ -4392,6 +4412,11 @@ Transform:
   m_Father: {fileID: 508390374}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &1167475630 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6571503887780217305, guid: 6151d37b8dea783498bf302d5bf7ee74, type: 3}
+  m_PrefabInstance: {fileID: 650399296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1229981522
 GameObject:
   m_ObjectHideFlags: 0

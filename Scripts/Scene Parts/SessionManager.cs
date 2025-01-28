@@ -21,6 +21,8 @@ public class SessionManager : MonoBehaviour
 	public int currentEntranceNumber = 0;
 	[System.NonSerialized]
 	public int currentEntranceDirection = 0;
+	[System.NonSerialized]
+	public int currentWalkEntraceDirection = 0;
 	int currentDirectionNumber;
 	
 	public GameSaveData saveData;
@@ -192,7 +194,12 @@ public class SessionManager : MonoBehaviour
 			this.currentEntranceNumber = entranceNumber;
 			
 			// trigger overlay and player animations
-			sceneManager.transitionManager.ExitTransition(buildIndex);
+			this.currentWalkEntraceDirection = directionNumber;
+			if(directionNumber == 1){
+				sceneManager.transitionManager.TransitionRight();
+			} else{
+				sceneManager.transitionManager.TransitionLeft();
+			}
 
 			// cue player buffer time on spawning so they dont ping pong load between rooms
 			StartCoroutine(player.RunSpawnBufferTimer());

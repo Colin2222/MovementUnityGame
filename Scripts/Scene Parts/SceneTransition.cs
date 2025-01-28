@@ -8,6 +8,9 @@ public class SceneTransition : MonoBehaviour
 	public int transitionDirection;
 	public int entranceNumber;
 	public Transform spawnTransform;
+	public Transform entryTransform;
+	public Transform exitTransform;
+	public bool isWalkTransition;
 	SessionManager sessionManager;
 	
 	void Awake(){
@@ -18,6 +21,9 @@ public class SceneTransition : MonoBehaviour
 	}
 	
     void OnTriggerEnter2D(Collider2D col){
+		if(!PlayerHub.Instance.isSpawning && isWalkTransition){
+			PlayerHub.Instance.overrideManager.WalkToPoint(exitTransform.position.x);
+		}
 		sessionManager.TransitionScene(transitionBuildIndex, entranceNumber, transitionDirection);
 	}
 }

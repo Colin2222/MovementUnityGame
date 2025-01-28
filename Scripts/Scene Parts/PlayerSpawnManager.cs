@@ -8,6 +8,7 @@ public class PlayerSpawnManager : MonoBehaviour
     SessionManager sessionManager;
 
     public Transform playerSpawnTransform;
+	SceneTransition transition;
 
     PlayerHub player;
     
@@ -24,8 +25,14 @@ public class PlayerSpawnManager : MonoBehaviour
 		foreach(GameObject transitionObj in sceneTransitions){
 			SceneTransition transition = transitionObj.GetComponent<SceneTransition>();
 			if(transition.entranceNumber == sessionManager.currentEntranceNumber){
-				player.transform.position = transition.spawnTransform.position;
+				player.transform.position = transition.exitTransform.position;
+				player.rigidbody.velocity = new Vector2(0, 0);
+				this.transition = transition;
 				entranceFound = true;
+				if(transition.isWalkTransition){
+					player.overrideManager.doorTransitioning = true;
+					player.overrideManager.WalkToPoint(transition.entryTransform.position.x);
+				}
 				break;
 			}
 		}

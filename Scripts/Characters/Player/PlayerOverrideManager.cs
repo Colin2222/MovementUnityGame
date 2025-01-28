@@ -15,6 +15,8 @@ public class PlayerOverrideManager : MonoBehaviour
     public float walkToPointSpeed;
     int walkDirection;
     float walkTarget;
+    bool walkingBegan = false;
+    public bool doorTransitioning = false;
 
     Transform followTarget;
     // Start is called before the first frame update
@@ -35,11 +37,21 @@ public class PlayerOverrideManager : MonoBehaviour
                 case "WalkToPoint":
                     if(Mathf.Abs(player.transform.position.x - walkTarget) < 0.05){
                         overrideActive = false;
-                        rb.velocity = new Vector2(0, rb.velocity.y);
+                        if(!doorTransitioning){
+                            rb.velocity = new Vector2(0, rb.velocity.y);
+                        }
                         playerInputManager.UnlockPlayer();
                         playerStateManager.ResetPlayer();
+                        doorTransitioning = false;
                         break;
+                    } else if (!walkingBegan){
+                        if(Mathf.Abs(rb.velocity.x) <= walkToPointSpeed){
+                            player.stateManager.ResetPlayer();
+                            rb.velocity = new Vector2(walkDirection * walkToPointSpeed, rb.velocity.y);
+                            walkingBegan = true;
+                        }
                     } else{
+                        animator.Play("PlayerWalking");
                         rb.velocity = new Vector2(walkDirection * walkToPointSpeed, rb.velocity.y);
                     }
                     break;
@@ -49,10 +61,16 @@ public class PlayerOverrideManager : MonoBehaviour
 
     public void WalkToPoint(float x){
         overrideActive = true;
+        walkingBegan = false;
         action = "WalkToPoint";
         walkDirection = x > player.transform.position.x ? 1 : -1;
         walkTarget = x;
         playerInputManager.LockPlayer();
-        animator.Play("PlayerWalking");
+        if(Mathf.Abs(rb.velocity.x) > walkToPointSpeed){
+            playerInputManager.OverridePlayer();
+        } else{
+            playerInputManager.EndOverridePlayer();
+            animator.Play("PlayerWalking");
+        }
     }
 }

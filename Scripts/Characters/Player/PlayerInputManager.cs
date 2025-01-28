@@ -12,6 +12,9 @@ public class PlayerInputManager : MonoBehaviour
 	
 	// locking player input
 	bool locked = false;
+
+	// player's actions overriden (not cutscene)
+	bool overriden = false;
 	
 	// in ui
 	bool inUI = false;
@@ -76,6 +79,9 @@ public class PlayerInputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		if(overriden){
+			stateManager.Move(0, 0);
+		}
 		if(!locked){
 			stateManager.Move(horizontal, vertical);
 			HandleBracing();
@@ -113,6 +119,15 @@ public class PlayerInputManager : MonoBehaviour
 	
 	public void UnlockPlayer(){
 		locked = false;
+		overriden = false;
+	}
+
+	public void OverridePlayer(){
+		overriden = true;
+	}
+
+	public void EndOverridePlayer(){
+		overriden = false;
 	}
 
 	public void EnterCutscene(){

@@ -9,13 +9,17 @@ public class SceneTransitionManager : MonoBehaviour
 	PersistentState persistentState;
 	public RawImage transitionShape;
 	public RectTransform exitPos;
+	public RectTransform leftPos;
+	public RectTransform rightPos;
 	public float transitionSpeed;
 	public float transitionTime;
 	float transitionTimer;
 	float timeUntilAction;
 	bool exiting = false;
 	bool entering = false;
+	bool transitioning = false;
 	bool tempTransitioning = false;
+	float transitionXVelocity;
 	int sceneTransitionIndex;
 	
 	int currentEntranceNumber;
@@ -42,7 +46,7 @@ public class SceneTransitionManager : MonoBehaviour
 			} else{
 				transitionTimer -= Time.deltaTime;
 				if(transitionTimer <= 0.0f){
-					EnterTransition();
+					//EnterTransition();
 				}
 			}
 		} else{
@@ -56,11 +60,19 @@ public class SceneTransitionManager : MonoBehaviour
 			}
 			
 			if(entering){
-				transitionShape.transform.localPosition += (transitionSpeed * Time.deltaTime * Vector3.right);
+				transitionShape.transform.localPosition += (transitionXVelocity * Time.deltaTime * Vector3.right);
 				transitionTimer -= Time.deltaTime;
 				if(transitionTimer <= 0.0f){
 					entering = false;
 					transitionShape.gameObject.SetActive(false);
+				}
+			}
+
+			if(transitioning){
+				transitionShape.transform.localPosition += (transitionXVelocity * Time.deltaTime * Vector3.right);
+				transitionTimer -= Time.deltaTime;
+				if(transitionTimer <= 0.0f){
+					transitioning = false;
 				}
 			}
 		}
@@ -74,11 +86,29 @@ public class SceneTransitionManager : MonoBehaviour
 		exiting = true;
 	}
 	
-	public void EnterTransition(){
+	public void EnterTransition(int direction){
+		Debug.Log("Entering transition" + direction);
 		transitionShape.gameObject.SetActive(true);
 		transitionShape.transform.localPosition = Vector3.zero;
 		transitionTimer = transitionTime;
 		entering = true;
+		transitionXVelocity = (direction == -1) ? -transitionSpeed : transitionSpeed;
+	}
+
+	public void TransitionRight(){
+		transitionShape.gameObject.SetActive(true);
+		transitionShape.transform.localPosition = leftPos.transform.localPosition;
+		transitionTimer = transitionTime;
+		transitioning = true;
+		transitionXVelocity = transitionSpeed;
+	}
+
+	public void TransitionLeft(){
+		transitionShape.gameObject.SetActive(true);
+		transitionShape.transform.localPosition = rightPos.transform.localPosition;
+		transitionTimer = transitionTime;
+		transitioning = true;
+		transitionXVelocity = -transitionSpeed;
 	}
 	
 	public void TempTransition(float timeUntilAction){

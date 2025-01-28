@@ -110,6 +110,9 @@ MonoBehaviour:
   transitionDirection: 0
   entranceNumber: 1000
   spawnTransform: {fileID: 1636600682503152032}
+  entryTransform: {fileID: 1636600682503152032}
+  exitTransform: {fileID: 1636600682503152032}
+  isWalkTransition: 0
 --- !u!1 &7618449593680058695
 GameObject:
   m_ObjectHideFlags: 0
