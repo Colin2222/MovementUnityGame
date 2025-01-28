@@ -272,6 +272,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: waterwheel_1
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 903
+        width: 107
+        height: 107
+      alignment: 9
+      pivot: {x: 0, y: 0.39252338}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc47a58e43cbc14aa32059a43b48e5b
+      internalID: 1331790500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterwheel_2
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 784
+        width: 107
+        height: 103
+      alignment: 9
+      pivot: {x: 0, y: 0.37864077}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a0896c71d28974482f00651507e655
+      internalID: 794949411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -283,15 +325,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      waterwheel_2: 794949411
       construction_site_wisp1: 1560307163
       cablecar_left: 1048716967
       cablecar_right: 1114500558
       construction_site_wisp3: 428801753
       construction_site_wisp4: -26241575
       construction_site_wisp2: -1369235791
+      waterwheel_1: 1331790500
       cablecar_1: -895675769
       construction_site_wisp5: -795650668
-      sites_sheet_1_0: 1331790500
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
