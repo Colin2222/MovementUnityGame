@@ -87,7 +87,6 @@ public class SceneTransitionManager : MonoBehaviour
 	}
 	
 	public void EnterTransition(int direction){
-		Debug.Log("Entering transition" + direction);
 		transitionShape.gameObject.SetActive(true);
 		transitionShape.transform.localPosition = Vector3.zero;
 		transitionTimer = transitionTime;

@@ -64,7 +64,17 @@
       "world_items": []
     },
     "guidestone_cave": {
-      "site_slots": [],
+      "site_slots": [
+        {
+          "id": 1,
+          "display_name": null,
+          "site": {
+            "name": "fill",
+            "inventories": null,
+            "additional_data": null
+          }
+        },
+      ],
       "world_items": []
     },
     "mountainbase_rightedge1": {
