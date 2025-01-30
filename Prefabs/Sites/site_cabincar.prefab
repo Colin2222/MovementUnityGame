@@ -180,6 +180,7 @@ MonoBehaviour:
   cableCarCenterTransform: {fileID: 1956438049639822142}
   cableCarTopTransform: {fileID: 1580502861389757110}
   cableCarOffset: {x: -2.5625, y: -1, z: 0}
+  pulleyAnchorAnimator: {fileID: 289517183059914447}
 --- !u!61 &2298573606583350132
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -324,6 +325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8655650963466917226}
   - component: {fileID: 8655650963466917237}
+  - component: {fileID: 289517183059914447}
   m_Layer: 11
   m_Name: pulleyanchor_sprite
   m_TagString: Untagged
@@ -398,6 +400,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &289517183059914447
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8655650963466917227}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f7dde4bd80c7af04680d96583fdda258, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8655650963478417131
 GameObject:
   m_ObjectHideFlags: 0

@@ -314,6 +314,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: pulleyanchor_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 951
+        width: 34
+        height: 57
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3859649}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd775e644a35b354c9973fd6b3fb0a24
+      internalID: 451053116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulleyanchor_2
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 951
+        width: 34
+        height: 57
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3859649}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff216529a845f364d9f5c1cc5bec1489
+      internalID: -1160215571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -330,6 +372,8 @@ TextureImporter:
       cablecar_left: 1048716967
       cablecar_right: 1114500558
       construction_site_wisp3: 428801753
+      pulleyanchor_1: 451053116
+      pulleyanchor_2: -1160215571
       construction_site_wisp4: -26241575
       construction_site_wisp2: -1369235791
       waterwheel_1: 1331790500

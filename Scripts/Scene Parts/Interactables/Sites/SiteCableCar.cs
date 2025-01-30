@@ -36,6 +36,8 @@ public class SiteCableCar : Site
 
     public Vector3 cableCarOffset;
 
+    public Animator pulleyAnchorAnimator;
+
     void Start()
     {
         // get save data from sessionmanager
@@ -55,6 +57,7 @@ public class SiteCableCar : Site
                 SessionManager.Instance.TransitionScene(buildIndex, nextEntranceNumber, 0);
             } else if(transitionTimer >= moveStartTime){
                 if(!moving){
+                    this.pulleyAnchorAnimator.Play("pulleyanchor_spinning");
                     StartCableCarMovement();
                 }
 
@@ -64,6 +67,7 @@ public class SiteCableCar : Site
             cableCarObj.transform.position += aimPointVelocity * Time.deltaTime;
         }
         if(entering && Vector3.Distance(cableCarObj.transform.position, aimPoint.position - cableCarTopTransform.localPosition) < 0.1){
+            this.pulleyAnchorAnimator.Play("pulleyanchor_idle");
             entering = false;
             cableCarPresent = true;
             cableCarObj.transform.localPosition = cableCarOffset;
@@ -100,6 +104,7 @@ public class SiteCableCar : Site
             // activate camera
             ActivateCamera();
         } else if(!entering && !moving){
+            this.pulleyAnchorAnimator.Play("pulleyanchor_spinning");
             SessionManager.Instance.SetCableCar(id);
             this.hasMenu = false;
             ActivateCableCar();

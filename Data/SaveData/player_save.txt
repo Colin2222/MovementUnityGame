@@ -11,7 +11,7 @@
     "first_dialogue_completed": false
   },
   "integer_markers": {
-    "cable_car_location": 100000,
+    "cable_car_location": 100001,
     "cable_car_progress": 100001
   },
   "rooms": {
