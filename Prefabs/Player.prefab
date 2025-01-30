@@ -2363,6 +2363,7 @@ MonoBehaviour:
   playerInputManager: {fileID: 588900340537133547}
   animator: {fileID: 2098515062}
   walkToPointSpeed: 2
+  doorTransitioning: 0
 --- !u!1 &7418277986815639229
 GameObject:
   m_ObjectHideFlags: 0
