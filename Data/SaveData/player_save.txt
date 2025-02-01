@@ -205,6 +205,10 @@
       "site_slots": [],
       "world_items": []
     },
+    "greenmountain_2": {
+      "site_slots": [],
+      "world_items": []
+    }
   },
   "player_inventory": {
     "width": 4,

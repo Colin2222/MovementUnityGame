@@ -2134,7 +2134,7 @@ MonoBehaviour:
   footstepMaxVolume: 0.2
   footstepMaxVariance: 0.25
   footstepMinVolume: 0.05
-  stillJumpMaxVariance: 0.1
+  stillJumpMaxVariance: 0.15
   background: {fileID: 5164874464771643848}
   step1: {fileID: 1353190296}
   step2: {fileID: 1353190298}

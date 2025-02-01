@@ -29,6 +29,7 @@
     "8":"mountainbase_right2",
     "9":"mountainbase_minicave1",
     "10":"mountainbase_right3",
-    "12":"greenmountain_1"
+    "12":"greenmountain_1",
+    "13":"greenmountain_2"
   }
 }
