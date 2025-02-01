@@ -284,7 +284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a102077a13caf5b4d8ae160afbd58c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 1
   type: 0
   cameraDistance: 7.5
   cameraOffset: {x: 0, y: 2}
