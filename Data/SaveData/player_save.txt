@@ -200,7 +200,11 @@
     "mountainbase_right3": {
       "site_slots": [],
       "world_items": []
-    }
+    },
+    "greenmountain_1": {
+      "site_slots": [],
+      "world_items": []
+    },
   },
   "player_inventory": {
     "width": 4,
