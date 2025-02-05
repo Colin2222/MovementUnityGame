@@ -15,6 +15,14 @@
     "100003":{
       "build_index":8,
       "entrance_index":1002
+    },
+    "100004":{
+      "build_index":10,
+      "entrance_index":1002
+    },
+    "100005":{
+      "build_index":15,
+      "entrance_index":1002
     }
   },
   "build_to_name":{
@@ -30,6 +38,8 @@
     "9":"mountainbase_minicave1",
     "10":"mountainbase_right3",
     "12":"greenmountain_1",
-    "13":"greenmountain_2"
+    "13":"greenmountain_2",
+    "14":"greenmountaincave_1",
+    "15":"greenmountain_3"
   }
 }

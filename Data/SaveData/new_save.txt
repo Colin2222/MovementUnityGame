@@ -7,11 +7,48 @@
     "started_game": true,
     "halfway_done": false,
     "finished_game": false,
-    "first_revelation": false
+    "first_revelation": false,
+    "first_dialogue_completed": false
+  },
+  "integer_markers": {
+    "cable_car_location": 100001,
+    "cable_car_progress": 100001
   },
   "rooms": {
     "basecamp": {
-      "site_slots": [],
+      "site_slots": [
+        {
+          "id": 100000,
+          "display_name": null,
+          "site": {
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": null
+          }
+        },
+        {
+          "id": 2,
+          "display_name": null,
+          "site": {
+            "name": "construction",
+            "inventories": [
+              {
+                "width": 1,
+                "height": 1,
+                "contents": [
+                  {
+                    "item_name": "wood_log",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ],
+            "additional_data": {
+              "site_construction": "chest"
+            }
+          }
+        }
+      ],
       "world_items": []
     },
     "basecamp_river": {
@@ -27,13 +64,32 @@
       "world_items": []
     },
     "guidestone_cave": {
-      "site_slots": [],
+      "site_slots": [
+        {
+          "id": 1,
+          "display_name": null,
+          "site": {
+            "name": "fill",
+            "inventories": null,
+            "additional_data": null
+          }
+        },
+      ],
       "world_items": []
     },
     "mountainbase_rightedge1": {
       "site_slots": [
         {
-          "id": 0,
+          "id": 100001,
+          "display_name": null,
+          "site": {
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": null
+          }
+        },
+        {
+          "id": 100002,
           "display_name": null,
           "site": {
             "name": "construction",
@@ -54,17 +110,8 @@
               }
             ],
             "additional_data": {
-              "site_construction": "pulleyanchor"
+              "site_construction": "cablecar"
             }
-          }
-        },
-        {
-          "id": 1,
-          "display_name": null,
-          "site": {
-            "name": "pulleyanchor",
-            "inventories": [],
-            "additional_data": {}
           }
         },
         {
@@ -137,11 +184,57 @@
       "world_items": []
     },
     "mountainbase_right2": {
-      "site_slots": [],
+      "site_slots": [
+        {
+          "id": 100003,
+          "display_name": null,
+          "site": {
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": {}
+          }
+        }
+      ],
       "world_items": []
     },
     "mountainbase_right3": {
+      "site_slots": [
+        {
+          "id": 100004,
+          "display_name": null,
+          "site": {
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": {}
+          }
+        }
+      ],
+      "world_items": []
+    },
+    "greenmountain_1": {
       "site_slots": [],
+      "world_items": []
+    },
+    "greenmountain_2": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "greenmountaincave_1": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "greenmountain_3": {
+      "site_slots": [
+        {
+          "id": 100005,
+          "display_name": null,
+          "site": {
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": {}
+          }
+        }
+      ],
       "world_items": []
     }
   },
@@ -151,7 +244,7 @@
     "contents": [
       {
         "item_name": "wood_log",
-        "quantity": 2
+        "quantity": 1
       },
       {
         "item_name": "iron_rod",
