@@ -71,6 +71,7 @@ public class SiteCableCar : Site
             entering = false;
             cableCarPresent = true;
             cableCarObj.transform.localPosition = cableCarOffset;
+            LoosenCableSprites();
         }
     }
 
@@ -205,6 +206,26 @@ public class SiteCableCar : Site
         }
     }
 
+    void TightenCableSprites(){
+        GameObject[] points = GameObject.FindGameObjectsWithTag("CableCarCable");
+        foreach(GameObject point in points){
+            SiteCableCarCable cablePoint = point.GetComponent<SiteCableCarCable>();
+            if(cablePoint.cableObj.activeSelf && cablePoint.cableAnimator != null){
+                cablePoint.cableAnimator.Play("cable_tighten");
+            }
+        }
+    }
+
+    void LoosenCableSprites(){
+        GameObject[] points = GameObject.FindGameObjectsWithTag("CableCarCable");
+        foreach(GameObject point in points){
+            SiteCableCarCable cablePoint = point.GetComponent<SiteCableCarCable>();
+            if(cablePoint.cableObj.activeSelf && cablePoint.cableAnimator != null){
+                cablePoint.cableAnimator.Play("cable_loose");
+            }
+        }
+    }
+
     protected override void EnterRange(){
         
     }
@@ -228,6 +249,7 @@ public class SiteCableCar : Site
         aimPointVelocity = (aimPoint.position - cableCarTopTransform.position).normalized * aimPointSpeed;
         cableCarAnimator.Play(cableCarDirection == 1 ? "cablecar_empty_moveright" : "cablecar_empty_moveleft");
         PlayerHub.Instance.stateManager.EnterTransformFollow(cableCarCenterTransform);
+        TightenCableSprites();
     }
 
     void FindEntryPoint(int direction){
@@ -246,6 +268,7 @@ public class SiteCableCar : Site
         entering = true;
         aimPointVelocity = (aimPoint.position - cableCarTopTransform.position).normalized * aimPointSpeed;
         ClearOtherCableCarsInScene();
+        TightenCableSprites();
     }
 
     void ClearOtherCableCarsInScene(){

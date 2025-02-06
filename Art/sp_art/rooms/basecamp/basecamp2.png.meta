@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: basecamp2_0
+      name: basecamp_cable1_taut1
       rect:
         serializedVersion: 2
         x: 119
@@ -126,7 +126,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basecamp2_1
+      name: basecamp_cable1_loose1
       rect:
         serializedVersion: 2
         x: 131
@@ -146,6 +146,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: basecamp_cable1_loose2
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 75
+        width: 687
+        height: 303
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd04ff94dae810478cec202238627aa
+      internalID: -1896235776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basecamp_cable1_loose3
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 409
+        width: 687
+        height: 303
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0817ed7dd53b8439eb27bad326b9f2
+      internalID: 1034545878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basecamp_cable1_taut2
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 821
+        width: 687
+        height: 303
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927c159763552074095ca24d88a6c486
+      internalID: 574411363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -157,8 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      basecamp2_1: -1641082429
-      basecamp2_0: -1632258290
+      basecamp_cable1_loose1: -1641082429
+      basecamp_cable1_loose2: -1896235776
+      basecamp_cable1_loose3: 1034545878
+      basecamp_cable1_taut1: -1632258290
+      basecamp_cable1_taut2: 574411363
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

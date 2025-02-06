@@ -6,4 +6,5 @@ public class SiteCableCarCable : MonoBehaviour
 {
     public int siteId;
     public GameObject cableObj;
+    public Animator cableAnimator;
 }
