@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: df00026eaa483074499a66efe2816312
+guid: 7e3f670ce3cf1e34c978bbbee5abccc1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mountainbase_rightedge2_cable_taut
+      name: mountainbase_right2_cable1_taut1
       rect:
         serializedVersion: 2
-        x: 44
-        y: 1650
-        width: 747
-        height: 375
+        x: 39
+        y: 1846
+        width: 324
+        height: 188
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 001d0fa2b7fbca341b4a2e6bf213e532
-      internalID: -659165031
+      spriteID: de13b345db9fb45489636be2791e3aab
+      internalID: 105425307
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mountainbase_rightedge2_cable_taut2
+      name: mountainbase_right2_cable1_taut2
       rect:
         serializedVersion: 2
-        x: 52
-        y: 1255
-        width: 747
-        height: 375
+        x: 48
+        y: 1636
+        width: 324
+        height: 188
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1916f1044349724ca6bbd79b723ba91
-      internalID: 2020829829
+      spriteID: 6f1c8bbd60b24ff4eb26b55afbcea5b1
+      internalID: 701132497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mountainbase_rightedge_cable2_taut1
+      name: mountainbase_right2_cable1_loose1
       rect:
         serializedVersion: 2
-        x: 856
-        y: 1943
-        width: 190
-        height: 67
+        x: 51
+        y: 1420
+        width: 323
+        height: 188
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 832f120442eb44b4fb90b89ff2e3f0a6
-      internalID: 1592282488
+      spriteID: 9b21bed31a71cc049afe81efa8fcbe03
+      internalID: 1153860147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mountainbase_rightedge_cable1_loose1
+      name: mountainbase_right2_cable1_loose2
       rect:
         serializedVersion: 2
-        x: 108
-        y: 860
-        width: 747
-        height: 375
+        x: 54
+        y: 1226
+        width: 323
+        height: 188
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13da43a7341f4dd4d8df60ed8d631be9
-      internalID: -2121006473
+      spriteID: 040aded4e91e2ea43a7122a4bd2aeb64
+      internalID: -466041094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mountainbase_rightedge_cable1_loose2
+      name: mountainbase_right2_cable1_loose3
       rect:
         serializedVersion: 2
-        x: 85
-        y: 474
-        width: 747
-        height: 375
+        x: 59
+        y: 1035
+        width: 323
+        height: 188
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3b14610a18ffa94ea558a96d487c388
-      internalID: 1945454770
+      spriteID: e51b8b9b525947b429712144dadbad21
+      internalID: -1896230212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mountainbase_rightedge_cable1_loose3
+      name: mountainbase_right2_cable2_taut1
       rect:
         serializedVersion: 2
-        x: 115
-        y: 71
-        width: 747
-        height: 375
+        x: 463
+        y: 1793
+        width: 185
+        height: 233
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5592fb0e374e4dc43b4130ea0f555786
-      internalID: 1327521413
+      spriteID: 31fc97d5eed2db245b9808059ce70800
+      internalID: -2137228807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mountainbase_rightedge_cable2_taut2
+      name: mountainbase_right2_cable2_taut2
       rect:
         serializedVersion: 2
-        x: 859
-        y: 1847
-        width: 190
-        height: 67
+        x: 480
+        y: 1546
+        width: 185
+        height: 233
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14104acad967ac54797c19db923648e5
-      internalID: -1181826446
+      spriteID: b765316d43561934d982b1b9ecd607cd
+      internalID: 1236873764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mountainbase_rightedge_cable2_loose1
+      name: mountainbase_right2_cable2_loose1
       rect:
         serializedVersion: 2
-        x: 864
-        y: 1767
-        width: 191
-        height: 68
+        x: 497
+        y: 1308
+        width: 185
+        height: 233
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,20 +266,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01a61ffbe5128da40abd5c914c47b39a
-      internalID: 1741093978
+      spriteID: a9c4579028021534881d08bd9a0e2b46
+      internalID: 197217809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mountainbase_rightedge_cable2_loose2
+      name: mountainbase_right2_cable2_loose2
       rect:
         serializedVersion: 2
-        x: 866
-        y: 1693
-        width: 191
-        height: 69
+        x: 508
+        y: 1064
+        width: 185
+        height: 233
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,113 +287,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70562d248bdcbc44daa724519e6cd88f
-      internalID: -1033134901
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mountainbase_rightedge_cable2_loose3
-      rect:
-        serializedVersion: 2
-        x: 871
-        y: 1609
-        width: 191
-        height: 69
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5b7fd96d787a244a930d1992dac2b8a
-      internalID: 1341224051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mountainbase_rightedge_cable3_taut1
-      rect:
-        serializedVersion: 2
-        x: 1183
-        y: 1834
-        width: 156
-        height: 146
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb4240d5c7309474bbc85eb6e533104c
-      internalID: 69550514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mountainbase_rightedge_cable3_taut2
-      rect:
-        serializedVersion: 2
-        x: 1378
-        y: 1841
-        width: 156
-        height: 146
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 541fd61e3bb5b474cbf5f66905d9ddb2
-      internalID: -906747026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mountainbase_rightedge2_cable3_loose1
-      rect:
-        serializedVersion: 2
-        x: 1194
-        y: 1640
-        width: 156
-        height: 146
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb4da1db30fcad641b7aaaeb4fa44d82
-      internalID: 1378700845
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mountainbase_rightedge2_cable3_loose2
-      rect:
-        serializedVersion: 2
-        x: 1409
-        y: 1646
-        width: 156
-        height: 146
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a346f276ffc1ddc4eba01bc6a5923669
-      internalID: 2085232753
+      spriteID: 1938200c5bbc55d4e9a2657ec0b46062
+      internalID: -662045230
       vertices: []
       indices: 
       edges: []
@@ -409,20 +304,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mountainbase_rightedge2_cable_taut: -659165031
-      mountainbase_rightedge_cable2_loose3: 1341224051
-      mountainbase_rightedge2_cable_taut2: 2020829829
-      mountainbase_rightedge_cable1_loose1: -2121006473
-      mountainbase_rightedge2_cable3_loose2: 2085232753
-      mountainbase_rightedge_cable1_loose3: 1327521413
-      mountainbase_rightedge_cable2_loose1: 1741093978
-      mountainbase_rightedge2_cable3_loose1: 1378700845
-      mountainbase_rightedge_cable1_loose2: 1945454770
-      mountainbase_rightedge_cable2_taut1: 1592282488
-      mountainbase_rightedge_cable2_taut2: -1181826446
-      mountainbase_rightedge_cable3_taut1: 69550514
-      mountainbase_rightedge_cable2_loose2: -1033134901
-      mountainbase_rightedge_cable3_taut2: -906747026
+      mountainbase_right2_cable1_loose3: -1896230212
+      mountainbase_right2_cable2_loose2: -662045230
+      mountainbase_right2_cable1_loose2: -466041094
+      mountainbase_right2_cable2_taut2: 1236873764
+      mountainbase_right2_cable2_loose1: 197217809
+      mountainbase_right2_cable1_taut2: 701132497
+      mountainbase_right2_cable1_taut1: 105425307
+      mountainbase_right2_cable2_taut1: -2137228807
+      mountainbase_right2_cable1_loose1: 1153860147
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
