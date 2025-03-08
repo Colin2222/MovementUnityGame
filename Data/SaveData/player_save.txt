@@ -11,8 +11,8 @@
     "first_dialogue_completed": false
   },
   "integer_markers": {
-    "cable_car_location": 100005,
-    "cable_car_progress": 100005
+    "cable_car_location": 100006,
+    "cable_car_progress": 100006
   },
   "rooms": {
     "basecamp": {
@@ -218,6 +218,23 @@
           }
         }
       ],
+      "world_items": []
+    },
+    "greenmountain_4": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "greenmountain_5": {
+      "site_slots": [
+        {
+          "id": 100006,
+          "display_name": null,
+          "site": {
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": null
+          }
+        }],
       "world_items": []
     }
   },

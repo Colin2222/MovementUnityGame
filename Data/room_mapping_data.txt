@@ -23,6 +23,10 @@
     "100005":{
       "build_index":15,
       "entrance_index":1002
+    },
+    "100006":{
+      "build_index":17,
+      "entrance_index":1002
     }
   },
   "build_to_name":{
@@ -40,6 +44,8 @@
     "12":"greenmountain_1",
     "13":"greenmountain_2",
     "14":"greenmountaincave_1",
-    "15":"greenmountain_3"
+    "15":"greenmountain_3",
+    "16":"greenmountain_4",
+    "17":"greenmountain_5"
   }
 }
