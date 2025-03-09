@@ -46,6 +46,8 @@
     "14":"greenmountaincave_1",
     "15":"greenmountain_3",
     "16":"greenmountain_4",
-    "17":"greenmountain_5"
+    "17":"greenmountain_5",
+    "18":"greenmountaincave_2",
+    "19":"greenmountaincave_3"
   }
 }
