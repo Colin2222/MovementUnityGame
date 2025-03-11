@@ -8,7 +8,8 @@
     "halfway_done": false,
     "finished_game": false,
     "first_revelation": false,
-    "first_dialogue_completed": false
+    "first_dialogue_completed": false,
+    "guidestone_1_viewed": false
   },
   "integer_markers": {
     "cable_car_location": 100006,

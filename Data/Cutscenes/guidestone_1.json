@@ -1,0 +1,38 @@
+{
+	"id":2,
+	"lock_player":true,
+	"duration":20.0,
+	"tasks":[
+		{
+			"id":0,
+			"trigger_time":1.5,
+			"anim_name":"PlayerWalking",
+			"custom_actions":[
+				{
+					"name":"SetHorizontalVelocityToTarget",
+					"parameters":[
+						-1.5, -68.75
+					]
+				}
+			]
+		},
+		{
+			"id":0,
+			"trigger_time":10.0,
+			"anim_name":"PlayerLookingBackgroundTurning",
+			"custom_actions":[]
+		},
+		{
+			"id":0,
+			"trigger_time":12.5,
+			"anim_name":"PlayerLookingBackgroundTouching",
+			"custom_actions":[]
+		},
+		{
+			"id":0,
+			"trigger_time":15.0,
+			"anim_name":"PlayerLookingBackgroundTouchedShrugging",
+			"custom_actions":[]
+		}
+	]
+}
