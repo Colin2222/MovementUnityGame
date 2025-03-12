@@ -33,6 +33,12 @@
 			"trigger_time":15.0,
 			"anim_name":"PlayerLookingBackgroundTouchedShrugging",
 			"custom_actions":[]
+		},
+		{
+			"id":0,
+			"trigger_time":19.0,
+			"anim_name":"PlayerLookingBackgroundTurningAround",
+			"custom_actions":[]
 		}
 	]
 }
