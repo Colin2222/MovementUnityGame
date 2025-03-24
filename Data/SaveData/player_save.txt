@@ -245,6 +245,10 @@
     "greenmountaincave_3": {
       "site_slots": [],
       "world_items": []
+    },
+    "greenmountain_6": {
+      "site_slots": [],
+      "world_items": []
     }
   },
   "player_inventory": {
