@@ -249,6 +249,10 @@
     "greenmountain_6": {
       "site_slots": [],
       "world_items": []
+    },
+    "orangemountain_1": {
+      "site_slots": [],
+      "world_items": []
     }
   },
   "player_inventory": {
