@@ -50,6 +50,7 @@
     "18":"greenmountaincave_2",
     "19":"greenmountaincave_3",
     "20":"greenmountain_6",
-    "21":"orangemountain_1"
+    "21":"orangemountain_1",
+    "22":"orangemountain_2"
   }
 }

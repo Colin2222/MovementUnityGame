@@ -253,6 +253,10 @@
     "orangemountain_1": {
       "site_slots": [],
       "world_items": []
+    },
+    "orangemountain_2": {
+      "site_slots": [],
+      "world_items": []
     }
   },
   "player_inventory": {
