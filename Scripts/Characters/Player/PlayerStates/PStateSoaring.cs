@@ -23,7 +23,6 @@ public class PStateSoaring : PState
 	
 	public override PState FixedUpdate(){
 		lastAirSpeed = rigidbody.velocity.x;
-		Debug.Log(rigidbody.velocity.y);
 		return this;
 	}
 	

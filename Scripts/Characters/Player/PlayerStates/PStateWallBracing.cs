@@ -13,7 +13,6 @@ public class PStateWallBracing : PState
 		wallSlideUpwardsCoefficient = attr.wallSlideUpwardsCoefficient;
 		wallSlideDownwardsCoefficient = attr.wallSlideDownwardsCoefficient;
 		this.wallCollisionVelocity = wallCollisionVelocity;
-		Debug.Log(wallCollisionVelocity);
 		wallBraceTimer = attr.wallBraceTime;
 		player.animator.Play("PlayerWallBracing");
 	}
@@ -64,7 +63,6 @@ public class PStateWallBracing : PState
 		// adjust position so player doesnt get caught on corners after flipping directions
 		player.transform.position = new Vector3(player.transform.position.x + (jumpDir == -1 ? -0.05f : 0.05f), player.transform.position.y, 0.0f);
 
-		Debug.Log("Jumping from wall brace with velocity: " + rigidbody.velocity);
 		return new PStateSoaring();
 	}
 	
@@ -90,7 +88,7 @@ public class PStateWallBracing : PState
 	}
 	
 	public override PState LeaveWall(){
-		player.animator.Play("PlayerSoaring");
+		player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
 
