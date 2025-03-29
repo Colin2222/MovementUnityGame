@@ -82,6 +82,7 @@ public class PStateWallPushing : PState
 	}
 	
 	public override PState LeaveWall(){
+		player.animator.Play("PlayerSoaring");
 		return new PStateSoaring();
 	}
 
