@@ -69,6 +69,10 @@ public class BottomCheck : MonoBehaviour
 				uprightHitbox.enabled = false;
 				flatHitbox.enabled = true;
 				break;
+			case 3:
+				uprightHitbox.enabled = true;
+				flatHitbox.enabled = false;
+				break;
 		}
 	}
 }

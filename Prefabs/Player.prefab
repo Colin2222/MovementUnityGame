@@ -1795,7 +1795,7 @@ MonoBehaviour:
     cornerMantleTime: 0.5833333
     cornerClimbTime: 0.9166667
     cornerGrabbingSpeedThreshold: 3.5
-    cornerClimbVertJoystickThreshold: 0.9
+    cornerClimbVertJoystickThreshold: 0.95
     cornerTripSpeedLoss: 0.9
     cornerTripTime: 0
     cornerTripMinimumSpeed: 3.5
@@ -2159,6 +2159,7 @@ GameObject:
   - component: {fileID: 6829769312154430463}
   - component: {fileID: 6829769312154430462}
   - component: {fileID: 6995906421274371275}
+  - component: {fileID: 7498028694493346020}
   m_Layer: 7
   m_Name: FrontCheck
   m_TagString: Untagged
@@ -2212,6 +2213,7 @@ MonoBehaviour:
   lowerHeadCheck: {fileID: 2818190872178831460}
   uprightHitbox: {fileID: 6829769312154430462}
   flatHitbox: {fileID: 6995906421274371275}
+  halfHitbox: {fileID: 7498028694493346020}
 --- !u!61 &6829769312154430462
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2263,6 +2265,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.65, y: 0.18}
+  m_EdgeRadius: 0
+--- !u!61 &7498028694493346020
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829769312154430460}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05, y: -0.35}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.14, y: 0.3}
   m_EdgeRadius: 0
 --- !u!1 &6829769312316459283
 GameObject:

@@ -265,6 +265,14 @@
     "orangemountain_4": {
       "site_slots": [],
       "world_items": []
+    },
+    "orangemountain_5": {
+      "site_slots": [],
+      "world_items": []
+    },
+    "orangemountain_6": {
+      "site_slots": [],
+      "world_items": []
     }
   },
   "player_inventory": {

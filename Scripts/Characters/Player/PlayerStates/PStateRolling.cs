@@ -22,6 +22,8 @@ public class PStateRolling : PState
 		runningJumpQueued = false;
 		jumpQueueTime = attr.groundRollJumpQueueTime;
 		rollCancelTime = attr.groundRollEdgeCancelTime;
+
+		physics.SwitchHitboxes(3);
 		
 		// calculate if roll will be slow or full-speed
 		float rollSpeedCalc = Mathf.Abs(hitSpeedX * 0.75f) + Mathf.Abs(hitSpeedY * 0.25f);
@@ -40,6 +42,7 @@ public class PStateRolling : PState
 			if(runningJumpQueued){
 				if(slowRoll){
 					player.animator.Play("PlayerJumpBracing");
+					physics.SwitchHitboxes(1);
 					return new PStateJumpBracing();
 				}
 				
@@ -53,8 +56,10 @@ public class PStateRolling : PState
 				rigidbody.AddForce(new Vector2(0,attr.jumpForce), ForceMode2D.Impulse);
 				player.soundInterface.PlayStillJump();
 				player.animator.Play("PlayerJumpingRunning");
+				physics.SwitchHitboxes(1);
 				return new PStateSoaring();
 			} else{
+				physics.SwitchHitboxes(1);
 				return new PStateMoving();
 			}
 		}
@@ -122,9 +127,11 @@ public class PStateRolling : PState
 			rigidbody.AddForce(new Vector2(0,attr.jumpForce), ForceMode2D.Impulse);
 			player.soundInterface.PlayStillJump();
 			player.animator.Play("PlayerJumpingRunning");
+			physics.SwitchHitboxes(1);
 			return new PStateSoaring();
 		}
 		player.animator.Play("PlayerSoaringStill");
+		physics.SwitchHitboxes(1);
 		return new PStateSoaring();
 	}
 	

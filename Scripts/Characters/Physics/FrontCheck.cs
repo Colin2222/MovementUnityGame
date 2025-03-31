@@ -23,6 +23,7 @@ public class FrontCheck : MonoBehaviour
 	
 	public BoxCollider2D uprightHitbox;
 	public BoxCollider2D flatHitbox;
+	public BoxCollider2D halfHitbox;
 	
 	void Start(){
 		mask = LayerMask.GetMask("PhysicsEnvironment");
@@ -85,10 +86,17 @@ public class FrontCheck : MonoBehaviour
 			case 1:
 				uprightHitbox.enabled = true;
 				flatHitbox.enabled = false;
+				halfHitbox.enabled = false;
 				break;
 			case 2:
 				uprightHitbox.enabled = false;
 				flatHitbox.enabled = true;
+				halfHitbox.enabled = false;
+				break;
+			case 3:
+				uprightHitbox.enabled = false;
+				flatHitbox.enabled = false;
+				halfHitbox.enabled = true;
 				break;
 		}
 	}
