@@ -39,11 +39,7 @@ public class PlayerHub : MonoBehaviour
     }
 	
 	void Start(){
-		AudioClip bgAudio = GameObject.FindWithTag("SceneManager").GetComponent<SceneManager>().bgAudio;
-		
-		if(bgAudio != null){
-			soundInterface.SetBackgroundAudio(bgAudio);
-		}
+		SceneManager sceneManager = GameObject.FindWithTag("SceneManager").GetComponent<SceneManager>();
 	}
 
     // Update is called once per frame

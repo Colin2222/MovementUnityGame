@@ -10,6 +10,10 @@ public class PlayerSoundInterface : MonoBehaviour
 	public float footstepMaxVariance;
 	public float footstepMinVolume;
 	public float stillJumpMaxVariance;
+	public float speedWindMultiplier;
+	float currentSpeedWindVolume;
+	public float minimumWindSpeedMagnitude;
+	public float speedWindLerp;
 	float footstepBasePitch1;
 	float footstepBasePitch2;
 	float footstepStartBasePitch;
@@ -28,18 +32,28 @@ public class PlayerSoundInterface : MonoBehaviour
 	public AudioSource wallImpact;
 	public AudioSource wallJump;
 	public AudioSource footScuff;
+	public AudioSource speedWind;
+
+	public AudioClip footScuffClip;
 	
 	void Start(){
 		footstepBasePitch1 = step1.pitch;
 		footstepBasePitch2 = step2.pitch;
 		footstepStartBasePitch = footScuff.pitch;
 		stillJumpBasePitch = stillJump.pitch;
+		/*
+		speedWind.loop = true;
+		speedWind.volume = 0.0f;
+		currentSpeedWindVolume = 0.0f;
+		speedWind.Play();
+		*/
 	}
-	
-	public void SetBackgroundAudio(AudioClip bgAudio){
-		background.clip = bgAudio;
-		background.loop = true;
-		background.Play();
+
+	void Update(){
+		/*
+		//currentSpeedWindVolume = Mathf.Lerp(currentSpeedWindVolume, Mathf.Clamp(-rb.velocity.y - minimumWindSpeedMagnitude, 0.0f, 10.0f) * speedWindMultiplier, Time.deltaTime * speedWindLerp);
+		//speedWind.volume = currentSpeedWindVolume;
+		*/
 	}
 	
 	public void PrintEvent(){
@@ -69,7 +83,8 @@ public class PlayerSoundInterface : MonoBehaviour
 	}
 	
 	public void PlayWallJump(){
-		//wallJump.Play();
+		footScuff.pitch = footstepStartBasePitch + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
+		footScuff.PlayOneShot(footScuffClip);
 	}
 	
 	public void PlayStillJumpLand(){

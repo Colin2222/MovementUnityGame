@@ -201,6 +201,9 @@ public class SessionManager : MonoBehaviour
 				sceneManager.transitionManager.TransitionLeft();
 			}
 
+			// trigger audio fade out
+			GameObject.FindWithTag("BackgroundSoundManager").GetComponent<BackgroundSoundManager>().SceneTransitionFadeOut();
+
 			// cue player buffer time on spawning so they dont ping pong load between rooms
 			StartCoroutine(player.RunSpawnBufferTimer());
 

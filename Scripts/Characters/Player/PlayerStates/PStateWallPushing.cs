@@ -55,6 +55,7 @@ public class PStateWallPushing : PState
 	
 	public override PState PressJump(){
 		player.animator.Play("PlayerWallLaunching");
+		player.soundInterface.PlayWallJump();
 		float jumpDir = Mathf.Sign(wallCollisionVelocity.x);
 		rigidbody.velocity = new Vector2((Mathf.Clamp(Mathf.Abs(wallCollisionVelocity.x) * attr.wallPushToLaunchHorizontalRetention, attr.wallLaunchMinimumHorizontal, 10000.0f)) * jumpDir, Mathf.Clamp((wallCollisionVelocity.y * -1.0f) + attr.wallPushToLaunchBoost, -1000f, attr.wallLaunchMaxVerticalSpeed));
 		if(jumpDir == -1){

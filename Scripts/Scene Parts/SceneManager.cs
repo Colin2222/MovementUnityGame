@@ -66,7 +66,7 @@ public class SceneManager : MonoBehaviour
 	public GameObject sitePrefabRegistryPrefab;
 	public SitePrefabRegistry sitePrefabRegistry;
 	
-	public AudioClip bgAudio;
+	public SoundManager soundManager;
 
 	public SiteManager siteManager;
 	public ItemManager itemManager;
