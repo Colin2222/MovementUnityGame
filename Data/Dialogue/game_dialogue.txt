@@ -24,6 +24,35 @@
           ]
         }
       ]
+    },
+    "guidestone_1": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Creature of instinct, creature of calculation, you have arrived due to your nature.",
+              "speaker": "Guidestone"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "You have done right, you have done wrong.",
+              "speaker": "Guidestone"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "You will always have done something wrong.",
+              "speaker": "Guidestone"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "The Golden City is 1600 miles due west.",
+              "speaker": "Guidestone"
+            }
+          ]
+        }
+      ]
     }
   }
 }

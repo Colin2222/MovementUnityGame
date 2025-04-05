@@ -7,6 +7,7 @@ using DialogueDataClasses;
 
 public class DialogueManager : MonoBehaviour
 {
+    public CutsceneManager cutsceneManager;
     public TMP_Text dialogueText;
     public TMP_Text nameText;
     public Image dialogueImage;
@@ -45,6 +46,9 @@ public class DialogueManager : MonoBehaviour
         nameImage.gameObject.SetActive(true);
 
         inDialogue = true;
+        if(cutsceneManager.inCutscene){
+            cutsceneManager.EnterDialogue();
+        }
     }
 
     public void EndDialogue()
@@ -56,6 +60,9 @@ public class DialogueManager : MonoBehaviour
 
         inDialogue = false;
         GameObject.FindWithTag("Player").GetComponent<PlayerHub>().inputManager.LeaveDialogue();
+        if(cutsceneManager.inCutscene){
+            cutsceneManager.ExitDialogue();
+        }
     }
 
     DialogueBranch FindValidBranch(List<DialogueBranch> branches){

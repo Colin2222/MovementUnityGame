@@ -11,7 +11,7 @@
 				{
 					"name":"SetHorizontalVelocityToTarget",
 					"parameters":[
-						-1.5, -68.75
+						-1.5, -76.75
 					]
 				}
 			]
@@ -32,6 +32,25 @@
 			"id":0,
 			"trigger_time":15.0,
 			"anim_name":"PlayerLookingBackgroundTouchedShrugging",
+			"custom_actions":[]
+		},
+		{
+			"id":-1,
+			"trigger_time":18.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"guidestone_1"
+					]
+				}
+			]
+		},
+		{
+			"id":0,
+			"trigger_time":18.0,
+			"anim_name":"PlayerLookingBackgroundTouched",
 			"custom_actions":[]
 		},
 		{

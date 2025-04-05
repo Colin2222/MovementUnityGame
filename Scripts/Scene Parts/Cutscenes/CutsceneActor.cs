@@ -17,7 +17,6 @@ public class CutsceneActor : MonoBehaviour
 	bool movingToTarget;
 	int targetDirection;
 	public string defaultAnim;
-	[System.NonSerialized]
 	public CutsceneManager cutsceneManager;
 	public bool isPlayer;
 	
@@ -105,5 +104,10 @@ public class CutsceneActor : MonoBehaviour
 	
 	public void SetCameraAnchorPoint(){
 		cutsceneManager.SwitchCameraAnchor(gameObject.transform);
+	}
+
+	// only available for one-per-scene DialogueMananger, cutscene actor -1
+	public void StartDialogue(string DialogueCode){
+		this.transform.parent.GetComponent<DialogueManager>().StartDialogue(DialogueCode);
 	}
 }

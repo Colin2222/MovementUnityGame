@@ -22,6 +22,8 @@ public class CutsceneManager : MonoBehaviour
 	[System.NonSerialized]
 	public bool inCutscene = false;
 	[System.NonSerialized]
+	public bool inDialogue = false;
+	[System.NonSerialized]
 	public bool playerLocked = false;
 	
 	Cutscene currentCutscene;
@@ -33,6 +35,7 @@ public class CutsceneManager : MonoBehaviour
 	int lastCutsceneLoaded = 0;
 	
 	public SceneManager sceneManager;
+	public CutsceneManagerInteractable interactable;
 	
 	void Awake(){
 		inCutscene = false;
@@ -68,19 +71,20 @@ public class CutsceneManager : MonoBehaviour
     {
 		// update timing of cutscene
         if(inCutscene){
-			cutsceneTimer += Time.deltaTime;
-			
-			while(currentTaskIndex < currentCutscene.tasks.Length && cutsceneTimer >= currentTask.trigger_time){
-				EvaluateTask(currentTask);
-			}
-			
-			// check for end of cutscene
-			if(cutsceneTimer >= cutsceneDuration){
-				sceneManager.player.UnlockPlayer();
-				sceneManager.player.inputManager.ExitCutscene();
-				inCutscene = false;
-				currentCutscene.active = false;
-				SwitchCameraAnchor(sceneManager.player.gameObject.transform);
+			if(!inDialogue){
+				cutsceneTimer += Time.deltaTime;
+					while(currentTaskIndex < currentCutscene.tasks.Length && cutsceneTimer >= currentTask.trigger_time){
+					EvaluateTask(currentTask);
+				}
+				
+				// check for end of cutscene
+				if(cutsceneTimer >= cutsceneDuration){
+					sceneManager.player.UnlockPlayer();
+					sceneManager.player.inputManager.ExitCutscene();
+					inCutscene = false;
+					currentCutscene.active = false;
+					SwitchCameraAnchor(sceneManager.player.gameObject.transform);
+				}
 			}
 		}
     }
@@ -93,9 +97,16 @@ public class CutsceneManager : MonoBehaviour
 				// do any custom actions
 				foreach(CustomAction action in task.custom_actions){
 					MethodInfo method = actor.GetType().GetMethod(action.name);
-					object[] oParameters = new object[action.parameters.Length];
-					Array.Copy(action.parameters, oParameters, action.parameters.Length);
-					method.Invoke(actor, oParameters);
+					// pass string parameters if exists, otherwise pass float parameters
+					if(action.string_parameters != null && action.string_parameters.Length > 0){
+						object[] sParameters = new object[action.string_parameters.Length];
+						Array.Copy(action.string_parameters, sParameters, action.string_parameters.Length);
+						method.Invoke(actor, sParameters);
+					} else{
+						object[] oParameters = new object[action.parameters.Length];
+						Array.Copy(action.parameters, oParameters, action.parameters.Length);
+						method.Invoke(actor, oParameters);
+					}
 				}
 				
 				// do the animation
@@ -152,5 +163,19 @@ public class CutsceneManager : MonoBehaviour
 		if(vcam != null){
 			vcam.m_Follow = anchor;
 		}
+	}
+
+	public void EnterDialogue(){
+		sceneManager.player.stateManager.EnterCutsceneDialogue(interactable);
+		sceneManager.player.inputManager.inUI = true;
+		inDialogue = true;
+	}
+
+	public void ExitDialogue(){
+		sceneManager.player.stateManager.ResetPlayerNoAnim();
+		sceneManager.player.inputManager.EnterCutscene();
+		sceneManager.player.LockPlayer();
+		sceneManager.player.inputManager.inUI = false;
+		inDialogue = false;
 	}
 }

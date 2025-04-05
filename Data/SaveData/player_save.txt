@@ -71,8 +71,8 @@
           "display_name": null,
           "site": {
             "name": "fill",
-            "inventories": null,
-            "additional_data": null
+            "inventories": [],
+            "additional_data": {}
           }
         }
       ],
@@ -235,7 +235,8 @@
             "inventories": null,
             "additional_data": null
           }
-        }],
+        }
+      ],
       "world_items": []
     },
     "greenmountaincave_2": {

@@ -17,7 +17,8 @@ public class PlayerInputManager : MonoBehaviour
 	bool overriden = false;
 	
 	// in ui
-	bool inUI = false;
+	[System.NonSerialized]
+	public bool inUI = false;
 
 	// in cutscene
 	bool inCutscene = false;
@@ -93,6 +94,8 @@ public class PlayerInputManager : MonoBehaviour
 			}
 		} else if(inUI){
 			HandleMenu();
+		} else if(inCutscene){
+			
 		}
 		
         jumpJustPressed = false;
@@ -148,7 +151,7 @@ public class PlayerInputManager : MonoBehaviour
 	// has to just reset player to idle state to prevent loop between stateManager MenuExit and NPCInteractable LeaveInteraction and DialogueManager EndDialogue 
 	// shits fucked
 	public void LeaveDialogue(){
-		stateManager.ResetPlayer();
+		stateManager.ResetPlayerNoAnim();
 		locked = false;
 		inUI = false;
 	}

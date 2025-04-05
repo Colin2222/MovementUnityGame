@@ -47,6 +47,8 @@ MonoBehaviour:
   sceneManager: {fileID: 4845049507479276210}
   transitionShape: {fileID: 0}
   exitPos: {fileID: 0}
+  leftPos: {fileID: 0}
+  rightPos: {fileID: 0}
   transitionSpeed: 2400
   transitionTime: 0.5
 --- !u!1 &988680045
@@ -231,6 +233,103 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneManager: {fileID: 4845049507479276210}
   playerSpawnTransform: {fileID: 4845049506762891137}
+--- !u!1 &2355708487554860689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 931677143465347649}
+  - component: {fileID: 5651513659307620486}
+  m_Layer: 0
+  m_Name: DM CS Actor
+  m_TagString: CutsceneActor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &931677143465347649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2355708487554860689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7742234726561147950}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5651513659307620486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2355708487554860689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c310cb3d91a9554db60cddb2554591a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  id: -1
+  rb: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  deactivatedOnStart: 0
+  defaultAnim: 
+  cutsceneManager: {fileID: 3206585092610622937}
+  isPlayer: 0
+--- !u!1 &3977887024949435267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6047492266521151808}
+  - component: {fileID: 4578447521069905888}
+  m_Layer: 0
+  m_Name: Interactable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6047492266521151808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3977887024949435267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8206124179566576502}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4578447521069905888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3977887024949435267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28d9c2c53d0211b46a9763a4efa806ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 3052486192322220350}
 --- !u!1 &4845049506497319639
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +523,7 @@ GameObject:
   - component: {fileID: 3206585092610622937}
   m_Layer: 0
   m_Name: CutsceneManager
-  m_TagString: Untagged
+  m_TagString: CutsceneManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -440,7 +539,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6047492266521151808}
   m_Father: {fileID: 4845049507479276211}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -458,6 +558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vcam: {fileID: 0}
   sceneManager: {fileID: 4845049507479276210}
+  interactable: {fileID: 4578447521069905888}
 --- !u!1 &5832255010354565303
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +587,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 931677143465347649}
   m_Father: {fileID: 4845049507479276211}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -502,6 +604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73f03f3d1ca29e746aace19825f2d5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cutsceneManager: {fileID: 3206585092610622937}
   dialogueText: {fileID: 0}
   nameText: {fileID: 0}
   dialogueImage: {fileID: 0}

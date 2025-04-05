@@ -18,6 +18,13 @@ public class PStateIdle : PState
 		player.animator.Play("PlayerIdle");
 		rigidbody.gravityScale = attr.gravityScale;
 	}
+
+	public PStateIdle(bool resetAnimation){
+		if(resetAnimation){
+			player.animator.Play("PlayerIdle");
+		}
+		rigidbody.gravityScale = attr.gravityScale;
+	}
 	
     public override PState Update(){
 		timeSinceLastGroundHit += Time.deltaTime;

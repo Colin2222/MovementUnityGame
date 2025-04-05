@@ -28,6 +28,9 @@ public class PlayerStateManager : MonoBehaviour
 	public void ResetPlayer(){
 		currentState = new PStateIdle();
 	}
+	public void ResetPlayerNoAnim(){
+		currentState = new PStateIdle(false);
+	}
 	
 	public void Move(float horizontal, float vertical){
 		currentState = currentState.Move(horizontal, vertical);
@@ -155,5 +158,9 @@ public class PlayerStateManager : MonoBehaviour
 			player.physics.gameObject.SetActive(true);
 			ResetPlayer();
 		}
+	}
+
+	public void EnterCutsceneDialogue(Interactable interactable){
+		currentState = new PStateInteracting(interactable);
 	}
 }

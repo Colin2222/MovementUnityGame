@@ -22,6 +22,7 @@ public class CutsceneTask{
 public class CustomAction{
 	public string name;
 	public float[] parameters;
+	public string[] string_parameters;
 }
 
 
