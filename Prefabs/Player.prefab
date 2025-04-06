@@ -2232,6 +2232,7 @@ MonoBehaviour:
   footstepMaxVolume: 0.2
   footstepMaxVariance: 0.25
   footstepMinVolume: 0.05
+  lightstepVolume: 0.09
   stillJumpMaxVariance: 0.15
   speedWindMultiplier: 0.015
   minimumWindSpeedMagnitude: 5

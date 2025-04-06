@@ -9,6 +9,7 @@ public class PlayerSoundInterface : MonoBehaviour
 	public float footstepMaxVolume;
 	public float footstepMaxVariance;
 	public float footstepMinVolume;
+	public float lightstepVolume;
 	public float stillJumpMaxVariance;
 	public float speedWindMultiplier;
 	float currentSpeedWindVolume;
@@ -68,6 +69,18 @@ public class PlayerSoundInterface : MonoBehaviour
 	
 	public void PlayStep2(){
 		step2.volume = Mathf.Clamp(Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed) * footstepMaxVolume, footstepMinVolume, 10f);
+		step2.pitch = footstepBasePitch2 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
+		step2.Play();
+	}
+
+	public void PlayLightStep1(){
+		step1.volume = lightstepVolume;
+		step1.pitch = footstepBasePitch1 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
+		step1.Play();
+	}
+
+	public void PlayLightStep2(){
+		step2.volume = lightstepVolume;
 		step2.pitch = footstepBasePitch2 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
 		step2.Play();
 	}

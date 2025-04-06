@@ -23,7 +23,7 @@ public class BackgroundSoundManager : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        musicManager.PlaySong();
+        //musicManager.PlaySong();
     }
 
     // Update is called once per frame
