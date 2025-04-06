@@ -12,7 +12,7 @@
     "guidestone_1_viewed": false
   },
   "integer_markers": {
-    "cable_car_location": 100006,
+    "cable_car_location": 100000,
     "cable_car_progress": 100006
   },
   "rooms": {

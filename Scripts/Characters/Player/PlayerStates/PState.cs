@@ -31,7 +31,7 @@ public abstract class PState
 	public abstract PState ToggleJournal();
 	public abstract PState ToggleInventory();
 	
-	protected void SetDirection(float horizontal){
+	public void SetDirection(float horizontal){
 		if(horizontal > 0){
 			if(player.transform.eulerAngles.y == 180){
 				player.transform.eulerAngles = new Vector2(0,0);

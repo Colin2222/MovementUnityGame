@@ -163,4 +163,8 @@ public class PlayerStateManager : MonoBehaviour
 	public void EnterCutsceneDialogue(Interactable interactable){
 		currentState = new PStateInteracting(interactable);
 	}
+
+	public void SetDirection(float horizontal){
+		currentState.SetDirection(horizontal);
+	}
 }

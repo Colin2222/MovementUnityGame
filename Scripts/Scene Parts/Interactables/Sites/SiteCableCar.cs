@@ -21,6 +21,8 @@ public class SiteCableCar : Site
     int buildIndex;
     int nextEntranceNumber;
     public Transform walkTransform;
+    public float walkEndTime;
+    bool enterAnimationPlayed = false;
 
     public Transform aimPoint;
     public float aimPointSpeed;
@@ -51,6 +53,11 @@ public class SiteCableCar : Site
     void Update(){
         if(transitioning){
             transitionTimer += Time.deltaTime;
+            if(!enterAnimationPlayed && transitionTimer >= walkEndTime){
+                PlayerHub.Instance.stateManager.SetDirection(cableCarDirection);
+                PlayerHub.Instance.animator.Play("PlayerCabinCarEntering");
+                enterAnimationPlayed = true;
+            }
             if(transitionTimer >= transitionTime){
                 transitioning = false;
                 // transition to scene with data set previously
@@ -154,6 +161,7 @@ public class SiteCableCar : Site
 
         // start timer before transitioning
         transitioning = true;
+        enterAnimationPlayed = false;
         PlayerHub.Instance.overrideManager.WalkToPoint(walkTransform.position.x);
 
         // determine aim point for cabin movement
@@ -249,6 +257,7 @@ public class SiteCableCar : Site
         aimPointVelocity = (aimPoint.position - cableCarTopTransform.position).normalized * aimPointSpeed;
         cableCarAnimator.Play(cableCarDirection == 1 ? "cablecar_empty_moveright" : "cablecar_empty_moveleft");
         PlayerHub.Instance.stateManager.EnterTransformFollow(cableCarCenterTransform);
+        PlayerHub.Instance.animator.Play("PlayerCabinCarShiftInto");
         TightenCableSprites();
     }
 

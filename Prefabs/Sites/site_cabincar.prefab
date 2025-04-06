@@ -425,6 +425,7 @@ MonoBehaviour:
   sceneTransition: {fileID: 6535332746446075181}
   transitionTime: 3
   walkTransform: {fileID: 9120363426273050179}
+  walkEndTime: 0.75
   aimPoint: {fileID: 0}
   aimPointSpeed: 3
   moveStartTime: 1.5
