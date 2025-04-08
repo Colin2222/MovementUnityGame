@@ -230,6 +230,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: dialogue_panel1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 665
+        width: 127
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d580de2c830b13149accd2b383a5357b
+      internalID: 501318380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialogue_speakerbox1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 655
+        width: 43
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2951e228e70766448bf32c66e59da15e
+      internalID: -1840213550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -241,12 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      dialogue_speakerbox1: -1840213550
       icon_mapselection: 1828465954
       minimap_small: 2004556338
       icon_mapoption: -957172366
       minimap_large: -2131008963
       icon_playerhead: 1798248183
       large_panel: -1776213181
+      dialogue_panel1: 501318380
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
