@@ -1,0 +1,29 @@
+{
+	"id":2,
+	"lock_player":false,
+	"duration":10.0,
+	"tasks":[
+		{
+			"id":4,
+			"trigger_time":0.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"ToggleActivation",
+					"parameters":[]
+				}
+			]
+		},
+		{
+			"id":4,
+			"trigger_time":9.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"ToggleActivation",
+					"parameters":[]
+				}
+			]
+		}
+	]
+}

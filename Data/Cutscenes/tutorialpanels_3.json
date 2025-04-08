@@ -1,7 +1,7 @@
 {
 	"id":1,
 	"lock_player":false,
-	"duration":12.5,
+	"duration":16,
 	"tasks":[
 		{
 			"id":1,
@@ -16,17 +16,6 @@
 		},
 		{
 			"id":1,
-			"trigger_time":5,
-			"anim_name":"",
-			"custom_actions":[
-				{
-					"name":"ToggleActivation",
-					"parameters":[]
-				}
-			]
-		},
-		{
-			"id":2,
 			"trigger_time":7.5,
 			"anim_name":"",
 			"custom_actions":[
@@ -38,7 +27,18 @@
 		},
 		{
 			"id":2,
-			"trigger_time":12.5,
+			"trigger_time":10,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"ToggleActivation",
+					"parameters":[]
+				}
+			]
+		},
+		{
+			"id":2,
+			"trigger_time":15,
 			"anim_name":"",
 			"custom_actions":[
 				{

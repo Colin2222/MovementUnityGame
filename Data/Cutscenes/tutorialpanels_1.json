@@ -1,7 +1,7 @@
 {
 	"id":1,
 	"lock_player":false,
-	"duration":25.0,
+	"duration":35.0,
 	"tasks":[
 		{
 			"id":1,
@@ -60,7 +60,7 @@
 		},
 		{
 			"id":3,
-			"trigger_time":25,
+			"trigger_time":22.5,
 			"anim_name":"",
 			"custom_actions":[
 				{
