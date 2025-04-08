@@ -19,6 +19,7 @@ public class PlayerSoundInterface : MonoBehaviour
 	float footstepBasePitch2;
 	float footstepStartBasePitch;
 	float stillJumpBasePitch;
+	public float cornerClimbBasePitch;
 	
 	public AudioSource background;
 	
@@ -34,6 +35,7 @@ public class PlayerSoundInterface : MonoBehaviour
 	public AudioSource wallJump;
 	public AudioSource footScuff;
 	public AudioSource speedWind;
+	public AudioSource clothesRustle;
 
 	public AudioClip footScuffClip;
 	
@@ -102,6 +104,8 @@ public class PlayerSoundInterface : MonoBehaviour
 	
 	public void PlayStillJumpLand(){
 		stillJumpLand.Play();
+		clothesRustle.pitch = footstepBasePitch1 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
+		clothesRustle.Play();
 	}
 	
 	public void PlayRunningJumpLand(){
@@ -117,7 +121,8 @@ public class PlayerSoundInterface : MonoBehaviour
 	}
 	
 	public void PlayCornerClimb(){
-		//cornerClimb.Play();
+		clothesRustle.pitch = cornerClimbBasePitch + (Random.Range(-1.0f, 1.0f) * stillJumpMaxVariance);
+		clothesRustle.Play();
 	}
 	
 	public void PlayStillJump(){
