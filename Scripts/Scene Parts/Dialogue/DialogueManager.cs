@@ -30,11 +30,13 @@ public class DialogueManager : MonoBehaviour
         currentDialogue = sessionManager.GetDialogueTree(dialogueCode);
         if(currentDialogue == null){
             Debug.Log("Dialogue not found");
+            EndDialogue();
             return;
         }
         currentBranch = FindValidBranch(currentDialogue.branches);
         if(currentBranch == null){
             Debug.Log("No valid branch found");
+            EndDialogue();
             return;
         }
         currentNodeIndex = 0;
