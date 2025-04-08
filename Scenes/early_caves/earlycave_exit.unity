@@ -601,11 +601,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849605207693564693, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: bgAudioPitch
-      value: 0.75
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4849605207693564693, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: bgAudioVolume
-      value: 0.09
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4883283184172750917, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: journalUI

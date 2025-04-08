@@ -2030,11 +2030,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849605207693564693, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: bgAudioPitch
-      value: 0.6
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 4849605207693564693, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: bgAudioVolume
-      value: 0.07
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4883283184172750917, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: journalUI
@@ -4259,6 +4259,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 103152326276677874, guid: 1cd4a9efb09793b4eaadaa5f6445048e, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 609358186446005788, guid: 1cd4a9efb09793b4eaadaa5f6445048e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4346,6 +4350,10 @@ PrefabInstance:
     - target: {fileID: 609358186446005792, guid: 1cd4a9efb09793b4eaadaa5f6445048e, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409961574647332188, guid: 1cd4a9efb09793b4eaadaa5f6445048e, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cd4a9efb09793b4eaadaa5f6445048e, type: 3}
