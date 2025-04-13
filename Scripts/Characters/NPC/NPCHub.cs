@@ -7,6 +7,7 @@ public class NPCHub : MonoBehaviour
     public string npcName;
     public Rigidbody2D rigidbody;
     public NPCReskinManager reskinner;
+    public Animator animator;
     
     // Start is called before the first frame update
     void Start()

@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 5918250403693528297}
   - component: {fileID: 4137366980755379108}
   - component: {fileID: 4960880321335613832}
+  - component: {fileID: 5918250402639671088}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -165,6 +166,7 @@ Transform:
   - {fileID: 2992560240800992956}
   - {fileID: 3554695209038880988}
   - {fileID: 8849807701244673812}
+  - {fileID: 4182745494103924871}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -235,6 +237,7 @@ MonoBehaviour:
   npcName: blacksmith
   rigidbody: {fileID: 4960880321335613832}
   reskinner: {fileID: 8229164442947845939}
+  animator: {fileID: 0}
 --- !u!50 &4960880321335613832
 Rigidbody2D:
   serializedVersion: 4
@@ -256,6 +259,26 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &5918250402639671088
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5918250403693528296}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 452449b4dfccdb04e877ef3a02bbd113, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6599872469409202777
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,3 +362,55 @@ Transform:
   m_Father: {fileID: 5918250403693528294}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8034152673608330521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4182745494103924871}
+  - component: {fileID: 3953116675188177996}
+  m_Layer: 0
+  m_Name: CutsceneActor
+  m_TagString: CutsceneActor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4182745494103924871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8034152673608330521}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5918250403693528294}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3953116675188177996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8034152673608330521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c310cb3d91a9554db60cddb2554591a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5918250402639671088}
+  id: 1
+  rb: {fileID: 4960880321335613832}
+  spriteRenderer: {fileID: 5918250403693528297}
+  deactivatedOnStart: 0
+  defaultAnim: blacksmith_idle
+  cutsceneManager: {fileID: 0}
+  isPlayer: 0
