@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 using UnityEditor.UIElements;
 using System.IO;
 using System.Collections.Generic;
+using System;
 
 public class TreeSpritesheetGenerator : EditorWindow
 {
@@ -54,7 +55,7 @@ public class TreeSpritesheetGenerator : EditorWindow
 
         inputAtlasField = new TextField();
 		inputAtlasField.label = "Treebranch atlas image (include extension)";
-		inputAtlasField.value = "Assets\\Art\\AutomationReference\\treebranch_atlas.png";
+		inputAtlasField.value = "Assets\\Art\\AutomationReference\\treebranch_atlas_highlights.png";
 		root.Add(inputAtlasField);
 
         inputBaseField = new TextField();
@@ -117,9 +118,7 @@ public class TreeSpritesheetGenerator : EditorWindow
         Color size3ColorTransparent = new Color(size3Color.r, size3Color.g, size3Color.b, 0.4f);
         Color sizeF0ColorTransparent = new Color(sizeF0Color.r, sizeF0Color.g, sizeF0Color.b, 0.4f);
         Color sizeF1ColorTransparent = new Color(sizeF1Color.r, sizeF1Color.g, sizeF1Color.b, 0.4f);
-
-        int frameCounter = 0;
-
+        
         // Load the tree base texture
         string basePath = inputBaseField.value;
         Texture2D baseTexture = AssetDatabase.LoadAssetAtPath<Texture2D>(basePath);
@@ -150,17 +149,18 @@ public class TreeSpritesheetGenerator : EditorWindow
                         branchData.xPos = x;
                         branchData.yPos = y;
                         branchData.direction = pixelColor.a < 1.0f ? -1 : 1;
-                        branchData.currentFrame = Random.Range(0, NUM_KEYFRAMES / NUM_FRAMESTATES);
+                        branchData.currentFrame = UnityEngine.Random.Range(0, NUM_KEYFRAMES / NUM_FRAMESTATES);
                         if(branchData.direction == -1){
                             branchData.currentFrame = (branchData.currentFrame + (NUM_KEYFRAMES / 2)) % NUM_KEYFRAMES;
                         }
-                        branchData.sizeType = Random.Range(0, NUM_FRAMETYPES);
+                        branchData.sizeType = UnityEngine.Random.Range(0, NUM_FRAMETYPES);
                         branchData.size = sizeFound;
                         branchDataList.Add(branchData);
                     }
                 }
             }
         }
+        ShuffleList(branchDataList);
 
         // Load the atlas texture
         string atlasPath = inputAtlasField.value;
@@ -229,6 +229,19 @@ public class TreeSpritesheetGenerator : EditorWindow
 		} else{
 			Debug.Log("Did not save due to incomplete output filepath");
 		}
+    }
+
+    void ShuffleList<T>(List<T> list) {
+        System.Random random = new System.Random();
+        int n = list.Count;
+
+        // Start from the end and swap elements with a random one
+        for (int i = n - 1; i > 0; i--) {
+            int j = random.Next(0, i + 1);
+            T temp = list[i];
+            list[i] = list[j];
+            list[j] = temp;
+        }
     }
 }
 
