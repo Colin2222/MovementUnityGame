@@ -170,6 +170,11 @@ public class SiteCableCar : Site
         FindAimPoint(cableCarDirection);
     }
 
+    public override void MenuInteract()
+    {
+        
+    }
+
     public override void LoadSite(SavedSite savedSite){
         if(SessionManager.Instance.CheckCableCar(id)){
             ActivateCableCar();

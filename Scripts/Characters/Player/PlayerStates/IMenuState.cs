@@ -9,5 +9,6 @@ public interface IMenuState
     void MenuRight();
     void MenuSelect();
     void MenuDrop();
+    void MenuInteract();
     PState MenuExit();
 }

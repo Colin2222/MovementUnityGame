@@ -96,6 +96,10 @@ public class PStateViewingInventory : PState, IMenuState
 		inventoryHandler.DropCurrentItem();
 	}
 
+	public void MenuInteract(){
+		
+	}
+
 	public PState MenuExit(){
 		inventoryHandler.ToggleInventory();
 		return new PStateIdle();

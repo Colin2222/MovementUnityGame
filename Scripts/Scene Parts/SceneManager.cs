@@ -71,11 +71,15 @@ public class SceneManager : MonoBehaviour
 	public SiteManager siteManager;
 	public ItemManager itemManager;
 	public DialogueManager dialogueManager;
+
+	[System.NonSerialized]
+	public GameObject mainCameraObj;
 	
     GameObject playerStateObjectTest;
     GameObject playerObjectTest;
     GameObject persistentStateTest;
 	GameObject sessionManagerTest;
+	GameObject mainCameraTest;
 	
 	void Awake(){
 		// SINGLETON PATTERN
@@ -180,6 +184,7 @@ public class SceneManager : MonoBehaviour
 			block.GetComponent<SpriteRenderer>().color = obstacleColor;
 		}
 		GameObject.FindWithTag("MainCamera").GetComponent<Camera>().backgroundColor = backgroundColor;
+		mainCameraObj = GameObject.FindWithTag("MainCamera");
 		
 		journalManager.SeekUI();
 		

@@ -5501,6 +5501,237 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: currentplayer_257
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963da25d5ee255f469469241428e25a5
+      internalID: 1540721034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_258
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0337c6af29aa81047bb28c74ced96ba8
+      internalID: 353588741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_259
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf972322c68cb8c4a90384569bb3e691
+      internalID: 650647755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_260
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c56318c2d04c6446a13709d6a73b86f
+      internalID: 1678935674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_261
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 945025a091560c74b8b95b3b420f9e66
+      internalID: -1127886865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_262
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43301b16e828e04787f0b2b4f849ec0
+      internalID: -1919414395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_263
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539a99ce9f80dfd49a6b19280b8384ab
+      internalID: 1408062397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_264
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a87cac40a9f832458b29b4a1061f2a2
+      internalID: 861830821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_265
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cea3741224b56044a96da8393a17cbc
+      internalID: 2057138018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_266
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cef9543fe1ea1a40aa5915ff956b408
+      internalID: -962311572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_267
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2bff3c281a4e1241bda31499f0d4bd4
+      internalID: -1965815605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -5534,6 +5765,8 @@ TextureImporter:
       climber_58: -1937730778
       climber_189: 1878059167
       climber_155: 774294534
+      currentplayer_266: -962311572
+      currentplayer_263: 1408062397
       climber_70: -979908883
       climber_226: -1385978959
       climber_50: 735020032
@@ -5546,6 +5779,7 @@ TextureImporter:
       climber_221: -1028793976
       climber_78: -41287734
       climber_153: 121345252
+      currentplayer_258: 353588741
       climber_223: -44931511
       climber_246: -1357331888
       climber_242: -1252333848
@@ -5574,6 +5808,7 @@ TextureImporter:
       climber_99: 1359331772
       climber_122: 167602481
       climber_126: 954349324
+      currentplayer_257: 1540721034
       climber_134: 1271992536
       climber_212: 1976643730
       climber_11: -828391627
@@ -5587,6 +5822,7 @@ TextureImporter:
       climber_45: 426345408
       climber_213: 683500565
       climber_245: -1378116771
+      currentplayer_259: 650647755
       climber_128: -1166522353
       climber_119: 1682304820
       climber_127: -286775658
@@ -5648,6 +5884,7 @@ TextureImporter:
       climber_17: -1277290294
       climber_253: -307397109
       climber_168: -1685946920
+      currentplayer_260: 1678935674
       climber_251: 1343550425
       climber_220: 1378764510
       climber_216: -1469176241
@@ -5702,10 +5939,13 @@ TextureImporter:
       climber_192: -1208345355
       climber_146: 926415180
       climber_205: 1976534337
+      currentplayer_261: -1127886865
+      currentplayer_264: 861830821
       climber_82: -1986966335
       climber_29: -129850156
       climber_211: -1531985370
       climber_159: -1536118796
+      currentplayer_267: -1965815605
       climber_229: -1300980021
       climber_0: -1035249889
       climber_7: 960599566
@@ -5745,11 +5985,13 @@ TextureImporter:
       climber_203: 544760141
       climber_111: -1199188939
       climber_152: -1474034807
+      currentplayer_265: 2057138018
       climber_57: 1638449106
       climber_103: -1758564110
       climber_44: -792855845
       climber_90: 1316894154
       climber_49: -1501950211
+      currentplayer_262: -1919414395
       climber_113: -1030253905
       climber_27: 279528938
       climber_83: 2114387517

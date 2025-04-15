@@ -101,6 +101,10 @@ public class PStateInteracting : PState, IMenuState
 		
 	}
 
+	public void MenuInteract(){
+		interactable.MenuInteract();
+	}
+
 	public PState MenuExit(){
         interactable.LeaveInteraction();
 

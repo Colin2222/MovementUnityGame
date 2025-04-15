@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fdfce4eba0613134a9753a697ffbeb47
+guid: da84094bb259a344081aaea68218c2b5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,7 +44,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
@@ -105,148 +105,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: basecamp1_0
+      name: treecutscene_0
       rect:
         serializedVersion: 2
-        x: 1027
-        y: 1084
-        width: 107
-        height: 107
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88b528b5aa5250743a593d025a7b4923
-      internalID: 1294795392
+      spriteID: 15dbbb242de28334a87360b6b77ea1f2
+      internalID: 1799145870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basecamp1_1
+      name: treecutscene_1
       rect:
         serializedVersion: 2
-        x: 92
-        y: 875
-        width: 1549
-        height: 176
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec59cfc415d19d54898f151c722276cc
-      internalID: 1858714400
+      spriteID: 91c7af710ab4a6b45a6446bfb9334aee
+      internalID: -1191505233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basecamp1_2
+      name: treecutscene_2
       rect:
         serializedVersion: 2
-        x: 116
-        y: 674
-        width: 1520
-        height: 191
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94728413408d8864b8a0ddc8bc28c40a
-      internalID: -1131653835
+      spriteID: 1b3874f621d21df46bee56a515bb96b0
+      internalID: -1887234496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basecamp1_3
+      name: treecutscene_3
       rect:
         serializedVersion: 2
-        x: 113
-        y: 461
-        width: 1577
-        height: 198
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5de4ad6c921988418ebf43f4dac0baf
-      internalID: 1555367098
+      spriteID: 7dc64b6286f6b124dbca4d582ba67830
+      internalID: 423036128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basecamp1_4
+      name: treecutscene_4
       rect:
         serializedVersion: 2
-        x: 80
-        y: 136
-        width: 1631
-        height: 260
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f8f76afea239d740a70d90ad36476c8
-      internalID: -1909433872
+      spriteID: c365473f4a796004cada888fd786269a
+      internalID: 716023977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basecamp1_5
+      name: treecutscene_5
       rect:
         serializedVersion: 2
-        x: 1182
-        y: 1095
-        width: 50
-        height: 58
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d988185fc6d13c046a61b168501c6030
-      internalID: -1413288882
+      spriteID: 7ff5e2aeaa9f7b84aa3ecfc05b02f83b
+      internalID: 813398382
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: basecamp1_6
+      name: treecutscene_6
       rect:
         serializedVersion: 2
-        x: 932
-        y: 1140
-        width: 65
-        height: 28
-      alignment: 6
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e7ac5a1063d334391c0b32581a8ed3
+      internalID: 1484672782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treecutscene_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26201a7f5568df489a68c1b93845e3f
+      internalID: 97038257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treecutscene_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dd1e8497bc61fd4cbe23c6417990803
-      internalID: -1003312649
+      spriteID: d34b4c900de385d479959ab09bc3984b
+      internalID: -958434429
       vertices: []
       indices: 
       edges: []
@@ -262,13 +304,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      basecamp1_1: 1858714400
-      basecamp1_3: 1555367098
-      basecamp1_5: -1413288882
-      basecamp1_4: -1909433872
-      basecamp1_0: 1294795392
-      basecamp1_6: -1003312649
-      basecamp1_2: -1131653835
+      treecutscene_3: 423036128
+      treecutscene_6: 1484672782
+      treecutscene_8: -958434429
+      treecutscene_0: 1799145870
+      treecutscene_4: 716023977
+      treecutscene_5: 813398382
+      treecutscene_1: -1191505233
+      treecutscene_7: 97038257
+      treecutscene_2: -1887234496
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -40,6 +40,11 @@ public class SiteFill : Site
         
     }
 
+    public override void MenuInteract()
+    {
+        
+    }
+
     public override void LoadSite(SavedSite savedSite){
         
     }

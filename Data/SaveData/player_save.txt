@@ -49,6 +49,15 @@
               "site_construction": "chest"
             }
           }
+        },
+        {
+          "id": 101,
+          "display_name": null,
+          "site": {
+            "name": "tree",
+            "inventories": null,
+            "additional_data": null
+          }
         }
       ],
       "world_items": []

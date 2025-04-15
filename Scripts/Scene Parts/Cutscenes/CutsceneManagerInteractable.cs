@@ -51,4 +51,9 @@ public class CutsceneManagerInteractable : Interactable
     {
         dialogueManager.NextNode();
     }
+
+    public override void MenuInteract()
+    {
+        
+    }
 }

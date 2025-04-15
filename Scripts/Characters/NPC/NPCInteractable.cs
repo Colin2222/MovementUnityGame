@@ -53,4 +53,9 @@ public class NPCInteractable : Interactable
     {
         dialogueManager.NextNode();
     }
+
+    public override void MenuInteract()
+    {
+        
+    }
 }

@@ -167,6 +167,11 @@ public class SiteChest : Site
 		}
     }
 
+    public override void MenuInteract()
+    {
+        
+    }
+
     void EndSelection(){
         UpdateIcons();
         PlayerHub.Instance.inventoryHandler.UpdateIcons();

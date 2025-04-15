@@ -50,4 +50,9 @@ public class CustomizerInteractable : Interactable
     {
         
     }
+
+    public override void MenuInteract()
+    {
+        
+    }
 }

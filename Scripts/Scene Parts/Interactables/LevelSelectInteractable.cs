@@ -51,4 +51,9 @@ public class LevelSelectInteractable : Interactable
     {
         
     }
+
+    public override void MenuInteract()
+    {
+        
+    }
 }

@@ -25,6 +25,7 @@ public class CutsceneManager : MonoBehaviour
 	public bool inDialogue = false;
 	[System.NonSerialized]
 	public bool playerLocked = false;
+	bool inFullscreenCutscene = false;
 	
 	Cutscene currentCutscene;
 	int currentTaskIndex;
@@ -36,6 +37,7 @@ public class CutsceneManager : MonoBehaviour
 	
 	public SceneManager sceneManager;
 	public CutsceneManagerInteractable interactable;
+	public Animator fullscreenAnimator;
 	
 	void Awake(){
 		inCutscene = false;
@@ -65,6 +67,8 @@ public class CutsceneManager : MonoBehaviour
 				actor.cutsceneManager = this;
 			}
 		}
+
+		fullscreenAnimator.gameObject.SetActive(false);
     }
 
     void Update()
@@ -86,6 +90,8 @@ public class CutsceneManager : MonoBehaviour
 					SwitchCameraAnchor(sceneManager.player.gameObject.transform);
 				}
 			}
+		} else if(inFullscreenCutscene){
+			HandleFullscreenCutscene();
 		}
     }
 	
@@ -177,5 +183,22 @@ public class CutsceneManager : MonoBehaviour
 		sceneManager.player.LockPlayer();
 		sceneManager.player.inputManager.inUI = false;
 		inDialogue = false;
+	}
+
+	public void StartFullscreenCutscene(float duration, string animationName){
+		inFullscreenCutscene = true;
+		cutsceneTimer = 0.0f;
+		cutsceneDuration = duration;
+		fullscreenAnimator.gameObject.SetActive(true);
+		fullscreenAnimator.transform.position = new Vector3(sceneManager.mainCameraObj.transform.position.x, sceneManager.mainCameraObj.transform.position.y, 0.0f);
+		fullscreenAnimator.Play(animationName, 0, 0.0f);
+	}
+
+	void HandleFullscreenCutscene(){
+		cutsceneTimer += Time.deltaTime;
+		if(cutsceneTimer >= cutsceneDuration){
+			inFullscreenCutscene = false;
+			fullscreenAnimator.gameObject.SetActive(false);
+		}
 	}
 }

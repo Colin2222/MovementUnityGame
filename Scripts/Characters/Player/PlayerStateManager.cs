@@ -12,6 +12,10 @@ public class PlayerStateManager : MonoBehaviour
 	public Type GetStateType(){
 		return currentState.GetType();
 	}
+
+	public bool IsMenuState(){
+		return (currentState is IMenuState);
+	}
 	
 	void Start(){
 		currentState = new PStateIdle(player, player.inputManager, player.attributeManager.attrSet, player.rigidbody, player.physics, player.interactor);
@@ -132,6 +136,12 @@ public class PlayerStateManager : MonoBehaviour
 	public void MenuDrop(){
 		if(currentState is IMenuState){
 			((IMenuState)currentState).MenuDrop();
+		}
+	}
+
+	public void MenuInteract(){
+		if(currentState is IMenuState){
+			((IMenuState)currentState).MenuInteract();
 		}
 	}
 

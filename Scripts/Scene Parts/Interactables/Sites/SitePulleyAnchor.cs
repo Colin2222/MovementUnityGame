@@ -55,4 +55,9 @@ public class SitePulleyAnchor : Site
     public override void ConstructSite(){
         
     }
+
+    public override void MenuInteract()
+    {
+        
+    }
 }

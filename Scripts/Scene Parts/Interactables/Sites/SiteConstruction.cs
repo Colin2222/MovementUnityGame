@@ -200,6 +200,11 @@ public class SiteConstruction : Site
 		}
     }
 
+    public override void MenuInteract()
+    {
+        
+    }
+
     public void UpdateIcons(){
 		for(int i = 0; i < siteInventory.height; i++){
 			for(int j = 0; j < siteInventory.width; j++){

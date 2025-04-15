@@ -18,7 +18,8 @@ public class PlayerOverrideManager : MonoBehaviour
     bool walkingBegan = false;
     public bool doorTransitioning = false;
 
-    Transform followTarget;
+    Transform lookAtTarget;
+    bool resetPlayerOnWalk;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,10 +44,16 @@ public class PlayerOverrideManager : MonoBehaviour
                         playerInputManager.UnlockPlayer();
                         playerStateManager.ResetPlayer();
                         doorTransitioning = false;
+                        if(lookAtTarget != null){
+                            playerStateManager.SetDirection(lookAtTarget.position.x > player.transform.position.x ? 1 : -1);
+                            lookAtTarget = null;
+                        }
                         break;
                     } else if (!walkingBegan){
                         if(Mathf.Abs(rb.velocity.x) <= walkToPointSpeed){
-                            player.stateManager.ResetPlayer();
+                            if(resetPlayerOnWalk){
+                                player.stateManager.ResetPlayer();
+                            }
                             rb.velocity = new Vector2(walkDirection * walkToPointSpeed, rb.velocity.y);
                             walkingBegan = true;
                         }
@@ -59,12 +66,13 @@ public class PlayerOverrideManager : MonoBehaviour
         }
     }
 
-    public void WalkToPoint(float x){
+    public void WalkToPoint(float x, Transform lookAtPoint = null, bool resetPlayerOnWalk = true){
         overrideActive = true;
         walkingBegan = false;
         action = "WalkToPoint";
         walkDirection = x > player.transform.position.x ? 1 : -1;
         walkTarget = x;
+        playerStateManager.SetDirection(walkDirection);
         playerInputManager.LockPlayer();
         if(Mathf.Abs(rb.velocity.x) > walkToPointSpeed){
             playerInputManager.OverridePlayer();
@@ -72,5 +80,10 @@ public class PlayerOverrideManager : MonoBehaviour
             playerInputManager.EndOverridePlayer();
             animator.Play("PlayerWalking");
         }
+
+        if(lookAtPoint != null){
+            lookAtTarget = lookAtPoint;
+        }
+        this.resetPlayerOnWalk = resetPlayerOnWalk;
     }
 }

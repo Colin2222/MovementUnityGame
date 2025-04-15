@@ -70,4 +70,9 @@ public class ProfileSelectionInteractable : Interactable
     {
         
     }
+
+	public override void MenuInteract()
+    {
+        
+    }
 }

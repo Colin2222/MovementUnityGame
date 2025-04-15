@@ -11,4 +11,5 @@ public abstract class Interactable : MonoBehaviour
     abstract public void MenuLeft();
     abstract public void MenuRight();
     abstract public void MenuSelect();
+    abstract public void MenuInteract();
 }

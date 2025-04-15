@@ -70,3 +70,6 @@ MonoBehaviour:
   - id: fill
     prefab: {fileID: 8591229039122216, guid: 74425c383ffcc4f4f836a17ffbee071d, type: 3}
     requirements: []
+  - id: tree
+    prefab: {fileID: 1538271612515064995, guid: ab75a8d6721e3c546b87cbe1e883c19a, type: 3}
+    requirements: []

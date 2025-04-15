@@ -13,8 +13,8 @@ public class PlayerInputManager : MonoBehaviour
 	// locking player input
 	bool locked = false;
 
-	// player's actions overriden (not cutscene)
-	bool overriden = false;
+	// player's actions overridden (not cutscene)
+	bool overridden = false;
 	
 	// in ui
 	[System.NonSerialized]
@@ -80,7 +80,7 @@ public class PlayerInputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if(overriden){
+		if(overridden){
 			stateManager.Move(0, 0);
 		}
 		if(!locked){
@@ -122,15 +122,15 @@ public class PlayerInputManager : MonoBehaviour
 	
 	public void UnlockPlayer(){
 		locked = false;
-		overriden = false;
+		overridden = false;
 	}
 
 	public void OverridePlayer(){
-		overriden = true;
+		overridden = true;
 	}
 
 	public void EndOverridePlayer(){
-		overriden = false;
+		overridden = false;
 	}
 
 	public void EnterCutscene(){
@@ -323,10 +323,14 @@ public class PlayerInputManager : MonoBehaviour
 		interactPressed = !interactPressed;
 		interactJustPressed = interactPressed;
 		
-		if(!locked && interactJustPressed){
-			if(stateManager.Interact()){
-				LockPlayer();
-				inUI = true;
+		if(interactJustPressed){
+			if(!locked && interactJustPressed){
+				if(stateManager.Interact()){
+					LockPlayer();
+					inUI = true;
+				}
+			} else if(stateManager.IsMenuState()){
+				stateManager.MenuInteract();
 			}
 		}
 	}

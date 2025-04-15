@@ -41,4 +41,9 @@ public class DoorTransitionInteractable : Interactable
     {
         
     }
+
+    public override void MenuInteract()
+    {
+        
+    }
 }
