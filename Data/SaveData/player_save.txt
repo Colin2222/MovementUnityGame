@@ -136,7 +136,7 @@
               }
             ],
             "additional_data": {
-              "site_construction": "pulleyanchor"
+              "site_construction": "cablecar"
             }
           }
         },
