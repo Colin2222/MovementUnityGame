@@ -103,7 +103,7 @@ public class CutsceneManager : MonoBehaviour
 					sceneManager.player.inputManager.ExitCutscene();
 					inCutscene = false;
 					currentCutscene.active = false;
-					SwitchCameraAnchor(sceneManager.player.gameObject.transform);
+					SwitchCameraAnchor(sceneManager.player.cameraAimPoint);
 				}
 			}
 		} else if(inFullscreenCutscene){

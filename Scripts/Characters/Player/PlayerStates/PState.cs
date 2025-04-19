@@ -45,6 +45,10 @@ public abstract class PState
 			direction = -1;
 		}
 	}
+
+	public int GetDirection(){
+		return direction;
+	}
 	
 	protected void InverseDirectionCorrection(){
 		if(rigidbody.velocity.x > 0){

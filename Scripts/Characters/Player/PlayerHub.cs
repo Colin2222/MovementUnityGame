@@ -18,6 +18,10 @@ public class PlayerHub : MonoBehaviour
 	public PlayerInteractor interactor;
 	public PlayerSoundInterface soundInterface;
 	public PlayerOverrideManager overrideManager;
+	public PlayerCameraAimManager cameraAimManager;
+
+	[System.NonSerialized]
+	public Transform cameraAimPoint;
 	
 	[System.NonSerialized]
 	public bool isSpawning = false;

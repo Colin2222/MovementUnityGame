@@ -194,6 +194,7 @@ MonoBehaviour:
     landingBigForceMultiplier: 0
     optionalRollWindow: 0
   interactor: {fileID: 1011390647}
+  cameraAimManager: {fileID: 4107706158013080389}
   bracing: 0
 --- !u!1 &1011390644
 GameObject:
@@ -2287,6 +2288,7 @@ Transform:
   - {fileID: 365383143609738961}
   - {fileID: 5484429588737797308}
   - {fileID: 5385391014688584708}
+  - {fileID: 7910250411296264394}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2367,6 +2369,7 @@ MonoBehaviour:
   interactor: {fileID: 1011390647}
   soundInterface: {fileID: 2146572807}
   overrideManager: {fileID: 856869671391944395}
+  cameraAimManager: {fileID: 4107706158013080389}
   spawnTime: 2
 --- !u!50 &6829769311745543620
 Rigidbody2D:
@@ -2755,6 +2758,52 @@ Transform:
   m_Father: {fileID: 6829769312154430461}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7876016484501331583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7910250411296264394}
+  - component: {fileID: 4107706158013080389}
+  m_Layer: 0
+  m_Name: CameraAimManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7910250411296264394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876016484501331583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6829769311745543618}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4107706158013080389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876016484501331583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723d26e999f00224ca35aca7558e5045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6829769311745543619}
+  cameraAimVectorDistance: 10
 --- !u!1 &7922594690210097415
 GameObject:
   m_ObjectHideFlags: 0

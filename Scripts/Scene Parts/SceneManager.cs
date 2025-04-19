@@ -117,9 +117,6 @@ public class SceneManager : MonoBehaviour
         else{
             player = playerObjectTest.GetComponent<PlayerHub>();
         }
-		if(vcam != null){
-			vcam.m_Follow = player.transform;
-		}
 		sessionManager.UpdatePlayer(player);
 		
 		// check if there is a DontDestroyOnLoad profile manager, create a new one if there isnt
@@ -158,6 +155,13 @@ public class SceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {	
+		// camera setup
+		player.cameraAimManager.RecalibrateCameraAimPoint();
+		if(vcam != null){
+			Debug.Log("Camera found, setting up camera follow target." + player.cameraAimPoint);
+			vcam.m_Follow = player.cameraAimPoint;
+		}
+
 		profileManager.SetupProfileSelection(profileSelectionLocation);
 		if(isHubWorld){
 			levelSelectManager.SetupLevelSelection(levelSelectionLocation);
@@ -244,7 +248,7 @@ public class SceneManager : MonoBehaviour
 	}
 
 	public void ResetCamera(){
-		vcam.m_Follow = player.transform;
+		vcam.m_Follow = player.cameraAimPoint;
 		vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = originalCameraDistance;
 		UnityEngine.Object.Destroy(cameraAimObj);
 	}

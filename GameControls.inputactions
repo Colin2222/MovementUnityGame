@@ -15,6 +15,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "CameraMove",
+                    "type": "PassThrough",
+                    "id": "12f2e9ab-3c2a-46d7-8ab0-97688d73d5e5",
+                    "expectedControlType": "Stick",
+                    "processors": "StickDeadzone(min=0.5,max=0.925)",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "713667c2-4128-4315-97f9-04d43d9bf64e",
@@ -375,6 +384,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "MenuDrop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4dd51540-5e4d-4dd4-aee1-78543c740de8",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraMove",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

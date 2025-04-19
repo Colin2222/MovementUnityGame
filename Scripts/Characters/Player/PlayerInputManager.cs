@@ -10,6 +10,7 @@ public class PlayerInputManager : MonoBehaviour
 	public PlayerStateManager stateManager;
 	public PlayerAttributeSet attr;
 	public PlayerInteractor interactor;
+	public PlayerCameraAimManager cameraAimManager;
 	
 	// locking player input
 	bool locked = false;
@@ -24,9 +25,13 @@ public class PlayerInputManager : MonoBehaviour
 	// in cutscene
 	bool inCutscene = false;
 	
-	// joystick movement
+	// left joystick movement
 	float horizontal;
 	float vertical;
+
+	// right joystick movement
+	float cameraHorizontal;
+	float cameraVertical;
 	
 	// bracing tracking
 	public bool bracing = false;
@@ -89,6 +94,7 @@ public class PlayerInputManager : MonoBehaviour
 			HandleBracing();
 			HandleClimbing();
 			HandleItemGrabbing();
+			HandleCameraAim();
 			
 			if(bracing){
 				bracing = !(stateManager.Brace());
@@ -217,6 +223,10 @@ public class PlayerInputManager : MonoBehaviour
 			}
 		}
 	}
+
+	private void HandleCameraAim(){
+		cameraAimManager.HandleCameraAim(cameraHorizontal, cameraVertical);
+	}
 	
 	public void CancelBraceCooldown(){
 		braceCooldownCancelled = true;
@@ -248,6 +258,13 @@ public class PlayerInputManager : MonoBehaviour
         horizontal = vector.x;
         vertical = vector.y;
     }
+
+	private void OnCameraMove(InputValue value){
+		Vector2 vector = value.Get<Vector2>();
+
+		cameraHorizontal = vector.x;
+		cameraVertical = vector.y;
+	}
 	
 	private void OnJump(){
         jumpPressed = !jumpPressed;

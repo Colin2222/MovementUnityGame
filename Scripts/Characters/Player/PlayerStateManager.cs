@@ -177,4 +177,8 @@ public class PlayerStateManager : MonoBehaviour
 	public void SetDirection(float horizontal){
 		currentState.SetDirection(horizontal);
 	}
+
+	public int GetDirection(){
+		return currentState.GetDirection();
+	}
 }
