@@ -18,53 +18,77 @@ public class SiteTree : Site
     int numSwings = 0;
 
     public float cutsceneTime;
+    public float blackoutTime;
+    float totalCutsceneTime;
     float cutsceneTimer;
     bool inCutscene = false;
+    SiteTreeArt treeArt;
+    bool cutDown = false;
+
+
+    void Start(){
+        GameObject[] treeArtArray = GameObject.FindGameObjectsWithTag("TreeArt");
+        foreach(GameObject x in treeArtArray){
+            SiteTreeArt art = x.GetComponent<SiteTreeArt>();
+            if(art.siteIndex == id){
+                treeArt = art;
+                break;
+            }
+        }
+    }
 
     void Update(){
-        if(numSwings > 0){
-            swingForgetTimer += Time.deltaTime;
-            if(swingForgetTimer >= swingForgetTime){
-                numSwings = 0;
-            }
-        }
-
-        if(inPostSwing && !inCutscene){
-            postSwingTimer += Time.deltaTime;
-            if(postSwingTimer >= postSwingTime){
-                inPostSwing = false;
-                inSwing = false;
-                PlayerHub.Instance.inputManager.UnlockPlayer();
-                PlayerHub.Instance.stateManager.ResetPlayer();
-            }
-            return;
-        }
-
-        if(inSwing){
-            swingTimer += Time.deltaTime;
-            if(swingTimer >= swingTime){
-                numSwings++;
-                swingForgetTimer = 0.0f;
-                ResetTimers();
-                inSwing = false;
-                inPostSwing = true;
-
-                if(numSwings >= 5){
-                    inSwing = false;
-                    SceneManager.Instance.cutsceneManager.StartFullscreenCutscene(cutsceneTime, "tree_cutting_base");
-                    cutsceneTimer = 0.0f;
-                    inCutscene = true;
+        if(!cutDown){
+            if(numSwings > 0){
+                swingForgetTimer += Time.deltaTime;
+                if(swingForgetTimer >= swingForgetTime){
+                    numSwings = 0;
                 }
             }
-            return;
-        }
 
-        if(inCutscene){
-            cutsceneTimer += Time.deltaTime;
-            if(cutsceneTimer >= cutsceneTime){
-                inCutscene = false;
-                PlayerHub.Instance.inputManager.UnlockPlayer();
-                PlayerHub.Instance.stateManager.ResetPlayer();
+            if(inPostSwing && !inCutscene){
+                postSwingTimer += Time.deltaTime;
+                if(postSwingTimer >= postSwingTime){
+                    inPostSwing = false;
+                    inSwing = false;
+                    PlayerHub.Instance.inputManager.UnlockPlayer();
+                    PlayerHub.Instance.stateManager.ResetPlayer();
+                }
+                return;
+            }
+
+            if(inSwing){
+                swingTimer += Time.deltaTime;
+                if(swingTimer >= swingTime){
+                    numSwings++;
+                    swingForgetTimer = 0.0f;
+                    ResetTimers();
+                    inSwing = false;
+                    inPostSwing = true;
+                    treeArt.PlayRustleAnimation();
+
+                    if(numSwings >= 5){
+                        inSwing = false;
+                        SceneManager.Instance.cutsceneManager.StartFullscreenCutscene(cutsceneTime, blackoutTime, "tree_cutting_base", "bg_mountain_1");
+                        cutsceneTimer = 0.0f;
+                        inCutscene = true;
+                        totalCutsceneTime = cutsceneTime + (blackoutTime * 2.0f);
+                    }
+                }
+                return;
+            }
+
+            if(inCutscene){
+                cutsceneTimer += Time.deltaTime;
+                if(cutsceneTimer >= totalCutsceneTime){
+                    inCutscene = false;
+                    cutDown = true;
+                    hasMenu = false;
+                    PlayerHub.Instance.inputManager.UnlockPlayer();
+                    PlayerHub.Instance.stateManager.ResetPlayer();
+                } else if(treeArt != null && cutsceneTimer >= totalCutsceneTime / 2){
+                    Destroy(treeArt.gameObject);
+                }
             }
         }
     }
@@ -83,6 +107,12 @@ public class SiteTree : Site
     }
 
     public override void Interact(){
+        if(cutDown){
+            PlayerHub.Instance.inputManager.UnlockPlayer();
+            PlayerHub.Instance.stateManager.ResetPlayer();
+            return;
+        }
+
         if(!(Mathf.Abs(PlayerHub.Instance.transform.position.x - rightSwingPoint.position.x) <= 0.05f || 
            Mathf.Abs(PlayerHub.Instance.transform.position.x - leftSwingPoint.position.x) <= 0.05f)){
             if(PlayerHub.Instance.transform.position.x > transform.position.x){
@@ -124,7 +154,7 @@ public class SiteTree : Site
 
     public override void MenuInteract()
     {
-        if(inPostSwing){
+        if(!cutDown && inPostSwing && !inCutscene){
             PlayerHub.Instance.animator.Play("PlayerAxeSwingRepeat", 0, 0.0f);
             ResetTimers();
             inSwing = true;

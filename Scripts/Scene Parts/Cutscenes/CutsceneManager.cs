@@ -26,6 +26,9 @@ public class CutsceneManager : MonoBehaviour
 	[System.NonSerialized]
 	public bool playerLocked = false;
 	bool inFullscreenCutscene = false;
+	bool fullscreenCutsceneEntering = false;
+	bool fullscreenCutsceneExiting = false;
+	string animationName;
 	
 	Cutscene currentCutscene;
 	int currentTaskIndex;
@@ -38,6 +41,10 @@ public class CutsceneManager : MonoBehaviour
 	public SceneManager sceneManager;
 	public CutsceneManagerInteractable interactable;
 	public Animator fullscreenAnimator;
+	float fullscreenCutsceneBlackoutTime;
+	public SpriteRenderer fullscreenCutsceneBlackoutSprite;
+	public SpriteRenderer fullscreenCutsceneSprite;
+	public SpriteRenderer fullscreenCutsceneBackgroundSprite;
 	
 	void Awake(){
 		inCutscene = false;
@@ -185,20 +192,62 @@ public class CutsceneManager : MonoBehaviour
 		inDialogue = false;
 	}
 
-	public void StartFullscreenCutscene(float duration, string animationName){
+	public void StartFullscreenCutscene(float duration, float blackoutDuration, string animationName, string backgroundName){
 		inFullscreenCutscene = true;
 		cutsceneTimer = 0.0f;
 		cutsceneDuration = duration;
+		fullscreenCutsceneBlackoutTime = blackoutDuration;
+		fullscreenCutsceneEntering = true;
 		fullscreenAnimator.gameObject.SetActive(true);
-		fullscreenAnimator.transform.position = new Vector3(sceneManager.mainCameraObj.transform.position.x, sceneManager.mainCameraObj.transform.position.y, 0.0f);
+		this.animationName = animationName;
 		fullscreenAnimator.Play(animationName, 0, 0.0f);
+		fullscreenAnimator.speed = 0.0f;
+		fullscreenAnimator.transform.position = new Vector3(sceneManager.mainCameraObj.transform.position.x, sceneManager.mainCameraObj.transform.position.y, 0.0f);
+
+		// load background sprite
+		var operation = Addressables.LoadAssetAsync<Sprite>("Assets/Data/Cutscenes/backgrounds/" + backgroundName + ".png");
+		Sprite backgroundSprite = operation.WaitForCompletion();
+		fullscreenCutsceneBackgroundSprite.sprite = backgroundSprite;
 	}
 
 	void HandleFullscreenCutscene(){
 		cutsceneTimer += Time.deltaTime;
-		if(cutsceneTimer >= cutsceneDuration){
-			inFullscreenCutscene = false;
-			fullscreenAnimator.gameObject.SetActive(false);
+
+		if(fullscreenCutsceneEntering){
+			float a = cutsceneTimer / fullscreenCutsceneBlackoutTime;
+			fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, Mathf.Clamp(a, 0.0f, 1.0f));
+			fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, Mathf.Clamp(a, 0.0f, 1.0f));
+			fullscreenCutsceneBackgroundSprite.color = new Color(1.0f, 1.0f, 1.0f, Mathf.Clamp(a, 0.0f, 1.0f));
+			if(cutsceneTimer >= fullscreenCutsceneBlackoutTime){
+				Debug.Log("IN fullscreen cutscene");
+				cutsceneTimer = 0.0f;
+				fullscreenCutsceneEntering = false;
+				fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
+				fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+				fullscreenCutsceneBackgroundSprite.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+				inFullscreenCutscene = true;
+				fullscreenAnimator.speed = 1.0f;
+			}
+		} else if(fullscreenCutsceneExiting){
+			float a = cutsceneTimer / fullscreenCutsceneBlackoutTime;
+			fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, Mathf.Clamp(1.0f - a, 0.0f, 1.0f));
+			fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, Mathf.Clamp(1.0f - a, 0.0f, 1.0f));
+			fullscreenCutsceneBackgroundSprite.color = new Color(1.0f, 1.0f, 1.0f, Mathf.Clamp(1.0f - a, 0.0f, 1.0f));
+			if(cutsceneTimer >= fullscreenCutsceneBlackoutTime){
+				fullscreenCutsceneExiting = false;
+				fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+				fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+				fullscreenCutsceneBackgroundSprite.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+				fullscreenAnimator.gameObject.SetActive(false);
+				inFullscreenCutscene = false;
+			}
+		} else{
+			if(cutsceneTimer >= cutsceneDuration){
+				Debug.Log("Exiting fullscreen cutscene");
+				fullscreenCutsceneExiting = true;
+				cutsceneTimer = 0.0f;
+				fullscreenAnimator.speed = 0.0f;
+			}
 		}
 	}
 }

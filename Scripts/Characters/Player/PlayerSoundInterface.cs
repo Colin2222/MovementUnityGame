@@ -38,6 +38,7 @@ public class PlayerSoundInterface : MonoBehaviour
 	public AudioSource clothesRustle;
 
 	public AudioClip footScuffClip;
+	public AudioSource axeChop;
 	
 	void Start(){
 		footstepBasePitch1 = step1.pitch;
@@ -128,5 +129,9 @@ public class PlayerSoundInterface : MonoBehaviour
 	public void PlayStillJump(){
 		stillJump.pitch = stillJumpBasePitch + (Random.Range(-1.0f, 1.0f) * stillJumpMaxVariance);
 		stillJump.Play();
+	}
+
+	public void PlayAxeChop(){
+		axeChop.Play();
 	}
 }

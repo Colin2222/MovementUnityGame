@@ -105,6 +105,10 @@ MonoBehaviour:
     m_Address: Assets/Data/Cutscenes/tutorialpanels_1b.json
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: dccfdce105fc44b45a821e41fc0e69d2
+    m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:
