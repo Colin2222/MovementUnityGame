@@ -56,7 +56,10 @@
           "site": {
             "name": "tree",
             "inventories": null,
-            "additional_data": null
+            "additional_data": {
+              "num_logs": "4",
+              "cut_down": "false"
+            }
           }
         },
         {
@@ -65,7 +68,10 @@
           "site": {
             "name": "tree",
             "inventories": null,
-            "additional_data": null
+            "additional_data": {
+              "num_logs": "3",
+              "cut_down": "false"
+            }
           }
         }
       ],

@@ -111,6 +111,8 @@ MonoBehaviour:
   swingForgetTime: 10
   cutsceneTime: 6.1666
   blackoutTime: 1.5
+  itemPrefab: {fileID: 4896596533424298757, guid: 01d3b84925fab564f9c4388039322bcc, type: 3}
+  logSpreadDistance: 1.5
 --- !u!61 &7135125606127040144
 BoxCollider2D:
   m_ObjectHideFlags: 0

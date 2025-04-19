@@ -25,6 +25,10 @@ public class SiteTree : Site
     SiteTreeArt treeArt;
     bool cutDown = false;
 
+    public GameObject itemPrefab;
+    int numLogs;
+    public float logSpreadDistance;
+
 
     void Start(){
         GameObject[] treeArtArray = GameObject.FindGameObjectsWithTag("TreeArt");
@@ -32,6 +36,10 @@ public class SiteTree : Site
             SiteTreeArt art = x.GetComponent<SiteTreeArt>();
             if(art.siteIndex == id){
                 treeArt = art;
+                if(cutDown){
+                    Destroy(treeArt.gameObject);
+                    hasMenu = false;
+                }
                 break;
             }
         }
@@ -88,6 +96,12 @@ public class SiteTree : Site
                     PlayerHub.Instance.stateManager.ResetPlayer();
                 } else if(treeArt != null && cutsceneTimer >= totalCutsceneTime / 2){
                     Destroy(treeArt.gameObject);
+                    for(int i = 0; i < numLogs; i++){
+                        float xOffset = Random.Range(-logSpreadDistance, logSpreadDistance);
+                        Vector3 dropPosition = new Vector3(transform.position.x + xOffset, transform.position.y, transform.position.z);
+                        WorldItem droppedItem = Instantiate(itemPrefab, dropPosition, Quaternion.identity).GetComponent<WorldItem>();
+                        droppedItem.item_id = "wood_log";
+                    }
                 }
             }
         }
@@ -164,12 +178,16 @@ public class SiteTree : Site
     }
 
     public override void LoadSite(SavedSite savedSite){
-        
+        numLogs = int.Parse(savedSite.additional_data["num_logs"]);
+        cutDown = bool.Parse(savedSite.additional_data["cut_down"]);
     }
 
     public override SavedSite SaveSite(){
         SavedSite savedSite = new SavedSite();
         savedSite.name = "tree";
+        savedSite.additional_data = new Dictionary<string, string>();
+        savedSite.additional_data.Add("num_logs", numLogs.ToString());
+        savedSite.additional_data.Add("cut_down", cutDown.ToString());
         return savedSite;
     }
 
