@@ -5716,7 +5716,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 640
-        y: 385
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -5728,6 +5728,48 @@ TextureImporter:
       bones: []
       spriteID: 45d2049722fbd9a4e9bfa995246f9d4b
       internalID: -476396622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_268
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab26570d79f3b2949b9a5dbbbf54733a
+      internalID: 1585754435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_269
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583ee0b54fa52cd479b5322e74f271c3
+      internalID: -1765501527
       vertices: []
       indices: 
       edges: []
@@ -5760,6 +5802,7 @@ TextureImporter:
       currentplayer_81: 535238310
       currentplayer_199: 1989484854
       currentplayer_186: 1499700358
+      currentplayer_268: 1585754435
       currentplayer_59: 1596958433
       currentplayer_72: 1229742153
       currentplayer_101: -780897914
@@ -5778,9 +5821,9 @@ TextureImporter:
       currentplayer_188: 1002099257
       currentplayer_90: 2047119158
       currentplayer_175: -1250682758
-      currentplayer_19: -1469744796
-      currentplayer_171: -1662089883
       currentplayer_45: 789404472
+      currentplayer_171: -1662089883
+      currentplayer_19: -1469744796
       currentplayer_41: 1097841706
       currentplayer_116: 1921439271
       currentplayer_182: 2083361918
@@ -5971,6 +6014,7 @@ TextureImporter:
       currentplayer_35: 1103573396
       currentplayer_40: -1641110623
       currentplayer_204: 1436672977
+      currentplayer_269: -1765501527
       currentplayer_146: 1985048406
       currentplayer_156: 255210974
       currentplayer_163: 2056935010

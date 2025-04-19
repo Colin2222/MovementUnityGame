@@ -5502,7 +5502,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: currentplayer_257
+      name: climber_257
       rect:
         serializedVersion: 2
         x: 608
@@ -5523,7 +5523,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: currentplayer_258
+      name: climber_258
       rect:
         serializedVersion: 2
         x: 640
@@ -5544,7 +5544,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: currentplayer_259
+      name: climber_259
       rect:
         serializedVersion: 2
         x: 672
@@ -5565,7 +5565,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: currentplayer_260
+      name: climber_260
       rect:
         serializedVersion: 2
         x: 608
@@ -5586,7 +5586,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: currentplayer_261
+      name: climber_261
       rect:
         serializedVersion: 2
         x: 640
@@ -5607,7 +5607,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: currentplayer_262
+      name: climber_262
       rect:
         serializedVersion: 2
         x: 672
@@ -5628,7 +5628,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: currentplayer_263
+      name: climber_263
       rect:
         serializedVersion: 2
         x: 608
@@ -5649,7 +5649,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: currentplayer_264
+      name: climber_264
       rect:
         serializedVersion: 2
         x: 640
@@ -5670,7 +5670,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: currentplayer_265
+      name: climber_265
       rect:
         serializedVersion: 2
         x: 672
@@ -5691,7 +5691,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: currentplayer_266
+      name: climber_266
       rect:
         serializedVersion: 2
         x: 608
@@ -5712,7 +5712,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: currentplayer_267
+      name: climber_267
       rect:
         serializedVersion: 2
         x: 640
@@ -5732,6 +5732,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: climber_268
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d6812e9083ab6478c90f8a57a38127
+      internalID: -439466858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: climber_269
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21733584f140c345a8c95ae6f688652
+      internalID: -1510630299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -5746,6 +5788,7 @@ TextureImporter:
       climber_235: 977102759
       climber_145: -141829942
       climber_2: -140344504
+      climber_258: 353588741
       climber_179: -943742772
       climber_63: -1578065867
       climber_76: 1939946890
@@ -5765,11 +5808,10 @@ TextureImporter:
       climber_58: -1937730778
       climber_189: 1878059167
       climber_155: 774294534
-      currentplayer_266: -962311572
-      currentplayer_263: 1408062397
       climber_70: -979908883
       climber_226: -1385978959
       climber_50: 735020032
+      climber_265: 2057138018
       climber_84: -1615572998
       climber_54: -1757016724
       climber_23: -124115989
@@ -5779,9 +5821,9 @@ TextureImporter:
       climber_221: -1028793976
       climber_78: -41287734
       climber_153: 121345252
-      currentplayer_258: 353588741
       climber_223: -44931511
       climber_246: -1357331888
+      climber_268: -439466858
       climber_242: -1252333848
       climber_243: -157754109
       climber_247: 810024258
@@ -5797,6 +5839,7 @@ TextureImporter:
       climber_32: 1761049271
       climber_86: -2122267675
       climber_135: -1898787186
+      climber_269: -1510630299
       climber_231: 1859527344
       climber_98: 270524739
       climber_51: 610329971
@@ -5808,7 +5851,6 @@ TextureImporter:
       climber_99: 1359331772
       climber_122: 167602481
       climber_126: 954349324
-      currentplayer_257: 1540721034
       climber_134: 1271992536
       climber_212: 1976643730
       climber_11: -828391627
@@ -5822,7 +5864,6 @@ TextureImporter:
       climber_45: 426345408
       climber_213: 683500565
       climber_245: -1378116771
-      currentplayer_259: 650647755
       climber_128: -1166522353
       climber_119: 1682304820
       climber_127: -286775658
@@ -5835,10 +5876,12 @@ TextureImporter:
       climber_124: -1592322902
       climber_92: -1437882621
       climber_151: 1340683906
+      climber_266: -962311572
       climber_88: 1758874859
       climber_182: 9894316
       climber_9: 387934992
       climber_107: -484280705
+      climber_259: 650647755
       climber_248: 1840012749
       climber_21: 114796651
       climber_185: -1705532179
@@ -5851,9 +5894,11 @@ TextureImporter:
       climber_132: 1344676974
       climber_130: -1885757787
       climber_198: 2039881391
+      climber_263: 1408062397
       climber_218: 1674916461
       climber_31: -1872776800
       climber_110: 1075706789
+      climber_267: -1965815605
       climber_166: -1547639513
       climber_183: 1171375888
       climber_66: -1390283714
@@ -5877,6 +5922,7 @@ TextureImporter:
       climber_169: 1300546425
       climber_178: 709836381
       climber_202: 1383087454
+      climber_264: 861830821
       climber_8: 746086249
       climber_241: -981787011
       climber_93: -1689256263
@@ -5884,7 +5930,6 @@ TextureImporter:
       climber_17: -1277290294
       climber_253: -307397109
       climber_168: -1685946920
-      currentplayer_260: 1678935674
       climber_251: 1343550425
       climber_220: 1378764510
       climber_216: -1469176241
@@ -5899,6 +5944,7 @@ TextureImporter:
       climber_162: -145447919
       climber_46: -1985117557
       climber_173: -187479726
+      climber_262: -1919414395
       climber_65: 474189950
       climber_112: 860869102
       climber_165: 2133548914
@@ -5939,13 +5985,10 @@ TextureImporter:
       climber_192: -1208345355
       climber_146: 926415180
       climber_205: 1976534337
-      currentplayer_261: -1127886865
-      currentplayer_264: 861830821
       climber_82: -1986966335
       climber_29: -129850156
       climber_211: -1531985370
       climber_159: -1536118796
-      currentplayer_267: -1965815605
       climber_229: -1300980021
       climber_0: -1035249889
       climber_7: 960599566
@@ -5955,6 +5998,7 @@ TextureImporter:
       climber_60: 1558291517
       climber_85: -2086002962
       climber_106: 1733434904
+      climber_257: 1540721034
       climber_191: 71181727
       climber_187: 2135452726
       climber_227: 1197903176
@@ -5985,13 +6029,11 @@ TextureImporter:
       climber_203: 544760141
       climber_111: -1199188939
       climber_152: -1474034807
-      currentplayer_265: 2057138018
       climber_57: 1638449106
       climber_103: -1758564110
       climber_44: -792855845
       climber_90: 1316894154
       climber_49: -1501950211
-      currentplayer_262: -1919414395
       climber_113: -1030253905
       climber_27: 279528938
       climber_83: 2114387517
@@ -5999,6 +6041,7 @@ TextureImporter:
       climber_148: 1657531744
       climber_230: -78481006
       climber_194: -809726101
+      climber_261: -1127886865
       climber_181: 1827737393
       climber_102: 664624569
       climber_114: -880427220
@@ -6010,6 +6053,7 @@ TextureImporter:
       climber_141: 2053062626
       climber_210: 1781337629
       climber_237: -1974985804
+      climber_260: 1678935674
       climber_25: 1266912898
   spritePackingTag: 
   pSDRemoveMatte: 0

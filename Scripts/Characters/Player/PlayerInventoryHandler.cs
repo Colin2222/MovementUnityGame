@@ -106,7 +106,7 @@ public class PlayerInventoryHandler : MonoBehaviour
 		}
 	}
 	
-	public void Pickup(){
+	public bool Pickup(){
 		if(reachableItems.Count > 0){
 			WorldItem pickup = reachableItems[0];
 			Item pickupItem = pickup.item;
@@ -114,7 +114,9 @@ public class PlayerInventoryHandler : MonoBehaviour
 			Destroy(pickup.gameObject);
 			inventory.AddItem(pickupItem, 1);
 			UpdateIcons();
+			return true;
 		}
+		return false;
 	}
 
 	public void DropCurrentItem(){

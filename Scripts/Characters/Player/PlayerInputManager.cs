@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -211,7 +212,9 @@ public class PlayerInputManager : MonoBehaviour
 
 	private void HandleItemGrabbing(){
 		if(itemGrabJustPressed){
-			player.inventoryHandler.Pickup();
+			if(player.inventoryHandler.Pickup() && stateManager.GetStateType().Equals(typeof(PStateIdle))){
+				player.animator.Play("PlayerPickingUp", 0, 0.0f);
+			}
 		}
 	}
 	
