@@ -27,7 +27,6 @@ public class SiteTreeArt : MonoBehaviour
     }
 
     public void PlayRustleAnimation(){
-        Debug.Log("Playing rustle animation for tree " + treeNum);
         animator.Play("tree_rustle", 0, 0.0f);
     }
 }

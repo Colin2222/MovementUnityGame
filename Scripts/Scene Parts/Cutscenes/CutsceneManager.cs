@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceLocations;
 using UnityEngine.AddressableAssets;
+using UnityEngine.UI;
 using Newtonsoft.Json;
 using Cinemachine;
 
@@ -45,6 +46,7 @@ public class CutsceneManager : MonoBehaviour
 	public SpriteRenderer fullscreenCutsceneBlackoutSprite;
 	public SpriteRenderer fullscreenCutsceneSprite;
 	public SpriteRenderer fullscreenCutsceneBackgroundSprite;
+	GameObject mainCameraObj;
 	
 	void Awake(){
 		inCutscene = false;
@@ -76,6 +78,13 @@ public class CutsceneManager : MonoBehaviour
 		}
 
 		fullscreenAnimator.gameObject.SetActive(false);
+
+		// get the camera gameobject
+		GameObject cameraObj = GameObject.FindGameObjectWithTag("MainCamera");
+		if(cameraObj != null){
+			mainCameraObj = cameraObj;
+		}
+
     }
 
     void Update()
@@ -199,6 +208,7 @@ public class CutsceneManager : MonoBehaviour
 		fullscreenCutsceneBlackoutTime = blackoutDuration;
 		fullscreenCutsceneEntering = true;
 		fullscreenAnimator.gameObject.SetActive(true);
+		fullscreenAnimator.transform.position = new Vector3(sceneManager.mainCameraObj.transform.position.x, sceneManager.mainCameraObj.transform.position.y, 0.0f);
 		this.animationName = animationName;
 		fullscreenAnimator.Play(animationName, 0, 0.0f);
 		fullscreenAnimator.speed = 0.0f;
@@ -211,6 +221,8 @@ public class CutsceneManager : MonoBehaviour
 	}
 
 	void HandleFullscreenCutscene(){
+		fullscreenAnimator.transform.position = new Vector3(sceneManager.mainCameraObj.transform.position.x, sceneManager.mainCameraObj.transform.position.y, sceneManager.mainCameraObj.transform.position.z + 16.0f);
+
 		cutsceneTimer += Time.deltaTime;
 
 		if(fullscreenCutsceneEntering){
@@ -219,7 +231,6 @@ public class CutsceneManager : MonoBehaviour
 			fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, Mathf.Clamp(a, 0.0f, 1.0f));
 			fullscreenCutsceneBackgroundSprite.color = new Color(1.0f, 1.0f, 1.0f, Mathf.Clamp(a, 0.0f, 1.0f));
 			if(cutsceneTimer >= fullscreenCutsceneBlackoutTime){
-				Debug.Log("IN fullscreen cutscene");
 				cutsceneTimer = 0.0f;
 				fullscreenCutsceneEntering = false;
 				fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
@@ -243,7 +254,6 @@ public class CutsceneManager : MonoBehaviour
 			}
 		} else{
 			if(cutsceneTimer >= cutsceneDuration){
-				Debug.Log("Exiting fullscreen cutscene");
 				fullscreenCutsceneExiting = true;
 				cutsceneTimer = 0.0f;
 				fullscreenAnimator.speed = 0.0f;

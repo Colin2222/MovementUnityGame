@@ -395,10 +395,12 @@ MonoBehaviour:
   cameraDistance: 7.5
   cameraOffset: {x: -2, y: 2}
   hasMenu: 1
-  rangeEffect: {fileID: 0}
+  rangeEffect: {fileID: 3366856973031358695}
   sitePanel: {fileID: 3366856974536118731}
   siteInventory: {fileID: 3366856973826639323}
   siteName: chest
+  cutsceneTime: 3
+  blackoutTime: 1
 --- !u!61 &3366856974621672426
 BoxCollider2D:
   m_ObjectHideFlags: 0

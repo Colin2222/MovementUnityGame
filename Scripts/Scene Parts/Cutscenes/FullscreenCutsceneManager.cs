@@ -5,6 +5,7 @@ using UnityEngine;
 public class FullscreenCutsceneManager : MonoBehaviour
 {
     public AudioSource axeChopAudioSource;
+    public AudioSource metalRingAudioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -20,5 +21,9 @@ public class FullscreenCutsceneManager : MonoBehaviour
 
     public void PlayAxeChop(){
         axeChopAudioSource.Play();
+    }
+
+    public void PlayMetalRing(){
+        metalRingAudioSource.Play();
     }
 }

@@ -14,7 +14,7 @@
   },
   "integer_markers": {
     "cable_car_location": 100000,
-    "cable_car_progress": 100006
+    "cable_car_progress": 100001
   },
   "rooms": {
     "basecamp": {
@@ -118,9 +118,26 @@
           "id": 100002,
           "display_name": null,
           "site": {
-            "name": "cablecar",
-            "inventories": null,
-            "additional_data": null
+            "name": "construction",
+            "inventories": [
+              {
+                "width": 1,
+                "height": 2,
+                "contents": [
+                  {
+                    "item_name": "wood_log",
+                    "quantity": 2
+                  },
+                  {
+                    "item_name": "iron_rod",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ],
+            "additional_data": {
+              "site_construction": "pulleyanchor"
+            }
           }
         },
         {

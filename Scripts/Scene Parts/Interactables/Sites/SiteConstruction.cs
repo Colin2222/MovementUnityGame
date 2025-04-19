@@ -24,6 +24,13 @@ public class SiteConstruction : Site
     string currentInventory = "player";
     string currentSelection = "none";
 
+    public float cutsceneTime;
+    public float blackoutTime;
+    float totalCutsceneTime;
+    float cutsceneTimer;
+    bool inCutscene = false;
+    bool builtSite = false;
+
     void Awake(){
         
     }
@@ -32,16 +39,42 @@ public class SiteConstruction : Site
         
     }
 
+    void Update(){
+        if(inCutscene){
+                cutsceneTimer += Time.deltaTime;
+                if(cutsceneTimer >= totalCutsceneTime){
+                    inCutscene = false;
+                    //PlayerHub.Instance.inputManager.UnlockPlayer();
+                    //PlayerHub.Instance.stateManager.ResetPlayer();
+                    PlayerHub.Instance.inputManager.LeaveInteraction();
+                    Destroy(gameObject);
+                } else if(!builtSite && cutsceneTimer >= totalCutsceneTime / 2){
+                    rangeEffect.SetActive(false);
+                    GameObject constructedObj = Instantiate(constructedSitePrefab, transform.position, Quaternion.identity);
+                    constructedObj.GetComponent<Site>().id = id;
+                    constructedObj.transform.SetParent(transform.parent);
+                    constructedObj.GetComponent<Site>().ConstructSite();
+                    SessionManager.Instance.SetSite(constructedObj.GetComponent<Site>().SaveSite(), id);
+                    siteInventory = null;
+                    builtSite = true;
+                }
+            }
+    }
+
     protected override void EnterRange(){
+        /*
         if(rangeEffect != null){
             rangeEffect.SetActive(true);
         }
+        */
     }
 
     protected override void ExitRange(){
+        /*
         if(rangeEffect != null){
             rangeEffect.SetActive(false);
         }
+        */
     }
 
     public override void Interact(){
@@ -171,14 +204,12 @@ public class SiteConstruction : Site
             }
 
             if(canConstruct){
-                GameObject constructedObj = Instantiate(constructedSitePrefab, transform.position, Quaternion.identity);
-                constructedObj.GetComponent<Site>().id = id;
-                constructedObj.transform.SetParent(transform.parent);
-                constructedObj.GetComponent<Site>().ConstructSite();
-                SessionManager.Instance.SetSite(constructedObj.GetComponent<Site>().SaveSite(), id);
-                siteInventory = null;
-                PlayerHub.Instance.inputManager.LeaveInteraction();
-                Destroy(gameObject);
+                SceneManager.Instance.cutsceneManager.StartFullscreenCutscene(cutsceneTime, blackoutTime, "anchor_building_base", "bg_mountain_edge_1");
+                cutsceneTimer = 0.0f;
+                inCutscene = true;
+                builtSite = false;
+                totalCutsceneTime = cutsceneTime + (blackoutTime * 2.0f);
+                PlayerHub.Instance.stateManager.MenuExit();
             }
             return;
         }

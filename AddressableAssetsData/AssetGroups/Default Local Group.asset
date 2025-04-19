@@ -109,6 +109,10 @@ MonoBehaviour:
     m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_1.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2e0b11de396b3844cb05d166f37c0103
+    m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_edge_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:
