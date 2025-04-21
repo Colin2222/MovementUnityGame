@@ -44,5 +44,8 @@ public class PlayerSpawnManager : MonoBehaviour
 		if(player.physics != null){
 			player.physics.ClearBottomCheck();
 		}
+
+		// make the scene reset its camera to the player's position so stuff doesnt get jumpy
+		sceneManager.SceneResetCamera();
     }
 }

@@ -156,11 +156,9 @@ public class SceneManager : MonoBehaviour
     void Start()
     {	
 		// camera setup
+		GameObject.FindWithTag("MainCamera").GetComponent<Camera>().backgroundColor = backgroundColor;
+		mainCameraObj = GameObject.FindWithTag("MainCamera");
 		player.cameraAimManager.RecalibrateCameraAimPoint();
-		if(vcam != null){
-			Debug.Log("Camera found, setting up camera follow target." + player.cameraAimPoint);
-			vcam.m_Follow = player.cameraAimPoint;
-		}
 
 		profileManager.SetupProfileSelection(profileSelectionLocation);
 		if(isHubWorld){
@@ -187,8 +185,6 @@ public class SceneManager : MonoBehaviour
 		foreach(GameObject block in colorChanges){
 			block.GetComponent<SpriteRenderer>().color = obstacleColor;
 		}
-		GameObject.FindWithTag("MainCamera").GetComponent<Camera>().backgroundColor = backgroundColor;
-		mainCameraObj = GameObject.FindWithTag("MainCamera");
 		
 		journalManager.SeekUI();
 		
@@ -250,6 +246,16 @@ public class SceneManager : MonoBehaviour
 	public void ResetCamera(){
 		vcam.m_Follow = player.cameraAimPoint;
 		vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = originalCameraDistance;
-		UnityEngine.Object.Destroy(cameraAimObj);
+		if(cameraAimObj != null){
+			UnityEngine.Object.Destroy(cameraAimObj);
+		}
+	}
+
+	public void SceneResetCamera(){
+		PlayerHub.Instance.cameraAimManager.RecalibrateCameraAimPoint();
+		mainCameraObj.transform.position = new Vector3(player.cameraAimPoint.position.x, player.cameraAimPoint.position.y, mainCameraObj.transform.position.z);
+		if(vcam != null){
+			vcam.m_Follow = player.cameraAimPoint;
+		}
 	}
 }
