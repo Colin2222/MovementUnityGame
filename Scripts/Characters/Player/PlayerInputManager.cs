@@ -38,6 +38,11 @@ public class PlayerInputManager : MonoBehaviour
 	float braceTimer;
 	float braceCooldownTimer;
 	bool braceCooldownCancelled = false;
+
+	// grabbing tracking
+	public bool grabbing = false;
+	float grabTimer;
+	float grabTime;
 	
 	// climbing up/down tracking
 	bool canClimbUp = false;
@@ -48,6 +53,8 @@ public class PlayerInputManager : MonoBehaviour
     private bool jumpJustPressed = false;
 	private bool bracePressed = false;
 	private bool braceJustPressed = false;
+	private bool grabPressed = false;
+	private bool grabJustPressed = false;
 	private bool inventoryPressed = false;
 	private bool inventoryJustPressed = false;
 	private bool itemGrabPressed = false;
@@ -98,6 +105,8 @@ public class PlayerInputManager : MonoBehaviour
 			
 			if(bracing){
 				bracing = !(stateManager.Brace());
+			} else if(grabbing){
+				grabbing = !(stateManager.Grab());
 			}
 		} else if(inUI){
 			HandleMenu();
@@ -216,6 +225,18 @@ public class PlayerInputManager : MonoBehaviour
 		}
 	}
 
+	private void HandleGrabbing(){
+		if(!grabPressed){
+			grabbing = false;
+		}
+		if(grabbing){
+			grabTimer -= Time.deltaTime;
+			if(grabTimer <= 0.0f){
+				grabbing = false;
+			}
+		}
+	}
+
 	private void HandleItemGrabbing(){
 		if(itemGrabJustPressed){
 			if(player.inventoryHandler.Pickup() && stateManager.GetStateType().Equals(typeof(PStateIdle))){
@@ -282,6 +303,16 @@ public class PlayerInputManager : MonoBehaviour
 	private void OnBrace(){
         bracePressed = !bracePressed;
         braceJustPressed = bracePressed;
+    }
+
+	private void OnGrab(){
+        grabPressed = !grabPressed;
+        grabJustPressed = grabPressed;
+
+		if(grabJustPressed){
+			grabbing = true;
+			grabTimer = attr.grabTime;
+		}
     }
 	
 	private void OnInventory(){

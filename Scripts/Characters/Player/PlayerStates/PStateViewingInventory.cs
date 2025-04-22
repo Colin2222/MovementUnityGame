@@ -50,6 +50,10 @@ public class PStateViewingInventory : PState, IMenuState
 	public override PState Brace(){
 		return this;
 	}
+
+	public override PState Grab(){
+		return this;
+	}
 	
 	public override PState LeaveGround(){
 		return this;

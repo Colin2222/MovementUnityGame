@@ -62,6 +62,10 @@ public class PStateHeadHitLaying : PState
 		return this;
 	}
 
+	public override PState Grab(){
+		return this;
+	}
+
 	public override PState LeaveGround(){
 		return new PStateFaceplantSoaring();
 	}

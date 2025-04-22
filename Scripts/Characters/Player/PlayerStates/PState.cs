@@ -27,6 +27,7 @@ public abstract class PState
 	public abstract PState ReleaseJump();
 	public abstract PState HitWall(Vector2 wallCollisionVelocity, WallCollisionInfo collInfo);
 	public abstract PState Brace();
+	public abstract PState Grab();
 	public abstract PState Interact();
 	public abstract PState ToggleJournal();
 	public abstract PState ToggleInventory();

@@ -77,6 +77,10 @@ public class PStateWallPushing : PState
 	public override PState Brace(){
 		return this;
 	}
+
+	public override PState Grab(){
+		return this;
+	}
 	
 	public override PState LeaveGround(){
 		return this;

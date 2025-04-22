@@ -57,6 +57,10 @@ public class PStateRollEntering : PState
 	public override PState Brace(){
 		return new PStateRolling(physics.lastBottomCollisionSpeed.x, physics.lastBottomCollisionSpeed.y);
 	}
+
+	public override PState Grab(){
+		return this;
+	}
 	
 	public override PState LeaveGround(){
 		player.animator.Play("PlayerSoaringStill");

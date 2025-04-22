@@ -20,6 +20,7 @@ public class PlayerAttributeSet
 	public float braceTime;
 	public float braceCooldownTime;
 	public float gravityScale;
+	public float grabTime;
 	public float cornerMantleTime;
 	public float cornerClimbTime;
 	public float cornerGrabbingSpeedThreshold;

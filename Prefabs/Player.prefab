@@ -140,6 +140,7 @@ MonoBehaviour:
     braceTime: 0
     braceCooldownTime: 0
     gravityScale: 0
+    grabTime: 0
     cornerMantleTime: 0
     cornerClimbTime: 0
     cornerGrabbingSpeedThreshold: 0
@@ -196,6 +197,7 @@ MonoBehaviour:
   interactor: {fileID: 1011390647}
   cameraAimManager: {fileID: 4107706158013080389}
   bracing: 0
+  grabbing: 0
 --- !u!1 &1011390644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,6 +2087,7 @@ MonoBehaviour:
     braceTime: 0.5
     braceCooldownTime: 0.5
     gravityScale: 2.5
+    grabTime: 1
     cornerMantleTime: 0.5833333
     cornerClimbTime: 0.9166667
     cornerGrabbingSpeedThreshold: 3.5

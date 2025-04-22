@@ -90,6 +90,10 @@ public class PStateCornerGrabbing : PState
 	}
 	
 	public override PState Brace(){
+		return this;
+	}
+
+	public override PState Grab(){
 		rigidbody.gravityScale = attr.gravityScale;
 		if(physics.isGrounded){
 			return new PStateIdle();

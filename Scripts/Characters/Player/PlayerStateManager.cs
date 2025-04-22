@@ -78,6 +78,12 @@ public class PlayerStateManager : MonoBehaviour
 		currentState = currentState.Brace();
 		return oldState != currentState;
 	}
+
+	public bool Grab(){
+		PState oldState = currentState;
+		currentState = currentState.Grab();
+		return oldState != currentState;
+	}
 	
 	public void ClimbUp(){
 		currentState = currentState.ClimbUp();

@@ -56,6 +56,10 @@ public class PStateTransformFollowing : PState
 		return this;
 	}
 	
+	public override PState Grab(){
+		return this;
+	}
+	
 	public override PState LeaveGround(){
 		return this;
 	}

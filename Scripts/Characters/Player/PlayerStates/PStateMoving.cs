@@ -84,15 +84,20 @@ public class PStateMoving : PState
 	}
 	
 	public override PState Brace(){
+		if(timeSinceLastGroundHit < attr.optionalRollWindow){
+			return new PStateRolling(physics.lastBottomCollisionSpeed.x, physics.lastBottomCollisionSpeed.y);
+		}
+		return this;
+	}
+
+	public override PState Grab(){
 		if(Mathf.Abs(rigidbody.velocity.x) < attr.cornerClimbDownMaxEntrySpeed && player.cornerHandler.CheckFootHandler(direction)){
 			return new PStateCornerClimbingDown(direction);
 		} else if(player.cornerHandler.mantleCorner != null){
 			return new PStateCornerMantling();
 		} else if(player.cornerHandler.corner != null){
 			return new PStateCornerGrabbing(0.0f);
-		} else if(timeSinceLastGroundHit < attr.optionalRollWindow){
-			return new PStateRolling(physics.lastBottomCollisionSpeed.x, physics.lastBottomCollisionSpeed.y);
-		}
+		} 
 		return this;
 	}
 	

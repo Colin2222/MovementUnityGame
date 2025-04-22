@@ -114,6 +114,10 @@ public class PStateRolling : PState
 	public override PState Brace(){
 		return this;
 	}
+
+	public override PState Grab(){
+		return this;
+	}
 	
 	public override PState LeaveGround(){
 		if(runningJumpQueued && rollTimer > rollCancelTime){
