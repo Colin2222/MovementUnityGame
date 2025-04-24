@@ -316,6 +316,10 @@
     "orangemountain_6": {
       "site_slots": [],
       "world_items": []
+    },
+    "outpost_outskirts_1": {
+      "site_slots": [],
+      "world_items": []
     }
   },
   "player_inventory": {

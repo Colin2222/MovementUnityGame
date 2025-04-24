@@ -100,6 +100,7 @@ public class PlayerInputManager : MonoBehaviour
 			stateManager.Move(horizontal, vertical);
 			HandleBracing();
 			HandleClimbing();
+			HandleGrabbing();
 			HandleItemGrabbing();
 			HandleCameraAim();
 			
