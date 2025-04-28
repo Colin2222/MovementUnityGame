@@ -71,6 +71,7 @@ public class SceneManager : MonoBehaviour
 	public SiteManager siteManager;
 	public ItemManager itemManager;
 	public DialogueManager dialogueManager;
+	public BackdropManager backdropManager;
 
 	[System.NonSerialized]
 	public GameObject mainCameraObj;
@@ -158,7 +159,13 @@ public class SceneManager : MonoBehaviour
 		// camera setup
 		GameObject.FindWithTag("MainCamera").GetComponent<Camera>().backgroundColor = backgroundColor;
 		mainCameraObj = GameObject.FindWithTag("MainCamera");
-		player.cameraAimManager.RecalibrateCameraAimPoint();
+		if(vcam != null){
+			player.cameraAimManager.RecalibrateCameraAimPoint();
+		}
+		
+
+		// backdrop setup
+		backdropManager.SetBackdrop();
 
 		profileManager.SetupProfileSelection(profileSelectionLocation);
 		if(isHubWorld){
@@ -253,8 +260,8 @@ public class SceneManager : MonoBehaviour
 
 	public void SceneResetCamera(){
 		PlayerHub.Instance.cameraAimManager.RecalibrateCameraAimPoint();
-		mainCameraObj.transform.position = new Vector3(player.cameraAimPoint.position.x, player.cameraAimPoint.position.y, mainCameraObj.transform.position.z);
 		if(vcam != null){
+			mainCameraObj.transform.position = new Vector3(player.cameraAimPoint.position.x, player.cameraAimPoint.position.y, mainCameraObj.transform.position.z);
 			vcam.m_Follow = player.cameraAimPoint;
 		}
 	}

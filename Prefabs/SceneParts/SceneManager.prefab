@@ -518,6 +518,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 3052486192322220350}
+--- !u!1 &4459581098030272527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 882405059321292906}
+  - component: {fileID: 6565144162060726753}
+  m_Layer: 0
+  m_Name: BackdropManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &882405059321292906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459581098030272527}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4845049507479276211}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6565144162060726753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459581098030272527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994655efea0e4964f981502d859b9a6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backdrops:
+  - {fileID: 21300000, guid: 44689e95e09583a4ebe70f7bc45c80d4, type: 3}
+  - {fileID: 21300000, guid: 0c6884f0af18cd8458a4bab87a52b20a, type: 3}
+  - {fileID: 21300000, guid: 26c67306065373b44a8b94bf613d9c7b, type: 3}
 --- !u!1 &4845049506497319639
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,6 +701,7 @@ Transform:
   - {fileID: 7742234726561147950}
   - {fileID: 2071839283405491733}
   - {fileID: 6448342597189625149}
+  - {fileID: 882405059321292906}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -701,6 +750,7 @@ MonoBehaviour:
   siteManager: {fileID: 7238369947876987365}
   itemManager: {fileID: 1496377342219492773}
   dialogueManager: {fileID: 3052486192322220350}
+  backdropManager: {fileID: 6565144162060726753}
 --- !u!1 &5118703167308506579
 GameObject:
   m_ObjectHideFlags: 0

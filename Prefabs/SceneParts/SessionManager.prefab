@@ -44,3 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a053fa3d2526a4199f30a49be24bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneManager: {fileID: 0}
+  player: {fileID: 0}
+  saveData:
+    player_inventory:
+      width: 0
+      height: 0
+      contents: []
+  currentPlayerName: player
