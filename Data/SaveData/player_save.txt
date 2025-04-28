@@ -30,28 +30,6 @@
           }
         },
         {
-          "id": 2,
-          "display_name": null,
-          "site": {
-            "name": "construction",
-            "inventories": [
-              {
-                "width": 1,
-                "height": 1,
-                "contents": [
-                  {
-                    "item_name": "wood_log",
-                    "quantity": 1
-                  }
-                ]
-              }
-            ],
-            "additional_data": {
-              "site_construction": "chest"
-            }
-          }
-        },
-        {
           "id": 101,
           "display_name": null,
           "site": {
