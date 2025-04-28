@@ -106,11 +106,27 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: dccfdce105fc44b45a821e41fc0e69d2
-    m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_1.png
+    m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_0.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 2e0b11de396b3844cb05d166f37c0103
+    m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_edge_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 99a1a626f7b44e94694f9aea16e8f698
+    m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d2b5988b7f333cf43b04ecf3fbdeef26
+    m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 32cb588df55198d43a1131eec62b0257
     m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_edge_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1b10ddcbd22cba244ba275e8d995e3a2
+    m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_edge_2.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

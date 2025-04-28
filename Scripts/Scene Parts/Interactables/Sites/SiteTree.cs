@@ -77,7 +77,7 @@ public class SiteTree : Site
 
                     if(numSwings >= 5){
                         inSwing = false;
-                        SceneManager.Instance.cutsceneManager.StartFullscreenCutscene(cutsceneTime, blackoutTime, "tree_cutting_base", "bg_mountain_1");
+                        SceneManager.Instance.cutsceneManager.StartFullscreenCutscene(cutsceneTime, blackoutTime, "tree_cutting_base", "bg_mountain_" + SessionManager.Instance.GetIntegerMarker("time_marker"));
                         cutsceneTimer = 0.0f;
                         inCutscene = true;
                         totalCutsceneTime = cutsceneTime + (blackoutTime * 2.0f);

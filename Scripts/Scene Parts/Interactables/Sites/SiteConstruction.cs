@@ -204,7 +204,7 @@ public class SiteConstruction : Site
             }
 
             if(canConstruct){
-                SceneManager.Instance.cutsceneManager.StartFullscreenCutscene(cutsceneTime, blackoutTime, "anchor_building_base", "bg_mountain_edge_1");
+                SceneManager.Instance.cutsceneManager.StartFullscreenCutscene(cutsceneTime, blackoutTime, "anchor_building_base", "bg_mountain_edge_" + SessionManager.Instance.GetIntegerMarker("time_marker"));
                 cutsceneTimer = 0.0f;
                 inCutscene = true;
                 builtSite = false;
