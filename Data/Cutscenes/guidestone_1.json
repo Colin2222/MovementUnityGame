@@ -29,6 +29,19 @@
 		},
 		{
 			"id":0,
+			"trigger_time":1.75,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"PlaySong",
+					"string_parameters":[
+						"ambient_4"
+					]
+				}
+			]
+		},
+		{
+			"id":0,
 			"trigger_time":10.0,
 			"anim_name":"PlayerLookingBackgroundTurning",
 			"custom_actions":[]

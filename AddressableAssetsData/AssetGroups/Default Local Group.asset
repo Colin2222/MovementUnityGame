@@ -129,6 +129,14 @@ MonoBehaviour:
     m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_edge_2.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 9e8062453489fce48a1d31b4e3c6fc02
+    m_Address: Assets/Sounds/Music/nocturne_f.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2a802f4045b1f0f438ffa00f7603cf95
+    m_Address: Assets/Sounds/Music/ambient_4.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:

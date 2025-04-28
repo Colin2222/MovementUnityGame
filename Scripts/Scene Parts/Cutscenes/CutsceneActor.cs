@@ -110,4 +110,11 @@ public class CutsceneActor : MonoBehaviour
 	public void StartDialogue(string DialogueCode){
 		this.transform.parent.GetComponent<DialogueManager>().StartDialogue(DialogueCode);
 	}
+
+	public void PlaySong(string songName){
+		GameObject bgsmObj = GameObject.FindWithTag("BackgroundSoundManager");
+		if(bgsmObj == null) return;
+		BackgroundSoundManager bgsm = bgsmObj.GetComponent<BackgroundSoundManager>();
+		bgsm.musicManager.PlaySong(songName);
+	}
 }
