@@ -1199,6 +1199,14 @@ PrefabInstance:
       propertyPath: journalUI
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5557554656389509193, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: m_Pitch
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 5557554656389509193, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: m_Volume
+      value: 0.707
+      objectReference: {fileID: 0}
     - target: {fileID: 7512772604946555651, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: m_RootOrder
       value: 0
