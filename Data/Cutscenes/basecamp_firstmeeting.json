@@ -1,7 +1,7 @@
 {
 	"id":4,
 	"lock_player":true,
-	"duration":15.5,
+	"duration":16.5,
 	"tasks":[
 		{
 			"id":-1,
@@ -179,6 +179,19 @@
 					"name":"SetFill",
 					"string_parameters":[
 						"cot_right", "true"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":16.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"firstmeeting_5"
 					]
 				}
 			]

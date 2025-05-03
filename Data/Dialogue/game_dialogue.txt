@@ -120,5 +120,29 @@
         }
       ]
     },
+    "firstmeeting_5": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Alright. Looks like there's still some time before dusk.",
+              "speaker": "???"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "You could go see if there's anything of use up the base of the mountain.",
+              "speaker": "???"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I wish I could join you, but I'm not agile enough anymore for that kind of climbing.",
+              "speaker": "???"
+            }
+          ]
+        }
+      ]
+    },
   }
 }
