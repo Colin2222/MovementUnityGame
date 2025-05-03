@@ -137,6 +137,10 @@ MonoBehaviour:
     m_Address: Assets/Sounds/Music/ambient_4.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: d59551a3b3192bf488debc2b6bc8c1bd
+    m_Address: Assets/Data/Cutscenes/basecamp_firstmeeting.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:

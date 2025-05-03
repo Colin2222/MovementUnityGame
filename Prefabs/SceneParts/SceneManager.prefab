@@ -473,6 +473,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3760138016800047159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2688316818371070080}
+  - component: {fileID: 5864172647228632068}
+  m_Layer: 0
+  m_Name: NPCManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2688316818371070080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3760138016800047159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4845049507479276211}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5864172647228632068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3760138016800047159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cffef2f9af4ffdb49876622b5c58bad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneManager: {fileID: 4845049507479276210}
 --- !u!1 &3977887024949435267
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,6 +748,7 @@ Transform:
   - {fileID: 2071839283405491733}
   - {fileID: 6448342597189625149}
   - {fileID: 882405059321292906}
+  - {fileID: 2688316818371070080}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -747,9 +793,12 @@ MonoBehaviour:
   invertPlayerColor: 0
   sitePrefabRegistryPrefab: {fileID: 8148355940044835786, guid: e7bc6f0034ee8bd489eb3a6db1635a17, type: 3}
   sitePrefabRegistry: {fileID: 0}
+  npcPrefabRegistryPrefab: {fileID: 4366670155041103746, guid: fea9bfa566e0c7240acc36dd46449e06, type: 3}
+  npcPrefabRegistry: {fileID: 0}
   soundManager: {fileID: 0}
   siteManager: {fileID: 7238369947876987365}
   itemManager: {fileID: 1496377342219492773}
+  npcManager: {fileID: 5864172647228632068}
   dialogueManager: {fileID: 3052486192322220350}
   backdropManager: {fileID: 6565144162060726753}
 --- !u!1 &5118703167308506579

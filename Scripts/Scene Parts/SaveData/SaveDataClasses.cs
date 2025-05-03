@@ -31,7 +31,7 @@ public class SavedSiteSlot{
 public class SavedRoom{
 	public List<SavedSiteSlot> site_slots;
 	public List<SavedWorldItem> world_items;
-
+	public List<SavedNPC> npcs;
 }
 
 [System.Serializable]
@@ -62,6 +62,8 @@ public class SavedWorldItem{
 [System.Serializable]
 public class SavedNPC{
 	public string name;
+	public float x_pos;
+	public float y_pos;
 	public List<SavedInventory> inventories;
 }
 

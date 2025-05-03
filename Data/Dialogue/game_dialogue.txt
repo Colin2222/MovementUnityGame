@@ -38,6 +38,20 @@
           ]
         }
       ]
-    }
+    },
+    "firstmeeting_1": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "HEY!!!",
+              "speaker": "???"
+            }
+          ]
+        }
+      ]
+    },
   }
 }

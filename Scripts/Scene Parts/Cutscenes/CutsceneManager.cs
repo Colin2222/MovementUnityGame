@@ -260,4 +260,18 @@ public class CutsceneManager : MonoBehaviour
 			}
 		}
 	}
+
+	public void AddActor(CutsceneActor actor){
+		if(!actorsDict.ContainsKey(actor.id)){
+			actorsDict.Add(actor.id, new List<CutsceneActor>());
+		}
+		actorsDict[actor.id].Add(actor);
+
+		// deactivate actor's gameobject if designated as deactivated
+		if(actor.deactivatedOnStart){
+			actor.gameObject.SetActive(false);
+		}
+		
+		actor.cutsceneManager = this;
+	}
 }

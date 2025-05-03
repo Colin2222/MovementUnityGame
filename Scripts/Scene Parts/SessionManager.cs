@@ -134,6 +134,7 @@ public class SessionManager : MonoBehaviour
 
 	public void SetCurrentRoom(){
 		saveData.rooms[sceneManager.sceneName] = sceneManager.siteManager.SaveSites();
+		saveData.rooms[sceneManager.sceneName].npcs = sceneManager.npcManager.SaveNPCs();
 	}
 
 	public void SetRoomItems(){

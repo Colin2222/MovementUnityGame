@@ -1,0 +1,69 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NPCManager : MonoBehaviour
+{
+    public SceneManager sceneManager;
+    Dictionary<string, NPCHub> npcs;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        LoadNPCs(sceneManager.GetCurrentRoomSave().npcs);
+        DetectNPCs();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void DetectNPCs(){
+        npcs = new Dictionary<string, NPCHub>();
+        GameObject[] npcObjectArray = GameObject.FindGameObjectsWithTag("NPC");
+        foreach(GameObject npcObj in npcObjectArray){
+            NPCHub hub = npcObj.GetComponent<NPCHub>();
+            npcs.Add(hub.npcName, hub);
+        }
+    }
+
+    public List<SavedNPC> SaveNPCs(){
+        DetectNPCs();
+        List<SavedNPC> savedNPCs = new List<SavedNPC>();
+        foreach(KeyValuePair<string, NPCHub> entry in npcs){
+            SavedNPC savedNPC = new SavedNPC();
+            savedNPC.name = entry.Key;
+            savedNPC.x_pos = entry.Value.transform.position.x;
+            savedNPC.y_pos = entry.Value.transform.position.y;
+            savedNPC.inventories = null;
+            savedNPCs.Add(savedNPC);
+        }
+        return savedNPCs;
+    }
+
+    public void LoadNPCs(List<SavedNPC> savedNPCs){
+        NPCPrefabRegistry registry = sceneManager.npcPrefabRegistry;
+        foreach(SavedNPC npc in savedNPCs){
+            GameObject npcObj = Instantiate(registry.GetPrefab(npc.name), new Vector3(npc.x_pos, npc.y_pos, 0), Quaternion.identity);
+        }
+    }
+
+    public void SpawnNPC(string npcName, Vector3 position){
+        NPCPrefabRegistry registry = sceneManager.npcPrefabRegistry;
+        GameObject npcObj = Instantiate(registry.GetPrefab(npcName), position, Quaternion.identity);
+        if(npcs.ContainsKey(npcName)){
+            NPCHub hubToDelete = npcs[npcName];
+            npcs.Remove(npcName);
+            Destroy(hubToDelete.gameObject);
+
+        }
+        NPCHub hub = npcObj.GetComponent<NPCHub>();
+        npcs.Add(npcName, hub);
+
+        if(hub.cutsceneActor != null){
+            sceneManager.cutsceneManager.AddActor(hub.cutsceneActor);
+        }
+    }
+}

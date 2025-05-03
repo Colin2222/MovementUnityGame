@@ -24,6 +24,10 @@ public class CutsceneActor : MonoBehaviour
     void Start()
     {
         cutsceneVelocity = Vector2.zero;
+
+		if(cutsceneManager == null){
+			cutsceneManager = GameObject.FindWithTag("SceneManager").GetComponent<SceneManager>().cutsceneManager;
+		}
     }
 
     // Update is called once per frame
@@ -116,5 +120,9 @@ public class CutsceneActor : MonoBehaviour
 		if(bgsmObj == null) return;
 		BackgroundSoundManager bgsm = bgsmObj.GetComponent<BackgroundSoundManager>();
 		bgsm.musicManager.PlaySong(songName);
+	}
+
+	public void SpawnNPC(string npcName, string strX, string strY){
+		SceneManager.Instance.npcManager.SpawnNPC(npcName, new Vector3(float.Parse(strX), float.Parse(strY), 0));
 	}
 }

@@ -65,11 +65,14 @@ public class SceneManager : MonoBehaviour
 
 	public GameObject sitePrefabRegistryPrefab;
 	public SitePrefabRegistry sitePrefabRegistry;
+	public GameObject npcPrefabRegistryPrefab;
+	public NPCPrefabRegistry npcPrefabRegistry;
 	
 	public SoundManager soundManager;
 
 	public SiteManager siteManager;
 	public ItemManager itemManager;
+	public NPCManager npcManager;
 	public DialogueManager dialogueManager;
 	public BackdropManager backdropManager;
 
@@ -148,6 +151,15 @@ public class SceneManager : MonoBehaviour
 		}
 		else{
 			sitePrefabRegistry = sitePrefabRegistryTest.GetComponent<SitePrefabRegistry>();
+		}
+
+		// check if there is a DontDestroyOnLoad npcPrefabRegistry, create a new one if there isnt
+		GameObject npcPrefabRegistryTest = GameObject.FindWithTag("NPCPrefabRegistry");
+		if(npcPrefabRegistryTest == null){
+			npcPrefabRegistry = Instantiate(npcPrefabRegistryPrefab,new Vector3(0,0,0),Quaternion.identity).GetComponent<NPCPrefabRegistry>();
+		}
+		else{
+			npcPrefabRegistry = npcPrefabRegistryTest.GetComponent<NPCPrefabRegistry>();
 		}
 		
 		player.InvertPlayerOutline(invertPlayerColor);
