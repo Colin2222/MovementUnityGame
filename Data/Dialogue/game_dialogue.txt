@@ -53,5 +53,72 @@
         }
       ]
     },
+    "firstmeeting_2": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Fellow traveler!",
+              "speaker": "???"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "How good it feels to see another face after wandering through those damned caves!",
+              "speaker": "???"
+            }
+          ]
+        }
+      ]
+    },
+    "firstmeeting_3": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "It's funny...",
+              "speaker": "???"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I'm about to suggest we set up camp since it'll be dark out soon.",
+              "speaker": "???"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "We've been wandering through the dark for months. What difference should that make?",
+              "speaker": "???"
+            },
+          ]
+        }
+      ]
+    },
+    "firstmeeting_4": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "But it feels right.",
+              "speaker": "???"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "We'll be on a time crunch with the floods rolling in, but I can't imagine not needing some rest after the caves.",
+              "speaker": "???"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "So shall we set up camp and continue on tomorrow morning?",
+              "speaker": "???"
+            }
+          ]
+        }
+      ]
+    },
   }
 }

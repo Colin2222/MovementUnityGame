@@ -30,6 +30,13 @@ public class CutsceneManager : MonoBehaviour
 	bool fullscreenCutsceneEntering = false;
 	bool fullscreenCutsceneExiting = false;
 	string animationName;
+	bool inBlackout = false;
+	bool blackoutEntering = false;
+	bool blackoutExiting = false;
+	float blackoutTime;
+	float blackoutTimer;
+	float blackoutDuration;
+	float blackoutTransitionDuration;
 	
 	Cutscene currentCutscene;
 	int currentTaskIndex;
@@ -106,8 +113,14 @@ public class CutsceneManager : MonoBehaviour
 					SwitchCameraAnchor(sceneManager.player.cameraAimPoint);
 				}
 			}
-		} else if(inFullscreenCutscene){
+		} 
+		
+		if(inFullscreenCutscene){
 			HandleFullscreenCutscene();
+		} 
+
+		if(inBlackout){
+			HandleBlackout();
 		}
     }
 	
@@ -273,5 +286,50 @@ public class CutsceneManager : MonoBehaviour
 		}
 		
 		actor.cutsceneManager = this;
+	}
+
+	public void StartBlackout(float transitionDuration, float duration){
+		inBlackout = true;
+		blackoutEntering = true;
+		blackoutDuration = duration;
+		blackoutTime = transitionDuration;
+		blackoutTimer = 0.0f;
+		fullscreenAnimator.gameObject.SetActive(true);
+		fullscreenAnimator.speed = 0.0f;
+		fullscreenAnimator.transform.position = new Vector3(sceneManager.mainCameraObj.transform.position.x, sceneManager.mainCameraObj.transform.position.y, 0.0f);
+		fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+		fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+		fullscreenCutsceneBackgroundSprite.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+	}
+
+	void HandleBlackout(){
+		blackoutTimer += Time.deltaTime;
+
+		if(blackoutEntering){
+			float a = blackoutTimer / blackoutTime;
+			fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, Mathf.Clamp(a, 0.0f, 1.0f));
+			if(blackoutTimer >= blackoutTime){
+				blackoutTimer = 0.0f;
+				blackoutEntering = false;
+				fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
+			}
+		} else if (blackoutExiting){
+			float a = blackoutTimer / blackoutTime;
+			fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, Mathf.Clamp(1.0f - a, 0.0f, 1.0f));
+			if(blackoutTimer >= blackoutTime){
+				blackoutExiting = false;
+				fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+				inBlackout = false;
+			}
+		} else{
+			if(blackoutTimer >= blackoutDuration){
+				blackoutExiting = true;
+				blackoutTimer = 0.0f;
+			}
+		}
+	}
+
+	public void SetFill(string fillId, bool active){
+		sceneManager.fillManager.SetFill(fillId, active);
 	}
 }

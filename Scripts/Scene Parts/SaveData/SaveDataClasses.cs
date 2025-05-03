@@ -32,6 +32,7 @@ public class SavedRoom{
 	public List<SavedSiteSlot> site_slots;
 	public List<SavedWorldItem> world_items;
 	public List<SavedNPC> npcs;
+	public Dictionary<string, SavedFill> fills;
 }
 
 [System.Serializable]
@@ -65,6 +66,12 @@ public class SavedNPC{
 	public float x_pos;
 	public float y_pos;
 	public List<SavedInventory> inventories;
+}
+
+[System.Serializable]
+public class SavedFill{
+	public string id;
+	public bool active;
 }
 
 public class RoomMappingData{

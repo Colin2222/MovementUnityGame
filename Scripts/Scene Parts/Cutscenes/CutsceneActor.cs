@@ -125,4 +125,12 @@ public class CutsceneActor : MonoBehaviour
 	public void SpawnNPC(string npcName, string strX, string strY){
 		SceneManager.Instance.npcManager.SpawnNPC(npcName, new Vector3(float.Parse(strX), float.Parse(strY), 0));
 	}
+
+	public void StartBlackout(float transitionDuration, float holdDuration){
+		cutsceneManager.StartBlackout(transitionDuration, holdDuration);
+	}
+
+	public void SetFill(string fillName, string activeStr){
+		cutsceneManager.SetFill(fillName, bool.Parse(activeStr));
+	}
 }

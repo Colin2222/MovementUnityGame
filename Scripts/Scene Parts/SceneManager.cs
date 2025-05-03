@@ -73,6 +73,7 @@ public class SceneManager : MonoBehaviour
 	public SiteManager siteManager;
 	public ItemManager itemManager;
 	public NPCManager npcManager;
+	public FillManager fillManager;
 	public DialogueManager dialogueManager;
 	public BackdropManager backdropManager;
 

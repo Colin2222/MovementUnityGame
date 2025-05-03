@@ -16,7 +16,7 @@
   "integer_markers": {
     "cable_car_location": 100000,
     "cable_car_progress": 100001,
-    "time_marker": 1
+    "time_marker": 2
   },
   "rooms": {
     "basecamp": {
@@ -56,22 +56,43 @@
         }
       ],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {
+        "cot_right": {
+          "id": "cot_right",
+          "active": false
+        },
+        "cot_left": {
+          "id": "cot_left",
+          "active": false
+        },
+        "campfire": {
+          "id": "campfire",
+          "active": false
+        },
+        "tarp": {
+          "id": "tarp",
+          "active": false
+        }
+      }
     },
     "basecamp_river": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "earlycave_exit": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "earlycave_river": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "guidestone_cave": {
       "site_slots": [
@@ -86,7 +107,8 @@
         }
       ],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "mountainbase_rightedge1": {
       "site_slots": [
@@ -177,27 +199,32 @@
           "y_pos": 17.26499
         }
       ],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "mountainbase_cave1": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "mountainbase_mid1": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "mountainbase_minicave1": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "mountainbase_right1": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "mountainbase_right2": {
       "site_slots": [
@@ -212,7 +239,8 @@
         }
       ],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "mountainbase_right3": {
       "site_slots": [
@@ -227,22 +255,26 @@
         }
       ],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "greenmountain_1": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "greenmountain_2": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "greenmountaincave_1": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "greenmountain_3": {
       "site_slots": [
@@ -257,12 +289,14 @@
         }
       ],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "greenmountain_4": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "greenmountain_5": {
       "site_slots": [
@@ -277,57 +311,68 @@
         }
       ],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "greenmountaincave_2": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "greenmountaincave_3": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "greenmountain_6": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "orangemountain_1": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "orangemountain_2": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "orangemountain_3": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "orangemountain_4": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "orangemountain_5": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "orangemountain_6": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     },
     "outpost_outskirts_1": {
       "site_slots": [],
       "world_items": [],
-      "npcs": []
+      "npcs": [],
+      "fills": {}
     }
   },
   "player_inventory": {
