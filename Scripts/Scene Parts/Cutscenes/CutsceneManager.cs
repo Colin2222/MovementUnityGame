@@ -195,6 +195,7 @@ public class CutsceneManager : MonoBehaviour
 	}
 	
 	public void SwitchCameraAnchor(Transform anchor){
+		Debug.Log("Switching camera anchor to: " + anchor.name);
 		if(vcam != null){
 			vcam.m_Follow = anchor;
 		}

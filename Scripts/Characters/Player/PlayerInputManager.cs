@@ -102,7 +102,6 @@ public class PlayerInputManager : MonoBehaviour
 			HandleClimbing();
 			HandleGrabbing();
 			HandleItemGrabbing();
-			HandleCameraAim();
 			
 			if(bracing){
 				bracing = !(stateManager.Brace());
@@ -114,6 +113,7 @@ public class PlayerInputManager : MonoBehaviour
 		} else if(inCutscene){
 			
 		}
+		HandleCameraAim();
 		
         jumpJustPressed = false;
 		braceJustPressed = false;
@@ -247,7 +247,11 @@ public class PlayerInputManager : MonoBehaviour
 	}
 
 	private void HandleCameraAim(){
-		cameraAimManager.HandleCameraAim(cameraHorizontal, cameraVertical);
+		if(!locked){
+			cameraAimManager.HandleCameraAim(cameraHorizontal, cameraVertical);
+		} else{
+			cameraAimManager.HandleCameraAim(0, 0);
+		}
 	}
 	
 	public void CancelBraceCooldown(){

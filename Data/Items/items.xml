@@ -27,6 +27,13 @@
 			"type": "1",
 			"stack_size": "1",
 			"icon": "iron_rod.png"
+		},
+		{
+			"id": "iron_ore",
+			"name": "Iron Ore",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "iron_ore.png"
 		}
 	]
 }
