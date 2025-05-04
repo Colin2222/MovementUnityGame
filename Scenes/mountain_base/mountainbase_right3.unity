@@ -1775,7 +1775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &319737420
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1836,7 +1836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319737419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -76.465645, y: 32.503662, z: 0}
+  m_LocalPosition: {x: -70.8, y: 32.503662, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2410,7 +2410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419656110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -89.05, y: 32.901318, z: 0}
+  m_LocalPosition: {x: -83, y: 32.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2430,14 +2430,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataTriggers:
-  - cutsceneName: revelation_1
+  - cutsceneName: mountainbase_right3_firstrev
     dataToCheck:
     - dataName: first_revelation
       dataValue: 0
     dataToSet:
     - dataName: first_revelation
       dataValue: 1
-  cutsceneName: revelation_1
+  cutsceneName: mountainbase_right3_firstrev
 --- !u!1 &443113131
 GameObject:
   m_ObjectHideFlags: 0
@@ -2615,7 +2615,7 @@ PrefabInstance:
       objectReference: {fileID: 1328187143}
     - target: {fileID: 4845049506762891137, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -81.31
+      value: -86.4
       objectReference: {fileID: 0}
     - target: {fileID: 4845049506762891137, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2980,7 +2980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &505068295
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5280,11 +5280,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -69.30684
+      value: -69.30619
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 36.80628
+      value: 36.80637
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.z
