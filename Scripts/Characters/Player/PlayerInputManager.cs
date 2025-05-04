@@ -194,7 +194,7 @@ public class PlayerInputManager : MonoBehaviour
 				stateManager.MenuDrop();
 			}
 			if(menuExitJustPressed){
-				if(stateManager.MenuExit()){
+				if(!inCutscene && stateManager.MenuExit()){
 					UnlockPlayer();
 					inUI = false;
 				}
@@ -410,7 +410,7 @@ public class PlayerInputManager : MonoBehaviour
 			if(!inCutscene && stateManager.ToggleInventory()){
 				LockPlayer();
 				inUI = true;
-			} else if(inUI){
+			} else if(!inCutscene && inUI){
 				UnlockPlayer();
 				inUI = false;
 			}
