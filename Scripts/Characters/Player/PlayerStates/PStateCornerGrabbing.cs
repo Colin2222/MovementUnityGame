@@ -51,6 +51,10 @@ public class PStateCornerGrabbing : PState
 	
 	public override PState ClimbDown(){
 		rigidbody.gravityScale = attr.gravityScale;
+		if(physics.isGrounded){
+			return new PStateIdle();
+		}
+		physics.ClearBottomCheck();
 		player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}
@@ -94,13 +98,7 @@ public class PStateCornerGrabbing : PState
 	}
 
 	public override PState Grab(){
-		rigidbody.gravityScale = attr.gravityScale;
-		if(physics.isGrounded){
-			return new PStateIdle();
-		}
-		physics.ClearBottomCheck();
-		player.animator.Play("PlayerSoaringStill");
-		return new PStateSoaring();
+		return this;
 	}
 	
 	public override PState LeaveGround(){
