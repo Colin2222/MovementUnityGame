@@ -9,6 +9,7 @@ public class PlayerAttributeSet
 	public float maxRunSpeed;
 	public float slideForceMultiplier;
 	public float slideStopSpeedTarget;
+	public float slowRunSpeed;
 	public float runningJumpSpeed;
 	public float runningJumpCoyoteTime;
 	public float jumpBraceTime;

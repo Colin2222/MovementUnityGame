@@ -390,7 +390,7 @@ AnimatorStateMachine:
     m_Position: {x: 380, y: 30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8204511864935464680}
-    m_Position: {x: 590, y: 360, z: 0}
+    m_Position: {x: 790, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 646746893237983620}
     m_Position: {x: 600, y: 220, z: 0}
@@ -598,6 +598,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 8811559301013400201}
     m_Position: {x: 1550, y: -190, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 8463570581533579234}
+    m_Position: {x: 790, y: 160, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -2871,6 +2874,32 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &8463570581533579234
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerRunningFast
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: cca4392edd33bc94ea608d1b3764e57d, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &8529951012800113933
 AnimatorState:
   serializedVersion: 6

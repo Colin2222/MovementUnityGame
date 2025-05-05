@@ -6,15 +6,37 @@ public class PStateMoving : PState
 {
 	float horizontal;
 	float vertical;
+	bool isFast = false;
+	bool isSlow = false;
 	
     public PStateMoving(){
 		player.soundInterface.PlayStep2();
+		player.animator.Play("PlayerRunning");
+		isFast = false;
+		isSlow = false;
+		HandleFastMovement();
 	}
 	
     public override PState Update(){
-		player.animator.Play("PlayerRunning");
+		HandleFastMovement();
 		timeSinceLastGroundHit += Time.deltaTime;
 		return this;
+	}
+
+	void HandleFastMovement(){
+		if(!isFast && Mathf.Abs(rigidbody.velocity.x) > attr.runningJumpSpeed){
+			isFast = true;
+			player.animator.Play("PlayerRunning");
+		} else if(isFast && Mathf.Abs(rigidbody.velocity.x) < attr.runningJumpSpeed){
+			isFast = false;
+			player.animator.Play("PlayerRunningFast");
+		} else if(!isSlow && Mathf.Abs(rigidbody.velocity.x) < attr.slowRunSpeed){
+			isSlow = true;
+			player.animator.Play("PlayerRunning");
+		} else if(isSlow && Mathf.Abs(rigidbody.velocity.x) > attr.slowRunSpeed){
+			isSlow = false;
+			player.animator.Play("PlayerRunningFast");
+		}
 	}
 	
 	public override PState FixedUpdate(){

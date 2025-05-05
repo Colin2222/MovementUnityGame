@@ -129,6 +129,7 @@ MonoBehaviour:
     maxRunSpeed: 0
     slideForceMultiplier: 0
     slideStopSpeedTarget: 0
+    slowRunSpeed: 0
     runningJumpSpeed: 0
     runningJumpCoyoteTime: 0
     jumpBraceTime: 0
@@ -2076,6 +2077,7 @@ MonoBehaviour:
     maxRunSpeed: 8.5
     slideForceMultiplier: 0.65
     slideStopSpeedTarget: 1
+    slowRunSpeed: 2
     runningJumpSpeed: 5.75
     runningJumpCoyoteTime: 0.1
     jumpBraceTime: 0.5
