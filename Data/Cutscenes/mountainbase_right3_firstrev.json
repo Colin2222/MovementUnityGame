@@ -1,7 +1,7 @@
 {
 	"id":4,
 	"lock_player":true,
-	"duration":23.0,
+	"duration":37.5,
 	"tasks":[
 		{
 			"id":0,
@@ -30,19 +30,121 @@
 		},
 		{
 			"id":0,
-			"trigger_time":15.0,
+			"trigger_time":14.5,
 			"anim_name":"PlayerLedgeLayingStillBreath",
 			"custom_actions":[]
 		},
 		{
+			"id":-1,
+			"trigger_time":17.5,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartBlackout",
+					"parameters":[
+						2.0, 1.0
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":20.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetIntegerMarker",
+					"string_parameters":[
+						"time_marker", "2"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":20.1,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"ResetBackdrop",
+					"parameters":[]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":26.5,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"firstrev_1"
+					]
+				}
+			]
+		},
+		{
 			"id":0,
-			"trigger_time":18.5,
+			"trigger_time":30.5,
 			"anim_name":"PlayerLedgeLayingUp",
 			"custom_actions":[]
 		},
 		{
+			"id":-1,
+			"trigger_time":31.75,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"firstrev_2"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":33.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"firstrev_3"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":35.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"firstrev_4"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":36.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"firstrev_5"
+					]
+				}
+			]
+		},
+		{
 			"id":0,
-			"trigger_time":21.0,
+			"trigger_time":37.5,
 			"anim_name":"PlayerLedgeSittingGettingUp",
 			"custom_actions":[]
 		}

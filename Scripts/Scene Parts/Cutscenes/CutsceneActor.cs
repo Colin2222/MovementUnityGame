@@ -133,4 +133,18 @@ public class CutsceneActor : MonoBehaviour
 	public void SetFill(string fillName, string activeStr){
 		cutsceneManager.SetFill(fillName, bool.Parse(activeStr));
 	}
+
+	public void SetIntegerMarker(string markerName, string valueStr){
+		int value = int.Parse(valueStr);
+		SessionManager.Instance.SetIntegerMarker(markerName, value);
+	}
+
+	public void SetProgressMarker(string markerName, string valueStr){
+		bool value = bool.Parse(valueStr);
+		SessionManager.Instance.SetData(markerName, value);
+	}
+
+	public void ResetBackdrop(){
+		SceneManager.Instance.backdropManager.SetBackdrop();
+	}
 }

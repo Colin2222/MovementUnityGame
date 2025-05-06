@@ -144,5 +144,124 @@
         }
       ]
     },
+    "firstrev_1": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "It'll be okay.",
+              "speaker": "You"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I can still make it to the City.",
+              "speaker": "You"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I can still make it. We'll just continue in the morning.",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "firstrev_2": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "But why?",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "firstrev_3": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "What choice do I have?",
+              "speaker": "You"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Am I really considering abandoning my journey on a whim when I'm so close? I'm practically already there.",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "firstrev_4": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "No.",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "firstrev_5": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I knew it since I left. This has been a long time coming.",
+              "speaker": "You"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I just didn't want to face it for whatever reason.",
+              "speaker": "You"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I'm not going to the Golden City. I'm just not meant to go there.",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "firstrev_6": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "That was sunk cost fallacy, anyway.",
+              "speaker": "You"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Quiet the mind and enjoy the triumph of your decision before you inevitably second guess it.",
+              "speaker": "Narrator?"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "And quiet the mind enough to ignore the meaning of this 'decision' within the bounds of a videogame medium.",
+              "speaker": "Narrator."
+            }
+          ]
+        }
+      ]
+    },
   }
 }
