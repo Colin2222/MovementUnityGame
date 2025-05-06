@@ -246,18 +246,27 @@
           "nodes":[
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "That was sunk cost fallacy, anyway.",
+              "text": "Either way, I should head back to camp and get some rest.",
               "speaker": "You"
             },
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "Quiet the mind and enjoy the triumph of your decision before you inevitably second guess it.",
-              "speaker": "Narrator?"
-            },
+              "text": "I wonder what the other traveler will think of me not going.",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "firstrev_7": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "And quiet the mind enough to ignore the meaning of this 'decision' within the bounds of a videogame medium.",
-              "speaker": "Narrator."
+              "text": "I wonder what my family and friends will think.",
+              "speaker": "You"
             }
           ]
         }
