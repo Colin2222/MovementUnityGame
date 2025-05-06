@@ -604,7 +604,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 71621044}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -2050,21 +2050,21 @@ CompositeCollider2D:
         Y: -5972080
       - X: 48999404
         Y: -224441552
-      - X: 179705024
-        Y: -254507696
-      - X: 405518720
-        Y: -255284512
+      - X: 178076608
+        Y: -238223216
+      - X: 346894560
+        Y: -239000016
       - X: 429075200
         Y: 227516944
   m_CompositePaths:
     m_Paths:
-    - - {x: 40.551846, y: -25.528452}
-      - {x: 42.9075, y: 22.751701}
+    - - {x: 34.689434, y: -23.900002}
+      - {x: 42.907497, y: 22.751703}
       - {x: 24.16562, y: 29.024315}
       - {x: 9.546023, y: 27.183537}
       - {x: 1.4701701, y: -0.5972134}
-      - {x: 4.8999586, y: -22.44416}
-      - {x: 17.970507, y: -25.45077}
+      - {x: 4.8999615, y: -22.444157}
+      - {x: 17.807661, y: -23.82232}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &373151232
@@ -2537,7 +2537,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446913144}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -3076,7 +3076,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501489699}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -6105,7 +6105,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281726819}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -8101,8 +8101,8 @@ PolygonCollider2D:
       - {x: 9.546028, y: 27.183552}
       - {x: 1.4701691, y: -0.597208}
       - {x: 4.8999405, y: -22.444155}
-      - {x: 17.970503, y: -25.45077}
-      - {x: 40.551872, y: -25.528452}
+      - {x: 17.807661, y: -23.82232}
+      - {x: 34.689457, y: -23.900002}
       - {x: 42.90752, y: 22.751694}
 --- !u!61 &1892454566
 BoxCollider2D:
@@ -9154,7 +9154,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139018535}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

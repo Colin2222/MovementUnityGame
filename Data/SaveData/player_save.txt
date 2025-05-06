@@ -254,13 +254,7 @@
           }
         }
       ],
-      "world_items": [
-        {
-          "item_id": "iron_ore",
-          "x_pos": -85.0,
-          "y_pos": 31.764719
-        }
-      ],
+      "world_items": [],
       "npcs": [],
       "fills": {}
     },
