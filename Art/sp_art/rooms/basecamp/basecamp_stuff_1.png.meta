@@ -209,6 +209,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: blacksmith_loose_bag
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 370
+        width: 6
+        height: 9
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5bce094fe8536044bfa9d17ced30ebf
+      internalID: 1466758452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -221,6 +242,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       campfire_1: 378677304
+      blacksmith_loose_bag: 1466758452
       campfire_3: -950048165
       basecamp_cot: -1902227354
       basecamp_tarp1: -892219629

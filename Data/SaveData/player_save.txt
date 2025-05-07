@@ -56,22 +56,29 @@
         }
       ],
       "world_items": [],
-      "npcs": [],
+      "npcs": [
+        {
+          "name": "blacksmith",
+          "x_pos": -140.0,
+          "y_pos": 6.26497841,
+          "inventories": null
+        }
+      ],
       "fills": {
-        "cot_right": {
-          "id": "cot_right",
-          "active": false
-        },
         "cot_left": {
           "id": "cot_left",
+          "active": false
+        },
+        "tarp": {
+          "id": "tarp",
           "active": false
         },
         "campfire": {
           "id": "campfire",
           "active": false
         },
-        "tarp": {
-          "id": "tarp",
+        "cot_right": {
+          "id": "cot_right",
           "active": false
         }
       }
