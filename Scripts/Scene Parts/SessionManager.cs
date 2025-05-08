@@ -146,6 +146,17 @@ public class SessionManager : MonoBehaviour
 		saveData.player_inventory = inventory;
 	}
 
+	public void SetNPCDefaultAnimation(string npcName, string roomName, string animationName){
+		if(saveData.rooms.ContainsKey(roomName)){
+			for(int i = 0; i < saveData.rooms[roomName].npcs.Count; i++){
+				if(saveData.rooms[roomName].npcs[i].name == npcName){
+					saveData.rooms[roomName].npcs[i].default_animation = animationName;
+					return;
+				}
+			}
+		}
+	}
+
 	public void SetCableCar(int anchorPointIndex){
 		currentEntranceDirection = saveData.integer_markers["cable_car_location"] < anchorPointIndex ? -1 : 1;
 		saveData.integer_markers["cable_car_location"] = anchorPointIndex;

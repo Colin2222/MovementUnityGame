@@ -3,15 +3,15 @@
     "tutorial_1_viewed": false,
     "tutorial_1b_viewed": false,
     "tutorial_2_viewed": false,
-    "tutorial_3_viewed": false,
-    "tutorial_4_viewed": false,
+    "tutorial_3_viewed": true,
+    "tutorial_4_viewed": true,
     "started_game": true,
     "halfway_done": false,
     "finished_game": false,
     "first_revelation": false,
     "first_dialogue_completed": false,
     "guidestone_1_viewed": false,
-    "basecamp_first_meeting_viewed": false
+    "basecamp_first_meeting_viewed": true
   },
   "integer_markers": {
     "cable_car_location": 100000,
@@ -59,27 +59,28 @@
       "npcs": [
         {
           "name": "blacksmith",
-          "x_pos": -140.0,
-          "y_pos": 6.26497841,
+          "x_pos": -132.53363,
+          "y_pos": 6.26499557,
+          "default_animation": "blacksmith_idle",
           "inventories": null
         }
       ],
       "fills": {
         "cot_left": {
           "id": "cot_left",
-          "active": false
+          "active": true
         },
         "tarp": {
           "id": "tarp",
-          "active": false
+          "active": true
         },
         "campfire": {
           "id": "campfire",
-          "active": false
+          "active": true
         },
         "cot_right": {
           "id": "cot_right",
-          "active": false
+          "active": true
         }
       }
     },

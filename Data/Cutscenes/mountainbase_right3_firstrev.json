@@ -186,6 +186,19 @@
 					]
 				}
 			]
+		},
+		{
+			"id":-1,
+			"trigger_time":45.5,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetNPCDefaultAnimationDistant",
+					"string_parameters":[
+						"blacksmith", "blacksmith_cot_layingaway", "basecamp"
+					]
+				}
+			]
 		}
 	]
 }

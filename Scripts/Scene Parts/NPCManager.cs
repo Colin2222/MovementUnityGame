@@ -37,6 +37,7 @@ public class NPCManager : MonoBehaviour
             savedNPC.name = entry.Key;
             savedNPC.x_pos = entry.Value.transform.position.x;
             savedNPC.y_pos = entry.Value.transform.position.y;
+            savedNPC.default_animation = entry.Value.cutsceneActor.defaultAnim;
             savedNPC.inventories = null;
             savedNPCs.Add(savedNPC);
         }
@@ -47,6 +48,9 @@ public class NPCManager : MonoBehaviour
         NPCPrefabRegistry registry = sceneManager.npcPrefabRegistry;
         foreach(SavedNPC npc in savedNPCs){
             GameObject npcObj = Instantiate(registry.GetPrefab(npc.name), new Vector3(npc.x_pos, npc.y_pos, 0), Quaternion.identity);
+            NPCHub hub = npcObj.GetComponent<NPCHub>();
+            hub.cutsceneActor.defaultAnim = npc.default_animation;
+            hub.cutsceneActor.animator.Play(npc.default_animation);
         }
     }
 
@@ -64,6 +68,19 @@ public class NPCManager : MonoBehaviour
 
         if(hub.cutsceneActor != null){
             sceneManager.cutsceneManager.AddActor(hub.cutsceneActor);
+        }
+    }
+
+    public void SetNPCDefaultAnimation(string npcName, string animationName, string roomName=null){
+        if(roomName != null){
+            sceneManager.sessionManager.SetNPCDefaultAnimation(npcName, roomName, animationName);
+        } else{
+            if(npcs.ContainsKey(npcName)){
+                NPCHub hub = npcs[npcName];
+                hub.cutsceneActor.defaultAnim = animationName;
+            } else{
+                Debug.Log("NPC " + npcName + " not found in NPCManager.");
+            }
         }
     }
 }

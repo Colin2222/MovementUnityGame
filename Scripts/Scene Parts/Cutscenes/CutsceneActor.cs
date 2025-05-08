@@ -147,4 +147,12 @@ public class CutsceneActor : MonoBehaviour
 	public void ResetBackdrop(){
 		SceneManager.Instance.backdropManager.SetBackdrop();
 	}
+
+	public void SetNPCDefaultAnimation(string npcName, string animationName){
+		SceneManager.Instance.npcManager.SetNPCDefaultAnimation(npcName, animationName);
+	}
+
+	public void SetNPCDefaultAnimationDistant(string npcName, string animationName, string roomName){
+		SceneManager.Instance.npcManager.SetNPCDefaultAnimation(npcName, animationName, roomName);
+	}
 }
