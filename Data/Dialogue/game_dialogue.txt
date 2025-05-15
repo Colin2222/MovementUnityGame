@@ -265,8 +265,69 @@
           "nodes":[
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "I wonder what my family and friends will think.",
+              "text": "I'm still even sure what I think of it.",
               "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_1": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I thought you may have just continued on your journey to the City.",
+              "speaker": "Traveler"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_2": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I'm not too sure I want to go to the City.",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_3": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Oh.",
+              "speaker": "Traveler"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_4": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Sleep on that.",
+              "speaker": "Traveler"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I wouldn't want you to regret your decision.",
+              "speaker": "Traveler"
             }
           ]
         }

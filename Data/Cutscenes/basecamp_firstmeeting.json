@@ -185,6 +185,19 @@
 		},
 		{
 			"id":-1,
+			"trigger_time":13.25,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetFill",
+					"string_parameters":[
+						"blacksmith_bag", "true"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
 			"trigger_time":16.0,
 			"anim_name":"",
 			"custom_actions":[

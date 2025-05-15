@@ -155,4 +155,20 @@ public class CutsceneActor : MonoBehaviour
 	public void SetNPCDefaultAnimationDistant(string npcName, string animationName, string roomName){
 		SceneManager.Instance.npcManager.SetNPCDefaultAnimation(npcName, animationName, roomName);
 	}
+
+	public void SetNPCPosition(string npcName, string xStr, string yStr, string roomName=null){
+		if(roomName == null){
+			SceneManager.Instance.npcManager.SetNPCPosition(npcName, new Vector2(float.Parse(xStr), float.Parse(yStr)));
+		} else{
+			SceneManager.Instance.npcManager.SetNPCPosition(npcName, new Vector2(float.Parse(xStr), float.Parse(yStr)), roomName);
+		}
+	}
+
+	public void SetNPCDirection(string npcName, string directionStr, string roomName=null){
+		if(roomName == null){
+			SceneManager.Instance.npcManager.SetNPCDirection(npcName, int.Parse(directionStr));
+		} else{
+			SceneManager.Instance.npcManager.SetNPCDirection(npcName, int.Parse(directionStr), roomName);
+		}
+	}
 }

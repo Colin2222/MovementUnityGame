@@ -21,4 +21,17 @@ public class NPCHub : MonoBehaviour
     {
         
     }
+
+    public void SetDirection(int direction){
+		if(direction > 0){
+			if(transform.eulerAngles.y == 180){
+				transform.eulerAngles = new Vector2(0,0);
+			}
+		}
+		if(direction < 0){
+			if(transform.eulerAngles.y == 0){
+				transform.eulerAngles = new Vector2(0,180);
+			}
+		}
+	}
 }

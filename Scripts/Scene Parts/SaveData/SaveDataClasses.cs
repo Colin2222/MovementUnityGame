@@ -65,6 +65,7 @@ public class SavedNPC{
 	public string name;
 	public float x_pos;
 	public float y_pos;
+	public int direction;
 	public string default_animation;
 	public List<SavedInventory> inventories;
 }

@@ -146,17 +146,6 @@ public class SessionManager : MonoBehaviour
 		saveData.player_inventory = inventory;
 	}
 
-	public void SetNPCDefaultAnimation(string npcName, string roomName, string animationName){
-		if(saveData.rooms.ContainsKey(roomName)){
-			for(int i = 0; i < saveData.rooms[roomName].npcs.Count; i++){
-				if(saveData.rooms[roomName].npcs[i].name == npcName){
-					saveData.rooms[roomName].npcs[i].default_animation = animationName;
-					return;
-				}
-			}
-		}
-	}
-
 	public void SetCableCar(int anchorPointIndex){
 		currentEntranceDirection = saveData.integer_markers["cable_car_location"] < anchorPointIndex ? -1 : 1;
 		saveData.integer_markers["cable_car_location"] = anchorPointIndex;
@@ -169,14 +158,6 @@ public class SessionManager : MonoBehaviour
 	public void SetSite(SavedSite site, int siteSlot){
 		int siteIndex = FindSiteSlotIndex(saveData.rooms[sceneManager.sceneName], siteSlot);
 		saveData.rooms[sceneManager.sceneName].site_slots[siteIndex].site = site;
-	}
-
-	public int GetIntegerMarker(string markerName){
-		return saveData.integer_markers[markerName];
-	}
-
-	public void SetIntegerMarker(string markerName, int value){
-		saveData.integer_markers[markerName] = value;
 	}
 
 	int FindSiteSlotIndex(SavedRoom room, int siteId){
@@ -235,5 +216,174 @@ public class SessionManager : MonoBehaviour
 	
 	public void UpdateSpawnPoint(Transform transform){
 		sceneManager.playerSpawnTransform = transform;
+	}
+
+
+	// SAVE DATA INTERFACING METHODS
+	public bool GetProgressMarker(string markerName){
+		if(saveData.progress_markers.ContainsKey(markerName)){
+			return saveData.progress_markers[markerName];
+		}
+		return false;
+	}
+	public void SetProgressMarker(string markerName, bool value){
+		if(saveData.progress_markers.ContainsKey(markerName)){
+			saveData.progress_markers[markerName] = value;
+		} else{
+			saveData.progress_markers.Add(markerName, value);
+		}
+	}
+
+	public int GetIntegerMarker(string markerName){
+		if(saveData.integer_markers.ContainsKey(markerName)){
+			return saveData.integer_markers[markerName];
+		}
+		return -1;
+	}
+
+	public void SetIntegerMarker(string markerName, int value){
+		if(saveData.integer_markers.ContainsKey(markerName)){
+			saveData.integer_markers[markerName] = value;
+		} else{
+			saveData.integer_markers.Add(markerName, value);
+		}
+	}
+
+	public bool GetFillIsActive(string fillName){
+		if(saveData.rooms[sceneManager.sceneName].fills.ContainsKey(fillName)){
+			return saveData.rooms[sceneManager.sceneName].fills[fillName].active;
+		}
+		return false;
+	}
+
+	public bool GetFillIsActive(string fillName, string roomName){
+		if(saveData.rooms[roomName].fills.ContainsKey(fillName)){
+			return saveData.rooms[roomName].fills[fillName].active;
+		}
+		return false;
+	}
+
+	public void SetFillIsActive(string fillName, bool value){
+		if(saveData.rooms[sceneManager.sceneName].fills.ContainsKey(fillName)){
+			saveData.rooms[sceneManager.sceneName].fills[fillName].active = value;
+		}
+	}
+
+	public void SetFillIsActive(string fillName, bool value, string roomName){
+		if(saveData.rooms[roomName].fills.ContainsKey(fillName)){
+			saveData.rooms[roomName].fills[fillName].active = value;
+		}
+	}
+
+	public Vector2 GetNPCPosition(string npcName){
+		if(saveData.rooms[sceneManager.sceneName].npcs != null){
+			for(int i = 0; i < saveData.rooms[sceneManager.sceneName].npcs.Count; i++){
+				if(saveData.rooms[sceneManager.sceneName].npcs[i].name == npcName){
+					return new Vector2(saveData.rooms[sceneManager.sceneName].npcs[i].x_pos, saveData.rooms[sceneManager.sceneName].npcs[i].y_pos);
+				}
+			}
+		}
+		return Vector2.zero;
+	}
+
+	public Vector2 GetNPCPosition(string npcName, string roomName){
+		if(saveData.rooms[roomName].npcs != null){
+			for(int i = 0; i < saveData.rooms[roomName].npcs.Count; i++){
+				if(saveData.rooms[roomName].npcs[i].name == npcName){
+					return new Vector2(saveData.rooms[roomName].npcs[i].x_pos, saveData.rooms[roomName].npcs[i].y_pos);
+				}
+			}
+		}
+		return Vector2.zero;
+	}
+
+	public void SetNPCPosition(string npcName, Vector2 position){
+		if(saveData.rooms[sceneManager.sceneName].npcs != null){
+			for(int i = 0; i < saveData.rooms[sceneManager.sceneName].npcs.Count; i++){
+				if(saveData.rooms[sceneManager.sceneName].npcs[i].name == npcName){
+					saveData.rooms[sceneManager.sceneName].npcs[i].x_pos = position.x;
+					saveData.rooms[sceneManager.sceneName].npcs[i].y_pos = position.y;
+					return;
+				}
+			}
+		}
+	}
+
+	public void SetNPCPosition(string npcName, Vector2 position, string roomName){
+		if(saveData.rooms[roomName].npcs != null){
+			for(int i = 0; i < saveData.rooms[roomName].npcs.Count; i++){
+				if(saveData.rooms[roomName].npcs[i].name == npcName){
+					saveData.rooms[roomName].npcs[i].x_pos = position.x;
+					saveData.rooms[roomName].npcs[i].y_pos = position.y;
+					return;
+				}
+			}
+		}
+	}
+
+	public string GetNPCDefaultAnimation(string npcName){
+		if(saveData.rooms[sceneManager.sceneName].npcs != null){
+			for(int i = 0; i < saveData.rooms[sceneManager.sceneName].npcs.Count; i++){
+				if(saveData.rooms[sceneManager.sceneName].npcs[i].name == npcName){
+					return saveData.rooms[sceneManager.sceneName].npcs[i].default_animation;
+				}
+			}
+		}
+		return null;
+	}
+
+	public string GetNPCDefaultAnimation(string npcName, string roomName){
+		if(saveData.rooms[roomName].npcs != null){
+			for(int i = 0; i < saveData.rooms[roomName].npcs.Count; i++){
+				if(saveData.rooms[roomName].npcs[i].name == npcName){
+					return saveData.rooms[roomName].npcs[i].default_animation;
+				}
+			}
+		}
+		return null;
+	}
+
+	public void SetNPCDefaultAnimation(string npcName, string animationName){
+		if(saveData.rooms[sceneManager.sceneName].npcs != null){
+			for(int i = 0; i < saveData.rooms[sceneManager.sceneName].npcs.Count; i++){
+				if(saveData.rooms[sceneManager.sceneName].npcs[i].name == npcName){
+					saveData.rooms[sceneManager.sceneName].npcs[i].default_animation = animationName;
+					return;
+				}
+			}
+		}
+	}
+	
+	public void SetNPCDefaultAnimation(string npcName, string animationName, string roomName){
+		if(saveData.rooms[roomName].npcs != null){
+			for(int i = 0; i < saveData.rooms[roomName].npcs.Count; i++){
+				if(saveData.rooms[roomName].npcs[i].name == npcName){
+					saveData.rooms[roomName].npcs[i].default_animation = animationName;
+					return;
+				}
+			}
+		}
+	}
+
+	public void SetNPCDirection(string npcName, int direction){
+		if(saveData.rooms[sceneManager.sceneName].npcs != null){
+			for(int i = 0; i < saveData.rooms[sceneManager.sceneName].npcs.Count; i++){
+				if(saveData.rooms[sceneManager.sceneName].npcs[i].name == npcName){
+					saveData.rooms[sceneManager.sceneName].npcs[i].direction = direction;
+					return;
+				}
+			}
+		}
+	}
+
+	public void SetNPCDirection(string npcName, int direction, string roomName){
+		if(saveData.rooms[roomName].npcs != null){
+			for(int i = 0; i < saveData.rooms[roomName].npcs.Count; i++){
+				if(saveData.rooms[roomName].npcs[i].name == npcName){
+					saveData.rooms[roomName].npcs[i].direction = direction;
+					return;
+				}
+			}
+		}
 	}
 }

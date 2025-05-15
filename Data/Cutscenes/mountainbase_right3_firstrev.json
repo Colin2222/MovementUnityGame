@@ -199,6 +199,32 @@
 					]
 				}
 			]
+		},
+		{
+			"id":-1,
+			"trigger_time":45.5,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetNPCPosition",
+					"string_parameters":[
+						"blacksmith", "-140.0", "6.5", "basecamp"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":45.5,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetNPCDirection",
+					"string_parameters":[
+						"blacksmith", "-1", "basecamp"
+					]
+				}
+			]
 		}
 	]
 }

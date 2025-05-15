@@ -8,15 +8,16 @@
     "started_game": true,
     "halfway_done": false,
     "finished_game": false,
-    "first_revelation": false,
+    "first_revelation": true,
     "first_dialogue_completed": false,
     "guidestone_1_viewed": false,
-    "basecamp_first_meeting_viewed": true
+    "basecamp_first_meeting_viewed": true,
+    "basecamp_second_meeting_viewed": false
   },
   "integer_markers": {
     "cable_car_location": 100000,
     "cable_car_progress": 100001,
-    "time_marker": 1
+    "time_marker": 2
   },
   "rooms": {
     "basecamp": {
@@ -59,9 +60,10 @@
       "npcs": [
         {
           "name": "blacksmith",
-          "x_pos": -132.53363,
-          "y_pos": 6.26499557,
-          "default_animation": "blacksmith_idle",
+          "x_pos": -140.0,
+          "y_pos": 6.5,
+          "direction": -1,
+          "default_animation": "blacksmith_cot_layingaway",
           "inventories": null
         }
       ],
@@ -80,6 +82,10 @@
         },
         "cot_right": {
           "id": "cot_right",
+          "active": true
+        },
+        "blacksmith_bag": {
+          "id": "blacksmith_bag",
           "active": true
         }
       }

@@ -50,6 +50,7 @@ public class NPCManager : MonoBehaviour
             GameObject npcObj = Instantiate(registry.GetPrefab(npc.name), new Vector3(npc.x_pos, npc.y_pos, 0), Quaternion.identity);
             NPCHub hub = npcObj.GetComponent<NPCHub>();
             hub.cutsceneActor.defaultAnim = npc.default_animation;
+            hub.SetDirection(npc.direction);
             hub.cutsceneActor.animator.Play(npc.default_animation);
         }
     }
@@ -72,9 +73,10 @@ public class NPCManager : MonoBehaviour
     }
 
     public void SetNPCDefaultAnimation(string npcName, string animationName, string roomName=null){
-        if(roomName != null){
-            sceneManager.sessionManager.SetNPCDefaultAnimation(npcName, roomName, animationName);
+        if(roomName != null && roomName != sceneManager.sceneName){
+            sceneManager.sessionManager.SetNPCDefaultAnimation(npcName, animationName, roomName);
         } else{
+            sceneManager.sessionManager.SetNPCDefaultAnimation(npcName, animationName);
             if(npcs.ContainsKey(npcName)){
                 NPCHub hub = npcs[npcName];
                 hub.cutsceneActor.defaultAnim = animationName;
@@ -83,4 +85,32 @@ public class NPCManager : MonoBehaviour
             }
         }
     }
+
+    public void SetNPCPosition(string npcName, Vector2 position, string roomName=null){
+		if(roomName != null && roomName != sceneManager.sceneName){
+            SessionManager.Instance.SetNPCPosition(npcName, position, roomName);
+		} else{
+			SessionManager.Instance.SetNPCPosition(npcName, position);
+            if(npcs.ContainsKey(npcName)){
+                NPCHub hub = npcs[npcName];
+                hub.transform.position = position;
+            } else{
+                Debug.Log("NPC " + npcName + " not found in NPCManager.");
+            }
+		}
+	}
+
+    public void SetNPCDirection(string npcName, int direction, string roomName=null){
+		if(roomName != null && roomName != sceneManager.sceneName){
+            SessionManager.Instance.SetNPCDirection(npcName, direction, roomName);
+		} else{
+			SessionManager.Instance.SetNPCDirection(npcName, direction);
+            if(npcs.ContainsKey(npcName)){
+                NPCHub hub = npcs[npcName];
+                hub.SetDirection(direction);
+            } else{
+                Debug.Log("NPC " + npcName + " not found in NPCManager.");
+            }
+		}
+	}
 }
