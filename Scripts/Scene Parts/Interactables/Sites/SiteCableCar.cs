@@ -101,7 +101,8 @@ public class SiteCableCar : Site
                 return;
             }
         }
-        if(cableCarPresent){
+        if (cableCarPresent)
+        {
             this.hasMenu = true;
             // sync options
             sitePanel.SyncOptions(saveData.integer_markers["cable_car_progress"], id - 100000);
@@ -111,7 +112,14 @@ public class SiteCableCar : Site
 
             // activate camera
             ActivateCamera();
-        } else if(!entering && !moving){
+        }
+        else if (sessionManager.GetIntegerMarker("cable_car_location") == 0)
+        {
+            this.hasMenu = false;
+            return;
+        }
+        else if (!entering && !moving)
+        {
             this.pulleyAnchorAnimator.Play("pulleyanchor_spinning");
             SessionManager.Instance.SetCableCar(id);
             this.hasMenu = false;
@@ -201,7 +209,7 @@ public class SiteCableCar : Site
         if(currentCableCarProgress == id - 1){
             sessionManager.SetIntegerMarker("cable_car_progress", id);
             operational = true;
-        } else if(currentCableCarProgress >= id){
+        } else if(currentCableCarProgress >= id && currentCableCarProgress != 0){
             operational = true;
         } else{
             operational = false;

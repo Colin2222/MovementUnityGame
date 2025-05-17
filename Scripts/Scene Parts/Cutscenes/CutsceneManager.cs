@@ -14,6 +14,7 @@ using Cinemachine;
 public class CutsceneManager : MonoBehaviour
 {
 	float cutsceneTimer;
+	float fsCutsceneTimer;
 	float cutsceneDuration;
 	string cutsceneAddressHeader = "Assets/Data/Cutscenes/";
 	TextAsset currentCutsceneTxt;
@@ -106,20 +107,24 @@ public class CutsceneManager : MonoBehaviour
 				
 				// check for end of cutscene
 				if(cutsceneTimer >= cutsceneDuration){
-					sceneManager.player.UnlockPlayer();
-					sceneManager.player.inputManager.ExitCutscene();
+					if (playerLocked)
+					{
+						sceneManager.player.UnlockPlayer();
+						sceneManager.player.inputManager.ExitCutscene();
+						SwitchCameraAnchor(sceneManager.player.cameraAimPoint);
+					}
+					
 					inCutscene = false;
 					currentCutscene.active = false;
-					SwitchCameraAnchor(sceneManager.player.cameraAimPoint);
 				}
 			}
 		} 
 		
-		if(inFullscreenCutscene){
+		if(inFullscreenCutscene && !inDialogue){
 			HandleFullscreenCutscene();
 		} 
 
-		if(inBlackout){
+		if(inBlackout && !inDialogue){
 			HandleBlackout();
 		}
     }
@@ -217,7 +222,7 @@ public class CutsceneManager : MonoBehaviour
 
 	public void StartFullscreenCutscene(float duration, float blackoutDuration, string animationName, string backgroundName){
 		inFullscreenCutscene = true;
-		cutsceneTimer = 0.0f;
+		fsCutsceneTimer = 0.0f;
 		cutsceneDuration = duration;
 		fullscreenCutsceneBlackoutTime = blackoutDuration;
 		fullscreenCutsceneEntering = true;
@@ -237,15 +242,15 @@ public class CutsceneManager : MonoBehaviour
 	void HandleFullscreenCutscene(){
 		fullscreenAnimator.transform.position = new Vector3(sceneManager.mainCameraObj.transform.position.x, sceneManager.mainCameraObj.transform.position.y, sceneManager.mainCameraObj.transform.position.z + 16.0f);
 
-		cutsceneTimer += Time.deltaTime;
+		fsCutsceneTimer += Time.deltaTime;
 
 		if(fullscreenCutsceneEntering){
-			float a = cutsceneTimer / fullscreenCutsceneBlackoutTime;
+			float a = fsCutsceneTimer / fullscreenCutsceneBlackoutTime;
 			fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, Mathf.Clamp(a, 0.0f, 1.0f));
 			fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, Mathf.Clamp(a, 0.0f, 1.0f));
 			fullscreenCutsceneBackgroundSprite.color = new Color(1.0f, 1.0f, 1.0f, Mathf.Clamp(a, 0.0f, 1.0f));
-			if(cutsceneTimer >= fullscreenCutsceneBlackoutTime){
-				cutsceneTimer = 0.0f;
+			if(fsCutsceneTimer >= fullscreenCutsceneBlackoutTime){
+				fsCutsceneTimer = 0.0f;
 				fullscreenCutsceneEntering = false;
 				fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
 				fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
@@ -254,11 +259,11 @@ public class CutsceneManager : MonoBehaviour
 				fullscreenAnimator.speed = 1.0f;
 			}
 		} else if(fullscreenCutsceneExiting){
-			float a = cutsceneTimer / fullscreenCutsceneBlackoutTime;
+			float a = fsCutsceneTimer / fullscreenCutsceneBlackoutTime;
 			fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, Mathf.Clamp(1.0f - a, 0.0f, 1.0f));
 			fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, Mathf.Clamp(1.0f - a, 0.0f, 1.0f));
 			fullscreenCutsceneBackgroundSprite.color = new Color(1.0f, 1.0f, 1.0f, Mathf.Clamp(1.0f - a, 0.0f, 1.0f));
-			if(cutsceneTimer >= fullscreenCutsceneBlackoutTime){
+			if(fsCutsceneTimer >= fullscreenCutsceneBlackoutTime){
 				fullscreenCutsceneExiting = false;
 				fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
 				fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
@@ -267,9 +272,9 @@ public class CutsceneManager : MonoBehaviour
 				inFullscreenCutscene = false;
 			}
 		} else{
-			if(cutsceneTimer >= cutsceneDuration){
+			if(fsCutsceneTimer >= cutsceneDuration){
 				fullscreenCutsceneExiting = true;
-				cutsceneTimer = 0.0f;
+				fsCutsceneTimer = 0.0f;
 				fullscreenAnimator.speed = 0.0f;
 			}
 		}

@@ -1,0 +1,32 @@
+{
+	"id":6,
+	"lock_player":false,
+	"duration":10.0,
+	"tasks":[
+		{
+			"id":101,
+			"trigger_time":0.5,
+			"anim_name":"blacksmith_walking",
+			"custom_actions":[
+				{
+					"name":"SetHorizontalVelocityToTarget",
+					"parameters":[
+						2.0, -120.4375
+					]
+				},
+				{
+					"name":"SetNPCDefaultPosition",
+					"string_parameters":[
+						"blacksmith", "-120.4375", "6.5"
+					]
+				},
+				{
+					"name":"ConstructSite",
+					"string_parameters":[
+						"100000"
+					]
+				}
+			]
+		}
+	]
+}

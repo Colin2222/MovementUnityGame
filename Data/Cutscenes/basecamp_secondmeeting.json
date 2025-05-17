@@ -1,7 +1,7 @@
 {
 	"id":5,
 	"lock_player":true,
-	"duration":25.0,
+	"duration":83.75,
 	"tasks":[
 		{
 			"id":0,
@@ -20,6 +20,12 @@
 			"id":101,
 			"trigger_time":1.25,
 			"anim_name":"blacksmith_cot_lookingup",
+			"custom_actions":[]
+		},
+		{
+			"id":0,
+			"trigger_time":2.75,
+			"anim_name":"PlayerIdleStill",
 			"custom_actions":[]
 		},
 		{
@@ -75,14 +81,27 @@
 			]
 		},
 		{
+			"id":-1,
+			"trigger_time":14.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_5"
+					]
+				}
+			]
+		},
+		{
 			"id":101,
-			"trigger_time":12.5,
+			"trigger_time":15.5,
 			"anim_name":"blacksmith_cot_lookingdown",
 			"custom_actions":[]
 		},
 		{
 			"id":0,
-			"trigger_time":12.5,
+			"trigger_time":15.5,
 			"anim_name":"PlayerIdle",
 			"custom_actions":[
 				{
@@ -93,38 +112,38 @@
 		},
 		{
 			"id":0,
-			"trigger_time":12.5,
+			"trigger_time":15.5,
 			"anim_name":"PlayerLayingGettingDown",
 			"custom_actions":[]
 		},
 		{
-			"id":0,
-			"trigger_time":13.75,
-			"anim_name":"PlayerLayingRollingOver",
-			"custom_actions":[]
-		},
-		{
 			"id":101,
-			"trigger_time":14.125,
+			"trigger_time":16.75,
 			"anim_name":"blacksmith_cot_turningaway",
 			"custom_actions":[]
 		},
 		{
+			"id":0,
+			"trigger_time":17.75,
+			"anim_name":"PlayerLayingRollingOver",
+			"custom_actions":[]
+		},
+		{
 			"id":-1,
-			"trigger_time":16.0,
+			"trigger_time":19.5,
 			"anim_name":"",
 			"custom_actions":[
 				{
 					"name":"StartBlackout",
 					"parameters":[
-						1.0, 4.0
+						1.0, 10.0
 					]
 				}
 			]
 		},
 		{
 			"id":-1,
-			"trigger_time":19.0,
+			"trigger_time":22.1,
 			"anim_name":"",
 			"custom_actions":[
 				{
@@ -132,69 +151,508 @@
 					"string_parameters":[
 						"time_marker", "0"
 					]
-				}
-			]
-		},
-		{
-			"id":-1,
-			"trigger_time":19.1,
-			"anim_name":"",
-			"custom_actions":[
+				},
 				{
 					"name":"ResetBackdrop",
 					"parameters":[]
-				}
-			]
-		},
-		{
-			"id":-1,
-			"trigger_time":19.1,
-			"anim_name":"",
-			"custom_actions":[
+				},
 				{
 					"name":"SetNPCPosition",
 					"string_parameters":[
 						"blacksmith", "-134.5", "6.5", "basecamp"
 					]
-				}
-			]
-		},
-		{
-			"id":-1,
-			"trigger_time":19.1,
-			"anim_name":"",
-			"custom_actions":[
+				},
 				{
 					"name":"SetFill",
 					"string_parameters":[
 						"blacksmith_bag", "false"
+					]
+				},
+				{
+					"name":"SetNPCDefaultAnimation",
+					"string_parameters":[
+						"blacksmith", "blacksmith_idle"
+					]
+				},
+				{
+					"name":"SetNPCDirection",
+					"string_parameters":[
+						"blacksmith", "-1", "basecamp"
+					]
+				},
+				{
+					"name":"AddWorldItem",
+					"string_parameters":[
+						"iron_rod", "-133.5", "6.25", "basecamp"
+					]
+				},
+				{
+					"name":"AddWorldItem",
+					"string_parameters":[
+						"iron_rod", "-132.75", "6.25", "basecamp"
+					]
+				},
+				{
+					"name":"AddWorldItem",
+					"string_parameters":[
+						"iron_rod", "-132.0", "6.25", "basecamp"
+					]
+				},
+				{
+					"name":"AddWorldItem",
+					"string_parameters":[
+						"explosive_charge", "-131.0", "6.25", "basecamp"
 					]
 				}
 			]
 		},
 		{
 			"id":-1,
-			"trigger_time":19.1,
+			"trigger_time":23.5,
 			"anim_name":"",
 			"custom_actions":[
 				{
-					"name":"SetNPCDefaultAnimation",
+					"name":"StartDialogue",
 					"string_parameters":[
-						"blacksmith", "blacksmith_idle"
+						"secondmeeting_6"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":27.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_7"
 					]
 				}
 			]
 		},
 		{
 			"id":101,
-			"trigger_time":21,
+			"trigger_time":30.75,
 			"anim_name":"blacksmith_bag_pickingup",
 			"custom_actions":[]
 		},
 		{
 			"id":0,
-			"trigger_time":21.5,
+			"trigger_time":33.0,
 			"anim_name":"PlayerLayingGettingUp",
+			"custom_actions":[]
+		},
+		{
+			"id":0,
+			"trigger_time":34.5,
+			"anim_name":"PlayerLookingOtherWay",
+			"custom_actions":[]
+		},
+		{
+			"id":0,
+			"trigger_time":35.33,
+			"anim_name":"PlayerIdle",
+			"custom_actions":[
+				{
+					"name":"FaceRight",
+					"parameters":[]
+				}
+			]
+		},
+		{
+			"id":0,
+			"trigger_time":36.0,
+			"anim_name":"PlayerWalking",
+			"custom_actions":[
+				{
+					"name":"SetHorizontalVelocityToTarget",
+					"parameters":[
+						2.0, -137.25
+					]
+				}
+			]
+		},
+		{
+			"id":0,
+			"trigger_time":38.75,
+			"anim_name":"PlayerIdleStill",
+			"custom_actions":[]
+		},
+		{
+			"id":-1,
+			"trigger_time":39.25,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_8"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":41.75,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_9"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":43.25,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_10"
+					]
+				}
+			]
+		},
+		{
+			"id":101,
+			"trigger_time":43.5,
+			"anim_name":"blacksmith_turningaround",
+			"custom_actions":[]
+		},
+		{
+			"id":101,
+			"trigger_time":45.0,
+			"anim_name":"blacksmith_idle",
+			"custom_actions":[
+				{
+					"name":"SetNPCDirection",
+					"string_parameters":[
+						"blacksmith", "1", "basecamp"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":48.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_11"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":49.5,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_12"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":52.5,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_13"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":55.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_14"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":58.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_15"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":61.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_16"
+					]
+				}
+			]
+		},
+		{
+			"id":0,
+			"trigger_time":61.5,
+			"anim_name":"PlayerWalking",
+			"custom_actions":[
+				{
+					"name":"SetHorizontalVelocityToTarget",
+					"parameters":[
+						2.0, -135.375
+					]
+				}
+			]
+		},
+		{
+			"id":0,
+			"trigger_time":62.75,
+			"anim_name":"PlayerIdleStill",
+			"custom_actions":[]
+		},
+		{
+			"id":0,
+			"trigger_time":63.75,
+			"anim_name":"PlayerHandshake",
+			"custom_actions":[]
+		},
+		{
+			"id":101,
+			"trigger_time":63.75,
+			"anim_name":"blacksmith_handshake",
+			"custom_actions":[]
+		},
+		{
+			"id":101,
+			"trigger_time":66.0,
+			"anim_name":"blacksmith_turningaround",
+			"custom_actions":[]
+		},
+		{
+			"id":101,
+			"trigger_time":67.5,
+			"anim_name":"blacksmith_idle",
+			"custom_actions":[
+				{
+					"name":"SetNPCDirection",
+					"string_parameters":[
+						"blacksmith", "-1", "basecamp"
+					]
+				}
+			]
+		},
+		{
+			"id":101,
+			"trigger_time":68.5,
+			"anim_name":"blacksmith_gesture_4",
+			"custom_actions":[]
+		},
+		{
+			"id":101,
+			"trigger_time":69.5,
+			"anim_name":"blacksmith_idle",
+			"custom_actions":[]
+		},
+		{
+			"id":-1,
+			"trigger_time":70.25,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_17"
+					]
+				}
+			]
+		},
+		{
+			"id":101,
+			"trigger_time":71.25,
+			"anim_name":"blacksmith_turningaround",
+			"custom_actions":[]
+		},
+		{
+			"id":101,
+			"trigger_time":72.75,
+			"anim_name":"blacksmith_idle",
+			"custom_actions":[
+				{
+					"name":"SetNPCDirection",
+					"string_parameters":[
+						"blacksmith", "1", "basecamp"
+					]
+				}
+			]
+		},
+		{
+			"id":101,
+			"trigger_time":73.0,
+			"anim_name":"blacksmith_gesture_2",
+			"custom_actions":[]
+		},
+		{
+			"id":-1,
+			"trigger_time":73.5,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_18"
+					]
+				}
+			]
+		},
+		{
+			"id":101,
+			"trigger_time":73.75,
+			"anim_name":"blacksmith_idle",
+			"custom_actions":[]
+		},
+		{
+			"id":101,
+			"trigger_time":74.5,
+			"anim_name":"blacksmith_gesture_3",
+			"custom_actions":[]
+		},
+		{
+			"id":-1,
+			"trigger_time":74.75,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_19"
+					]
+				}
+			]
+		},
+		{
+			"id":101,
+			"trigger_time":75.5,
+			"anim_name":"blacksmith_gesture_1a",
+			"custom_actions":[]
+		},
+		{
+			"id":-1,
+			"trigger_time":75.75,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_20"
+					]
+				}
+			]
+		},
+		{
+			"id":101,
+			"trigger_time":76.0,
+			"anim_name":"blacksmith_gesture_1b",
+			"custom_actions":[]
+		},
+		{
+			"id":101,
+			"trigger_time":77.25,
+			"anim_name":"blacksmith_turningaround",
+			"custom_actions":[]
+		},
+		{
+			"id":101,
+			"trigger_time":78.75,
+			"anim_name":"blacksmith_idle",
+			"custom_actions":[
+				{
+					"name":"SetNPCDirection",
+					"string_parameters":[
+						"blacksmith", "-1", "basecamp"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":79.25,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_21"
+					]
+				}
+			]
+		},
+		{
+			"id":101,
+			"trigger_time":80.0,
+			"anim_name":"blacksmith_gesture_5",
+			"custom_actions":[]
+		},
+		{
+			"id":-1,
+			"trigger_time":80.5,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_22"
+					]
+				}
+			]
+		},
+		{
+			"id":101,
+			"trigger_time":81.5,
+			"anim_name":"blacksmith_gesture_3",
+			"custom_actions":[]
+		},
+		{
+			"id":-1,
+			"trigger_time":82.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"secondmeeting_23"
+					]
+				}
+			]
+		},
+		{
+			"id":101,
+			"trigger_time":82.25,
+			"anim_name":"blacksmith_idle",
 			"custom_actions":[]
 		}
 	]

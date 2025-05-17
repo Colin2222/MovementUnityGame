@@ -1,0 +1,33 @@
+{
+	"id":7,
+	"lock_player":true,
+	"duration":4.0,
+	"tasks":[
+		{
+			"id":-1,
+			"trigger_time":2.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"waterwheelbuilt_1"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":3.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"StartDialogue",
+					"string_parameters":[
+						"waterwheelbuilt_2"
+					]
+				}
+			]
+		}
+	]
+}

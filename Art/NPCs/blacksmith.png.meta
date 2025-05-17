@@ -1037,7 +1037,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1058,7 +1058,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1066,6 +1066,195 @@ TextureImporter:
       bones: []
       spriteID: 5dd30643e2950e64fb7980767650ed68
       internalID: 790112187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_turning_0
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034761d35c25d894fb968f5234dafc4c
+      internalID: 1776260085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_turning_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d021d00d8583b44f8a5fd222372b90e
+      internalID: 139454272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_turning_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a19578ad9ef7b443a5a63d26589a4e4
+      internalID: -1603150347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_turning_3
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8919a636d2daf409262220096a0cb5
+      internalID: 1302309800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_turning_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ecf91cce8e27e499296082811ff1cc
+      internalID: -1384005901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_handshake_0
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7fc3a233cdbdb438fd56300980ec71
+      internalID: -1550883073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_handshake_1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c2d7e32b603bd498c3ce90633b2bd6
+      internalID: 1807496900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_handshake_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c15cdeeee6f24148856f3c5b53ccf14
+      internalID: 2146652053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blacksmith_handshake_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b8cfac208beaf4f8b71774a23a0e6c
+      internalID: -532716292
       vertices: []
       indices: 
       edges: []
@@ -1086,8 +1275,10 @@ TextureImporter:
       blacksmith_cot_5: -1507331437
       blacksmith_walking_6: -472924592
       blacksmith_cot_2: 1796544628
+      blacksmith_turning_1: 139454272
       blacksmith_cot_1: 1279345296
       blacksmith_gesture_1: -296017248
+      blacksmith_handshake_3: -532716292
       blacksmith_bagset_2: -617865401
       blacksmith_cot_3: 23540738
       blacksmith_idle_2: -1998748266
@@ -1099,10 +1290,14 @@ TextureImporter:
       blacksmith_bagset_4: -1927433658
       blacksmith_gesture_6: -439638470
       blacksmith_leanback_1: 430364854
+      blacksmith_turning_3: 1302309800
       blacksmith_walking_2: 1926954068
+      blacksmith_handshake_0: -1550883073
+      blacksmith_turning_4: -1384005901
       blacksmith_bagset_6: -739364041
       blacksmith_gesture_5: -1770249066
       blacksmith_gesture_7: 1556611064
+      blacksmith_turning_0: 1776260085
       blacksmith_gesture_3: -1463540463
       blacksmith_bagset_7: 1816633248
       blacksmith_bagset_3: -685525922
@@ -1113,6 +1308,7 @@ TextureImporter:
       blacksmith_bagset_5: 1018805194
       blacksmith_gesture_4: -170545112
       blacksmith_bagset_8: -1300923882
+      blacksmith_handshake_1: 1807496900
       blacksmith_bagset_9: 913200780
       blacksmith_cot_6: 1379318008
       blacksmith_leanback_2: 2048653406
@@ -1127,6 +1323,8 @@ TextureImporter:
       blacksmith_idle_1: 923317391
       blacksmith_nail_9: -2022018082
       blacksmith_walking_1: -1968631421
+      blacksmith_turning_2: -1603150347
+      blacksmith_handshake_2: 2146652053
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

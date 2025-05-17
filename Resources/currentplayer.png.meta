@@ -6236,6 +6236,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: currentplayer_292
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a532111284e0e469c06e442be96a49
+      internalID: -916606223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_293
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b63579edd1eec548aa7f2218f671e85
+      internalID: 1839253576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_294
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc65d2e9011087d4a80aee8fb5ff702e
+      internalID: 262492162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_295
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2bab5b78196e24982b980cea373a59
+      internalID: 762611636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: currentplayer_296
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5964c3c449728f5419cd4c2ccd1b5a0f
+      internalID: -1119574196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -6258,7 +6363,9 @@ TextureImporter:
       currentplayer_129: -1670534117
       currentplayer_263: -1189757989
       currentplayer_38: 499253376
+      currentplayer_294: 262492162
       currentplayer_288: 891184110
+      currentplayer_295: 762611636
       currentplayer_179: -1016896123
       currentplayer_249: -601516206
       currentplayer_197: -1521046216
@@ -6285,9 +6392,9 @@ TextureImporter:
       currentplayer_188: 1002099257
       currentplayer_90: 2047119158
       currentplayer_175: -1250682758
-      currentplayer_45: 789404472
-      currentplayer_171: -1662089883
       currentplayer_19: -1469744796
+      currentplayer_171: -1662089883
+      currentplayer_45: 789404472
       currentplayer_41: 1097841706
       currentplayer_116: 1921439271
       currentplayer_182: 2083361918
@@ -6326,6 +6433,7 @@ TextureImporter:
       currentplayer_4: 1923256830
       currentplayer_70: 91919646
       currentplayer_252: -1616443096
+      currentplayer_293: 1839253576
       currentplayer_48: 1406243252
       currentplayer_241: -1330187955
       currentplayer_147: -2115471147
@@ -6365,6 +6473,7 @@ TextureImporter:
       currentplayer_123: -639393835
       currentplayer_190: 1592362969
       currentplayer_134: -2111570363
+      currentplayer_296: -1119574196
       currentplayer_127: 1437246482
       currentplayer_177: 1079415355
       currentplayer_233: 140550862
@@ -6458,6 +6567,7 @@ TextureImporter:
       currentplayer_167: -745918356
       currentplayer_74: -1568829587
       currentplayer_267: -476396622
+      currentplayer_292: -916606223
       currentplayer_133: 2134626873
       currentplayer_135: -1163384418
       currentplayer_213: 1996317676

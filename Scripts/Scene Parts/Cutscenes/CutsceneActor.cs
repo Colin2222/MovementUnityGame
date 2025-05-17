@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CutsceneActor : MonoBehaviour
 {
-    public Animator animator;
+	public Animator animator;
 	public int id;
 	public Rigidbody2D rb;
 	public SpriteRenderer spriteRenderer;
 	public bool deactivatedOnStart;
-	
+
 	float tempGrav;
 	bool gravityPaused = false;
 	Vector2 cutsceneVelocity;
@@ -19,156 +19,217 @@ public class CutsceneActor : MonoBehaviour
 	public string defaultAnim;
 	public CutsceneManager cutsceneManager;
 	public bool isPlayer;
-	
-	// Start is called before the first frame update
-    void Start()
-    {
-        cutsceneVelocity = Vector2.zero;
 
-		if(cutsceneManager == null){
+	// Start is called before the first frame update
+	void Start()
+	{
+		cutsceneVelocity = Vector2.zero;
+
+		if (cutsceneManager == null)
+		{
 			cutsceneManager = GameObject.FindWithTag("SceneManager").GetComponent<SceneManager>().cutsceneManager;
 		}
-    }
+	}
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-		if(cutsceneManager.inCutscene && (cutsceneManager.playerLocked || !isPlayer) && rb != null){
-			if(movingToTarget){
-				if((targetDirection == 1 && rb.transform.position.x > targetX) || (targetDirection == -1 && rb.transform.position.x < targetX)){
+	// Update is called once per frame
+	void FixedUpdate()
+	{
+		if (cutsceneManager.inCutscene && (cutsceneManager.playerLocked || !isPlayer) && rb != null)
+		{
+			if (movingToTarget)
+			{
+				if ((targetDirection == 1 && rb.transform.position.x > targetX) || (targetDirection == -1 && rb.transform.position.x < targetX))
+				{
 					cutsceneVelocity = new Vector2(0.0f, cutsceneVelocity.y);
 					animate(defaultAnim);
 					movingToTarget = false;
 				}
-			} 
+			}
 			rb.velocity = cutsceneVelocity;
 		}
-    }
-	
-	public void animate(string animation){
+	}
+
+	public void animate(string animation)
+	{
 		// TRY AND IMPLEMENT A TRY CATCH HERE, need to figure out type of error when invalid animation string given
 		animator.Play(animation);
 	}
-	
-	public void SetHorizontalVelocity(float velocity){
+
+	public void SetHorizontalVelocity(float velocity)
+	{
 		cutsceneVelocity = new Vector2(velocity, cutsceneVelocity.y);
 	}
-	
-	public void SetHorizontalVelocityToTarget(float velocity, float targetX){
-		if(targetX > rb.transform.position.x){
+
+	public void SetHorizontalVelocityToTarget(float velocity, float targetX)
+	{
+		if (targetX > rb.transform.position.x)
+		{
 			targetDirection = 1;
-		} else{
+		}
+		else
+		{
 			targetDirection = -1;
 		}
-		
+
 		this.targetX = targetX;
 		movingToTarget = true;
 		cutsceneVelocity = new Vector2(velocity, cutsceneVelocity.y);
 	}
-	
-	public void VerticalShift(float shift){
+
+	public void VerticalShift(float shift)
+	{
 		Transform trans = rb.gameObject.transform;
 		trans.position = new Vector3(trans.position.x, trans.position.y + shift, trans.position.z);
 	}
-	
-	public void SetCoordinates(float x, float y){
+
+	public void SetCoordinates(float x, float y)
+	{
 		Transform trans = rb.gameObject.transform;
 		trans.position = new Vector3(x, y, trans.position.z);
 	}
-	
-	public void FaceLeft(){
+
+	public void FaceLeft()
+	{
 		Transform trans = rb.gameObject.transform;
-		trans.eulerAngles = new Vector2(0,180);
+		trans.eulerAngles = new Vector2(0, 180);
 	}
-	
-	public void FaceRight(){
+
+	public void FaceRight()
+	{
 		Transform trans = rb.gameObject.transform;
-		trans.eulerAngles = new Vector2(0,0);
+		trans.eulerAngles = new Vector2(0, 0);
 	}
-	
-	public void ToggleActivation(){
+
+	public void ToggleActivation()
+	{
 		gameObject.SetActive(!(gameObject.activeInHierarchy));
 	}
-	
-	public void ToggleGravity(){
-		if(gravityPaused){
+
+	public void ToggleGravity()
+	{
+		if (gravityPaused)
+		{
 			rb.gravityScale = tempGrav;
 			gravityPaused = false;
-		} else{
+		}
+		else
+		{
 			tempGrav = rb.gravityScale;
 			rb.gravityScale = 0.0f;
 			gravityPaused = true;
 		}
 	}
-	
-	public void SetSpriteOrder(float orderF){
+
+	public void SetSpriteOrder(float orderF)
+	{
 		int order = (int)orderF;
 		spriteRenderer.sortingOrder = order;
 	}
-	
-	public void SetCameraAnchorPoint(){
+
+	public void SetCameraAnchorPoint()
+	{
 		cutsceneManager.SwitchCameraAnchor(gameObject.transform);
 	}
 
 	// only available for one-per-scene DialogueMananger, cutscene actor -1
-	public void StartDialogue(string DialogueCode){
+	public void StartDialogue(string DialogueCode)
+	{
 		this.transform.parent.GetComponent<DialogueManager>().StartDialogue(DialogueCode);
 	}
 
-	public void PlaySong(string songName){
+	public void PlaySong(string songName)
+	{
 		GameObject bgsmObj = GameObject.FindWithTag("BackgroundSoundManager");
-		if(bgsmObj == null) return;
+		if (bgsmObj == null) return;
 		BackgroundSoundManager bgsm = bgsmObj.GetComponent<BackgroundSoundManager>();
 		bgsm.musicManager.PlaySong(songName);
 	}
 
-	public void SpawnNPC(string npcName, string strX, string strY){
+	public void SpawnNPC(string npcName, string strX, string strY)
+	{
 		SceneManager.Instance.npcManager.SpawnNPC(npcName, new Vector3(float.Parse(strX), float.Parse(strY), 0));
 	}
 
-	public void StartBlackout(float transitionDuration, float holdDuration){
+	public void StartBlackout(float transitionDuration, float holdDuration)
+	{
 		cutsceneManager.StartBlackout(transitionDuration, holdDuration);
 	}
 
-	public void SetFill(string fillName, string activeStr){
+	public void SetFill(string fillName, string activeStr)
+	{
 		cutsceneManager.SetFill(fillName, bool.Parse(activeStr));
 	}
 
-	public void SetIntegerMarker(string markerName, string valueStr){
+	public void SetIntegerMarker(string markerName, string valueStr)
+	{
 		int value = int.Parse(valueStr);
 		SessionManager.Instance.SetIntegerMarker(markerName, value);
 	}
 
-	public void SetProgressMarker(string markerName, string valueStr){
+	public void SetProgressMarker(string markerName, string valueStr)
+	{
 		bool value = bool.Parse(valueStr);
 		SessionManager.Instance.SetData(markerName, value);
 	}
 
-	public void ResetBackdrop(){
+	public void ResetBackdrop()
+	{
 		SceneManager.Instance.backdropManager.SetBackdrop();
 	}
 
-	public void SetNPCDefaultAnimation(string npcName, string animationName){
+	public void SetNPCDefaultAnimation(string npcName, string animationName)
+	{
 		SceneManager.Instance.npcManager.SetNPCDefaultAnimation(npcName, animationName);
 	}
 
-	public void SetNPCDefaultAnimationDistant(string npcName, string animationName, string roomName){
+	public void SetNPCDefaultAnimationDistant(string npcName, string animationName, string roomName)
+	{
 		SceneManager.Instance.npcManager.SetNPCDefaultAnimation(npcName, animationName, roomName);
 	}
 
-	public void SetNPCPosition(string npcName, string xStr, string yStr, string roomName=null){
-		if(roomName == null){
+	public void SetNPCPosition(string npcName, string xStr, string yStr, string roomName = null)
+	{
+		if (roomName == null)
+		{
 			SceneManager.Instance.npcManager.SetNPCPosition(npcName, new Vector2(float.Parse(xStr), float.Parse(yStr)));
-		} else{
+		}
+		else
+		{
 			SceneManager.Instance.npcManager.SetNPCPosition(npcName, new Vector2(float.Parse(xStr), float.Parse(yStr)), roomName);
 		}
 	}
 
-	public void SetNPCDirection(string npcName, string directionStr, string roomName=null){
-		if(roomName == null){
+	// only used for non-locked cutscenes where player can move around while NPCs are moving
+	// makes sure NPCs are saved at the end of their cutscene override
+	public void SetNPCDefaultPosition(string npcName, string xStr, string yStr)
+	{
+		SceneManager.Instance.npcManager.SetDefaultNPCPosition(npcName, new Vector2(float.Parse(xStr), float.Parse(yStr)));
+	}
+
+	public void SetNPCDirection(string npcName, string directionStr, string roomName = null)
+	{
+		if (roomName == null)
+		{
 			SceneManager.Instance.npcManager.SetNPCDirection(npcName, int.Parse(directionStr));
-		} else{
+		}
+		else
+		{
 			SceneManager.Instance.npcManager.SetNPCDirection(npcName, int.Parse(directionStr), roomName);
 		}
+	}
+
+	public void AddWorldItem(string itemId, string xStr, string yStr, string roomName)
+	{
+		SceneManager.Instance.itemManager.AddWorldItem(itemId, new Vector2(float.Parse(xStr), float.Parse(yStr)), roomName);
+	}
+
+	public void ConstructSite(string siteId)
+	{
+		SceneManager.Instance.siteManager.ConstructSite(int.Parse(siteId));
+	}
+	
+	public void SetSiteAdditionalData(string siteId, string dataKey, string dataValue, string roomName)
+	{
+		SessionManager.Instance.SetSiteAdditionalData(int.Parse(siteId), dataKey, dataValue, roomName);
 	}
 }

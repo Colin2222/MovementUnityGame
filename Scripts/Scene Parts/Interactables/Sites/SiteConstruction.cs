@@ -6,6 +6,7 @@ public class SiteConstruction : Site
 {
     public GameObject rangeEffect;
     bool active;
+    bool constructionActive = false;
 
     InventoryCanvasScript canvas;
     (int x, int y) currentSlotPos;
@@ -18,6 +19,8 @@ public class SiteConstruction : Site
     public string siteName;
     ConstructionRequirement[] requirements;
     GameObject constructedSitePrefab;
+
+    string postConstructionCutscene = "";
 
 
     // can be player or site
@@ -42,23 +45,39 @@ public class SiteConstruction : Site
     void Update(){
         if(inCutscene){
                 cutsceneTimer += Time.deltaTime;
-                if(cutsceneTimer >= totalCutsceneTime){
-                    inCutscene = false;
-                    //PlayerHub.Instance.inputManager.UnlockPlayer();
-                    //PlayerHub.Instance.stateManager.ResetPlayer();
-                    PlayerHub.Instance.inputManager.LeaveInteraction();
-                    Destroy(gameObject);
-                } else if(!builtSite && cutsceneTimer >= totalCutsceneTime / 2){
-                    rangeEffect.SetActive(false);
-                    GameObject constructedObj = Instantiate(constructedSitePrefab, transform.position, Quaternion.identity);
-                    constructedObj.GetComponent<Site>().id = id;
-                    constructedObj.transform.SetParent(transform.parent);
-                    constructedObj.GetComponent<Site>().ConstructSite();
-                    SessionManager.Instance.SetSite(constructedObj.GetComponent<Site>().SaveSite(), id);
-                    siteInventory = null;
-                    builtSite = true;
+            if (cutsceneTimer >= totalCutsceneTime)
+            {
+                inCutscene = false;
+                //PlayerHub.Instance.inputManager.UnlockPlayer();
+                //PlayerHub.Instance.stateManager.ResetPlayer();
+                PlayerHub.Instance.inputManager.LeaveInteraction();
+                if (postConstructionCutscene != "")
+                {
+                    Debug.Log("Loading post construction cutscene: " + postConstructionCutscene);
+                    SceneManager.Instance.cutsceneManager.LoadCutscene(postConstructionCutscene);
+                    SceneManager.Instance.cutsceneManager.PlayCutscene(-1);
                 }
+                Destroy(gameObject);
             }
+            else if (!builtSite && cutsceneTimer >= totalCutsceneTime / 2)
+            {
+                // one off case when the player constructs the waterwheel and first anchor point
+                if (id == 100000)
+                {
+                    SceneManager.Instance.fillManager.SetFill("waterwheel", true);
+                    SessionManager.Instance.SetIntegerMarker("cable_car_progress", 100000);
+                }
+
+                rangeEffect.SetActive(false);
+                GameObject constructedObj = Instantiate(constructedSitePrefab, transform.position, Quaternion.identity);
+                constructedObj.GetComponent<Site>().id = id;
+                constructedObj.transform.SetParent(transform.parent);
+                constructedObj.GetComponent<Site>().ConstructSite();
+                SessionManager.Instance.SetSite(constructedObj.GetComponent<Site>().SaveSite(), id);
+                siteInventory = null;
+                builtSite = true;
+            }
+        }
     }
 
     protected override void EnterRange(){
@@ -78,6 +97,10 @@ public class SiteConstruction : Site
     }
 
     public override void Interact(){
+        if (!constructionActive) {
+            this.hasMenu = false;
+            return;
+        }
         GameObject canvasObj = GameObject.FindWithTag("InventoryUI");
         if(canvasObj != null){
             canvas = canvasObj.GetComponent<InventoryCanvasScript>();
@@ -256,7 +279,8 @@ public class SiteConstruction : Site
         inSelection = false;
     }
 
-    public override void LoadSite(SavedSite savedSite){
+    public override void LoadSite(SavedSite savedSite)
+    {
         // set construction target site
         siteName = savedSite.additional_data["site_construction"];
 
@@ -270,7 +294,8 @@ public class SiteConstruction : Site
         requirements = entry.requirements;
         constructedSitePrefab = entry.prefab;
         int i = 0;
-        foreach(ConstructionRequirement req in requirements){
+        foreach (ConstructionRequirement req in requirements)
+        {
             siteInventory.maxQuantities[i, 0] = req.quantity;
             siteInventory.slotTypes[i, 0] = req.item;
             sitePanel.AddRequirementSlot(req.item, req.quantity, siteInventory);
@@ -278,6 +303,20 @@ public class SiteConstruction : Site
             i++;
         }
         sitePanel.AddConstructButton();
+
+        // deactivate construction if not activated yet
+        constructionActive = bool.Parse(savedSite.additional_data["construction_active"]);
+        if (!constructionActive)
+        {
+            rangeEffect.SetActive(false);
+        }
+
+        // add post construction cutscene
+        if (savedSite.additional_data.ContainsKey("post_cutscene")) {
+            postConstructionCutscene = savedSite.additional_data["post_cutscene"];
+        }else {
+            postConstructionCutscene = "";
+        }
     }
 
     public override SavedSite SaveSite(){
@@ -285,13 +324,19 @@ public class SiteConstruction : Site
         savedSite.name = "construction";
         savedSite.additional_data = new Dictionary<string, string>();
         savedSite.additional_data.Add("site_construction", siteName);
+        savedSite.additional_data.Add("construction_active", constructionActive.ToString());
+        if(postConstructionCutscene != null && postConstructionCutscene != ""){
+            savedSite.additional_data.Add("post_cutscene", postConstructionCutscene);
+        }
         savedSite.inventories = new List<SavedInventory>();
         savedSite.inventories.Add(siteInventory.SaveInventory());
         return savedSite;
     }
 
-    public override void ConstructSite(){
-        
+    public override void ConstructSite()
+    {
+        constructionActive = true;
+        rangeEffect.SetActive(true);
     }
 }
 

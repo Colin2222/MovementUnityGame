@@ -8,58 +8,76 @@ public class SiteManager : MonoBehaviour
     Dictionary<int, Site> sites;
     Dictionary<int, SiteSlot> siteSlots;
 
-    void Awake(){
+    void Awake()
+    {
         DetectSites();
         LoadSites(sceneManager.GetCurrentRoomSave().site_slots);
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void DetectSites(){
+    public void DetectSites()
+    {
         sites = new Dictionary<int, Site>();
         siteSlots = new Dictionary<int, SiteSlot>();
         GameObject[] siteObjectArray = GameObject.FindGameObjectsWithTag("SiteSlot");
-        foreach(GameObject siteObj in siteObjectArray){
+        foreach (GameObject siteObj in siteObjectArray)
+        {
             SiteSlot slot = siteObj.GetComponent<SiteSlot>();
             siteSlots.Add(slot.id, slot);
             sites.Add(slot.id, slot.GetSite());
         }
     }
 
-    public void LoadSites(List<SavedSiteSlot> savedSlots){
+    public void LoadSites(List<SavedSiteSlot> savedSlots)
+    {
         SitePrefabRegistry registry = sceneManager.sitePrefabRegistry;
-        foreach(SavedSiteSlot slot in savedSlots){
-            if(slot.site != null){
+        foreach (SavedSiteSlot slot in savedSlots)
+        {
+            if (slot.site != null)
+            {
                 GameObject siteObj = Instantiate(registry.GetPrefab(slot.site.name), siteSlots[slot.id].transform.position, Quaternion.identity, siteSlots[slot.id].transform);
                 Site site = siteObj.GetComponent<Site>();
+                sites[slot.id] = site;
                 site.id = slot.id;
                 site.LoadSite(slot.site);
             }
         }
     }
 
-    public SavedRoom SaveSites(){
+    public SavedRoom SaveSites()
+    {
         SavedRoom savedRoom = new SavedRoom();
         savedRoom.site_slots = new List<SavedSiteSlot>();
-        foreach(KeyValuePair<int, SiteSlot> entry in siteSlots){
+        foreach (KeyValuePair<int, SiteSlot> entry in siteSlots)
+        {
             SavedSiteSlot savedSlot = new SavedSiteSlot();
             savedSlot.id = entry.Key;
             savedSlot.display_name = entry.Value.display_name;
 
-            if(entry.Value.GetSite() != null){
+            if (entry.Value.GetSite() != null)
+            {
                 savedSlot.site = entry.Value.GetSite().SaveSite();
             }
             savedRoom.site_slots.Add(savedSlot);
         }
         return savedRoom;
+    }
+    
+    public void ConstructSite(int id)
+    {
+        if (sites.ContainsKey(id))
+        {
+            sites[id].ConstructSite();
+        }
     }
 }

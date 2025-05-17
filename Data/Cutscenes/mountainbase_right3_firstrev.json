@@ -176,19 +176,6 @@
 		},
 		{
 			"id":-1,
-			"trigger_time":45.0,
-			"anim_name":"",
-			"custom_actions":[
-				{
-					"name":"StartDialogue",
-					"string_parameters":[
-						"firstrev_7"
-					]
-				}
-			]
-		},
-		{
-			"id":-1,
 			"trigger_time":45.5,
 			"anim_name":"",
 			"custom_actions":[

@@ -153,6 +153,14 @@ MonoBehaviour:
     m_Address: Assets/Data/Cutscenes/basecamp_secondmeeting.json
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f479c1324ddd4954daca694f3db72295
+    m_Address: Assets/Data/Items/ItemIcons/explosive_charge.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e89b7681e647dac4d80b0c9be99b67e9
+    m_Address: Assets/Data/Cutscenes/basecamp_secondmeeting_post.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:

@@ -189,12 +189,12 @@
           "nodes":[
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "What choice do I have?",
+              "text": "The City is near. And I'm not excited.",
               "speaker": "You"
             },
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "Am I really considering abandoning my journey on a whim when I'm so close? I'm practically already there.",
+              "text": "I'm only aware that I should feel excited.",
               "speaker": "You"
             }
           ]
@@ -208,7 +208,7 @@
           "nodes":[
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "No.",
+              "text": "All I've felt in anxious.",
               "speaker": "You"
             }
           ]
@@ -222,17 +222,12 @@
           "nodes":[
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "I knew it since I left. This has been a long time coming.",
+              "text": "I knew it since I left. Why didn't I face it?",
               "speaker": "You"
             },
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "I just didn't want to face it for whatever reason.",
-              "speaker": "You"
-            },
-            {
-              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "I'm not going to the Golden City. I'm just not meant to go there.",
+              "text": "I don't want to go to the City.",
               "speaker": "You"
             }
           ]
@@ -281,6 +276,11 @@
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
               "text": "I thought you may have just continued on your journey to the City.",
               "speaker": "Traveler"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Welcome back to camp.",
+              "speaker": "Traveler"
             }
           ]
         }
@@ -321,6 +321,25 @@
           "nodes":[
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Huh.",
+              "speaker": "Traveler"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "You're the first person I've met that's suggested something like that.",
+              "speaker": "Traveler"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_5": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
               "text": "Sleep on that.",
               "speaker": "Traveler"
             },
@@ -333,5 +352,345 @@
         }
       ]
     },
+    "secondmeeting_6": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I wouldn't regret it.",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_7": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Why does he think I'd regret it?",
+              "speaker": "You"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I wouldn't regret it...",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_8": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I've wanted to get moving since the sun rose.",
+              "speaker": "Traveler"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "But you've got me thinking now.",
+              "speaker": "Traveler"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_9": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I've decided. I'm not meant to go to the City.",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_10": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "You've already got much more conviction than last night.",
+              "speaker": "Traveler"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_11": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Can I join you?",
+              "speaker": "Traveler"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_12": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "This mountain is probably one of the only ones in a thousand miles that's tall enough to stand above the floods.",
+              "speaker": "Traveler"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_13": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I...",
+              "speaker": "You"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I expected ridicule.",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_14": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "This mountain, here?",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_15": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Yes, seems like it.",
+              "speaker": "Traveler"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "There are some plateaus that rest above the flood lines.",
+              "speaker": "Traveler"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_16": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Okay.",
+              "speaker": "You"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Let's make it work.",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_17": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Alright.",
+              "speaker": "Traveler"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "So it begins for us.",
+              "speaker": "Traveler"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_18": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "First, we'll need a way to get resources up and down the mountain.",
+              "speaker": "Traveler"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I reckon myself something of a craftsman, a blacksmith by trade actually.",
+              "speaker": "Blacksmith"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I can construct a water wheel to pull a cable system.",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_19": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I spotted an outcrop of bluestone just up there. You probably walked past it last night.",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_20": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "We could lower those down here and build a smeltery.",
+              "speaker": "Blacksmith"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "We'll need plenty of metals for tools and structures if we're going to call this mountain home.",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_21": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I took inventory of my bag this morning.",
+              "speaker": "Blacksmith"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "A few iron rods and one explosive charge I didn't need to use in the caves.",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_22": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "The iron rods could bolster a strong wooden frame for our cable system.",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    },
+    "secondmeeting_23": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Chop these two trees down and bring all the resources over by the river and we'll put it all together.",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    },
+    "waterwheelbuilt_1": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Excellent.",
+              "speaker": "Blacksmith"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "This should be able to convert plenty of torque.",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    },
+    "waterwheelbuilt_2": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "This is where you come in.",
+              "speaker": "Blacksmith"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Head back up and build a couple anchor points so we can safely lower the bluestones to base camp.",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

@@ -9,9 +9,12 @@ public class NPCHub : MonoBehaviour
     public NPCReskinManager reskinner;
     public Animator animator;
     public CutsceneActor cutsceneActor;
+
+    [System.NonSerialized]
+    public Vector2 defaultPos;
     
     // Start is called before the first frame update
-    void Start()
+  void Start()
     {
         
     }
