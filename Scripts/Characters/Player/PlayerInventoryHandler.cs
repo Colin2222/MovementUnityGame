@@ -15,8 +15,11 @@ public class PlayerInventoryHandler : MonoBehaviour
 	(int x, int y) selectionPos;
 	bool inSelection = false;
 	bool isOpen = false;
-	
-	List<WorldItem> reachableItems;
+
+	public PlayerHub player;
+	public Transform raycastPoint;
+	public float raycastDistance = 1f;
+	LayerMask mask;
 	
 	void Awake(){
 		SaveDataHelperMethods.LoadInventory(inventory, SceneManager.Instance.sessionManager.saveData.player_inventory);
@@ -24,7 +27,7 @@ public class PlayerInventoryHandler : MonoBehaviour
 
     void Start()
     {
-
+		mask = LayerMask.GetMask("Items");
     }
 
     // Update is called once per frame
@@ -39,7 +42,6 @@ public class PlayerInventoryHandler : MonoBehaviour
 			canvas = canvasObj.GetComponent<InventoryCanvasScript>();
 			canvas.SyncInventory(inventory);
 		}
-		reachableItems = new List<WorldItem>();
 	}
 
 	public bool ToggleInventory(){
@@ -107,10 +109,11 @@ public class PlayerInventoryHandler : MonoBehaviour
 	}
 	
 	public bool Pickup(){
-		if(reachableItems.Count > 0){
-			WorldItem pickup = reachableItems[0];
+		RaycastHit2D raycastHit = Physics2D.Raycast(raycastPoint.position, Vector2.right * Mathf.Sign(player.stateManager.GetDirection()), raycastDistance, mask);
+		if (raycastHit.collider != null)
+		{
+			WorldItem pickup = raycastHit.collider.GetComponent<WorldItem>();
 			Item pickupItem = pickup.item;
-			reachableItems.RemoveAt(0);
 			Destroy(pickup.gameObject);
 			inventory.AddItem(pickupItem, 1);
 			UpdateIcons();
@@ -140,13 +143,5 @@ public class PlayerInventoryHandler : MonoBehaviour
 				}
 			}
 		}
-	}
-	
-	void OnTriggerEnter2D(Collider2D col){
-		reachableItems.Add(col.GetComponent<WorldItem>());
-	}
-	
-	void OnTriggerExit2D(Collider2D col){
-		reachableItems.Remove(col.GetComponent<WorldItem>());
 	}
 }
