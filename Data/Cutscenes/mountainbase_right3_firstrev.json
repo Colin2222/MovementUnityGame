@@ -212,6 +212,19 @@
 					]
 				}
 			]
+		},
+		{
+			"id":-1,
+			"trigger_time":45.5,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetFillIsActive",
+					"string_parameters":[
+						"blacksmith_bag", "true", "basecamp"
+					]
+				}
+			]
 		}
 	]
 }

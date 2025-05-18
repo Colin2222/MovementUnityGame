@@ -1,0 +1,44 @@
+{
+	"id":3,
+	"lock_player":true,
+	"duration":13.0,
+	"tasks":[
+		{
+			"id":10,
+			"trigger_time":0.15,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetCameraAnchorPoint",
+					"parameters":[]
+				}
+			]
+		},
+		{
+			"id":10,
+			"trigger_time":2.25,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetVelocityToTarget",
+					"parameters":[
+						10.0, -117.0, 40.0
+					]
+				}
+			]
+		},
+		{
+			"id":10,
+			"trigger_time":9.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetVelocityToTarget",
+					"parameters":[
+						15.0, -73.25, 3.0
+					]
+				}
+			]
+		}
+	]
+}

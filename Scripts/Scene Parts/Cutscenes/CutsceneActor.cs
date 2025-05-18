@@ -19,6 +19,9 @@ public class CutsceneActor : MonoBehaviour
 	public string defaultAnim;
 	public CutsceneManager cutsceneManager;
 	public bool isPlayer;
+	Vector3 targetPosition;
+	bool isFreeMoving = false;
+	float freeMovingSpeed = 0.0f;
 
 	// Start is called before the first frame update
 	void Start()
@@ -46,6 +49,16 @@ public class CutsceneActor : MonoBehaviour
 				}
 			}
 			rb.velocity = cutsceneVelocity;
+
+			if (isFreeMoving)
+			{
+				transform.position = Vector3.MoveTowards(transform.position, targetPosition, freeMovingSpeed * Time.deltaTime);
+				if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
+				{
+					isFreeMoving = false;
+					freeMovingSpeed = 0.0f;
+				}
+			}
 		}
 	}
 
@@ -74,6 +87,14 @@ public class CutsceneActor : MonoBehaviour
 		this.targetX = targetX;
 		movingToTarget = true;
 		cutsceneVelocity = new Vector2(velocity, cutsceneVelocity.y);
+	}
+
+	public void SetVelocityToTarget(float speed, float targetX, float targetY)
+	{
+		targetPosition = new Vector3(targetX, targetY, rb.transform.position.z);
+		freeMovingSpeed = speed;
+		isFreeMoving = true;
+
 	}
 
 	public void VerticalShift(float shift)
@@ -158,6 +179,11 @@ public class CutsceneActor : MonoBehaviour
 	public void SetFill(string fillName, string activeStr)
 	{
 		cutsceneManager.SetFill(fillName, bool.Parse(activeStr));
+	}
+
+	public void SetFillIsActive(string fillName, string activeStr, string roomName)
+	{
+		SessionManager.Instance.SetFillIsActive(fillName, bool.Parse(activeStr), roomName);
 	}
 
 	public void SetIntegerMarker(string markerName, string valueStr)

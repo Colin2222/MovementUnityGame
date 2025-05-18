@@ -1,18 +1,26 @@
 {
   "progress_markers": {
-    "tutorial_1_viewed": false,
-    "tutorial_2_viewed": false,
-    "tutorial_3_viewed": false,
-    "tutorial_4_viewed": false,
+    "tutorial_1_viewed": true,
+    "tutorial_1b_viewed": true,
+    "tutorial_2_viewed": true,
+    "tutorial_3_viewed": true,
+    "tutorial_4_viewed": true,
     "started_game": true,
     "halfway_done": false,
     "finished_game": false,
     "first_revelation": false,
-    "first_dialogue_completed": false
+    "first_dialogue_completed": false,
+    "guidestone_1_viewed": false,
+    "basecamp_first_meeting_viewed": false,
+    "basecamp_second_meeting_viewed": false,
+    "basecamp_second_meeting_post_viewed": false,
+    "basecamp_waterwheel_built_viewed": false,
+    "mountainbase_anchordemo_viewed": false
   },
   "integer_markers": {
-    "cable_car_location": 100001,
-    "cable_car_progress": 100001
+    "cable_car_location": 0,
+    "cable_car_progress": 0,
+    "time_marker": 0
   },
   "rooms": {
     "basecamp": {
@@ -21,47 +29,101 @@
           "id": 100000,
           "display_name": null,
           "site": {
-            "name": "cablecar",
-            "inventories": null,
-            "additional_data": null
-          }
-        },
-        {
-          "id": 2,
-          "display_name": null,
-          "site": {
             "name": "construction",
             "inventories": [
               {
                 "width": 1,
-                "height": 1,
+                "height": 2,
                 "contents": [
                   {
                     "item_name": "wood_log",
+                    "quantity": 2
+                  },
+                  {
+                    "item_name": "iron_rod",
                     "quantity": 1
                   }
                 ]
               }
             ],
             "additional_data": {
-              "site_construction": "chest"
+              "site_construction": "cablecar",
+              "construction_active": "False",
+              "post_cutscene": "basecamp_waterwheel_built"
+            }
+          }
+        },
+        {
+          "id": 101,
+          "display_name": null,
+          "site": {
+            "name": "tree",
+            "inventories": null,
+            "additional_data": {
+              "num_logs": "4",
+              "cut_down": "False"
+            }
+          }
+        },
+        {
+          "id": 102,
+          "display_name": null,
+          "site": {
+            "name": "tree",
+            "inventories": null,
+            "additional_data": {
+              "num_logs": "3",
+              "cut_down": "False"
             }
           }
         }
       ],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {
+        "waterwheel": {
+          "id": "waterwheel",
+          "active": false
+        },
+        "cot_left": {
+          "id": "cot_left",
+          "active": false
+        },
+        "tarp": {
+          "id": "tarp",
+          "active": false
+        },
+        "blacksmith_bag": {
+          "id": "blacksmith_bag",
+          "active": false
+        },
+        "campfire": {
+          "id": "campfire",
+          "active": false
+        },
+        "cot_right": {
+          "id": "cot_right",
+          "active": false
+        }
+      }
     },
     "basecamp_river": {
       "site_slots": [],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     },
     "earlycave_exit": {
       "site_slots": [],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     },
     "earlycave_river": {
       "site_slots": [],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     },
     "guidestone_cave": {
       "site_slots": [
@@ -70,12 +132,14 @@
           "display_name": null,
           "site": {
             "name": "fill",
-            "inventories": null,
-            "additional_data": null
+            "inventories": [],
+            "additional_data": {}
           }
-        },
+        }
       ],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     },
     "mountainbase_rightedge1": {
       "site_slots": [
@@ -83,9 +147,27 @@
           "id": 100001,
           "display_name": null,
           "site": {
-            "name": "cablecar",
-            "inventories": null,
-            "additional_data": null
+            "name": "construction",
+            "inventories": [
+              {
+                "width": 1,
+                "height": 2,
+                "contents": [
+                  {
+                    "item_name": "wood_log",
+                    "quantity": 2
+                  },
+                  {
+                    "item_name": "iron_rod",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ],
+            "additional_data": {
+              "site_construction": "cablecar",
+              "construction_active": "False"
+            }
           }
         },
         {
@@ -110,7 +192,8 @@
               }
             ],
             "additional_data": {
-              "site_construction": "cablecar"
+              "site_construction": "cablecar",
+              "construction_active": "False"
             }
           }
         },
@@ -153,7 +236,7 @@
         {
           "item_id": "wood_log",
           "x_pos": -91.93998,
-          "y_pos": 5.26499748
+          "y_pos": 5.264999
         },
         {
           "item_id": "wood_log",
@@ -163,25 +246,35 @@
         {
           "item_id": "iron_rod",
           "x_pos": -76.701355,
-          "y_pos": 17.26499
+          "y_pos": 17.2649956
         }
-      ]
+      ],
+      "npcs": [],
+      "fills": {}
     },
     "mountainbase_cave1": {
       "site_slots": [],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     },
     "mountainbase_mid1": {
       "site_slots": [],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     },
     "mountainbase_minicave1": {
       "site_slots": [],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     },
     "mountainbase_right1": {
       "site_slots": [],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     },
     "mountainbase_right2": {
       "site_slots": [
@@ -191,11 +284,13 @@
           "site": {
             "name": "cablecar",
             "inventories": null,
-            "additional_data": {}
+            "additional_data": null
           }
         }
       ],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     },
     "mountainbase_right3": {
       "site_slots": [
@@ -205,23 +300,31 @@
           "site": {
             "name": "cablecar",
             "inventories": null,
-            "additional_data": {}
+            "additional_data": null
           }
         }
       ],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     },
     "greenmountain_1": {
       "site_slots": [],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     },
     "greenmountain_2": {
       "site_slots": [],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     },
     "greenmountaincave_1": {
       "site_slots": [],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     },
     "greenmountain_3": {
       "site_slots": [
@@ -231,11 +334,95 @@
           "site": {
             "name": "cablecar",
             "inventories": null,
-            "additional_data": {}
+            "additional_data": null
           }
         }
       ],
-      "world_items": []
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "greenmountain_4": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "greenmountain_5": {
+      "site_slots": [
+        {
+          "id": 100006,
+          "display_name": null,
+          "site": {
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": null
+          }
+        }
+      ],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "greenmountaincave_2": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "greenmountaincave_3": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "greenmountain_6": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "orangemountain_1": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "orangemountain_2": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "orangemountain_3": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "orangemountain_4": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "orangemountain_5": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "orangemountain_6": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "outpost_outskirts_1": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     }
   },
   "player_inventory": {
@@ -244,13 +431,16 @@
     "contents": [
       {
         "item_name": "wood_log",
-        "quantity": 1
+        "quantity": 7
       },
       {
         "item_name": "iron_rod",
-        "quantity": 1
+        "quantity": 10
       },
-      null,
+      {
+        "item_name": "explosive_charge",
+        "quantity": 3
+      },
       null,
       null,
       null,

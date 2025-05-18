@@ -5,6 +5,38 @@
 	"tasks":[
 		{
 			"id":-1,
+			"trigger_time":0.25,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetProgressMarker",
+					"string_parameters":[
+						"basecamp_waterwheel_built_viewed", "true"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":0.25,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetSiteAdditionalData",
+					"string_parameters":[
+						"100001", "construction_active", "true", "mountainbase_rightedge1"
+					]
+				},
+				{
+					"name":"SetSiteAdditionalData",
+					"string_parameters":[
+						"100002", "construction_active", "true", "mountainbase_rightedge1"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
 			"trigger_time":2.0,
 			"anim_name":"",
 			"custom_actions":[

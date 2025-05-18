@@ -208,7 +208,7 @@
           "nodes":[
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "All I've felt in anxious.",
+              "text": "All I've felt is anxious.",
               "speaker": "You"
             }
           ]

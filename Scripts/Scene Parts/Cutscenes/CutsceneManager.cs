@@ -55,6 +55,7 @@ public class CutsceneManager : MonoBehaviour
 	public SpriteRenderer fullscreenCutsceneSprite;
 	public SpriteRenderer fullscreenCutsceneBackgroundSprite;
 	GameObject mainCameraObj;
+	float tempLookahead;
 	
 	void Awake(){
 		inCutscene = false;
@@ -107,15 +108,16 @@ public class CutsceneManager : MonoBehaviour
 				
 				// check for end of cutscene
 				if(cutsceneTimer >= cutsceneDuration){
+					inCutscene = false;
+					currentCutscene.active = false;
+
 					if (playerLocked)
 					{
 						sceneManager.player.UnlockPlayer();
 						sceneManager.player.inputManager.ExitCutscene();
 						SwitchCameraAnchor(sceneManager.player.cameraAimPoint);
+						EnableLookahead();
 					}
-					
-					inCutscene = false;
-					currentCutscene.active = false;
 				}
 			}
 		} 
@@ -192,10 +194,12 @@ public class CutsceneManager : MonoBehaviour
 		inCutscene = true; 
 
 		playerLocked = currentCutscene.lock_player;
-		if(playerLocked){
+		if (playerLocked)
+		{
 			sceneManager.player.stateManager.ResetPlayer();
 			sceneManager.player.inputManager.EnterCutscene();
 			sceneManager.player.LockPlayer();
+			DisableLookahead();
 		}
 	}
 	
@@ -206,7 +210,21 @@ public class CutsceneManager : MonoBehaviour
 		}
 	}
 
-	public void EnterDialogue(){
+	void EnableLookahead()
+	{
+		CinemachineFramingTransposer transposer = vcam.GetCinemachineComponent<CinemachineFramingTransposer>();
+		transposer.m_LookaheadTime = tempLookahead;
+	}
+
+	void DisableLookahead()
+	{
+		CinemachineFramingTransposer transposer = vcam.GetCinemachineComponent<CinemachineFramingTransposer>();
+		tempLookahead = transposer.m_LookaheadTime;
+		transposer.m_LookaheadTime = 0.0f;
+	}
+
+	public void EnterDialogue()
+	{
 		sceneManager.player.stateManager.EnterCutsceneDialogue(interactable);
 		sceneManager.player.inputManager.inUI = true;
 		inDialogue = true;
