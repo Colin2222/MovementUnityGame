@@ -24,20 +24,22 @@ public class DialogueManager : MonoBehaviour
     void Start(){
         sessionManager = GameObject.FindWithTag("SessionManager").GetComponent<SessionManager>();
     }
-    
-    public void StartDialogue(string dialogueCode)
+
+    public bool StartDialogue(string dialogueCode)
     {
         currentDialogue = sessionManager.GetDialogueTree(dialogueCode);
-        if(currentDialogue == null){
+        if (currentDialogue == null)
+        {
             Debug.Log("Dialogue not found");
             EndDialogue();
-            return;
+            return false;
         }
         currentBranch = FindValidBranch(currentDialogue.branches);
-        if(currentBranch == null){
+        if (currentBranch == null)
+        {
             Debug.Log("No valid branch found");
             EndDialogue();
-            return;
+            return false;
         }
         currentNodeIndex = 0;
         EvaluateNode(currentBranch.nodes[currentNodeIndex]);
@@ -48,9 +50,11 @@ public class DialogueManager : MonoBehaviour
         nameImage.gameObject.SetActive(true);
 
         inDialogue = true;
-        if(cutsceneManager.inCutscene){
+        if (cutsceneManager.inCutscene)
+        {
             cutsceneManager.EnterDialogue();
         }
+        return true;
     }
 
     public void EndDialogue()
@@ -62,7 +66,7 @@ public class DialogueManager : MonoBehaviour
 
         inDialogue = false;
         GameObject.FindWithTag("Player").GetComponent<PlayerHub>().inputManager.LeaveDialogue();
-        if(cutsceneManager.inCutscene){
+        if(cutsceneManager.inCutscene && cutsceneManager.playerLocked){
             cutsceneManager.ExitDialogue();
         }
     }

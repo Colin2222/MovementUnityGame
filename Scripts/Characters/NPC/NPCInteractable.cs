@@ -21,7 +21,7 @@ public class NPCInteractable : Interactable
 
     public override void Interact()
     {
-        dialogueManager.StartDialogue(npcHub.npcName);
+        hasDialogue = dialogueManager.StartDialogue(npcHub.npcName);
     }
 
     public override void LeaveInteraction()

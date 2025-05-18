@@ -23,10 +23,6 @@ public class PlayerInteractor : MonoBehaviour
 			iFace.Interact();
 			return iFace;
 		}
-		else
-		{
-			Debug.Log("No interactable found");
-		}
 		return null;
 	}
 }
