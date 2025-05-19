@@ -37,7 +37,7 @@ public class PStateSoaring : PState
 		}
 		timeSinceLastGroundHit = 0.0f;
 		lastGroundHitSpeed = hitSpeedY;
-		return new PStateMoving();
+		return new PStateIdle();
 	}
 	
 	public override PState Move(float horizontal, float vertical){

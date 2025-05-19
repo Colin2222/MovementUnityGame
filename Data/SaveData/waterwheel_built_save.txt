@@ -14,12 +14,12 @@
     "basecamp_first_meeting_viewed": true,
     "basecamp_second_meeting_viewed": true,
     "basecamp_second_meeting_post_viewed": true,
-    "basecamp_waterwheel_built_viewed": true,
+    "basecamp_waterwheel_built_viewed": false,
     "mountainbase_anchordemo_viewed": false
   },
   "integer_markers": {
     "cable_car_location": 0,
-    "cable_car_progress": 100000,
+    "cable_car_progress": 0,
     "time_marker": 0
   },
   "rooms": {
@@ -29,9 +29,28 @@
           "id": 100000,
           "display_name": null,
           "site": {
-            "name": "cablecar",
-            "inventories": null,
-            "additional_data": null
+            "name": "construction",
+            "inventories": [
+              {
+                "width": 1,
+                "height": 2,
+                "contents": [
+                  {
+                    "item_name": "wood_log",
+                    "quantity": 2
+                  },
+                  {
+                    "item_name": "iron_rod",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ],
+            "additional_data": {
+              "site_construction": "cablecar",
+              "construction_active": "True",
+              "post_cutscene": "basecamp_waterwheel_built"
+            }
           }
         },
         {
@@ -59,12 +78,33 @@
           }
         }
       ],
-      "world_items": [],
+      "world_items": [
+        {
+          "item_id": "iron_rod",
+          "x_pos": -133.80307,
+          "y_pos": 5.76498365
+        },
+        {
+          "item_id": "iron_rod",
+          "x_pos": -132.8093,
+          "y_pos": 5.764984
+        },
+        {
+          "item_id": "iron_rod",
+          "x_pos": -131.815826,
+          "y_pos": 5.764985
+        },
+        {
+          "item_id": "explosive_charge",
+          "x_pos": -130.821808,
+          "y_pos": 5.764986
+        }
+      ],
       "npcs": [
         {
           "name": "blacksmith",
-          "x_pos": -120.4173,
-          "y_pos": 6.26499367,
+          "x_pos": -120.4375,
+          "y_pos": 6.5,
           "direction": -1,
           "default_animation": "blacksmith_idle",
           "inventories": null
@@ -73,7 +113,7 @@
       "fills": {
         "waterwheel": {
           "id": "waterwheel",
-          "active": true
+          "active": false
         },
         "cot_left": {
           "id": "cot_left",
@@ -156,7 +196,8 @@
             ],
             "additional_data": {
               "site_construction": "cablecar",
-              "construction_active": "true"
+              "construction_active": "False",
+              "post_cutscene": "mountainbase_bluestonelift"
             }
           }
         },
@@ -183,7 +224,8 @@
             ],
             "additional_data": {
               "site_construction": "cablecar",
-              "construction_active": "true"
+              "construction_active": "False",
+              "post_cutscene": "mountainbase_bluestonelift"
             }
           }
         },

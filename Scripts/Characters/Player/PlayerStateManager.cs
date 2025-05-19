@@ -35,8 +35,9 @@ public class PlayerStateManager : MonoBehaviour
 	public void ResetPlayerNoAnim(){
 		currentState = new PStateIdle(false);
 	}
-	
-	public void Move(float horizontal, float vertical){
+
+	public void Move(float horizontal, float vertical)
+	{
 		currentState = currentState.Move(horizontal, vertical);
 	}
 	

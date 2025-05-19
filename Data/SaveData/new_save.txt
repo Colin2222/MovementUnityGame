@@ -20,7 +20,7 @@
   "integer_markers": {
     "cable_car_location": 0,
     "cable_car_progress": 0,
-    "time_marker": 0
+    "time_marker": 1
   },
   "rooms": {
     "basecamp": {
@@ -48,7 +48,7 @@
             ],
             "additional_data": {
               "site_construction": "cablecar",
-              "construction_active": "False",
+              "construction_active": "false",
               "post_cutscene": "basecamp_waterwheel_built"
             }
           }
@@ -166,7 +166,8 @@
             ],
             "additional_data": {
               "site_construction": "cablecar",
-              "construction_active": "False"
+              "construction_active": "false",
+              "post_cutscene": "mountainbase_bluestonelift"
             }
           }
         },
@@ -193,7 +194,8 @@
             ],
             "additional_data": {
               "site_construction": "cablecar",
-              "construction_active": "False"
+              "construction_active": "false",
+              "post_cutscene": "mountainbase_bluestonelift"
             }
           }
         },
@@ -431,15 +433,15 @@
     "contents": [
       {
         "item_name": "wood_log",
-        "quantity": 7
+        "quantity": 6
       },
       {
         "item_name": "iron_rod",
-        "quantity": 10
+        "quantity": 13
       },
       {
         "item_name": "explosive_charge",
-        "quantity": 3
+        "quantity": 4
       },
       null,
       null,

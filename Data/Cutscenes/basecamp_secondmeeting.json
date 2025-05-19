@@ -136,7 +136,7 @@
 				{
 					"name":"StartBlackout",
 					"parameters":[
-						1.0, 10.0
+						1.0, 1.0, 10.0
 					]
 				}
 			]

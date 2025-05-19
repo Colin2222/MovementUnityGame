@@ -41,7 +41,8 @@ public class FootHandler : MonoBehaviour
 				//check the player wouldnt be climbing down a small ledge and clip into the world after climbing down
 				Vector2 cornerCheckPos = new Vector2(hitFeet.collider.transform.position.x + (smallCornerCheckHorizontalOffset * direction), hitFeet.collider.transform.position.y - smallCornerCheckVerticalOffset);
 				RaycastHit2D smallCornerCheck = Physics2D.Raycast(cornerCheckPos, Vector2.down, smallCornerCheckDistance, groundMask);
-				if(smallCornerCheck.collider == null){
+				if (smallCornerCheck.collider == null)
+				{
 					cornerHandler.footCorner = hitFeet.collider.transform;
 					return true;
 				}

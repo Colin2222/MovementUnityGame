@@ -206,12 +206,28 @@ public class SiteCableCar : Site
     void HandleCableCarProgress(){
         SessionManager sessionManager = SessionManager.Instance;
         int currentCableCarProgress = sessionManager.GetIntegerMarker("cable_car_progress");
-        if(currentCableCarProgress == id - 1){
+        if (currentCableCarProgress == id - 1)
+        {
             sessionManager.SetIntegerMarker("cable_car_progress", id);
             operational = true;
-        } else if(currentCableCarProgress >= id && currentCableCarProgress != 0){
+
+            // check how far out the player built from the current
+            int currentId = id + 1;
+            string currentRoomName = sessionManager.GetAnchorRoomName(currentId);
+            while (currentRoomName != "" && sessionManager.GetSiteName(currentId, currentRoomName) == "cablecar")
+            {
+                sessionManager.SetIntegerMarker("cable_car_progress", currentId);
+                currentId++;
+                currentRoomName = sessionManager.GetAnchorRoomName(currentId);
+            }
+
+        }
+        else if (currentCableCarProgress >= id && currentCableCarProgress != 0)
+        {
             operational = true;
-        } else{
+        }
+        else
+        {
             operational = false;
         }
         HandleCableSprites();

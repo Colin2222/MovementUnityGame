@@ -22,6 +22,7 @@ public class CutsceneActor : MonoBehaviour
 	Vector3 targetPosition;
 	bool isFreeMoving = false;
 	float freeMovingSpeed = 0.0f;
+	Transform baseTransform;
 
 	// Start is called before the first frame update
 	void Start()
@@ -52,8 +53,8 @@ public class CutsceneActor : MonoBehaviour
 
 			if (isFreeMoving)
 			{
-				transform.position = Vector3.MoveTowards(transform.position, targetPosition, freeMovingSpeed * Time.deltaTime);
-				if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
+				baseTransform.position = Vector3.MoveTowards(baseTransform.position, targetPosition, freeMovingSpeed * Time.deltaTime);
+				if (Vector3.Distance(baseTransform.position, targetPosition) < 0.1f)
 				{
 					isFreeMoving = false;
 					freeMovingSpeed = 0.0f;
@@ -94,6 +95,14 @@ public class CutsceneActor : MonoBehaviour
 		targetPosition = new Vector3(targetX, targetY, rb.transform.position.z);
 		freeMovingSpeed = speed;
 		isFreeMoving = true;
+		if (isPlayer)
+		{
+			baseTransform = transform.parent;
+		}
+		else
+		{
+			baseTransform = transform;
+		}
 
 	}
 
@@ -171,9 +180,9 @@ public class CutsceneActor : MonoBehaviour
 		SceneManager.Instance.npcManager.SpawnNPC(npcName, new Vector3(float.Parse(strX), float.Parse(strY), 0));
 	}
 
-	public void StartBlackout(float transitionDuration, float holdDuration)
+	public void StartBlackout(float transitionDuration, float exitDuration, float holdDuration)
 	{
-		cutsceneManager.StartBlackout(transitionDuration, holdDuration);
+		cutsceneManager.StartBlackout(transitionDuration, exitDuration, holdDuration);
 	}
 
 	public void SetFill(string fillName, string activeStr)
@@ -253,9 +262,34 @@ public class CutsceneActor : MonoBehaviour
 	{
 		SceneManager.Instance.siteManager.ConstructSite(int.Parse(siteId));
 	}
-	
+
 	public void SetSiteAdditionalData(string siteId, string dataKey, string dataValue, string roomName)
 	{
 		SessionManager.Instance.SetSiteAdditionalData(int.Parse(siteId), dataKey, dataValue, roomName);
+	}
+
+	public void AnchorCheckBreakpoint(string anchorId, string roomName)
+	{
+		string siteName = SessionManager.Instance.GetSiteName(int.Parse(anchorId), roomName);
+		if (siteName == null || siteName != "cablecar")
+		{
+			cutsceneManager.EndCutscene();
+		}
+	}
+
+	public void SetCameraPosition(float x, float y)
+	{
+		SceneManager.Instance.mainCameraObj.transform.position = new Vector3(x, y, SceneManager.Instance.mainCameraObj.transform.position.z);
+		SceneManager.Instance.vcam.transform.position = new Vector3(x, y, SceneManager.Instance.vcam.transform.position.z);
+	}
+
+	public void ActivateVcam()
+	{
+		SceneManager.Instance.vcam.gameObject.SetActive(true);
+	}
+
+	public void DeactivateVcam()
+	{
+		SceneManager.Instance.vcam.gameObject.SetActive(false);
 	}
 }

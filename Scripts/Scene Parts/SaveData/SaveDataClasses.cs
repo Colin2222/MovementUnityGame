@@ -76,12 +76,14 @@ public class SavedFill{
 	public bool active;
 }
 
-public class RoomMappingData{
+public class RoomMappingData
+{
 	public Dictionary<string, PulleyAnchorPointMapping> anchor_points;
 	public Dictionary<string, string> build_to_name;
 }
 
-public class PulleyAnchorPointMapping{
+public class PulleyAnchorPointMapping
+{
 	public int build_index;
 	public int entrance_index;
 }

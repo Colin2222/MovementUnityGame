@@ -47,16 +47,11 @@ public class SiteConstruction : Site
                 cutsceneTimer += Time.deltaTime;
             if (cutsceneTimer >= totalCutsceneTime)
             {
-                inCutscene = false;
-                //PlayerHub.Instance.inputManager.UnlockPlayer();
-                //PlayerHub.Instance.stateManager.ResetPlayer();
-                PlayerHub.Instance.inputManager.LeaveInteraction();
-                if (postConstructionCutscene != "")
+                if (postConstructionCutscene == "")
                 {
-                    Debug.Log("Loading post construction cutscene: " + postConstructionCutscene);
-                    SceneManager.Instance.cutsceneManager.LoadCutscene(postConstructionCutscene);
-                    SceneManager.Instance.cutsceneManager.PlayCutscene(-1);
+                    PlayerHub.Instance.inputManager.LeaveInteraction();
                 }
+                inCutscene = false;
                 Destroy(gameObject);
             }
             else if (!builtSite && cutsceneTimer >= totalCutsceneTime / 2)
@@ -76,6 +71,13 @@ public class SiteConstruction : Site
                 SessionManager.Instance.SetSite(constructedObj.GetComponent<Site>().SaveSite(), id);
                 siteInventory = null;
                 builtSite = true;
+
+                // trigger post construction cutscene if there is one
+                if (postConstructionCutscene != "")
+                {
+                    SceneManager.Instance.cutsceneManager.LoadCutscene(postConstructionCutscene);
+                    SceneManager.Instance.cutsceneManager.PlayCutscene(-1);
+                }
             }
         }
     }

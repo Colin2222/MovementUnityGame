@@ -15,7 +15,7 @@
     "basecamp_second_meeting_viewed": true,
     "basecamp_second_meeting_post_viewed": true,
     "basecamp_waterwheel_built_viewed": true,
-    "mountainbase_anchordemo_viewed": false
+    "mountainbase_anchordemo_viewed": true
   },
   "integer_markers": {
     "cable_car_location": 0,
@@ -59,11 +59,32 @@
           }
         }
       ],
-      "world_items": [],
+      "world_items": [
+        {
+          "item_id": "iron_rod",
+          "x_pos": -133.8046,
+          "y_pos": 5.76498365
+        },
+        {
+          "item_id": "iron_rod",
+          "x_pos": -132.809845,
+          "y_pos": 5.764984
+        },
+        {
+          "item_id": "iron_rod",
+          "x_pos": -131.815186,
+          "y_pos": 5.764985
+        },
+        {
+          "item_id": "explosive_charge",
+          "x_pos": -130.820374,
+          "y_pos": 5.764986
+        }
+      ],
       "npcs": [
         {
           "name": "blacksmith",
-          "x_pos": -120.4173,
+          "x_pos": -120.4375,
           "y_pos": 6.26499367,
           "direction": -1,
           "default_animation": "blacksmith_idle",
@@ -156,7 +177,8 @@
             ],
             "additional_data": {
               "site_construction": "cablecar",
-              "construction_active": "true"
+              "construction_active": "True",
+              "post_cutscene": "mountainbase_bluestonelift"
             }
           }
         },
@@ -164,27 +186,9 @@
           "id": 100002,
           "display_name": null,
           "site": {
-            "name": "construction",
-            "inventories": [
-              {
-                "width": 1,
-                "height": 2,
-                "contents": [
-                  {
-                    "item_name": "wood_log",
-                    "quantity": 2
-                  },
-                  {
-                    "item_name": "iron_rod",
-                    "quantity": 1
-                  }
-                ]
-              }
-            ],
-            "additional_data": {
-              "site_construction": "cablecar",
-              "construction_active": "true"
-            }
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": null
           }
         },
         {
@@ -240,7 +244,20 @@
         }
       ],
       "npcs": [],
-      "fills": {}
+      "fills": {
+        "bluestone_tied": {
+          "id": "bluestone_tied",
+          "active": false
+        },
+        "bluestone_untied": {
+          "id": "bluestone_tied",
+          "active": false
+        },
+        "bluestone_slab": {
+          "id": "bluestone_slab",
+          "active": true
+        }
+      }
     },
     "mountainbase_cave1": {
       "site_slots": [],
@@ -326,7 +343,7 @@
             "inventories": null,
             "additional_data": null
           }
-        }
+        },
       ],
       "world_items": [],
       "npcs": [],
@@ -421,7 +438,7 @@
     "contents": [
       {
         "item_name": "wood_log",
-        "quantity": 6
+        "quantity": 4
       },
       {
         "item_name": "iron_rod",

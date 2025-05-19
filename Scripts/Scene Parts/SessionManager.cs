@@ -75,6 +75,11 @@ public class SessionManager : MonoBehaviour
 		Addressables.Release(operation);
 	}
 
+	public void LoadAnchorPointMappings()
+	{
+
+	}
+
 	public void LoadDialogue()
 	{
 		var operation = Addressables.LoadAssetAsync<TextAsset>(dialogueAddress);
@@ -483,7 +488,7 @@ public class SessionManager : MonoBehaviour
 
 		saveData.rooms[roomName].world_items.Add(worldItem);
 	}
-	
+
 	public void SetSiteAdditionalData(int siteId, string dataKey, string dataValue, string roomName)
 	{
 		if (saveData.rooms[roomName].site_slots != null)
@@ -497,5 +502,38 @@ public class SessionManager : MonoBehaviour
 				}
 			}
 		}
+	}
+
+	public string GetSiteName(int siteId, string roomName)
+	{
+		if (saveData.rooms[roomName].site_slots != null)
+		{
+			for (int i = 0; i < saveData.rooms[roomName].site_slots.Count; i++)
+			{
+				if (saveData.rooms[roomName].site_slots[i].id == siteId)
+				{
+					if (saveData.rooms[roomName].site_slots[i].site != null)
+					{
+						return saveData.rooms[roomName].site_slots[i].site.name;
+					}
+					else
+					{
+						Debug.LogError("Site is null");
+						return null;
+					}
+				}
+			}
+		}
+		return null;
+	}
+
+	public string GetAnchorRoomName(int anchorId)
+	{
+		if(roomMappingData.anchor_points.ContainsKey(anchorId.ToString()))
+		{
+			int buildIndex = roomMappingData.anchor_points[anchorId.ToString()].build_index;
+			return roomMappingData.build_to_name[buildIndex.ToString()];
+		}
+		return "";
 	}
 }

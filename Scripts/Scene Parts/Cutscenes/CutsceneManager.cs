@@ -16,6 +16,7 @@ public class CutsceneManager : MonoBehaviour
 	float cutsceneTimer;
 	float fsCutsceneTimer;
 	float cutsceneDuration;
+	float fsCutsceneDuration;
 	string cutsceneAddressHeader = "Assets/Data/Cutscenes/";
 	TextAsset currentCutsceneTxt;
 	
@@ -37,7 +38,9 @@ public class CutsceneManager : MonoBehaviour
 	float blackoutTime;
 	float blackoutTimer;
 	float blackoutDuration;
+	float blackoutExitTime;
 	float blackoutTransitionDuration;
+	bool bypassBlackoutEnter = false;
 	
 	Cutscene currentCutscene;
 	int currentTaskIndex;
@@ -108,16 +111,7 @@ public class CutsceneManager : MonoBehaviour
 				
 				// check for end of cutscene
 				if(cutsceneTimer >= cutsceneDuration){
-					inCutscene = false;
-					currentCutscene.active = false;
-
-					if (playerLocked)
-					{
-						sceneManager.player.UnlockPlayer();
-						sceneManager.player.inputManager.ExitCutscene();
-						SwitchCameraAnchor(sceneManager.player.cameraAimPoint);
-						EnableLookahead();
-					}
+					EndCutscene();
 				}
 			}
 		} 
@@ -130,6 +124,20 @@ public class CutsceneManager : MonoBehaviour
 			HandleBlackout();
 		}
     }
+
+	public void EndCutscene()
+	{
+		inCutscene = false;
+		currentCutscene.active = false;
+
+		if (playerLocked)
+		{
+			sceneManager.player.UnlockPlayer();
+			sceneManager.player.inputManager.ExitCutscene();
+			SwitchCameraAnchor(sceneManager.player.cameraAimPoint);
+			EnableLookahead();
+		}
+	}
 	
 	void EvaluateTask(CutsceneTask task){
 		// check that the actors for the task exist
@@ -241,7 +249,7 @@ public class CutsceneManager : MonoBehaviour
 	public void StartFullscreenCutscene(float duration, float blackoutDuration, string animationName, string backgroundName){
 		inFullscreenCutscene = true;
 		fsCutsceneTimer = 0.0f;
-		cutsceneDuration = duration;
+		fsCutsceneDuration = duration;
 		fullscreenCutsceneBlackoutTime = blackoutDuration;
 		fullscreenCutsceneEntering = true;
 		fullscreenAnimator.gameObject.SetActive(true);
@@ -290,7 +298,7 @@ public class CutsceneManager : MonoBehaviour
 				inFullscreenCutscene = false;
 			}
 		} else{
-			if(fsCutsceneTimer >= cutsceneDuration){
+			if(fsCutsceneTimer >= fsCutsceneDuration){
 				fullscreenCutsceneExiting = true;
 				fsCutsceneTimer = 0.0f;
 				fullscreenAnimator.speed = 0.0f;
@@ -312,29 +320,42 @@ public class CutsceneManager : MonoBehaviour
 		actor.cutsceneManager = this;
 	}
 
-	public void StartBlackout(float transitionDuration, float duration){
+	public void StartBlackout(float transitionDuration, float exitDuration, float duration){
 		inBlackout = true;
 		blackoutEntering = true;
 		blackoutDuration = duration;
 		blackoutTime = transitionDuration;
+		blackoutExitTime = exitDuration;
 		blackoutTimer = 0.0f;
 		fullscreenAnimator.gameObject.SetActive(true);
 		fullscreenAnimator.speed = 0.0f;
 		fullscreenAnimator.transform.position = new Vector3(sceneManager.mainCameraObj.transform.position.x, sceneManager.mainCameraObj.transform.position.y, 0.0f);
-		fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
-		fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
-		fullscreenCutsceneBackgroundSprite.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+		if (!inFullscreenCutscene)
+		{
+			bypassBlackoutEnter = false;
+			fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+			fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+			fullscreenCutsceneBackgroundSprite.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+		}
+		else
+		{
+			bypassBlackoutEnter = true;
+		}
 	}
 
 	void HandleBlackout(){
 		blackoutTimer += Time.deltaTime;
 
 		if(blackoutEntering){
-			float a = blackoutTimer / blackoutTime;
-			fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, Mathf.Clamp(a, 0.0f, 1.0f));
+			if(!bypassBlackoutEnter)
+			{
+				float a = blackoutTimer / blackoutTime;
+				fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, Mathf.Clamp(a, 0.0f, 1.0f));
+			}
 			if(blackoutTimer >= blackoutTime){
 				blackoutTimer = 0.0f;
 				blackoutEntering = false;
+				blackoutTime = blackoutExitTime;
 				fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
 			}
 		} else if (blackoutExiting){
