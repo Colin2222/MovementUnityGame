@@ -173,6 +173,10 @@ MonoBehaviour:
     m_Address: Assets/Data/Cutscenes/mountainbase_bluestonelift.json
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: db5543d2a0f0e834caecb57b96ad4eef
+    m_Address: Assets/Data/Cutscenes/mountainbase_bluestonelift2.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:

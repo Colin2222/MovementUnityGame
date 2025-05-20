@@ -52,6 +52,10 @@
 					"parameters":[
 						-127.625, 40.0
 					]
+				},
+				{
+					"name":"FaceRight",
+					"parameters":[]
 				}
 			]
 		},
@@ -145,7 +149,7 @@
 				{
 					"name":"SetVelocityToTarget",
 					"parameters":[
-						1.25, -118.375, 41.0
+						1.25, -119.0, 41.0
 					]
 				}
 			]
@@ -180,6 +184,19 @@
 			"id":0,
 			"trigger_time":10.25,
 			"anim_name":"PlayerIdle",
+			"custom_actions":[
+				{
+					"name":"SetCoordinates",
+					"parameters":[
+						-115.5, 41.0
+					]
+				}
+			]
+		},
+		{
+			"id":35,
+			"trigger_time":10.25,
+			"anim_name":"pulleyanchor_spinning",
 			"custom_actions":[]
 		},
 		{
@@ -235,7 +252,7 @@
 				{
 					"name":"StartBlackout",
 					"parameters":[
-						1.0, 1.0, 0.5
+						1.0, 1.0, 2.0
 					]
 				}
 			]
@@ -261,12 +278,27 @@
 		},
 		{
 			"id":-1,
-			"trigger_time":16.0,
+			"trigger_time":14.75,
 			"anim_name":"",
 			"custom_actions":[
 				{
-					"name":"ActivateVcam",
-					"parameters":[]
+					"name":"SetIntegerMarker",
+					"string_parameters":[
+						"cable_car_location", "100000"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
+			"trigger_time":15.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SwitchSceneInCutscene",
+					"string_parameters":[
+						"3", "mountainbase_bluestonelift2"
+					]
 				}
 			]
 		}

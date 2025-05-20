@@ -292,4 +292,10 @@ public class CutsceneActor : MonoBehaviour
 	{
 		SceneManager.Instance.vcam.gameObject.SetActive(false);
 	}
+
+	public void SwitchSceneInCutscene(string sceneIndexStr, string cutsceneName)
+	{
+		int sceneIndex = int.Parse(sceneIndexStr);
+		cutsceneManager.SwitchSceneInCutscene(sceneIndex, cutsceneName);
+	}
 }

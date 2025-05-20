@@ -691,6 +691,181 @@
           ]
         }
       ]
+    },
+    "bluestonelift_1": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Excellent. I'll work on building the smeltery with these stones.",
+              "speaker": "Blacksmith"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Then you can bring me anything you find up on the mountain worth smelting into useful stuff.",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    },
+    "bluestonelift_2": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "While you were building those anchor points, I used the extra wood to build this cabin car.",
+              "speaker": "Blacksmith"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "This should let us travel up and down the mountain quite comfortably as you build more anchor points.",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    },
+    "bluestonelift_3": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "It's hard not to get excited about this whole endeavor we have going.",
+              "speaker": "Blacksmith"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I can already see the anchors dotting up the mountain to a curious outpost, a haven among the floods.",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    },
+    "bluestonelift_4": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "You don't feel the same?",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    },
+    "bluestonelift_5": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "No, I do...",
+              "speaker": "You"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I just thought we we're all born to make this journey to the City, and I'm stopping short.",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "bluestonelift_6": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "But if we're all born to make the journey, deciding not to feels like the first decision I've truly made for myself.",
+              "speaker": "You"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "That's what's exciting...",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
+    },
+    "bluestonelift_7": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "Yeah, it is tough to judge such a decision.",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    },
+    "bluestonelift_8": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "You have gotta stop before I second-guess my decision, too...",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    },
+    "bluestonelift_9": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "I'll stick with building my own outpost.",
+              "speaker": "Blacksmith"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "The Golden City has been standing for centuries, now.",
+              "speaker": "Blacksmith"
+            },
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "There's no fun in that. I want to build something from square one.",
+              "speaker": "Blacksmith"
+            }
+          ]
+        }
+      ]
+    },
+    "bluestonelift_10": {
+      "branches":[
+        {
+          "conditions":[],
+          "nodes":[
+            {
+              "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
+              "text": "That is nice, to build something from scratch...",
+              "speaker": "You"
+            }
+          ]
+        }
+      ]
     }
   }
 }

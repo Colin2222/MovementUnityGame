@@ -19,9 +19,10 @@ public class CutsceneManager : MonoBehaviour
 	float fsCutsceneDuration;
 	string cutsceneAddressHeader = "Assets/Data/Cutscenes/";
 	TextAsset currentCutsceneTxt;
-	
+
 	public CinemachineVirtualCamera vcam;
-	
+	public GameObject carryoverPrefab;
+
 	[System.NonSerialized]
 	public bool inCutscene = false;
 	[System.NonSerialized]
@@ -41,7 +42,7 @@ public class CutsceneManager : MonoBehaviour
 	float blackoutExitTime;
 	float blackoutTransitionDuration;
 	bool bypassBlackoutEnter = false;
-	
+
 	Cutscene currentCutscene;
 	int currentTaskIndex;
 	CutsceneTask currentTask;
@@ -49,7 +50,7 @@ public class CutsceneManager : MonoBehaviour
 	Dictionary<int, Cutscene> cutsceneDict;
 	Dictionary<int, Transform> cameraAnchorPoints;
 	int lastCutsceneLoaded = 0;
-	
+
 	public SceneManager sceneManager;
 	public CutsceneManagerInteractable interactable;
 	public Animator fullscreenAnimator;
@@ -59,32 +60,37 @@ public class CutsceneManager : MonoBehaviour
 	public SpriteRenderer fullscreenCutsceneBackgroundSprite;
 	GameObject mainCameraObj;
 	float tempLookahead;
-	
-	void Awake(){
+
+	void Awake()
+	{
 		inCutscene = false;
 		actorsDict = new Dictionary<int, List<CutsceneActor>>();
 		cutsceneDict = new Dictionary<int, Cutscene>();
 	}
-	
-    void Start()
-    {
-        // populate list of actors in the scene
+
+	void Start()
+	{
+		// populate list of actors in the scene
 		GameObject[] actorArray = GameObject.FindGameObjectsWithTag("CutsceneActor");
-		foreach(GameObject x in actorArray){
+		foreach (GameObject x in actorArray)
+		{
 			// check to make sure the game object has an actor component, add it to actor list
 			CutsceneActor actor = x.GetComponent<CutsceneActor>();
-			if(actor != null){
+			if (actor != null)
+			{
 				int id = actor.id;
-				if(!actorsDict.ContainsKey(id)){
+				if (!actorsDict.ContainsKey(id))
+				{
 					actorsDict.Add(id, new List<CutsceneActor>());
 				}
 				actorsDict[id].Add(actor);
-				
+
 				// deactivate actor's gameobject if designated as deactivated
-				if(actor.deactivatedOnStart){
+				if (actor.deactivatedOnStart)
+				{
 					actor.gameObject.SetActive(false);
 				}
-				
+
 				actor.cutsceneManager = this;
 			}
 		}
@@ -93,37 +99,56 @@ public class CutsceneManager : MonoBehaviour
 
 		// get the camera gameobject
 		GameObject cameraObj = GameObject.FindGameObjectWithTag("MainCamera");
-		if(cameraObj != null){
+		if (cameraObj != null)
+		{
 			mainCameraObj = cameraObj;
 		}
 
-    }
+		// check if there is any carryover cutscene
+		GameObject carryoverObj = GameObject.FindWithTag("CutsceneCarryover");
+		if (carryoverObj != null)
+		{
+			CutsceneCarryover carryover = carryoverObj.GetComponent<CutsceneCarryover>();
+			if (carryover != null)
+			{
+				LoadCutscene(carryover.cutsceneName);
+				PlayCutscene(-1);
+				Destroy(carryoverObj);
+			}
+		}
+	}
 
-    void Update()
-    {
+	void Update()
+	{
 		// update timing of cutscene
-        if(inCutscene){
-			if(!inDialogue){
+		if (inCutscene)
+		{
+			if (!inDialogue)
+			{
 				cutsceneTimer += Time.deltaTime;
-					while(currentTaskIndex < currentCutscene.tasks.Length && cutsceneTimer >= currentTask.trigger_time){
+				while (currentTaskIndex < currentCutscene.tasks.Length && cutsceneTimer >= currentTask.trigger_time)
+				{
 					EvaluateTask(currentTask);
 				}
-				
+
 				// check for end of cutscene
-				if(cutsceneTimer >= cutsceneDuration){
+				if (cutsceneTimer >= cutsceneDuration)
+				{
 					EndCutscene();
 				}
 			}
-		} 
-		
-		if(inFullscreenCutscene && !inDialogue){
-			HandleFullscreenCutscene();
-		} 
+		}
 
-		if(inBlackout && !inDialogue){
+		if (inFullscreenCutscene && !inDialogue)
+		{
+			HandleFullscreenCutscene();
+		}
+
+		if (inBlackout && !inDialogue)
+		{
 			HandleBlackout();
 		}
-    }
+	}
 
 	public void EndCutscene()
 	{
@@ -138,59 +163,72 @@ public class CutsceneManager : MonoBehaviour
 			EnableLookahead();
 		}
 	}
-	
-	void EvaluateTask(CutsceneTask task){
+
+	void EvaluateTask(CutsceneTask task)
+	{
 		// check that the actors for the task exist
-		if(actorsDict.ContainsKey(task.id)){
+		if (actorsDict.ContainsKey(task.id))
+		{
 			// trigger event for all actors with the id for the task
-			foreach(CutsceneActor actor in actorsDict[task.id]){
+			foreach (CutsceneActor actor in actorsDict[task.id])
+			{
 				// do any custom actions
-				foreach(CustomAction action in task.custom_actions){
+				foreach (CustomAction action in task.custom_actions)
+				{
 					MethodInfo method = actor.GetType().GetMethod(action.name);
 					// pass string parameters if exists, otherwise pass float parameters
-					if(action.string_parameters != null && action.string_parameters.Length > 0){
+					if (action.string_parameters != null && action.string_parameters.Length > 0)
+					{
 						object[] sParameters = new object[action.string_parameters.Length];
 						Array.Copy(action.string_parameters, sParameters, action.string_parameters.Length);
 						method.Invoke(actor, sParameters);
-					} else{
+					}
+					else
+					{
 						object[] oParameters = new object[action.parameters.Length];
 						Array.Copy(action.parameters, oParameters, action.parameters.Length);
 						method.Invoke(actor, oParameters);
 					}
 				}
-				
+
 				// do the animation
-				if(task.anim_name != ""){
+				if (task.anim_name != "")
+				{
 					actor.animate(task.anim_name);
 				}
 			}
 		}
-		
+
 		currentTaskIndex++;
-		if(currentTaskIndex < currentCutscene.tasks.Length){
+		if (currentTaskIndex < currentCutscene.tasks.Length)
+		{
 			currentTask = currentCutscene.tasks[currentTaskIndex];
 		}
 	}
-	
-	public void LoadCutscene(string cutsceneName){
+
+	public void LoadCutscene(string cutsceneName)
+	{
 		// load in json of cutscene into TextAsset
 		var operation = Addressables.LoadAssetAsync<TextAsset>(cutsceneAddressHeader + cutsceneName + ".json");
 		currentCutsceneTxt = operation.WaitForCompletion();
-		
+
 		// parse json into cutscene object
 		Cutscene cs = JsonConvert.DeserializeObject<Cutscene>(currentCutsceneTxt.text);
 		cs.active = false;
-		if(!cutsceneDict.ContainsKey(cs.id)){
+		if (!cutsceneDict.ContainsKey(cs.id))
+		{
 			cutsceneDict.Add(cs.id, cs);
 		}
 		lastCutsceneLoaded = cs.id;
-		
+
 		// done parsing json, release asset out of memory
 		Addressables.Release(operation);
 	}
-	
-	public void PlayCutscene(int cutsceneId){
-		if(cutsceneId == -1){
+
+	public void PlayCutscene(int cutsceneId)
+	{
+		if (cutsceneId == -1)
+		{
 			cutsceneId = lastCutsceneLoaded;
 		}
 		currentCutscene = cutsceneDict[cutsceneId];
@@ -199,7 +237,7 @@ public class CutsceneManager : MonoBehaviour
 		currentTaskIndex = 0;
 		currentTask = currentCutscene.tasks[0];
 		cutsceneDuration = currentCutscene.duration;
-		inCutscene = true; 
+		inCutscene = true;
 
 		playerLocked = currentCutscene.lock_player;
 		if (playerLocked)
@@ -210,10 +248,11 @@ public class CutsceneManager : MonoBehaviour
 			DisableLookahead();
 		}
 	}
-	
-	public void SwitchCameraAnchor(Transform anchor){
-		Debug.Log("Switching camera anchor to: " + anchor.name);
-		if(vcam != null){
+
+	public void SwitchCameraAnchor(Transform anchor)
+	{
+		if (vcam != null)
+		{
 			vcam.m_Follow = anchor;
 		}
 	}
@@ -238,7 +277,8 @@ public class CutsceneManager : MonoBehaviour
 		inDialogue = true;
 	}
 
-	public void ExitDialogue(){
+	public void ExitDialogue()
+	{
 		sceneManager.player.stateManager.ResetPlayerNoAnim();
 		sceneManager.player.inputManager.EnterCutscene();
 		sceneManager.player.LockPlayer();
@@ -246,7 +286,8 @@ public class CutsceneManager : MonoBehaviour
 		inDialogue = false;
 	}
 
-	public void StartFullscreenCutscene(float duration, float blackoutDuration, string animationName, string backgroundName){
+	public void StartFullscreenCutscene(float duration, float blackoutDuration, string animationName, string backgroundName)
+	{
 		inFullscreenCutscene = true;
 		fsCutsceneTimer = 0.0f;
 		fsCutsceneDuration = duration;
@@ -265,17 +306,20 @@ public class CutsceneManager : MonoBehaviour
 		fullscreenCutsceneBackgroundSprite.sprite = backgroundSprite;
 	}
 
-	void HandleFullscreenCutscene(){
+	void HandleFullscreenCutscene()
+	{
 		fullscreenAnimator.transform.position = new Vector3(sceneManager.mainCameraObj.transform.position.x, sceneManager.mainCameraObj.transform.position.y, sceneManager.mainCameraObj.transform.position.z + 16.0f);
 
 		fsCutsceneTimer += Time.deltaTime;
 
-		if(fullscreenCutsceneEntering){
+		if (fullscreenCutsceneEntering)
+		{
 			float a = fsCutsceneTimer / fullscreenCutsceneBlackoutTime;
 			fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, Mathf.Clamp(a, 0.0f, 1.0f));
 			fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, Mathf.Clamp(a, 0.0f, 1.0f));
 			fullscreenCutsceneBackgroundSprite.color = new Color(1.0f, 1.0f, 1.0f, Mathf.Clamp(a, 0.0f, 1.0f));
-			if(fsCutsceneTimer >= fullscreenCutsceneBlackoutTime){
+			if (fsCutsceneTimer >= fullscreenCutsceneBlackoutTime)
+			{
 				fsCutsceneTimer = 0.0f;
 				fullscreenCutsceneEntering = false;
 				fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
@@ -284,12 +328,15 @@ public class CutsceneManager : MonoBehaviour
 				inFullscreenCutscene = true;
 				fullscreenAnimator.speed = 1.0f;
 			}
-		} else if(fullscreenCutsceneExiting){
+		}
+		else if (fullscreenCutsceneExiting)
+		{
 			float a = fsCutsceneTimer / fullscreenCutsceneBlackoutTime;
 			fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, Mathf.Clamp(1.0f - a, 0.0f, 1.0f));
 			fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, Mathf.Clamp(1.0f - a, 0.0f, 1.0f));
 			fullscreenCutsceneBackgroundSprite.color = new Color(1.0f, 1.0f, 1.0f, Mathf.Clamp(1.0f - a, 0.0f, 1.0f));
-			if(fsCutsceneTimer >= fullscreenCutsceneBlackoutTime){
+			if (fsCutsceneTimer >= fullscreenCutsceneBlackoutTime)
+			{
 				fullscreenCutsceneExiting = false;
 				fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
 				fullscreenCutsceneSprite.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
@@ -297,8 +344,11 @@ public class CutsceneManager : MonoBehaviour
 				fullscreenAnimator.gameObject.SetActive(false);
 				inFullscreenCutscene = false;
 			}
-		} else{
-			if(fsCutsceneTimer >= fsCutsceneDuration){
+		}
+		else
+		{
+			if (fsCutsceneTimer >= fsCutsceneDuration)
+			{
 				fullscreenCutsceneExiting = true;
 				fsCutsceneTimer = 0.0f;
 				fullscreenAnimator.speed = 0.0f;
@@ -306,21 +356,25 @@ public class CutsceneManager : MonoBehaviour
 		}
 	}
 
-	public void AddActor(CutsceneActor actor){
-		if(!actorsDict.ContainsKey(actor.id)){
+	public void AddActor(CutsceneActor actor)
+	{
+		if (!actorsDict.ContainsKey(actor.id))
+		{
 			actorsDict.Add(actor.id, new List<CutsceneActor>());
 		}
 		actorsDict[actor.id].Add(actor);
 
 		// deactivate actor's gameobject if designated as deactivated
-		if(actor.deactivatedOnStart){
+		if (actor.deactivatedOnStart)
+		{
 			actor.gameObject.SetActive(false);
 		}
-		
+
 		actor.cutsceneManager = this;
 	}
 
-	public void StartBlackout(float transitionDuration, float exitDuration, float duration){
+	public void StartBlackout(float transitionDuration, float exitDuration, float duration)
+	{
 		inBlackout = true;
 		blackoutEntering = true;
 		blackoutDuration = duration;
@@ -343,38 +397,57 @@ public class CutsceneManager : MonoBehaviour
 		}
 	}
 
-	void HandleBlackout(){
+	void HandleBlackout()
+	{
 		blackoutTimer += Time.deltaTime;
 
-		if(blackoutEntering){
-			if(!bypassBlackoutEnter)
+		if (blackoutEntering)
+		{
+			if (!bypassBlackoutEnter)
 			{
 				float a = blackoutTimer / blackoutTime;
 				fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, Mathf.Clamp(a, 0.0f, 1.0f));
 			}
-			if(blackoutTimer >= blackoutTime){
+			if (blackoutTimer >= blackoutTime)
+			{
 				blackoutTimer = 0.0f;
 				blackoutEntering = false;
 				blackoutTime = blackoutExitTime;
 				fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
 			}
-		} else if (blackoutExiting){
+		}
+		else if (blackoutExiting)
+		{
 			float a = blackoutTimer / blackoutTime;
 			fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, Mathf.Clamp(1.0f - a, 0.0f, 1.0f));
-			if(blackoutTimer >= blackoutTime){
+			if (blackoutTimer >= blackoutTime)
+			{
 				blackoutExiting = false;
 				fullscreenCutsceneBlackoutSprite.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
 				inBlackout = false;
 			}
-		} else{
-			if(blackoutTimer >= blackoutDuration){
+		}
+		else
+		{
+			if (blackoutTimer >= blackoutDuration)
+			{
 				blackoutExiting = true;
 				blackoutTimer = 0.0f;
 			}
 		}
 	}
 
-	public void SetFill(string fillId, bool active){
+	public void SetFill(string fillId, bool active)
+	{
 		sceneManager.fillManager.SetFill(fillId, active);
+	}
+
+	public void SwitchSceneInCutscene(int sceneIndex, string cutsceneName)
+	{
+		GameObject carryoverObj = Instantiate(carryoverPrefab);
+		CutsceneCarryover carryover = carryoverObj.GetComponent<CutsceneCarryover>();
+		carryover.cutsceneName = cutsceneName;
+		DontDestroyOnLoad(carryoverObj);
+		SessionManager.Instance.TransitionScene(sceneIndex, -1, -5);
 	}
 }

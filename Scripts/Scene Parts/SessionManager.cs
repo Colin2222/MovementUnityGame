@@ -215,13 +215,16 @@ public class SessionManager : MonoBehaviour
 
 			// trigger overlay and player animations
 			this.currentWalkEntraceDirection = directionNumber;
-			if (directionNumber == 1)
+			if (directionNumber != -5)
 			{
-				sceneManager.transitionManager.TransitionRight();
-			}
-			else
-			{
-				sceneManager.transitionManager.TransitionLeft();
+				if (directionNumber == 1)
+				{
+					sceneManager.transitionManager.TransitionRight();
+				}
+				else
+				{
+					sceneManager.transitionManager.TransitionLeft();
+				}
 			}
 
 			// trigger audio fade out

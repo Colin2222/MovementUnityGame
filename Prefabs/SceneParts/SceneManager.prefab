@@ -850,6 +850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vcam: {fileID: 0}
+  carryoverPrefab: {fileID: 4450828886844047884, guid: fd75d247673088443b979cb6f62f7eb3, type: 3}
   sceneManager: {fileID: 4845049507479276210}
   interactable: {fileID: 4578447521069905888}
   fullscreenAnimator: {fileID: 1706894016368583037}

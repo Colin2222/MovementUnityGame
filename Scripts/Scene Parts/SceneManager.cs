@@ -235,8 +235,6 @@ public class SceneManager : MonoBehaviour
 		sessionManager.SetRoomItems();
 		sessionManager.SetPlayerInventory(player.inventoryHandler.inventory.SaveInventory());
 		//sessionManager.SaveData();
-
-		Debug.Log("SWITCHING SCENES");
 		
         yield return new WaitForSeconds(transitionTime);
 

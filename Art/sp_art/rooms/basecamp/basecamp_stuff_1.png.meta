@@ -230,6 +230,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: basecamp_stuff_bluestone_pile
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 267
+        width: 66
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab812179124c524fb051f9a85b402a8
+      internalID: -1516269060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -242,6 +263,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       campfire_1: 378677304
+      basecamp_stuff_bluestone_pile: -1516269060
       blacksmith_loose_bag: 1466758452
       campfire_3: -950048165
       basecamp_cot: -1902227354
