@@ -1,7 +1,7 @@
 {
 	"id":4,
 	"lock_player":true,
-	"duration":16.5,
+	"duration":20.0,
 	"tasks":[
 		{
 			"id":-1,
@@ -62,6 +62,23 @@
 			]
 		},
 		{
+			"id":101,
+			"trigger_time":5.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetCameraAnchorPoint",
+					"parameters":[]
+				},
+				{
+					"name":"SetCameraZoom",
+					"parameters":[
+						11.0
+					]
+				}
+			]
+		},
+		{
 			"id":-1,
 			"trigger_time":7.0,
 			"anim_name":"",
@@ -114,6 +131,23 @@
 		},
 		{
 			"id":0,
+			"trigger_time":10.6,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetCameraAnchorPoint",
+					"parameters":[]
+				},
+				{
+					"name":"SetCameraZoom",
+					"parameters":[
+						10.0
+					]
+				}
+			]
+		},
+		{
+			"id":0,
 			"trigger_time":11.0,
 			"anim_name":"PlayerNodding",
 			"custom_actions":[]
@@ -126,14 +160,27 @@
 				{
 					"name":"StartBlackout",
 					"parameters":[
-						1.0, 1.0, 1.0
+						1.0, 1.0, 3.0
+					]
+				}
+			]
+		},
+		{
+			"id":0,
+			"trigger_time":13.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetCameraZoom",
+					"parameters":[
+						16.0
 					]
 				}
 			]
 		},
 		{
 			"id":-1,
-			"trigger_time":13.25,
+			"trigger_time":15.25,
 			"anim_name":"",
 			"custom_actions":[
 				{
@@ -146,7 +193,7 @@
 		},
 		{
 			"id":-1,
-			"trigger_time":13.25,
+			"trigger_time":15.25,
 			"anim_name":"",
 			"custom_actions":[
 				{
@@ -159,7 +206,7 @@
 		},
 		{
 			"id":-1,
-			"trigger_time":13.25,
+			"trigger_time":15.25,
 			"anim_name":"",
 			"custom_actions":[
 				{
@@ -172,7 +219,7 @@
 		},
 		{
 			"id":-1,
-			"trigger_time":13.25,
+			"trigger_time":15.25,
 			"anim_name":"",
 			"custom_actions":[
 				{
@@ -184,14 +231,48 @@
 			]
 		},
 		{
+			"id":101,
+			"trigger_time":17.5,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetCameraAnchorPoint",
+					"parameters":[]
+				},
+				{
+					"name":"SetCameraZoom",
+					"parameters":[
+						10.0
+					]
+				}
+			]
+		},
+		{
 			"id":-1,
-			"trigger_time":16.0,
+			"trigger_time":18.0,
 			"anim_name":"",
 			"custom_actions":[
 				{
 					"name":"StartDialogue",
 					"string_parameters":[
 						"firstmeeting_5"
+					]
+				}
+			]
+		},
+		{
+			"id":0,
+			"trigger_time":19.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetCameraAnchorPoint",
+					"parameters":[]
+				},
+				{
+					"name":"SetCameraZoom",
+					"parameters":[
+						16.0
 					]
 				}
 			]

@@ -1,7 +1,7 @@
 {
 	"id":7,
 	"lock_player":true,
-	"duration":7.0,
+	"duration":9.0,
 	"tasks":[
 		{
 			"id":-1,
@@ -36,6 +36,40 @@
 			]
 		},
 		{
+			"id":0,
+			"trigger_time":0.25,
+			"anim_name":"PlayerIdleStill",
+			"custom_actions":[
+				{
+					"name":"SetCoordinates",
+					"parameters":[
+						-117.0, 6.3
+					]
+				},
+				{
+					"name":"FaceLeft",
+					"parameters":[]
+				}
+			]
+		},
+		{
+			"id":101,
+			"trigger_time":3.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetCameraAnchorPoint",
+					"parameters":[]
+				},
+				{
+					"name":"SetCameraZoom",
+					"parameters":[
+						10.0
+					]
+				}
+			]
+		},
+		{
 			"id":-1,
 			"trigger_time":5.0,
 			"anim_name":"",
@@ -49,14 +83,62 @@
 			]
 		},
 		{
+			"id":101,
+			"trigger_time":5.3,
+			"anim_name":"blacksmith_turningaround",
+			"custom_actions":[]
+		},
+		{
+			"id":101,
+			"trigger_time":6.8,
+			"anim_name":"blacksmith_idle",
+			"custom_actions":[
+				{
+					"name":"SetNPCDirection",
+					"string_parameters":[
+						"blacksmith", "1", "basecamp"
+					]
+				}
+			]
+		},
+		{
+			"id":101,
+			"trigger_time":6.9,
+			"anim_name":"blacksmith_gesture_1a",
+			"custom_actions":[]
+		},
+		{
 			"id":-1,
-			"trigger_time":6.0,
+			"trigger_time":7.0,
 			"anim_name":"",
 			"custom_actions":[
 				{
 					"name":"StartDialogue",
 					"string_parameters":[
 						"waterwheelbuilt_2"
+					]
+				}
+			]
+		},
+		{
+			"id":101,
+			"trigger_time":7.25,
+			"anim_name":"blacksmith_gesture_1b",
+			"custom_actions":[]
+		},
+		{
+			"id":0,
+			"trigger_time":8.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetCameraAnchorPoint",
+					"parameters":[]
+				},
+				{
+					"name":"SetCameraZoom",
+					"parameters":[
+						16.0
 					]
 				}
 			]
