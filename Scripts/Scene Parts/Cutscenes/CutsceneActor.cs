@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class CutsceneActor : MonoBehaviour
 {
@@ -159,6 +160,12 @@ public class CutsceneActor : MonoBehaviour
 	public void SetCameraAnchorPoint()
 	{
 		cutsceneManager.SwitchCameraAnchor(gameObject.transform);
+	}
+
+	public void SetCameraZoom(float zoom)
+	{
+		Debug.Log("PREVIOUS ZOOM: " + SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance);
+		SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = zoom;
 	}
 
 	// only available for one-per-scene DialogueMananger, cutscene actor -1

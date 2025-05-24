@@ -42,7 +42,7 @@
             "inventories": null,
             "additional_data": {
               "num_logs": "4",
-              "cut_down": "False"
+              "cut_down": "True"
             }
           }
         },
@@ -54,33 +54,12 @@
             "inventories": null,
             "additional_data": {
               "num_logs": "3",
-              "cut_down": "False"
+              "cut_down": "True"
             }
           }
         }
       ],
-      "world_items": [
-        {
-          "item_id": "iron_rod",
-          "x_pos": -133.8046,
-          "y_pos": 5.76498365
-        },
-        {
-          "item_id": "iron_rod",
-          "x_pos": -132.809845,
-          "y_pos": 5.764984
-        },
-        {
-          "item_id": "iron_rod",
-          "x_pos": -131.815186,
-          "y_pos": 5.764985
-        },
-        {
-          "item_id": "explosive_charge",
-          "x_pos": -130.820374,
-          "y_pos": 5.764986
-        }
-      ],
+      "world_items": [],
       "npcs": [
         {
           "name": "blacksmith",
@@ -98,6 +77,10 @@
         },
         "cot_left": {
           "id": "cot_left",
+          "active": true
+        },
+        "bluestone_pile": {
+          "id": "bluestone_pile",
           "active": true
         },
         "tarp": {
@@ -236,26 +219,21 @@
           "item_id": "wood_log",
           "x_pos": -89.5,
           "y_pos": 4.0150466
-        },
-        {
-          "item_id": "iron_rod",
-          "x_pos": -76.701355,
-          "y_pos": 17.2649956
         }
       ],
       "npcs": [],
       "fills": {
-        "bluestone_tied": {
-          "id": "bluestone_tied",
-          "active": false
-        },
-        "bluestone_untied": {
-          "id": "bluestone_tied",
-          "active": false
-        },
         "bluestone_slab": {
           "id": "bluestone_slab",
           "active": true
+        },
+        "bluestone_untied": {
+          "id": "bluestone_untied",
+          "active": false
+        },
+        "bluestone_tied": {
+          "id": "bluestone_tied",
+          "active": false
         }
       }
     },
@@ -343,7 +321,7 @@
             "inventories": null,
             "additional_data": null
           }
-        },
+        }
       ],
       "world_items": [],
       "npcs": [],
@@ -438,15 +416,15 @@
     "contents": [
       {
         "item_name": "wood_log",
-        "quantity": 4
+        "quantity": 11
       },
       {
         "item_name": "iron_rod",
-        "quantity": 13
+        "quantity": 17
       },
       {
         "item_name": "explosive_charge",
-        "quantity": 4
+        "quantity": 5
       },
       null,
       null,
