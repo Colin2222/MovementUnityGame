@@ -251,6 +251,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: bluestone_smeltery
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 194
+        width: 50
+        height: 58
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d33291680353c45b9e3f830f764cc8
+      internalID: -2035449644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluestone_smelter_half
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 194
+        width: 52
+        height: 60
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3872bbd7f5d067041ac6bceff9b73035
+      internalID: -261438342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -264,10 +306,12 @@ TextureImporter:
     nameFileIdTable:
       campfire_1: 378677304
       basecamp_stuff_bluestone_pile: -1516269060
+      bluestone_smelter_half: -261438342
       blacksmith_loose_bag: 1466758452
       campfire_3: -950048165
       basecamp_cot: -1902227354
       basecamp_tarp1: -892219629
+      bluestone_smeltery: -2035449644
       campfire_2: 574900613
   spritePackingTag: 
   pSDRemoveMatte: 0

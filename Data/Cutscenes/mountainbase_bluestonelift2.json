@@ -18,6 +18,19 @@
 		},
 		{
 			"id":-1,
+			"trigger_time":0.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetProgressMarker",
+					"string_parameters":[
+						"basecamp_bluestonelift_viewed", "true"
+					]
+				}
+			]
+		},
+		{
+			"id":-1,
 			"trigger_time":0.5,
 			"anim_name":"",
 			"custom_actions":[

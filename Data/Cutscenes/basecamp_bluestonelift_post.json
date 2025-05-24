@@ -1,0 +1,44 @@
+{
+	"id":23,
+	"lock_player":false,
+	"duration":1.0,
+	"tasks":[
+		{
+			"id":-1,
+			"trigger_time":0.0,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetProgressMarker",
+					"string_parameters":[
+						"basecamp_bluestonelift_post_viewed", "true"
+					]
+				},
+				{
+					"name":"SetFillIsActive",
+					"string_parameters":[
+						"bluestone_pile", "false", "basecamp"
+					]
+				},
+				{
+					"name":"SetFillIsActive",
+					"string_parameters":[
+						"bluestone_smeltery_half", "true", "basecamp"
+					]
+				},
+				{
+					"name":"SetNPCPosition",
+					"string_parameters":[
+						"blacksmith", "-124.5", "6.5", "basecamp"
+					]
+				},
+				{
+					"name":"SetNPCDefaultAnimationDistant",
+					"string_parameters":[
+						"blacksmith", "blacksmith_nailing_loop", "basecamp"
+					]
+				}
+			]
+		}
+	]
+}

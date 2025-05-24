@@ -15,23 +15,28 @@
     "basecamp_second_meeting_viewed": true,
     "basecamp_second_meeting_post_viewed": true,
     "basecamp_waterwheel_built_viewed": true,
-    "mountainbase_anchordemo_viewed": false
+    "mountainbase_anchordemo_viewed": true,
+    "basecamp_bluestonelift_viewed": true,
+    "basecamp_bluestonelift_post_viewed": false
   },
   "integer_markers": {
-    "cable_car_location": 0,
-    "cable_car_progress": 100000,
+    "cable_car_location": 100000,
+    "cable_car_progress": 100002,
     "time_marker": 0
   },
   "rooms": {
     "basecamp": {
       "site_slots": [
         {
-          "id": 100000,
+          "id": 102,
           "display_name": null,
           "site": {
-            "name": "cablecar",
+            "name": "tree",
             "inventories": null,
-            "additional_data": null
+            "additional_data": {
+              "num_logs": "3",
+              "cut_down": "True"
+            }
           }
         },
         {
@@ -47,15 +52,12 @@
           }
         },
         {
-          "id": 102,
+          "id": 100000,
           "display_name": null,
           "site": {
-            "name": "tree",
+            "name": "cablecar",
             "inventories": null,
-            "additional_data": {
-              "num_logs": "3",
-              "cut_down": "True"
-            }
+            "additional_data": null
           }
         }
       ],
@@ -63,7 +65,7 @@
       "npcs": [
         {
           "name": "blacksmith",
-          "x_pos": -120.4173,
+          "x_pos": -121.0,
           "y_pos": 6.264993,
           "direction": 1,
           "default_animation": "blacksmith_idle",
@@ -81,7 +83,7 @@
         },
         "bluestone_pile": {
           "id": "bluestone_pile",
-          "active": false
+          "active": true
         },
         "tarp": {
           "id": "tarp",
@@ -98,6 +100,10 @@
         "cot_right": {
           "id": "cot_right",
           "active": true
+        },
+        "bluestone_smeltery_half": {
+          "id": "bluestone_smeltery_half",
+          "active": false
         }
       }
     },
@@ -141,56 +147,18 @@
           "id": 100001,
           "display_name": null,
           "site": {
-            "name": "construction",
-            "inventories": [
-              {
-                "width": 1,
-                "height": 2,
-                "contents": [
-                  {
-                    "item_name": "wood_log",
-                    "quantity": 2
-                  },
-                  {
-                    "item_name": "iron_rod",
-                    "quantity": 1
-                  }
-                ]
-              }
-            ],
-            "additional_data": {
-              "site_construction": "cablecar",
-              "construction_active": "true",
-              "post_cutscene": "mountainbase_bluestonelift"
-            }
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": null
           }
         },
         {
           "id": 100002,
           "display_name": null,
           "site": {
-            "name": "construction",
-            "inventories": [
-              {
-                "width": 1,
-                "height": 2,
-                "contents": [
-                  {
-                    "item_name": "wood_log",
-                    "quantity": 2
-                  },
-                  {
-                    "item_name": "iron_rod",
-                    "quantity": 1
-                  }
-                ]
-              }
-            ],
-            "additional_data": {
-              "site_construction": "cablecar",
-              "construction_active": "true",
-              "post_cutscene": "mountainbase_bluestonelift"
-            }
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": null
           }
         },
         {
@@ -204,7 +172,7 @@
       "fills": {
         "bluestone_slab": {
           "id": "bluestone_slab",
-          "active": true
+          "active": false
         },
         "bluestone_untied": {
           "id": "bluestone_untied",
@@ -467,7 +435,7 @@
     "contents": [
       {
         "item_name": "wood_log",
-        "quantity": 17
+        "quantity": 15
       },
       {
         "item_name": "iron_rod",

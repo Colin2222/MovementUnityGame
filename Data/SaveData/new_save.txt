@@ -15,7 +15,9 @@
     "basecamp_second_meeting_viewed": false,
     "basecamp_second_meeting_post_viewed": false,
     "basecamp_waterwheel_built_viewed": false,
-    "mountainbase_anchordemo_viewed": false
+    "mountainbase_anchordemo_viewed": false,
+    "basecamp_bluestonelift_viewed": false,
+    "basecamp_bluestonelift_post_viewed": false
   },
   "integer_markers": {
     "cable_car_location": 0,
@@ -107,6 +109,10 @@
         },
         "cot_right": {
           "id": "cot_right",
+          "active": false
+        },
+        "bluestone_smeltery_half": {
+          "id": "bluestone_smeltery_half",
           "active": false
         }
       }
