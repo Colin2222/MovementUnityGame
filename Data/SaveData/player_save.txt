@@ -191,7 +191,31 @@
       "fills": {}
     },
     "mountainbase_mid1": {
-      "site_slots": [],
+      "site_slots": [
+        {
+          "id": 201,
+          "display_name": null,
+          "site": {
+            "name": "demowall",
+            "inventories": [
+              {
+                "width": 1,
+                "height": 1,
+                "contents": [
+                  {
+                    "item_name": "explosive_charge",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ],
+            "additional_data": {
+              "demo_active": "True",
+              "demolished": "True"
+            }
+          }
+        }
+      ],
       "world_items": [],
       "npcs": [],
       "fills": {}
@@ -407,7 +431,7 @@
       },
       {
         "item_name": "explosive_charge",
-        "quantity": 6
+        "quantity": 5
       },
       null,
       null,

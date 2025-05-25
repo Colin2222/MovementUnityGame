@@ -73,3 +73,6 @@ MonoBehaviour:
   - id: tree
     prefab: {fileID: 1538271612515064995, guid: ab75a8d6721e3c546b87cbe1e883c19a, type: 3}
     requirements: []
+  - id: demowall
+    prefab: {fileID: 1878975290307980102, guid: 2582dfc73b7a72344817a1debd44d1dd, type: 3}
+    requirements: []
