@@ -32,7 +32,7 @@
           "nodes":[
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "The Golden City is 1600 miles due west.",
+              "text": "The Golden City is 200 miles due west.",
               "speaker": "Guidestone"
             }
           ]

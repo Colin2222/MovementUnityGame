@@ -12592,17 +12592,9 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2081719886343221988, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -300
-      objectReference: {fileID: 0}
     - target: {fileID: 2081719886343221989, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2081719887609948812, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -240
       objectReference: {fileID: 0}
     - target: {fileID: 2081719887609948813, guid: 4fb8824ca75578243a9a25ff9fb79dd6, type: 3}
       propertyPath: m_IsActive

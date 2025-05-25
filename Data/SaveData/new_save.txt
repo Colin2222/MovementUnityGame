@@ -310,7 +310,7 @@
             ],
             "additional_data": {
               "site_construction": "cablecar",
-              "construction_active": "true"
+              "construction_active": "false"
             }
           }
         },

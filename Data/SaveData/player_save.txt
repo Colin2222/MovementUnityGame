@@ -17,11 +17,11 @@
     "basecamp_waterwheel_built_viewed": true,
     "mountainbase_anchordemo_viewed": true,
     "basecamp_bluestonelift_viewed": true,
-    "basecamp_bluestonelift_post_viewed": false
+    "basecamp_bluestonelift_post_viewed": true
   },
   "integer_markers": {
-    "cable_car_location": 100000,
-    "cable_car_progress": 100002,
+    "cable_car_location": 100002,
+    "cable_car_progress": 100004,
     "time_marker": 0
   },
   "rooms": {
@@ -65,10 +65,10 @@
       "npcs": [
         {
           "name": "blacksmith",
-          "x_pos": -121.0,
-          "y_pos": 6.264993,
+          "x_pos": -124.5,
+          "y_pos": 6.26499,
           "direction": 1,
-          "default_animation": "blacksmith_idle",
+          "default_animation": "blacksmith_nailing_loop",
           "inventories": null
         }
       ],
@@ -77,13 +77,17 @@
           "id": "waterwheel",
           "active": true
         },
+        "bluestone_smeltery_half": {
+          "id": "bluestone_smeltery_half",
+          "active": true
+        },
         "cot_left": {
           "id": "cot_left",
           "active": true
         },
         "bluestone_pile": {
           "id": "bluestone_pile",
-          "active": true
+          "active": false
         },
         "tarp": {
           "id": "tarp",
@@ -100,10 +104,6 @@
         "cot_right": {
           "id": "cot_right",
           "active": true
-        },
-        "bluestone_smeltery_half": {
-          "id": "bluestone_smeltery_half",
-          "active": false
         }
       }
     },
@@ -214,27 +214,9 @@
           "id": 100003,
           "display_name": null,
           "site": {
-            "name": "construction",
-            "inventories": [
-              {
-                "width": 1,
-                "height": 2,
-                "contents": [
-                  {
-                    "item_name": "wood_log",
-                    "quantity": 2
-                  },
-                  {
-                    "item_name": "iron_rod",
-                    "quantity": 1
-                  }
-                ]
-              }
-            ],
-            "additional_data": {
-              "site_construction": "cablecar",
-              "construction_active": "False"
-            }
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": null
           }
         }
       ],
@@ -248,27 +230,9 @@
           "id": 100004,
           "display_name": null,
           "site": {
-            "name": "construction",
-            "inventories": [
-              {
-                "width": 1,
-                "height": 2,
-                "contents": [
-                  {
-                    "item_name": "wood_log",
-                    "quantity": 2
-                  },
-                  {
-                    "item_name": "iron_rod",
-                    "quantity": 1
-                  }
-                ]
-              }
-            ],
-            "additional_data": {
-              "site_construction": "cablecar",
-              "construction_active": "True"
-            }
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": null
           }
         }
       ],
@@ -435,7 +399,7 @@
     "contents": [
       {
         "item_name": "wood_log",
-        "quantity": 15
+        "quantity": 13
       },
       {
         "item_name": "iron_rod",

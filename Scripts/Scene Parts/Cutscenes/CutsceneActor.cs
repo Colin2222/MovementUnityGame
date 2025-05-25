@@ -164,8 +164,22 @@ public class CutsceneActor : MonoBehaviour
 
 	public void SetCameraZoom(float zoom)
 	{
-		Debug.Log("PREVIOUS ZOOM: " + SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance);
 		SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = zoom;
+	}
+
+	public void SetCameraDampingX(float damping)
+	{
+		SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_XDamping = damping;
+	}
+
+	public void SetCameraDampingY(float damping)
+	{
+		SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_YDamping = damping;
+	}
+
+	public void SetCameraDampingZ(float damping)
+	{
+		SceneManager.Instance.vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_ZDamping = damping;
 	}
 
 	// only available for one-per-scene DialogueMananger, cutscene actor -1

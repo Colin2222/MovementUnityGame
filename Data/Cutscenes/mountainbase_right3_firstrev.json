@@ -26,6 +26,18 @@
 					"parameters":[
 						2.0, -70.75
 					]
+				},
+				{
+					"name":"SetCameraZoom",
+					"parameters":[
+						12.0
+					]
+				},
+				{
+					"name":"SetCameraDampingZ",
+					"parameters":[
+						8.5
+					]
 				}
 			]
 		},
@@ -225,6 +237,37 @@
 					]
 				}
 			]
+		},
+		{
+			"id":-1,
+			"trigger_time":45.5,
+			"anim_name":"",
+			"custom_actions":[
+				{
+					"name":"SetCameraZoom",
+					"parameters":[
+						16.0
+					]
+				},
+				{
+					"name":"SetCameraDampingX",
+					"parameters":[
+						1.67
+					]
+				},
+				{
+					"name":"SetCameraDampingZ",
+					"parameters":[
+						1.0
+					]
+				}
+			]
+		},
+		{
+			"id":0,
+			"trigger_time":46.5,
+			"anim_name":"PlayerIdle",
+			"custom_actions":[]
 		}
 	]
 }

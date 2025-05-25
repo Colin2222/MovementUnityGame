@@ -32,6 +32,18 @@
 					"string_parameters":[
 						"100002", "construction_active", "true", "mountainbase_rightedge1"
 					]
+				},
+				{
+					"name":"SetSiteAdditionalData",
+					"string_parameters":[
+						"100003", "construction_active", "true", "mountainbase_right2"
+					]
+				},
+				{
+					"name":"SetSiteAdditionalData",
+					"string_parameters":[
+						"100004", "construction_active", "true", "mountainbase_right3"
+					]
 				}
 			]
 		},

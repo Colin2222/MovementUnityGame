@@ -75,6 +75,18 @@
 					"parameters":[
 						11.0
 					]
+				},
+				{
+					"name":"SetCameraDampingX",
+					"parameters":[
+						9.5
+					]
+				},
+				{
+					"name":"SetCameraDampingZ",
+					"parameters":[
+						8.5
+					]
 				}
 			]
 		},
@@ -142,6 +154,18 @@
 					"name":"SetCameraZoom",
 					"parameters":[
 						10.0
+					]
+				},
+				{
+					"name":"SetCameraDampingX",
+					"parameters":[
+						1.67
+					]
+				},
+				{
+					"name":"SetCameraDampingZ",
+					"parameters":[
+						1.0
 					]
 				}
 			]
@@ -244,6 +268,18 @@
 					"parameters":[
 						10.0
 					]
+				},
+				{
+					"name":"SetCameraDampingX",
+					"parameters":[
+						9.5
+					]
+				},
+				{
+					"name":"SetCameraDampingZ",
+					"parameters":[
+						8.5
+					]
 				}
 			]
 		},
@@ -273,6 +309,18 @@
 					"name":"SetCameraZoom",
 					"parameters":[
 						16.0
+					]
+				},
+				{
+					"name":"SetCameraDampingX",
+					"parameters":[
+						1.67
+					]
+				},
+				{
+					"name":"SetCameraDampingZ",
+					"parameters":[
+						1.0
 					]
 				}
 			]
