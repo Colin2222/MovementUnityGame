@@ -230,6 +230,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: mountainbase_right3_1_1
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 905
+        width: 101
+        height: 88
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3fbb23e3d7c4f48a07fc6ff4260b5d
+      internalID: -1387991396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -2084,11 +2084,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 23fbaec3bf622314c9b65beb06479564, type: 3}
     - target: {fileID: 4845049506762891137, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -86.8
+      value: -109.74
       objectReference: {fileID: 0}
     - target: {fileID: 4845049506762891137, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.7
+      value: 26.8
       objectReference: {fileID: 0}
     - target: {fileID: 4845049507479276209, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: m_Name
@@ -3122,6 +3122,90 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &897648213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 897648215}
+  - component: {fileID: 897648214}
+  m_Layer: 0
+  m_Name: mountainbase_right1_1_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &897648214
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897648213}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1812058587
+  m_SortingLayer: 1
+  m_SortingOrder: -5
+  m_Sprite: {fileID: -503365605, guid: 6dd03e4dc892c704b8bfc8be22b72aec, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 11.4375, y: 11.125}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &897648215
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897648213}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -121.875, y: 21.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 51
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &901486425
 GameObject:
   m_ObjectHideFlags: 0
@@ -3334,11 +3418,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -81.79314
+      value: -80.953316
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.95648
+      value: 25.85685
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4671,31 +4755,28 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1579521628}
     m_ColliderPaths:
-    - - X: 254279328
-        Y: 176635712
-      - X: 87901080
-        Y: 139012992
+    - - X: 20805740
+        Y: 113865776
       - X: -54622420
         Y: 96113512
-      - X: -79978256
-        Y: 16668777
+      - X: -54508744
+        Y: -45347956
       - X: 42824632
         Y: -156519024
       - X: 179705024
         Y: -254507696
       - X: 417868256
         Y: -255284512
-      - X: 413356320
-        Y: 8210830
+      - X: 422699744
+        Y: 57597408
   m_CompositePaths:
     m_Paths:
     - - {x: 41.786797, y: -25.528452}
-      - {x: 41.335625, y: 0.8210903}
-      - {x: 25.42792, y: 17.663568}
-      - {x: 8.790109, y: 13.901299}
-      - {x: -5.4622464, y: 9.611338}
-      - {x: -7.9978175, y: 1.6668669}
-      - {x: 4.2824664, y: -15.651904}
+      - {x: 42.26995, y: 5.7597446}
+      - {x: 2.0805695, y: 11.386577}
+      - {x: -5.462242, y: 9.611329}
+      - {x: -5.450868, y: -4.534803}
+      - {x: 4.2824655, y: -15.651904}
       - {x: 17.97051, y: -25.45077}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
@@ -5878,14 +5959,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 25.427933, y: 17.66357}
-      - {x: 8.790108, y: 13.9012985}
+    - - {x: 2.080574, y: 11.386578}
       - {x: -5.462242, y: 9.611351}
-      - {x: -7.9978256, y: 1.6668777}
+      - {x: -5.4508743, y: -4.5347958}
       - {x: 4.282463, y: -15.651902}
       - {x: 17.970503, y: -25.45077}
       - {x: 41.786827, y: -25.528452}
-      - {x: 41.335632, y: 0.82108307}
+      - {x: 42.269974, y: 5.759741}
 --- !u!61 &1579521629
 BoxCollider2D:
   m_ObjectHideFlags: 0

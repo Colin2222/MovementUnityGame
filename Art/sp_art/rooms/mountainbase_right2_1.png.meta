@@ -110,7 +110,7 @@ TextureImporter:
         serializedVersion: 2
         x: 108
         y: 1055
-        width: 344
+        width: 395
         height: 926
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -173,7 +173,7 @@ TextureImporter:
         serializedVersion: 2
         x: 128
         y: 64
-        width: 433
+        width: 457
         height: 899
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -184,6 +184,48 @@ TextureImporter:
       bones: []
       spriteID: 85d24c9d5d2809d4f838fdb197b67abd
       internalID: -1979934601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainbase_right2_1_4
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 435
+        width: 80
+        height: 77
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68764fe5531943f4597a5eb5c46a8346
+      internalID: -2018653970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainbase_right2_1_5
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 238
+        width: 148
+        height: 404
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1968bd65bcdf9294d9ad4839184e065c
+      internalID: 1281857190
       vertices: []
       indices: 
       edges: []
@@ -200,6 +242,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       mountainbase_right2_1_1: -712845894
+      mountainbase_right2_1_4: -2018653970
+      mountainbase_right2_1_5: 1281857190
       mountainbase_right2_1_0: 1023129233
       mountainbase_right2_1_3: -1979934601
       mountainbase_right2_1_2: -76301659

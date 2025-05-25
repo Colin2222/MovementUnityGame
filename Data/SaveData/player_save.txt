@@ -202,16 +202,13 @@
                 "width": 1,
                 "height": 1,
                 "contents": [
-                  {
-                    "item_name": "explosive_charge",
-                    "quantity": 1
-                  }
+                  null
                 ]
               }
             ],
             "additional_data": {
               "demo_active": "True",
-              "demolished": "True"
+              "demolished": "False"
             }
           }
         }
@@ -431,7 +428,7 @@
       },
       {
         "item_name": "explosive_charge",
-        "quantity": 5
+        "quantity": 6
       },
       null,
       null,
