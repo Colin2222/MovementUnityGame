@@ -167,6 +167,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: buttonicon_leftbumper
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 16
+        width: 22
+        height: 13
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2789461c02b35a3408e67295c414115b
+      internalID: 503208886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -180,6 +201,7 @@ TextureImporter:
     nameFileIdTable:
       arrow: 1936129590
       buttonicon_rightbumper: -800993410
+      buttonicon_leftbumper: 503208886
       buttonicon_leftstick: 1876555594
   spritePackingTag: 
   pSDRemoveMatte: 0

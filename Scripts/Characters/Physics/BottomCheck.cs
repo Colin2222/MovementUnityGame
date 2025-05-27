@@ -42,13 +42,13 @@ public class BottomCheck : MonoBehaviour
     }
 
     void OnCollisionExit2D(Collision2D collision){
-		if(collisions.Contains(collision.transform)){
+		if (collisions.Contains(collision.transform))
+		{
 			collisions.Remove(collision.transform);
-		}
-		
-		if(collisions.Count == 0){
-			parentPhysics.isGrounded = false;
-			parentPhysics.stateManager.LeaveGround();
+			if(collisions.Count == 0){
+				parentPhysics.isGrounded = false;
+				parentPhysics.stateManager.LeaveGround();
+			}
 		}
     }
 	

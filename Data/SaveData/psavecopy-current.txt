@@ -5,54 +5,37 @@
     "tutorial_2_viewed": true,
     "tutorial_3_viewed": true,
     "tutorial_4_viewed": true,
-    "tutorial_po_viewed": false,
     "started_game": true,
     "halfway_done": false,
     "finished_game": false,
-    "first_revelation": false,
+    "first_revelation": true,
     "first_dialogue_completed": false,
-    "guidestone_1_viewed": false,
-    "basecamp_first_meeting_viewed": false,
-    "basecamp_second_meeting_viewed": false,
-    "basecamp_second_meeting_post_viewed": false,
-    "basecamp_waterwheel_built_viewed": false,
-    "mountainbase_anchordemo_viewed": false,
-    "basecamp_bluestonelift_viewed": false,
-    "basecamp_bluestonelift_post_viewed": false
+    "guidestone_1_viewed": true,
+    "basecamp_first_meeting_viewed": true,
+    "basecamp_second_meeting_viewed": true,
+    "basecamp_second_meeting_post_viewed": true,
+    "basecamp_waterwheel_built_viewed": true,
+    "mountainbase_anchordemo_viewed": true,
+    "basecamp_bluestonelift_viewed": true,
+    "basecamp_bluestonelift_post_viewed": true
   },
   "integer_markers": {
-    "cable_car_location": 0,
-    "cable_car_progress": 0,
-    "time_marker": 1
+    "cable_car_location": 100002,
+    "cable_car_progress": 100004,
+    "time_marker": 0
   },
   "rooms": {
     "basecamp": {
       "site_slots": [
         {
-          "id": 100000,
+          "id": 102,
           "display_name": null,
           "site": {
-            "name": "construction",
-            "inventories": [
-              {
-                "width": 1,
-                "height": 2,
-                "contents": [
-                  {
-                    "item_name": "wood_log",
-                    "quantity": 2
-                  },
-                  {
-                    "item_name": "iron_rod",
-                    "quantity": 1
-                  }
-                ]
-              }
-            ],
+            "name": "tree",
+            "inventories": null,
             "additional_data": {
-              "site_construction": "cablecar",
-              "construction_active": "false",
-              "post_cutscene": "basecamp_waterwheel_built"
+              "num_logs": "3",
+              "cut_down": "True"
             }
           }
         },
@@ -64,33 +47,43 @@
             "inventories": null,
             "additional_data": {
               "num_logs": "4",
-              "cut_down": "False"
+              "cut_down": "True"
             }
           }
         },
         {
-          "id": 102,
+          "id": 100000,
           "display_name": null,
           "site": {
-            "name": "tree",
+            "name": "cablecar",
             "inventories": null,
-            "additional_data": {
-              "num_logs": "3",
-              "cut_down": "False"
-            }
+            "additional_data": null
           }
         }
       ],
       "world_items": [],
-      "npcs": [],
+      "npcs": [
+        {
+          "name": "blacksmith",
+          "x_pos": -124.5,
+          "y_pos": 6.26499,
+          "direction": 1,
+          "default_animation": "blacksmith_nailing_loop",
+          "inventories": null
+        }
+      ],
       "fills": {
         "waterwheel": {
           "id": "waterwheel",
-          "active": false
+          "active": true
+        },
+        "bluestone_smeltery_half": {
+          "id": "bluestone_smeltery_half",
+          "active": true
         },
         "cot_left": {
           "id": "cot_left",
-          "active": false
+          "active": true
         },
         "bluestone_pile": {
           "id": "bluestone_pile",
@@ -98,7 +91,7 @@
         },
         "tarp": {
           "id": "tarp",
-          "active": false
+          "active": true
         },
         "blacksmith_bag": {
           "id": "blacksmith_bag",
@@ -106,15 +99,11 @@
         },
         "campfire": {
           "id": "campfire",
-          "active": false
+          "active": true
         },
         "cot_right": {
           "id": "cot_right",
-          "active": false
-        },
-        "bluestone_smeltery_half": {
-          "id": "bluestone_smeltery_half",
-          "active": false
+          "active": true
         }
       }
     },
@@ -158,57 +147,24 @@
           "id": 100001,
           "display_name": null,
           "site": {
-            "name": "construction",
-            "inventories": [
-              {
-                "width": 1,
-                "height": 2,
-                "contents": [
-                  {
-                    "item_name": "wood_log",
-                    "quantity": 2
-                  },
-                  {
-                    "item_name": "iron_rod",
-                    "quantity": 1
-                  }
-                ]
-              }
-            ],
-            "additional_data": {
-              "site_construction": "cablecar",
-              "construction_active": "False",
-              "post_cutscene": "mountainbase_bluestonelift"
-            }
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": null
           }
         },
         {
           "id": 100002,
           "display_name": null,
           "site": {
-            "name": "construction",
-            "inventories": [
-              {
-                "width": 1,
-                "height": 2,
-                "contents": [
-                  {
-                    "item_name": "wood_log",
-                    "quantity": 2
-                  },
-                  {
-                    "item_name": "iron_rod",
-                    "quantity": 1
-                  }
-                ]
-              }
-            ],
-            "additional_data": {
-              "site_construction": "cablecar",
-              "construction_active": "False",
-              "post_cutscene": "mountainbase_bluestonelift"
-            }
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": null
           }
+        },
+        {
+          "id": 2,
+          "display_name": null,
+          "site": null
         }
       ],
       "world_items": [],
@@ -216,7 +172,7 @@
       "fills": {
         "bluestone_slab": {
           "id": "bluestone_slab",
-          "active": true
+          "active": false
         },
         "bluestone_untied": {
           "id": "bluestone_untied",
@@ -255,26 +211,6 @@
               "demolished": "False"
             }
           }
-        },
-        {
-          "id": 202,
-          "display_name": null,
-          "site": {
-            "name": "demowall",
-            "inventories": [
-              {
-                "width": 1,
-                "height": 1,
-                "contents": [
-                  null
-                ]
-              }
-            ],
-            "additional_data": {
-              "demo_active": "True",
-              "demolished": "False"
-            }
-          }
         }
       ],
       "world_items": [],
@@ -282,28 +218,7 @@
       "fills": {}
     },
     "mountainbase_minicave1": {
-      "site_slots": [
-        {
-          "id": 203,
-          "display_name": null,
-          "site": {
-            "name": "demowall",
-            "inventories": [
-              {
-                "width": 1,
-                "height": 1,
-                "contents": [
-                  null
-                ]
-              }
-            ],
-            "additional_data": {
-              "demo_active": "True",
-              "demolished": "False"
-            }
-          }
-        }
-      ],
+      "site_slots": [],
       "world_items": [],
       "npcs": [],
       "fills": {}
@@ -320,29 +235,11 @@
           "id": 100003,
           "display_name": null,
           "site": {
-            "name": "construction",
-            "inventories": [
-              {
-                "width": 1,
-                "height": 2,
-                "contents": [
-                  {
-                    "item_name": "wood_log",
-                    "quantity": 2
-                  },
-                  {
-                    "item_name": "iron_rod",
-                    "quantity": 1
-                  }
-                ]
-              }
-            ],
-            "additional_data": {
-              "site_construction": "cablecar",
-              "construction_active": "false"
-            }
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": null
           }
-        },
+        }
       ],
       "world_items": [],
       "npcs": [],
@@ -354,29 +251,11 @@
           "id": 100004,
           "display_name": null,
           "site": {
-            "name": "construction",
-            "inventories": [
-              {
-                "width": 1,
-                "height": 2,
-                "contents": [
-                  {
-                    "item_name": "wood_log",
-                    "quantity": 2
-                  },
-                  {
-                    "item_name": "iron_rod",
-                    "quantity": 1
-                  }
-                ]
-              }
-            ],
-            "additional_data": {
-              "site_construction": "cablecar",
-              "construction_active": "false"
-            }
+            "name": "cablecar",
+            "inventories": null,
+            "additional_data": null
           }
-        },
+        }
       ],
       "world_items": [],
       "npcs": [],
@@ -428,7 +307,7 @@
               "construction_active": "true"
             }
           }
-        },
+        }
       ],
       "world_items": [],
       "npcs": [],
@@ -468,7 +347,7 @@
               "construction_active": "true"
             }
           }
-        },
+        }
       ],
       "world_items": [],
       "npcs": [],
@@ -541,15 +420,15 @@
     "contents": [
       {
         "item_name": "wood_log",
-        "quantity": 11
+        "quantity": 13
       },
       {
         "item_name": "iron_rod",
-        "quantity": 17
+        "quantity": 20
       },
       {
         "item_name": "explosive_charge",
-        "quantity": 5
+        "quantity": 6
       },
       null,
       null,

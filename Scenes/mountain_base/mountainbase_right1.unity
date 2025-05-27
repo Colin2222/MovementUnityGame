@@ -974,7 +974,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: On higher (or shorter) jumps, keep momentum with a roll
+  m_text: Keep your momentum after landing with a roll
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f11c54bda1ff6604aad0e216001e9004, type: 2}
   m_sharedMaterial: {fileID: 8680300095196961076, guid: f11c54bda1ff6604aad0e216001e9004, type: 2}
@@ -3418,7 +3418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -80.953316
+      value: -80.95332
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3927,7 +3927,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: At the end of your roll, jump out of it with
+  m_text: Near the end of your roll, jump out of it with
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f11c54bda1ff6604aad0e216001e9004, type: 2}
   m_sharedMaterial: {fileID: 8680300095196961076, guid: f11c54bda1ff6604aad0e216001e9004, type: 2}

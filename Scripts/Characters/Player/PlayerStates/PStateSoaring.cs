@@ -5,8 +5,10 @@ using UnityEngine;
 public class PStateSoaring : PState
 {
 	float coyoteTimer = 0.0f;
+	Vector2 lastVelo;
 
-    public PStateSoaring(){
+    public PStateSoaring()
+	{
 		
 	}
 
@@ -23,6 +25,14 @@ public class PStateSoaring : PState
 	
 	public override PState FixedUpdate(){
 		lastAirSpeed = rigidbody.velocity.x;
+		/*
+		if (lastVelo == rigidbody.velocity)
+		{
+			Debug.Log("Player stuck FIXED");
+			return new PStateCornerFaceplanting(new Vector2(direction, 0.0f));
+		}
+		lastVelo = rigidbody.velocity;
+		*/
 		return this;
 	}
 	
@@ -37,7 +47,7 @@ public class PStateSoaring : PState
 		}
 		timeSinceLastGroundHit = 0.0f;
 		lastGroundHitSpeed = hitSpeedY;
-		return new PStateIdle();
+		return new PStateMoving();
 	}
 	
 	public override PState Move(float horizontal, float vertical){

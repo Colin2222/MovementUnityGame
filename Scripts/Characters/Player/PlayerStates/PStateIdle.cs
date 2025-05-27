@@ -13,8 +13,9 @@ public class PStateIdle : PState
 		PState.direction = 1;
 		PState.interactor = interactor;
 	}
-	
-	public PStateIdle(){
+
+	public PStateIdle()
+	{
 		player.animator.Play("PlayerIdle");
 		rigidbody.gravityScale = attr.gravityScale;
 	}

@@ -8,8 +8,9 @@ public class PStateMoving : PState
 	float vertical;
 	bool isFast = false;
 	bool isSlow = false;
-	
-    public PStateMoving(){
+
+	public PStateMoving()
+	{
 		player.soundInterface.PlayStep2();
 		player.animator.Play("PlayerRunning");
 		isFast = false;
@@ -23,18 +24,31 @@ public class PStateMoving : PState
 		return this;
 	}
 
-	void HandleFastMovement(){
-		if(!isFast && Mathf.Abs(rigidbody.velocity.x) > attr.runningJumpSpeed){
+	void HandleFastMovement()
+	{
+		if (!isFast && Mathf.Abs(rigidbody.velocity.x) > attr.runningJumpSpeed)
+		{
 			isFast = true;
-			player.animator.Play("PlayerRunning");
-		} else if(isFast && Mathf.Abs(rigidbody.velocity.x) < attr.runningJumpSpeed){
+		}
+		else if (isFast && Mathf.Abs(rigidbody.velocity.x) < attr.runningJumpSpeed)
+		{
 			isFast = false;
-			player.animator.Play("PlayerRunningFast");
-		} else if(!isSlow && Mathf.Abs(rigidbody.velocity.x) < attr.slowRunSpeed){
+		}
+		else if (!isSlow && Mathf.Abs(rigidbody.velocity.x) < attr.slowRunSpeed)
+		{
 			isSlow = true;
-			player.animator.Play("PlayerRunning");
-		} else if(isSlow && Mathf.Abs(rigidbody.velocity.x) > attr.slowRunSpeed){
+		}
+		else if (isSlow && Mathf.Abs(rigidbody.velocity.x) > attr.slowRunSpeed)
+		{
 			isSlow = false;
+		}
+
+		if (isFast || isSlow)
+		{
+			player.animator.Play("PlayerRunning");
+		}
+		else
+		{
 			player.animator.Play("PlayerRunningFast");
 		}
 	}
