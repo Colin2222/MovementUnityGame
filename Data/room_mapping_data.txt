@@ -56,6 +56,8 @@
     "24":"orangemountain_4",
     "25":"orangemountain_5",
     "26":"orangemountain_6",
-    "27":"outpost_outskirts_1"
+    "27":"outpost_outskirts_1",
+    "28":"outpost_cave_1",
+    "29":"beigemountain_cave_1"
   }
 }

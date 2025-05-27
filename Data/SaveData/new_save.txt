@@ -533,6 +533,18 @@
       "world_items": [],
       "npcs": [],
       "fills": {}
+    },
+    "outpost_cave_1": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "beigemountain_cave_1": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
     }
   },
   "player_inventory": {
