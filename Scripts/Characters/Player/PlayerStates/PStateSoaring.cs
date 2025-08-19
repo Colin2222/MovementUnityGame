@@ -7,17 +7,28 @@ public class PStateSoaring : PState
 	float coyoteTimer = 0.0f;
 	Vector2 lastVelo;
 
+	// set to true when coming out of a wall jump, as in "the player is in a chain of actions" 
+	// used to round up running speed to avoid losing enough speed on chained wall jumps to trigger stationary jumps instead of running jumps
+	bool inChain = false;
+
     public PStateSoaring()
 	{
-		
+
 	}
 
 	public PStateSoaring(float coyoteTime){
 		coyoteTimer = coyoteTime;
 	}
+
+	public PStateSoaring(bool inChain)
+	{
+		this.inChain = inChain;
+	}
 	
-    public override PState Update(){
-		if(coyoteTimer > 0.0f){
+    public override PState Update()
+	{
+		if (coyoteTimer > 0.0f)
+		{
 			coyoteTimer -= Time.deltaTime;
 		}
 		return this;
@@ -45,6 +56,16 @@ public class PStateSoaring : PState
 		}
 		timeSinceLastGroundHit = 0.0f;
 		lastGroundHitSpeed = hitSpeedY;
+
+		// round up horizontal speed if in chain
+		if (inChain)
+		{
+			if (Mathf.Abs(rigidbody.velocity.x) > attr.chainMinHorizontalSpeed && Mathf.Abs(rigidbody.velocity.x) < attr.chainMaxHorizontalSpeed)
+			{
+				rigidbody.velocity = new Vector2(attr.chainMaxHorizontalSpeed * -direction, rigidbody.velocity.y);
+			}
+			inChain = false;
+		}
 		return new PStateMoving();
 	}
 	

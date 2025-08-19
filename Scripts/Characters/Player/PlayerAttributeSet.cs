@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerAttributeSet
 {
-    public float moveForce;
+	public float moveForce;
 	public float maxRunSpeed;
 	public float slideForceMultiplier;
 	public float slideStopSpeedTarget;
@@ -62,7 +62,7 @@ public class PlayerAttributeSet
 	public float wallSplatStickTime;
 	public float wallSplatStumbleTime;
 	public float wallSplatStumbleSpeed;
-	
+
 	public float groundHitSpeedRollThreshold;
 	public float groundHitSpeedRollMin;
 	public float groundHitSpeedMaxThreshold;
@@ -76,4 +76,6 @@ public class PlayerAttributeSet
 	public float landingBigTime;
 	public float landingBigForceMultiplier;
 	public float optionalRollWindow;
+	public float chainMinHorizontalSpeed;
+	public float chainMaxHorizontalSpeed;
 }

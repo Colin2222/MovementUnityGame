@@ -195,6 +195,8 @@ MonoBehaviour:
     landingBigTime: 0
     landingBigForceMultiplier: 0
     optionalRollWindow: 0
+    chainMinHorizontalSpeed: 0
+    chainMaxHorizontalSpeed: 0
   interactor: {fileID: 1011390647}
   cameraAimManager: {fileID: 4107706158013080389}
   bracing: 0
@@ -2128,6 +2130,8 @@ MonoBehaviour:
     landingBigTime: 0.8
     landingBigForceMultiplier: 0.9
     optionalRollWindow: 0.125
+    chainMinHorizontalSpeed: 4
+    chainMaxHorizontalSpeed: 4.9
 --- !u!1 &6829769310522087713
 GameObject:
   m_ObjectHideFlags: 0

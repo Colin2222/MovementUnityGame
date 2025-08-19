@@ -64,7 +64,7 @@ public class PStateWallBracing : PState
 		// adjust position so player doesnt get caught on corners after flipping directions
 		player.transform.position = new Vector3(player.transform.position.x + (jumpDir == -1 ? -0.05f : 0.05f), player.transform.position.y, 0.0f);
 
-		return new PStateSoaring();
+		return new PStateSoaring(true);
 	}
 	
 	public override PState ReleaseJump(){
