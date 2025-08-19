@@ -56,6 +56,7 @@ public class PStateCornerGrabbing : PState
 		}
 		physics.ClearBottomCheck();
 		player.animator.Play("PlayerSoaringStill");
+		physics.frontCheck.feetCornerTouching = false;
 		return new PStateSoaring();
 	}
 	
