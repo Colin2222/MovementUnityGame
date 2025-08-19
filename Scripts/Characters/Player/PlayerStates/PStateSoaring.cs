@@ -25,14 +25,12 @@ public class PStateSoaring : PState
 	
 	public override PState FixedUpdate(){
 		lastAirSpeed = rigidbody.velocity.x;
-		/*
-		if (lastVelo == rigidbody.velocity)
+		if (lastVelo == rigidbody.velocity && !physics.isGrounded && physics.frontCheck.feetCornerTouching)
 		{
 			Debug.Log("Player stuck FIXED");
 			return new PStateCornerFaceplanting(new Vector2(direction, 0.0f));
 		}
 		lastVelo = rigidbody.velocity;
-		*/
 		return this;
 	}
 	

@@ -208,7 +208,7 @@
           "nodes":[
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "All I've felt is anxious.",
+              "text": "...",
               "speaker": "You"
             }
           ]
@@ -397,7 +397,7 @@
             },
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "But you've got me thinking now.",
+              "text": "But I figured I'd wait for you.",
               "speaker": "Traveler"
             }
           ]
@@ -411,7 +411,7 @@
           "nodes":[
             {
               "$type": "DialogueDataClasses.DialogueNodeText, Assembly-CSharp",
-              "text": "I've decided. I'm not meant to go to the City.",
+              "text": "I've decided. I'm not continuing to the City.",
               "speaker": "You"
             }
           ]

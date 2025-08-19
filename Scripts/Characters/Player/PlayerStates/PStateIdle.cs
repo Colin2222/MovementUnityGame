@@ -89,6 +89,9 @@ public class PStateIdle : PState
 	}
 	
 	public override PState LeaveGround(){
+		if(inputManager.inCutscene){
+			return this;
+		}
 		player.animator.Play("PlayerSoaringStill");
 		return new PStateSoaring();
 	}

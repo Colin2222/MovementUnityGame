@@ -23,7 +23,8 @@ public class PlayerInputManager : MonoBehaviour
 	public bool inUI = false;
 
 	// in cutscene
-	bool inCutscene = false;
+	[System.NonSerialized]
+	public bool inCutscene = false;
 	
 	// left joystick movement
 	float horizontal;

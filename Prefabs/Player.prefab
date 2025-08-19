@@ -2091,7 +2091,7 @@ MonoBehaviour:
     cornerVaultTime: 0
     cornerMantleMinHorizontalKeepSpeed: 0
     cornerJumpHorizontalJoystickThreshold: 0.45
-    cornerJumpForce: 13
+    cornerJumpForce: 11.6
     cornerJumpHorizontalForceCoefficient: 1
     cornerJumpVerticalForceCoefficient: 1.25
     cornerJumpMaximumHorizontalForce: 9

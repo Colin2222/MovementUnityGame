@@ -1,10 +1,10 @@
 {
   "progress_markers": {
-    "tutorial_1_viewed": true,
-    "tutorial_1b_viewed": true,
-    "tutorial_2_viewed": true,
-    "tutorial_3_viewed": true,
-    "tutorial_4_viewed": true,
+    "tutorial_1_viewed": false,
+    "tutorial_1b_viewed": false,
+    "tutorial_2_viewed": false,
+    "tutorial_3_viewed": false,
+    "tutorial_4_viewed": false,
     "tutorial_po_viewed": false,
     "started_game": true,
     "halfway_done": false,
@@ -486,8 +486,38 @@
       "npcs": [],
       "fills": {}
     },
-    "greenmountain_6": {
+    "greenmountaincave_4": {
       "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "greenmountaincave_5": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "greenmountaincave_6": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "greenmountaincave_7": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "greenmountain_6": {
+      "site_slots": [
+        {
+          "id": 100006,
+          "display_name": null,
+          "site": null
+        }
+      ],
       "world_items": [],
       "npcs": [],
       "fills": {}
@@ -541,6 +571,12 @@
       "fills": {}
     },
     "beigemountain_cave_1": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "beigemountain_1": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],

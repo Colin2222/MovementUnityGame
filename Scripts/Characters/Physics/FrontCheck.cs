@@ -12,6 +12,8 @@ public class FrontCheck : MonoBehaviour
 
 	[System.NonSerialized]
 	public WallCollisionInfo lastWallCollisionInfo;
+	[System.NonSerialized]
+	public bool feetCornerTouching = false;
 	
 	public Transform headCheck;
 	public Transform middleUpperCheck;
@@ -37,10 +39,20 @@ public class FrontCheck : MonoBehaviour
 		RaycastHit2D hitHead = Physics2D.Raycast(headCheck.position, Vector2.right * Mathf.Sign(-collision.relativeVelocity.x), distanceToWall, mask);
 		RaycastHit2D hitFaceplant = Physics2D.Raycast(faceplantCheck.position, Vector2.right * Mathf.Sign(-collision.relativeVelocity.x), distanceToWall, mask);
 		RaycastHit2D hitLowerHead = Physics2D.Raycast(lowerHeadCheck.position, Vector2.right * Mathf.Sign(-collision.relativeVelocity.x), distanceToWall, mask);
-		if(hitLowerMiddle.collider != null || hitUpperMiddle.collider != null || hitFeet.collider != null || hitHead.collider != null){
+		RaycastHit2D hitFeetDown = Physics2D.Raycast(feetCheck.position + (new Vector3(0.01f, 0, 0) * Mathf.Sign(-collision.relativeVelocity.x)), Vector2.down, distanceToWall, mask);
+
+		if (hitFeetDown.collider != null) {
+			feetCornerTouching = true;
+		} else{
+			feetCornerTouching = false;
+		}
+
+		if (hitLowerMiddle.collider != null || hitUpperMiddle.collider != null || hitFeet.collider != null || hitHead.collider != null)
+		{
 			parentPhysics.wallSide = Mathf.Sign(-collision.relativeVelocity.x);
 			Vector2 normal = collision.GetContact(0).normal;
-			if(normal.x != 0.0f){
+			if (normal.x != 0.0f)
+			{
 				lastFrontCollision = collision;
 				WallCollisionInfo collInfo = new WallCollisionInfo(hitHead.collider != null, hitUpperMiddle.collider != null, hitMiddleMiddle.collider != null, hitLowerMiddle.collider != null, hitFeet.collider != null, hitFaceplant.collider != null, hitLowerHead.collider != null);
 				lastWallCollisionInfo = collInfo;
@@ -66,9 +78,11 @@ public class FrontCheck : MonoBehaviour
 		parentPhysics.frontCollisionSpeed = new Vector2(0.0f, 0.0f);
     }
 
-    void OnCollisionExit2D(Collision2D collision){
-        parentPhysics.isWalled = false;
+	void OnCollisionExit2D(Collision2D collision)
+	{
+		parentPhysics.isWalled = false;
 		parentPhysics.stateManager.LeaveWall();
+		feetCornerTouching = false;
     }
 	
 	public bool IsLowerContact(int direction){		

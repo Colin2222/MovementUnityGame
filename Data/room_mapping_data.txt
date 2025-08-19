@@ -58,6 +58,13 @@
     "26":"orangemountain_6",
     "27":"outpost_outskirts_1",
     "28":"outpost_cave_1",
-    "29":"beigemountain_cave_1"
+    "29":"beigemountain_cave_1",
+    "30":"greenmountaincave_4",
+    "31":"greenmountaincave_5",
+    "32":"greenmountaincave_6",
+    "33":"mountainbase_cave2",
+    "34":"greenmountaincave_7",
+    "35":"beigemountain_1",
+    "36":"greenmountaincave_8",
   }
 }
