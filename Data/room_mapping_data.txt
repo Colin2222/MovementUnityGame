@@ -67,5 +67,6 @@
     "35":"beigemountain_1",
     "36":"greenmountaincave_8",
     "37":"beigemountain_2",
+    "38":"beigemountain_3",
   }
 }
