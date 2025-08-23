@@ -527,6 +527,12 @@
       "npcs": [],
       "fills": {}
     },
+    "beigemountain_4": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
     "mountainbase_cave2": {
       "site_slots": [],
       "world_items": [],
