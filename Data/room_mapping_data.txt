@@ -69,5 +69,17 @@
     "37":"beigemountain_2",
     "38":"beigemountain_3",
     "39":"beigemountain_4",
+    "40":"beigemountain_cave_2",
+    "41":"orangemountain_cave_1",
+    "42":"greenmountaincave_9",
+    "43":"orangemountain_cave_2",
+    "44":"greenmountaincave_10",
+    "45":"beigemountain_5",
+    "46":"greenmountaincave_11",
+    "47":"greenmountaincave_12",
+    "48":"beigemountain_cave_3",
+    "49":"beigemountain_cave_4",
+    "50":"beigemountain_cave_5",
+    "51":"beigemountain_cave_6",
   }
 }

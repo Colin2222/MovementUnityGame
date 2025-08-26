@@ -443,6 +443,12 @@
       "npcs": [],
       "fills": {}
     },
+    "greenmountaincave_9": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
     "greenmountain_6": {
       "site_slots": [
         {
@@ -451,6 +457,24 @@
           "site": null
         }
       ],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "greenmountaincave_10": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "greenmountaincave_11": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "greenmountaincave_12": {
+      "site_slots": [],
       "world_items": [],
       "npcs": [],
       "fills": {}
@@ -486,6 +510,18 @@
       "fills": {}
     },
     "orangemountain_6": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "orangemountain_cave_1": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "orangemountain_cave_2": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
@@ -528,6 +564,42 @@
       "fills": {}
     },
     "beigemountain_4": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "beigemountain_cave_2": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "beigemountain_cave_3": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "beigemountain_cave_4": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "beigemountain_cave_5": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "beigemountain_cave_6": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "beigemountain_5": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
