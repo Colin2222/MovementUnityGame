@@ -81,7 +81,6 @@ public class PStateWallBracing : PState
 
 	public override PState Grab(){
 		if(player.cornerHandler.mantleCorner != null){
-			Debug.Log("wall:" + rigidbody.velocity.y);
 			if (inputManager.bracing && Mathf.Abs(wallCollisionVelocity.x) > attr.fastMantleMinimumHorizontalSpeed && rigidbody.velocity.y > attr.fastMantleMinimumVerticalSpeed)
 			{
 				return new PStateCornerMantlingFast(new Vector2(wallCollisionVelocity.x, rigidbody.velocity.y));
