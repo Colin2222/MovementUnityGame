@@ -143,6 +143,7 @@ MonoBehaviour:
     gravityScale: 0
     grabTime: 0
     cornerMantleTime: 0
+    cornerFastMantleTime: 0
     cornerClimbTime: 0
     cornerGrabbingSpeedThreshold: 0
     cornerClimbVertJoystickThreshold: 0
@@ -156,6 +157,10 @@ MonoBehaviour:
     cornerStunGetupTime: 0
     cornerBackStunGetupTime: 0
     cornerVaultTime: 0
+    fastMantleHorizontalSpeedMultiplier: 0
+    fastMantleVerticalSpeedMultiplier: 0
+    fastMantleMinimumHorizontalSpeed: 0
+    fastMantleMinimumVerticalSpeed: 0
     cornerMantleMinHorizontalKeepSpeed: 0
     cornerJumpHorizontalJoystickThreshold: 0
     cornerJumpForce: 0
@@ -1542,6 +1547,8 @@ MonoBehaviour:
   cornerEndClimbOffsetY: 1
   mantleClimbOffsetX: 0.25
   mantleClimbOffsetY: 0
+  fastMantleEndOffsetX: 0.5
+  fastMantleEndOffsetY: 1.05
   footHandler: {fileID: 337670249509167978}
 --- !u!70 &9024032372949374633
 CapsuleCollider2D:
@@ -2078,6 +2085,7 @@ MonoBehaviour:
     gravityScale: 2.5
     grabTime: 1
     cornerMantleTime: 0.5833333
+    cornerFastMantleTime: 0.15
     cornerClimbTime: 0.9166667
     cornerGrabbingSpeedThreshold: 3.5
     cornerClimbVertJoystickThreshold: 0.95
@@ -2091,6 +2099,10 @@ MonoBehaviour:
     cornerStunGetupTime: 0.75
     cornerBackStunGetupTime: 0.625
     cornerVaultTime: 0
+    fastMantleHorizontalSpeedMultiplier: 0.75
+    fastMantleVerticalSpeedMultiplier: 1
+    fastMantleMinimumHorizontalSpeed: 3
+    fastMantleMinimumVerticalSpeed: -1.5
     cornerMantleMinHorizontalKeepSpeed: 0
     cornerJumpHorizontalJoystickThreshold: 0.45
     cornerJumpForce: 11.6

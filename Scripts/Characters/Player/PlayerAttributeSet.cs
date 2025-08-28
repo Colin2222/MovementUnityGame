@@ -23,6 +23,7 @@ public class PlayerAttributeSet
 	public float gravityScale;
 	public float grabTime;
 	public float cornerMantleTime;
+	public float cornerFastMantleTime;
 	public float cornerClimbTime;
 	public float cornerGrabbingSpeedThreshold;
 	public float cornerClimbVertJoystickThreshold;
@@ -36,6 +37,10 @@ public class PlayerAttributeSet
 	public float cornerStunGetupTime;
 	public float cornerBackStunGetupTime;
 	public float cornerVaultTime;
+	public float fastMantleHorizontalSpeedMultiplier;
+	public float fastMantleVerticalSpeedMultiplier;
+	public float fastMantleMinimumHorizontalSpeed;
+	public float fastMantleMinimumVerticalSpeed;
 	public float cornerMantleMinHorizontalKeepSpeed;
 	public float cornerJumpHorizontalJoystickThreshold;
 	public float cornerJumpForce;

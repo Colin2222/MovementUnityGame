@@ -26,7 +26,9 @@ public class CornerHandler : MonoBehaviour
 	public float cornerEndClimbOffsetY;
 	public float mantleClimbOffsetX;
 	public float mantleClimbOffsetY;
-	
+	public float fastMantleEndOffsetX;
+	public float fastMantleEndOffsetY;
+
 	public FootHandler footHandler;
 	
     void OnTriggerEnter2D(Collider2D col){

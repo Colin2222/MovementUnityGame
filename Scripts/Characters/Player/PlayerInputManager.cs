@@ -106,7 +106,9 @@ public class PlayerInputManager : MonoBehaviour
 			
 			if(bracing){
 				bracing = !(stateManager.Brace());
-			} else if(grabbing){
+			}
+			if (grabbing)
+			{
 				grabbing = !(stateManager.Grab());
 			}
 		} else if(inUI){
@@ -258,21 +260,40 @@ public class PlayerInputManager : MonoBehaviour
 	public void CancelBraceCooldown(){
 		braceCooldownCancelled = true;
 	}
+
+	public bool isBracePressed()
+	{
+		return bracePressed;
+	}
+
+	public void exitBraceToCooldown()
+	{
+		bracing = false;
+		braceCooldownTimer = attr.braceTime;
+	}
 	
-	private void HandleClimbing(){
-		if(vertical <= -(attr.cornerClimbVertJoystickThreshold)){
+	private void HandleClimbing()
+	{
+		if (vertical <= -(attr.cornerClimbVertJoystickThreshold))
+		{
 			canClimbUp = true;
-			if(canClimbDown){
+			if (canClimbDown)
+			{
 				stateManager.ClimbDown();
 				canClimbDown = false;
 			}
-		} else if(vertical >= attr.cornerClimbVertJoystickThreshold){
+		}
+		else if (vertical >= attr.cornerClimbVertJoystickThreshold)
+		{
 			canClimbDown = true;
-			if(canClimbUp){
+			if (canClimbUp)
+			{
 				stateManager.ClimbUp();
 				canClimbUp = false;
 			}
-		} else {
+		}
+		else
+		{
 			canClimbDown = true;
 			canClimbUp = true;
 		}
