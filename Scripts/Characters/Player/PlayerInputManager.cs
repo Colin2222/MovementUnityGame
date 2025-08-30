@@ -326,10 +326,11 @@ public class PlayerInputManager : MonoBehaviour
 			}
 		}
     }
-	
-	private void OnBrace(){
-        bracePressed = !bracePressed;
-        braceJustPressed = bracePressed;
+
+	private void OnBrace()
+	{
+		bracePressed = !bracePressed;
+		braceJustPressed = bracePressed;
     }
 
 	private void OnGrab(){

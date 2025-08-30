@@ -47,7 +47,7 @@ public class PStateCornerMantlingFast : PState
             rigidbody.velocity = exitVelocity;
             inputManager.exitBraceToCooldown();
             player.animator.Play("PlayerSoaringStill");
-            return new PStateSoaring();
+            return new PStateSoaring(true);
         }
         return this;
     }

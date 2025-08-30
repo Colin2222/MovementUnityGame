@@ -2099,8 +2099,8 @@ MonoBehaviour:
     cornerStunGetupTime: 0.75
     cornerBackStunGetupTime: 0.625
     cornerVaultTime: 0
-    fastMantleHorizontalSpeedMultiplier: 0.75
-    fastMantleVerticalSpeedMultiplier: 1
+    fastMantleHorizontalSpeedMultiplier: 0.8
+    fastMantleVerticalSpeedMultiplier: 0.9
     fastMantleMinimumHorizontalSpeed: 3
     fastMantleMinimumVerticalSpeed: -1.5
     cornerMantleMinHorizontalKeepSpeed: 0

@@ -81,5 +81,6 @@
     "49":"beigemountain_cave_4",
     "50":"beigemountain_cave_5",
     "51":"beigemountain_cave_6",
+    "52":"beigemountain_6",
   }
 }

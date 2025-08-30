@@ -60,6 +60,7 @@ public class PStateWallBracing : PState
 		} else{
 			player.transform.eulerAngles = new Vector2(0,0);
 		}
+		SetDirection(jumpDir);
 
 		// adjust position so player doesnt get caught on corners after flipping directions
 		player.transform.position = new Vector3(player.transform.position.x + (jumpDir == -1 ? -0.05f : 0.05f), player.transform.position.y, 0.0f);

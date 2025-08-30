@@ -62,7 +62,7 @@ public class PStateSoaring : PState
 		{
 			if (Mathf.Abs(rigidbody.velocity.x) > attr.chainMinHorizontalSpeed && Mathf.Abs(rigidbody.velocity.x) < attr.chainMaxHorizontalSpeed)
 			{
-				rigidbody.velocity = new Vector2(attr.chainMaxHorizontalSpeed * -direction, rigidbody.velocity.y);
+				rigidbody.velocity = new Vector2(attr.chainMaxHorizontalSpeed * direction, rigidbody.velocity.y);
 			}
 			inChain = false;
 		}
@@ -116,7 +116,7 @@ public class PStateSoaring : PState
 
 	public override PState Grab(){
 		if(player.cornerHandler.mantleCorner != null){
-			if (inputManager.bracing && Mathf.Abs(rigidbody.velocity.x) > attr.fastMantleMinimumHorizontalSpeed && rigidbody.velocity.y > attr.fastMantleMinimumVerticalSpeed)
+			if (inputManager.isBracePressed() && Mathf.Abs(rigidbody.velocity.x) > attr.fastMantleMinimumHorizontalSpeed && rigidbody.velocity.y > attr.fastMantleMinimumVerticalSpeed)
 			{
 				return new PStateCornerMantlingFast(rigidbody.velocity * new Vector2(-1, 1));
 			}
