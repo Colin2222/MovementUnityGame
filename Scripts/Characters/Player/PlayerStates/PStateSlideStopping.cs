@@ -78,7 +78,7 @@ public class PStateSlideStopping : PState
 	}
 
 	public override PState Grab(){
-		if(Mathf.Abs(rigidbody.velocity.x) < attr.cornerClimbDownMaxEntrySpeed && player.cornerHandler.CheckFootHandler(direction)){
+		if(Mathf.Abs(rigidbody.velocity.x) < attr.cornerClimbDownMaxEntrySpeed && player.cornerHandler.CheckFootHandler(direction) && player.cornerHandler.CanMantleCorner(direction)){
 			return new PStateCornerClimbingDown(direction);
 		} else if(player.cornerHandler.mantleCorner != null){
 			return new PStateCornerMantling();

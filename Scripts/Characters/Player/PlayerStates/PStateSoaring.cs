@@ -138,7 +138,7 @@ public class PStateSoaring : PState
 	}
 
 	public override PState Grab(){
-		if(player.cornerHandler.mantleCorner != null){
+		if(player.cornerHandler.mantleCorner != null && player.cornerHandler.CanMantleCorner(direction)){
 			if (inputManager.isBracePressed() && Mathf.Abs(rigidbody.velocity.x) > attr.fastMantleMinimumHorizontalSpeed && rigidbody.velocity.y > attr.fastMantleMinimumVerticalSpeed)
 			{
 				return new PStateCornerMantlingFast(rigidbody.velocity * new Vector2(-1, 1));

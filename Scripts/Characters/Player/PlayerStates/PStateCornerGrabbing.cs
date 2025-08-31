@@ -46,7 +46,15 @@ public class PStateCornerGrabbing : PState
 	}
 	
 	public override PState ClimbUp(){
-		return new PStateCornerClimbing();
+		if (player.cornerHandler.CanClimbCorner(direction))
+		{
+			return new PStateCornerClimbing();
+		}
+		else
+		{
+			player.animator.Play("PlayerCornerGrabbingThrash");
+		}
+		return this;
 	}
 	
 	public override PState ClimbDown(){

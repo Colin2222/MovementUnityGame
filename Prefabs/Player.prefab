@@ -1550,6 +1550,8 @@ MonoBehaviour:
   mantleClimbOffsetY: 0
   fastMantleEndOffsetX: 0.5
   fastMantleEndOffsetY: 1.05
+  cornerCanMantleCheckVectorX: 0.375
+  cornerCanMantleCheckVectorOffsetY: 0.05
   footHandler: {fileID: 337670249509167978}
 --- !u!70 &9024032372949374633
 CapsuleCollider2D:
