@@ -5,6 +5,7 @@ using UnityEngine;
 public class PStateSoaring : PState
 {
 	float coyoteTimer = 0.0f;
+	float timeSinceLastJumpInput = 10.0f;
 	Vector2 lastVelo;
 
 	// set to true when coming out of a wall jump, as in "the player is in a chain of actions" 
@@ -31,6 +32,8 @@ public class PStateSoaring : PState
 		{
 			coyoteTimer -= Time.deltaTime;
 		}
+
+		timeSinceLastJumpInput += Time.deltaTime;
 		return this;
 	}
 	
@@ -66,6 +69,25 @@ public class PStateSoaring : PState
 			}
 			inChain = false;
 		}
+
+		if (timeSinceLastJumpInput < attr.jumpBufferTime)
+		{
+			Debug.Log("Jump buffered from air to ground");
+			if (Mathf.Abs(rigidbody.velocity.x) > attr.runningJumpSpeed)
+			{
+				rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
+				rigidbody.AddForce(new Vector2(0, attr.jumpForce), ForceMode2D.Impulse);
+				player.soundInterface.PlayStillJump();
+				player.animator.Play("PlayerJumpingRunning");
+				return new PStateSoaring();
+			}
+			else
+			{
+				player.animator.Play("PlayerJumpBracing");
+				return new PStateJumpBracing();
+			}
+		}
+
 		return new PStateMoving();
 	}
 	
@@ -89,6 +111,7 @@ public class PStateSoaring : PState
 			player.animator.Play("PlayerJumpingRunning");
 			return new PStateSoaring();
 		}
+		timeSinceLastJumpInput = 0.0f;
 		return this;
 	}
 	

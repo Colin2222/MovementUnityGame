@@ -97,7 +97,8 @@ public class PStateRolling : PState
 	}
 	
 	public override PState PressJump(){
-		if(rollTimer > jumpQueueTime){
+		if (rollTimer > jumpQueueTime)
+		{
 			runningJumpQueued = true;
 		}
 		return this;
@@ -120,15 +121,19 @@ public class PStateRolling : PState
 	}
 	
 	public override PState LeaveGround(){
-		if(runningJumpQueued && rollTimer > rollCancelTime){
+		if (runningJumpQueued && rollTimer > rollCancelTime)
+		{
 			float jumpDir;
-			if(rigidbody.velocity.x > 0){
+			if (rigidbody.velocity.x > 0)
+			{
 				jumpDir = 1.0f;
-			} else{
+			}
+			else
+			{
 				jumpDir = -1.0f;
 			}
 			rigidbody.velocity = new Vector2(attr.runningJumpSpeed * jumpDir, 0);
-			rigidbody.AddForce(new Vector2(0,attr.jumpForce), ForceMode2D.Impulse);
+			rigidbody.AddForce(new Vector2(0, attr.jumpForce), ForceMode2D.Impulse);
 			player.soundInterface.PlayStillJump();
 			player.animator.Play("PlayerJumpingRunning");
 			physics.SwitchHitboxes(1);
