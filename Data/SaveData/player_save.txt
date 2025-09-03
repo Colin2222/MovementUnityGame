@@ -527,6 +527,18 @@
       "npcs": [],
       "fills": {}
     },
+    "orangemountain_cave_3": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
+    "orangemountain_cave_4": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
     "outpost_outskirts_1": {
       "site_slots": [],
       "world_items": [],

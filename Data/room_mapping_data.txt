@@ -83,5 +83,7 @@
     "51":"beigemountain_cave_6",
     "52":"beigemountain_6",
     "53":"beigemountain_7",
+    "54":"orangemountain_cave_3",
+    "55":"orangemountain_cave_4",
   }
 }
