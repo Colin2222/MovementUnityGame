@@ -56,6 +56,27 @@ public class PStateJumpBracing : PState
 			if(jumpMag < 0.04f){
 				jumpMag = 1.0f;
 			}
+
+			// autocorrect
+			if (vertical == 0.0f && horizontal == 0.0f)
+			{
+				aimAngle = 1.5707f; // straight up
+				float autocorrectDistance = player.cornerHandler.stationaryJumpAutocorrectHandler.GetCornerAutocorrectDistance();
+				if (autocorrectDistance * direction < 0)
+				{
+					player.transform.position += new Vector3(autocorrectDistance - (0.02f * direction), 0, 0);
+				}
+				else if (autocorrectDistance * direction > 0.0f)
+				{
+					aimAngle += autocorrectDistance * -0.7f;
+					Debug.Log("AUTOCORRECT AIM: " + aimAngle);
+				}
+			}
+			else
+			{
+				Debug.Log("CONTROLLED AIM: " + aimAngle);
+			}
+
 			return new PStateStillJumpLaunching(jumpForceMultiplier, aimAngle, jumpMag);
 		}
 		return new PStateIdle();

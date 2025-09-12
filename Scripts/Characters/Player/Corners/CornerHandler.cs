@@ -33,6 +33,7 @@ public class CornerHandler : MonoBehaviour
 	int mask;
 
 	public FootHandler footHandler;
+	public StationaryJumpAutocorrectHandler stationaryJumpAutocorrectHandler;
 
 	void Start()
 	{
