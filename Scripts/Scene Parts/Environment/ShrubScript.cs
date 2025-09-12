@@ -19,16 +19,17 @@ public class ShrubScript : MonoBehaviour
         animatorOverrideController["shrub_1_rustle_right"] = rustleRightAnimation;
         animatorOverrideController["shrub_1_rustle_left"] = rustleLeftAnimation;
         animator.runtimeAnimatorController = animatorOverrideController;
+        animator.Play("shrub_regular", 0, Random.Range(0.0f, 1.0f));
     }
 
     void OnTriggerEnter2D(Collider2D collision){
         Vector3 velocity = collision.attachedRigidbody.velocity;
         if (velocity.x > 3.0f)
         {
-            animator.Play("shrub_rustle_right", 0, 0.0f);
+            animator.Play("shrub_rustle_right", 0, Random.Range(0.0f, 1.0f));
         } else if (velocity.x < -3.0f)
         {
-            animator.Play("shrub_rustle_left", 0, 0.0f);
+            animator.Play("shrub_rustle_left", 0, Random.Range(0.0f, 1.0f));
         }
     }
 }
