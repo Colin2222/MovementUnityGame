@@ -112,6 +112,7 @@ public class SiteConstructionPanel : MonoBehaviour
 		buttonObject = Instantiate(buttonPrefab, items, false);
 		buttonObject.GetComponent<Transform>().localScale = new Vector3(slotSize, slotSize, 1);
 		buttonObject.transform.localPosition = new Vector3(1, -numRequirements * slotSize, 0);
+		buttonObject.transform.GetChild(0).GetComponent<TMP_Text>().text = "Construct";
 		buttonObject.name = "Button";
 		
 		itemSlots[numRequirements, 0] = buttonObject;

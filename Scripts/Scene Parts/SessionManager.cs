@@ -15,6 +15,7 @@ public class SessionManager : MonoBehaviour
 {
 	public static SessionManager Instance { get; private set; }
 	public AmberManager amberManager;
+	public RecipeManager recipeManager;
 	public SceneManager sceneManager;
 	public PlayerHub player;
 

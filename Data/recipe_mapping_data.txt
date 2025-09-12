@@ -1,0 +1,5 @@
+{
+  "furnace_recipes":{
+    "iron_ore": "iron_rod",
+  }
+}

@@ -63,16 +63,33 @@
               "cut_down": "True"
             }
           }
+        },
+        {
+          "id": 2,
+          "display_name": null,
+          "site": {
+            "name": "smeltery",
+            "inventories": [
+              {
+                "width": 1,
+                "height": 1,
+                "contents": [
+                  null
+                ]
+              }
+            ],
+            "additional_data": null
+          }
         }
       ],
       "world_items": [],
       "npcs": [
         {
           "name": "blacksmith",
-          "x_pos": -124.5,
+          "x_pos": -122.5,
           "y_pos": 6.26499033,
           "direction": 1,
-          "default_animation": "blacksmith_nailing_loop",
+          "default_animation": "blacksmith_idle",
           "inventories": null
         }
       ],
@@ -83,7 +100,7 @@
         },
         "bluestone_smeltery_half": {
           "id": "bluestone_smeltery_half",
-          "active": true
+          "active": false
         },
         "cot_left": {
           "id": "cot_left",
@@ -688,7 +705,10 @@
         "item_name": "amberpure_orange",
         "quantity": 2
       },
-      null,
+      {
+        "item_name": "iron_ore",
+        "quantity": 4
+      },,
       null,
       null,
       null,
