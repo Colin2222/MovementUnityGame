@@ -82,3 +82,6 @@ MonoBehaviour:
   - id: smeltery
     prefab: {fileID: 8789092570811324249, guid: e659846f17d22c24aaadad55436111cd, type: 3}
     requirements: []
+  - id: iron_ore_vein
+    prefab: {fileID: 5868745617406869312, guid: 5a05d6528c323f04b93dfe23a4e0a369, type: 3}
+    requirements: []

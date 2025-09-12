@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SiteSmeltery : Site
 {
-    bool active;
 
     InventoryCanvasScript canvas;
     (int x, int y) currentSlotPos;
@@ -61,7 +60,6 @@ public class SiteSmeltery : Site
             // activate camera
             ActivateCamera();
         }
-        active = true;
     }
 
     public override void LeaveInteraction()

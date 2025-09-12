@@ -26,10 +26,8 @@ public class StationaryJumpAutocorrectHandler : MonoBehaviour
         if (hit != null)
         {
             Transform cornerTransform = hit.transform;
-            Debug.Log("HIT CORNER " + (cornerTransform.position.x - launchPoint.transform.position.x));
             return cornerTransform.position.x - launchPoint.transform.position.x;
         }
-        Debug.Log("NO HIT");
         return 0;
     }
 }

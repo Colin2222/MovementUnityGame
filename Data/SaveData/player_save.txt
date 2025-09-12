@@ -313,6 +313,18 @@
     "mountainbase_right3": {
       "site_slots": [
         {
+          "id": 2,
+          "display_name": null,
+          "site": {
+            "name": "iron_ore_vein",
+            "inventories": null,
+            "additional_data": {
+              "num_ore_pieces": "3",
+              "mined": "True"
+            }
+          }
+        },
+        {
           "id": 100004,
           "display_name": null,
           "site": {
@@ -707,8 +719,8 @@
       },
       {
         "item_name": "iron_ore",
-        "quantity": 4
-      },,
+        "quantity": 7
+      },
       null,
       null,
       null,

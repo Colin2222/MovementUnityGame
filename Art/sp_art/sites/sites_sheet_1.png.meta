@@ -356,6 +356,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: iron_ore_site_full
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 700
+        width: 29
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5e0392dc41e2c4d8e22cfb1b734faa
+      internalID: 1499795721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iron_ore_site_empty
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 700
+        width: 29
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca406f515cf57e4d9317758e7b7f55a
+      internalID: 2094161982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -378,6 +420,8 @@ TextureImporter:
       construction_site_wisp2: -1369235791
       waterwheel_1: 1331790500
       cablecar_1: -895675769
+      iron_ore_site_full: 1499795721
+      iron_ore_site_empty: 2094161982
       construction_site_wisp5: -795650668
   spritePackingTag: 
   pSDRemoveMatte: 0
