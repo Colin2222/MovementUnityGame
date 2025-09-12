@@ -403,12 +403,22 @@ public class PlayerInputManager : MonoBehaviour
 		interactJustPressed = interactPressed;
 		
 		if(interactJustPressed){
-			if(!locked && interactJustPressed){
-				if(stateManager.Interact()){
+			// check if not in an amber run cooldown
+			if(!locked && SessionManager.Instance.amberManager.inAmberRunCooldown){
+				SessionManager.Instance.amberManager.ReturnToOriginalAmberPool();
+				return;
+			}
+
+			if (!locked && interactJustPressed)
+			{
+				if (stateManager.Interact())
+				{
 					LockPlayer();
 					inUI = true;
 				}
-			} else if(stateManager.IsMenuState()){
+			}
+			else if (stateManager.IsMenuState())
+			{
 				stateManager.MenuInteract();
 			}
 		}

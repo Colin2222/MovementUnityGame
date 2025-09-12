@@ -71,10 +71,14 @@ public class PlayerHub : MonoBehaviour
 	public void InvertPlayerOutline(bool inverted){
 		reskinner.SetPlayerInvertSkin(inverted);
 	}
-	
-	public IEnumerator RunSpawnBufferTimer(){
-        isSpawning = true;
+
+	public IEnumerator RunSpawnBufferTimer()
+	{
+		isSpawning = true;
 		yield return new WaitForSeconds(spawnTime);
 		isSpawning = false;
+		
+		// unpause amber run timer
+		SessionManager.Instance.amberManager.UnpauseAmberRunTimer();
     }
 }

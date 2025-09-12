@@ -185,6 +185,50 @@ MonoBehaviour:
     m_Address: Assets/Data/Cutscenes/tutorialpanels_po.json
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b92586593eb8942489cf869dad647a1a
+    m_Address: Assets/Data/Items/ItemIcons/sediment_crystal.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b528c86580c24a74aa2ade2cb558961d
+    m_Address: Assets/Data/Items/ItemIcons/insulative_fur.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8fedb1a1e2ef0214bb750bb09ec52fa8
+    m_Address: Assets/Data/Items/ItemIcons/cavewheat_seeds.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f0469aaca0767ce4584594680016c060
+    m_Address: Assets/Data/Items/ItemIcons/amberpure_orange.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0153735d4c7aa604b801bace7a440ad0
+    m_Address: Assets/Data/Items/ItemIcons/amberfoggy_pile.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 67fa1f25de6223746b6d8f1fe1aa84c6
+    m_Address: Assets/Data/Items/ItemIcons/amberpure_white.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 798bbbf5d757bc54da4f320db4f118f4
+    m_Address: Assets/Data/Items/ItemIcons/amberpure_green.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 89e2201042b340b478fed32a48dab3a0
+    m_Address: Assets/Data/Items/ItemIcons/amberpure_purple.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1b3163a229d3ba143afdc939edfe851e
+    m_Address: Assets/Data/Items/ItemIcons/amberpure_blue.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3b515e0f8a025774e9270adef9393283
+    m_Address: Assets/Data/Items/ItemIcons/amberpure_red.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8ff7ae8663080c94c89c6318e0332f3e
+    m_Address: Assets/Data/Items/ItemIcons/amberpure_yellow.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:

@@ -41,6 +41,83 @@
 			"type": "1",
 			"stack_size": "1",
 			"icon": "explosive_charge.png"
+		},
+		{
+			"id": "cavewheat_seeds",
+			"name": "Cave Wheat Seeds",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "cavewheat_seeds.png"
+		},
+		{
+			"id": "insulative_fur",
+			"name": "Insulative Fur",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "insulative_fur.png"
+		},
+		{
+			"id": "sediment_crystal",
+			"name": "Sediment Crystal",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "sediment_crystal.png"
+		},
+		{
+			"id": "amberpure_blue",
+			"name": "Pure Blue Amber",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "amberpure_blue.png"
+		},
+		{
+			"id": "amberpure_green",
+			"name": "Pure Green Amber",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "amberpure_green.png"
+		},
+		{
+			"id": "amberpure_orange",
+			"name": "Pure Orange Amber",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "amberpure_orange.png"
+		},
+		{
+			"id": "amberpure_purple",
+			"name": "Pure Purple Amber",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "amberpure_purple.png"
+		},
+		{
+			"id": "amberpure_white",
+			"name": "Pure White Amber",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "amberpure_white.png"
+		},
+		{
+			"id": "amberpure_yellow",
+			"name": "Pure Yellow Amber",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "amberpure_yellow.png"
+		},
+		{
+			"id": "amberpure_red",
+			"name": "Pure Red Amber",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "amberpure_red.png"
+		},
+		{
+			"id": "amberfoggy_pile",
+			"name": "Foggy Amber Pile",
+			"type": "1",
+			"stack_size": "1",
+			"icon": "amberfoggy_pile.png"
 		}
 	]
 }

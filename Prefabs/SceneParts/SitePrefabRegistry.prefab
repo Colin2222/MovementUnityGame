@@ -76,3 +76,6 @@ MonoBehaviour:
   - id: demowall
     prefab: {fileID: 1878975290307980102, guid: 2582dfc73b7a72344817a1debd44d1dd, type: 3}
     requirements: []
+  - id: amberpool
+    prefab: {fileID: 3599739711657993265, guid: fea73d7e5b0f4de4689ecda6345fa96e, type: 3}
+    requirements: []

@@ -9,6 +9,7 @@ public class SceneManager : MonoBehaviour
 	public static SceneManager Instance { get; private set; }
 
 	public string sceneName;
+	public int sceneBuildIndex;
 	public Transform playerSpawnTransform;
 	public Transform profileSelectionLocation;
 	public Transform levelSelectionLocation;

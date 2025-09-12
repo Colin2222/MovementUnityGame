@@ -408,7 +408,20 @@
       "fills": {}
     },
     "greenmountaincave_3": {
-      "site_slots": [],
+      "site_slots": [
+        {
+          "id": 1,
+          "display_name": null,
+          "site": {
+            "name": "amberpool",
+            "inventories": null,
+            "additional_data": {
+              "amber_color": "yellow",
+              "run_time": "10"
+            }
+          }
+        }
+      ],
       "world_items": [],
       "npcs": [],
       "fills": {}
@@ -426,7 +439,20 @@
       "fills": {}
     },
     "greenmountaincave_6": {
-      "site_slots": [],
+      "site_slots": [
+        {
+          "id": 1,
+          "display_name": null,
+          "site": {
+            "name": "amberpool",
+            "inventories": null,
+            "additional_data": {
+              "amber_color": "orange",
+              "run_time": "15"
+            }
+          }
+        }
+      ],
       "world_items": [],
       "npcs": [],
       "fills": {}
@@ -652,7 +678,10 @@
         "item_name": "explosive_charge",
         "quantity": 5
       },
-      null,
+      {
+        "item_name": "amberpure_orange",
+        "quantity": 1
+      },
       null,
       null,
       null,

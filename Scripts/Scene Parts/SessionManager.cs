@@ -14,6 +14,7 @@ using DialogueDataClasses;
 public class SessionManager : MonoBehaviour
 {
 	public static SessionManager Instance { get; private set; }
+	public AmberManager amberManager;
 	public SceneManager sceneManager;
 	public PlayerHub player;
 
@@ -229,6 +230,9 @@ public class SessionManager : MonoBehaviour
 
 			// trigger audio fade out
 			GameObject.FindWithTag("BackgroundSoundManager").GetComponent<BackgroundSoundManager>().SceneTransitionFadeOut();
+
+			// pause amber run timer
+			amberManager.PauseAmberRunTimer();
 
 			// cue player buffer time on spawning so they dont ping pong load between rooms
 			StartCoroutine(player.RunSpawnBufferTimer());
