@@ -19,6 +19,7 @@ public class PlayerHub : MonoBehaviour
 	public PlayerSoundInterface soundInterface;
 	public PlayerOverrideManager overrideManager;
 	public PlayerCameraAimManager cameraAimManager;
+	public PlayerTransitionManager transitionManager;
 
 	[System.NonSerialized]
 	public Transform cameraAimPoint;

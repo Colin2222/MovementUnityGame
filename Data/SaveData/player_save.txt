@@ -505,6 +505,12 @@
       "npcs": [],
       "fills": {}
     },
+    "greenmountaincave_hermithome": {
+      "site_slots": [],
+      "world_items": [],
+      "npcs": [],
+      "fills": {}
+    },
     "orangemountain_1": {
       "site_slots": [],
       "world_items": [],
@@ -680,7 +686,7 @@
       },
       {
         "item_name": "amberpure_orange",
-        "quantity": 1
+        "quantity": 2
       },
       null,
       null,

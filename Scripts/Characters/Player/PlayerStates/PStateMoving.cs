@@ -87,6 +87,12 @@ public class PStateMoving : PState
 	}
 	
 	public override PState ClimbUp(){
+		bool foundTransition = player.transitionManager.CheckForUpDownTransition();
+		if (foundTransition)
+		{
+			player.animator.Play("PlayerLookingBackgroundTurning");
+			return new PStateIdle(false);
+		}
 		return this;
 	}
 	

@@ -84,9 +84,13 @@ public class PlayerInputManager : MonoBehaviour
 	private bool toggleJournalJustPressed = false;
 	private bool toggleInventoryPressed = false;
 	private bool toggleInventoryJustPressed = false;
+
+	// lock timing
+	float lockTimer = 0.0f;
+	bool timeLocked = false;
 	
     // Start is called before the first frame update
-    void Start()
+	void Start()
     {
         attr = player.attributeManager.attrSet;
     }
@@ -97,24 +101,38 @@ public class PlayerInputManager : MonoBehaviour
 		if(overridden){
 			stateManager.Move(0, 0);
 		}
-		if(!locked){
+		if (!locked)
+		{
 			stateManager.Move(horizontal, vertical);
 			HandleBracing();
 			HandleClimbing();
 			HandleGrabbing();
 			HandleItemGrabbing();
-			
-			if(bracing){
+
+			if (bracing)
+			{
 				bracing = !(stateManager.Brace());
 			}
 			if (grabbing)
 			{
 				grabbing = !(stateManager.Grab());
 			}
-		} else if(inUI){
+		}
+		else if (inUI)
+		{
 			HandleMenu();
-		} else if(inCutscene){
-			
+		}
+		else if (inCutscene)
+		{
+
+		}
+		else if (timeLocked)
+		{
+			lockTimer -= Time.deltaTime;
+			if(lockTimer <= 0.0f){
+				UnlockPlayer();
+				timeLocked = false;
+			}
 		}
 		HandleCameraAim();
 		
@@ -140,7 +158,14 @@ public class PlayerInputManager : MonoBehaviour
 		locked = true;
 	}
 	
-	public void UnlockPlayer(){
+	public void TimeLockPlayer(float time){
+		locked = true;
+		timeLocked = true;
+		lockTimer = time;
+	}
+	
+	public void UnlockPlayer()
+	{
 		locked = false;
 		overridden = false;
 	}

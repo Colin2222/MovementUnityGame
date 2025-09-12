@@ -207,7 +207,7 @@ public class SessionManager : MonoBehaviour
 		Addressables.Release(operation);
 	}
 
-	public void TransitionScene(int buildIndex, int entranceNumber, int directionNumber)
+	public bool TransitionScene(int buildIndex, int entranceNumber, int directionNumber)
 	{
 		if (!player.isSpawning)
 		{
@@ -239,7 +239,10 @@ public class SessionManager : MonoBehaviour
 
 			// load into new scene
 			StartCoroutine(sceneManager.SwitchScenes(buildIndex));
+
+			return true;
 		}
+		return false;
 	}
 
 	public void UpdateSceneManager(SceneManager sceneManager)

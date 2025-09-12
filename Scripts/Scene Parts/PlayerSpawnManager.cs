@@ -32,6 +32,8 @@ public class PlayerSpawnManager : MonoBehaviour
 				if(transition.isWalkTransition){
 					player.overrideManager.doorTransitioning = true;
 					player.overrideManager.WalkToPoint(transition.entryTransform.position.x);
+				} else if(transition.isUpDownTransition){
+					player.animator.Play("PlayerIdle");
 				}
 				break;
 			}

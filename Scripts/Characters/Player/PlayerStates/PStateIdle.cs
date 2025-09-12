@@ -43,13 +43,18 @@ public class PStateIdle : PState
 	}
 	
 	public override PState Move(float horizontal, float vertical){
-		if(Mathf.Abs(horizontal) > 0.0f){
+		if(Mathf.Abs(horizontal) > 0.1f){
 			return new PStateMoving();
 		}
 		return this;
 	}
 	
 	public override PState ClimbUp(){
+		bool foundTransition = player.transitionManager.CheckForUpDownTransition();
+		if (foundTransition)
+		{
+			player.animator.Play("PlayerLookingBackgroundTurning");
+		}
 		return this;
 	}
 	

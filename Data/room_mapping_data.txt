@@ -85,5 +85,6 @@
     "53":"beigemountain_7",
     "54":"orangemountain_cave_3",
     "55":"orangemountain_cave_4",
+    "56":"greenmountaincave_hermithome",
   }
 }
