@@ -611,6 +611,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 44689e95e09583a4ebe70f7bc45c80d4, type: 3}
   - {fileID: 21300000, guid: 0c6884f0af18cd8458a4bab87a52b20a, type: 3}
   - {fileID: 21300000, guid: 26c67306065373b44a8b94bf613d9c7b, type: 3}
+  - {fileID: 21300000, guid: 7f310b242331c2e4ab98f5e30f813ffc, type: 3}
   backdropActive: 1
 --- !u!1 &4845049506497319639
 GameObject:
@@ -766,6 +767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
+  sceneBuildIndex: 0
   playerSpawnTransform: {fileID: 4845049506762891137}
   profileSelectionLocation: {fileID: 0}
   levelSelectionLocation: {fileID: 0}
