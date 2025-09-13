@@ -499,7 +499,28 @@
       "fills": {}
     },
     "greenmountaincave_9": {
-      "site_slots": [],
+      "site_slots": [
+        {
+          "id": 1,
+          "display_name": null,
+          "site": {
+            "name": "pedestal",
+            "inventories": [
+              {
+                "width": 1,
+                "height": 1,
+                "contents": [
+                  {
+                    "item_name": "explosive_charge",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ],
+            "additional_data": {}
+          }
+        }
+      ],
       "world_items": [],
       "npcs": [],
       "fills": {}
@@ -711,7 +732,7 @@
       },
       {
         "item_name": "explosive_charge",
-        "quantity": 5
+        "quantity": 4
       },
       {
         "item_name": "amberpure_orange",

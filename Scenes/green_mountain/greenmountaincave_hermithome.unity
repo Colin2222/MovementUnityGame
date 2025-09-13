@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7944780749396800460, guid: 6ae1ee2c8d6de2146bd7d4f016369428, type: 3}
+      propertyPath: m_CameraDistance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7944780750038520283, guid: 6ae1ee2c8d6de2146bd7d4f016369428, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
@@ -1554,20 +1558,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1579521628}
     m_ColliderPaths:
-    - - X: 54083708
-        Y: -111556208
-      - X: 56937104
-        Y: -316680384
-      - X: 259649808
-        Y: -317556768
-      - X: 289129184
-        Y: -118343840
+    - - X: 3558426
+        Y: -104207080
+      - X: 8249130
+        Y: -325866784
+      - X: 302826016
+        Y: -324905920
+      - X: 298315648
+        Y: -101808288
   m_CompositePaths:
     m_Paths:
-    - - {x: 25.964956, y: -31.755676}
-      - {x: 28.912884, y: -11.834383}
-      - {x: 5.4083714, y: -11.155652}
-      - {x: 5.6937394, y: -31.66804}
+    - - {x: 0.8249123, y: -32.58665}
+      - {x: 30.282602, y: -32.490562}
+      - {x: 29.831537, y: -10.180829}
+      - {x: 0.3558433, y: -10.420737}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1321633967
@@ -1804,10 +1808,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 5.408371, y: -11.155621}
-      - {x: 5.6937103, y: -31.668037}
-      - {x: 25.964981, y: -31.755678}
-      - {x: 28.912918, y: -11.834384}
+    - - {x: 0.3558426, y: -10.420708}
+      - {x: 0.824913, y: -32.586678}
+      - {x: 30.2826, y: -32.490593}
+      - {x: 29.831566, y: -10.180829}
 --- !u!61 &1579521629
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1866,11 +1870,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -98.75
+      value: -98
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.25
+      value: 3.125
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.z

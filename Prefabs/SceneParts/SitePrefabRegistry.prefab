@@ -85,3 +85,6 @@ MonoBehaviour:
   - id: iron_ore_vein
     prefab: {fileID: 5868745617406869312, guid: 5a05d6528c323f04b93dfe23a4e0a369, type: 3}
     requirements: []
+  - id: pedestal
+    prefab: {fileID: 1763098390445160714, guid: 2271bc9fd81c81d44bc6193f3f0e77c1, type: 3}
+    requirements: []

@@ -398,6 +398,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: pedestal_site
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 700
+        width: 18
+        height: 22
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107fc5303200fcc44a3b31cd9a4e2c88
+      internalID: 1804592739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -423,6 +444,7 @@ TextureImporter:
       iron_ore_site_full: 1499795721
       iron_ore_site_empty: 2094161982
       construction_site_wisp5: -795650668
+      pedestal_site: 1804592739
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
