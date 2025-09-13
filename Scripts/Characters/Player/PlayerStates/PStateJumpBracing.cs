@@ -69,12 +69,7 @@ public class PStateJumpBracing : PState
 				else if (autocorrectDistance * direction > 0.0f)
 				{
 					aimAngle += autocorrectDistance * -0.7f;
-					Debug.Log("AUTOCORRECT AIM: " + aimAngle);
 				}
-			}
-			else
-			{
-				Debug.Log("CONTROLLED AIM: " + aimAngle);
 			}
 
 			return new PStateStillJumpLaunching(jumpForceMultiplier, aimAngle, jumpMag);
