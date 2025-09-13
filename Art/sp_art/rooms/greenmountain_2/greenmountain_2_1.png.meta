@@ -188,6 +188,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: greenmountain_reversible_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 191
+        width: 9
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfae88cc99df7f345bf90d6799191c1d
+      internalID: -1989886458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -201,6 +222,7 @@ TextureImporter:
     nameFileIdTable:
       greenmountain_2_fg1: 954972707
       greenmountain_2_fg2: 1243515354
+      greenmountain_reversible_1: -1989886458
       greenmountain_2_floor: 1781054202
       greenmountain_2_bg: 543188778
   spritePackingTag: 

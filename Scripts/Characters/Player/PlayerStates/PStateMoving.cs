@@ -139,7 +139,15 @@ public class PStateMoving : PState
 			return new PStateCornerMantling();
 		} else if(player.cornerHandler.corner != null){
 			return new PStateCornerGrabbing(0.0f);
-		} 
+		}
+
+		// check for any reversibles
+		if (Mathf.Abs(rigidbody.velocity.x) > attr.reverseMinSpeed && player.reverseHandler.ReversiblePresent(direction))
+		{
+			Debug.Log("Reversible Present");
+			return new PStateReverseSwinging(rigidbody.velocity.x);
+		}
+
 		return this;
 	}
 	

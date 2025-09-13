@@ -84,4 +84,9 @@ public class PlayerAttributeSet
 	public float optionalRollWindow;
 	public float chainMinHorizontalSpeed;
 	public float chainMaxHorizontalSpeed;
+	public float reverseSwingTime;
+	public float reverseMinSpeed;
+	public float reverseXOffset;
+	public float reverseXExitOffset;
+	public float reverseLayerChangeTime;
 }
