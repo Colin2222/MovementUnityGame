@@ -66,6 +66,7 @@ public class AmberManager : MonoBehaviour
         SetAmberUIColor(amberType);
         SetCrackTimes(runTime);
         amberRunUICanvasPrefab.SetActive(true);
+        amberCrackAnimator.Play("AmberStage0");
     }
 
     public void CheckAmberRunCompletion(string destinationAmber)

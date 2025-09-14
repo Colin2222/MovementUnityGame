@@ -736,7 +736,7 @@
       },
       {
         "item_name": "amberpure_orange",
-        "quantity": 2
+        "quantity": 3
       },
       {
         "item_name": "iron_ore",
