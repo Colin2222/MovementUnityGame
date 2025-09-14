@@ -15,6 +15,7 @@ public class AmberManager : MonoBehaviour
     int originalAmberPoolRoomIndex;
     public SessionManager sessionManager;
     public GameObject amberRunUICanvasPrefab;
+    public GameObject returnOfferObject;
     public Image amberImage;
     float[] crackTimes = new float[3];
     int currentCrackStage = 0;
@@ -26,6 +27,7 @@ public class AmberManager : MonoBehaviour
     void Start()
     {
         amberRunUICanvasPrefab.SetActive(false);
+        returnOfferObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -40,6 +42,7 @@ public class AmberManager : MonoBehaviour
                 inAmberRunCooldown = true;
                 amberRunCooldownTimer = amberRunCooldownTime;
                 amberCrackAnimator.Play("AmberShatter");
+                returnOfferObject.SetActive(true);
             }
             else if (amberRunTimer <= nextCrackTime)
             {
@@ -52,6 +55,7 @@ public class AmberManager : MonoBehaviour
             if (amberRunCooldownTimer <= 0)
             {
                 inAmberRunCooldown = false;
+                returnOfferObject.SetActive(false);
                 amberRunUICanvasPrefab.SetActive(false);
             }
         }
@@ -99,6 +103,8 @@ public class AmberManager : MonoBehaviour
         inAmberRun = false;
         timerPaused = false;
         sessionManager.TransitionScene(originalAmberPoolRoomIndex, 1000, 0);
+        returnOfferObject.SetActive(false);
+        amberRunUICanvasPrefab.SetActive(false);
     }
 
     void SetAmberUIColor(string amberType)
