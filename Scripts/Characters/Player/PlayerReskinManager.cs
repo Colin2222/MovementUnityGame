@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceLocations;
+using UnityEngine.AddressableAssets;
+using Newtonsoft.Json;
 
 public class PlayerReskinManager : MonoBehaviour
 {
@@ -17,7 +21,7 @@ public class PlayerReskinManager : MonoBehaviour
 	public Color noninvertedSkin;
 	
     // Start is called before the first frame update
-    void Start()
+	void Start()
     {
         
     }
@@ -25,7 +29,8 @@ public class PlayerReskinManager : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-		if(reskinActive){
+		if (reskinActive)
+		{
 			string spriteName = spriteRenderer.sprite.name.Replace(originalSpritesheetCode, spritesheetCode);
 			spriteRenderer.sprite = Array.Find(spriteSheetCollection, item => item.name == spriteName);
 		}
@@ -34,7 +39,15 @@ public class PlayerReskinManager : MonoBehaviour
 	public void SetNewSpritesheet(string spritesheetCode){
 		if(spritesheetCode != originalSpritesheetCode && spritesheetCode != ""){
 			this.spritesheetCode = spritesheetCode;
-			spriteSheetCollection = Resources.LoadAll<Sprite>(spritesheetCode);
+			AsyncOperationHandle<IList<Sprite>> handle = Addressables.LoadAssetAsync<IList<Sprite>>("Assets/Data/player_sprites/currentplayer.png");
+			handle.WaitForCompletion();
+			IList<Sprite> result = handle.Result;
+
+			spriteSheetCollection = new Sprite[result.Count];
+			for(int i = 0; i < result.Count; i++){
+				spriteSheetCollection[i] = result[i];
+			}
+			Addressables.Release(handle);
 			reskinActive = true;
 		} else{
 			reskinActive = false;
@@ -42,8 +55,10 @@ public class PlayerReskinManager : MonoBehaviour
 	}
 	
 	public void SetPlayerInvertSkin(bool inverted){
-		string spritesheetName = "currentplayer";
-		Texture2D originalTexture = Resources.Load<Texture2D>(spritesheetName);
+		//string spritesheetName = "currentplayer";
+		//Texture2D originalTexture = Resources.Load<Texture2D>(spritesheetName);
+		var textureOperation = Addressables.LoadAssetAsync<Texture2D>("Assets/Data/player_sprites/currentplayer.png");
+		Texture2D originalTexture = textureOperation.WaitForCompletion();
 		bool firstFound = false;
 		
 		if(inverted){
