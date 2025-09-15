@@ -104,7 +104,7 @@ public class SessionManager : MonoBehaviour
 		// load in json of player's save into TextAsset
 		Addressables.ClearDependencyCacheAsync(addressHeader + currentPlayerName + "_save.txt");
 		Caching.ClearCache();
-		AssetDatabase.Refresh(); /* this is the effective one (among the above 2). It also isnt allowed to be in build, since AssetDatabase is under the UnityEditor namespace, which is not used in built versions */
+		//AssetDatabase.Refresh(); /* this is the effective one (among the above 2). It also isnt allowed to be in build, since AssetDatabase is under the UnityEditor namespace, which is not used in built versions */
 		var operation = Addressables.LoadAssetAsync<TextAsset>(addressHeader + currentPlayerName + "_save.txt");
 		TextAsset txtAsset = operation.WaitForCompletion();
 

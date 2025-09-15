@@ -100,10 +100,12 @@ public class SceneManager : MonoBehaviour
 		// load in items from data xml
 		itemRegistry = ItemRegistry.Instance();
 		itemRegistry.LoadItems(itemRegistryXml);
-		
+
 		// load in level list from data xml
+		/*
 		levelRegistry = LevelRegistry.Instance();
 		levelRegistry.LoadLevels(levelRegistryXml);
+		*/
 		
 		// check if there is a DontDestroyOnLoad session manager, create a new one if there isnt
 		sessionManagerTest = GameObject.FindWithTag("SessionManager");
@@ -166,21 +168,23 @@ public class SceneManager : MonoBehaviour
 		
 		player.InvertPlayerOutline(invertPlayerColor);
 	}
-	
-    // Start is called before the first frame update
-    void Start()
-    {	
+
+	// Start is called before the first frame update
+	void Start()
+	{
 		// camera setup
 		GameObject.FindWithTag("MainCamera").GetComponent<Camera>().backgroundColor = backgroundColor;
 		mainCameraObj = GameObject.FindWithTag("MainCamera");
-		if(vcam != null){
+		if (vcam != null) {
 			player.cameraAimManager.RecalibrateCameraAimPoint();
 		}
-		
+
 
 		// backdrop setup
 		backdropManager.SetBackdrop();
 
+		// old profile stuff, not needed
+		/*
 		profileManager.SetupProfileSelection(profileSelectionLocation);
 		if(isHubWorld){
 			levelSelectManager.SetupLevelSelection(levelSelectionLocation);
@@ -189,12 +193,11 @@ public class SceneManager : MonoBehaviour
 			// send profilemanager to timer before all the action starts
 			timer.profileManager = profileManager;
 			
-			/*
 			countdownTimer = countdownTime;
 			countingDownStart = true;
 			player.LockPlayer();
-			*/
 		}
+		*/
 		
 		if(sessionManager.currentWalkEntraceDirection == 1){
 			transitionManager.EnterTransition(1);

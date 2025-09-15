@@ -20,223 +20,278 @@ MonoBehaviour:
   - m_GUID: f3fbf912563a68a4784a335ea8d000fb
     m_Address: Assets/Data/Cutscenes/room_0_c0.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 589bddb3621717b4a9382d445a48f006
     m_Address: Assets/Data/Cutscenes/room_1_c0.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 261b836a33f3b3e469f50f7fa1621b63
     m_Address: Assets/Data/journal_data.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: d7d8bf728eb415349877adc784aeea46
     m_Address: Assets/Data/JournalPages/test_page.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 784c675a1f3dba7488cb671a88341bd7
     m_Address: Assets/Data/SaveData/fresh_save.txt
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 27b63696298a68644a7c3571994dd069
     m_Address: Assets/Data/SaveData/player_save.txt
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 575e1684c2400f140a160ae3f4c350d2
     m_Address: Assets/Data/SaveData/new_save.txt
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 329dabad0a7e5e241b96769e5a8b9ccb
     m_Address: Assets/Data/Cutscenes/revelation_1.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 35cf263e23c3b054b98d7ddbef1b00d8
     m_Address: Assets/Data/Items/items.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: a68d9be542822d94398551143a91463b
     m_Address: Assets/Data/Items/ItemIcons/test_item.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 5281ba2c06b6ad54a8606352029bf37a
     m_Address: Assets/Data/Items/ItemIcons/test_item2.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: ac47a5af66be86644b1b1a569f5a62bf
     m_Address: Assets/Data/Items/ItemIcons/iron_rod.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 2b5e5d7fcaf5c36469d32bcdb6d541c5
     m_Address: Assets/Data/Items/ItemIcons/wood_log.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 7630c27878a3bb842b79513f0e4480dd
     m_Address: Assets/Data/Cutscenes/tutorialpanels_1.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: f08876a1118a83f429f65c7c08590e14
     m_Address: Assets/Data/Cutscenes/tutorialpanels_2.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 782e73d731f14ab4f9463424faf0809d
     m_Address: Assets/Data/Cutscenes/tutorialpanels_3.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 7fb1b46eb711bb54595b927df903f627
     m_Address: Assets/Data/Cutscenes/tutorialpanels_4.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: e586502c80a13e844883b5d2f5226d75
     m_Address: Assets/Art/NPCs/blacksmith.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 50fc3fad1ee8bcd4baec72253ac756fa
     m_Address: Assets/Data/Dialogue/game_dialogue.txt
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 58d57a0c0c203194c863ace3a8445a44
     m_Address: Assets/Data/room_mapping_data.txt
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: e8eee3c87e8e64144879d03c2d8cbc4d
     m_Address: Assets/Data/Cutscenes/guidestone_1.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: f505fec79391330478e713f8fafd8244
     m_Address: Assets/Data/Cutscenes/tutorialpanels_1b.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: dccfdce105fc44b45a821e41fc0e69d2
     m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_0.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 2e0b11de396b3844cb05d166f37c0103
     m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_edge_0.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 99a1a626f7b44e94694f9aea16e8f698
     m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_1.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: d2b5988b7f333cf43b04ecf3fbdeef26
     m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_2.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 32cb588df55198d43a1131eec62b0257
     m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_edge_1.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 1b10ddcbd22cba244ba275e8d995e3a2
     m_Address: Assets/Data/Cutscenes/backgrounds/bg_mountain_edge_2.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 9e8062453489fce48a1d31b4e3c6fc02
     m_Address: Assets/Sounds/Music/nocturne_f.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 2a802f4045b1f0f438ffa00f7603cf95
     m_Address: Assets/Sounds/Music/ambient_4.wav
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: d59551a3b3192bf488debc2b6bc8c1bd
     m_Address: Assets/Data/Cutscenes/basecamp_firstmeeting.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: e5b4f2c927e541b47979322155aab1cd
     m_Address: Assets/Data/Cutscenes/mountainbase_right3_firstrev.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: d8acca8cf4484dd4992ac671dba772a0
     m_Address: Assets/Data/Items/ItemIcons/iron_ore.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: cca9cde44ed02a44d95e094dca5b1533
     m_Address: Assets/Data/Cutscenes/basecamp_secondmeeting.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: f479c1324ddd4954daca694f3db72295
     m_Address: Assets/Data/Items/ItemIcons/explosive_charge.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: e89b7681e647dac4d80b0c9be99b67e9
     m_Address: Assets/Data/Cutscenes/basecamp_secondmeeting_post.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: fccbe302a92c7094eaa25e0c04b6b4f6
     m_Address: Assets/Data/Cutscenes/basecamp_waterwheel_built.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: a1978c4127726ee4baaadcfd1a9281fd
     m_Address: Assets/Data/Cutscenes/mountainbase_anchordemo.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: dfd2996b1cbf90e4fa69d6edd5bc9946
     m_Address: Assets/Data/Cutscenes/mountainbase_bluestonelift.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: db5543d2a0f0e834caecb57b96ad4eef
     m_Address: Assets/Data/Cutscenes/mountainbase_bluestonelift2.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: adbcfb1f8089fdc418cd57f717e02ca5
     m_Address: Assets/Data/Cutscenes/basecamp_bluestonelift_post.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 9f8a303cc9940934cbce9c706c17be9d
     m_Address: Assets/Data/Cutscenes/tutorialpanels_po.json
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: b92586593eb8942489cf869dad647a1a
     m_Address: Assets/Data/Items/ItemIcons/sediment_crystal.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: b528c86580c24a74aa2ade2cb558961d
     m_Address: Assets/Data/Items/ItemIcons/insulative_fur.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 8fedb1a1e2ef0214bb750bb09ec52fa8
     m_Address: Assets/Data/Items/ItemIcons/cavewheat_seeds.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: f0469aaca0767ce4584594680016c060
     m_Address: Assets/Data/Items/ItemIcons/amberpure_orange.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 0153735d4c7aa604b801bace7a440ad0
     m_Address: Assets/Data/Items/ItemIcons/amberfoggy_pile.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 67fa1f25de6223746b6d8f1fe1aa84c6
     m_Address: Assets/Data/Items/ItemIcons/amberpure_white.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 798bbbf5d757bc54da4f320db4f118f4
     m_Address: Assets/Data/Items/ItemIcons/amberpure_green.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 89e2201042b340b478fed32a48dab3a0
     m_Address: Assets/Data/Items/ItemIcons/amberpure_purple.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 1b3163a229d3ba143afdc939edfe851e
     m_Address: Assets/Data/Items/ItemIcons/amberpure_blue.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 3b515e0f8a025774e9270adef9393283
     m_Address: Assets/Data/Items/ItemIcons/amberpure_red.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 8ff7ae8663080c94c89c6318e0332f3e
     m_Address: Assets/Data/Items/ItemIcons/amberpure_yellow.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: f4086a5e41ab79541ab4b431ae04964f
     m_Address: Assets/Data/recipe_mapping_data.txt
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   - m_GUID: 19c9be62926bacc4c8f76cb3db0db4f2
     m_Address: Assets/Data/player_sprites/currentplayer.png
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - default
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 13346620b14c70f438082113b62bc29f, type: 2}
   m_SchemaSet:
