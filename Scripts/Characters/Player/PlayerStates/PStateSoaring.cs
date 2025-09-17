@@ -50,10 +50,13 @@ public class PStateSoaring : PState
 	
     public override PState HitGround(float hitSpeedX, float hitSpeedY){
 		if(hitSpeedY > attr.groundHitSpeedRollThreshold){
+			player.rumbleManager.StartRumble(0.2f, 0.5f);
 			return new PStateRollEntering();
 		} else if(hitSpeedY > attr.groundHitSpeedRollMin && inputManager.bracing){
-			if(hitSpeedY > attr.groundHitSpeedRollThreshold){
+			if (hitSpeedY > attr.groundHitSpeedRollThreshold)
+			{
 				player.soundInterface.PlayStillJumpLand();
+				player.rumbleManager.StartRumble(0.2f, 0.5f);
 			}
 			return new PStateRolling(hitSpeedX, hitSpeedY);
 		}

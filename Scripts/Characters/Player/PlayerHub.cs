@@ -8,6 +8,7 @@ public class PlayerHub : MonoBehaviour
 	public Rigidbody2D rigidbody;
 	public CharacterPhysicsChecker physics;
 	public PlayerInputManager inputManager;
+	public PlayerRumbleManager rumbleManager;
 	public PlayerStateManager stateManager;
 	public CornerHandler cornerHandler;
 	public PlayerReverseHandler reverseHandler;
