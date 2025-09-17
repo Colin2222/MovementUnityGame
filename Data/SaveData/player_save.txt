@@ -26,8 +26,8 @@
   "integer_markers": {
     "cable_car_location": 100004,
     "cable_car_progress": 100004,
-    "time_marker": 3,
-    "weather_marker": 1
+    "time_marker": 2,
+    "weather_marker": 0
   },
   "rooms": {
     "basecamp": {

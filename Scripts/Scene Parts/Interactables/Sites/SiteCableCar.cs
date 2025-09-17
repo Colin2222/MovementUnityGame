@@ -39,6 +39,8 @@ public class SiteCableCar : Site
     public Vector3 cableCarOffset;
 
     public Animator pulleyAnchorAnimator;
+    public AudioSource mechanicalRumbleAudio;
+    public AudioSource mechanicalClickAudio;
 
     void Start()
     {
@@ -78,6 +80,8 @@ public class SiteCableCar : Site
             entering = false;
             cableCarPresent = true;
             cableCarObj.transform.localPosition = cableCarOffset;
+            mechanicalRumbleAudio.Stop();
+            mechanicalClickAudio.Play();
             LoosenCableSprites();
         }
     }
@@ -287,6 +291,8 @@ public class SiteCableCar : Site
         cableCarAnimator.Play(cableCarDirection == 1 ? "cablecar_empty_moveright" : "cablecar_empty_moveleft");
         PlayerHub.Instance.stateManager.EnterTransformFollow(cableCarCenterTransform);
         PlayerHub.Instance.animator.Play("PlayerCabinCarShiftInto");
+        mechanicalRumbleAudio.Play();
+        mechanicalClickAudio.Play();
         TightenCableSprites();
     }
 
@@ -305,6 +311,8 @@ public class SiteCableCar : Site
     void StartCableCarEntry(){
         entering = true;
         aimPointVelocity = (aimPoint.position - cableCarTopTransform.position).normalized * aimPointSpeed;
+        mechanicalRumbleAudio.Play();
+        mechanicalClickAudio.Play();
         ClearOtherCableCarsInScene();
         TightenCableSprites();
     }
