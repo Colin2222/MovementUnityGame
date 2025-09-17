@@ -8,6 +8,7 @@ public class PlayerRumbleManager : MonoBehaviour
     float rumbleTimer;
     bool isRumbling = false;
     Gamepad gamepad;
+    public Cinemachine.CinemachineImpulseSource impulseSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class PlayerRumbleManager : MonoBehaviour
             }
         }
     }
-    
+
     public void StartRumble(float duration, float intensity)
     {
         if (gamepad == null) return;
@@ -35,5 +36,6 @@ public class PlayerRumbleManager : MonoBehaviour
         rumbleTimer = duration;
         isRumbling = true;
         gamepad.SetMotorSpeeds(intensity, intensity);
+        impulseSource.GenerateImpulse();
     }
 }
