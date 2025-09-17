@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.290995
+      value: -21.290503
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1998,6 +1998,10 @@ PrefabInstance:
     - target: {fileID: 4883283184172750917, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: journalUI
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5168466254459423674, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: potentialWeatherType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6565144162060726753, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: backdropActive

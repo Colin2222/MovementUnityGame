@@ -2304,6 +2304,26 @@ PrefabInstance:
       propertyPath: nameText
       value: 
       objectReference: {fileID: 383774988}
+    - target: {fileID: 3719018223140248087, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719018223140248089, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719018223140248089, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 622
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719018223140248090, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -97.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719018223140248090, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 29.74
+      objectReference: {fileID: 0}
     - target: {fileID: 4845049506762891137, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -92.3
@@ -5208,20 +5228,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1579521628}
     m_ColliderPaths:
-    - - X: -192671504
-        Y: 142638128
+    - - X: -194438784
+        Y: 34829844
       - X: -193598960
         Y: -305460704
       - X: 511641952
         Y: -301125248
-      - X: 509878816
-        Y: 151921104
+      - X: 504576768
+        Y: 42345428
   m_CompositePaths:
     m_Paths:
     - - {x: -19.359896, y: -30.546041}
       - {x: 51.164196, y: -30.112495}
-      - {x: 50.987854, y: 15.192111}
-      - {x: -19.26715, y: 14.263784}
+      - {x: 50.45765, y: 4.2345424}
+      - {x: -19.443878, y: 3.4829557}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1321633967
@@ -5278,7 +5298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -72.14366
+      value: -72.14316
       objectReference: {fileID: 0}
     - target: {fileID: 8654589847575178427, guid: 769d7c513cd8ee14cb1c12536b4b73c5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6108,10 +6128,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -19.26715, y: 14.263813}
+    - - {x: -19.443878, y: 3.4829845}
       - {x: -19.359896, y: -30.54607}
       - {x: 51.164196, y: -30.112526}
-      - {x: 50.98788, y: 15.19211}
+      - {x: 50.457676, y: 4.234543}
 --- !u!61 &1579521629
 BoxCollider2D:
   m_ObjectHideFlags: 0

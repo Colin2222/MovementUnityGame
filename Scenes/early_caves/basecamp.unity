@@ -1257,6 +1257,30 @@ PrefabInstance:
       propertyPath: vcam
       value: 
       objectReference: {fileID: 1690097757}
+    - target: {fileID: 3719018223140248087, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719018223140248089, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719018223140248089, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719018223140248089, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719018223140248090, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -112.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719018223140248090, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 51.83
+      objectReference: {fileID: 0}
     - target: {fileID: 4845049506762891137, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -148.65

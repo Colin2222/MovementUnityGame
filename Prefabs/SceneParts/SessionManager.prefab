@@ -247,6 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amberManager: {fileID: 5843808315353699261}
   recipeManager: {fileID: 5160358888067315298}
+  weatherManager: {fileID: 0}
   sceneManager: {fileID: 0}
   player: {fileID: 0}
   saveData:
