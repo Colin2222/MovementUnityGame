@@ -22,6 +22,8 @@ public class AmberManager : MonoBehaviour
     float nextCrackTime;
     public Animator amberCrackAnimator;
     public float postShatterTime;
+    public AudioSource amberShatterSound;
+    public AudioSource amberCrackSound;
     public List<AmberColorMapping> amberColorMappings;
     // Start is called before the first frame update
     void Start()
@@ -42,6 +44,9 @@ public class AmberManager : MonoBehaviour
                 inAmberRunCooldown = true;
                 amberRunCooldownTimer = amberRunCooldownTime;
                 amberCrackAnimator.Play("AmberShatter");
+                amberShatterSound.pitch = Random.Range(1.2f,1.35f);
+                amberShatterSound.Play();
+                PlayerHub.Instance.rumbleManager.StartRumble(0.2f, 0.5f);
                 returnOfferObject.SetActive(true);
             }
             else if (amberRunTimer <= nextCrackTime)
