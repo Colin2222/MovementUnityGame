@@ -5,26 +5,17 @@ using UnityEngine;
 public class PlayerSoundInterface : MonoBehaviour
 {
 	public Rigidbody2D rb;
-	public float footstepVolumeTopSpeed;
-	public float footstepMaxVolume;
-	public float footstepMaxVariance;
-	public float footstepMinVolume;
-	public float lightstepVolume;
+	public PlayerFootstepHandler footstepHandler;
 	public float stillJumpMaxVariance;
 	public float speedWindMultiplier;
 	float currentSpeedWindVolume;
 	public float minimumWindSpeedMagnitude;
 	public float speedWindLerp;
-	float footstepBasePitch1;
-	float footstepBasePitch2;
-	float footstepStartBasePitch;
 	float stillJumpBasePitch;
 	public float cornerClimbBasePitch;
 	
 	public AudioSource background;
 	
-    public AudioSource step1;
-    public AudioSource step2;
 	public AudioSource runningJump;
 	public AudioSource stillJump;
 	public AudioSource stillJumpLand;
@@ -41,9 +32,6 @@ public class PlayerSoundInterface : MonoBehaviour
 	public AudioSource axeChop;
 	
 	void Start(){
-		footstepBasePitch1 = step1.pitch;
-		footstepBasePitch2 = step2.pitch;
-		footstepStartBasePitch = footScuff.pitch;
 		stillJumpBasePitch = stillJump.pitch;
 		/*
 		speedWind.loop = true;
@@ -65,47 +53,33 @@ public class PlayerSoundInterface : MonoBehaviour
 	}
 	
 	public void PlayStep1(){
-		step1.volume = Mathf.Clamp(Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed) * footstepMaxVolume, footstepMinVolume, 10f);
-		step1.pitch = footstepBasePitch1 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
-		step1.Play();
+		footstepHandler.PlayFootstepSound(-1);
 	}
 	
 	public void PlayStep2(){
-		step2.volume = Mathf.Clamp(Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed) * footstepMaxVolume, footstepMinVolume, 10f);
-		step2.pitch = footstepBasePitch2 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
-		step2.Play();
+		footstepHandler.PlayFootstepSound(1);
 	}
 
 	public void PlayLightStep1(){
-		step1.volume = lightstepVolume;
-		step1.pitch = footstepBasePitch1 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
-		step1.Play();
+		footstepHandler.PlayFootstepSound(-1);
 	}
 
 	public void PlayLightStep2(){
-		step2.volume = lightstepVolume;
-		step2.pitch = footstepBasePitch2 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
-		step2.Play();
-	}
-	
-	public void PlayStepStart(){
-		footScuff.pitch = footstepBasePitch1 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
-		footScuff.Play();
+		footstepHandler.PlayFootstepSound(1);
 	}
 	
 	public void PlayRunningJump(){
-		runningJump.volume = Mathf.Abs(rb.velocity.x / footstepVolumeTopSpeed) * footstepMaxVolume;
-		runningJump.Play();
+		footstepHandler.PlayFootstepSound(1);
 	}
 	
 	public void PlayWallJump(){
-		footScuff.pitch = footstepStartBasePitch + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
+		footScuff.pitch = 1.0f + (Random.Range(-1.0f, 1.0f) * 0.25f);
 		footScuff.PlayOneShot(footScuffClip);
 	}
 	
 	public void PlayStillJumpLand(){
 		stillJumpLand.Play();
-		clothesRustle.pitch = footstepBasePitch1 + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
+		clothesRustle.pitch = 1.0f + (Random.Range(-1.0f, 1.0f) * 0.25f);
 		clothesRustle.Play();
 	}
 	
