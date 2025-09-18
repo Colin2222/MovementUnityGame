@@ -35,6 +35,7 @@ public class SiteIronOreVein : Site
     int numOrePieces;
     public float oreSpreadDistance;
     public AudioSource miningHitSound;
+    public AudioSource miningBreakSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -116,6 +117,9 @@ public class SiteIronOreVein : Site
 
     void PlayBreakEffect()
     {
+        miningBreakSound.pitch = Random.Range(0.8f, 0.95f);
+        miningBreakSound.Play();
+
         leftEffectAnimator.Play("iron_ore_plume_1");
         rightEffectAnimator.Play("iron_ore_plume_1");
         leftUpEffectAnimator.Play("iron_ore_plume_3");
