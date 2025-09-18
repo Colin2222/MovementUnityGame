@@ -36,6 +36,6 @@ public class PlayerRumbleManager : MonoBehaviour
         rumbleTimer = duration;
         isRumbling = true;
         gamepad.SetMotorSpeeds(intensity, intensity);
-        impulseSource.GenerateImpulse();
+        impulseSource.GenerateImpulse(intensity);
     }
 }

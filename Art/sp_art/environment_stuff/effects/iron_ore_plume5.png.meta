@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 349351de78fd8264d80189639e78532d
+guid: 7ac97b52097b68149a09e878d01f4a92
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: iron_ore_plume2_0
+      name: iron_ore_plume5_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3c056582b4560c4e88fc6b1dd04fedb
-      internalID: 83962726
+      spriteID: 8f4a7690abba96a4d94f3e4e40c262fc
+      internalID: -662937729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iron_ore_plume2_1
+      name: iron_ore_plume5_1
       rect:
         serializedVersion: 2
         x: 48
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 786d3265c1a8b094fbbe44e29d56c7f0
-      internalID: 1922414477
+      spriteID: aa10b96e928db7b4aae3f4ac31e4a355
+      internalID: 1007660146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iron_ore_plume2_2
+      name: iron_ore_plume5_2
       rect:
         serializedVersion: 2
         x: 96
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4eecf2f0c421fd842b9665d5c50b2e9d
-      internalID: 258691230
+      spriteID: b20017648f3ba3b4baaa8e2e48b9d847
+      internalID: -1664932924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iron_ore_plume2_3
+      name: iron_ore_plume5_3
       rect:
         serializedVersion: 2
         x: 0
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21159d60007641e4fb31e5fd23a13f71
-      internalID: -667812853
+      spriteID: 4bf75b1c51d260b47b0728aeba8035b6
+      internalID: -1693796247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iron_ore_plume2_4
+      name: iron_ore_plume5_4
       rect:
         serializedVersion: 2
         x: 48
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f9cbbdd40e88994a912254620332ae8
-      internalID: 1011739527
+      spriteID: c8290dcb48fad4f4884ad6f00b4226aa
+      internalID: 854529472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iron_ore_plume2_5
+      name: iron_ore_plume5_5
       rect:
         serializedVersion: 2
         x: 96
@@ -224,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f71724acc6897784a802f613c267adb1
-      internalID: 292058089
+      spriteID: 3f2fc995f11bcf44e882ac86aa15572c
+      internalID: 148419524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iron_ore_plume2_6
+      name: iron_ore_plume5_6
       rect:
         serializedVersion: 2
         x: 0
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67ac868a262157b40a6a9604db77c157
-      internalID: -12611231
+      spriteID: 3b426d37538bc6c45a6a3d70bf07a265
+      internalID: 46296168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iron_ore_plume2_7
+      name: iron_ore_plume5_7
       rect:
         serializedVersion: 2
         x: 48
@@ -266,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4b88e6bcac6ce04f910026535df504c
-      internalID: 9070037
+      spriteID: af7dc579d88b8284badb12b78f89f902
+      internalID: -1540970560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iron_ore_plume2_8
+      name: iron_ore_plume5_8
       rect:
         serializedVersion: 2
         x: 96
@@ -287,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4e5dabfa9ee4d2499c4ebbd33c09c29
-      internalID: -1191808290
+      spriteID: c6ba1c9fc297a6c43b41f6f0e7088378
+      internalID: -1440265287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: iron_ore_plume2_9
+      name: iron_ore_plume5_9
       rect:
         serializedVersion: 2
         x: 0
@@ -308,8 +308,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15223572f45372c42bf3082703ac3f14
-      internalID: 1304416008
+      spriteID: 4fe184f87341d4e43bdc9d999325e6d9
+      internalID: -1767347955
       vertices: []
       indices: 
       edges: []
@@ -325,16 +325,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      iron_ore_plume2_7: 9070037
-      iron_ore_plume2_1: 1922414477
-      iron_ore_plume2_0: 83962726
-      iron_ore_plume2_2: 258691230
-      iron_ore_plume2_5: 292058089
-      iron_ore_plume2_4: 1011739527
-      iron_ore_plume2_8: -1191808290
-      iron_ore_plume2_6: -12611231
-      iron_ore_plume2_9: 1304416008
-      iron_ore_plume2_3: -667812853
+      iron_ore_plume5_7: -1540970560
+      iron_ore_plume5_4: 854529472
+      iron_ore_plume5_3: -1693796247
+      iron_ore_plume5_6: 46296168
+      iron_ore_plume5_9: -1767347955
+      iron_ore_plume5_2: -1664932924
+      iron_ore_plume5_5: 148419524
+      iron_ore_plume5_8: -1440265287
+      iron_ore_plume5_1: 1007660146
+      iron_ore_plume5_0: -662937729
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

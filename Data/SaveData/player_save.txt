@@ -321,7 +321,7 @@
             "inventories": null,
             "additional_data": {
               "num_ore_pieces": "3",
-              "mined": "True"
+              "mined": "False"
             }
           }
         },

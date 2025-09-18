@@ -9,9 +9,20 @@ public class SiteIronOreVein : Site
     public Sprite unminedSprite;
     public Transform leftSwingPoint;
     public Transform rightSwingPoint;
+    public Animator leftEffectAnimator;
+    public Animator rightEffectAnimator;
+    public Animator rightUpEffectAnimator;
+    public Animator leftUpEffectAnimator;
+    public Animator upEffectAnimator;
+    public Animator leftCenter1EffectAnimator;
+    public Animator rightCenter1EffectAnimator;
+    public Animator leftCenter2EffectAnimator;
+    public Animator rightCenter2EffectAnimator;
+    public Animator upCenterEffectAnimator;
 
     bool inSwing = false;
     bool inPostSwing = false;
+    int swingSide = -1;
     float swingTimer;
     public float swingTime;
     float postSwingTimer;
@@ -23,6 +34,7 @@ public class SiteIronOreVein : Site
     public GameObject itemPrefab;
     int numOrePieces;
     public float oreSpreadDistance;
+    public AudioSource miningHitSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +73,18 @@ public class SiteIronOreVein : Site
                 swingTimer += Time.deltaTime;
                 if (swingTimer >= swingTime)
                 {
+                    if (swingSide == 1)
+                    {
+                        rightEffectAnimator.Play("iron_ore_plume_1");
+                    }
+                    else
+                    {
+                        leftEffectAnimator.Play("iron_ore_plume_1");
+                    }
+                    miningHitSound.pitch = Random.Range(0.9f, 1.1f);
+                    miningHitSound.Play();
+                    PlayerHub.Instance.rumbleManager.StartRumble(0.2f, 0.5f);
+
                     numSwings++;
                     swingForgetTimer = 0.0f;
                     ResetTimers();
@@ -69,6 +93,7 @@ public class SiteIronOreVein : Site
 
                     if (numSwings >= 5)
                     {
+                        PlayBreakEffect();
                         for (int i = 0; i < numOrePieces; i++)
                         {
                             float xOffset = Random.Range(-oreSpreadDistance, oreSpreadDistance);
@@ -87,6 +112,20 @@ public class SiteIronOreVein : Site
                 return;
             }
         }
+    }
+
+    void PlayBreakEffect()
+    {
+        leftEffectAnimator.Play("iron_ore_plume_1");
+        rightEffectAnimator.Play("iron_ore_plume_1");
+        leftUpEffectAnimator.Play("iron_ore_plume_3");
+        rightUpEffectAnimator.Play("iron_ore_plume_3");
+        upEffectAnimator.Play("iron_ore_plume_5");
+        leftCenter1EffectAnimator.Play("iron_ore_plume_4");
+        rightCenter1EffectAnimator.Play("iron_ore_plume_3");
+        leftCenter2EffectAnimator.Play("iron_ore_plume_3");
+        rightCenter2EffectAnimator.Play("iron_ore_plume_4");
+        upCenterEffectAnimator.Play("iron_ore_plume_5");
     }
 
     void ResetTimers()
@@ -127,6 +166,14 @@ public class SiteIronOreVein : Site
         }
         else
         {
+            if (Mathf.Abs(PlayerHub.Instance.transform.position.x - rightSwingPoint.position.x) <= 0.05f)
+            {
+                swingSide = 1;
+            }
+            else
+            {
+                swingSide = -1;
+            }
             PlayerHub.Instance.animator.Play("PlayerAxeSwingRepeat");
             ResetTimers();
             inSwing = true;
