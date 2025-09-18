@@ -83,7 +83,7 @@ public class SiteIronOreVein : Site
                     }
                     miningHitSound.pitch = Random.Range(0.9f, 1.1f);
                     miningHitSound.Play();
-                    PlayerHub.Instance.rumbleManager.StartRumble(0.2f, 0.5f);
+                    PlayerHub.Instance.rumbleManager.StartRumble(0.2f, 0.3f);
 
                     numSwings++;
                     swingForgetTimer = 0.0f;
