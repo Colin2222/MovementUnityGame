@@ -213,7 +213,20 @@
       "hidden_covers": {}
     },
     "mountainbase_cave1": {
-      "site_slots": [],
+      "site_slots": [
+        {
+          "id": 2,
+          "display_name": null,
+          "site": {
+            "name": "iron_ore_vein",
+            "inventories": null,
+            "additional_data": {
+              "num_ore_pieces": "2",
+              "mined": "False"
+            }
+          }
+        }
+      ],
       "world_items": [],
       "npcs": [],
       "fills": {},
