@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class HiddenCoverScript : MonoBehaviour
 {
+    public string id;
     public float fadeTime = 1.0f;
     float timer;
     bool fading;
     bool unfading;
+    [System.NonSerialized]
+    public bool discovered = false;
 
     public SpriteRenderer[] renderers;
+    public AudioSource jingleSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +47,11 @@ public class HiddenCoverScript : MonoBehaviour
         timer = fadeTime * currentAlpha;
         fading = true;
         unfading = false;
+        if (!discovered)
+        {
+            jingleSource.Play();
+        }
+        discovered = true;
     }
 
     void OnTriggerExit2D(Collider2D other)

@@ -5104,6 +5104,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3664261084010297530, guid: 4a6276d99ef65e64d91af74b16785576, type: 3}
+      propertyPath: id
+      value: hidden_nook_1
+      objectReference: {fileID: 0}
     - target: {fileID: 3664261084582245961, guid: 4a6276d99ef65e64d91af74b16785576, type: 3}
       propertyPath: m_Name
       value: hidden_cover

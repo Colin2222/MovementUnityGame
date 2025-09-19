@@ -127,25 +127,29 @@
           "id": "cot_right",
           "active": true
         }
-      }
+      },
+      "hidden_covers": {}
     },
     "basecamp_river": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "earlycave_exit": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "earlycave_river": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "guidestone_cave": {
       "site_slots": [
@@ -161,7 +165,8 @@
       ],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "mountainbase_rightedge1": {
       "site_slots": [
@@ -204,13 +209,15 @@
           "id": "bluestone_tied",
           "active": false
         }
-      }
+      },
+      "hidden_covers": {}
     },
     "mountainbase_cave1": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "mountainbase_mid1": {
       "site_slots": [
@@ -260,7 +267,8 @@
       ],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "mountainbase_minicave1": {
       "site_slots": [
@@ -287,13 +295,15 @@
       ],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "mountainbase_right1": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "mountainbase_right2": {
       "site_slots": [
@@ -309,7 +319,8 @@
       ],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "mountainbase_right3": {
       "site_slots": [
@@ -337,25 +348,29 @@
       ],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountain_1": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountain_2": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountaincave_1": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountain_3": {
       "site_slots": [
@@ -389,13 +404,15 @@
       ],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountain_4": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountain_5": {
       "site_slots": [
@@ -429,13 +446,15 @@
       ],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountaincave_2": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountaincave_3": {
       "site_slots": [
@@ -454,19 +473,22 @@
       ],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountaincave_4": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountaincave_5": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountaincave_6": {
       "site_slots": [
@@ -485,19 +507,22 @@
       ],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountaincave_7": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountaincave_8": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountaincave_9": {
       "site_slots": [
@@ -524,7 +549,8 @@
       ],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountain_6": {
       "site_slots": [
@@ -536,187 +562,223 @@
       ],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountaincave_10": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountaincave_11": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountaincave_12": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "greenmountaincave_hermithome": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "orangemountain_1": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "orangemountain_2": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "orangemountain_3": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "orangemountain_4": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "orangemountain_5": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "orangemountain_6": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "orangemountain_cave_1": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "orangemountain_cave_2": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "orangemountain_cave_3": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {
+        "hidden_nook_1": {
+          "id": "hidden_nook_1",
+          "discovered": false
+        }
+      }
     },
     "orangemountain_cave_4": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "outpost_outskirts_1": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "outpost_cave_1": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "beigemountain_cave_1": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "beigemountain_1": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "beigemountain_2": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "beigemountain_3": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "beigemountain_4": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "beigemountain_cave_2": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "beigemountain_cave_3": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "beigemountain_cave_4": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "beigemountain_cave_5": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "beigemountain_cave_6": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "beigemountain_5": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "beigemountain_6": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "beigemountain_7": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     },
     "mountainbase_cave2": {
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {}
+      "fills": {},
+      "hidden_covers": {}
     }
   },
   "player_inventory": {

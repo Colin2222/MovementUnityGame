@@ -28,11 +28,13 @@ public class SavedSiteSlot{
 }
 
 [System.Serializable]
-public class SavedRoom{
+public class SavedRoom
+{
 	public List<SavedSiteSlot> site_slots;
 	public List<SavedWorldItem> world_items;
 	public List<SavedNPC> npcs;
 	public Dictionary<string, SavedFill> fills;
+	public Dictionary<string, SavedHiddenCover> hidden_covers;
 }
 
 [System.Serializable]
@@ -71,9 +73,16 @@ public class SavedNPC{
 }
 
 [System.Serializable]
-public class SavedFill{
+public class SavedFill
+{
 	public string id;
 	public bool active;
+}
+
+[System.Serializable]
+public class SavedHiddenCover{
+	public string id;
+	public bool discovered;
 }
 
 public class RoomMappingData

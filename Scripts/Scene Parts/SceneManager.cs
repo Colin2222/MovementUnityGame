@@ -75,6 +75,7 @@ public class SceneManager : MonoBehaviour
 	public ItemManager itemManager;
 	public NPCManager npcManager;
 	public FillManager fillManager;
+	public HiddenCoverManager hiddenCoverManager;
 	public DialogueManager dialogueManager;
 	public BackdropManager backdropManager;
 

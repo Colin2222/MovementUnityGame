@@ -273,7 +273,7 @@ Transform:
   m_Children:
   - {fileID: 3719018223140248090}
   m_Father: {fileID: 4845049507479276211}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5168466254459423674
 MonoBehaviour:
@@ -438,6 +438,50 @@ MonoBehaviour:
   bgAudioClip: {fileID: 8300000, guid: 23fbaec3bf622314c9b65beb06479564, type: 3}
   bgAudioVolume: 0.12
   bgAudioPitch: 1
+--- !u!1 &3109607506842196448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8358378204121293152}
+  - component: {fileID: 6907706760714907821}
+  m_Layer: 0
+  m_Name: HiddenCoverManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8358378204121293152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3109607506842196448}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4845049507479276211}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6907706760714907821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3109607506842196448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18cbbbcd012429c47b10dda3df6970bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3628879581537699023
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,6 +844,7 @@ Transform:
   - {fileID: 882405059321292906}
   - {fileID: 2688316818371070080}
   - {fileID: 6941648720539111491}
+  - {fileID: 8358378204121293152}
   - {fileID: 2294690083858345004}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -853,6 +898,7 @@ MonoBehaviour:
   itemManager: {fileID: 1496377342219492773}
   npcManager: {fileID: 5864172647228632068}
   fillManager: {fileID: 7166184006660081874}
+  hiddenCoverManager: {fileID: 6907706760714907821}
   dialogueManager: {fileID: 3052486192322220350}
   backdropManager: {fileID: 6565144162060726753}
 --- !u!1 &5118703167308506579
