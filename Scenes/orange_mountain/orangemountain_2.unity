@@ -1649,7 +1649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: hidden_corner_wall
-  active: 1
+  active: 0
 --- !u!4 &604486606
 Transform:
   m_ObjectHideFlags: 0

@@ -24,7 +24,8 @@ public class FillManager : MonoBehaviour
     public Dictionary<string, SavedFill> SaveFills(){
         DetectFills();
         Dictionary<string, SavedFill> savedFills = new Dictionary<string, SavedFill>();
-        foreach(KeyValuePair<string, FillScript> entry in fills){
+        foreach (KeyValuePair<string, FillScript> entry in fills)
+        {
             SavedFill savedFill = new SavedFill();
             savedFill.id = entry.Value.id.ToString();
             savedFill.active = entry.Value.active;

@@ -28,8 +28,7 @@ public class ThrashableCornerScript : MonoBehaviour
 
         currentThrash++;
         if(currentThrash >= thrashCount){
-            fill.active = false;
-            fill.gameObject.SetActive(false);
+            SceneManager.Instance.fillManager.SetFill(fill.id, false);
             return true;
         }
         return false;
