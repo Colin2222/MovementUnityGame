@@ -217,7 +217,12 @@
       "world_items": [],
       "npcs": [],
       "fills": {},
-      "hidden_covers": {}
+      "hidden_covers": {
+        "hidden_nook_1": {
+          "id": "hidden_nook_1",
+          "discovered": false
+        }
+      }
     },
     "mountainbase_mid1": {
       "site_slots": [
