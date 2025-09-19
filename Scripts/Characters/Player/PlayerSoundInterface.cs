@@ -59,8 +59,17 @@ public class PlayerSoundInterface : MonoBehaviour
 	public void PlayStep2(){
 		footstepHandler.PlayFootstepSound(1);
 	}
+	
+	public void PlayScuff1(){
+		footstepHandler.PlayFootScuffSound(-1);
+	}
 
-	public void PlayLightStep1(){
+	public void PlayScuff2(){
+		footstepHandler.PlayFootScuffSound(1);
+	}
+
+	public void PlayLightStep1()
+	{
 		footstepHandler.PlayFootstepSound(-1);
 	}
 
@@ -73,7 +82,7 @@ public class PlayerSoundInterface : MonoBehaviour
 	}
 	
 	public void PlayWallJump(){
-		footScuff.pitch = 1.0f + (Random.Range(-1.0f, 1.0f) * 0.25f);
+		footScuff.pitch = 0.9f + (Random.Range(-1.0f, 1.0f) * stillJumpMaxVariance);
 		footScuff.PlayOneShot(footScuffClip);
 	}
 	

@@ -8,6 +8,7 @@ public class PStateMoving : PState
 	float vertical;
 	bool isFast = false;
 	bool isSlow = false;
+	float normalizedAnimationTime;
 
 	public PStateMoving()
 	{
@@ -29,18 +30,26 @@ public class PStateMoving : PState
 		if (!isFast && Mathf.Abs(rigidbody.velocity.x) > attr.runningJumpSpeed)
 		{
 			isFast = true;
+			normalizedAnimationTime = player.animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+			player.animator.Play("PlayerRunning", 0, normalizedAnimationTime);
 		}
 		else if (isFast && Mathf.Abs(rigidbody.velocity.x) < attr.runningJumpSpeed)
 		{
 			isFast = false;
+			normalizedAnimationTime = player.animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+			player.animator.Play("PlayerRunningFast", 0, normalizedAnimationTime);
 		}
 		else if (!isSlow && Mathf.Abs(rigidbody.velocity.x) < attr.slowRunSpeed)
 		{
 			isSlow = true;
+			normalizedAnimationTime = player.animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+			player.animator.Play("PlayerRunning", 0, normalizedAnimationTime);
 		}
 		else if (isSlow && Mathf.Abs(rigidbody.velocity.x) > attr.slowRunSpeed)
 		{
 			isSlow = false;
+			normalizedAnimationTime = player.animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+			player.animator.Play("PlayerRunningFast", 0, normalizedAnimationTime);
 		}
 
 		if (isFast || isSlow)
