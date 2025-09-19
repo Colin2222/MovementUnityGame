@@ -609,7 +609,12 @@
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {},
+      "fills": {
+        "hidden_corner_wall": {
+          "id": "hidden_corner_wall",
+          "active": true
+        }
+      },
       "hidden_covers": {}
     },
     "orangemountain_3": {

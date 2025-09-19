@@ -52,6 +52,18 @@ public class PStateCornerGrabbing : PState
 		}
 		else
 		{
+			ThrashableCornerScript thrashableCorner = player.cornerHandler.corner.GetComponent<ThrashableCornerScript>();
+			if (thrashableCorner != null)
+			{
+				if (thrashableCorner.Thrash())
+				{
+					player.animator.Play("PlayerCornerGrabbingThrashFalling");
+					player.transform.position += new Vector3(0.0f, -0.5f, 0.0f);
+					physics.SwitchHitboxes(2);
+					rigidbody.gravityScale = attr.gravityScale;
+					return new PStateHeadHitSoaring(new Vector2(cornerDir * 3.0f, 0.0f));
+				}
+			}
 			player.animator.Play("PlayerCornerGrabbingThrash");
 		}
 		return this;
