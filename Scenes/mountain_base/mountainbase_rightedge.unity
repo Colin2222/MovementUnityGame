@@ -2782,7 +2782,7 @@ PrefabInstance:
       objectReference: {fileID: 745410257}
     - target: {fileID: 3719018223140248087, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3719018223140248089, guid: 639f168e10d39f74eb36eb8ef77c597b, type: 3}
       propertyPath: ShapeModule.m_Scale.x
