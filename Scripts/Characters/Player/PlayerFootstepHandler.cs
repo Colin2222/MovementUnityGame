@@ -67,8 +67,8 @@ public class PlayerFootstepHandler : MonoBehaviour
         activeScuffAudioSource = (activeScuffAudioSource + 1) % footScuffAudioSources.Length;
 
         footScuffAudioSource.panStereo = side * 0.2f;
-        footScuffAudioSource.volume = 0.1f - (currentFootstepVolume * 0.65f);
-        footScuffAudioSource.pitch = footstepBasePitch + 0.2f + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
+        footScuffAudioSource.volume = 0.085f - (currentFootstepVolume * 0.65f);
+        footScuffAudioSource.pitch = footstepBasePitch - 0.2f + (Random.Range(-1.0f, 1.0f) * footstepMaxVariance);
         footScuffAudioSource.Play();
     }
 }
