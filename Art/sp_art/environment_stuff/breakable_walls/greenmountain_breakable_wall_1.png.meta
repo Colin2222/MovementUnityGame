@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7fe08d7d3cb58dd46938be1f73fbf628
+guid: 27f6e914648ea9e46b53fc4e695789e8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,148 +105,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: greenmountain_1_ground
+      name: greenmountain_breakable_wall_1_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 1316
-        width: 852
-        height: 679
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 96
+        height: 158
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75f75ec0da976ef41bee6e16350fa101
-      internalID: 1382878176
+      spriteID: 4a7396bd244482943aab77550159d6eb
+      internalID: 1975482121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: greenmountain_1_foreground1
+      name: greenmountain_breakable_wall_1_1
       rect:
         serializedVersion: 2
-        x: 1020
-        y: 1301
-        width: 861
-        height: 690
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 0
+        width: 96
+        height: 158
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0e856132bf12a74397d0ec017615d27
-      internalID: 1174619376
+      spriteID: 7f4278f29d7665448a25178b8058ea56
+      internalID: -937785582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: greenmountain_1_foreground2
+      name: greenmountain_breakable_wall_1_2
       rect:
         serializedVersion: 2
-        x: 15
-        y: 271
-        width: 892
-        height: 749
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 0
+        width: 96
+        height: 158
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 672aa67547d5b2049a0fac782348bc1b
-      internalID: -1643436003
+      spriteID: 26eba34ce0eff2a4f9f741c54868d038
+      internalID: 991301051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: greenmountain_1_foreground_3
+      name: greenmountain_breakable_wall_1_3
       rect:
         serializedVersion: 2
-        x: 1033
-        y: 253
-        width: 988
-        height: 817
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        x: 288
+        y: 0
+        width: 96
+        height: 158
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d541da5e3c92ec04ebe46c39c5088a8a
-      internalID: -1865990976
+      spriteID: c9f2798a7c56d9b4192691e05c5bda69
+      internalID: -2028950301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: greenmountain_1_hd1
+      name: greenmountain_breakable_wall_1_4
       rect:
         serializedVersion: 2
-        x: 212
-        y: 50
-        width: 98
-        height: 90
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        x: 384
+        y: 0
+        width: 96
+        height: 158
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f7d1a467ceb828448c720b4783e659b
-      internalID: -83005767
+      spriteID: 454fdccbf5f767647b7ae26eb617d9e1
+      internalID: -1479203037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: greenmountain_1_hd2
+      name: greenmountain_breakable_wall_1_5
       rect:
         serializedVersion: 2
-        x: 415
-        y: 37
-        width: 140
-        height: 114
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        x: 480
+        y: 0
+        width: 96
+        height: 158
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c66685424f59d64b84d70af015dd6f1
-      internalID: 1020255483
+      spriteID: 3e1bf09c61a4a5b4a8ac6f0424e2b74b
+      internalID: -269205975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: greenmountain_1_hd3
+      name: greenmountain_breakable_wall_1_6
       rect:
         serializedVersion: 2
-        x: 674
-        y: 5
-        width: 185
-        height: 184
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        x: 576
+        y: 0
+        width: 96
+        height: 158
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da05674c98c41f74aa3ce20569755f8b
-      internalID: -1579941388
+      spriteID: 037a325ac7c2c8141b764097fdf72c6a
+      internalID: 1109965334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenmountain_breakable_wall_1_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 158
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ce96e3f7c12bc439a6217a354d2031
+      internalID: 159441340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenmountain_breakable_wall_1_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 158
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0916faff3e5053244aaa616b9514ada9
+      internalID: -13046194
       vertices: []
       indices: 
       edges: []
@@ -262,13 +304,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      greenmountain_1_ground: 1382878176
-      greenmountain_1_hd1: -83005767
-      greenmountain_1_foreground2: -1643436003
-      greenmountain_1_foreground1: 1174619376
-      greenmountain_1_hd3: -1579941388
-      greenmountain_1_hd2: 1020255483
-      greenmountain_1_foreground_3: -1865990976
+      greenmountain_breakable_wall_1_1: -937785582
+      greenmountain_breakable_wall_1_6: 1109965334
+      greenmountain_breakable_wall_1_4: -1479203037
+      greenmountain_breakable_wall_1_5: -269205975
+      greenmountain_breakable_wall_1_7: 159441340
+      greenmountain_breakable_wall_1_2: 991301051
+      greenmountain_breakable_wall_1_0: 1975482121
+      greenmountain_breakable_wall_1_8: -13046194
+      greenmountain_breakable_wall_1_3: -2028950301
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -26,7 +26,7 @@
   "integer_markers": {
     "cable_car_location": 100004,
     "cable_car_progress": 100004,
-    "time_marker": 2,
+    "time_marker": 3,
     "weather_marker": 0
   },
   "rooms": {
@@ -373,7 +373,12 @@
       "site_slots": [],
       "world_items": [],
       "npcs": [],
-      "fills": {},
+      "fills": {
+        "hidden_corner_wall": {
+          "id": "hidden_corner_wall",
+          "active": true
+        }
+      },
       "hidden_covers": {}
     },
     "greenmountain_2": {
